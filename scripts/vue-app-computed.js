@@ -1,4 +1,10 @@
 var appComputed = {
+  classNameApp () {
+    return {
+      'show-replace-panel': this.config.displayReplacePanel, 
+      'show-replace-panel-extended': (this.config.replaceMode === 'line')
+    }
+  },
   isReplaceDisabled () {
     if (this.config.textContent === ''
             || this.config.stringToSearch === '') {
@@ -44,7 +50,7 @@ var appComputed = {
     if (this.textContentHistory.length === 0) {
       return true
     }
-    if (this.textContentHistoryIndex > -1) {
+    if (this.textContentHistoryIndex > 0) {
       return false
     }
     return true

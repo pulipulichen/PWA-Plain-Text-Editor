@@ -34,6 +34,11 @@ var appMethods = {
     //console.log(data)
     localStorage.setItem('pwa-plain-text-editor', data)
   },
+  clearHistory () {
+    this.textContentHistory = []
+    this.textContentHistoryIndex = -1
+    this.textContentModified = true
+  },
   doReplace () {
     let stringToSearch = this.config.stringToSearch
     let stringToReplaceWith = this.config.stringToReplaceWith
@@ -57,27 +62,39 @@ var appMethods = {
       this.config.textContent = this.config.textContent.replace(re, this.config.stringToReplaceWith);
     }
     
-    this.textContentHistoryIndex = this.textContentHistory.length - 1
+    this.textContentHistoryIndex = this.textContentHistory.length
+    this.textContentModified = false
   },
   undo () {
-    console.log(this.textContentHistoryIndex, this.textContentHistory[(this.textContentHistoryIndex)])
-    if ((this.textContentHistoryIndex - 1) < -1
-            || !this.textContentHistory[(this.textContentHistoryIndex)]) {
+    console.log('undo', this.textContentHistoryIndex, this.textContentHistory.length, this.textContentHistory[(this.textContentHistoryIndex)])
+    console.log(this.textContentHistory)
+    if ((this.textContentHistoryIndex) <= 0
+            || !this.textContentHistory[(this.textContentHistoryIndex - 1)]) {
       return false
     }
     
-    this.config.textContent = this.textContentHistory[this.textContentHistoryIndex]
+    if (this.textContentHistoryIndex === this.textContentHistory.length) {
+      this.textContentHistory.push(this.config.textContent)
+    }
+    
     this.textContentHistoryIndex--
+    this.config.textContent = this.textContentHistory[this.textContentHistoryIndex]
   },
   redo () {
-    console.log(this.textContentHistoryIndex, this.textContentHistory.length, this.textContentHistory[(this.textContentHistoryIndex)])
-    if ((this.textContentHistoryIndex + 1) >= this.textContentHistory.length
+    console.log('redo', this.textContentHistoryIndex, this.textContentHistory.length, this.textContentHistory[(this.textContentHistoryIndex + 1)])
+    console.log(this.textContentHistory)
+    if ((this.textContentHistoryIndex + 1) > this.textContentHistory.length
             || !this.textContentHistory[(this.textContentHistoryIndex + 1)]) {
       return false
     }
     
     this.textContentHistoryIndex++
     this.config.textContent = this.textContentHistory[this.textContentHistoryIndex]
-    
+  },
+  clearTextContentConfirm () {
+    if (window.confirm('Are you sure?')) {
+      this.config.textContent = ''
+      this.clearHistory()
+    }
   }
 }

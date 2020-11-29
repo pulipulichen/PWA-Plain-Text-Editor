@@ -40,8 +40,9 @@
   <body>
 
     <div id="app"
-         v-bind:class="{'show-replace-panel': config.displayReplacePanel}">
+         v-bind:class="classNameApp">
       
+      <float-action-button></float-action-button>
       <textarea-editor></textarea-editor>
       <replace-panel></replace-panel>
       

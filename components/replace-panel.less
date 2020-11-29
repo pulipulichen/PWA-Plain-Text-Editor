@@ -1,6 +1,9 @@
 .replace-panel {
   @labelWidth: 6rem;
   
+  border-top: 1px solid #10a3a3;
+  padding-top: 0.5rem;
+  
   .close-icon {
     float: right;
     //margin-top: 1rem;
@@ -15,18 +18,34 @@
     width: @labelWidth !important;
     display: inline-block;
     text-align: right;
+    user-select: none;
   }
+  
+  //@closePanelIconWidth: 1rem;
+  @closePanelIconWidth: 0rem;
   
   .string-to-search-input,
-  .string-to-replace-with-input {
-    width: calc(100% - @labelWidth - 3rem) !important;
+  .string-to-replace-with-input-container {
+    width: calc(100% - @labelWidth - @closePanelIconWidth - 2rem) !important;
   }
   
   .string-to-replace-with-input {
-    select {
-      width: 8rem;
-      padding-top: 0 !important;
-      padding-bottom: 0 !important;
+    width: calc(100% - @labelWidth - @closePanelIconWidth - 2rem - 10rem) !important;
+  }
+  
+  select {
+    width: 8rem;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    white-space: nowrap !important;
+  }
+  
+  .ui.icon.input {
+    i.icon {
+      cursor: pointer;
+    }
+    i.icon:not(:first-of-type) {
+      right: 2em !important;
     }
   }
 }

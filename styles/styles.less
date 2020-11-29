@@ -8,3 +8,41 @@ body {
   background-color: #e1f7f7;
   height: 100vh;
 }
+
+#app {
+  .float-action-button {
+    bottom: 1rem;
+  }
+}
+
+#app.show-replace-panel {
+  @replacePanelHeight: 8rem;
+  
+  .editor {
+    height: calc(100vh - @replacePanelHeight);
+  }
+  
+  .replace-panel {
+    display: block;
+  }
+  
+  .float-action-button {
+    bottom: @replacePanelHeight + 1rem;
+  }
+}
+
+#app.show-replace-panel-extended {
+  @replacePanelHeight: 12rem;
+  
+  .editor {
+    height: calc(100vh - @replacePanelHeight);
+  }
+  
+  .replace-panel {
+    display: block;
+  }
+  
+  .float-action-button {
+    bottom: @replacePanelHeight + 1rem;
+  }
+}
