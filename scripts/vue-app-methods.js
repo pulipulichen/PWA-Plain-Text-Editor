@@ -38,6 +38,13 @@ var appMethods = {
     let stringToSearch = this.config.stringToSearch
     let stringToReplaceWith = this.config.stringToReplaceWith
     
+    if (this.textContentHistoryIndex > -1 
+            && this.textContentHistoryIndex !== this.textContentHistory.length - 1) {
+      this.textContentHistory = this.textContentHistory.slice(0, this.textContentHistoryIndex)
+    }
+    
+    this.textContentHistory.push(this.config.textContent)
+    
     if (this.config.replaceMode === 'raw') {
       stringToSearch = stringToSearch.replace(/\\/g, '\\\\')
       stringToReplaceWith = stringToReplaceWith.replace(/\\/g, '\\\\')
@@ -49,11 +56,28 @@ var appMethods = {
       let re = new RegExp(stringToSearch, "g")
       this.config.textContent = this.config.textContent.replace(re, this.config.stringToReplaceWith);
     }
+    
+    this.textContentHistoryIndex = this.textContentHistory.length - 1
   },
   undo () {
+    console.log(this.textContentHistoryIndex, this.textContentHistory[(this.textContentHistoryIndex)])
+    if ((this.textContentHistoryIndex - 1) < -1
+            || !this.textContentHistory[(this.textContentHistoryIndex)]) {
+      return false
+    }
     
+    this.config.textContent = this.textContentHistory[this.textContentHistoryIndex]
+    this.textContentHistoryIndex--
   },
   redo () {
+    console.log(this.textContentHistoryIndex, this.textContentHistory.length, this.textContentHistory[(this.textContentHistoryIndex)])
+    if ((this.textContentHistoryIndex + 1) >= this.textContentHistory.length
+            || !this.textContentHistory[(this.textContentHistoryIndex + 1)]) {
+      return false
+    }
+    
+    this.textContentHistoryIndex++
+    this.config.textContent = this.textContentHistory[this.textContentHistoryIndex]
     
   }
 }

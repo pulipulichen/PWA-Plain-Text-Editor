@@ -41,23 +41,19 @@ var appComputed = {
     return `Replace ` + this.replaceOccurCount
   },
   isUndoDisabled () {
-    return false
-    
     if (this.textContentHistory.length === 0) {
       return true
     }
-    if (this.textContentHistoryIndex > 0) {
+    if (this.textContentHistoryIndex > -1) {
       return false
     }
     return true
   },
   isRedoDisabled () {
-    return false
-    
     if (this.textContentHistory.length === 0) {
       return true
     }
-    if (this.textContentHistoryIndex < this.textContentHistory.length) {
+    if (this.textContentHistoryIndex < this.textContentHistory.length - 1) {
       return false
     }
     return true

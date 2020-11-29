@@ -9,7 +9,7 @@ var appData = {
     displayReplacePanel: true,
   },
   textContentHistory: [],
-  textContentHistoryIndex: 0,
+  textContentHistoryIndex: -1,
   debug: {
     enableRestore: true
   }
