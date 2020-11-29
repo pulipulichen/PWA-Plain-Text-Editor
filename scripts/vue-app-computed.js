@@ -124,4 +124,35 @@ var appComputed = {
     }
     return true
   },
+  isTrimEnabled () {
+    for (let i = 0; i < this.textContentLines.length; i++) {
+      let line = this.textContentLines[i]
+      if (line !== line.trim()) {
+        return true
+      }
+    }
+    return false
+  },
+  isLTrimEnabled () {
+    for (let i = 0; i < this.textContentLines.length; i++) {
+      let line = this.textContentLines[i]
+      let char = line.trim().slice(0, 1)
+      let index = line.indexOf(char)
+      if (index > 0) {
+        return true
+      }
+    }
+    return false
+  },
+  isRTrimEnabled () {
+    for (let i = 0; i < this.textContentLines.length; i++) {
+      let line = this.textContentLines[i]
+      let char = line.trim().slice(-1)
+      let index = line.lastIndexOf(char)
+      if (index < line.length - 1) {
+        return true
+      }
+    }
+    return false
+  }
 }

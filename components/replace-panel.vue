@@ -84,26 +84,31 @@
             <option value="last">Last</option>
           </select>
       </div>
-      <!--
+      
       <div class="inline field"
-           v-if="$parent.config.replaceLineOptions.mode === 'prefix'">
-        <div class="ui toggle checkbox">
-          <input type="checkbox" 
-                 id="replaceLineOptionsLTrim"
-                 v-model="$parent.config.replaceLineOptions.lTrim">
-          <label for="replaceLineOptionsLTrim">Trim left</label>
-        </div>
+           v-if="$parent.isTrimEnabled">
+        <button type="button"
+          class="ui button"
+          v-on:click="$parent.trimTextContent">
+            Trim
+        </button>
       </div>
       <div class="inline field"
-           v-if="$parent.config.replaceLineOptions.mode === 'suffix'">
-        <div class="ui toggle checkbox">
-          <input type="checkbox" 
-                 id="replaceLineOptionsRTrim"
-                 v-model="$parent.config.replaceLineOptions.rTrim">
-          <label for="replaceLineOptionsRTrim">Trim right</label>
-        </div>
+           v-if="$parent.isLTrimEnabled">
+        <button type="button"
+          class="ui button"
+          v-on:click="$parent.ltrimTextContent">
+            LTrim
+        </button>
       </div>
-      -->
+      <div class="inline field"
+           v-if="$parent.isRTrimEnabled">
+        <button type="button"
+          class="ui button"
+          v-on:click="$parent.rtrimTextContent">
+            RTrim
+        </button>
+      </div>
     </div>
   </div>
 </template>

@@ -48,7 +48,7 @@ var appMethods = {
       this.textContentHistory = this.textContentHistory.slice(0, this.textContentHistoryIndex)
     }
     
-    this.textContentHistory.push(this.config.textContent)
+    this.saveHistory()
     
     if (this.config.replaceMode === 'raw') {
       this.doReplaceRaw()
@@ -69,8 +69,13 @@ var appMethods = {
       }
     }
     
-    this.textContentHistoryIndex = this.textContentHistory.length
     this.textContentModified = false
+  },
+  saveHistory () {
+    
+    this.textContentHistory.push(this.config.textContent)
+    this.textContentHistoryIndex = this.textContentHistory.length
+    
   },
   doReplaceRaw () {
     let stringToSearch = this.config.stringToSearch
@@ -201,5 +206,38 @@ var appMethods = {
       this.config.textContent = ''
       this.clearHistory()
     }
+  },
+  trimTextContent () {
+    this.saveHistory()
+    
+    this.config.textContent = this.textContentLines.map(line => line.trim()).join('\n')
+  },
+  ltrimTextContent () {
+    this.saveHistory()
+    
+    this.config.textContent = this.textContentLines.map(line => {
+      let char = line.trim().slice(0, 1)
+      let index = line.indexOf(char)
+      if (index === 0) {
+        return line
+      }
+      else {
+        return line.slice(index)
+      }
+    }).join('\n')
+  },
+  rtrimTextContent () {
+    this.saveHistory()
+    
+    this.config.textContent = this.textContentLines.map(line => {
+      let char = line.trim().slice(-1)
+      let index = line.lastIndexOf(char)
+      if (index === line.length - 1) {
+        return line
+      }
+      else {
+        return line.slice(0, index + 1)
+      }
+    }).join('\n')
   }
 }
