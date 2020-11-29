@@ -78,13 +78,13 @@ var appMethods = {
     
   },
   doReplaceRaw () {
-    let stringToSearch = this.config.stringToSearch
-    let stringToReplaceWith = this.config.stringToReplaceWith
-    stringToSearch = stringToSearch.replace(/\\/g, '\\\\')
-    stringToReplaceWith = stringToReplaceWith.replace(/\\/g, '\\\\')
+    let stringToSearch = this.stringToSearchRaw
+    let stringToReplaceWith = this.stringToReplaceWithRaw
 
-    this.config.textContent = this.config.textContent.split(this.config.stringToSearch)
-            .join(this.config.stringToReplaceWith)
+    console.log(stringToSearch, stringToReplaceWith)
+
+    this.config.textContent = this.config.textContent.split(stringToSearch)
+            .join(stringToReplaceWith)
   },
   doReplaceRegex () {
     let stringToSearch = this.config.stringToSearch

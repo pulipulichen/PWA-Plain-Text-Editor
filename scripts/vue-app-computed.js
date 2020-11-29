@@ -13,8 +13,12 @@ var appComputed = {
     return className
   },
   isReplaceDisabled () {
-    if (this.config.textContent === ''
-            || this.config.stringToSearch === '') {
+    if (this.config.textContent === '') {
+      return true
+    }
+    
+    if (this.config.replaceMode !== 'line'
+            && this.config.stringToSearch === '') {
       return true
     }
     
@@ -25,11 +29,15 @@ var appComputed = {
     return false
   },
   replaceOccurCount () {
-    if (this.config.textContent === ''
-            || this.config.stringToSearch === '') {
+    if (this.config.textContent === '') {
       return 0
     }
     
+    if (this.config.replaceMode !== 'line'
+            && this.config.stringToSearch === '') {
+      return true
+    }
+     
     let count = 0
     //let stringToSearch = this.config.stringToSearch
     if (this.config.replaceMode === 'raw') {
@@ -47,8 +55,7 @@ var appComputed = {
     return count
   },
   countOccurRaw () {
-    let stringToSearch = this.config.stringToSearch
-    stringToSearch = stringToSearch.replace(/\\/g, '\\\\')
+    let stringToSearch = this.stringToSearchRaw
       
     return this.config.textContent.split(stringToSearch).length - 1
   },
@@ -67,14 +74,17 @@ var appComputed = {
     return this.textContentLines.map(line => line.trim())
   },
   stringToSearchRaw () {
-    return this.config.stringToSearch.replace(/\\/g, '\\\\')
+    return this.config.stringToSearch.replace(/\\/g, '\\')
   },
   stringToReplaceWithRaw () {
-    return this.config.stringToReplaceWith.replace(/\\/g, '\\\\')
+    return this.config.stringToReplaceWith.replace(/\\/g, '\\')
   },
   countOccurLine () {
-    let stringToSearch = this.config.stringToSearch
-    stringToSearch = stringToSearch.replace(/\\/g, '\\\\')
+    let stringToSearch = this.stringToSearchRaw
+    console.log(stringToSearch)
+    if (stringToSearch === '') {
+      return this.textContentLinesTrim.length
+    }
     
     let count = 0
     

@@ -1,5 +1,7 @@
 <template>
-  <div class="float-action-button zoom">
+  <div class="float-action-button zoom"
+       v-on:mouseout="delayCloseMenu"
+       v-on:mousein="clearDelayCloseMenu">
     <a class="zoom-fab zoom-btn-large tooltip" id="zoomBtn"
        v-on:mouseover="showMenu = true"
        v-on:click="copy">
@@ -64,43 +66,32 @@
   module.exports = {
     data() {
       return {
-        showMenu: false
+        showMenu: false,
+        showMenuTimer: null
       }
     },
-    mounted() {
-      return false
-      $('#zoomBtn').click(function () {
-        $('.zoom-menu').toggleClass('show');
-        $('.zoom-btn-sm').toggleClass('scale-out');
-        /*
-         if (!$('.zoom-card').hasClass('scale-out')) {
-         $('.zoom-card').toggleClass('scale-out');
-         }
-         */
-      });
-
-      /*
-       $('.zoom-btn-sm').click(function () {
-       var btn = $(this);
-       var card = $('.zoom-card');
-       if ($('.zoom-card').hasClass('scale-out')) {
-       $('.zoom-card').toggleClass('scale-out');
-       }
-       if (btn.hasClass('zoom-btn-person')) {
-       card.css('background-color', '#d32f2f');
-       } else if (btn.hasClass('zoom-btn-doc')) {
-       card.css('background-color', '#fbc02d');
-       } else if (btn.hasClass('zoom-btn-tangram')) {
-       card.css('background-color', '#388e3c');
-       } else if (btn.hasClass('zoom-btn-report')) {
-       card.css('background-color', '#1976d2');
-       } else {
-       card.css('background-color', '#7b1fa2');
-       }
-       });
-       */
+    watch: {
+      showMenu () {
+        if (this.showMenu === true) {
+          this.clearDelayCloseMenu()
+        }
+        else {
+          clearTimeout(this.showMenuTimer)
+          this.showMenuTimer = null
+        }
+      }
     },
     methods: {
+      delayCloseMenu () {
+        clearTimeout(this.showMenuTimer)
+        this.showMenuTimer = setTimeout(() => {
+          this.showMenu = false
+        }, 3 * 1000)
+      },
+      clearDelayCloseMenu () {
+        clearTimeout(this.showMenuTimer)
+        this.showMenuTimer = null
+      },
       copy() {
         let text = this.$parent.config.textContent
         if (!navigator.clipboard) {
