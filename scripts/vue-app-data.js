@@ -7,7 +7,11 @@ var appData = {
     replaceMode: 'line',
     //replaceMode: 'raw',
     displayReplacePanel: true,
-    replaceLineMode: 'prefix',
+    replaceLineOptions: {
+      mode: 'prefix',
+      lTrim: false,
+      rTrim: false
+    },
   },
   textContentHistory: [],
   textContentHistoryIndex: -1,

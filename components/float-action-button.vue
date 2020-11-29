@@ -13,8 +13,8 @@
         <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition"
            v-bind:class="{'scale-out': !showMenu}">
           <i class="edit icon"></i>
-        </a><span class="tooltiptext" style="left: -100%;">Toggle Replace Panel</span>
-
+        </a>
+        <span class="tooltiptext" style="left: -100%;">Toggle Replace Panel</span>
       </li>
       <!--
       <li title="Search" class="tooltip">
@@ -132,6 +132,7 @@
       },
       toggleReplacePanel() {
         this.$parent.config.displayReplacePanel = !this.$parent.config.displayReplacePanel
+        //console.log(this.$parent.config.displayReplacePanel)
         this.closeMenu()
       },
       clear() {

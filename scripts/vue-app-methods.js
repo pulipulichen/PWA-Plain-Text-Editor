@@ -66,8 +66,8 @@ var appMethods = {
     this.textContentModified = false
   },
   undo () {
-    console.log('undo', this.textContentHistoryIndex, this.textContentHistory.length, this.textContentHistory[(this.textContentHistoryIndex)])
-    console.log(this.textContentHistory)
+    //console.log('undo', this.textContentHistoryIndex, this.textContentHistory.length, this.textContentHistory[(this.textContentHistoryIndex)])
+    //console.log(this.textContentHistory)
     if ((this.textContentHistoryIndex) <= 0
             || !this.textContentHistory[(this.textContentHistoryIndex - 1)]) {
       return false
@@ -81,8 +81,8 @@ var appMethods = {
     this.config.textContent = this.textContentHistory[this.textContentHistoryIndex]
   },
   redo () {
-    console.log('redo', this.textContentHistoryIndex, this.textContentHistory.length, this.textContentHistory[(this.textContentHistoryIndex + 1)])
-    console.log(this.textContentHistory)
+    //console.log('redo', this.textContentHistoryIndex, this.textContentHistory.length, this.textContentHistory[(this.textContentHistoryIndex + 1)])
+    //console.log(this.textContentHistory)
     if ((this.textContentHistoryIndex + 1) > this.textContentHistory.length
             || !this.textContentHistory[(this.textContentHistoryIndex + 1)]) {
       return false

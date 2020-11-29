@@ -1,9 +1,16 @@
 var appComputed = {
   classNameApp () {
-    return {
-      'show-replace-panel': this.config.displayReplacePanel, 
-      'show-replace-panel-extended': (this.config.replaceMode === 'line')
+    let className = []
+    
+    if (this.config.displayReplacePanel) {
+      className.push('show-replace-panel')
     }
+    
+    if (this.config.replaceMode === 'line') {
+      className.push('show-replace-panel-extended')
+    }
+    
+    return className
   },
   isReplaceDisabled () {
     if (this.config.textContent === ''
@@ -24,20 +31,67 @@ var appComputed = {
     }
     
     let count = 0
-    let stringToSearch = this.config.stringToSearch
+    //let stringToSearch = this.config.stringToSearch
     if (this.config.replaceMode === 'raw') {
-      stringToSearch = stringToSearch.replace(/\\/g, '\\\\')
-      
-      count = this.config.textContent.split(stringToSearch).length - 1
+      count = this.countOccurRaw
     }
     else if (this.config.replaceMode === 'regex') {
-      let replace = this.config.stringToSearch
-      let re = new RegExp(replace, "g");
-      count = ((this.config.textContent || '').match(re) || []).length
+      count = this.countOccurRegex
+    }
+    else if (this.config.replaceMode === 'line') {
+      count = this.countOccurLine
     }
     
     //console.log(this.config.textContent, this.config.stringToSearch, count)
     
+    return count
+  },
+  countOccurRaw () {
+    let stringToSearch = this.config.stringToSearch
+    stringToSearch = stringToSearch.replace(/\\/g, '\\\\')
+      
+    return this.config.textContent.split(stringToSearch).length - 1
+  },
+  countOccurRegex () {
+    let replace = this.config.stringToSearch
+    let re = new RegExp(replace, "g");
+    return ((this.config.textContent || '').match(re) || []).length
+  },
+  textContentLines () {
+    return this.config.textContent.split('\n')
+  },
+  textContentLinesTrim () {
+    return this.textContentLines.map(line => line.trim())
+  },
+  countOccurLine () {
+    let stringToSearch = this.config.stringToSearch
+    stringToSearch = stringToSearch.replace(/\\/g, '\\\\')
+    
+    let count = 0
+    
+    let mode = this.config.replaceLineOptions.mode
+    if (mode === 'prefix') {
+      this.textContentLinesTrim.forEach((line) => {
+        if (line.startsWith(stringToSearch)) {
+          count++
+        }
+      })
+    }
+    else if (mode === 'suffix') {
+      this.textContentLinesTrim.forEach((line) => {
+        if (line.endsWith(stringToSearch)) {
+          count++
+        }
+      })
+    }
+    else {
+      this.textContentLinesTrim.forEach((line) => {
+        if (line.indexOf(stringToSearch) > -1) {
+          count++
+        }
+      })
+    }
+    //console.log(count)
     return count
   },
   textReplaceButton () {

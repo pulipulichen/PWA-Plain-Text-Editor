@@ -73,49 +73,35 @@
     
     <!-- =========================================== -->
     
-    <div class="inline field">
-      <label for="stringToReplaceWith">Replace with</label>
-      <div class="ui action icon input string-to-replace-with-input-container">
-        <div class="ui icon input string-to-replace-with-input">
-          <input type="text" 
-                 placeholder="Replace with..."
-                 id="stringToReplaceWith"
-                 v-model="$parent.config.stringToReplaceWith" />
-          <i class="link paragraph icon"
-             titl="New line"
-             v-on:click="$parent.config.stringToReplaceWith = $parent.config.stringToReplaceWith + '\\n'"></i>
-          <i class="link close icon"
-             titl="Clear"
-             v-if="$parent.config.stringToReplaceWith"
-             v-on:click="$parent.config.stringToReplaceWith = ''"></i>
-        </div>
-          
-        <select class="ui compact selection dropdown"
-                v-model="$parent.config.replaceMode">
-          <option selected="" value="regex">Regex</option>
-          <option value="raw">Raw</option>
-          <option value="line">Line</option>
-        </select>
-        <div class="ui button"
-             v-on:click="$parent.doReplace"
-             v-bind:class="{disabled: $parent.isReplaceDisabled, positive: !$parent.isReplaceDisabled}">
-          {{ $parent.textReplaceButton }}
-        </div>
-        
-        <div class="ui mini button"
-             v-on:click="$parent.undo"
-             v-if="!$parent.isUndoDisabled">
-          <i class="undo icon"></i>
-        </div>
-        <!--
-        <div class="ui mini button"
-             v-on:click="$parent.redo"
-             v-if="!$parent.isRedoDisabled">
-          <i class="redo icon"></i>
-        </div>
-        -->
+    <div class="inline fields">
+      <label for="LineOptions">Line Options</label>
+      <div class="inline field">
+          <select v-model="$parent.config.replaceLineOptions.mode"
+                  class="ui compact selection dropdown">
+            <option value="prefix">Prefix</option>
+            <option value="suffix">Suffix</option>
+            <option value="first">First</option>
+            <option value="last">Last</option>
+          </select>
       </div>
-      
+      <div class="inline field"
+           v-if="$parent.config.replaceLineOptions.mode === 'prefix'">
+        <div class="ui toggle checkbox">
+          <input type="checkbox" 
+                 id="replaceLineOptionsLTrim"
+                 v-model="$parent.config.replaceLineOptions.lTrim">
+          <label for="replaceLineOptionsLTrim">Trim left</label>
+        </div>
+      </div>
+      <div class="inline field"
+           v-if="$parent.config.replaceLineOptions.mode === 'suffix'">
+        <div class="ui toggle checkbox">
+          <input type="checkbox" 
+                 id="replaceLineOptionsRTrim"
+                 v-model="$parent.config.replaceLineOptions.rTrim">
+          <label for="replaceLineOptionsRTrim">Trim right</label>
+        </div>
+      </div>
     </div>
   </div>
 </template>
