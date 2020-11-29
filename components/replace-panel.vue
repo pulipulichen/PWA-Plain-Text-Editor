@@ -84,6 +84,7 @@
             <option value="last">Last</option>
           </select>
       </div>
+      <!--
       <div class="inline field"
            v-if="$parent.config.replaceLineOptions.mode === 'prefix'">
         <div class="ui toggle checkbox">
@@ -102,6 +103,7 @@
           <label for="replaceLineOptionsRTrim">Trim right</label>
         </div>
       </div>
+      -->
     </div>
   </div>
 </template>

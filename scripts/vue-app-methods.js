@@ -51,19 +51,124 @@ var appMethods = {
     this.textContentHistory.push(this.config.textContent)
     
     if (this.config.replaceMode === 'raw') {
-      stringToSearch = stringToSearch.replace(/\\/g, '\\\\')
-      stringToReplaceWith = stringToReplaceWith.replace(/\\/g, '\\\\')
-      
-      this.config.textContent = this.config.textContent.split(this.config.stringToSearch)
-              .join(this.config.stringToReplaceWith)
+      this.doReplaceRaw()
     }
     else if (this.config.replaceMode === 'regex') {
-      let re = new RegExp(stringToSearch, "g")
-      this.config.textContent = this.config.textContent.replace(re, this.config.stringToReplaceWith);
+      this.doReplaceRegex()
+    }
+    else if (this.config.replaceMode === 'line') {
+      let mode = this.config.replaceLineOptions.mode
+      if (mode === 'prefix') {
+        this.doReplaceLinePrefix()
+      }
+      else if (mode === 'suffix') {
+        this.doReplaceLineSuffix()
+      }
+      else if (mode === 'first' || mode === 'last') {
+        this.doReplaceLineIndex()
+      }
     }
     
     this.textContentHistoryIndex = this.textContentHistory.length
     this.textContentModified = false
+  },
+  doReplaceRaw () {
+    let stringToSearch = this.config.stringToSearch
+    let stringToReplaceWith = this.config.stringToReplaceWith
+    stringToSearch = stringToSearch.replace(/\\/g, '\\\\')
+    stringToReplaceWith = stringToReplaceWith.replace(/\\/g, '\\\\')
+
+    this.config.textContent = this.config.textContent.split(this.config.stringToSearch)
+            .join(this.config.stringToReplaceWith)
+  },
+  doReplaceRegex () {
+    let stringToSearch = this.config.stringToSearch
+    //let stringToReplaceWith = this.config.stringToReplaceWith
+    let re = new RegExp(stringToSearch, "g")
+    this.config.textContent = this.config.textContent.replace(re, this.config.stringToReplaceWith);
+  },
+  doReplaceLinePrefix () {
+    this.config.textContent = this.textContentLines.map(line => {
+      /*
+      if (this.config.replaceLineOptions.lTrim === true) {
+        if (line.trim() === '') {
+          return ''
+        }
+        
+        let firstChar = line.trim().slice(0, 1)
+        let firstIndex = line.indexOf(firstChar)
+        line = line.slice(firstIndex)
+        
+        if (line.startsWith(this.stringToSearchRaw)) {
+          return this.stringToReplaceWithRaw + line.slice(this.stringToSearchRaw.length)
+        }
+      }
+      else {
+        if (line.trim() === '') {
+          return line
+        }
+      }
+      */
+      
+      let firstChar = line.trim().slice(0, 1)
+      let firstIndex = line.indexOf(firstChar)
+      
+      let padding = line.slice(0, firstIndex)
+      let trimLine = line.slice(firstIndex)
+      
+      if (trimLine.startsWith(this.stringToSearchRaw)) {
+        return padding + this.stringToReplaceWithRaw + trimLine.slice(this.stringToSearchRaw.length)
+      }
+      else {
+        return line
+      }
+    }).join('\n')
+  },
+  doReplaceLineSuffix () {
+    this.config.textContent = this.textContentLines.map(line => {
+      
+      let lastChar = line.trim().slice(-1)
+      //console.log(lastChar)
+      let lastIndex = line.lastIndexOf(lastChar)
+      
+      let padding = line.slice(lastIndex + 1)
+      let trimLine = line.slice(0, lastIndex + 1)
+      
+      if (trimLine.endsWith(this.stringToSearchRaw)) {
+        return trimLine.slice(0, trimLine.length - this.stringToSearchRaw.length) + this.stringToReplaceWithRaw +  padding
+      }
+      else {
+        return line
+      }
+    }).join('\n')
+  },
+  doReplaceLineIndex () {
+    let mode = this.config.replaceLineOptions.mode
+    
+    this.config.textContent = this.textContentLines.map(line => {
+      
+      let index
+      if (mode === 'first') {
+        index = line.indexOf(this.stringToSearchRaw)
+      }
+      else {
+        index = line.lastIndexOf(this.stringToSearchRaw)
+      }
+              
+      if (index === -1) {
+        return line
+      }
+      
+      if (index === 0) {
+        return this.stringToReplaceWithRaw + line.slice(this.stringToSearchRaw.length)
+      }
+      else if (index === line.length - this.stringToSearchRaw.length) {
+        return line.slice(0, index) + this.stringToReplaceWithRaw
+      }
+      else {
+        return line.slice(0, index) + this.stringToReplaceWithRaw + line.slice(index + this.stringToSearchRaw.length)
+      }
+    }).join('\n')
   },
   undo () {
     //console.log('undo', this.textContentHistoryIndex, this.textContentHistory.length, this.textContentHistory[(this.textContentHistoryIndex)])

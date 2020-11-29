@@ -11,7 +11,10 @@ var appWatch = {
   'config.replaceMode' () {
     this.saveToLocalStorage()
   },
-  'config.displayReplaceBar' () {
+  'config.displayReplacePanel' () {
+    this.saveToLocalStorage()
+  },
+  'config.replaceLineOptions.mode' () {
     this.saveToLocalStorage()
   },
 }

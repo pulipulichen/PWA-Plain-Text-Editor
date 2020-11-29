@@ -63,6 +63,12 @@ var appComputed = {
   textContentLinesTrim () {
     return this.textContentLines.map(line => line.trim())
   },
+  stringToSearchRaw () {
+    return this.config.stringToSearch.replace(/\\/g, '\\\\')
+  },
+  stringToReplaceWithRaw () {
+    return this.config.stringToReplaceWith.replace(/\\/g, '\\\\')
+  },
   countOccurLine () {
     let stringToSearch = this.config.stringToSearch
     stringToSearch = stringToSearch.replace(/\\/g, '\\\\')
