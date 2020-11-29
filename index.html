@@ -39,11 +39,12 @@
   </head>
   <body>
 
-    <div id="app">
-      <textarea 
-        v-model="config.textContent"
-        class="editor"
-        ></textarea>
+    <div id="app"
+         v-bind:class="{'show-replace-panel': config.displayReplacePanel}">
+      
+      <textarea-editor></textarea-editor>
+      <replace-panel></replace-panel>
+      
     </div>
 
     <!-- ================================================ -->

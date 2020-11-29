@@ -1,9 +1,16 @@
 var appData = {
+  inited: false,
   config: {
     textContent: '',
     stringToSearch: '',
     stringToReplaceWith: '',
     replaceMode: 'regex',
-    displayReplaceBar: false,
+    //replaceMode: 'raw',
+    displayReplacePanel: true,
+  },
+  textContentHistory: [],
+  textContentHistoryIndex: 0,
+  debug: {
+    enableRestore: true
   }
 }

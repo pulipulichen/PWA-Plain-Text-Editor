@@ -1,0 +1,39 @@
+
+#app {
+  .editor {
+    width: 100vw;
+    height: 100vh;
+
+    line-height: 2rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none; /*remove the resize handle on the bottom right*/
+  }
+  
+  .replace-panel {
+    display: none;
+  }
+}
+
+#app.show-replace-panel {
+  @replacePanelHeight: 7rem;
+  
+  .editor {
+    height: calc(100vh - @replacePanelHeight);
+  }
+  
+  .replace-panel {
+    display: block;
+  }
+}
+
+  

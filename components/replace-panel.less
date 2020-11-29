@@ -1,0 +1,32 @@
+.replace-panel {
+  @labelWidth: 6rem;
+  
+  .close-icon {
+    float: right;
+    //margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  .field {
+    clear: none !important; 
+  }
+  
+  label {
+    width: @labelWidth !important;
+    display: inline-block;
+    text-align: right;
+  }
+  
+  .string-to-search-input,
+  .string-to-replace-with-input {
+    width: calc(100% - @labelWidth - 3rem) !important;
+  }
+  
+  .string-to-replace-with-input {
+    select {
+      width: 8rem;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+  }
+}

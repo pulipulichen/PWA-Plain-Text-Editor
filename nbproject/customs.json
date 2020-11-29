@@ -1,6 +1,8 @@
 {
   "elements": {},
   "attributes": {
+    "v-bind:class": {},
+    "v-if": {},
     "v-model": {}
   }
 }
