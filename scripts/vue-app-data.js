@@ -16,6 +16,7 @@ var appData = {
   textContentHistory: [],
   textContentHistoryIndex: -1,
   textContentModified: true,
+  searchPostion: -1,
   debug: {
     enableRestore: true
   }

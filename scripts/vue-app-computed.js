@@ -159,7 +159,7 @@ var appComputed = {
     return false
   },
   isFormatCodeEnabled () {
-    return (this.isFormatJSONEnabled)
+    return (this.isFormatJSONEnabled || this.isFormatXMLEnabled)
   },
   isFormatJSONEnabled () {
     if (this.textContentTrim.startsWith('{') 
@@ -175,5 +175,41 @@ var appComputed = {
       }
     }
     return false
+  },
+  isFormatXMLEnabled () {
+    if (this.textContentTrim.startsWith('<') 
+            && this.textContentTrim.endsWith('>')) {
+      let rightIndex = this.textContentTrim.indexOf('>')
+      //console.log(rightIndex)
+      if (rightIndex === this.textContentTrim.length - 1) {
+        return false
+      }
+      
+      let leftIndex = this.textContentTrim.lastIndexOf('<')
+      //console.log(leftIndex)
+      if (leftIndex === 0) {
+        return false
+      }
+      
+      return true
+    }
+    return false
+  },
+  stringToSearch () {
+    let stringToSearch
+    if (this.config.replaceMode === 'regex') {
+      stringToSearch = this.config.stringToSearch
+    } 
+    else {
+      stringToSearch = this.stringToSearchRaw
+    }
+    return stringToSearch
+  },
+  isSearchEnabled () {
+    if (this.stringToSearch === '') {
+      return false
+    }
+    
+    return (this.config.textContent.indexOf(this.stringToSearch) > -1)
   }
 }

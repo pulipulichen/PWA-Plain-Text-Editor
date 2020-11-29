@@ -1,6 +1,7 @@
 var appWatch = {
   'config.textContent' () {
     this.saveToLocalStorage()
+    this.updateDocumentTitle()
   },
   'config.stringToSearch' () {
     this.saveToLocalStorage()

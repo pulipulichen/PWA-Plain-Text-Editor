@@ -8,7 +8,8 @@
     <div class="inline field">
       <label for="stringToSearch">Search</label>
       
-      <div class="ui icon input string-to-search-input">
+      <div class="ui action icon input string-to-replace-with-input-container">
+        <div class="ui icon fluid input string-to-search-input">
         <input type="text" 
                placeholder="Search..."
                id="stringToSearch"
@@ -21,7 +22,20 @@
              titl="Clear"
              v-if="$parent.config.stringToSearch"
              v-on:click="$parent.config.stringToSearch = ''"></i>
+        </div>
+        <button type="button" class="ui compact button"
+                v-bind:class="{disabled: !$parent.isSearchEnabled}"
+                v-on:click="$parent.doSearchPrev">
+          <i class="long arrow alternate left icon"></i>
+        </button>
+        <button type="button" class="ui compact button"
+                v-bind:class="{disabled: !$parent.isSearchEnabled}"
+                v-on:click="$parent.doSearchNext">
+          <i class="long arrow alternate right icon"></i>
+        </button>
       </div>
+        
+      
     </div>
     
     <!-- =========================================== -->

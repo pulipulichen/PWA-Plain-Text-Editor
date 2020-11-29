@@ -25,7 +25,11 @@
   //@closePanelIconWidth: 1rem;
   @closePanelIconWidth: 0rem;
   
-  .string-to-search-input,
+  .string-to-search-input {
+    width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem) !important;
+    
+  }
+  
   .string-to-replace-with-input-container {
     width: calc(100% - @labelWidth - @closePanelIconWidth - 2rem) !important;
   }

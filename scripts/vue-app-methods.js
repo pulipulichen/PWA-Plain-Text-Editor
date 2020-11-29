@@ -40,8 +40,8 @@ var appMethods = {
     this.textContentModified = true
   },
   doReplace () {
-    let stringToSearch = this.config.stringToSearch
-    let stringToReplaceWith = this.config.stringToReplaceWith
+    //let stringToSearch = this.config.stringToSearch
+    //let stringToReplaceWith = this.config.stringToReplaceWith
     
     if (this.textContentHistoryIndex > -1 
             && this.textContentHistoryIndex !== this.textContentHistory.length - 1) {
@@ -72,7 +72,7 @@ var appMethods = {
     this.textContentModified = false
   },
   saveHistory () {
-    this.clearHistory()
+    //this.clearHistory()
     this.textContentHistory.push(this.config.textContent)
     this.textContentHistoryIndex = this.textContentHistory.length
     
@@ -244,6 +244,9 @@ var appMethods = {
     if (this.isFormatJSONEnabled) {
       return this.formatJSONTextContent()
     }
+    else if (this.isFormatXMLEnabled) {
+      return this.formatXMLTextContent()
+    }
   },
   formatJSONTextContent () {
     this.saveHistory()
@@ -261,5 +264,125 @@ var appMethods = {
       }
     }
     return false
+  },
+  formatXMLTextContent () {
+    this.saveHistory()
+    
+    this.config.textContent = this.prettifyXml(this.textContentTrim)
+  },
+  prettifyXml (sourceXml) {
+    var xmlDoc = new DOMParser().parseFromString(sourceXml, 'application/xml');
+    var xsltDoc = new DOMParser().parseFromString([
+        // describes how we want to modify the XML - indent everything
+        '<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform">',
+        '  <xsl:strip-space elements="*"/>',
+        '  <xsl:template match="para[content-style][not(text())]">', // change to just text() to strip space in text nodes
+        '    <xsl:value-of select="normalize-space(.)"/>',
+        '  </xsl:template>',
+        '  <xsl:template match="node()|@*">',
+        '    <xsl:copy><xsl:apply-templates select="node()|@*"/></xsl:copy>',
+        '  </xsl:template>',
+        '  <xsl:output indent="yes"/>',
+        '</xsl:stylesheet>',
+    ].join('\n'), 'application/xml');
+
+    var xsltProcessor = new XSLTProcessor();    
+    xsltProcessor.importStylesheet(xsltDoc);
+    var resultDoc = xsltProcessor.transformToDocument(xmlDoc);
+    var resultXml = new XMLSerializer().serializeToString(resultDoc);
+    return resultXml;
+  },
+  doSearchNext () {
+    let stringToSearch = this.stringToSearch
+    
+    let startPos = this.config.textContent.indexOf(stringToSearch, this.searchPostion)
+    if (startPos === -1) {
+      startPos = this.config.textContent.indexOf(stringToSearch)
+      
+      if (startPos === -1) {
+        return false
+      }
+    }
+
+    this.searchPostion = startPos + 1
+
+    // do selection
+    // Chrome / Firefox
+    let tarea = this.$refs.TextareaEditor.$el
+    if (typeof(tarea.selectionStart) !== "undefined") {
+        tarea.focus();
+        tarea.selectionStart = startPos;
+        tarea.selectionEnd = startPos + this.config.stringToSearch.length;
+        return true;
+    }
+    /*
+    // IE
+    if (document.selection && document.selection.createRange) {
+        tarea.focus();
+        tarea.select();
+        var range = document.selection.createRange();
+        range.collapse(true);
+        range.moveEnd("character", endPos);
+        range.moveStart("character", startPos);
+        range.select();
+        return true;
+    }
+    */
+    return false;
+  },
+  doSearchPrev () {
+    let stringToSearch = this.stringToSearch
+    
+    let startPos
+    if (this.searchPostion - this.stringToSearch.length - 1 < 0) {
+      startPos = this.config.textContent.lastIndexOf(stringToSearch)
+    }
+    else {
+      startPos = this.config.textContent.lastIndexOf(stringToSearch, this.searchPostion - this.stringToSearch.length - 1)
+    }
+    if (startPos === -1) {
+      startPos = this.config.textContent.lastIndexOf(stringToSearch)
+      
+      if (startPos === -1) {
+        //console.log('not found')
+        return false
+      }
+    }
+    
+    //console.log(startPos)
+
+    this.searchPostion = startPos + 1
+
+    // do selection
+    // Chrome / Firefox
+    let tarea = this.$refs.TextareaEditor.$el
+    if (typeof(tarea.selectionStart) !== "undefined") {
+        tarea.focus();
+        tarea.selectionStart = startPos;
+        tarea.selectionEnd = startPos + this.config.stringToSearch.length;
+        return true;
+    }
+    /*
+    // IE
+    if (document.selection && document.selection.createRange) {
+        tarea.focus();
+        tarea.select();
+        var range = document.selection.createRange();
+        range.collapse(true);
+        range.moveEnd("character", endPos);
+        range.moveStart("character", startPos);
+        range.select();
+        return true;
+    }
+    */
+    return false;
+  },
+  updateDocumentTitle () {
+    if (this.textContentTrim === '') {
+      document.title = 'Plain Text Editor'
+    }
+    else {
+      document.title = this.textContentTrim
+    }
   }
 }
