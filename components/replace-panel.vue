@@ -12,6 +12,7 @@
         <div class="ui icon fluid input string-to-search-input">
         <input type="text" 
                placeholder="Search..."
+               ref="SearchInput"
                id="stringToSearch"
                v-model="$parent.config.stringToSearch"
                class="" />
@@ -127,4 +128,14 @@
   </div>
 </template>
 
-<script>module.exports = {}</script>
+<script>
+  module.exports = {
+    methods: {
+      focus () {
+        setTimeout(() => {
+          this.$refs.SearchInput.focus()
+        }, 0)
+      }
+    }
+  }
+</script>
