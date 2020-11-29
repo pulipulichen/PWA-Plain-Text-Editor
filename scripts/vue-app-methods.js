@@ -72,7 +72,7 @@ var appMethods = {
     this.textContentModified = false
   },
   saveHistory () {
-    
+    this.clearHistory()
     this.textContentHistory.push(this.config.textContent)
     this.textContentHistoryIndex = this.textContentHistory.length
     
@@ -239,5 +239,27 @@ var appMethods = {
         return line.slice(0, index + 1)
       }
     }).join('\n')
+  },
+  formatCode () {
+    if (this.isFormatJSONEnabled) {
+      return this.formatJSONTextContent()
+    }
+  },
+  formatJSONTextContent () {
+    this.saveHistory()
+    
+    if (this.textContentTrim.startsWith('{') 
+            && this.textContentTrim.endsWith('}')) {
+      try {
+        //let object = JSON.parse(this.textContentTrim)
+        let object
+        eval('object = ' + this.textContentTrim)
+        this.config.textContent = JSON.stringify(object, null, 2)
+      }
+      catch (e) {
+        return false
+      }
+    }
+    return false
   }
 }

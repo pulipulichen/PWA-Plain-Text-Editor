@@ -8,6 +8,17 @@
     </a>
     <ul class="zoom-menu"
         v-bind:class="{'show': showMenu}">
+      
+      <li title="Format" class="tooltip"
+          v-on:click="formatCode"
+          v-if="$parent.isFormatCodeEnabled">
+        <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition"
+           v-bind:class="{'scale-out': !showMenu}">
+          <i class="file code outline icon"></i>
+        </a>
+        <span class="tooltiptext" style="left: -100%;">Format code</span>
+      </li>
+      
       <li title="Toggle Replace Panel" class="tooltip"
           v-on:click="toggleReplacePanel">
         <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition"
@@ -137,6 +148,10 @@
       },
       clear() {
         this.$parent.clearTextContentConfirm()
+        this.closeMenu()
+      },
+      formatCode () {
+        this.$parent.formatCode()
         this.closeMenu()
       }
     }

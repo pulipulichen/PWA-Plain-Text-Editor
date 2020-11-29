@@ -57,6 +57,9 @@ var appComputed = {
     let re = new RegExp(replace, "g");
     return ((this.config.textContent || '').match(re) || []).length
   },
+  textContentTrim () {
+    return this.config.textContent.trim()
+  },
   textContentLines () {
     return this.config.textContent.split('\n')
   },
@@ -151,6 +154,24 @@ var appComputed = {
       let index = line.lastIndexOf(char)
       if (index < line.length - 1) {
         return true
+      }
+    }
+    return false
+  },
+  isFormatCodeEnabled () {
+    return (this.isFormatJSONEnabled)
+  },
+  isFormatJSONEnabled () {
+    if (this.textContentTrim.startsWith('{') 
+            && this.textContentTrim.endsWith('}')) {
+      try {
+        //console.log(this.textContentTrim)
+        //JSON.parse(this.textContentTrim)
+        eval('let test = ' + this.textContentTrim)
+        return true
+      }
+      catch (e) {
+        return false
       }
     }
     return false
