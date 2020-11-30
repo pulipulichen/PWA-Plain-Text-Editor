@@ -30,7 +30,7 @@
 <script>
   module.exports = {
     mounted () {
-      $(this.$refs.Modal).modal('show')
+      //$(this.$refs.Modal).modal('show')
       //console.log(this.$parent.config.enableTextWrap)
     },
     methods: {
