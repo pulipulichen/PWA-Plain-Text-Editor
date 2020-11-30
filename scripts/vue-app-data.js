@@ -12,6 +12,11 @@ var appData = {
       lTrim: false,
       rTrim: false
     },
+    enableTextWrap: false,
+    tab: {
+      mode: 'tab',
+      spaceNumber: 2,
+    }
   },
   textContentHistory: [],
   textContentHistoryIndex: -1,

@@ -3,6 +3,7 @@
         v-model="$parent.config.textContent"
         v-on:change="$parent.clearHistory"
         class="editor"
+        v-bind:class="{'disable-wrap': !$parent.config.enableTextWrap}"
         ></textarea>
 </template>
 

@@ -12,6 +12,15 @@
         v-bind:class="{'show': showMenu}">
       
       <li title="Format" class="tooltip"
+          v-on:click="openConfigModal">
+        <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition"
+           v-bind:class="{'scale-out': !showMenu}">
+          <i class="cogs icon"></i>
+        </a>
+        <span class="tooltiptext" style="left: -100%;">Configuration</span>
+      </li>
+      
+      <li title="Format" class="tooltip"
           v-on:click="formatCode"
           v-if="$parent.isFormatCodeEnabled">
         <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition"
@@ -82,6 +91,9 @@
       }
     },
     methods: {
+      openConfigModal () {
+        this.$parent.$refs.ConfigModal.open()
+      },
       delayCloseMenu () {
         clearTimeout(this.showMenuTimer)
         this.showMenuTimer = setTimeout(() => {

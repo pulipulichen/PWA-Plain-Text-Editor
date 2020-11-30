@@ -18,4 +18,14 @@ var appWatch = {
   'config.replaceLineOptions.mode' () {
     this.saveToLocalStorage()
   },
+  'config.enableTextWrap' () {
+    this.saveToLocalStorage()
+    this.initCheckbox()
+  },
+  'config.tab.mode' () {
+    this.saveToLocalStorage()
+  },
+  'config.tab.spaceNumber' () {
+    this.saveToLocalStorage()
+  },
 }

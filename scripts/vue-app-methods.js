@@ -429,5 +429,16 @@ var appMethods = {
           break;
       }
     });
-  }
+  },
+  initCheckbox () {
+    if (!this.$refs.ConfigModal) {
+      setTimeout(() => {
+        this.initCheckbox ()
+      }, 100)
+      return false
+    }
+    
+    $(this.$el).find('.ui.checkbox').checkbox()
+    console.log($(this.$el).find('.ui.checkbox').length)
+  },
 }
