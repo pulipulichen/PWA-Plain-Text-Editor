@@ -60,9 +60,18 @@ var appComputed = {
     return this.config.textContent.split(stringToSearch).length - 1
   },
   countOccurRegex () {
-    let replace = this.config.stringToSearch
-    let re = new RegExp(replace, "g");
-    return ((this.config.textContent || '').match(re) || []).length
+    let search = this.config.stringToSearch
+    if (search === '') {
+      return 0
+    }
+    //return 0
+    //console.log(`'${search}'`)
+    //replace = replace.split('\\').join('\\\\')
+    let re
+    eval(`re = new RegExp("${search}", "g")`)
+    //console.log(re)
+    let count = ((this.config.textContent || '').match(re) || []).length
+    return count
   },
   textContentTrim () {
     return this.config.textContent.trim()

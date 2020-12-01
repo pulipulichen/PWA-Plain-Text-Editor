@@ -88,9 +88,12 @@ var appMethods = {
   },
   doReplaceRegex () {
     let stringToSearch = this.config.stringToSearch
-    //let stringToReplaceWith = this.config.stringToReplaceWith
+    let stringToReplaceWith = this.config.stringToReplaceWith
+    //console.log(stringToReplaceWith)
+    stringToReplaceWith = stringToReplaceWith.split('\\n').join('\n')
     let re = new RegExp(stringToSearch, "g")
-    this.config.textContent = this.config.textContent.replace(re, this.config.stringToReplaceWith);
+    
+    this.config.textContent = this.config.textContent.replace(re, stringToReplaceWith);
   },
   doReplaceLinePrefix () {
     this.config.textContent = this.textContentLines.map(line => {
