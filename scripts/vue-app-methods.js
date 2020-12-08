@@ -313,9 +313,14 @@ var appMethods = {
     // Chrome / Firefox
     let tarea = this.$refs.TextareaEditor.$el
     if (typeof(tarea.selectionStart) !== "undefined") {
+        tarea.selectionStart = startPos;
+        tarea.selectionEnd = startPos;
+      
+        tarea.blur();
         tarea.focus();
         tarea.selectionStart = startPos;
         tarea.selectionEnd = startPos + this.config.stringToSearch.length;
+        
         return true;
     }
     /*
@@ -360,9 +365,19 @@ var appMethods = {
     // Chrome / Firefox
     let tarea = this.$refs.TextareaEditor.$el
     if (typeof(tarea.selectionStart) !== "undefined") {
+        tarea.selectionStart = startPos;
+        tarea.selectionEnd = startPos;
+      
+        tarea.blur();
         tarea.focus();
         tarea.selectionStart = startPos;
         tarea.selectionEnd = startPos + this.config.stringToSearch.length;
+        
+        
+        // collapse selection here
+        //tarea.blur()
+        //tarea.focus() // this scrolls the textarea
+        // expand selection here
         return true;
     }
     /*
