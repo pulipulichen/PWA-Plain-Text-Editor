@@ -1,7 +1,14 @@
-$.require = function (list) {
+$.require = function (basePath, list) {
+  if (!list) {
+    list = basePath
+    basePath = ''
+  }
+  
   if (Array.isArray(list) === false) {
     list = [list]
   }
+  
+  list = list.map(url => basePath + url)
   
   return new Promise((resolve) => {
     let next = (i) => {
