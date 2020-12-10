@@ -11,6 +11,7 @@
     "v-if": {},
     "ref": {},
     "v-on:click": {},
+    "scoped": {},
     "src": {},
     "v-on:mousein": {},
     "lang": {},
