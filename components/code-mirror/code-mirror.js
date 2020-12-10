@@ -4,7 +4,9 @@ module.exports = {
   data () {
     return {
       editor: null,
-      editor$el: null
+      editor$el: null,
+      marks: [],
+      highlightClassName: 'highlight'
     }
   },
   beforeCreate: async function () {
@@ -42,15 +44,6 @@ module.exports = {
   mounted: async function () {
     await this.initCodeMirror()
     
-    this.setMode('javascript')
-    
-    setTimeout(() => {
-      this.highlightText('data')
-      
-      setTimeout(() => {
-        this.highlightText('History')
-      }, 1000)
-    }, 1000)
   },
   methods: {
     initCodeMirror () {
@@ -86,23 +79,60 @@ module.exports = {
         
     },
     setMode (mode) {
-      this.editor.setOption("mode", mode)
+      setTimeout(() => {
+        this.editor.setOption("mode", mode)
+      }, 100)
+      
+      //this.editor$el = $('.CodeMirror:first')
+      
+      //console.log(this.editor$el)
     },
-    highlightText(text) {
+    highlightClear () {
+      //console.log(this.editor$el.find('.' + this.highlightClassName).length)
+      //this.editor$el.find('.' + this.highlightClassName).removeClass(this.highlightClassName)
+      this.marks.forEach(mark => {
+        mark.clear()
+      })
+    },
+    highlightText: async function (text) {
       
-      let className = 'highlight'
-      
-      this.editor$el.find('.' + className).removeClass(className)
+      this.highlightClear()
       
       var cursor = this.editor.getSearchCursor(text);
       while (cursor.findNext()) {
-          this.editor.markText(
+          let mark = this.editor.markText(
             cursor.from(),
             cursor.to(),
-            { className: className }
-          );
+            { className: this.highlightClassName }
+          )
+          this.marks.push(mark)
       }
       //this.editor.setCursor({line: 1, ch: 0})
+    },
+    jumpToLine (i) { 
+      var t = this.editor.charCoords({line: i, ch: 0}, "local").top; 
+      var middleHeight = this.editor.getScrollerElement().offsetHeight / 2; 
+      this.editor.scrollTo(null, t - middleHeight - 5); 
+    },
+    test1210 () {
+       setTimeout(async () => {
+          await this.highlightText('data')
+
+          setTimeout(async () => {
+            await this.highlightText('History')
+
+            //console.log(this.marks)
+            mark = this.marks[(this.marks.length - 1)]
+            //console.log(mark.doc.scrollIntoView())
+
+            this.setMode('xml')
+
+            editor = this.editor
+            //editor.scrollIntoView({from: 0, to: 0}, 100)
+
+            this.jumpToLine(100)
+          }, 1000)
+        }, 1000)
     }
   }
 }
