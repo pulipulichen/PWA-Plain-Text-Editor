@@ -2,14 +2,18 @@
   "elements": {
     "textarea-editor": {},
     "replace-panel": {},
-    "float-action-button": {}
+    "style": {},
+    "float-action-button": {},
+    "code-mirror": {}
   },
   "attributes": {
     "v-bind:class": {},
     "v-if": {},
     "ref": {},
     "v-on:click": {},
+    "src": {},
     "v-on:mousein": {},
+    "lang": {},
     "v-model": {}
   }
 }

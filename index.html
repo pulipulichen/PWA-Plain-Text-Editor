@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="manifest.json">
     
+    <!-- =================================== -->
+    
     <!-- https://www.favicon-generator.org/ -->
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
@@ -23,9 +25,12 @@
     <meta name="msapplication-TileColor" content="#E1F7F7">
     <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#E1F7F7">
+    
+    <!-- =================================== -->
 
     <script src="./vendors/vue/vue.min.js"></script>
     <script src="./vendors/jquery/jquery.min.js"></script>
+    <script src="./vendors/jquery/jquery-require.js"></script>
 
     <script src="./vendors/semantic-ui/semantic.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./vendors/semantic-ui/semantic.min.css">
@@ -37,16 +42,22 @@
     <script src="./vendors/hotkeys/hotkeys.min.js"></script>
 
     <script src="./vendors/vue/httpVueLoader.js"></script>
+    <script src="./vendors/vue/httpVueLoaderLess.js"></script>
+    
   </head>
   <body>
 
     <div id="app"
          v-bind:class="classNameApp">
       
+      <!--
       <config-modal ref="ConfigModal"></config-modal>
       <float-action-button></float-action-button>
       <textarea-editor ref="TextareaEditor"></textarea-editor>
       <replace-panel ref="ReplacePanel"></replace-panel>
+      -->
+      
+      <code-mirror></code-mirror>
       
     </div>
 
