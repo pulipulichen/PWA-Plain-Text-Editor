@@ -22,6 +22,8 @@ var appMethods = {
     for (let key in data) {
       this.config[key] = data[key]
     }
+    
+    this.config.displayReplacePanel = true
   },
   saveToLocalStorage () {
     if (this.inited === false) {

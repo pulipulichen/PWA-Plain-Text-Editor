@@ -17,6 +17,14 @@ module.exports = {
         }
       }
     },
+    computed: {
+      computedClassNameList () {
+        return {
+          top: !this.positionBottom,
+          'display-replace-panel': this.$parent.config.displayReplacePanel
+        }
+      }
+    },
     methods: {
       openConfigModal () {
         this.$parent.$refs.ConfigModal.open()
