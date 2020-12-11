@@ -54,6 +54,9 @@ module.exports = {
       this.setValueLock = true
       this.editor.getDoc().setValue(this.$parent.config.textContent)
       this.setValueLock = false
+    },
+    '$parent.config.displayReplacePanel' () {
+      this.resizeByPanel()
     }
   },
   methods: {
@@ -86,8 +89,10 @@ module.exports = {
           this.editor.setOption("mode", 'javascript')
 
           this.editor$el = $('.CodeMirror:first')
-          
-          resolve(true)
+          //setTimeout(() => {
+            this.resizeByPanel()
+            resolve(true)
+          //}, 100)
         })
       })
         
@@ -236,6 +241,15 @@ module.exports = {
       }
       
       return false  // 沒找到
+    },
+    resizeByPanel () {
+      let className = 'display-replace-panel'
+      if (this.$parent.config.displayReplacePanel === true) {
+        this.editor$el.addClass(className)
+      }
+      else {
+        this.editor$el.removeClass(className)
+      }
     },
     
     // --------------------------
