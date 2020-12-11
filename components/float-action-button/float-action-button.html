@@ -1,6 +1,7 @@
 <div class="float-action-button zoom"
        v-on:mouseout="delayCloseMenu"
-       v-on:mousein="clearDelayCloseMenu">
+       v-on:mousein="clearDelayCloseMenu"
+       v-bind:class="{top: !positionBottom}">
     <a class="zoom-fab zoom-btn-large tooltip" id="zoomBtn"
        v-on:mouseover="showMenu = true"
        v-on:click="copy">
@@ -10,6 +11,7 @@
     <ul class="zoom-menu"
         v-bind:class="{'show': showMenu}">
       
+      <!--
       <li title="Format" class="tooltip"
           v-on:click="openConfigModal">
         <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition"
@@ -18,7 +20,9 @@
         </a>
         <span class="tooltiptext" style="left: -100%;">Configuration</span>
       </li>
+      -->
       
+      <!--
       <li title="Format" class="tooltip"
           v-on:click="formatCode"
           v-if="$parent.isFormatCodeEnabled">
@@ -37,6 +41,8 @@
         </a>
         <span class="tooltiptext" style="left: -100%;">Toggle Replace Panel</span>
       </li>
+      -->
+      
       <!--
       <li title="Search" class="tooltip">
         <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition"
@@ -53,18 +59,18 @@
         </a>
         <span class="tooltiptext">Clear</span>
       </li>
+      
+      
+      <li title="Change Button Position" class="tooltip"
+          v-on:click="positionBottom = !positionBottom">
+        <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition"
+           v-bind:class="{'scale-out': !showMenu}">
+          <i class="arrow up icon" v-if="positionBottom"></i>
+          <i class="arrow down icon" v-if="!positionBottom"></i>
+        </a>
+        <span class="tooltiptext" style="left: -112%;">Change Button Position</span>
+      </li>
+      
+      
     </ul>
-
-    <!--
-    <div class="zoom-card scale-transition scale-out">
-      <ul class="zoom-card-content">
-        <li>Content 1</li>
-        <li>Content 2</li>
-        <li>Content 3</li>
-        <li>Content 4</li>
-        <li>Content 5</li>
-      </ul>
-    </div>
-    -->
-
   </div>

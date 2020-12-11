@@ -2,7 +2,8 @@ module.exports = {
     data() {
       return {
         showMenu: false,
-        showMenuTimer: null
+        showMenuTimer: null,
+        positionBottom: true
       }
     },
     watch: {
@@ -79,9 +80,11 @@ module.exports = {
         this.$parent.clearTextContentConfirm()
         this.closeMenu()
       },
+      /*
       formatCode () {
         this.$parent.formatCode()
         this.closeMenu()
       }
+      */
     }
   }

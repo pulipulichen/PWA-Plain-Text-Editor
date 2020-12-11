@@ -243,6 +243,7 @@ var appMethods = {
       }
     }).join('\n')
   },
+  /*
   formatCode () {
     if (this.isFormatJSONEnabled) {
       return this.formatJSONTextContent()
@@ -295,6 +296,7 @@ var appMethods = {
     var resultXml = new XMLSerializer().serializeToString(resultDoc);
     return resultXml;
   },
+  */
   doSearchNext () {
     let stringToSearch = this.stringToSearch
     

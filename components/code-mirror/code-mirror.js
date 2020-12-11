@@ -6,7 +6,8 @@ module.exports = {
       editor: null,
       editor$el: null,
       markers: [],
-      highlightClassName: 'highlight'
+      highlightClassName: 'highlight',
+      setValueLock: false
     }
   },
   beforeCreate: async function () {
@@ -45,7 +46,15 @@ module.exports = {
   mounted: async function () {
     await this.initCodeMirror()
     
-    this.testSearch1211()
+    //this.testSearch1211()
+    this.testSetValue1211()
+  },
+  watch: {
+    '$parent.config.textContent' () {
+      this.setValueLock = true
+      this.editor.getDoc().setValue(this.$parent.config.textContent)
+      this.setValueLock = false
+    }
   },
   methods: {
     initCodeMirror () {
@@ -68,6 +77,9 @@ module.exports = {
           })
 
           this.editor.on('change', () => {
+            if (this.setValueLock === true) {
+              return false
+            }
             this.$parent.config.textContent = this.editor.getValue()
           })
 
@@ -225,6 +237,15 @@ module.exports = {
       
       return false  // 沒找到
     },
+    
+    // --------------------------
+    
+    testSetValue1211 () {
+      setTimeout(() => {
+        //this.setValue('Hello World')
+      }, 3000)
+    },
+    
     testSearch1211 () {
       setTimeout(async () => {
           await this.highlightText('data')
