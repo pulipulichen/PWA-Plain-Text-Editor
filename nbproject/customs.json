@@ -4,6 +4,7 @@
     "replace-panel": {},
     "style": {},
     "float-action-button": {},
+    "key-bindings": {},
     "code-mirror": {}
   },
   "attributes": {
@@ -15,6 +16,7 @@
     "src": {},
     "v-on:mousein": {},
     "lang": {},
+    "v-bind:editor": {},
     "v-model": {}
   }
 }

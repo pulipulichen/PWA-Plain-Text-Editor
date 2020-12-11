@@ -11,4 +11,5 @@ var appComponents = {
   'config-modal': httpVueLoader('./components/config-modal/config-modal.vue'),
   
   'code-mirror': httpVueLoader('./components/code-mirror/code-mirror.vue'),
+  'key-bindings': httpVueLoader('./components/key-bindings/key-bindings.vue'),
 }

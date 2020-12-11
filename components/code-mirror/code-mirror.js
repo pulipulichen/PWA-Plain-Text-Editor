@@ -5,7 +5,7 @@ module.exports = {
     return {
       editor: null,
       editor$el: null,
-      marks: [],
+      markers: [],
       highlightClassName: 'highlight'
     }
   },
@@ -37,6 +37,7 @@ module.exports = {
       // ------------------
       // 請在mode之後載入
       
+      //'/addon/search/search.js',
       '/addon/search/searchcursor.js'
       
     ])
@@ -44,6 +45,7 @@ module.exports = {
   mounted: async function () {
     await this.initCodeMirror()
     
+    this.testSearch1211()
   },
   methods: {
     initCodeMirror () {
@@ -90,8 +92,9 @@ module.exports = {
     highlightClear () {
       //console.log(this.editor$el.find('.' + this.highlightClassName).length)
       //this.editor$el.find('.' + this.highlightClassName).removeClass(this.highlightClassName)
-      this.marks.forEach(mark => {
+      this.markers = this.markers.filter(mark => {
         mark.clear()
+        return false
       })
     },
     highlightText: async function (text) {
@@ -100,19 +103,154 @@ module.exports = {
       
       var cursor = this.editor.getSearchCursor(text);
       while (cursor.findNext()) {
-          let mark = this.editor.markText(
+          //CURSOR = cursor
+
+          let marker = this.editor.markText(
             cursor.from(),
             cursor.to(),
             { className: this.highlightClassName }
           )
-          this.marks.push(mark)
+          this.markers.push(marker)
       }
       //this.editor.setCursor({line: 1, ch: 0})
     },
-    jumpToLine (i) { 
+    jumpToLine (i, from = 0) { 
       var t = this.editor.charCoords({line: i, ch: 0}, "local").top; 
       var middleHeight = this.editor.getScrollerElement().offsetHeight / 2; 
-      this.editor.scrollTo(null, t - middleHeight - 5); 
+      this.editor.scrollTo(null, t - middleHeight - 5)
+      this.editor.doc.setCursor(i - 1, from)
+    },
+    getCursor () {
+      return this.editor.doc.getCursor()
+    },
+    findNext (search = 'data') {
+      var cursor = this.editor.getSearchCursor(search);
+      
+      let currentPosition = this.getCursor()
+      //console.log(currentPosition)
+      let currentLine = currentPosition.line
+      let currentCh = currentPosition.ch
+      //console.log('current', currentLine, currentCh)
+      
+      let firstMarker
+      //let lastMarker
+      
+      while (cursor.findNext()) {
+        let marker = this.editor.markText(
+          cursor.from(),
+          cursor.to()
+        )
+
+        if (!firstMarker) {
+          firstMarker = marker
+        }
+
+        //console.log(marker)
+        let line = marker.lines[0].lineNo() + 1
+        let {from, to} = marker.lines[0].markedSpans[0]
+        //MARKER = marker.lines[0]
+
+        //console.log('marker', line, from, to)
+        if (line - 1 > currentLine) {
+          // 對，就是要找這個
+          this.jumpToLine(line, from)
+          return true
+        }
+        else if (line - 1 === currentLine) {
+          if (from > currentCh) {
+            // 對，就是要找這個
+            this.jumpToLine(line, from)
+            return true
+          }
+        }
+      }
+      
+      if (firstMarker) {
+        let line = firstMarker.lines[0].lineNo() + 1
+        let {from, to} = firstMarker.lines[0].markedSpans[0]
+        this.jumpToLine(line, from)
+        return true
+      }
+      
+      return false  // 沒找到
+    },
+    findPrev (search = 'data') {
+      var cursor = this.editor.getSearchCursor(search);
+      
+      let currentPosition = this.getCursor()
+      //console.log(currentPosition)
+      let currentLine = currentPosition.line
+      let currentCh = currentPosition.ch
+      //console.log('current', currentLine, currentCh)
+      
+      let firstMarker
+      //let lastMarker
+      
+      while (cursor.findPrev()) {
+        let marker = this.editor.markText(
+          cursor.from(),
+          cursor.to()
+        )
+
+        if (!firstMarker) {
+          firstMarker = marker
+        }
+
+        //console.log(marker)
+        let line = marker.lines[0].lineNo() + 1
+        let {from, to} = marker.lines[0].markedSpans[0]
+        //MARKER = marker.lines[0]
+
+        //console.log('marker', line, from, to)
+        if (line - 1 < currentLine) {
+          // 對，就是要找這個
+          this.jumpToLine(line, from)
+          return true
+        }
+        else if (line - 1 === currentLine) {
+          if (from < currentCh) {
+            // 對，就是要找這個
+            this.jumpToLine(line, from)
+            return true
+          }
+        }
+      }
+      
+      if (firstMarker) {
+        let line = firstMarker.lines[0].lineNo() + 1
+        let {from, to} = firstMarker.lines[0].markedSpans[0]
+        this.jumpToLine(line, from)
+        return true
+      }
+      
+      return false  // 沒找到
+    },
+    testSearch1211 () {
+      setTimeout(async () => {
+          await this.highlightText('data')
+
+          return
+          setTimeout(async () => {
+            await this.highlightText('History')
+
+            setTimeout(() => {
+
+              //console.log(this.markers)
+              //mark = this.markers[(this.markers.length - 1)]
+              //console.log(mark.doc.scrollIntoView())
+
+              //editor = this.editor
+              //editor.scrollIntoView({from: 0, to: 0}, 100)
+
+              //console.log(mark.lines[0].lineNo())
+             // this.jumpToLine(mark.lines[0].lineNo() + 1)
+            }, 1000)
+            
+            
+            //this.setMode('xml')
+
+          }, 1000)
+        }, 5000)
     },
     test1210 () {
        setTimeout(async () => {
@@ -121,16 +259,22 @@ module.exports = {
           setTimeout(async () => {
             await this.highlightText('History')
 
-            //console.log(this.marks)
-            mark = this.marks[(this.marks.length - 1)]
-            //console.log(mark.doc.scrollIntoView())
+            setTimeout(() => {
 
-            this.setMode('xml')
+              //console.log(this.markers)
+              mark = this.markers[(this.markers.length - 1)]
+              //console.log(mark.doc.scrollIntoView())
 
-            editor = this.editor
-            //editor.scrollIntoView({from: 0, to: 0}, 100)
+              //editor = this.editor
+              //editor.scrollIntoView({from: 0, to: 0}, 100)
 
-            this.jumpToLine(100)
+              console.log(mark.lines[0].lineNo())
+              this.jumpToLine(mark.lines[0].lineNo() + 1)
+            }, 1000)
+            
+            
+            //this.setMode('xml')
+
           }, 1000)
         }, 1000)
     }

@@ -230,5 +230,10 @@ var appComputed = {
     }
     
     return (this.config.textContent.indexOf(this.stringToSearch) > -1)
+  },
+  CodeMirrorEditor () {
+    if (this.$refs.CodeMirror) {
+      return this.$refs.CodeMirror.editor
+    }
   }
 }

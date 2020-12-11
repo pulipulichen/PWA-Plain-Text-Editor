@@ -410,46 +410,6 @@ var appMethods = {
     }
     return undefined
   },
-  initHotKeys () {
-    return false
-    
-    hotkeys.filter = function(event){
-      var tagName = (event.target || event.srcElement).tagName;
-      hotkeys.setScope(/^(INPUT|TEXTAREA|SELECT)$/.test(tagName) ? 'input' : 'other');
-      return true;
-    }
-    
-    hotkeys('ctrl+f,ctrl+h,alt+shift+f,ctrl+z', (event, handler) => {
-      
-      switch (handler.key) {
-        case 'ctrl+f':
-        case 'ctrl+h':
-          this.config.displayReplacePanel = true
-          if (this.config.displayReplacePanel) {
-            let selected = this.getSelectedText()
-            if (selected) {
-              this.config.stringToSearch = selected
-            }
-            this.$refs.ReplacePanel.focus()
-          }
-          event.preventDefault()
-          event.stopPropagation()
-          break;
-        case 'alt+shift+f': 
-          this.formatCode()
-          event.preventDefault()
-          event.stopPropagation()
-          break;
-        case 'ctrl+z': 
-          if (!this.isUndoDisabled) {
-            event.preventDefault()
-            event.stopPropagation()
-            this.undo()
-          }
-          break;
-      }
-    });
-  },
   initCheckbox () {
     if (!this.$refs.ConfigModal) {
       setTimeout(() => {

@@ -49,14 +49,19 @@
     <div id="app"
          v-bind:class="classNameApp">
       
+      <!--
       <config-modal ref="ConfigModal"></config-modal>
       <float-action-button></float-action-button>
       <textarea-editor ref="TextareaEditor"></textarea-editor>
       <replace-panel ref="ReplacePanel"></replace-panel>
-      
-      <!--
-      <code-mirror></code-mirror>
       -->
+      
+      <!-- ====================== -->
+      
+      
+      <code-mirror ref="CodeMirror"></code-mirror>
+      
+      <key-bindings v-bind:editor="CodeMirrorEditor"></key-bindings>
     </div>
 
     <!-- ================================================ -->
