@@ -59,7 +59,16 @@
         </a>
         <span class="tooltiptext">Clear</span>
       </li>
-      
+
+
+      <li title="Toggle Replace Panel" class="tooltip"
+          v-on:click="toggleReplacePanel">
+        <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition"
+           v-bind:class="{'scale-out': !showMenu}">
+          <i class="edit icon"></i>
+        </a>
+        <span class="tooltiptext" style="left: -100%;">Toggle Replace Panel</span>
+      </li>      
       
       <li title="Change Button Position" class="tooltip"
           v-on:click="positionBottom = !positionBottom">
@@ -71,13 +80,6 @@
         <span class="tooltiptext" style="left: -112%;">Change Button Position</span>
       </li>
       
-      <li title="Toggle Replace Panel" class="tooltip"
-          v-on:click="toggleReplacePanel">
-        <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition"
-           v-bind:class="{'scale-out': !showMenu}">
-          <i class="edit icon"></i>
-        </a>
-        <span class="tooltiptext" style="left: -100%;">Toggle Replace Panel</span>
-      </li>
+      
     </ul>
   </div>

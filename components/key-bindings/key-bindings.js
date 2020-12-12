@@ -73,7 +73,7 @@ module.exports = {
             
             //console.log(this.editor.doc.getCursor())
             
-            this.CodeMirror.findNext("\n")
+            this.CodeMirror.findNext()
             
             //console.log('ok')
             //let editor = 

@@ -4,5 +4,6 @@ let appBeforeCreate = async function () {
   await $.require(vendorsPath, [
     //"/hotkeys/hotkeys.min.js",
     '/puli-utils/date-helper.js',
+    '/puli-utils/puli-utils-async.js',
   ])
 }

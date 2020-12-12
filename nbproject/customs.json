@@ -17,6 +17,7 @@
     "v-on:mousein": {},
     "lang": {},
     "v-bind:editor": {},
-    "v-model": {}
+    "v-model": {},
+    "v-show": {}
   }
 }

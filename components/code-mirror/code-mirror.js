@@ -1,4 +1,4 @@
-/* global CodeMirror */
+/* global CodeMirror, PULI_UTILS */
 
 module.exports = {
   data () {
@@ -44,19 +44,31 @@ module.exports = {
     ])
   },
   mounted: async function () {
+    //console.log(this.inited)
     await this.initCodeMirror()
-    
+    await this.onConfigInited()
+    //console.log(this.inited)
     //this.testSearch1211()
-    this.testSetValue1211()
+    //this.testSetValue1211()
+    //this.testSearch1213()
   },
   watch: {
+    '$parent.inited': function () {
+      this.onConfigInited()
+    },
     '$parent.config.textContent' () {
+      if (this.setValueLock === true) {
+        return false
+      }
       this.setValueLock = true
       this.editor.getDoc().setValue(this.$parent.config.textContent)
       this.setValueLock = false
     },
     '$parent.config.displayReplacePanel' () {
       this.resizeByPanel()
+    },
+    '$parent.config.stringToSearch' () {
+      this.highlightText(this.$parent.config.stringToSearch)
     }
   },
   methods: {
@@ -79,23 +91,44 @@ module.exports = {
             //extraKeys: {"Ctrl-F": "findPersistent"},
           })
 
-          this.editor.on('change', () => {
+          this.editor.on('change', async () => {
             if (this.setValueLock === true) {
               return false
             }
+            this.setValueLock = true
             this.$parent.config.textContent = this.editor.getValue()
+            await PULI_UTILS.sleep(0)
+            this.setValueLock = false
           })
-
-          this.editor.setOption("mode", 'javascript')
 
           this.editor$el = $('.CodeMirror:first')
           //setTimeout(() => {
-            this.resizeByPanel()
-            resolve(true)
+          this.resizeByPanel()
+          
+          resolve(true)
+          
           //}, 100)
         })
       })
         
+    },
+    onConfigInited () {
+      //console.log(this.$parent.inited)
+      if (this.$parent.inited === false) {
+        return false
+      }
+      
+      //await PULI_UTILS.sleep(1000)
+      //console.log('javascript')
+      this.editor.setOption("mode", 'javascript')
+      
+      //await PULI_UTILS.sleep(100)
+      
+      //console.log('go', this.$parent.config.stringToSearch)
+      this.highlightText(this.$parent.config.stringToSearch)
+      //console.log(this.markers.length)
+      
+      this.updateDocumentTitle()
     },
     setMode (mode) {
       setTimeout(() => {
@@ -118,29 +151,55 @@ module.exports = {
       
       this.highlightClear()
       
-      var cursor = this.editor.getSearchCursor(text);
+      while (!this.editor.getSearchCursor) {
+        await PULI_UTILS.sleep()
+      }
+      
+      var cursor = this.editor.getSearchCursor(text)
+      //console.log(cursor)
       while (cursor.findNext()) {
           //CURSOR = cursor
 
-          let marker = this.editor.markText(
-            cursor.from(),
-            cursor.to(),
-            { className: this.highlightClassName }
-          )
-          this.markers.push(marker)
+        let marker = this.editor.markText(
+                cursor.from(),
+                cursor.to(),
+                {className: this.highlightClassName}
+        )
+        this.markers.push(marker)
+        
+        //MARKER = marker
       }
       //this.editor.setCursor({line: 1, ch: 0})
     },
     jumpToLine (i, from = 0) { 
+      this.editor.focus()
       var t = this.editor.charCoords({line: i, ch: 0}, "local").top; 
       var middleHeight = this.editor.getScrollerElement().offsetHeight / 2; 
       this.editor.scrollTo(null, t - middleHeight - 5)
+      
+      //if (!to) {
       this.editor.doc.setCursor(i - 1, from)
+      //if (to) {
+      //  this.editor.setSelection({line: 0, ch: 3}, {line: 0, ch: 9})
+      //}
+      //}
+      //else {
+      //  this.editor.doc.setSelection(i - 1, from)
+      //}
+    },
+    jumpToMaker (marker) {
+      this.editor.focus()
+      let {fromLine, fromCh, toLine, toCh} = this.getMarkerPos(marker)
+      this.editor.setSelection({line: fromLine - 1, ch: fromCh}, {line: toLine - 1, ch: toCh})
     },
     getCursor () {
       return this.editor.doc.getCursor()
     },
-    findNext (search = 'data') {
+    findNext (search) {
+      if (!search) {
+        search = this.$parent.config.stringToSearch
+      }
+      
       var cursor = this.editor.getSearchCursor(search);
       
       let currentPosition = this.getCursor()
@@ -163,35 +222,38 @@ module.exports = {
         }
 
         //console.log(marker)
-        let line = marker.lines[0].lineNo() + 1
-        let {from, to} = marker.lines[0].markedSpans[0]
+        let {fromLine, fromCh, toLine,toCh} = this.getMarkerPos(marker)
         //MARKER = marker.lines[0]
 
         //console.log('marker', line, from, to)
-        if (line - 1 > currentLine) {
+        if (fromLine - 1 > currentLine) {
           // 對，就是要找這個
-          this.jumpToLine(line, from)
+          this.jumpToMaker(marker)
           return true
         }
-        else if (line - 1 === currentLine) {
-          if (from > currentCh) {
+        else if (fromLine - 1 === currentLine) {
+          if (fromCh > currentCh) {
             // 對，就是要找這個
-            this.jumpToLine(line, from)
+            this.jumpToMaker(marker)
             return true
           }
         }
       }
       
       if (firstMarker) {
-        let line = firstMarker.lines[0].lineNo() + 1
-        let {from, to} = firstMarker.lines[0].markedSpans[0]
-        this.jumpToLine(line, from)
+        this.jumpToMaker(firstMarker)
         return true
       }
       
       return false  // 沒找到
     },
-    findPrev (search = 'data') {
+    findPrev (search) {
+      if (!search) {
+        search = this.$parent.config.stringToSearch
+      }
+      //this.editor.focus()
+      
+      //console.log(search)
       var cursor = this.editor.getSearchCursor(search);
       
       let currentPosition = this.getCursor()
@@ -203,7 +265,7 @@ module.exports = {
       let firstMarker
       //let lastMarker
       
-      while (cursor.findPrev()) {
+      while (cursor.findPrevious()) {
         let marker = this.editor.markText(
           cursor.from(),
           cursor.to()
@@ -214,29 +276,25 @@ module.exports = {
         }
 
         //console.log(marker)
-        let line = marker.lines[0].lineNo() + 1
-        let {from, to} = marker.lines[0].markedSpans[0]
-        //MARKER = marker.lines[0]
-
+        let {fromLine, fromCh, toLine, toCh} = this.getMarkerPos(marker)
+        
         //console.log('marker', line, from, to)
-        if (line - 1 < currentLine) {
+        if (toLine - 1 < currentLine) {
           // 對，就是要找這個
-          this.jumpToLine(line, from)
+          this.jumpToMarker(marker)
           return true
         }
-        else if (line - 1 === currentLine) {
-          if (from < currentCh) {
+        else if (toLine - 1 === currentLine) {
+          if (toCh < currentCh) {
             // 對，就是要找這個
-            this.jumpToLine(line, from)
+            this.jumpToMarker(marker)
             return true
           }
         }
       }
       
       if (firstMarker) {
-        let line = firstMarker.lines[0].lineNo() + 1
-        let {from, to} = firstMarker.lines[0].markedSpans[0]
-        this.jumpToLine(line, from)
+        this.jumpToMarker(firstMarker)
         return true
       }
       
@@ -251,8 +309,40 @@ module.exports = {
         this.editor$el.removeClass(className)
       }
     },
+    getMarkerPos (marker) {
+      let lines = marker.lines
+
+      let firstLine = lines[0]
+      let fromLine = firstLine.lineNo() + 1
+      let fromCh = firstLine.markedSpans[0].from
+
+      let lastLine = lines[(lines.length - 1)]
+      let toLine = lastLine.lineNo() + 1
+      let toCh = lastLine.markedSpans[0].to
+      
+      return {
+        fromLine,
+        fromCh,
+        toLine,
+        toCh
+      }
+    },
+    
+    updateDocumentTitle () {
+      let textContentTrim = this.$parent.textContentTrim
+      if (textContentTrim === '') {
+        document.title = 'Plain Text Editor'
+      }
+      else {
+        document.title = textContentTrim
+      }
+    },
+    
     
     // --------------------------
+    testSearch1213 () {
+      this.highlightText('d\n1')
+    },
     
     testSetValue1211 () {
       setTimeout(() => {
