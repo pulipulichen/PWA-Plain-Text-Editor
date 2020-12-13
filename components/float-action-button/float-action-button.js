@@ -18,10 +18,25 @@ module.exports = {
       }
     },
     computed: {
+      config () {
+        return this.$parent.config
+      },
+      computedStyle () {
+        
+        if (this.positionBottom === false) {
+          return false
+        }
+        
+        let style = {
+          'bottom': `calc(1rem + ${this.$parent.panelHeight})`
+        }
+        //console.log(style)
+        return style
+      },
       computedClassNameList () {
         return {
           top: !this.positionBottom,
-          'display-replace-panel': this.$parent.config.displayReplacePanel
+          'display-replace-panel': (this.$parent.config.displayPanel === 'replace')
         }
       }
     },
@@ -80,8 +95,15 @@ module.exports = {
         this.showMenu = false
       },
       toggleReplacePanel() {
-        this.$parent.config.displayReplacePanel = !this.$parent.config.displayReplacePanel
+        //this.$parent.config.displayReplacePanel = !this.$parent.config.displayReplacePanel
         //console.log(this.$parent.config.displayReplacePanel)
+        if (!this.$parent.config.displayPanel) {
+          this.$parent.config.displayPanel = 'replace'
+        }
+        else {
+          this.$parent.config.displayPanel = null
+        }
+        
         this.closeMenu()
       },
       clear() {

@@ -1,8 +1,9 @@
 var appComputed = {
+  /*
   classNameApp () {
     let className = []
     
-    if (this.config.displayReplacePanel) {
+    if (this.config.displayPanel === 'replace') {
       className.push('show-replace-panel')
     }
     
@@ -12,6 +13,8 @@ var appComputed = {
     
     return className
   },
+  */
+  /*
   isReplaceDisabled () {
     if (this.config.textContent === '') {
       return true
@@ -28,6 +31,8 @@ var appComputed = {
     
     return false
   },
+  */
+  /*
   replaceOccurCount () {
     if (this.config.textContent === '') {
       return 0
@@ -54,6 +59,8 @@ var appComputed = {
     
     return count
   },
+  */
+  /*
   countOccurRaw () {
     let stringToSearch = this.stringToSearchRaw
       
@@ -122,115 +129,16 @@ var appComputed = {
     //console.log(count)
     return count
   },
+  */
+  /*
   textReplaceButton () {
     if (this.isReplaceDisabled === true) {
       return 'Replace'
     }
     return `Replace ` + this.replaceOccurCount
   },
-  isUndoDisabled () {
-    if (this.textContentHistory.length === 0) {
-      return true
-    }
-    if (this.textContentHistoryIndex > 0) {
-      return false
-    }
-    return true
-  },
-  isRedoDisabled () {
-    if (this.textContentHistory.length === 0) {
-      return true
-    }
-    if (this.textContentHistoryIndex < this.textContentHistory.length - 1) {
-      return false
-    }
-    return true
-  },
-  isTrimEnabled () {
-    for (let i = 0; i < this.textContentLines.length; i++) {
-      let line = this.textContentLines[i]
-      if (line !== line.trim()) {
-        return true
-      }
-    }
-    return false
-  },
-  isLTrimEnabled () {
-    for (let i = 0; i < this.textContentLines.length; i++) {
-      let line = this.textContentLines[i]
-      let char = line.trim().slice(0, 1)
-      let index = line.indexOf(char)
-      if (index > 0) {
-        return true
-      }
-    }
-    return false
-  },
-  isRTrimEnabled () {
-    for (let i = 0; i < this.textContentLines.length; i++) {
-      let line = this.textContentLines[i]
-      let char = line.trim().slice(-1)
-      let index = line.lastIndexOf(char)
-      if (index < line.length - 1) {
-        return true
-      }
-    }
-    return false
-  },
-  isFormatCodeEnabled () {
-    return (this.isFormatJSONEnabled || this.isFormatXMLEnabled)
-  },
-  isFormatJSONEnabled () {
-    if (this.textContentTrim.startsWith('{') 
-            && this.textContentTrim.endsWith('}')) {
-      try {
-        //console.log(this.textContentTrim)
-        //JSON.parse(this.textContentTrim)
-        eval('let test = ' + this.textContentTrim)
-        return true
-      }
-      catch (e) {
-        return false
-      }
-    }
-    return false
-  },
-  isFormatXMLEnabled () {
-    if (this.textContentTrim.startsWith('<') 
-            && this.textContentTrim.endsWith('>')) {
-      let rightIndex = this.textContentTrim.indexOf('>')
-      //console.log(rightIndex)
-      if (rightIndex === this.textContentTrim.length - 1) {
-        return false
-      }
-      
-      let leftIndex = this.textContentTrim.lastIndexOf('<')
-      //console.log(leftIndex)
-      if (leftIndex === 0) {
-        return false
-      }
-      
-      return true
-    }
-    return false
-  },
-  stringToSearch () {
-    let stringToSearch
-    if (this.config.replaceMode === 'regex') {
-      stringToSearch = this.config.stringToSearch
-    } 
-    else {
-      stringToSearch = this.stringToSearchRaw
-    }
-    return stringToSearch
-  },
-  isSearchEnabled () {
-    if (this.stringToSearch === '') {
-      return false
-    }
-    
-    return (this.config.textContent.indexOf(this.stringToSearch) > -1)
-  },
+  */
+  
   CodeMirrorEditor () {
     if (this.$refs.CodeMirror) {
       return this.$refs.CodeMirror.editor

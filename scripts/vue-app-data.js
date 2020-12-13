@@ -6,7 +6,8 @@ var appData = {
     stringToReplaceWith: '',
     replaceMode: 'line',
     //replaceMode: 'raw',
-    displayReplacePanel: true,
+    displayPanel: 'replace',
+    //displayReplacePanel: true,
     replaceLineOptions: {
       mode: 'prefix',
       lTrim: false,

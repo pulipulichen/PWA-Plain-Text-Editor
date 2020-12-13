@@ -3,14 +3,23 @@
 module.exports = {
   data () {
     return {
+      simpleMode: true,
       editor: null,
       editor$el: null,
       markers: [],
       highlightClassName: 'highlight',
       setValueLock: false,
+      cursorPositionSaved: {
+        from: {line: null, ch: null},
+        to: {line: null, ch: null}
+      }
     }
   },
   beforeCreate: async function () {
+    if (this.simpleMode === true) {
+      return false
+    }
+    
     let vendorCodeMirror = './components/code-mirror/vendors/code-mirror'
     
     await $.require(vendorCodeMirror, [
@@ -57,18 +66,25 @@ module.exports = {
       this.onConfigInited()
     },
     '$parent.config.textContent' () {
+      if (this.simpleMode === true) {
+        return false
+      }
+      
       if (this.setValueLock === true) {
         return false
       }
       this.setValueLock = true
+      this.saveCursor()
       this.editor.getDoc().setValue(this.$parent.config.textContent)
+      this.restoreCursor()
+      this.highlightText()
       this.setValueLock = false
     },
     '$parent.panelHeight' () {
       this.resizeHeight()
     },
     '$parent.config.stringToSearch' () {
-      this.highlightText(this.$parent.config.stringToSearch)
+      this.highlightText()
     },
     
   },
@@ -83,11 +99,17 @@ module.exports = {
         "Ctrl-F": 'none',
         "Ctrl-Shift-F": 'none',
         "Ctrl-H": 'none',
+        "Ctrl-Shift-Q": 'none',
       }
     }
   },
   methods: {
     initCodeMirror () {
+      if (this.simpleMode === true) {
+        this.editor$el = $(this.$refs.MainTextarea)
+        return false
+      }
+      
       return new Promise((resolve) => {
         $(() => {
           if (typeof(CodeMirror) === 'undefined') {
@@ -106,14 +128,8 @@ module.exports = {
             extraKeys: this.extraKeys,
           })
 
-          this.editor.on('change', async () => {
-            if (this.setValueLock === true) {
-              return false
-            }
-            this.setValueLock = true
-            this.$parent.config.textContent = this.editor.getValue()
-            await PULI_UTILS.sleep(0)
-            this.setValueLock = false
+          this.editor.on('change', () => {
+            this.onEditorChange()
           })
 
           this.editor$el = $(this.$el).find('.CodeMirror:first')
@@ -129,7 +145,8 @@ module.exports = {
     },
     onConfigInited () {
       //console.log(this.$parent.inited)
-      if (this.$parent.inited === false) {
+      if (this.$parent.inited === false
+              || this.simpleMode === true) {
         return false
       }
       
@@ -146,6 +163,10 @@ module.exports = {
       this.updateDocumentTitle()
     },
     setMode (mode) {
+      if (this.simpleMode === true) {
+        return false
+      }
+      
       setTimeout(() => {
         this.editor.setOption("mode", mode)
       }, 100)
@@ -163,6 +184,13 @@ module.exports = {
       })
     },
     highlightText: async function (text) {
+      if (this.simpleMode === true) {
+        return false
+      }
+      
+      if (!text) {
+        text = this.$parent.config.stringToSearch
+      }
       
       this.highlightClear()
       
@@ -187,6 +215,11 @@ module.exports = {
       //this.editor.setCursor({line: 1, ch: 0})
     },
     jumpToLine (i, from = 0) { 
+      if (this.simpleMode === true) {
+        return false
+      }
+      
+      
       this.editor.focus()
       var t = this.editor.charCoords({line: i, ch: 0}, "local").top; 
       var middleHeight = this.editor.getScrollerElement().offsetHeight / 2; 
@@ -203,17 +236,72 @@ module.exports = {
       //}
     },
     jumpToMarker (marker) {
+      if (this.simpleMode === true) {
+        return false
+      }
+      
+      
       this.editor.focus()
       let {fromLine, fromCh, toLine, toCh} = this.getMarkerPos(marker)
       this.editor.setSelection({line: fromLine - 1, ch: fromCh}, {line: toLine - 1, ch: toCh})
     },
-    getCursor () {
-      return this.editor.doc.getCursor()
+    getCursor (position) {
+      if (this.simpleMode === true) {
+        return false
+      }
+      
+      return this.editor.doc.getCursor(position)
+    },
+    saveCursor () {
+      if (this.simpleMode === true) {
+        return false
+      }
+      
+      let fromCursor = this.getCursor(true)
+      this.cursorPositionSaved.from.line = fromCursor.line
+      this.cursorPositionSaved.from.ch = fromCursor.ch
+      
+      let toCursor = this.getCursor(false)
+      this.cursorPositionSaved.to.line = toCursor.line
+      this.cursorPositionSaved.to.ch = toCursor.ch
+    },
+    restoreCursor () {
+      if (this.simpleMode === true) {
+        return false
+      }
+      
+      
+      if (this.cursorPositionSaved.from.line === this.cursorPositionSaved.to.line
+        && this.cursorPositionSaved.from.ch === this.cursorPositionSaved.to.ch) {
+        this.jumpToLine(this.cursorPositionSaved.from.line + 1, this.cursorPositionSaved.from.ch) 
+        
+        //console.log('restoreCursor cursor')
+      }
+      else {
+        this.editor.setSelection({
+          line: this.cursorPositionSaved.from.line, 
+          ch: this.cursorPositionSaved.from.ch
+        }, 
+        {
+          line: this.cursorPositionSaved.to.line, 
+          ch: this.cursorPositionSaved.to.ch
+        })
+        //console.log('restoreCursor selection')
+      }
+      
     },
     getSelectedText () {
+      if (this.simpleMode === true) {
+        return false
+      }
+      
       return this.editor.getSelection()
     },
     findNext (search) {
+      if (this.simpleMode === true) {
+        return false
+      }
+      
       if (!search) {
         search = this.$parent.config.stringToSearch
       }
@@ -270,6 +358,10 @@ module.exports = {
       return false  // 沒找到
     },
     findPrev (search) {
+      if (this.simpleMode === true) {
+        return false
+      }
+      
       if (!search) {
         search = this.$parent.config.stringToSearch
       }
@@ -348,6 +440,7 @@ module.exports = {
       return false  // 沒找到
     },
     resizeHeight: async function () {
+      
       /*
       let className = 'display-replace-panel'
       if (this.$parent.config.displayReplacePanel === true) {
@@ -363,9 +456,14 @@ module.exports = {
       }
       //console.log(this.editor$el, this.editor$el.css)
       this.editor$el.css('height', `calc(100vh - ${this.$parent.panelHeight})`)
+      this.editor$el.css('max-height', `calc(100vh - ${this.$parent.panelHeight})`)
       //console.log('設定好了', `calc(100vh - ${this.$parent.panelHeight})`)
     },
     getMarkerPos (marker) {
+      if (this.simpleMode === true) {
+        return false
+      }
+      
       let lines = marker.lines
 
       let firstLine = lines[0]
@@ -383,7 +481,21 @@ module.exports = {
         toCh
       }
     },
-    
+    onEditorChange: async function () {
+      if (this.simpleMode === true) {
+        return false
+      }
+      
+      
+      if (this.setValueLock === true) {
+        return false
+      }
+      this.setValueLock = true
+      this.$parent.config.textContent = this.editor.getValue()
+      await PULI_UTILS.sleep(0)
+      this.highlightText()
+      this.setValueLock = false
+    },
     updateDocumentTitle () {
       let textContentTrim = this.$parent.textContentTrim
       if (textContentTrim === '') {
@@ -396,68 +508,6 @@ module.exports = {
     
     
     // --------------------------
-    testSearch1213 () {
-      this.highlightText('d\n1')
-    },
     
-    testSetValue1211 () {
-      setTimeout(() => {
-        //this.setValue('Hello World')
-      }, 3000)
-    },
-    
-    testSearch1211 () {
-      setTimeout(async () => {
-          await this.highlightText('data')
-
-          return
-          setTimeout(async () => {
-            await this.highlightText('History')
-
-            setTimeout(() => {
-
-              //console.log(this.markers)
-              //mark = this.markers[(this.markers.length - 1)]
-              //console.log(mark.doc.scrollIntoView())
-
-              //editor = this.editor
-              //editor.scrollIntoView({from: 0, to: 0}, 100)
-
-              //console.log(mark.lines[0].lineNo())
-             // this.jumpToLine(mark.lines[0].lineNo() + 1)
-            }, 1000)
-            
-            
-            //this.setMode('xml')
-
-          }, 1000)
-        }, 5000)
-    },
-    test1210 () {
-       setTimeout(async () => {
-          await this.highlightText('data')
-
-          setTimeout(async () => {
-            await this.highlightText('History')
-
-            setTimeout(() => {
-
-              //console.log(this.markers)
-              mark = this.markers[(this.markers.length - 1)]
-              //console.log(mark.doc.scrollIntoView())
-
-              //editor = this.editor
-              //editor.scrollIntoView({from: 0, to: 0}, 100)
-
-              console.log(mark.lines[0].lineNo())
-              this.jumpToLine(mark.lines[0].lineNo() + 1)
-            }, 1000)
-            
-            
-            //this.setMode('xml')
-
-          }, 1000)
-        }, 1000)
-    }
   }
 }

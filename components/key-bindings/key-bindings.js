@@ -37,7 +37,7 @@ module.exports = {
         return true;
       }
 
-      hotkeys('ctrl+f,ctrl+shift+f,ctrl+h,alt+shift+f,ctrl+z', (event, handler) => {
+      hotkeys('ctrl+f,ctrl+shift+f,ctrl+h,alt+shift+f,ctrl+z,ctrl+shift+q', (event, handler) => {
 
         switch (handler.key) {
           /*
@@ -77,6 +77,15 @@ module.exports = {
           case 'ctrl+h':
             this.setReplace(event)
             break
+          case 'ctrl+shift+q':
+            event.preventDefault()
+            event.stopPropagation()
+            $.get('README.md', (text) => {
+              console.log(text)
+              this.$parent.config.textContent = text
+              console.log('測試用')
+            })
+            break
         }
       });
     },
@@ -86,9 +95,9 @@ module.exports = {
       //console.log('findNext')
       let selected = this.CodeMirror.getSelectedText()
       //console.log(this.$parent.config.displayReplacePanel)
-      if (this.$parent.config.displayReplacePanel === false
+      if (this.$parent.config.displayPanel !== 'replace'
               || (selected !== '' && selected !== this.$parent.config.stringToSearch)) {
-        this.$parent.config.displayReplacePanel = true
+        this.$parent.config.displayPanel = 'replace'
         
         if (selected !== '') {
           this.$parent.config.stringToSearch = selected
@@ -103,9 +112,9 @@ module.exports = {
       event.stopPropagation()
       //console.log('findPrve')
       let selected = this.CodeMirror.getSelectedText()
-      if (this.$parent.config.displayReplacePanel === false
+      if (this.$parent.config.displayPanel !== 'replace'
               || (selected !== '' && selected !== this.$parent.config.stringToSearch)) {
-        this.$parent.config.displayReplacePanel = true
+        this.$parent.config.displayPanel = 'replace'
         
         if (selected !== '') {
           this.$parent.config.stringToSearch = selected
@@ -121,9 +130,9 @@ module.exports = {
       //console.log('findNext')
       let selected = this.CodeMirror.getSelectedText()
       //console.log(this.$parent.config.displayReplacePanel)
-      if (this.$parent.config.displayReplacePanel === false
+      if (this.$parent.config.displayPanel !== 'replace'
               || (selected !== '' && selected !== this.$parent.config.stringToSearch)) {
-        this.$parent.config.displayReplacePanel = true
+        this.$parent.config.displayPanel = 'replace'
         
         if (selected !== '') {
           this.$parent.config.stringToSearch = selected

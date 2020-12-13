@@ -1,7 +1,7 @@
 var appWatch = {
   'config.textContent' () {
     this.saveToLocalStorage()
-    this.updateDocumentTitle()
+    //this.updateDocumentTitle()
   },
   'config.stringToSearch' () {
     this.saveToLocalStorage()
@@ -20,7 +20,7 @@ var appWatch = {
   },
   'config.enableTextWrap' () {
     this.saveToLocalStorage()
-    this.initCheckbox()
+    //this.initCheckbox()
   },
   'config.tab.mode' () {
     this.saveToLocalStorage()
@@ -28,4 +28,9 @@ var appWatch = {
   'config.tab.spaceNumber' () {
     this.saveToLocalStorage()
   },
+  'config.displayPanel' () {
+    if (!this.config.displayPanel) {
+      this.panelHeight = '0rem'
+    }
+  }
 }
