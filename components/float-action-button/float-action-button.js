@@ -36,7 +36,7 @@ module.exports = {
       computedClassNameList () {
         return {
           top: !this.positionBottom,
-          'display-replace-panel': (this.$parent.config.displayPanel === 'replace')
+          //'display-replace-panel': (this.$parent.config.displayPanel === 'replace')
         }
       }
     },
