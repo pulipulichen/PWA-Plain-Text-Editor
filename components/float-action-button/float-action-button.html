@@ -60,6 +60,15 @@
       <span class="tooltiptext">Clear</span>
     </li>
 
+    <li title="Toggle Format Panel" class="tooltip"
+        v-on:click="toggleFormatPanel">
+      <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition"
+         v-bind:class="{'scale-out': !showMenu}">
+        <i class="file code outline icon"></i>
+      </a>
+      <span class="tooltiptext" style="left: -100%;">Toggle Format Panel</span>
+    </li>      
+
 
     <li title="Toggle Replace Panel" class="tooltip"
         v-on:click="toggleReplacePanel">

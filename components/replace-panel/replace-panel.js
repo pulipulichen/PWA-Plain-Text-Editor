@@ -263,13 +263,36 @@ module.exports = {
       if (this.isReplaceDisabled === true) {
         return 'Replace'
       }
-      return `Replace ` + this.replaceOccurCount
+      
+      let replaceOccurCount = this.replaceOccurCount
+      //replaceOccurCount = 121043
+      
+      let countLength = (replaceOccurCount + '').length
+      //console.log(countLength)
+      if (countLength <= 6) {
+        return `Replace (${replaceOccurCount})`
+      }
+      else if (countLength <= 8) {
+        let countK = Math.round(replaceOccurCount / 1000)
+        return `Replace (${countK}K)`
+      }
+      else if (countLength <= 10) {
+        let countK = Math.round(replaceOccurCount / 1000000)
+        return `Replace (${countK}M)`
+      }
+      else if (countLength <= 13) {
+        let countK = Math.round(replaceOccurCount / 1000000000)
+        return `Replace (${countK}B)`
+      }
+      else {
+        return 'Replace (...)'
+      }
     },
     computedReplaceButtonTitle() {
       if (this.isReplaceDisabled === true) {
         return 'Replace'
       }
-      return `Replace ` + this.replaceOccurCount
+      return `Replace (${this.replaceOccurCount})`
     },
   },
   mounted() {
@@ -308,11 +331,12 @@ module.exports = {
       this.$refs.ReplaceInput.select()
     },
     clearHistory() {
+      console.log('clearHistory')
       this.textContentHistory = []
       this.textContentHistoryIndex = -1
       this.textContentModified = true
     },
-    doReplace() {
+    doReplace: async function () {
       //let stringToSearch = this.config.stringToSearch
       //let stringToReplaceWith = this.config.stringToReplaceWith
 
@@ -342,6 +366,7 @@ module.exports = {
 
       this.textContentModified = false
       
+      await PULI_UTILS.sleep(0)
       this.replaceLock = false
     },
     saveHistory() {

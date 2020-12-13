@@ -97,12 +97,25 @@ module.exports = {
       toggleReplacePanel() {
         //this.$parent.config.displayReplacePanel = !this.$parent.config.displayReplacePanel
         //console.log(this.$parent.config.displayReplacePanel)
-        if (!this.$parent.config.displayPanel) {
+        if (this.$parent.config.displayPanel !== 'replace') {
           this.$parent.config.displayPanel = 'replace'
         }
         else {
           this.$parent.config.displayPanel = null
         }
+        
+        this.closeMenu()
+      },
+      toggleFormatPanel() {
+        //this.$parent.config.displayReplacePanel = !this.$parent.config.displayReplacePanel
+        //console.log(this.$parent.config.displayReplacePanel)
+        if (!this.$parent.config.displayPanel !== 'format') {
+          this.$parent.config.displayPanel = 'format'
+        }
+        else {
+          this.$parent.config.displayPanel = null
+        }
+        //console.log(this.$parent.config.displayPanel)
         
         this.closeMenu()
       },

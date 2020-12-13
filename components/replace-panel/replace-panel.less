@@ -1,7 +1,9 @@
 .replace-panel {
   @labelWidth: 6rem;
   @ReplaceModeSelectWidth: 8rem;
-  @ReplaceLineModeSelectWidth: 10rem;
+  @ReplaceLineModeSelectWidth: 8rem;
+  @ReplaceButtonWidth: 9rem;
+  @UndoButtonWidth: 2.5rem;
   
   border-top: 1px solid #10a3a3;
   padding-top: 0.5rem;
@@ -37,28 +39,27 @@
   }
   
   .string-to-replace-with-input-container {
-    @UndoButtonWidth: 2.5rem;
     
     width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem) !important;
     
     .string-to-replace-with-input {
-      width: calc(100% - @labelWidth - @closePanelIconWidth - 2rem - 8.5rem) !important;
+      width: calc(100% - @labelWidth - @closePanelIconWidth - 3rem - @ReplaceButtonWidth) !important;
     }
     
     &.has-replace-line-options-select {
       //width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem - @ReplaceLineModeSelectWidth) !important;
       
       .string-to-replace-with-input {
-        width: calc(100% - @labelWidth - @closePanelIconWidth - 2rem - 8.5rem - @ReplaceLineModeSelectWidth) !important;
+        width: calc(100% - @labelWidth - @closePanelIconWidth - 3rem - @ReplaceButtonWidth - @ReplaceLineModeSelectWidth) !important;
       }
       
       &.has-undo-button .string-to-replace-with-input {
-        width: calc(100% - @labelWidth - @closePanelIconWidth - 2rem - @UndoButtonWidth - 8.5rem - @ReplaceLineModeSelectWidth) !important;
+        width: calc(100% - @labelWidth - @closePanelIconWidth - 4rem - @UndoButtonWidth - @ReplaceButtonWidth - @ReplaceLineModeSelectWidth) !important;
       }
     }
     
     &.has-undo-button .string-to-replace-with-input {
-      width: calc(100% - @labelWidth - @closePanelIconWidth - 1.5rem - @UndoButtonWidth - 9rem) !important;
+      width: calc(100% - @labelWidth - @closePanelIconWidth - 4rem - @UndoButtonWidth - @ReplaceButtonWidth) !important;
     }
   }
   
@@ -97,11 +98,14 @@
   }
   
   .replace-count-button {
-    width: 7.5rem;
-    max-width: 7.5rem;
+    width: @ReplaceButtonWidth;
+    max-width: @ReplaceButtonWidth;
     overflow-x: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     display: inline-block !important;
+    
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
 }

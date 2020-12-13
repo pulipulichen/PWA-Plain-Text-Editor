@@ -12,9 +12,9 @@ var appWatch = {
   'config.replaceMode' () {
     this.saveToLocalStorage()
   },
-  'config.displayReplacePanel' () {
-    this.saveToLocalStorage()
-  },
+//  'config.displayReplacePanel' () {
+//    this.saveToLocalStorage()
+//  },
   'config.replaceLineOptions.mode' () {
     this.saveToLocalStorage()
   },
@@ -32,5 +32,6 @@ var appWatch = {
     if (!this.config.displayPanel) {
       this.panelHeight = '0rem'
     }
+    this.saveToLocalStorage()
   }
 }
