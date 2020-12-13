@@ -7,7 +7,7 @@ module.exports = {
       editor$el: null,
       markers: [],
       highlightClassName: 'highlight',
-      setValueLock: false
+      setValueLock: false,
     }
   },
   beforeCreate: async function () {
@@ -64,11 +64,26 @@ module.exports = {
       this.editor.getDoc().setValue(this.$parent.config.textContent)
       this.setValueLock = false
     },
-    '$parent.config.displayReplacePanel' () {
-      this.resizeByPanel()
+    '$parent.panelHeight' () {
+      this.resizeHeight()
     },
     '$parent.config.stringToSearch' () {
       this.highlightText(this.$parent.config.stringToSearch)
+    },
+    
+  },
+  computed: {
+    
+    /**
+     * 如果要阻止CodeMirror的熱鍵，就在這裡設定
+     * @returns JSON
+     */
+    extraKeys () {
+      return {
+        "Ctrl-F": 'none',
+        "Ctrl-Shift-F": 'none',
+        "Ctrl-H": 'none',
+      }
     }
   },
   methods: {
@@ -88,7 +103,7 @@ module.exports = {
             lineWrapping: true,
 
             //mode:  "javascript",
-            //extraKeys: {"Ctrl-F": "findPersistent"},
+            extraKeys: this.extraKeys,
           })
 
           this.editor.on('change', async () => {
@@ -101,9 +116,9 @@ module.exports = {
             this.setValueLock = false
           })
 
-          this.editor$el = $('.CodeMirror:first')
+          this.editor$el = $(this.$el).find('.CodeMirror:first')
           //setTimeout(() => {
-          this.resizeByPanel()
+          this.resizeHeight()
           
           resolve(true)
           
@@ -187,7 +202,7 @@ module.exports = {
       //  this.editor.doc.setSelection(i - 1, from)
       //}
     },
-    jumpToMaker (marker) {
+    jumpToMarker (marker) {
       this.editor.focus()
       let {fromLine, fromCh, toLine, toCh} = this.getMarkerPos(marker)
       this.editor.setSelection({line: fromLine - 1, ch: fromCh}, {line: toLine - 1, ch: toCh})
@@ -195,14 +210,21 @@ module.exports = {
     getCursor () {
       return this.editor.doc.getCursor()
     },
+    getSelectedText () {
+      return this.editor.getSelection()
+    },
     findNext (search) {
       if (!search) {
         search = this.$parent.config.stringToSearch
       }
       
+      if (!search || search.length === 0) {
+        return false
+      } 
+      
       var cursor = this.editor.getSearchCursor(search);
       
-      let currentPosition = this.getCursor()
+      let currentPosition = this.getCursor(true)
       //console.log(currentPosition)
       let currentLine = currentPosition.line
       let currentCh = currentPosition.ch
@@ -228,64 +250,11 @@ module.exports = {
         //console.log('marker', line, from, to)
         if (fromLine - 1 > currentLine) {
           // 對，就是要找這個
-          this.jumpToMaker(marker)
+          this.jumpToMarker(marker)
           return true
         }
         else if (fromLine - 1 === currentLine) {
           if (fromCh > currentCh) {
-            // 對，就是要找這個
-            this.jumpToMaker(marker)
-            return true
-          }
-        }
-      }
-      
-      if (firstMarker) {
-        this.jumpToMaker(firstMarker)
-        return true
-      }
-      
-      return false  // 沒找到
-    },
-    findPrev (search) {
-      if (!search) {
-        search = this.$parent.config.stringToSearch
-      }
-      //this.editor.focus()
-      
-      //console.log(search)
-      var cursor = this.editor.getSearchCursor(search);
-      
-      let currentPosition = this.getCursor()
-      //console.log(currentPosition)
-      let currentLine = currentPosition.line
-      let currentCh = currentPosition.ch
-      //console.log('current', currentLine, currentCh)
-      
-      let firstMarker
-      //let lastMarker
-      
-      while (cursor.findPrevious()) {
-        let marker = this.editor.markText(
-          cursor.from(),
-          cursor.to()
-        )
-
-        if (!firstMarker) {
-          firstMarker = marker
-        }
-
-        //console.log(marker)
-        let {fromLine, fromCh, toLine, toCh} = this.getMarkerPos(marker)
-        
-        //console.log('marker', line, from, to)
-        if (toLine - 1 < currentLine) {
-          // 對，就是要找這個
-          this.jumpToMarker(marker)
-          return true
-        }
-        else if (toLine - 1 === currentLine) {
-          if (toCh < currentCh) {
             // 對，就是要找這個
             this.jumpToMarker(marker)
             return true
@@ -300,7 +269,86 @@ module.exports = {
       
       return false  // 沒找到
     },
-    resizeByPanel () {
+    findPrev (search) {
+      if (!search) {
+        search = this.$parent.config.stringToSearch
+      }
+      
+      if (!search || search.length === 0) {
+        return false
+      } 
+      //this.editor.focus()
+      //console.log('findPrev')
+      //console.log(search)
+      var cursor = this.editor.getSearchCursor(search);
+      
+      let currentPosition = this.getCursor(true)
+      //console.log(currentPosition)
+      let currentLine = currentPosition.line
+      let currentCh = currentPosition.ch
+      //console.log('current', currentLine, currentCh)
+      
+      let lastMarker
+      let jumpToLast = false
+      //let lastMarker
+      
+      while (cursor.findNext()) {
+        let marker = this.editor.markText(
+          cursor.from(),
+          cursor.to()
+        )
+
+        if (jumpToLast === true) {
+          lastMarker = marker
+          //console.log('jumpToLast true')
+          continue
+        }
+
+        //if (!firstMarker) {
+          
+        //}
+
+        //console.log(marker)
+        let {fromLine, fromCh, toLine, toCh} = this.getMarkerPos(marker)
+        //console.log(currentLine, currentCh, toLine, toCh, fromLine, fromCh)
+        
+        //console.log('marker', line, from, to)
+        if (currentLine < fromLine - 1) {
+          // 對，就是要找這個
+          if (!lastMarker) {
+            jumpToLast = true
+            //console.log('jumpToLast')
+            continue
+          }
+          this.jumpToMarker(lastMarker)
+          return true
+        }
+        else if (currentLine === fromLine - 1) {
+          //console.log(currentCh, fromCh)
+          if (currentCh <= fromCh || currentCh <= toCh) {
+            // 對，就是要找這個
+            if (!lastMarker) {
+              jumpToLast = true
+              //console.log('jumpToLast ch')
+              continue
+            }
+            this.jumpToMarker(lastMarker)
+            return true
+          }
+        }
+        
+        lastMarker = marker
+      }
+      
+      if (lastMarker) {
+        this.jumpToMarker(lastMarker)
+        return true
+      }
+      //console.log('沒找到')
+      return false  // 沒找到
+    },
+    resizeHeight: async function () {
+      /*
       let className = 'display-replace-panel'
       if (this.$parent.config.displayReplacePanel === true) {
         this.editor$el.addClass(className)
@@ -308,6 +356,14 @@ module.exports = {
       else {
         this.editor$el.removeClass(className)
       }
+       */
+      
+      while (this.editor$el === null) {
+        await PULI_UTILS.sleep()
+      }
+      //console.log(this.editor$el, this.editor$el.css)
+      this.editor$el.css('height', `calc(100vh - ${this.$parent.panelHeight})`)
+      //console.log('設定好了', `calc(100vh - ${this.$parent.panelHeight})`)
     },
     getMarkerPos (marker) {
       let lines = marker.lines

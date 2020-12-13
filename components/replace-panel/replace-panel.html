@@ -48,6 +48,7 @@
           <input type="text" 
                  placeholder="Replace with..."
                  id="stringToReplaceWith"
+                 ref="ReplaceInput"
                  v-model="$parent.config.stringToReplaceWith" />
           <i class="link paragraph icon"
              titl="New line"
@@ -88,7 +89,8 @@
     
     <!-- =========================================== -->
     
-    <div class="inline fields">
+    <div class="inline fields"
+         v-show="$parent.config.replaceMode === 'line'">
       <label for="LineOptions">Line Options</label>
       <div class="inline field">
           <select v-model="$parent.config.replaceLineOptions.mode"

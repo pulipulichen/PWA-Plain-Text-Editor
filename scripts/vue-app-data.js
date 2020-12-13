@@ -18,6 +18,7 @@ var appData = {
       spaceNumber: 2,
     }
   },
+  panelHeight: '0rem',
   textContentHistory: [],
   textContentHistoryIndex: -1,
   textContentModified: true,

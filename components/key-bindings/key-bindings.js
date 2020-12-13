@@ -68,39 +68,68 @@ module.exports = {
            break;
            */
           case 'ctrl+f':
-            event.preventDefault()
-            event.stopPropagation()
-            
-            //console.log(this.editor.doc.getCursor())
-            
-            this.CodeMirror.findNext()
-            
-            //console.log('ok')
-            //let editor = 
-            
-            //console.log(this.parentRefs.CodeMirror.editor)
-            //console.log(this.parentRefs.CodeMirror.editor.execCommand('findNext'))
-            
-            
+            //console.log('a')
+            this.findNext(event)
             break
           case 'ctrl+shift+f':
-            event.preventDefault()
-            event.stopPropagation()
-            
-            //console.log(this.editor.doc.getCursor())
-            
-            this.CodeMirror.findNext()
-            
-            //console.log('ok')
-            //let editor = 
-            
-            //console.log(this.parentRefs.CodeMirror.editor)
-            //console.log(this.parentRefs.CodeMirror.editor.execCommand('findNext'))
-            
-            
+            this.findPrev(event)
+            break
+          case 'ctrl+h':
+            this.setReplace(event)
             break
         }
       });
-    }
+    },
+    findNext (event) {
+      event.preventDefault()
+      event.stopPropagation()
+      //console.log('findNext')
+      let selected = this.CodeMirror.getSelectedText()
+      //console.log(this.$parent.config.displayReplacePanel)
+      if (this.$parent.config.displayReplacePanel === false
+              || (selected !== '' && selected !== this.$parent.config.stringToSearch)) {
+        this.$parent.config.displayReplacePanel = true
+        
+        if (selected !== '') {
+          this.$parent.config.stringToSearch = selected
+        }
+      }
+      else {
+        this.CodeMirror.findNext()
+      }
+    },
+    findPrev (event) {
+      event.preventDefault()
+      event.stopPropagation()
+      //console.log('findPrve')
+      let selected = this.CodeMirror.getSelectedText()
+      if (this.$parent.config.displayReplacePanel === false
+              || (selected !== '' && selected !== this.$parent.config.stringToSearch)) {
+        this.$parent.config.displayReplacePanel = true
+        
+        if (selected !== '') {
+          this.$parent.config.stringToSearch = selected
+        }
+      }
+      else {
+        this.CodeMirror.findPrev()
+      }
+    },
+    setReplace (event) {
+      event.preventDefault()
+      event.stopPropagation()
+      //console.log('findNext')
+      let selected = this.CodeMirror.getSelectedText()
+      //console.log(this.$parent.config.displayReplacePanel)
+      if (this.$parent.config.displayReplacePanel === false
+              || (selected !== '' && selected !== this.$parent.config.stringToSearch)) {
+        this.$parent.config.displayReplacePanel = true
+        
+        if (selected !== '') {
+          this.$parent.config.stringToSearch = selected
+        }
+      }
+      this.$parent.$refs.ReplacePanel.selectReplaceInput()
+    },
   }
 }

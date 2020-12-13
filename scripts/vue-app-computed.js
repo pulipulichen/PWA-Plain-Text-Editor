@@ -90,7 +90,7 @@ var appComputed = {
   },
   countOccurLine () {
     let stringToSearch = this.stringToSearchRaw
-    console.log(stringToSearch)
+    //console.log(stringToSearch)
     if (stringToSearch === '') {
       return this.textContentLinesTrim.length
     }
