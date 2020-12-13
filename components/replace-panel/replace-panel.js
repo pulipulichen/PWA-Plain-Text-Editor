@@ -331,7 +331,7 @@ module.exports = {
       this.$refs.ReplaceInput.select()
     },
     clearHistory() {
-      console.log('clearHistory')
+      //console.log('clearHistory')
       this.textContentHistory = []
       this.textContentHistoryIndex = -1
       this.textContentModified = true

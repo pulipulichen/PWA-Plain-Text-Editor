@@ -80,10 +80,11 @@ module.exports = {
           case 'ctrl+shift+q':
             event.preventDefault()
             event.stopPropagation()
-            $.get('README.md', (text) => {
+            //$.get('README.md', (text) => {
+            $.get('[demo-content/calc-number.md', (text) => {
               console.log(text)
               this.$parent.config.textContent = text
-              console.log('測試用')
+              //console.log('測試用')
             })
             break
         }

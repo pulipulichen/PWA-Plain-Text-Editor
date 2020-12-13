@@ -2,6 +2,22 @@
      v-show="config.displayPanel === 'format'">
 
   <div class="inline field">
-    Hello world
+    Syntax
+    
+    Wrap
+    
+    <div class="ui button calc-button"
+         v-bind:class="computedCalcButtonClassName"
+         v-on:click="copyCalcResult"
+         title="Copy"><span>{{ computedCalcButtonText }}</span></div>
+  </div>
+  
+  <!-- ============================ -->
+  
+  <div class="inline field">
+    
+    Format
+    
+    Trim
   </div>
 </div>

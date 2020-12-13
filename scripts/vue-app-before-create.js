@@ -5,5 +5,6 @@ let appBeforeCreate = async function () {
     //"/hotkeys/hotkeys.min.js",
     '/puli-utils/date-helper.js',
     '/puli-utils/puli-utils-async.js',
+    '/puli-utils/puli-utils-clipboard.js',
   ])
 }
