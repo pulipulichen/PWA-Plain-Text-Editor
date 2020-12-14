@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"vendors/semantic-ui-niwsf":"vendors/semantic-ui-niwsf"}[chunkId]||chunkId) + ".js"
+/******/ 		return __webpack_require__.p + "" + ({"vendors/semantic-ui-niwsf":"vendors/semantic-ui-niwsf","vendors~vendors/CodeMirror":"vendors~vendors/CodeMirror","vendors/CodeMirror":"vendors/CodeMirror"}[chunkId]||chunkId) + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -344,7 +344,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, ".CodeMirror {\n  font-family: Arial, monospace;\n  font-size: 16px;\n  line-height: 24px;\n}\n.CodeMirror .highlight {\n  background-color: rgba(255, 255, 0, 0.5);\n}\n", "",{"version":3,"sources":["CodeMirrorEditorGlobal.less"],"names":[],"mappings":"AAAA;EACE,6BAA6B;EAC7B,eAAe;EACf,iBAAiB;AACnB;AACA;EACE,wCAAwC;AAC1C","file":"CodeMirrorEditorGlobal.less","sourcesContent":[".CodeMirror {\n  font-family: Arial, monospace;\n  font-size: 16px;\n  line-height: 24px;\n}\n.CodeMirror .highlight {\n  background-color: rgba(255, 255, 0, 0.5);\n}\n"]}]);
+exports.push([module.i, ".CodeMirror {\n  font-family: 'Roboto', sans-serif !important;\n  font-size: 1.5rem;\n  line-height: 2rem;\n}\n.CodeMirror .highlight {\n  background-color: rgba(255, 255, 0, 0.5);\n}\n", "",{"version":3,"sources":["CodeMirrorEditorGlobal.less"],"names":[],"mappings":"AAAA;EACE,4CAA4C;EAC5C,iBAAiB;EACjB,iBAAiB;AACnB;AACA;EACE,wCAAwC;AAC1C","file":"CodeMirrorEditorGlobal.less","sourcesContent":[".CodeMirror {\n  font-family: 'Roboto', sans-serif !important;\n  font-size: 1.5rem;\n  line-height: 2rem;\n}\n.CodeMirror .highlight {\n  background-color: rgba(255, 255, 0, 0.5);\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -14153,29 +14153,51 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "code-mirror-wrapper" }, [
-    _c("textarea", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.localConfig.textContent,
-          expression: "localConfig.textContent"
-        }
-      ],
-      ref: "MainTextarea",
-      staticClass: "editor",
-      domProps: { value: _vm.localConfig.textContent },
-      on: {
-        input: function($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.$set(_vm.localConfig, "textContent", $event.target.value)
-        }
-      }
-    })
-  ])
+  return _c(
+    "div",
+    { staticClass: "code-mirror-wrapper" },
+    [
+      _vm.simpleMode
+        ? _c("textarea", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.localConfig.textContent,
+                expression: "localConfig.textContent"
+              }
+            ],
+            ref: "MainTextarea",
+            staticClass: "editor",
+            domProps: { value: _vm.localConfig.textContent },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.localConfig, "textContent", $event.target.value)
+              }
+            }
+          })
+        : _vm._e(),
+      _vm._v(" "),
+      !_vm.simpleMode
+        ? _c("codemirror", {
+            ref: "cmEditor",
+            attrs: { options: _vm.computedCodeMirrorOptions },
+            on: { inputRead: _vm.onCodeMirrorKeyHandled },
+            model: {
+              value: _vm.localConfig.textContent,
+              callback: function($$v) {
+                _vm.$set(_vm.localConfig, "textContent", $$v)
+              },
+              expression: "localConfig.textContent"
+            }
+          })
+        : _vm._e()
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -27639,9 +27661,9 @@ __webpack_require__.r(__webpack_exports__);
   data () {
     this.$i18n.locale = this.config.locale
     return {
-      simpleMode: true,
-      editor: null,
-      editor$el: null,
+      simpleMode: false,
+      //editor: null,
+      //editor$el: null,
       markers: [],
       highlightClassName: 'highlight',
       setValueLock: false,
@@ -27651,10 +27673,13 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
   },
+  components: {
+    codemirror: () => Promise.all(/*! import() | vendors/CodeMirror */[__webpack_require__.e("vendors~vendors/CodeMirror"), __webpack_require__.e("vendors/CodeMirror")]).then(__webpack_require__.bind(null, /*! ./vendors/codemirror.webpack.js */ "./src/components/CodeMirrorEditor/vendors/codemirror.webpack.js"))
+  },
   mounted: async function () {
     //console.log(this.inited)
-    await this.initCodeMirror()
-    await this.onConfigInited()
+    //await this.initCodeMirror()
+    //await this.onConfigInited()
     //console.log(this.inited)
     //this.testSearch1211()
     //this.testSetValue1211()
@@ -27688,7 +27713,9 @@ __webpack_require__.r(__webpack_exports__);
     
   },
   computed: {
-    
+    editor () {
+      return this.$refs.cmEditor
+    },
     /**
      * 如果要阻止CodeMirror的熱鍵，就在這裡設定
      * @returns JSON
@@ -27699,8 +27726,34 @@ __webpack_require__.r(__webpack_exports__);
         "Ctrl-Shift-F": 'none',
         "Ctrl-H": 'none',
         "Ctrl-Shift-Q": 'none',
+        "Ctrl-.": "autocomplete",
+        "Tab": function(cm){
+          cm.replaceSelection("  " , "end");
+        }
       }
-    }
+    },
+    
+    computedCodeMirrorOptions () {
+      return {
+        lineNumbers: true,
+        lineWrapping: true,
+        matchBrackets: true,
+        autoCloseBrackets: true,
+        matchTags: true,
+        autoCloseTags: true,
+        foldGutter: true,
+        showMatchesOnScrollbar: true,
+        lint: true,
+        gutters: ["CodeMirror-lint-markers", "CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+        mode: {name: "htmlmixed", globalVars: true},
+        //mode:  "javascript",
+        extraKeys: this.extraKeys,
+        hintOptions: {
+          alignWithWord: false,
+          completeSingle: false,
+        },
+      }
+    },
   },
   methods: {
     initCodeMirror () {
@@ -27749,9 +27802,10 @@ __webpack_require__.r(__webpack_exports__);
         return false
       }
       
+      
       //await PULI_UTILS.sleep(1000)
       //console.log('javascript')
-      this.editor.setOption("mode", 'javascript')
+      //this.editor.setOption("mode", 'html')
       
       //await PULI_UTILS.sleep(100)
       
@@ -27783,6 +27837,9 @@ __webpack_require__.r(__webpack_exports__);
       })
     },
     highlightText: async function (text) {
+      console.error('highlightText')
+      return false
+      
       if (this.simpleMode === true) {
         return false
       }
@@ -27794,7 +27851,7 @@ __webpack_require__.r(__webpack_exports__);
       this.highlightClear()
       
       while (!this.editor.getSearchCursor) {
-        await PULI_UTILS.sleep()
+        await this.utils.AsyncUtils.sleep()
       }
       
       var cursor = this.editor.getSearchCursor(text)
@@ -27812,6 +27869,12 @@ __webpack_require__.r(__webpack_exports__);
         //MARKER = marker
       }
       //this.editor.setCursor({line: 1, ch: 0})
+    },
+    onCodeMirrorKeyHandled (e, s) {
+      //console.log(e, s)
+      //this.$refs.cmEditor.codemirror.execCommand('autocomplete')
+      this.$refs.cmEditor.codemirror.showHint()
+      
     },
     jumpToLine (i, from = 0) { 
       if (this.simpleMode === true) {

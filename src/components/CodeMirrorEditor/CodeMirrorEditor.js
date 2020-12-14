@@ -6,9 +6,9 @@ export default {
   data () {
     this.$i18n.locale = this.config.locale
     return {
-      simpleMode: true,
-      editor: null,
-      editor$el: null,
+      simpleMode: false,
+      //editor: null,
+      //editor$el: null,
       markers: [],
       highlightClassName: 'highlight',
       setValueLock: false,
@@ -18,10 +18,13 @@ export default {
       }
     }
   },
+  components: {
+    codemirror: () => import(/* webpackChunkName: "vendors/CodeMirror" */ './vendors/codemirror.webpack.js')
+  },
   mounted: async function () {
     //console.log(this.inited)
-    await this.initCodeMirror()
-    await this.onConfigInited()
+    //await this.initCodeMirror()
+    //await this.onConfigInited()
     //console.log(this.inited)
     //this.testSearch1211()
     //this.testSetValue1211()
@@ -55,7 +58,9 @@ export default {
     
   },
   computed: {
-    
+    editor () {
+      return this.$refs.cmEditor
+    },
     /**
      * 如果要阻止CodeMirror的熱鍵，就在這裡設定
      * @returns JSON
@@ -66,8 +71,34 @@ export default {
         "Ctrl-Shift-F": 'none',
         "Ctrl-H": 'none',
         "Ctrl-Shift-Q": 'none',
+        "Ctrl-.": "autocomplete",
+        "Tab": function(cm){
+          cm.replaceSelection("  " , "end");
+        }
       }
-    }
+    },
+    
+    computedCodeMirrorOptions () {
+      return {
+        lineNumbers: true,
+        lineWrapping: true,
+        matchBrackets: true,
+        autoCloseBrackets: true,
+        matchTags: true,
+        autoCloseTags: true,
+        foldGutter: true,
+        showMatchesOnScrollbar: true,
+        lint: true,
+        gutters: ["CodeMirror-lint-markers", "CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+        mode: {name: "htmlmixed", globalVars: true},
+        //mode:  "javascript",
+        extraKeys: this.extraKeys,
+        hintOptions: {
+          alignWithWord: false,
+          completeSingle: false,
+        },
+      }
+    },
   },
   methods: {
     initCodeMirror () {
@@ -116,9 +147,10 @@ export default {
         return false
       }
       
+      
       //await PULI_UTILS.sleep(1000)
       //console.log('javascript')
-      this.editor.setOption("mode", 'javascript')
+      //this.editor.setOption("mode", 'html')
       
       //await PULI_UTILS.sleep(100)
       
@@ -150,6 +182,9 @@ export default {
       })
     },
     highlightText: async function (text) {
+      console.error('highlightText')
+      return false
+      
       if (this.simpleMode === true) {
         return false
       }
@@ -161,7 +196,7 @@ export default {
       this.highlightClear()
       
       while (!this.editor.getSearchCursor) {
-        await PULI_UTILS.sleep()
+        await this.utils.AsyncUtils.sleep()
       }
       
       var cursor = this.editor.getSearchCursor(text)
@@ -179,6 +214,12 @@ export default {
         //MARKER = marker
       }
       //this.editor.setCursor({line: 1, ch: 0})
+    },
+    onCodeMirrorKeyHandled (e, s) {
+      //console.log(e, s)
+      //this.$refs.cmEditor.codemirror.execCommand('autocomplete')
+      this.$refs.cmEditor.codemirror.showHint()
+      
     },
     jumpToLine (i, from = 0) { 
       if (this.simpleMode === true) {
