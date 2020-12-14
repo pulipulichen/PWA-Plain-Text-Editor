@@ -9,6 +9,8 @@ export default {
   },
   watch: {
     'config.inited' () {
+      return false
+      
       if (this.config.inited === false) {
         return false
       }

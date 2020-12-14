@@ -269,6 +269,42 @@ module.exports = exports;
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/FloatActionButton/FloatActionButton.less?vue&type=style&index=0&lang=less&":
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--1-2!./src/components/FloatActionButton/FloatActionButton.less?vue&type=style&index=0&lang=less& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(true);
+// Module
+exports.push([module.i, ".float-action-button {\n  user-select: none;\n  /*\n  .zoom-btn-person { background-color: #F44336; }\n\n  .zoom-btn-person:hover { background-color: #e57373; }\n\n  .zoom-btn-doc { background-color: #ffeb3b; }\n\n  .zoom-btn-doc:hover { background-color: #fff176; }\n\n  .zoom-btn-tangram { background-color: #4CAF50; }\n\n  .zoom-btn-tangram:hover { background-color: #81c784; }\n\n  .zoom-btn-report { background-color: #2196F3; }\n\n  .zoom-btn-report:hover { background-color: #64b5f6; }\n\n  .zoom-btn-feedback { background-color: #9c27b0; }\n\n  .zoom-btn-feedback:hover { background-color: #ba68c8; }\n  */\n}\n.float-action-button .zoom-fab {\n  display: inline-block;\n  width: 40px;\n  height: 40px;\n  line-height: 40px;\n  border-radius: 50%;\n  background-color: #009688;\n  vertical-align: middle;\n  text-decoration: none;\n  text-align: center;\n  transition: 0.2s ease-out;\n  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);\n  cursor: pointer;\n  color: #FFF;\n}\n.float-action-button .zoom-fab:hover {\n  background-color: #4db6ac;\n  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);\n}\n.float-action-button .zoom-btn-large {\n  width: 60px;\n  height: 60px;\n  line-height: 60px;\n}\n.float-action-button .zoom-btn-large i:before {\n  font-size: 1.75rem;\n}\n.float-action-button .zoom-menu {\n  position: absolute;\n  right: 60px;\n  left: auto;\n  top: 50%;\n  transform: translateY(-50%);\n  height: 100%;\n  width: 500px;\n  list-style: none;\n  text-align: right;\n  pointer-events: none;\n}\n.float-action-button .zoom-menu.show {\n  z-index: 1;\n  pointer-events: all;\n}\n.float-action-button .zoom-menu li {\n  display: inline-block;\n  margin-right: 10px;\n}\n.float-action-button .zoom-card {\n  position: absolute;\n  right: 150px;\n  bottom: 70px;\n  transition: box-shadow 0.25s;\n  padding: 24px;\n  border-radius: 2px;\n  background-color: #009688;\n  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);\n  color: #FFF;\n}\n.float-action-button .zoom-card ul {\n  -webkit-padding-start: 0;\n  list-style: none;\n  text-align: left;\n}\n.float-action-button .scale-transition {\n  transition: transform 0.3s cubic-bezier(0.53, 0.01, 0.36, 1.63) !important;\n}\n.float-action-button .scale-transition.scale-out {\n  transform: scale(0);\n  transition: transform 0.2s !important;\n}\n.float-action-button .scale-transition.scale-in {\n  transform: scale(1);\n}\n.float-action-button .tooltip {\n  position: relative;\n}\n.float-action-button .tooltip .tooltiptext {\n  padding: 10px;\n  opacity: 0;\n  font-size: 0.8em;\n  border-radius: 3px;\n  text-align: center;\n  transition: ease-in-out 0.2s;\n  /* Position the tooltip */\n  position: absolute;\n  z-index: 1;\n  left: -10%;\n  top: -3rem;\n  background-color: #000;\n  color: #fff;\n  line-height: 0.8rem;\n  white-space: nowrap;\n}\n.float-action-button .tooltiptext::before {\n  content: \"\";\n  /*讓before顯示出來*/\n  position: absolute;\n  top: 15px;\n  /*調整位置*/\n  right: 50%;\n  /*調整位置*/\n  padding: 0.8em;\n  /*做出對話框的角*/\n  background-color: inherit;\n  border: inherit;\n  /*讓before繼承talkingFrame的CSS屬性*/\n  border-right: 0;\n  /*隱藏內邊的border*/\n  border-bottom: 0;\n  /*隱藏內邊的border*/\n  transform: rotate(45deg);\n  /*旋軟角度*/\n  z-index: -1;\n}\n.float-action-button .tooltip:hover .tooltiptext {\n  opacity: 1;\n}\n", "",{"version":3,"sources":["FloatActionButton.less"],"names":[],"mappings":"AAAA;EACE,iBAAiB;EACjB;;;;;;;;;;;;;;;;;;;;GAoBC;AACH;AACA;EACE,qBAAqB;EACrB,WAAW;EACX,YAAY;EACZ,iBAAiB;EACjB,kBAAkB;EAClB,yBAAyB;EACzB,sBAAsB;EACtB,qBAAqB;EACrB,kBAAkB;EAClB,yBAAyB;EACzB,+GAA+G;EAC/G,eAAe;EACf,WAAW;AACb;AACA;EACE,yBAAyB;EACzB,+GAA+G;AACjH;AACA;EACE,WAAW;EACX,YAAY;EACZ,iBAAiB;AACnB;AACA;EACE,kBAAkB;AACpB;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,UAAU;EACV,QAAQ;EACR,2BAA2B;EAC3B,YAAY;EACZ,YAAY;EACZ,gBAAgB;EAChB,iBAAiB;EACjB,oBAAoB;AACtB;AACA;EACE,UAAU;EACV,mBAAmB;AACrB;AACA;EACE,qBAAqB;EACrB,kBAAkB;AACpB;AACA;EACE,kBAAkB;EAClB,YAAY;EACZ,YAAY;EACZ,4BAA4B;EAC5B,aAAa;EACb,kBAAkB;EAClB,yBAAyB;EACzB,+GAA+G;EAC/G,WAAW;AACb;AACA;EACE,wBAAwB;EACxB,gBAAgB;EAChB,gBAAgB;AAClB;AACA;EACE,0EAA0E;AAC5E;AACA;EACE,mBAAmB;EACnB,qCAAqC;AACvC;AACA;EACE,mBAAmB;AACrB;AACA;EACE,kBAAkB;AACpB;AACA;EACE,aAAa;EACb,UAAU;EACV,gBAAgB;EAChB,kBAAkB;EAClB,kBAAkB;EAClB,4BAA4B;EAC5B,yBAAyB;EACzB,kBAAkB;EAClB,UAAU;EACV,UAAU;EACV,UAAU;EACV,sBAAsB;EACtB,WAAW;EACX,mBAAmB;EACnB,mBAAmB;AACrB;AACA;EACE,WAAW;EACX,cAAc;EACd,kBAAkB;EAClB,SAAS;EACT,OAAO;EACP,UAAU;EACV,OAAO;EACP,cAAc;EACd,UAAU;EACV,yBAAyB;EACzB,eAAe;EACf,8BAA8B;EAC9B,eAAe;EACf,cAAc;EACd,gBAAgB;EAChB,cAAc;EACd,wBAAwB;EACxB,OAAO;EACP,WAAW;AACb;AACA;EACE,UAAU;AACZ","file":"FloatActionButton.less","sourcesContent":[".float-action-button {\n  user-select: none;\n  /*\n  .zoom-btn-person { background-color: #F44336; }\n\n  .zoom-btn-person:hover { background-color: #e57373; }\n\n  .zoom-btn-doc { background-color: #ffeb3b; }\n\n  .zoom-btn-doc:hover { background-color: #fff176; }\n\n  .zoom-btn-tangram { background-color: #4CAF50; }\n\n  .zoom-btn-tangram:hover { background-color: #81c784; }\n\n  .zoom-btn-report { background-color: #2196F3; }\n\n  .zoom-btn-report:hover { background-color: #64b5f6; }\n\n  .zoom-btn-feedback { background-color: #9c27b0; }\n\n  .zoom-btn-feedback:hover { background-color: #ba68c8; }\n  */\n}\n.float-action-button .zoom-fab {\n  display: inline-block;\n  width: 40px;\n  height: 40px;\n  line-height: 40px;\n  border-radius: 50%;\n  background-color: #009688;\n  vertical-align: middle;\n  text-decoration: none;\n  text-align: center;\n  transition: 0.2s ease-out;\n  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);\n  cursor: pointer;\n  color: #FFF;\n}\n.float-action-button .zoom-fab:hover {\n  background-color: #4db6ac;\n  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);\n}\n.float-action-button .zoom-btn-large {\n  width: 60px;\n  height: 60px;\n  line-height: 60px;\n}\n.float-action-button .zoom-btn-large i:before {\n  font-size: 1.75rem;\n}\n.float-action-button .zoom-menu {\n  position: absolute;\n  right: 60px;\n  left: auto;\n  top: 50%;\n  transform: translateY(-50%);\n  height: 100%;\n  width: 500px;\n  list-style: none;\n  text-align: right;\n  pointer-events: none;\n}\n.float-action-button .zoom-menu.show {\n  z-index: 1;\n  pointer-events: all;\n}\n.float-action-button .zoom-menu li {\n  display: inline-block;\n  margin-right: 10px;\n}\n.float-action-button .zoom-card {\n  position: absolute;\n  right: 150px;\n  bottom: 70px;\n  transition: box-shadow 0.25s;\n  padding: 24px;\n  border-radius: 2px;\n  background-color: #009688;\n  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);\n  color: #FFF;\n}\n.float-action-button .zoom-card ul {\n  -webkit-padding-start: 0;\n  list-style: none;\n  text-align: left;\n}\n.float-action-button .scale-transition {\n  transition: transform 0.3s cubic-bezier(0.53, 0.01, 0.36, 1.63) !important;\n}\n.float-action-button .scale-transition.scale-out {\n  transform: scale(0);\n  transition: transform 0.2s !important;\n}\n.float-action-button .scale-transition.scale-in {\n  transform: scale(1);\n}\n.float-action-button .tooltip {\n  position: relative;\n}\n.float-action-button .tooltip .tooltiptext {\n  padding: 10px;\n  opacity: 0;\n  font-size: 0.8em;\n  border-radius: 3px;\n  text-align: center;\n  transition: ease-in-out 0.2s;\n  /* Position the tooltip */\n  position: absolute;\n  z-index: 1;\n  left: -10%;\n  top: -3rem;\n  background-color: #000;\n  color: #fff;\n  line-height: 0.8rem;\n  white-space: nowrap;\n}\n.float-action-button .tooltiptext::before {\n  content: \"\";\n  /*讓before顯示出來*/\n  position: absolute;\n  top: 15px;\n  /*調整位置*/\n  right: 50%;\n  /*調整位置*/\n  padding: 0.8em;\n  /*做出對話框的角*/\n  background-color: inherit;\n  border: inherit;\n  /*讓before繼承talkingFrame的CSS屬性*/\n  border-right: 0;\n  /*隱藏內邊的border*/\n  border-bottom: 0;\n  /*隱藏內邊的border*/\n  transform: rotate(45deg);\n  /*旋軟角度*/\n  z-index: -1;\n}\n.float-action-button .tooltip:hover .tooltiptext {\n  opacity: 1;\n}\n"]}]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/FloatActionButton/FloatActionButtonPosition.less?vue&type=style&index=1&lang=less&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--1-2!./src/components/FloatActionButton/FloatActionButtonPosition.less?vue&type=style&index=1&lang=less& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(true);
+// Module
+exports.push([module.i, ".float-action-button {\n  position: fixed;\n  right: 3rem;\n  height: 70px;\n  z-index: 999;\n}\n.float-action-button.top {\n  top: 3rem;\n}\n", "",{"version":3,"sources":["FloatActionButtonPosition.less"],"names":[],"mappings":"AAAA;EACE,eAAe;EACf,WAAW;EACX,YAAY;EACZ,YAAY;AACd;AACA;EACE,SAAS;AACX","file":"FloatActionButtonPosition.less","sourcesContent":[".float-action-button {\n  position: fixed;\n  right: 3rem;\n  height: 70px;\n  z-index: 999;\n}\n.float-action-button.top {\n  top: 3rem;\n}\n"]}]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/Index.less?vue&type=style&index=0&id=82b7485c&lang=less&scoped=true&":
 /*!*******************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--1-2!./src/components/Index.less?vue&type=style&index=0&id=82b7485c&lang=less&scoped=true& ***!
@@ -14053,6 +14089,202 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./src/components/FloatActionButton/FloatActionButton.html?vue&type=template&id=0f8fb719&":
+/*!****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./src/components/FloatActionButton/FloatActionButton.html?vue&type=template&id=0f8fb719& ***!
+  \****************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass: "float-action-button zoom",
+      class: _vm.computedClassNameList,
+      style: _vm.computedStyle,
+      on: { mouseout: _vm.delayCloseMenu, mousein: _vm.clearDelayCloseMenu }
+    },
+    [
+      _c(
+        "a",
+        {
+          staticClass: "zoom-fab zoom-btn-large tooltip",
+          attrs: { id: "zoomBtn" },
+          on: {
+            mouseover: function($event) {
+              _vm.showMenu = true
+            },
+            click: _vm.copy
+          }
+        },
+        [
+          _c("i", { staticClass: "copy icon" }),
+          _vm._v(" "),
+          _c(
+            "span",
+            { staticClass: "tooltiptext", staticStyle: { left: "10%" } },
+            [_vm._v("Copy")]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c("ul", { staticClass: "zoom-menu", class: { show: _vm.showMenu } }, [
+        _c(
+          "li",
+          {
+            staticClass: "tooltip",
+            attrs: { title: "Configuration" },
+            on: { click: _vm.openConfigModal }
+          },
+          [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "zoom-fab zoom-btn-sm zoom-btn-doc scale-transition",
+                class: { "scale-out": !_vm.showMenu }
+              },
+              [_c("i", { staticClass: "cogs icon" })]
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              { staticClass: "tooltiptext", staticStyle: { left: "-100%" } },
+              [_vm._v("Configuration")]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          {
+            staticClass: "tooltip",
+            attrs: { title: "Clear" },
+            on: { click: _vm.clear }
+          },
+          [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "zoom-fab zoom-btn-sm zoom-btn-person scale-transition",
+                class: { "scale-out": !_vm.showMenu }
+              },
+              [_c("i", { staticClass: "eraser icon" })]
+            ),
+            _vm._v(" "),
+            _c("span", { staticClass: "tooltiptext" }, [_vm._v("Clear")])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          {
+            staticClass: "tooltip",
+            attrs: { title: "Toggle Format Panel" },
+            on: { click: _vm.toggleFormatPanel }
+          },
+          [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "zoom-fab zoom-btn-sm zoom-btn-doc scale-transition",
+                class: { "scale-out": !_vm.showMenu }
+              },
+              [_c("i", { staticClass: "file code outline icon" })]
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              { staticClass: "tooltiptext", staticStyle: { left: "-100%" } },
+              [_vm._v("Toggle Format Panel")]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          {
+            staticClass: "tooltip",
+            attrs: { title: "Toggle Replace Panel" },
+            on: { click: _vm.toggleReplacePanel }
+          },
+          [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "zoom-fab zoom-btn-sm zoom-btn-doc scale-transition",
+                class: { "scale-out": !_vm.showMenu }
+              },
+              [_c("i", { staticClass: "edit icon" })]
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              { staticClass: "tooltiptext", staticStyle: { left: "-100%" } },
+              [_vm._v("Toggle Replace Panel")]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          {
+            staticClass: "tooltip",
+            attrs: { title: "Change Button Position" },
+            on: {
+              click: function($event) {
+                _vm.positionBottom = !_vm.positionBottom
+              }
+            }
+          },
+          [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "zoom-fab zoom-btn-sm zoom-btn-doc scale-transition",
+                class: { "scale-out": !_vm.showMenu }
+              },
+              [
+                _vm.positionBottom
+                  ? _c("i", { staticClass: "arrow up icon" })
+                  : _vm._e(),
+                _vm._v(" "),
+                !_vm.positionBottom
+                  ? _c("i", { staticClass: "arrow down icon" })
+                  : _vm._e()
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              { staticClass: "tooltiptext", staticStyle: { left: "-112%" } },
+              [_vm._v("Change Button Position")]
+            )
+          ]
+        )
+      ])
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./src/components/Index.html?vue&type=template&id=82b7485c&scoped=true&":
 /*!**********************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./src/components/Index.html?vue&type=template&id=82b7485c&scoped=true& ***!
@@ -14074,6 +14306,14 @@ var render = function() {
     [
       _vm._v("\r\n  hello world\r\n  "),
       _c("ConfigModal", {
+        attrs: {
+          config: _vm.config,
+          localConfig: _vm.localConfig,
+          utils: _vm.utils
+        }
+      }),
+      _vm._v(" "),
+      _c("FloatActionButton", {
         attrs: {
           config: _vm.config,
           localConfig: _vm.localConfig,
@@ -14219,6 +14459,48 @@ if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = __webpack_require__(/*! ../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
 var update = add("ab9386e2", content, false, {});
+// Hot Module Replacement
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/FloatActionButton/FloatActionButton.less?vue&type=style&index=0&lang=less&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--1-2!./src/components/FloatActionButton/FloatActionButton.less?vue&type=style&index=0&lang=less& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/less-loader/dist/cjs.js??ref--1-2!./FloatActionButton.less?vue&type=style&index=0&lang=less& */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/FloatActionButton/FloatActionButton.less?vue&type=style&index=0&lang=less&");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! ../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("6551ee4f", content, false, {});
+// Hot Module Replacement
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/FloatActionButton/FloatActionButtonPosition.less?vue&type=style&index=1&lang=less&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--1-2!./src/components/FloatActionButton/FloatActionButtonPosition.less?vue&type=style&index=1&lang=less& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/less-loader/dist/cjs.js??ref--1-2!./FloatActionButtonPosition.less?vue&type=style&index=1&lang=less& */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/FloatActionButton/FloatActionButtonPosition.less?vue&type=style&index=1&lang=less&");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! ../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("40a1b01c", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -26588,6 +26870,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   watch: {
     'config.inited' () {
+      return false
+      
       if (this.config.inited === false) {
         return false
       }
@@ -26695,6 +26979,261 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/components/FloatActionButton/FloatActionButton.html?vue&type=template&id=0f8fb719&":
+/*!************************************************************************************************!*\
+  !*** ./src/components/FloatActionButton/FloatActionButton.html?vue&type=template&id=0f8fb719& ***!
+  \************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_FloatActionButton_html_vue_type_template_id_0f8fb719___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./FloatActionButton.html?vue&type=template&id=0f8fb719& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./src/components/FloatActionButton/FloatActionButton.html?vue&type=template&id=0f8fb719&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_FloatActionButton_html_vue_type_template_id_0f8fb719___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_FloatActionButton_html_vue_type_template_id_0f8fb719___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./src/components/FloatActionButton/FloatActionButton.js?vue&type=script&lang=js&?0825":
+/*!****************************************************************************************!*\
+  !*** ./src/components/FloatActionButton/FloatActionButton.js?vue&type=script&lang=js& ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FloatActionButton_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./FloatActionButton.js?vue&type=script&lang=js& */ "./src/components/FloatActionButton/FloatActionButton.js?vue&type=script&lang=js&?34c5");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_FloatActionButton_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./src/components/FloatActionButton/FloatActionButton.js?vue&type=script&lang=js&?34c5":
+/*!****************************************************************************************!*\
+  !*** ./src/components/FloatActionButton/FloatActionButton.js?vue&type=script&lang=js& ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['config', 'localConfig', 'utils'],
+    data() {
+      this.$i18n.locale = this.config.locale
+      return {
+        showMenu: false,
+        showMenuTimer: null,
+        positionBottom: true
+      }
+    },
+    watch: {
+      showMenu () {
+        if (this.showMenu === true) {
+          this.clearDelayCloseMenu()
+        }
+        else {
+          clearTimeout(this.showMenuTimer)
+          this.showMenuTimer = null
+        }
+      }
+    },
+    computed: {
+      computedStyle () {
+        
+        if (this.positionBottom === false) {
+          return false
+        }
+        
+        let style = {
+          'bottom': `calc(1rem + ${this.$parent.panelHeight})`
+        }
+        //console.log(style)
+        return style
+      },
+      computedClassNameList () {
+        return {
+          top: !this.positionBottom,
+          //'display-replace-panel': (this.$parent.config.displayPanel === 'replace')
+        }
+      }
+    },
+    methods: {
+      openConfigModal () {
+        console.log(this.$parent.$refs.ConfigModal)
+        console.log(this.$parent.$refs)
+        this.$parent.$refs.ConfigModal.open()
+      },
+      delayCloseMenu () {
+        clearTimeout(this.showMenuTimer)
+        this.showMenuTimer = setTimeout(() => {
+          this.showMenu = false
+        }, 3 * 1000)
+      },
+      clearDelayCloseMenu () {
+        clearTimeout(this.showMenuTimer)
+        this.showMenuTimer = null
+      },
+      copy() {
+        let text = this.$parent.config.textContent
+        if (!navigator.clipboard) {
+          fallbackCopyTextToClipboard(text);
+          return;
+        }
+        navigator.clipboard.writeText(text).then(function () {
+          //console.log('Async: Copying to clipboard was successful!');
+        }, function (err) {
+          //console.error('Async: Could not copy text: ', err);
+        });
+        
+        this.showMenu = false
+      },
+      fallbackCopyTextToClipboard(text) {
+        var textArea = document.createElement("textarea");
+        textArea.value = text;
+
+        // Avoid scrolling to bottom
+        textArea.style.top = "0";
+        textArea.style.left = "0";
+        textArea.style.position = "fixed";
+
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+
+        try {
+          var successful = document.execCommand('copy');
+          var msg = successful ? 'successful' : 'unsuccessful';
+          console.log('Fallback: Copying text command was ' + msg);
+        } catch (err) {
+          console.error('Fallback: Oops, unable to copy', err);
+        }
+
+        document.body.removeChild(textArea);
+      },
+      closeMenu() {
+        this.showMenu = false
+      },
+      toggleReplacePanel() {
+        //this.$parent.config.displayReplacePanel = !this.$parent.config.displayReplacePanel
+        //console.log(this.$parent.config.displayReplacePanel)
+        if (this.$parent.config.displayPanel !== 'replace') {
+          this.$parent.config.displayPanel = 'replace'
+        }
+        else {
+          this.$parent.config.displayPanel = null
+        }
+        
+        this.closeMenu()
+      },
+      toggleFormatPanel() {
+        //this.$parent.config.displayReplacePanel = !this.$parent.config.displayReplacePanel
+        //console.log(this.$parent.config.displayReplacePanel)
+        if (!this.$parent.config.displayPanel !== 'format') {
+          this.$parent.config.displayPanel = 'format'
+        }
+        else {
+          this.$parent.config.displayPanel = null
+        }
+        //console.log(this.$parent.config.displayPanel)
+        
+        this.closeMenu()
+      },
+      clear() {
+        this.$parent.clearTextContentConfirm()
+        this.closeMenu()
+      },
+      /*
+      formatCode () {
+        this.$parent.formatCode()
+        this.closeMenu()
+      }
+      */
+    }
+  });
+
+/***/ }),
+
+/***/ "./src/components/FloatActionButton/FloatActionButton.less?vue&type=style&index=0&lang=less&":
+/*!***************************************************************************************************!*\
+  !*** ./src/components/FloatActionButton/FloatActionButton.less?vue&type=style&index=0&lang=less& ***!
+  \***************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_FloatActionButton_less_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-style-loader!../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/less-loader/dist/cjs.js??ref--1-2!./FloatActionButton.less?vue&type=style&index=0&lang=less& */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/FloatActionButton/FloatActionButton.less?vue&type=style&index=0&lang=less&");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_FloatActionButton_less_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_FloatActionButton_less_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_FloatActionButton_less_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_FloatActionButton_less_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./src/components/FloatActionButton/FloatActionButton.vue":
+/*!****************************************************************!*\
+  !*** ./src/components/FloatActionButton/FloatActionButton.vue ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FloatActionButton_html_vue_type_template_id_0f8fb719___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FloatActionButton.html?vue&type=template&id=0f8fb719& */ "./src/components/FloatActionButton/FloatActionButton.html?vue&type=template&id=0f8fb719&");
+/* harmony import */ var _FloatActionButton_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FloatActionButton.js?vue&type=script&lang=js& */ "./src/components/FloatActionButton/FloatActionButton.js?vue&type=script&lang=js&?0825");
+/* empty/unused harmony star reexport *//* harmony import */ var _FloatActionButton_less_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FloatActionButton.less?vue&type=style&index=0&lang=less& */ "./src/components/FloatActionButton/FloatActionButton.less?vue&type=style&index=0&lang=less&");
+/* harmony import */ var _FloatActionButtonPosition_less_vue_type_style_index_1_lang_less___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FloatActionButtonPosition.less?vue&type=style&index=1&lang=less& */ "./src/components/FloatActionButton/FloatActionButtonPosition.less?vue&type=style&index=1&lang=less&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__["default"])(
+  _FloatActionButton_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FloatActionButton_html_vue_type_template_id_0f8fb719___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FloatActionButton_html_vue_type_template_id_0f8fb719___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "src/components/FloatActionButton/FloatActionButton.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./src/components/FloatActionButton/FloatActionButtonPosition.less?vue&type=style&index=1&lang=less&":
+/*!***********************************************************************************************************!*\
+  !*** ./src/components/FloatActionButton/FloatActionButtonPosition.less?vue&type=style&index=1&lang=less& ***!
+  \***********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_FloatActionButtonPosition_less_vue_type_style_index_1_lang_less___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-style-loader!../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/less-loader/dist/cjs.js??ref--1-2!./FloatActionButtonPosition.less?vue&type=style&index=1&lang=less& */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/FloatActionButton/FloatActionButtonPosition.less?vue&type=style&index=1&lang=less&");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_FloatActionButtonPosition_less_vue_type_style_index_1_lang_less___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_FloatActionButtonPosition_less_vue_type_style_index_1_lang_less___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_FloatActionButtonPosition_less_vue_type_style_index_1_lang_less___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_FloatActionButtonPosition_less_vue_type_style_index_1_lang_less___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
 /***/ "./src/components/Index.html?vue&type=template&id=82b7485c&scoped=true&":
 /*!******************************************************************************!*\
   !*** ./src/components/Index.html?vue&type=template&id=82b7485c&scoped=true& ***!
@@ -26723,8 +27262,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ConfigModal_ConfigModal_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ConfigModal/ConfigModal.vue */ "./src/components/ConfigModal/ConfigModal.vue");
+/* harmony import */ var _FloatActionButton_FloatActionButton_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FloatActionButton/FloatActionButton.vue */ "./src/components/FloatActionButton/FloatActionButton.vue");
 /* global Node */
 //import $ from 'jquery'
+
 
 
 let Index = {
@@ -26743,7 +27284,8 @@ let Index = {
     }
   },
   components: {
-    ConfigModal: _ConfigModal_ConfigModal_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    ConfigModal: _ConfigModal_ConfigModal_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    FloatActionButton: _FloatActionButton_FloatActionButton_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   computed: {
     

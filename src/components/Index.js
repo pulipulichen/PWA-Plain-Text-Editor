@@ -1,6 +1,7 @@
 /* global Node */
 //import $ from 'jquery'
 import ConfigModal from './ConfigModal/ConfigModal.vue'
+import FloatActionButton from './FloatActionButton/FloatActionButton.vue'
 
 let Index = {
   props: ['config', 'localConfig', 'utils'],
@@ -18,7 +19,8 @@ let Index = {
     }
   },
   components: {
-    ConfigModal
+    ConfigModal,
+    FloatActionButton
   },
   computed: {
     

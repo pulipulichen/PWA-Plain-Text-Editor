@@ -1,5 +1,9 @@
-module.exports = {
+import $ from 'jquery'
+
+export default {
+    props: ['config', 'localConfig', 'utils'],
     data() {
+      this.$i18n.locale = this.config.locale
       return {
         showMenu: false,
         showMenuTimer: null,
@@ -18,9 +22,6 @@ module.exports = {
       }
     },
     computed: {
-      config () {
-        return this.$parent.config
-      },
       computedStyle () {
         
         if (this.positionBottom === false) {
