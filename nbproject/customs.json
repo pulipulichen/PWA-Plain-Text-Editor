@@ -5,19 +5,23 @@
     "style": {},
     "float-action-button": {},
     "key-bindings": {},
-    "code-mirror": {}
+    "code-mirror": {},
+    "ConfigModal": {}
   },
   "attributes": {
     "v-bind:class": {},
     "v-if": {},
+    "src": {},
+    "v-bind:localConfig": {},
+    "v-bind:editor": {},
+    "v-model": {},
     "ref": {},
     "v-on:click": {},
     "scoped": {},
-    "src": {},
     "v-on:mousein": {},
+    "v-bind:config": {},
     "lang": {},
-    "v-bind:editor": {},
-    "v-model": {},
+    "v-bind:utils": {},
     "v-show": {}
   }
 }

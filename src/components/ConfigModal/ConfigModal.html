@@ -1,4 +1,4 @@
-<div class="ui modal config-modal" ref="Modal">
+<div class="ui modal ConfigModal" ref="Modal">
   <div class="header">Configuration</div>
   <div class="scrolling content">
     <div class="ui form">
@@ -7,7 +7,7 @@
         <div class="ui toggle checkbox">
           <input type="checkbox" tabindex="0" class="hidden"
                  id="EnableTextWrap"
-                 v-model="$parent.config.enableTextWrap" />
+                 v-model="localConfig.enableTextWrap" />
           <label for="EnableTextWrap">Enable Text wrap</label>
         </div>
       </div>

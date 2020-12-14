@@ -1,11 +1,13 @@
 let config = {
+  appName: 'vue-app',
   debug: {
     ErrorHandler: {
       verbose: true
-    }
+    },
+    enableRestore: true,
   },
   locale: 'zh-TW',
-  
+  inited: false
 }
 
 import styleConfig from './styles/style.config.js'
