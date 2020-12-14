@@ -28,62 +28,10 @@
     
     <!-- =================================== -->
 
-    <script src="./vendors/vue/vue.min.js"></script>
-    <script src="./vendors/jquery/jquery.min.js"></script>
-    <script src="./vendors/jquery/jquery-require.js"></script>
-
-    <script src="./vendors/semantic-ui/semantic.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./vendors/semantic-ui/semantic.min.css">
-
-    <link rel="stylesheet/less" type="text/css" href="./styles/styles.less" />
-    
-    <script src="./styles/less-global-vars.js"></script>
-    <script src="./vendors/less/load-before-less.js"></script>
-    <script src="./vendors/less/less.min.js"></script>
-    
-    <script src="./vendors/vue/httpVueLoader.js"></script>
-    <script src="./vendors/vue/httpVueLoaderLess.js"></script>
     
   </head>
   <body>
 
-    <div id="app">
-      
-      <!--
-      <textarea-editor ref="TextareaEditor"></textarea-editor>
-      <replace-panel ref="ReplacePanel"></replace-panel>
-      -->
-      
-      <!-- ====================== -->
-      
-      <float-action-button></float-action-button>
-      
-      <!-- ===================== -->
-      
-      <config-modal ref="ConfigModal"></config-modal>
-      
-      
-      <code-mirror ref="CodeMirror"></code-mirror>
-      <replace-panel ref="ReplacePanel"></replace-panel>
-      <format-panel ref="FormatPanel"></format-panel>
-      
-      <!-- ====================== --> 
-      
-      <key-bindings v-bind:editor="CodeMirrorEditor"></key-bindings>
-    </div>
-
-    <!-- ================================================ -->
-    
-    <script src="./scripts/vue-app-before-create.js"></script>
-    <script src="./scripts/vue-app-computed.js"></script>
-    <script src="./scripts/vue-app-data.js"></script>
-    <script src="./scripts/vue-app-methods.js"></script>
-    <script src="./scripts/vue-app-mounted.js"></script>
-    <script src="./scripts/vue-app-watch.js"></script>
-    <script src="./scripts/vue-app-components.js"></script>
-    
-    <script src="./scripts/vue-app.js"></script>
-    
-    <script src="./service-worker-loader.js"></script>
+    <script src="dist/index.js"></script>
   </body>
 </html>

@@ -1,9 +1,9 @@
 'use strict';
 
-const dotenv = require('dotenv');
-dotenv.config();
+//const dotenv = require('dotenv');
+//dotenv.config();
 //const baseURL = process.env.PROTOCOL + '//' + process.env.PUBLIC_HOST + ':' + process.env.PORT
-const baseURL = './'
+//const baseURL = ''
 
 const path = require('path')
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
@@ -27,12 +27,13 @@ module.exports = (env, argv) => {
     devtool: 'source-map',
     //devtool: false,
     entry: {
-      'main': path.resolve(__dirname, './src/main.js'),
+      'index': path.resolve(__dirname, '../src/index.js'),
+      //'test': path.resolve(__dirname, '../src/test.js'),
     },
     output: {
       path: path.resolve(__dirname, '../dist/'),
       filename: '[name].js',
-      //publicPath: baseURL + '/spa/'
+      publicPath: './dist/'
     },
     resolve: {
       alias: {
@@ -56,7 +57,7 @@ module.exports = (env, argv) => {
             {
               loader: 'less-loader?sourceMap',
               options: {
-                globalVars: require('../less-global-vars.js')
+                globalVars: require('../src/styles/style.config.js')
               }
             }, // Step 1 要先執行這個
           ]
@@ -68,14 +69,15 @@ module.exports = (env, argv) => {
           ]
         },
         {
-          test: /\.(eot|woff|woff2|svg|png|ttf)([\?]?.*)$/,
+          test: /\.(eot|woff|woff2|svg|wav|ogg|gif|mp3|png|jpg|ttf)([\?]?.*)$/,
           use: [
             {
               loader: 'file-loader',
               options: {
                 name: '[name].[ext]',
                 outputPath: 'asset',
-                publicPath: baseURL + '/spa/asset'
+                //publicPath: baseURL + '/spa/asset'
+                publicPath: './dist/asset'
               }
             }
           ]
@@ -119,9 +121,9 @@ module.exports = (env, argv) => {
           });
         } // apply: (compiler) => {
       },
-      new BundleAnalyzerPlugin({
-        analyzerPort: 5001
-      })
+//      new BundleAnalyzerPlugin({
+//        analyzerPort: 5001
+//      })
     ],  // plugins: [
     optimization: {
       splitChunks: {
@@ -165,7 +167,7 @@ module.exports = (env, argv) => {
         {
           loader: 'less-loader?sourceMap',
           options: {
-            globalVars: require('./webpack-app/styles/style.config.js')
+            globalVars: require('../src/styles/style.config.js')
           }
         }, // Step 1 要先執行這個
       ]
