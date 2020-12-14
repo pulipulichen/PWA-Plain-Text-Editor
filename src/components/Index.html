@@ -1,14 +1,17 @@
 <div class="Index">
   hello world
   <ConfigModal
+    ref="ConfigModal"
     v-bind:config="config"
     v-bind:localConfig="localConfig"
     v-bind:utils="utils">
   </ConfigModal>
   
   <FloatActionButton
+    ref="FloatActionButton"
     v-bind:config="config"
     v-bind:localConfig="localConfig"
     v-bind:utils="utils">
   </FloatActionButton>
+  
 </div>

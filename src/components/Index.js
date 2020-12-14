@@ -26,6 +26,13 @@ let Index = {
     
   },
   watch: {
+    'config.inited' () {
+      if (this.config.inited === false) {
+        return false
+      }
+      
+      this.initKeyBinds()
+    },
     'localConfig' () {
       if (!this.localConfig.displayPanel) {
         this.panelHeight = '0rem'
@@ -35,9 +42,11 @@ let Index = {
 //  async mounted () {
 //    
 //  },
-//  methods: {
-//    
-//  }
+  methods: {
+  }
 }
+
+import IndexKeyBindings from './IndexKeyBindings.js'
+IndexKeyBindings(Index)
 
 export default Index
