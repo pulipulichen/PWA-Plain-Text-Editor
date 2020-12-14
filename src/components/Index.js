@@ -6,6 +6,8 @@ import FloatActionButton from './FloatActionButton/FloatActionButton.vue'
 import FormatPanel from './FormatPanel/FormatPanel.vue'
 import ReplacePanel from './ReplacePanel/ReplacePanel.vue'
 
+import CodeMirrorEditor from './CodeMirrorEditor/CodeMirrorEditor.vue'
+
 let Index = {
   props: ['config', 'localConfig', 'utils'],
   data () {    
@@ -18,10 +20,10 @@ let Index = {
     ConfigModal,
     FloatActionButton,
     FormatPanel,
-    ReplacePanel
+    ReplacePanel,
+    CodeMirrorEditor
   },
   computed: {
-    
   },
   watch: {
     'config.inited' () {
@@ -44,7 +46,7 @@ let Index = {
   }
 }
 
-import IndexKeyBindings from './IndexKeyBindings.js'
-IndexKeyBindings(Index)
+import IndexMethodsKeyBindings from './IndexMethodsKeyBindings.js'
+IndexMethodsKeyBindings(Index)
 
 export default Index

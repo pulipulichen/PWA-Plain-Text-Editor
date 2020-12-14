@@ -148,7 +148,7 @@ module.exports = (env, argv) => {
   // -------------------------------------------------------------------
 
   if (argv.mode === 'production') {
-    webpackConfig.devtool = false
+    //webpackConfig.devtool = false
 
     webpackConfig.module.rules[0] = {
       test: /\.css$/, // 針對所有.css 的檔案作預處理，這邊是用 regular express 的格式
@@ -193,7 +193,7 @@ module.exports = (env, argv) => {
       new UglifyJsPlugin({
         cache: true,
         parallel: true,
-        sourceMap: false // set to true if you want JS source maps
+        sourceMap: true // set to true if you want JS source maps
       })
     ]
     

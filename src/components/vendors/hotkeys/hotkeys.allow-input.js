@@ -5,3 +5,5 @@ hotkeys.filter = function (event) {
   hotkeys.setScope(/^(INPUT|TEXTAREA|SELECT)$/.test(tagName) ? 'input' : 'other');
   return true;
 }
+
+export default hotkeys
