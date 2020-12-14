@@ -7,6 +7,13 @@
   
   border-top: 1px solid #10a3a3;
   padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  
+  position: fixed !important;
+  bottom: 0;
+  width: 100vw;
+  left: 0;
+  
   
   .close-icon {
     float: right;
@@ -35,12 +42,12 @@
   }
   
   .string-to-search-input-container {
-    width: calc(100% - @labelWidth - @closePanelIconWidth - 2rem) !important;
+    width: calc(100% - @labelWidth - @closePanelIconWidth - 2rem - 1px) !important;
   }
   
   .string-to-replace-with-input-container {
     
-    width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem) !important;
+    width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem - 1px) !important;
     
     .string-to-replace-with-input {
       width: calc(100% - @labelWidth - @closePanelIconWidth - 3rem - @ReplaceButtonWidth) !important;
@@ -54,12 +61,12 @@
       }
       
       &.has-undo-button .string-to-replace-with-input {
-        width: calc(100% - @labelWidth - @closePanelIconWidth - 4rem - @UndoButtonWidth - @ReplaceButtonWidth - @ReplaceLineModeSelectWidth) !important;
+        width: calc(100% - @labelWidth - @closePanelIconWidth - 3rem - @UndoButtonWidth - @ReplaceButtonWidth - @ReplaceLineModeSelectWidth) !important;
       }
     }
     
     &.has-undo-button .string-to-replace-with-input {
-      width: calc(100% - @labelWidth - @closePanelIconWidth - 4rem - @UndoButtonWidth - @ReplaceButtonWidth) !important;
+      width: calc(100% - @labelWidth - @closePanelIconWidth - 3rem - @UndoButtonWidth - @ReplaceButtonWidth) !important;
     }
   }
   

@@ -1,43 +1,36 @@
 <div class="replace-panel ui form"
-     v-show="config.displayPanel === 'replace'">
-    <!--
-      <i class="close icon close-icon"
-         v-on:click="config.displayReplacePanel = false"></i>
-    -->
-    
-    <div class="inline field">
-      <label for="stringToSearch">Search</label>
-      
-      <div class="ui action icon input string-to-search-input-container">
-        <div class="ui icon fluid input string-to-search-input">
+     v-show="localConfig.displayPanel === 'replace'">
+  <div class="inline field">
+    <label for="stringToSearch">Search</label>
+
+    <div class="ui action icon input string-to-search-input-container">
+      <div class="ui icon fluid input string-to-search-input">
         <input type="text" 
                placeholder="Search..."
                ref="SearchInput"
                id="stringToSearch"
-               v-model="config.stringToSearch"
+               v-model="localConfig.stringToSearch"
                class="" />
         <i class="link paragraph icon"
-             titl="New line"
-             v-on:click="config.stringToSearch = config.stringToSearch + '\\n'"></i>
-          <i class="link close icon"
-             titl="Clear"
-             v-if="config.stringToSearch"
-             v-on:click="config.stringToSearch = ''"></i>
-        </div>
-        <button type="button" class="ui compact button"
-                v-bind:class="{disabled: !isSearchEnabled}"
-                v-on:click="findPrev">
-          <i class="long arrow alternate left icon"></i>
-        </button>
-        <button type="button" class="ui compact button"
-                v-bind:class="{disabled: !isSearchEnabled}"
-                v-on:click="findNext">
-          <i class="long arrow alternate right icon"></i>
-        </button>
+           titl="New line"
+           v-on:click="localConfig.stringToSearch = localConfig.stringToSearch + '\\n'"></i>
+        <i class="link close icon"
+           titl="Clear"
+           v-if="localConfig.stringToSearch"
+           v-on:click="localConfig.stringToSearch = ''"></i>
       </div>
-        
-      
+      <button type="button" class="ui compact button"
+              v-bind:class="{disabled: !isSearchEnabled}"
+              v-on:click="findPrev">
+        <i class="long arrow alternate left icon"></i>
+      </button>
+      <button type="button" class="ui compact button"
+              v-bind:class="{disabled: !isSearchEnabled}"
+              v-on:click="findNext">
+        <i class="long arrow alternate right icon"></i>
+      </button>
     </div>
+
     
     <!-- =========================================== -->
     
@@ -50,24 +43,24 @@
                  placeholder="Replace with..."
                  id="stringToReplaceWith"
                  ref="ReplaceInput"
-                 v-model="config.stringToReplaceWith" />
+                 v-model="localConfig.stringToReplaceWith" />
           <i class="link paragraph icon"
              titl="New line"
-             v-on:click="config.stringToReplaceWith = config.stringToReplaceWith + '\\n'"></i>
+             v-on:click="localConfig.stringToReplaceWith = localConfig.stringToReplaceWith + '\\n'"></i>
           <i class="link close icon"
              titl="Clear"
-             v-if="config.stringToReplaceWith"
-             v-on:click="config.stringToReplaceWith = ''"></i>
+             v-if="localConfig.stringToReplaceWith"
+             v-on:click="localConfig.stringToReplaceWith = ''"></i>
         </div>
           
         <select class="ui compact selection dropdown replace-mode-select"
-                v-model="config.replaceMode">
+                v-model="localConfig.replaceMode">
           <option selected="" value="regex">Regex</option>
           <option value="raw">Raw</option>
           <option value="line">Line</option>
         </select>
         
-        <select v-model="config.replaceLineOptions.mode"
+        <select v-model="localConfig.replaceLineOptions.mode"
                 class="ui compact selection dropdown replace-line-options-select"
                 v-show="showReplaceLineOptionsSelect">
           <option value="prefix">Prefix</option>
@@ -103,10 +96,10 @@
     
     <!--
     <div class="inline fields"
-         v-show="config.replaceMode === 'line'">
+         v-show="localConfig.replaceMode === 'line'">
       <label for="LineOptions">Line Options</label>
       <div class="inline field">
-          <select v-model="config.replaceLineOptions.mode"
+          <select v-model="localConfig.replaceLineOptions.mode"
                   class="ui compact selection dropdown">
             <option value="prefix">Prefix</option>
             <option value="suffix">Suffix</option>
@@ -142,3 +135,4 @@
     </div>
     -->
   </div>
+</div>

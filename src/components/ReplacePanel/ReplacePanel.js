@@ -1,7 +1,9 @@
-/* global PULI_UTILS */
+/* global PULI_UTILS, CodeMirror */
 
-module.exports = {
+export default {
+  props: ['config', 'localConfig', 'utils'],
   data: function () {
+    this.$i18n.locale = this.config.locale
     return {
       textContentHistory: [],
       replaceLock: false,
@@ -9,20 +11,20 @@ module.exports = {
     }
   },
   watch: {
-    '$parent.config.textContent'() {
+    'localConfig.textContent'() {
       if (this.replaceLock === true) {
         return false
       }
       this.clearHistory()
     },
-    '$parent.config.displayPanel'() {
+    'localConfig.displayPanel'() {
       this.setPanelHeight()
     },
-    '$parent.config.replaceMode'() {
+    'localConfig.replaceMode'() {
       this.setPanelHeight()
     },
-    '$parent.inited'() {
-      if (this.$parent.inited === false) {
+    'config.inited'() {
+      if (this.config.inited === false) {
         return false
       }
       this.setPanelHeight()
@@ -30,7 +32,7 @@ module.exports = {
   },
   computed: {
     showReplaceLineOptionsSelect() {
-      return (this.$parent.config.replaceMode === 'line')
+      return (this.localConfig.replaceMode === 'line')
     },
     computedReplaceInputClassName() {
       return {
@@ -39,12 +41,12 @@ module.exports = {
       }
     },
     isReplaceDisabled() {
-      if (this.config.textContent === '') {
+      if (this.localConfig.textContent === '') {
         return true
       }
 
       if (this.config.replaceMode !== 'line'
-              && this.config.stringToSearch === '') {
+              && this.localConfig.stringToSearch === '') {
         return true
       }
 
@@ -55,22 +57,18 @@ module.exports = {
       return false
     },
 
-    config() {
-      return this.$parent.config
-    },
-
     replaceOccurCount() {
-      if (this.config.textContent === '') {
+      if (this.localConfig.textContent === '') {
         return 0
       }
 
       if (this.config.replaceMode !== 'line'
-              && this.config.stringToSearch === '') {
+              && this.localConfig.stringToSearch === '') {
         return true
       }
 
       let count = 0
-      //let stringToSearch = this.config.stringToSearch
+      //let stringToSearch = this.localConfig.stringToSearch
       if (this.config.replaceMode === 'raw') {
         count = this.countOccurRaw
       } else if (this.config.replaceMode === 'regex') {
@@ -79,7 +77,7 @@ module.exports = {
         count = this.countOccurLine
       }
 
-      //console.log(this.config.textContent, this.config.stringToSearch, count)
+      //console.log(this.localConfig.textContent, this.localConfig.stringToSearch, count)
 
       return count
     },
@@ -89,10 +87,10 @@ module.exports = {
     countOccurRaw() {
       let stringToSearch = this.stringToSearchRaw
 
-      return this.config.textContent.split(stringToSearch).length - 1
+      return this.localConfig.textContent.split(stringToSearch).length - 1
     },
     countOccurRegex() {
-      let search = this.config.stringToSearch
+      let search = this.localConfig.stringToSearch
       if (search === '') {
         return 0
       }
@@ -102,20 +100,20 @@ module.exports = {
       let re
       eval(`re = new RegExp("${search}", "g")`)
       //console.log(re)
-      let count = ((this.config.textContent || '').match(re) || []).length
+      let count = ((this.localConfig.textContent || '').match(re) || []).length
       return count
     },
     textContentTrim() {
-      return this.config.textContent.trim()
+      return this.localConfig.textContent.trim()
     },
     textContentLines() {
-      return this.config.textContent.split('\n')
+      return this.localConfig.textContent.split('\n')
     },
     textContentLinesTrim() {
       return this.textContentLines.map(line => line.trim())
     },
     stringToSearchRaw() {
-      return this.config.stringToSearch.replace(/\\/g, '\\')
+      return this.localConfig.stringToSearch.replace(/\\/g, '\\')
     },
     stringToReplaceWithRaw() {
       return this.config.stringToReplaceWith.replace(/\\/g, '\\')
@@ -129,7 +127,7 @@ module.exports = {
 
       let count = 0
 
-      let mode = this.config.replaceLineOptions.mode
+      let mode = this.localConfig.replaceLineOptions.mode
       if (mode === 'prefix') {
         this.textContentLinesTrim.forEach((line) => {
           if (line.startsWith(stringToSearch)) {
@@ -173,77 +171,10 @@ module.exports = {
       }
       return true
     },
-    isTrimEnabled() {
-      for (let i = 0; i < this.textContentLines.length; i++) {
-        let line = this.textContentLines[i]
-        if (line !== line.trim()) {
-          return true
-        }
-      }
-      return false
-    },
-    isLTrimEnabled() {
-      for (let i = 0; i < this.textContentLines.length; i++) {
-        let line = this.textContentLines[i]
-        let char = line.trim().slice(0, 1)
-        let index = line.indexOf(char)
-        if (index > 0) {
-          return true
-        }
-      }
-      return false
-    },
-    isRTrimEnabled() {
-      for (let i = 0; i < this.textContentLines.length; i++) {
-        let line = this.textContentLines[i]
-        let char = line.trim().slice(-1)
-        let index = line.lastIndexOf(char)
-        if (index < line.length - 1) {
-          return true
-        }
-      }
-      return false
-    },
-    isFormatCodeEnabled() {
-      return (this.isFormatJSONEnabled || this.isFormatXMLEnabled)
-    },
-    isFormatJSONEnabled() {
-      if (this.textContentTrim.startsWith('{')
-              && this.textContentTrim.endsWith('}')) {
-        try {
-          //console.log(this.textContentTrim)
-          //JSON.parse(this.textContentTrim)
-          eval('let test = ' + this.textContentTrim)
-          return true
-        } catch (e) {
-          return false
-        }
-      }
-      return false
-    },
-    isFormatXMLEnabled() {
-      if (this.textContentTrim.startsWith('<')
-              && this.textContentTrim.endsWith('>')) {
-        let rightIndex = this.textContentTrim.indexOf('>')
-        //console.log(rightIndex)
-        if (rightIndex === this.textContentTrim.length - 1) {
-          return false
-        }
-
-        let leftIndex = this.textContentTrim.lastIndexOf('<')
-        //console.log(leftIndex)
-        if (leftIndex === 0) {
-          return false
-        }
-
-        return true
-      }
-      return false
-    },
     stringToSearch() {
       let stringToSearch
-      if (this.config.replaceMode === 'regex') {
-        stringToSearch = this.config.stringToSearch
+      if (this.localConfig.replaceMode === 'regex') {
+        stringToSearch = this.localConfig.stringToSearch
       } else {
         stringToSearch = this.stringToSearchRaw
       }
@@ -254,7 +185,7 @@ module.exports = {
         return false
       }
 
-      return (this.config.textContent.indexOf(this.stringToSearch) > -1)
+      return (this.localConfig.textContent.indexOf(this.stringToSearch) > -1)
     },
 
     // ----------------------------
@@ -300,20 +231,20 @@ module.exports = {
   },
   methods: {
     setPanelHeight() {
-      //console.log('setPanelHeight', this.$parent.config.displayReplacePanel, this.$parent.config.replaceMode)
-      if (this.$parent.config.displayPanel === 'replace') {
-//        if (this.$parent.config.replaceMode === 'line') {
-//          this.$parent.panelHeight = '12rem'
+      //console.log('setPanelHeight', this.localConfig.displayReplacePanel, this.localConfig.replaceMode)
+      if (this.localConfig.displayPanel === 'replace') {
+//        if (this.localConfig.replaceMode === 'line') {
+//          this.config.panelHeight = '12rem'
 //        }
 //        else {
-//          this.$parent.panelHeight = '8rem'
+//          this.config.panelHeight = '8rem'
 //        }
-        this.$parent.panelHeight = '8rem'
+        this.config.panelHeight = '8rem'
       }
-      //console.log(this.$parent.panelHeight)
+      //console.log(this.config.panelHeight)
     },
     focus: async function () {
-      await PULI_UTILS.sleep(0)
+      await this.utils.AsyncUtils.sleep(0)
       this.$refs.SearchInput.focus()
     },
     findPrev() {
@@ -325,7 +256,7 @@ module.exports = {
       return CodeMirror.findNext()
     },
     selectReplaceInput: async function () {
-      await PULI_UTILS.sleep(0)
+      await this.utils.AsyncUtils.sleep(0)
       //console.log('selectReplaceInput', this.$refs.ReplaceInput)
       this.$refs.ReplaceInput.focus()
       this.$refs.ReplaceInput.select()
@@ -337,7 +268,7 @@ module.exports = {
       this.textContentModified = true
     },
     doReplace: async function () {
-      //let stringToSearch = this.config.stringToSearch
+      //let stringToSearch = this.localConfig.stringToSearch
       //let stringToReplaceWith = this.config.stringToReplaceWith
 
       this.replaceLock = true
@@ -349,12 +280,12 @@ module.exports = {
 
       this.saveHistory()
 
-      if (this.config.replaceMode === 'raw') {
+      if (this.localConfig.replaceMode === 'raw') {
         this.doReplaceRaw()
-      } else if (this.config.replaceMode === 'regex') {
+      } else if (this.localConfig.replaceMode === 'regex') {
         this.doReplaceRegex()
-      } else if (this.config.replaceMode === 'line') {
-        let mode = this.config.replaceLineOptions.mode
+      } else if (this.localConfig.replaceMode === 'line') {
+        let mode = this.localConfig.replaceLineOptions.mode
         if (mode === 'prefix') {
           this.doReplaceLinePrefix()
         } else if (mode === 'suffix') {
@@ -366,12 +297,12 @@ module.exports = {
 
       this.textContentModified = false
       
-      await PULI_UTILS.sleep(0)
+      await this.utils.AsyncUtils.sleep(0)
       this.replaceLock = false
     },
     saveHistory() {
       //this.clearHistory()
-      this.textContentHistory.push(this.config.textContent)
+      this.textContentHistory.push(this.localConfig.textContent)
       this.textContentHistoryIndex = this.textContentHistory.length
 
     },
@@ -381,24 +312,24 @@ module.exports = {
 
       console.log(stringToSearch, stringToReplaceWith)
 
-      this.config.textContent = this.config.textContent.split(stringToSearch)
+      this.localConfig.textContent = this.localConfig.textContent.split(stringToSearch)
               .join(stringToReplaceWith)
       
-      console.log(this.config.textContent)
+      console.log(this.localConfig.textContent)
     },
     doReplaceRegex() {
-      let stringToSearch = this.config.stringToSearch
-      let stringToReplaceWith = this.config.stringToReplaceWith
+      let stringToSearch = this.localConfig.stringToSearch
+      let stringToReplaceWith = this.localConfig.stringToReplaceWith
       //console.log(stringToReplaceWith)
       stringToReplaceWith = stringToReplaceWith.split('\\n').join('\n')
       let re = new RegExp(stringToSearch, "g")
 
-      this.config.textContent = this.config.textContent.replace(re, stringToReplaceWith);
+      this.localConfig.textContent = this.localConfig.textContent.replace(re, stringToReplaceWith);
     },
     doReplaceLinePrefix() {
-      this.config.textContent = this.textContentLines.map(line => {
+      this.localConfig.textContent = this.textContentLines.map(line => {
         /*
-         if (this.config.replaceLineOptions.lTrim === true) {
+         if (this.localConfig.replaceLineOptions.lTrim === true) {
          if (line.trim() === '') {
          return ''
          }
@@ -432,7 +363,7 @@ module.exports = {
       }).join('\n')
     },
     doReplaceLineSuffix() {
-      this.config.textContent = this.textContentLines.map(line => {
+      this.localConfig.textContent = this.textContentLines.map(line => {
 
         let lastChar = line.trim().slice(-1)
         //console.log(lastChar)
@@ -449,9 +380,9 @@ module.exports = {
       }).join('\n')
     },
     doReplaceLineIndex() {
-      let mode = this.config.replaceLineOptions.mode
+      let mode = this.localConfig.replaceLineOptions.mode
 
-      this.config.textContent = this.textContentLines.map(line => {
+      this.localConfig.textContent = this.textContentLines.map(line => {
 
         let index
         if (mode === 'first') {
@@ -482,11 +413,11 @@ module.exports = {
       }
 
       if (this.textContentHistoryIndex === this.textContentHistory.length) {
-        this.textContentHistory.push(this.config.textContent)
+        this.textContentHistory.push(this.localConfig.textContent)
       }
 
       this.textContentHistoryIndex--
-      this.config.textContent = this.textContentHistory[this.textContentHistoryIndex]
+      this.localConfig.textContent = this.textContentHistory[this.textContentHistoryIndex]
     },
     redo() {
       //console.log('redo', this.textContentHistoryIndex, this.textContentHistory.length, this.textContentHistory[(this.textContentHistoryIndex + 1)])
@@ -497,12 +428,12 @@ module.exports = {
       }
 
       this.textContentHistoryIndex++
-      this.config.textContent = this.textContentHistory[this.textContentHistoryIndex]
+      this.localConfig.textContent = this.textContentHistory[this.textContentHistoryIndex]
     },
     /*
     clearTextContentConfirm() {
       if (window.confirm('Are you sure?')) {
-        this.config.textContent = ''
+        this.localConfig.textContent = ''
         this.clearHistory()
       }
     },
@@ -510,12 +441,12 @@ module.exports = {
     trimTextContent() {
       this.saveHistory()
 
-      this.config.textContent = this.textContentLines.map(line => line.trim()).join('\n')
+      this.localConfig.textContent = this.textContentLines.map(line => line.trim()).join('\n')
     },
     ltrimTextContent() {
       this.saveHistory()
 
-      this.config.textContent = this.textContentLines.map(line => {
+      this.localConfig.textContent = this.textContentLines.map(line => {
         let char = line.trim().slice(0, 1)
         let index = line.indexOf(char)
         if (index === 0) {
@@ -528,7 +459,7 @@ module.exports = {
     rtrimTextContent() {
       this.saveHistory()
 
-      this.config.textContent = this.textContentLines.map(line => {
+      this.localConfig.textContent = this.textContentLines.map(line => {
         let char = line.trim().slice(-1)
         let index = line.lastIndexOf(char)
         if (index === line.length - 1) {
@@ -556,7 +487,7 @@ module.exports = {
      //let object = JSON.parse(this.textContentTrim)
      let object
      eval('object = ' + this.textContentTrim)
-     this.config.textContent = JSON.stringify(object, null, 2)
+     this.localConfig.textContent = JSON.stringify(object, null, 2)
      }
      catch (e) {
      return false
@@ -567,7 +498,7 @@ module.exports = {
      formatXMLTextContent () {
      this.saveHistory()
      
-     this.config.textContent = this.prettifyXml(this.textContentTrim)
+     this.localConfig.textContent = this.prettifyXml(this.textContentTrim)
      },
      prettifyXml (sourceXml) {
      var xmlDoc = new DOMParser().parseFromString(sourceXml, 'application/xml');
@@ -595,9 +526,9 @@ module.exports = {
     doSearchNext() {
       let stringToSearch = this.stringToSearch
 
-      let startPos = this.config.textContent.indexOf(stringToSearch, this.searchPostion)
+      let startPos = this.localConfig.textContent.indexOf(stringToSearch, this.searchPostion)
       if (startPos === -1) {
-        startPos = this.config.textContent.indexOf(stringToSearch)
+        startPos = this.localConfig.textContent.indexOf(stringToSearch)
 
         if (startPos === -1) {
           return false
@@ -616,7 +547,7 @@ module.exports = {
         tarea.blur();
         tarea.focus();
         tarea.selectionStart = startPos;
-        tarea.selectionEnd = startPos + this.config.stringToSearch.length;
+        tarea.selectionEnd = startPos + this.localConfig.stringToSearch.length;
 
         return true;
       }
@@ -640,12 +571,12 @@ module.exports = {
 
       let startPos
       if (this.searchPostion - this.stringToSearch.length - 1 < 0) {
-        startPos = this.config.textContent.lastIndexOf(stringToSearch)
+        startPos = this.localConfig.textContent.lastIndexOf(stringToSearch)
       } else {
-        startPos = this.config.textContent.lastIndexOf(stringToSearch, this.searchPostion - this.stringToSearch.length - 1)
+        startPos = this.localConfig.textContent.lastIndexOf(stringToSearch, this.searchPostion - this.stringToSearch.length - 1)
       }
       if (startPos === -1) {
-        startPos = this.config.textContent.lastIndexOf(stringToSearch)
+        startPos = this.localConfig.textContent.lastIndexOf(stringToSearch)
 
         if (startPos === -1) {
           //console.log('not found')
@@ -667,7 +598,7 @@ module.exports = {
         tarea.blur();
         tarea.focus();
         tarea.selectionStart = startPos;
-        tarea.selectionEnd = startPos + this.config.stringToSearch.length;
+        tarea.selectionEnd = startPos + this.localConfig.stringToSearch.length;
 
 
         // collapse selection here

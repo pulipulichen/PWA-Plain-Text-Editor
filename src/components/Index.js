@@ -4,6 +4,7 @@ import ConfigModal from './ConfigModal/ConfigModal.vue'
 import FloatActionButton from './FloatActionButton/FloatActionButton.vue'
 
 import FormatPanel from './FormatPanel/FormatPanel.vue'
+import ReplacePanel from './ReplacePanel/ReplacePanel.vue'
 
 let Index = {
   props: ['config', 'localConfig', 'utils'],
@@ -16,7 +17,8 @@ let Index = {
   components: {
     ConfigModal,
     FloatActionButton,
-    FormatPanel
+    FormatPanel,
+    ReplacePanel
   },
   computed: {
     

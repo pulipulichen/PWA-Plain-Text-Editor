@@ -265,6 +265,22 @@ module.exports = function (Component) {
 
 /***/ }),
 
+/***/ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ReplacePanel/ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CReplacePanel%5CReplacePanel.vue&lang=yaml":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@kazupon/vue-i18n-loader/lib!./src/components/ReplacePanel/ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CReplacePanel%5CReplacePanel.vue&lang=yaml ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function (Component) {
+  Component.options.__i18n = Component.options.__i18n || []
+  Component.options.__i18n.push('{"en":{"TEST_MESSAGE":"Test Message"},"zh-TW":{"TEST_MESSAGE":"測試訊息"}}')
+  delete Component.options._Ctor
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/less-loader/dist/cjs.js?!./src/styles/global.less":
 /*!*********************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/less-loader/dist/cjs.js??ref--1-2!./src/styles/global.less ***!
@@ -348,7 +364,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, ".format-panel[data-v-2e97b5eb] {\n  position: fixed !important;\n  width: 100vw;\n  bottom: 0;\n}\n.format-panel .calc-button[data-v-2e97b5eb] {\n  width: 8rem;\n  max-width: 8rem;\n  padding-left: 0.5rem !important;\n  padding-right: 0.5rem !important;\n}\n.format-panel .calc-button span[data-v-2e97b5eb] {\n  width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  display: inline-block !important;\n}\n", "",{"version":3,"sources":["FormatPanel.less"],"names":[],"mappings":"AAAA;EACE,0BAA0B;EAC1B,YAAY;EACZ,SAAS;AACX;AACA;EACE,WAAW;EACX,eAAe;EACf,+BAA+B;EAC/B,gCAAgC;AAClC;AACA;EACE,WAAW;EACX,gBAAgB;EAChB,uBAAuB;EACvB,mBAAmB;EACnB,gCAAgC;AAClC","file":"FormatPanel.less","sourcesContent":[".format-panel[data-v-2e97b5eb] {\n  position: fixed !important;\n  width: 100vw;\n  bottom: 0;\n}\n.format-panel .calc-button[data-v-2e97b5eb] {\n  width: 8rem;\n  max-width: 8rem;\n  padding-left: 0.5rem !important;\n  padding-right: 0.5rem !important;\n}\n.format-panel .calc-button span[data-v-2e97b5eb] {\n  width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  display: inline-block !important;\n}\n"]}]);
+exports.push([module.i, ".format-panel[data-v-2e97b5eb] {\n  position: fixed !important;\n  width: 100vw;\n  bottom: 0;\n  left: 0;\n  border-top: 1px solid #10a3a3;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n}\n.format-panel .calc-button[data-v-2e97b5eb] {\n  width: 8rem;\n  max-width: 8rem;\n  padding-left: 0.5rem !important;\n  padding-right: 0.5rem !important;\n}\n.format-panel .calc-button span[data-v-2e97b5eb] {\n  width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  display: inline-block !important;\n}\n", "",{"version":3,"sources":["FormatPanel.less"],"names":[],"mappings":"AAAA;EACE,0BAA0B;EAC1B,YAAY;EACZ,SAAS;EACT,OAAO;EACP,6BAA6B;EAC7B,mBAAmB;EACnB,sBAAsB;AACxB;AACA;EACE,WAAW;EACX,eAAe;EACf,+BAA+B;EAC/B,gCAAgC;AAClC;AACA;EACE,WAAW;EACX,gBAAgB;EAChB,uBAAuB;EACvB,mBAAmB;EACnB,gCAAgC;AAClC","file":"FormatPanel.less","sourcesContent":[".format-panel[data-v-2e97b5eb] {\n  position: fixed !important;\n  width: 100vw;\n  bottom: 0;\n  left: 0;\n  border-top: 1px solid #10a3a3;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n}\n.format-panel .calc-button[data-v-2e97b5eb] {\n  width: 8rem;\n  max-width: 8rem;\n  padding-left: 0.5rem !important;\n  padding-right: 0.5rem !important;\n}\n.format-panel .calc-button span[data-v-2e97b5eb] {\n  width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  display: inline-block !important;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -366,7 +382,25 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, ".Index[data-v-82b7485c] {\n  background-color: #e1f7f7;\n  height: 100vh;\n  border: 1px solid #ccc;\n}\n", "",{"version":3,"sources":["Index.less"],"names":[],"mappings":"AAAA;EACE,yBAAyB;EACzB,aAAa;EACb,sBAAsB;AACxB","file":"Index.less","sourcesContent":[".Index[data-v-82b7485c] {\n  background-color: #e1f7f7;\n  height: 100vh;\n  border: 1px solid #ccc;\n}\n"]}]);
+exports.push([module.i, ".Index[data-v-82b7485c] {\n  height: 100vh;\n  border: 1px solid #ccc;\n}\n", "",{"version":3,"sources":["Index.less"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;AACxB","file":"Index.less","sourcesContent":[".Index[data-v-82b7485c] {\n  height: 100vh;\n  border: 1px solid #ccc;\n}\n"]}]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/ReplacePanel/ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--1-2!./src/components/ReplacePanel/ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(true);
+// Module
+exports.push([module.i, ".replace-panel[data-v-8d37a762] {\n  border-top: 1px solid #10a3a3;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n}\n.replace-panel .close-icon[data-v-8d37a762] {\n  float: right;\n  cursor: pointer;\n}\n.replace-panel .field[data-v-8d37a762] {\n  clear: none !important;\n}\n.replace-panel label[data-v-8d37a762] {\n  width: 6rem !important;\n  display: inline-block;\n  text-align: right;\n  user-select: none;\n  cursor: pointer !important;\n}\n.replace-panel .string-to-search-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 1rem) !important;\n}\n.replace-panel .string-to-search-input-container[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 2rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 1rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select.has-undo-button .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 2.5rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-undo-button .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 2.5rem - 9rem) !important;\n}\n.replace-panel select[data-v-8d37a762] {\n  width: 8rem;\n  padding-top: 0 !important;\n  padding-bottom: 0 !important;\n  white-space: nowrap !important;\n}\n.replace-panel .ui.icon.input input[data-v-8d37a762] {\n  padding-right: 4.5rem !important;\n}\n.replace-panel .ui.icon.input i.icon[data-v-8d37a762] {\n  cursor: pointer;\n}\n.replace-panel .ui.icon.input i.icon[data-v-8d37a762]:not(:first-of-type) {\n  right: 2em !important;\n}\n.replace-panel .checkbox label[data-v-8d37a762] {\n  width: auto !important;\n}\n.replace-panel .replace-mode-select[data-v-8d37a762] {\n  width: 8rem !important;\n}\n.replace-panel .replace-line-options-select[data-v-8d37a762] {\n  width: 8rem !important;\n}\n.replace-panel .replace-count-button[data-v-8d37a762] {\n  width: 9rem;\n  max-width: 9rem;\n  overflow-x: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  display: inline-block !important;\n  padding-left: 0.5rem !important;\n  padding-right: 0.5rem !important;\n}\n", "",{"version":3,"sources":["ReplacePanel.less"],"names":[],"mappings":"AAAA;EACE,6BAA6B;EAC7B,mBAAmB;EACnB,sBAAsB;EACtB,0BAA0B;EAC1B,SAAS;EACT,YAAY;EACZ,OAAO;AACT;AACA;EACE,YAAY;EACZ,eAAe;AACjB;AACA;EACE,sBAAsB;AACxB;AACA;EACE,sBAAsB;EACtB,qBAAqB;EACrB,iBAAiB;EACjB,iBAAiB;EACjB,0BAA0B;AAC5B;AACA;EACE,iDAAiD;AACnD;AACA;EACE,uDAAuD;AACzD;AACA;EACE,uDAAuD;AACzD;AACA;EACE,wDAAwD;AAC1D;AACA;EACE,+DAA+D;AACjE;AACA;EACE,wEAAwE;AAC1E;AACA;EACE,iEAAiE;AACnE;AACA;EACE,WAAW;EACX,yBAAyB;EACzB,4BAA4B;EAC5B,8BAA8B;AAChC;AACA;EACE,gCAAgC;AAClC;AACA;EACE,eAAe;AACjB;AACA;EACE,qBAAqB;AACvB;AACA;EACE,sBAAsB;AACxB;AACA;EACE,sBAAsB;AACxB;AACA;EACE,sBAAsB;AACxB;AACA;EACE,WAAW;EACX,eAAe;EACf,kBAAkB;EAClB,uBAAuB;EACvB,mBAAmB;EACnB,gCAAgC;EAChC,+BAA+B;EAC/B,gCAAgC;AAClC","file":"ReplacePanel.less","sourcesContent":[".replace-panel[data-v-8d37a762] {\n  border-top: 1px solid #10a3a3;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n}\n.replace-panel .close-icon[data-v-8d37a762] {\n  float: right;\n  cursor: pointer;\n}\n.replace-panel .field[data-v-8d37a762] {\n  clear: none !important;\n}\n.replace-panel label[data-v-8d37a762] {\n  width: 6rem !important;\n  display: inline-block;\n  text-align: right;\n  user-select: none;\n  cursor: pointer !important;\n}\n.replace-panel .string-to-search-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 1rem) !important;\n}\n.replace-panel .string-to-search-input-container[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 2rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 1rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select.has-undo-button .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 2.5rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-undo-button .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 2.5rem - 9rem) !important;\n}\n.replace-panel select[data-v-8d37a762] {\n  width: 8rem;\n  padding-top: 0 !important;\n  padding-bottom: 0 !important;\n  white-space: nowrap !important;\n}\n.replace-panel .ui.icon.input input[data-v-8d37a762] {\n  padding-right: 4.5rem !important;\n}\n.replace-panel .ui.icon.input i.icon[data-v-8d37a762] {\n  cursor: pointer;\n}\n.replace-panel .ui.icon.input i.icon[data-v-8d37a762]:not(:first-of-type) {\n  right: 2em !important;\n}\n.replace-panel .checkbox label[data-v-8d37a762] {\n  width: auto !important;\n}\n.replace-panel .replace-mode-select[data-v-8d37a762] {\n  width: 8rem !important;\n}\n.replace-panel .replace-line-options-select[data-v-8d37a762] {\n  width: 8rem !important;\n}\n.replace-panel .replace-count-button[data-v-8d37a762] {\n  width: 9rem;\n  max-width: 9rem;\n  overflow-x: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  display: inline-block !important;\n  padding-left: 0.5rem !important;\n  padding-right: 0.5rem !important;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -14420,6 +14454,15 @@ var render = function() {
         }
       }),
       _vm._v(" "),
+      _c("ReplacePanel", {
+        ref: "ReplacePanel",
+        attrs: {
+          config: _vm.config,
+          localConfig: _vm.localConfig,
+          utils: _vm.utils
+        }
+      }),
+      _vm._v(" "),
       _c("ConfigModal", {
         ref: "ConfigModal",
         attrs: {
@@ -14439,6 +14482,340 @@ var render = function() {
       })
     ],
     1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./src/components/ReplacePanel/ReplacePanel.html?vue&type=template&id=8d37a762&scoped=true&":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./src/components/ReplacePanel/ReplacePanel.html?vue&type=template&id=8d37a762&scoped=true& ***!
+  \******************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      directives: [
+        {
+          name: "show",
+          rawName: "v-show",
+          value: _vm.localConfig.displayPanel === "replace",
+          expression: "localConfig.displayPanel === 'replace'"
+        }
+      ],
+      staticClass: "replace-panel ui form"
+    },
+    [
+      _c("div", { staticClass: "inline field" }, [
+        _c("label", { attrs: { for: "stringToSearch" } }, [_vm._v("Search")]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "ui action icon input string-to-search-input-container"
+          },
+          [
+            _c(
+              "div",
+              { staticClass: "ui icon fluid input string-to-search-input" },
+              [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.localConfig.stringToSearch,
+                      expression: "localConfig.stringToSearch"
+                    }
+                  ],
+                  ref: "SearchInput",
+                  attrs: {
+                    type: "text",
+                    placeholder: "Search...",
+                    id: "stringToSearch"
+                  },
+                  domProps: { value: _vm.localConfig.stringToSearch },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.localConfig,
+                        "stringToSearch",
+                        $event.target.value
+                      )
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("i", {
+                  staticClass: "link paragraph icon",
+                  attrs: { titl: "New line" },
+                  on: {
+                    click: function($event) {
+                      _vm.localConfig.stringToSearch =
+                        _vm.localConfig.stringToSearch + "\\n"
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _vm.localConfig.stringToSearch
+                  ? _c("i", {
+                      staticClass: "link close icon",
+                      attrs: { titl: "Clear" },
+                      on: {
+                        click: function($event) {
+                          _vm.localConfig.stringToSearch = ""
+                        }
+                      }
+                    })
+                  : _vm._e()
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "ui compact button",
+                class: { disabled: !_vm.isSearchEnabled },
+                attrs: { type: "button" },
+                on: { click: _vm.findPrev }
+              },
+              [_c("i", { staticClass: "long arrow alternate left icon" })]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "ui compact button",
+                class: { disabled: !_vm.isSearchEnabled },
+                attrs: { type: "button" },
+                on: { click: _vm.findNext }
+              },
+              [_c("i", { staticClass: "long arrow alternate right icon" })]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "inline field" }, [
+          _c("label", { attrs: { for: "stringToReplaceWith" } }, [
+            _vm._v("Replace with")
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "ui action icon input string-to-replace-with-input-container",
+              class: _vm.computedReplaceInputClassName
+            },
+            [
+              _c(
+                "div",
+                { staticClass: "ui icon input string-to-replace-with-input" },
+                [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.localConfig.stringToReplaceWith,
+                        expression: "localConfig.stringToReplaceWith"
+                      }
+                    ],
+                    ref: "ReplaceInput",
+                    attrs: {
+                      type: "text",
+                      placeholder: "Replace with...",
+                      id: "stringToReplaceWith"
+                    },
+                    domProps: { value: _vm.localConfig.stringToReplaceWith },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(
+                          _vm.localConfig,
+                          "stringToReplaceWith",
+                          $event.target.value
+                        )
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "link paragraph icon",
+                    attrs: { titl: "New line" },
+                    on: {
+                      click: function($event) {
+                        _vm.localConfig.stringToReplaceWith =
+                          _vm.localConfig.stringToReplaceWith + "\\n"
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.localConfig.stringToReplaceWith
+                    ? _c("i", {
+                        staticClass: "link close icon",
+                        attrs: { titl: "Clear" },
+                        on: {
+                          click: function($event) {
+                            _vm.localConfig.stringToReplaceWith = ""
+                          }
+                        }
+                      })
+                    : _vm._e()
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.localConfig.replaceMode,
+                      expression: "localConfig.replaceMode"
+                    }
+                  ],
+                  staticClass:
+                    "ui compact selection dropdown replace-mode-select",
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.localConfig,
+                        "replaceMode",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                [
+                  _c("option", { attrs: { selected: "", value: "regex" } }, [
+                    _vm._v("Regex")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "raw" } }, [_vm._v("Raw")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "line" } }, [_vm._v("Line")])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.localConfig.replaceLineOptions.mode,
+                      expression: "localConfig.replaceLineOptions.mode"
+                    },
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.showReplaceLineOptionsSelect,
+                      expression: "showReplaceLineOptionsSelect"
+                    }
+                  ],
+                  staticClass:
+                    "ui compact selection dropdown replace-line-options-select",
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.localConfig.replaceLineOptions,
+                        "mode",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                [
+                  _c("option", { attrs: { value: "prefix" } }, [
+                    _vm._v("Prefix")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "suffix" } }, [
+                    _vm._v("Suffix")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "first" } }, [
+                    _vm._v("First")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "last" } }, [_vm._v("Last")])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "ui button replace-count-button",
+                  class: {
+                    disabled: _vm.isReplaceDisabled,
+                    positive: !_vm.isReplaceDisabled
+                  },
+                  attrs: { title: _vm.computedReplaceButtonTitle },
+                  on: { click: _vm.doReplace }
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.computedReplaceButtonText) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              !_vm.isUndoDisabled
+                ? _c(
+                    "div",
+                    { staticClass: "ui mini button", on: { click: _vm.undo } },
+                    [_c("i", { staticClass: "undo icon" })]
+                  )
+                : _vm._e()
+            ]
+          )
+        ])
+      ])
+    ]
   )
 }
 var staticRenderFns = []
@@ -14660,6 +15037,27 @@ if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = __webpack_require__(/*! ../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
 var update = add("78bdafb3", content, false, {});
+// Hot Module Replacement
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/ReplacePanel/ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--1-2!./src/components/ReplacePanel/ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/less-loader/dist/cjs.js??ref--1-2!./ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true& */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/ReplacePanel/ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true&");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! ../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("b313e334", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -27475,7 +27873,74 @@ ${textContent}
         result = result.slice(0, lengthLimit)
       }
       return result
-    }
+    },
+    isTrimEnabled() {
+      for (let i = 0; i < this.textContentLines.length; i++) {
+        let line = this.textContentLines[i]
+        if (line !== line.trim()) {
+          return true
+        }
+      }
+      return false
+    },
+    isLTrimEnabled() {
+      for (let i = 0; i < this.textContentLines.length; i++) {
+        let line = this.textContentLines[i]
+        let char = line.trim().slice(0, 1)
+        let index = line.indexOf(char)
+        if (index > 0) {
+          return true
+        }
+      }
+      return false
+    },
+    isRTrimEnabled() {
+      for (let i = 0; i < this.textContentLines.length; i++) {
+        let line = this.textContentLines[i]
+        let char = line.trim().slice(-1)
+        let index = line.lastIndexOf(char)
+        if (index < line.length - 1) {
+          return true
+        }
+      }
+      return false
+    },
+    isFormatCodeEnabled() {
+      return (this.isFormatJSONEnabled || this.isFormatXMLEnabled)
+    },
+    isFormatJSONEnabled() {
+      if (this.textContentTrim.startsWith('{')
+              && this.textContentTrim.endsWith('}')) {
+        try {
+          //console.log(this.textContentTrim)
+          //JSON.parse(this.textContentTrim)
+          eval('let test = ' + this.textContentTrim)
+          return true
+        } catch (e) {
+          return false
+        }
+      }
+      return false
+    },
+    isFormatXMLEnabled() {
+      if (this.textContentTrim.startsWith('<')
+              && this.textContentTrim.endsWith('>')) {
+        let rightIndex = this.textContentTrim.indexOf('>')
+        //console.log(rightIndex)
+        if (rightIndex === this.textContentTrim.length - 1) {
+          return false
+        }
+
+        let leftIndex = this.textContentTrim.lastIndexOf('<')
+        //console.log(leftIndex)
+        if (leftIndex === 0) {
+          return false
+        }
+
+        return true
+      }
+      return false
+    },
   },
   mounted() {
     this.setPanelHeight()
@@ -27601,9 +28066,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ConfigModal_ConfigModal_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ConfigModal/ConfigModal.vue */ "./src/components/ConfigModal/ConfigModal.vue");
 /* harmony import */ var _FloatActionButton_FloatActionButton_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FloatActionButton/FloatActionButton.vue */ "./src/components/FloatActionButton/FloatActionButton.vue");
 /* harmony import */ var _FormatPanel_FormatPanel_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FormatPanel/FormatPanel.vue */ "./src/components/FormatPanel/FormatPanel.vue");
-/* harmony import */ var _IndexKeyBindings_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./IndexKeyBindings.js */ "./src/components/IndexKeyBindings.js");
+/* harmony import */ var _ReplacePanel_ReplacePanel_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ReplacePanel/ReplacePanel.vue */ "./src/components/ReplacePanel/ReplacePanel.vue");
+/* harmony import */ var _IndexKeyBindings_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./IndexKeyBindings.js */ "./src/components/IndexKeyBindings.js");
 /* global Node */
 //import $ from 'jquery'
+
 
 
 
@@ -27620,7 +28087,8 @@ let Index = {
   components: {
     ConfigModal: _ConfigModal_ConfigModal_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     FloatActionButton: _FloatActionButton_FloatActionButton_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    FormatPanel: _FormatPanel_FormatPanel_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+    FormatPanel: _FormatPanel_FormatPanel_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    ReplacePanel: _ReplacePanel_ReplacePanel_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
   },
   computed: {
     
@@ -27647,7 +28115,7 @@ let Index = {
 }
 
 
-Object(_IndexKeyBindings_js__WEBPACK_IMPORTED_MODULE_3__["default"])(Index)
+Object(_IndexKeyBindings_js__WEBPACK_IMPORTED_MODULE_4__["default"])(Index)
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
@@ -27779,6 +28247,753 @@ __webpack_require__.r(__webpack_exports__);
     })
   }
 });
+
+/***/ }),
+
+/***/ "./src/components/ReplacePanel/ReplacePanel.html?vue&type=template&id=8d37a762&scoped=true&":
+/*!**************************************************************************************************!*\
+  !*** ./src/components/ReplacePanel/ReplacePanel.html?vue&type=template&id=8d37a762&scoped=true& ***!
+  \**************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_ReplacePanel_html_vue_type_template_id_8d37a762_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./ReplacePanel.html?vue&type=template&id=8d37a762&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./src/components/ReplacePanel/ReplacePanel.html?vue&type=template&id=8d37a762&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_ReplacePanel_html_vue_type_template_id_8d37a762_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_ReplacePanel_html_vue_type_template_id_8d37a762_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./src/components/ReplacePanel/ReplacePanel.js?vue&type=script&lang=js&?5a53":
+/*!******************************************************************************!*\
+  !*** ./src/components/ReplacePanel/ReplacePanel.js?vue&type=script&lang=js& ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ReplacePanel_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./ReplacePanel.js?vue&type=script&lang=js& */ "./src/components/ReplacePanel/ReplacePanel.js?vue&type=script&lang=js&?ad93");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_ReplacePanel_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./src/components/ReplacePanel/ReplacePanel.js?vue&type=script&lang=js&?ad93":
+/*!******************************************************************************!*\
+  !*** ./src/components/ReplacePanel/ReplacePanel.js?vue&type=script&lang=js& ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* global PULI_UTILS, CodeMirror */
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['config', 'localConfig', 'utils'],
+  data: function () {
+    this.$i18n.locale = this.config.locale
+    return {
+      textContentHistory: [],
+      replaceLock: false,
+      textContentModified: false
+    }
+  },
+  watch: {
+    'localConfig.textContent'() {
+      if (this.replaceLock === true) {
+        return false
+      }
+      this.clearHistory()
+    },
+    'localConfig.displayPanel'() {
+      this.setPanelHeight()
+    },
+    'localConfig.replaceMode'() {
+      this.setPanelHeight()
+    },
+    'config.inited'() {
+      if (this.config.inited === false) {
+        return false
+      }
+      this.setPanelHeight()
+    }
+  },
+  computed: {
+    showReplaceLineOptionsSelect() {
+      return (this.localConfig.replaceMode === 'line')
+    },
+    computedReplaceInputClassName() {
+      return {
+        'has-replace-line-options-select': this.showReplaceLineOptionsSelect,
+        'has-undo-button': !this.isUndoDisabled,
+      }
+    },
+    isReplaceDisabled() {
+      if (this.localConfig.textContent === '') {
+        return true
+      }
+
+      if (this.config.replaceMode !== 'line'
+              && this.localConfig.stringToSearch === '') {
+        return true
+      }
+
+      if (this.replaceOccurCount === 0) {
+        return true
+      }
+
+      return false
+    },
+
+    replaceOccurCount() {
+      if (this.localConfig.textContent === '') {
+        return 0
+      }
+
+      if (this.config.replaceMode !== 'line'
+              && this.localConfig.stringToSearch === '') {
+        return true
+      }
+
+      let count = 0
+      //let stringToSearch = this.localConfig.stringToSearch
+      if (this.config.replaceMode === 'raw') {
+        count = this.countOccurRaw
+      } else if (this.config.replaceMode === 'regex') {
+        count = this.countOccurRegex
+      } else if (this.config.replaceMode === 'line') {
+        count = this.countOccurLine
+      }
+
+      //console.log(this.localConfig.textContent, this.localConfig.stringToSearch, count)
+
+      return count
+    },
+
+    // ----------------------------
+
+    countOccurRaw() {
+      let stringToSearch = this.stringToSearchRaw
+
+      return this.localConfig.textContent.split(stringToSearch).length - 1
+    },
+    countOccurRegex() {
+      let search = this.localConfig.stringToSearch
+      if (search === '') {
+        return 0
+      }
+      //return 0
+      //console.log(`'${search}'`)
+      //replace = replace.split('\\').join('\\\\')
+      let re
+      eval(`re = new RegExp("${search}", "g")`)
+      //console.log(re)
+      let count = ((this.localConfig.textContent || '').match(re) || []).length
+      return count
+    },
+    textContentTrim() {
+      return this.localConfig.textContent.trim()
+    },
+    textContentLines() {
+      return this.localConfig.textContent.split('\n')
+    },
+    textContentLinesTrim() {
+      return this.textContentLines.map(line => line.trim())
+    },
+    stringToSearchRaw() {
+      return this.localConfig.stringToSearch.replace(/\\/g, '\\')
+    },
+    stringToReplaceWithRaw() {
+      return this.config.stringToReplaceWith.replace(/\\/g, '\\')
+    },
+    countOccurLine() {
+      let stringToSearch = this.stringToSearchRaw
+      //console.log(stringToSearch)
+      if (stringToSearch === '') {
+        return this.textContentLinesTrim.length
+      }
+
+      let count = 0
+
+      let mode = this.localConfig.replaceLineOptions.mode
+      if (mode === 'prefix') {
+        this.textContentLinesTrim.forEach((line) => {
+          if (line.startsWith(stringToSearch)) {
+            count++
+          }
+        })
+      } else if (mode === 'suffix') {
+        this.textContentLinesTrim.forEach((line) => {
+          if (line.endsWith(stringToSearch)) {
+            count++
+          }
+        })
+      } else {
+        this.textContentLinesTrim.forEach((line) => {
+          if (line.indexOf(stringToSearch) > -1) {
+            count++
+          }
+        })
+      }
+      //console.log(count)
+      return count
+    },
+
+    // ----------------------------
+
+    isUndoDisabled() {
+      if (this.textContentHistory.length === 0) {
+        return true
+      }
+      if (this.textContentHistoryIndex > 0) {
+        return false
+      }
+      return true
+    },
+    isRedoDisabled() {
+      if (this.textContentHistory.length === 0) {
+        return true
+      }
+      if (this.textContentHistoryIndex < this.textContentHistory.length - 1) {
+        return false
+      }
+      return true
+    },
+    stringToSearch() {
+      let stringToSearch
+      if (this.localConfig.replaceMode === 'regex') {
+        stringToSearch = this.localConfig.stringToSearch
+      } else {
+        stringToSearch = this.stringToSearchRaw
+      }
+      return stringToSearch
+    },
+    isSearchEnabled() {
+      if (this.stringToSearch === '') {
+        return false
+      }
+
+      return (this.localConfig.textContent.indexOf(this.stringToSearch) > -1)
+    },
+
+    // ----------------------------
+
+    computedReplaceButtonText() {
+      if (this.isReplaceDisabled === true) {
+        return 'Replace'
+      }
+      
+      let replaceOccurCount = this.replaceOccurCount
+      //replaceOccurCount = 121043
+      
+      let countLength = (replaceOccurCount + '').length
+      //console.log(countLength)
+      if (countLength <= 6) {
+        return `Replace (${replaceOccurCount})`
+      }
+      else if (countLength <= 8) {
+        let countK = Math.round(replaceOccurCount / 1000)
+        return `Replace (${countK}K)`
+      }
+      else if (countLength <= 10) {
+        let countK = Math.round(replaceOccurCount / 1000000)
+        return `Replace (${countK}M)`
+      }
+      else if (countLength <= 13) {
+        let countK = Math.round(replaceOccurCount / 1000000000)
+        return `Replace (${countK}B)`
+      }
+      else {
+        return 'Replace (...)'
+      }
+    },
+    computedReplaceButtonTitle() {
+      if (this.isReplaceDisabled === true) {
+        return 'Replace'
+      }
+      return `Replace (${this.replaceOccurCount})`
+    },
+  },
+  mounted() {
+    this.setPanelHeight()
+  },
+  methods: {
+    setPanelHeight() {
+      //console.log('setPanelHeight', this.localConfig.displayReplacePanel, this.localConfig.replaceMode)
+      if (this.localConfig.displayPanel === 'replace') {
+//        if (this.localConfig.replaceMode === 'line') {
+//          this.config.panelHeight = '12rem'
+//        }
+//        else {
+//          this.config.panelHeight = '8rem'
+//        }
+        this.config.panelHeight = '8rem'
+      }
+      //console.log(this.config.panelHeight)
+    },
+    focus: async function () {
+      await this.utils.AsyncUtils.sleep(0)
+      this.$refs.SearchInput.focus()
+    },
+    findPrev() {
+      let CodeMirror = this.$parent.$refs.CodeMirror
+      return CodeMirror.findPrev()
+    },
+    findNext() {
+      let CodeMirror = this.$parent.$refs.CodeMirror
+      return CodeMirror.findNext()
+    },
+    selectReplaceInput: async function () {
+      await this.utils.AsyncUtils.sleep(0)
+      //console.log('selectReplaceInput', this.$refs.ReplaceInput)
+      this.$refs.ReplaceInput.focus()
+      this.$refs.ReplaceInput.select()
+    },
+    clearHistory() {
+      //console.log('clearHistory')
+      this.textContentHistory = []
+      this.textContentHistoryIndex = -1
+      this.textContentModified = true
+    },
+    doReplace: async function () {
+      //let stringToSearch = this.localConfig.stringToSearch
+      //let stringToReplaceWith = this.config.stringToReplaceWith
+
+      this.replaceLock = true
+
+      if (this.textContentHistoryIndex > -1
+              && this.textContentHistoryIndex !== this.textContentHistory.length - 1) {
+        this.textContentHistory = this.textContentHistory.slice(0, this.textContentHistoryIndex)
+      }
+
+      this.saveHistory()
+
+      if (this.localConfig.replaceMode === 'raw') {
+        this.doReplaceRaw()
+      } else if (this.localConfig.replaceMode === 'regex') {
+        this.doReplaceRegex()
+      } else if (this.localConfig.replaceMode === 'line') {
+        let mode = this.localConfig.replaceLineOptions.mode
+        if (mode === 'prefix') {
+          this.doReplaceLinePrefix()
+        } else if (mode === 'suffix') {
+          this.doReplaceLineSuffix()
+        } else if (mode === 'first' || mode === 'last') {
+          this.doReplaceLineIndex()
+        }
+      }
+
+      this.textContentModified = false
+      
+      await this.utils.AsyncUtils.sleep(0)
+      this.replaceLock = false
+    },
+    saveHistory() {
+      //this.clearHistory()
+      this.textContentHistory.push(this.localConfig.textContent)
+      this.textContentHistoryIndex = this.textContentHistory.length
+
+    },
+    doReplaceRaw() {
+      let stringToSearch = this.stringToSearchRaw
+      let stringToReplaceWith = this.stringToReplaceWithRaw
+
+      console.log(stringToSearch, stringToReplaceWith)
+
+      this.localConfig.textContent = this.localConfig.textContent.split(stringToSearch)
+              .join(stringToReplaceWith)
+      
+      console.log(this.localConfig.textContent)
+    },
+    doReplaceRegex() {
+      let stringToSearch = this.localConfig.stringToSearch
+      let stringToReplaceWith = this.localConfig.stringToReplaceWith
+      //console.log(stringToReplaceWith)
+      stringToReplaceWith = stringToReplaceWith.split('\\n').join('\n')
+      let re = new RegExp(stringToSearch, "g")
+
+      this.localConfig.textContent = this.localConfig.textContent.replace(re, stringToReplaceWith);
+    },
+    doReplaceLinePrefix() {
+      this.localConfig.textContent = this.textContentLines.map(line => {
+        /*
+         if (this.localConfig.replaceLineOptions.lTrim === true) {
+         if (line.trim() === '') {
+         return ''
+         }
+         
+         let firstChar = line.trim().slice(0, 1)
+         let firstIndex = line.indexOf(firstChar)
+         line = line.slice(firstIndex)
+         
+         if (line.startsWith(this.stringToSearchRaw)) {
+         return this.stringToReplaceWithRaw + line.slice(this.stringToSearchRaw.length)
+         }
+         }
+         else {
+         if (line.trim() === '') {
+         return line
+         }
+         }
+         */
+
+        let firstChar = line.trim().slice(0, 1)
+        let firstIndex = line.indexOf(firstChar)
+
+        let padding = line.slice(0, firstIndex)
+        let trimLine = line.slice(firstIndex)
+
+        if (trimLine.startsWith(this.stringToSearchRaw)) {
+          return padding + this.stringToReplaceWithRaw + trimLine.slice(this.stringToSearchRaw.length)
+        } else {
+          return line
+        }
+      }).join('\n')
+    },
+    doReplaceLineSuffix() {
+      this.localConfig.textContent = this.textContentLines.map(line => {
+
+        let lastChar = line.trim().slice(-1)
+        //console.log(lastChar)
+        let lastIndex = line.lastIndexOf(lastChar)
+
+        let padding = line.slice(lastIndex + 1)
+        let trimLine = line.slice(0, lastIndex + 1)
+
+        if (trimLine.endsWith(this.stringToSearchRaw)) {
+          return trimLine.slice(0, trimLine.length - this.stringToSearchRaw.length) + this.stringToReplaceWithRaw + padding
+        } else {
+          return line
+        }
+      }).join('\n')
+    },
+    doReplaceLineIndex() {
+      let mode = this.localConfig.replaceLineOptions.mode
+
+      this.localConfig.textContent = this.textContentLines.map(line => {
+
+        let index
+        if (mode === 'first') {
+          index = line.indexOf(this.stringToSearchRaw)
+        } else {
+          index = line.lastIndexOf(this.stringToSearchRaw)
+        }
+
+        if (index === -1) {
+          return line
+        }
+
+        if (index === 0) {
+          return this.stringToReplaceWithRaw + line.slice(this.stringToSearchRaw.length)
+        } else if (index === line.length - this.stringToSearchRaw.length) {
+          return line.slice(0, index) + this.stringToReplaceWithRaw
+        } else {
+          return line.slice(0, index) + this.stringToReplaceWithRaw + line.slice(index + this.stringToSearchRaw.length)
+        }
+      }).join('\n')
+    },
+    undo() {
+      //console.log('undo', this.textContentHistoryIndex, this.textContentHistory.length, this.textContentHistory[(this.textContentHistoryIndex)])
+      //console.log(this.textContentHistory)
+      if ((this.textContentHistoryIndex) <= 0
+              || !this.textContentHistory[(this.textContentHistoryIndex - 1)]) {
+        return false
+      }
+
+      if (this.textContentHistoryIndex === this.textContentHistory.length) {
+        this.textContentHistory.push(this.localConfig.textContent)
+      }
+
+      this.textContentHistoryIndex--
+      this.localConfig.textContent = this.textContentHistory[this.textContentHistoryIndex]
+    },
+    redo() {
+      //console.log('redo', this.textContentHistoryIndex, this.textContentHistory.length, this.textContentHistory[(this.textContentHistoryIndex + 1)])
+      //console.log(this.textContentHistory)
+      if ((this.textContentHistoryIndex + 1) > this.textContentHistory.length
+              || !this.textContentHistory[(this.textContentHistoryIndex + 1)]) {
+        return false
+      }
+
+      this.textContentHistoryIndex++
+      this.localConfig.textContent = this.textContentHistory[this.textContentHistoryIndex]
+    },
+    /*
+    clearTextContentConfirm() {
+      if (window.confirm('Are you sure?')) {
+        this.localConfig.textContent = ''
+        this.clearHistory()
+      }
+    },
+    */
+    trimTextContent() {
+      this.saveHistory()
+
+      this.localConfig.textContent = this.textContentLines.map(line => line.trim()).join('\n')
+    },
+    ltrimTextContent() {
+      this.saveHistory()
+
+      this.localConfig.textContent = this.textContentLines.map(line => {
+        let char = line.trim().slice(0, 1)
+        let index = line.indexOf(char)
+        if (index === 0) {
+          return line
+        } else {
+          return line.slice(index)
+        }
+      }).join('\n')
+    },
+    rtrimTextContent() {
+      this.saveHistory()
+
+      this.localConfig.textContent = this.textContentLines.map(line => {
+        let char = line.trim().slice(-1)
+        let index = line.lastIndexOf(char)
+        if (index === line.length - 1) {
+          return line
+        } else {
+          return line.slice(0, index + 1)
+        }
+      }).join('\n')
+    },
+    /*
+     formatCode () {
+     if (this.isFormatJSONEnabled) {
+     return this.formatJSONTextContent()
+     }
+     else if (this.isFormatXMLEnabled) {
+     return this.formatXMLTextContent()
+     }
+     },
+     formatJSONTextContent () {
+     this.saveHistory()
+     
+     if (this.textContentTrim.startsWith('{') 
+     && this.textContentTrim.endsWith('}')) {
+     try {
+     //let object = JSON.parse(this.textContentTrim)
+     let object
+     eval('object = ' + this.textContentTrim)
+     this.localConfig.textContent = JSON.stringify(object, null, 2)
+     }
+     catch (e) {
+     return false
+     }
+     }
+     return false
+     },
+     formatXMLTextContent () {
+     this.saveHistory()
+     
+     this.localConfig.textContent = this.prettifyXml(this.textContentTrim)
+     },
+     prettifyXml (sourceXml) {
+     var xmlDoc = new DOMParser().parseFromString(sourceXml, 'application/xml');
+     var xsltDoc = new DOMParser().parseFromString([
+     // describes how we want to modify the XML - indent everything
+     '<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform">',
+     '  <xsl:strip-space elements="*"/>',
+     '  <xsl:template match="para[content-style][not(text())]">', // change to just text() to strip space in text nodes
+     '    <xsl:value-of select="normalize-space(.)"/>',
+     '  </xsl:template>',
+     '  <xsl:template match="node()|@*">',
+     '    <xsl:copy><xsl:apply-templates select="node()|@*"/></xsl:copy>',
+     '  </xsl:template>',
+     '  <xsl:output indent="yes"/>',
+     '</xsl:stylesheet>',
+     ].join('\n'), 'application/xml');
+     
+     var xsltProcessor = new XSLTProcessor();    
+     xsltProcessor.importStylesheet(xsltDoc);
+     var resultDoc = xsltProcessor.transformToDocument(xmlDoc);
+     var resultXml = new XMLSerializer().serializeToString(resultDoc);
+     return resultXml;
+     },
+     */
+    doSearchNext() {
+      let stringToSearch = this.stringToSearch
+
+      let startPos = this.localConfig.textContent.indexOf(stringToSearch, this.searchPostion)
+      if (startPos === -1) {
+        startPos = this.localConfig.textContent.indexOf(stringToSearch)
+
+        if (startPos === -1) {
+          return false
+        }
+      }
+
+      this.searchPostion = startPos + 1
+
+      // do selection
+      // Chrome / Firefox
+      let tarea = this.$refs.TextareaEditor.$el
+      if (typeof (tarea.selectionStart) !== "undefined") {
+        tarea.selectionStart = startPos;
+        tarea.selectionEnd = startPos;
+
+        tarea.blur();
+        tarea.focus();
+        tarea.selectionStart = startPos;
+        tarea.selectionEnd = startPos + this.localConfig.stringToSearch.length;
+
+        return true;
+      }
+      /*
+       // IE
+       if (document.selection && document.selection.createRange) {
+       tarea.focus();
+       tarea.select();
+       var range = document.selection.createRange();
+       range.collapse(true);
+       range.moveEnd("character", endPos);
+       range.moveStart("character", startPos);
+       range.select();
+       return true;
+       }
+       */
+      return false;
+    },
+    doSearchPrev() {
+      let stringToSearch = this.stringToSearch
+
+      let startPos
+      if (this.searchPostion - this.stringToSearch.length - 1 < 0) {
+        startPos = this.localConfig.textContent.lastIndexOf(stringToSearch)
+      } else {
+        startPos = this.localConfig.textContent.lastIndexOf(stringToSearch, this.searchPostion - this.stringToSearch.length - 1)
+      }
+      if (startPos === -1) {
+        startPos = this.localConfig.textContent.lastIndexOf(stringToSearch)
+
+        if (startPos === -1) {
+          //console.log('not found')
+          return false
+        }
+      }
+
+      //console.log(startPos)
+
+      this.searchPostion = startPos + 1
+
+      // do selection
+      // Chrome / Firefox
+      let tarea = this.$refs.TextareaEditor.$el
+      if (typeof (tarea.selectionStart) !== "undefined") {
+        tarea.selectionStart = startPos;
+        tarea.selectionEnd = startPos;
+
+        tarea.blur();
+        tarea.focus();
+        tarea.selectionStart = startPos;
+        tarea.selectionEnd = startPos + this.localConfig.stringToSearch.length;
+
+
+        // collapse selection here
+        //tarea.blur()
+        //tarea.focus() // this scrolls the textarea
+        // expand selection here
+        return true;
+      }
+      /*
+       // IE
+       if (document.selection && document.selection.createRange) {
+       tarea.focus();
+       tarea.select();
+       var range = document.selection.createRange();
+       range.collapse(true);
+       range.moveEnd("character", endPos);
+       range.moveStart("character", startPos);
+       range.select();
+       return true;
+       }
+       */
+      return false;
+    },
+    
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/ReplacePanel/ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true&":
+/*!*****************************************************************************************************************!*\
+  !*** ./src/components/ReplacePanel/ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true& ***!
+  \*****************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_ReplacePanel_less_vue_type_style_index_0_id_8d37a762_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-style-loader!../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/less-loader/dist/cjs.js??ref--1-2!./ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true& */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/ReplacePanel/ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true&");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_ReplacePanel_less_vue_type_style_index_0_id_8d37a762_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_ReplacePanel_less_vue_type_style_index_0_id_8d37a762_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_ReplacePanel_less_vue_type_style_index_0_id_8d37a762_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_ReplacePanel_less_vue_type_style_index_0_id_8d37a762_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./src/components/ReplacePanel/ReplacePanel.vue":
+/*!******************************************************!*\
+  !*** ./src/components/ReplacePanel/ReplacePanel.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ReplacePanel_html_vue_type_template_id_8d37a762_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ReplacePanel.html?vue&type=template&id=8d37a762&scoped=true& */ "./src/components/ReplacePanel/ReplacePanel.html?vue&type=template&id=8d37a762&scoped=true&");
+/* harmony import */ var _ReplacePanel_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ReplacePanel.js?vue&type=script&lang=js& */ "./src/components/ReplacePanel/ReplacePanel.js?vue&type=script&lang=js&?5a53");
+/* empty/unused harmony star reexport *//* harmony import */ var _ReplacePanel_less_vue_type_style_index_0_id_8d37a762_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true& */ "./src/components/ReplacePanel/ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CReplacePanel_5CReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CReplacePanel%5CReplacePanel.vue&lang=yaml */ "./src/components/ReplacePanel/ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CReplacePanel%5CReplacePanel.vue&lang=yaml");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _ReplacePanel_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ReplacePanel_html_vue_type_template_id_8d37a762_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ReplacePanel_html_vue_type_template_id_8d37a762_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "8d37a762",
+  null
+  
+)
+
+/* custom blocks */
+
+if (typeof _ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CReplacePanel_5CReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"] === 'function') Object(_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CReplacePanel_5CReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"])(component)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "src/components/ReplacePanel/ReplacePanel.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./src/components/ReplacePanel/ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CReplacePanel%5CReplacePanel.vue&lang=yaml":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./src/components/ReplacePanel/ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CReplacePanel%5CReplacePanel.vue&lang=yaml ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CReplacePanel_5CReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/@kazupon/vue-i18n-loader/lib!./ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CReplacePanel%5CReplacePanel.vue&lang=yaml */ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ReplacePanel/ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CReplacePanel%5CReplacePanel.vue&lang=yaml");
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CReplacePanel_5CReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CReplacePanel_5CReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CReplacePanel_5CReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CReplacePanel_5CReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CReplacePanel_5CReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
