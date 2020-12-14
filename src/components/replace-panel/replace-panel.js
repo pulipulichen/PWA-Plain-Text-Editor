@@ -499,12 +499,14 @@ module.exports = {
       this.textContentHistoryIndex++
       this.config.textContent = this.textContentHistory[this.textContentHistoryIndex]
     },
+    /*
     clearTextContentConfirm() {
       if (window.confirm('Are you sure?')) {
         this.config.textContent = ''
         this.clearHistory()
       }
     },
+    */
     trimTextContent() {
       this.saveHistory()
 

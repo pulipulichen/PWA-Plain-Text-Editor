@@ -1,30 +1,27 @@
 /* global PULI_UTILS */
 
-module.exports = {
-  data: function () {
+export default {
+  props: ['config', 'localConfig', 'utils'],
+  data () {    
+    this.$i18n.locale = this.localConfig.locale
     return {
     }
   },
   watch: {
-    '$parent.config.displayPanel'() {
+    'localConfig.displayPanel'() {
       this.setPanelHeight()
     },
-    '$parent.inited'() {
-      if (this.$parent.inited === false) {
+    'config.inited'() {
+      if (this.config.inited === false) {
         return false
       }
       this.setPanelHeight()
     }
   },
   computed: {
-    config () {
-      return this.$parent.config
-    },
-    
-    
     // ---------------------------
     calcResult () {
-      let textContent = this.config.textContent.trim()
+      let textContent = this.localConfig.textContent.trim()
       
       if (textContent.indexOf('\n') === -1) {
         // 表示只有一行
@@ -77,9 +74,9 @@ ${textContent}
   },
   methods: {
     setPanelHeight() {
-      //console.log(this.$parent.config.displayPanel)
-      if (this.$parent.config.displayPanel === 'format') {
-        this.$parent.panelHeight = '8rem'
+      //console.log(this.$parent.localConfig.displayPanel)
+      if (this.localConfig.displayPanel === 'format') {
+        this.config.panelHeight = '8rem'
       }
     },
     copyCalcResult () {

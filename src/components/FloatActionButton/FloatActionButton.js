@@ -23,13 +23,13 @@ export default {
     },
     computed: {
       computedStyle () {
-        
+        //console.log()
         if (this.positionBottom === false) {
           return false
         }
         
         let style = {
-          'bottom': `calc(1rem + ${this.$parent.panelHeight})`
+          'bottom': `calc(1rem + ${this.config.panelHeight})`
         }
         //console.log(style)
         return style
@@ -43,8 +43,8 @@ export default {
     },
     methods: {
       openConfigModal () {
-        console.log(this.$parent.$refs.ConfigModal)
-        console.log(this.$parent.$refs)
+        //console.log(this.$parent.$refs.ConfigModal)
+        //console.log(this.$parent.$refs)
         this.$parent.$refs.ConfigModal.open()
       },
       delayCloseMenu () {
@@ -58,41 +58,10 @@ export default {
         this.showMenuTimer = null
       },
       copy() {
-        let text = this.$parent.config.textContent
-        if (!navigator.clipboard) {
-          fallbackCopyTextToClipboard(text);
-          return;
-        }
-        navigator.clipboard.writeText(text).then(function () {
-          //console.log('Async: Copying to clipboard was successful!');
-        }, function (err) {
-          //console.error('Async: Could not copy text: ', err);
-        });
+        let text = this.localConfig.textContent
+        this.utils.ClipboardUtils.copyPlainString(text)
         
         this.showMenu = false
-      },
-      fallbackCopyTextToClipboard(text) {
-        var textArea = document.createElement("textarea");
-        textArea.value = text;
-
-        // Avoid scrolling to bottom
-        textArea.style.top = "0";
-        textArea.style.left = "0";
-        textArea.style.position = "fixed";
-
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-
-        try {
-          var successful = document.execCommand('copy');
-          var msg = successful ? 'successful' : 'unsuccessful';
-          console.log('Fallback: Copying text command was ' + msg);
-        } catch (err) {
-          console.error('Fallback: Oops, unable to copy', err);
-        }
-
-        document.body.removeChild(textArea);
       },
       closeMenu() {
         this.showMenu = false
@@ -100,11 +69,11 @@ export default {
       toggleReplacePanel() {
         //this.$parent.config.displayReplacePanel = !this.$parent.config.displayReplacePanel
         //console.log(this.$parent.config.displayReplacePanel)
-        if (this.$parent.config.displayPanel !== 'replace') {
-          this.$parent.config.displayPanel = 'replace'
+        if (this.localConfig.displayPanel !== 'replace') {
+          this.localConfig.displayPanel = 'replace'
         }
         else {
-          this.$parent.config.displayPanel = null
+          this.localConfig.displayPanel = null
         }
         
         this.closeMenu()
@@ -112,18 +81,21 @@ export default {
       toggleFormatPanel() {
         //this.$parent.config.displayReplacePanel = !this.$parent.config.displayReplacePanel
         //console.log(this.$parent.config.displayReplacePanel)
-        if (!this.$parent.config.displayPanel !== 'format') {
-          this.$parent.config.displayPanel = 'format'
+        if (this.localConfig.displayPanel !== 'format') {
+          this.localConfig.displayPanel = 'format'
         }
         else {
-          this.$parent.config.displayPanel = null
+          this.localConfig.displayPanel = null
         }
-        //console.log(this.$parent.config.displayPanel)
+        console.log(this.lcoalConfig.displayPanel)
         
         this.closeMenu()
       },
       clear() {
-        this.$parent.clearTextContentConfirm()
+        if (window.confirm('Are you sure?')) {
+          this.localConfig.textContent = ''
+          //this.clearHistory()
+        }
         this.closeMenu()
       },
       /*

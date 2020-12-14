@@ -3,24 +3,20 @@
 import ConfigModal from './ConfigModal/ConfigModal.vue'
 import FloatActionButton from './FloatActionButton/FloatActionButton.vue'
 
+import FormatPanel from './FormatPanel/FormatPanel.vue'
+
 let Index = {
   props: ['config', 'localConfig', 'utils'],
   data () {    
     this.$i18n.locale = this.config.locale
     return {
-      panelHeight: '0rem',
-      textContentHistory: [],
-      textContentHistoryIndex: -1,
-      textContentModified: true,
-      searchPostion: -1,
-      debug: {
-        enableRestore: true
-      }
+      
     }
   },
   components: {
     ConfigModal,
-    FloatActionButton
+    FloatActionButton,
+    FormatPanel
   },
   computed: {
     
@@ -33,9 +29,9 @@ let Index = {
       
       this.initKeyBinds()
     },
-    'localConfig' () {
+    'localConfig.displayPanel' () {
       if (!this.localConfig.displayPanel) {
-        this.panelHeight = '0rem'
+        this.config.panelHeight = '0rem'
       }
     }
   },

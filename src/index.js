@@ -139,8 +139,9 @@ let VueController = {
 // ----------------------------
 
 for (let key in localConfig) {
+  //console.log(key)
   VueController.watch['localConfig.' + key] = function () {
-    saveToLocalStorage()
+    this.saveToLocalStorage()
   }
 }
 

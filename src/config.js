@@ -7,7 +7,13 @@ let config = {
     enableRestore: true,
   },
   locale: 'zh-TW',
-  inited: false
+  inited: false,
+  
+  panelHeight: '0rem',
+  textContentHistory: [],
+  textContentHistoryIndex: -1,
+  textContentModified: true,
+  searchPostion: -1,
 }
 
 import styleConfig from './styles/style.config.js'
