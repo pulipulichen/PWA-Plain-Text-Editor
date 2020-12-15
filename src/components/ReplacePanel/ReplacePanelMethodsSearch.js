@@ -100,11 +100,11 @@ export default function (ReplacePanel) {
 //  }
 
   ReplacePanel.methods.findPrev = function () {
-    let CodeMirror = this.$parent.$refs.CodeMirror
+    let CodeMirror = this.$parent.$refs.CodeMirrorEditor
     return CodeMirror.findPrev()
   }
   ReplacePanel.methods.findNext = function () {
-    let CodeMirror = this.$parent.$refs.CodeMirror
+    let CodeMirror = this.$parent.$refs.CodeMirrorEditor
     return CodeMirror.findNext()
   }
 }

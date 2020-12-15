@@ -15,7 +15,8 @@ let localConfig = {
   tab: {
     mode: 'tab',
     spaceNumber: 2,
-  }
+  },
+  formatTool: 'lines-trim'
 }
 
 export default localConfig

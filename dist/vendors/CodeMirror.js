@@ -526,7 +526,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (CodeMirrorEditor) {
-  CodeMirrorEditor.methods.autoFormat = function (cm) {
+  CodeMirrorEditor.methods.autoFormat = function () {
+    console.log('autoFormat')
+    let cm = this.codemirror
     let mode = this.getMode()
     
     let process

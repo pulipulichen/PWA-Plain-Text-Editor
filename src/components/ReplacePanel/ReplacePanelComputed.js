@@ -1,4 +1,8 @@
 export default function (ReplacePanel) {
+    ReplacePanel.computed.CodeMirrorEditor = function () {
+      return this.$parent.$refs.CodeMirrorEditor
+    }
+    
   ReplacePanel.computed.showReplaceLineOptionsSelect = function () {
     return (this.localConfig.replaceMode === 'line')
   }
@@ -198,35 +202,4 @@ export default function (ReplacePanel) {
     return `Replace (${this.replaceOccurCount})`
   }
 
-  ReplacePanel.computed.isTrimEnabled = function () {
-    for (let i = 0; i < this.textContentLines.length; i++) {
-      let line = this.textContentLines[i]
-      if (line !== line.trim()) {
-        return true
-      }
-    }
-    return false
-  }
-  ReplacePanel.computed.isLTrimEnabled = function () {
-    for (let i = 0; i < this.textContentLines.length; i++) {
-      let line = this.textContentLines[i]
-      let char = line.trim().slice(0, 1)
-      let index = line.indexOf(char)
-      if (index > 0) {
-        return true
-      }
-    }
-    return false
-  }
-  ReplacePanel.computed.isRTrimEnabled = function () {
-    for (let i = 0; i < this.textContentLines.length; i++) {
-      let line = this.textContentLines[i]
-      let char = line.trim().slice(-1)
-      let index = line.lastIndexOf(char)
-      if (index < line.length - 1) {
-        return true
-      }
-    }
-    return false
-  }
 }

@@ -5,6 +5,7 @@ export default function (ReplacePanel) {
       textContentHistory: [],
       replaceLock: false,
       textContentModified: false,
+      isModifiedAfterBeautification: true,
       //panelHeight: '10.8rem'
       panelHeight: '12.5rem',
       calcResultCopied: false

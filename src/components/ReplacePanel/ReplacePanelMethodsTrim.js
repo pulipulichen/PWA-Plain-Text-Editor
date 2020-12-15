@@ -1,4 +1,17 @@
+import $ from 'jquery'
+
 export default function (ReplacePanel) {
+//  ReplacePanel.methods.initDropdown = function () {
+//    console.log('222')
+//    console.log($(this.$refs.FormatToolDropdown).length)
+//    //console.log($(this.$el).find('.ui.selection.dropdown').length)
+//    $(this.$refs.FormatToolDropdown).dropdown({
+//      //clearable: true
+//      // you can use any ui transition
+//      action: 'combo'
+//    })
+//  }
+
   ReplacePanel.methods.trimTextContent = function () {
     this.saveHistory()
 

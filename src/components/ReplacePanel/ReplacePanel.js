@@ -5,9 +5,9 @@ let ReplacePanel = {
   data: null,
   watch: {}, // 轉移到 ReplacePanelWatch.js
   computed: {}, // 轉移到 ReplacePanelComputed.js
-//  mounted() {
-//    this.setPanelHeight()
-//  },
+  mounted() {
+    this.setPanelHeight()
+  },
   methods: {
     setPanelHeight() {
       //console.log('setPanelHeight', this.localConfig.displayReplacePanel, this.localConfig.replaceMode)
@@ -45,11 +45,19 @@ ReplacePanelData(ReplacePanel)
 import ReplacePanelWatch from './ReplacePanelWatch.js'
 ReplacePanelWatch(ReplacePanel)
 
+// ------------------------
+
 import ReplacePanelComputed from './ReplacePanelComputed.js'
 ReplacePanelComputed(ReplacePanel)
 
 import ReplacePanelComputedCalc from './ReplacePanelComputedCalc.js'
 ReplacePanelComputedCalc(ReplacePanel)
+
+import ReplacePanelComputedTrim from './ReplacePanelComputedTrim.js'
+ReplacePanelComputedTrim(ReplacePanel)
+
+import ReplacePanelComputedFormat from './ReplacePanelComputedFormat.js'
+ReplacePanelComputedFormat(ReplacePanel)
 
 // -----------------------------
 import ReplacePanelMethodsInput from './ReplacePanelMethodsInput.js'
@@ -63,6 +71,9 @@ ReplacePanelMethodsSearch(ReplacePanel)
 
 import ReplacePanelMethodsTrim from './ReplacePanelMethodsTrim.js'
 ReplacePanelMethodsTrim(ReplacePanel)
+
+import ReplacePanelMethodsFormat from './ReplacePanelMethodsFormat.js'
+ReplacePanelMethodsFormat(ReplacePanel)
 
 import ReplacePanelMethodsCalc from './ReplacePanelMethodsCalc.js'
 ReplacePanelMethodsCalc(ReplacePanel)

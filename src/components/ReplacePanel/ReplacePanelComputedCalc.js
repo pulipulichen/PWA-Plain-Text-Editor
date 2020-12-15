@@ -36,7 +36,7 @@ export default function (ReplacePanel) {
     let result = this.calcResult
 
     if (!result) {
-      return '(Auto Calc)'
+      return '(NULL)'
     }
 
     let lengthLimit = 13

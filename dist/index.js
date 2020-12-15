@@ -2258,7 +2258,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, ".replace-panel[data-v-8d37a762] {\n  background-color: #e1f7f7;\n  border-top: 1px solid #10a3a3;\n  padding-bottom: 0.5rem;\n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n}\n.replace-panel .close-icon[data-v-8d37a762] {\n  float: right;\n  cursor: pointer;\n}\n.replace-panel .field[data-v-8d37a762] {\n  clear: none !important;\n}\n.replace-panel label[data-v-8d37a762] {\n  width: 6rem !important;\n  display: inline-block;\n  text-align: right;\n  user-select: none;\n  cursor: pointer !important;\n}\n.replace-panel .string-to-search-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 1rem) !important;\n}\n.replace-panel .string-to-search-input-container[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 2rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 1rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select.has-undo-button .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-undo-button .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem) !important;\n}\n.replace-panel select[data-v-8d37a762] {\n  width: 8rem;\n  padding-top: 0 !important;\n  padding-bottom: 0 !important;\n  white-space: nowrap !important;\n}\n.replace-panel .ui.icon.input input[data-v-8d37a762] {\n  padding-right: 4.5rem !important;\n}\n.replace-panel .ui.icon.input i.icon[data-v-8d37a762] {\n  cursor: pointer;\n}\n.replace-panel .ui.icon.input i.icon[data-v-8d37a762]:not(:first-of-type) {\n  right: 2em !important;\n}\n.replace-panel .checkbox label[data-v-8d37a762] {\n  width: auto !important;\n}\n.replace-panel .replace-mode-select[data-v-8d37a762] {\n  width: 8rem !important;\n}\n.replace-panel .replace-line-options-select[data-v-8d37a762] {\n  width: 8rem !important;\n}\n.replace-panel .replace-count-button[data-v-8d37a762] {\n  width: 9rem;\n  max-width: 9rem;\n  overflow-x: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  display: inline-block !important;\n  padding-left: 0.5rem !important;\n  padding-right: 0.5rem !important;\n}\n.inline.field[data-v-8d37a762] {\n  margin-top: 0.5rem !important;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/PWA-Plain-Text-Editor/src/components/ReplacePanel/ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true&","ReplacePanel.less"],"names":[],"mappings":"AAAA;EAME,yBAAA;EACA,6BAAA;EAEA,sBAAA;EAEA,0BAAA;EACA,SAAA;EACA,YAAA;EACA,OAAA;ACNF;ADRA;EAkBI,YAAA;EAEA,eAAA;ACRJ;ADZA;EAwBI,sBAAA;ACTJ;ADfA;EA4BI,sBAAA;EACA,qBAAA;EACA,iBAAA;EACA,iBAAA;EACA,0BAAA;ACVJ;ADtBA;EAuCI,iDAAA;ACdJ;ADzBA;EA4CI,uDAAA;AChBJ;AD5BA;EAiDI,uDAAA;AClBJ;AD/BA;EAoDM,wDAAA;AClBN;ADqBI;EAII,+DAAA;ACtBR;ADyBM;EACE,wEAAA;ACvBR;AD2BI;EACE,iEAAA;ACzBN;AD3CA;EAyEI,WAAA;EACA,yBAAA;EACA,4BAAA;EACA,8BAAA;AC3BJ;ADjDA;EAiFM,gCAAA;AC7BN;ADpDA;EAqFM,eAAA;AC9BN;ADvDA;EAwFM,qBAAA;AC9BN;AD1DA;EA6FI,sBAAA;AChCJ;AD7DA;EAkGI,sBAAA;AClCJ;ADhEA;EAqGI,sBAAA;AClCJ;ADnEA;EAyGI,WAAA;EACA,eAAA;EACA,kBAAA;EACA,uBAAA;EACA,mBAAA;EACA,gCAAA;EAEA,+BAAA;EACA,gCAAA;ACpCJ;ADwCA;EACE,6BAAA;ACtCF","file":"ReplacePanel.less","sourcesContent":[".replace-panel {\n  @labelWidth: 6rem;\n  @ReplaceModeSelectWidth: 8rem;\n  @ReplaceLineModeSelectWidth: 8rem;\n  @ReplaceButtonWidth: 9rem;\n  @UndoButtonWidth: 2.5rem;\n  background-color: #e1f7f7;\n  border-top: 1px solid #10a3a3;\n  //padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  \n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n  \n  \n  .close-icon {\n    float: right;\n    //margin-top: 1rem;\n    cursor: pointer;\n  }\n  \n  .field {\n    clear: none !important; \n  }\n  \n  label {\n    width: @labelWidth !important;\n    display: inline-block;\n    text-align: right;\n    user-select: none;\n    cursor: pointer !important;\n  }\n  \n  //@closePanelIconWidth: 1rem;\n  @closePanelIconWidth: 0rem;\n  \n  .string-to-search-input {\n    width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem) !important;\n    \n  }\n  \n  .string-to-search-input-container {\n    width: calc(100% - @labelWidth - @closePanelIconWidth - 2rem - 1px) !important;\n  }\n  \n  .string-to-replace-with-input-container {\n    \n    width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem - 1px) !important;\n    \n    .string-to-replace-with-input {\n      width: calc(100% - @labelWidth - @closePanelIconWidth - 3rem - @ReplaceButtonWidth) !important;\n    }\n    \n    &.has-replace-line-options-select {\n      //width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem - @ReplaceLineModeSelectWidth) !important;\n      \n      .string-to-replace-with-input {\n        width: calc(100% - @labelWidth - @closePanelIconWidth - 3rem - @ReplaceButtonWidth - @ReplaceLineModeSelectWidth) !important;\n      }\n      \n      &.has-undo-button .string-to-replace-with-input {\n        width: calc(100% - @labelWidth - @closePanelIconWidth - 4rem - @UndoButtonWidth - @ReplaceButtonWidth - @ReplaceLineModeSelectWidth) !important;\n      }\n    }\n    \n    &.has-undo-button .string-to-replace-with-input {\n      width: calc(100% - @labelWidth - @closePanelIconWidth - 4rem - @UndoButtonWidth - @ReplaceButtonWidth) !important;\n    }\n  } \n  \n  select {\n    width: 8rem;\n    padding-top: 0 !important;\n    padding-bottom: 0 !important;\n    white-space: nowrap !important;\n  }\n  \n  .ui.icon.input {\n    input {\n      padding-right: 4.5rem !important;\n    }\n    \n    i.icon {\n      cursor: pointer;\n    }\n    i.icon:not(:first-of-type) {\n      right: 2em !important;\n    }\n  }\n  \n  .checkbox label {\n    width: auto !important;\n    //padding-left: 0 !important;\n  }\n  \n  .replace-mode-select {\n    width: @ReplaceModeSelectWidth !important;\n  }\n  .replace-line-options-select {\n    width: @ReplaceLineModeSelectWidth !important;\n  }\n  \n  .replace-count-button {\n    width: @ReplaceButtonWidth;\n    max-width: @ReplaceButtonWidth;\n    overflow-x: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    display: inline-block !important;\n    \n    padding-left: 0.5rem !important;\n    padding-right: 0.5rem !important;\n  }\n}\n\n.inline.field {\n  margin-top: 0.5rem !important;\n}",".replace-panel {\n  background-color: #e1f7f7;\n  border-top: 1px solid #10a3a3;\n  padding-bottom: 0.5rem;\n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n}\n.replace-panel .close-icon {\n  float: right;\n  cursor: pointer;\n}\n.replace-panel .field {\n  clear: none !important;\n}\n.replace-panel label {\n  width: 6rem !important;\n  display: inline-block;\n  text-align: right;\n  user-select: none;\n  cursor: pointer !important;\n}\n.replace-panel .string-to-search-input {\n  width: calc(100% - 6rem - 0rem - 1rem) !important;\n}\n.replace-panel .string-to-search-input-container {\n  width: calc(100% - 6rem - 0rem - 2rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container {\n  width: calc(100% - 6rem - 0rem - 1rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select.has-undo-button .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-undo-button .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem) !important;\n}\n.replace-panel select {\n  width: 8rem;\n  padding-top: 0 !important;\n  padding-bottom: 0 !important;\n  white-space: nowrap !important;\n}\n.replace-panel .ui.icon.input input {\n  padding-right: 4.5rem !important;\n}\n.replace-panel .ui.icon.input i.icon {\n  cursor: pointer;\n}\n.replace-panel .ui.icon.input i.icon:not(:first-of-type) {\n  right: 2em !important;\n}\n.replace-panel .checkbox label {\n  width: auto !important;\n}\n.replace-panel .replace-mode-select {\n  width: 8rem !important;\n}\n.replace-panel .replace-line-options-select {\n  width: 8rem !important;\n}\n.replace-panel .replace-count-button {\n  width: 9rem;\n  max-width: 9rem;\n  overflow-x: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  display: inline-block !important;\n  padding-left: 0.5rem !important;\n  padding-right: 0.5rem !important;\n}\n.inline.field {\n  margin-top: 0.5rem !important;\n}\n"]}]);
+exports.push([module.i, ".replace-panel[data-v-8d37a762] {\n  background-color: #e1f7f7;\n  border-top: 1px solid #10a3a3;\n  padding-bottom: 0.5rem;\n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n}\n.replace-panel .close-icon[data-v-8d37a762] {\n  float: right;\n  cursor: pointer;\n}\n.replace-panel .field[data-v-8d37a762] {\n  clear: none !important;\n}\n.replace-panel label[data-v-8d37a762] {\n  width: 6rem !important;\n  display: inline-block;\n  text-align: right;\n  user-select: none;\n  cursor: pointer !important;\n}\n.replace-panel .string-to-search-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 1rem) !important;\n}\n.replace-panel .string-to-search-input-container[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 2rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 1rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select.has-undo-button .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-undo-button .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem) !important;\n}\n.replace-panel select[data-v-8d37a762] {\n  width: 8rem;\n  padding-top: 0 !important;\n  padding-bottom: 0 !important;\n  white-space: nowrap !important;\n}\n.replace-panel .ui.icon.input input[data-v-8d37a762] {\n  padding-right: 4.5rem !important;\n}\n.replace-panel .ui.icon.input i.icon[data-v-8d37a762] {\n  cursor: pointer;\n}\n.replace-panel .ui.icon.input i.icon[data-v-8d37a762]:not(:first-of-type) {\n  right: 2em !important;\n}\n.replace-panel .checkbox label[data-v-8d37a762] {\n  width: auto !important;\n}\n.replace-panel .replace-mode-select[data-v-8d37a762] {\n  width: 8rem !important;\n}\n.replace-panel .replace-line-options-select[data-v-8d37a762] {\n  width: 8rem !important;\n}\n.replace-panel .replace-count-button[data-v-8d37a762] {\n  width: 9rem;\n  max-width: 9rem;\n  overflow-x: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  display: inline-block !important;\n  padding-left: 0.5rem !important;\n  padding-right: 0.5rem !important;\n}\n.inline.field[data-v-8d37a762] {\n  margin-top: 0.5rem !important;\n}\n.format-tool-container .format-tool-select[data-v-8d37a762] {\n  width: 13rem;\n  border-bottom-right-radius: 0 !important;\n  border-top-right-radius: 0 !important;\n}\n.format-tool-container .button[data-v-8d37a762] {\n  border-bottom-left-radius: 0 !important;\n  border-top-left-radius: 0 !important;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/PWA-Plain-Text-Editor/src/components/ReplacePanel/ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true&","ReplacePanel.less"],"names":[],"mappings":"AAAA;EAME,yBAAA;EACA,6BAAA;EAEA,sBAAA;EAEA,0BAAA;EACA,SAAA;EACA,YAAA;EACA,OAAA;ACNF;ADRA;EAkBI,YAAA;EAEA,eAAA;ACRJ;ADZA;EAwBI,sBAAA;ACTJ;ADfA;EA4BI,sBAAA;EACA,qBAAA;EACA,iBAAA;EACA,iBAAA;EACA,0BAAA;ACVJ;ADtBA;EAuCI,iDAAA;ACdJ;ADzBA;EA4CI,uDAAA;AChBJ;AD5BA;EAiDI,uDAAA;AClBJ;AD/BA;EAoDM,wDAAA;AClBN;ADqBI;EAII,+DAAA;ACtBR;ADyBM;EACE,wEAAA;ACvBR;AD2BI;EACE,iEAAA;ACzBN;AD3CA;EAyEI,WAAA;EACA,yBAAA;EACA,4BAAA;EACA,8BAAA;AC3BJ;ADjDA;EAiFM,gCAAA;AC7BN;ADpDA;EAqFM,eAAA;AC9BN;ADvDA;EAwFM,qBAAA;AC9BN;AD1DA;EA6FI,sBAAA;AChCJ;AD7DA;EAkGI,sBAAA;AClCJ;ADhEA;EAqGI,sBAAA;AClCJ;ADnEA;EAyGI,WAAA;EACA,eAAA;EACA,kBAAA;EACA,uBAAA;EACA,mBAAA;EACA,gCAAA;EAEA,+BAAA;EACA,gCAAA;ACpCJ;ADwCA;EACE,6BAAA;ACtCF;ADyCA;EAEI,YAAA;EACA,wCAAA;EACA,qCAAA;ACxCJ;ADoCA;EAQI,uCAAA;EACA,oCAAA;ACzCJ","file":"ReplacePanel.less","sourcesContent":[".replace-panel {\n  @labelWidth: 6rem;\n  @ReplaceModeSelectWidth: 8rem;\n  @ReplaceLineModeSelectWidth: 8rem;\n  @ReplaceButtonWidth: 9rem;\n  @UndoButtonWidth: 2.5rem;\n  background-color: #e1f7f7;\n  border-top: 1px solid #10a3a3;\n  //padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  \n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n  \n  \n  .close-icon {\n    float: right;\n    //margin-top: 1rem;\n    cursor: pointer;\n  }\n  \n  .field {\n    clear: none !important; \n  }\n  \n  label {\n    width: @labelWidth !important;\n    display: inline-block;\n    text-align: right;\n    user-select: none;\n    cursor: pointer !important;\n  }\n  \n  //@closePanelIconWidth: 1rem;\n  @closePanelIconWidth: 0rem;\n  \n  .string-to-search-input {\n    width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem) !important;\n    \n  }\n  \n  .string-to-search-input-container {\n    width: calc(100% - @labelWidth - @closePanelIconWidth - 2rem - 1px) !important;\n  }\n  \n  .string-to-replace-with-input-container {\n    \n    width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem - 1px) !important;\n    \n    .string-to-replace-with-input {\n      width: calc(100% - @labelWidth - @closePanelIconWidth - 3rem - @ReplaceButtonWidth) !important;\n    }\n    \n    &.has-replace-line-options-select {\n      //width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem - @ReplaceLineModeSelectWidth) !important;\n      \n      .string-to-replace-with-input {\n        width: calc(100% - @labelWidth - @closePanelIconWidth - 3rem - @ReplaceButtonWidth - @ReplaceLineModeSelectWidth) !important;\n      }\n      \n      &.has-undo-button .string-to-replace-with-input {\n        width: calc(100% - @labelWidth - @closePanelIconWidth - 4rem - @UndoButtonWidth - @ReplaceButtonWidth - @ReplaceLineModeSelectWidth) !important;\n      }\n    }\n    \n    &.has-undo-button .string-to-replace-with-input {\n      width: calc(100% - @labelWidth - @closePanelIconWidth - 4rem - @UndoButtonWidth - @ReplaceButtonWidth) !important;\n    }\n  } \n  \n  select {\n    width: 8rem;\n    padding-top: 0 !important;\n    padding-bottom: 0 !important;\n    white-space: nowrap !important;\n  }\n  \n  .ui.icon.input {\n    input {\n      padding-right: 4.5rem !important;\n    }\n    \n    i.icon {\n      cursor: pointer;\n    }\n    i.icon:not(:first-of-type) {\n      right: 2em !important;\n    }\n  }\n  \n  .checkbox label {\n    width: auto !important;\n    //padding-left: 0 !important;\n  }\n  \n  .replace-mode-select {\n    width: @ReplaceModeSelectWidth !important;\n  }\n  .replace-line-options-select {\n    width: @ReplaceLineModeSelectWidth !important;\n  }\n  \n  .replace-count-button {\n    width: @ReplaceButtonWidth;\n    max-width: @ReplaceButtonWidth;\n    overflow-x: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    display: inline-block !important;\n    \n    padding-left: 0.5rem !important;\n    padding-right: 0.5rem !important;\n  }\n}\n\n.inline.field {\n  margin-top: 0.5rem !important;\n}\n\n.format-tool-container {\n  .format-tool-select {\n    width: 13rem;\n    border-bottom-right-radius: 0 !important;\n    border-top-right-radius: 0 !important;\n  }\n  \n  .button {\n    border-bottom-left-radius: 0 !important;\n    border-top-left-radius: 0 !important;\n  }\n}\n  ",".replace-panel {\n  background-color: #e1f7f7;\n  border-top: 1px solid #10a3a3;\n  padding-bottom: 0.5rem;\n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n}\n.replace-panel .close-icon {\n  float: right;\n  cursor: pointer;\n}\n.replace-panel .field {\n  clear: none !important;\n}\n.replace-panel label {\n  width: 6rem !important;\n  display: inline-block;\n  text-align: right;\n  user-select: none;\n  cursor: pointer !important;\n}\n.replace-panel .string-to-search-input {\n  width: calc(100% - 6rem - 0rem - 1rem) !important;\n}\n.replace-panel .string-to-search-input-container {\n  width: calc(100% - 6rem - 0rem - 2rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container {\n  width: calc(100% - 6rem - 0rem - 1rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select.has-undo-button .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-undo-button .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem) !important;\n}\n.replace-panel select {\n  width: 8rem;\n  padding-top: 0 !important;\n  padding-bottom: 0 !important;\n  white-space: nowrap !important;\n}\n.replace-panel .ui.icon.input input {\n  padding-right: 4.5rem !important;\n}\n.replace-panel .ui.icon.input i.icon {\n  cursor: pointer;\n}\n.replace-panel .ui.icon.input i.icon:not(:first-of-type) {\n  right: 2em !important;\n}\n.replace-panel .checkbox label {\n  width: auto !important;\n}\n.replace-panel .replace-mode-select {\n  width: 8rem !important;\n}\n.replace-panel .replace-line-options-select {\n  width: 8rem !important;\n}\n.replace-panel .replace-count-button {\n  width: 9rem;\n  max-width: 9rem;\n  overflow-x: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  display: inline-block !important;\n  padding-left: 0.5rem !important;\n  padding-right: 0.5rem !important;\n}\n.inline.field {\n  margin-top: 0.5rem !important;\n}\n.format-tool-container .format-tool-select {\n  width: 13rem;\n  border-bottom-right-radius: 0 !important;\n  border-top-right-radius: 0 !important;\n}\n.format-tool-container .button {\n  border-bottom-left-radius: 0 !important;\n  border-top-left-radius: 0 !important;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -16303,7 +16303,7 @@ var render = function() {
     { staticClass: "Index" },
     [
       _c("CodeMirrorEditor", {
-        ref: "CodeMirror",
+        ref: "CodeMirrorEditor",
         attrs: {
           config: _vm.config,
           localConfig: _vm.localConfig,
@@ -16682,7 +16682,124 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "inline fields" }, [
-          _vm._m(0),
+          _c("div", { staticClass: "field" }, [
+            _c("label", [_vm._v("Format")]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "ui action icon input format-tool-container" },
+              [
+                _c(
+                  "select",
+                  {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.localConfig.formatTool,
+                        expression: "localConfig.formatTool"
+                      }
+                    ],
+                    staticClass:
+                      "ui compact selection dropdown format-tool-select",
+                    on: {
+                      change: function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.$set(
+                          _vm.localConfig,
+                          "formatTool",
+                          $event.target.multiple
+                            ? $$selectedVal
+                            : $$selectedVal[0]
+                        )
+                      }
+                    }
+                  },
+                  [
+                    _c("optgroup", { attrs: { label: "Trim" } }, [
+                      _c(
+                        "option",
+                        {
+                          attrs: {
+                            value: "lines-trim",
+                            disabled: _vm.isTrimDisabled
+                          }
+                        },
+                        [_vm._v("Lines Trim")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "option",
+                        {
+                          attrs: {
+                            value: "lines-ltrim",
+                            disabled: _vm.isLTrimDisabled
+                          }
+                        },
+                        [_vm._v("Lines Left Trim")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "option",
+                        {
+                          attrs: {
+                            value: "lines-rtrim",
+                            disabled: _vm.isRTrimDisabled
+                          }
+                        },
+                        [_vm._v("Lines Right Trim")]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("optgroup", { attrs: { label: "Compress" } }, [
+                      _c(
+                        "option",
+                        {
+                          attrs: {
+                            value: "code-minifiy",
+                            disabled: _vm.isMinifyDisabled
+                          }
+                        },
+                        [_vm._v("Minify")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "option",
+                        {
+                          attrs: {
+                            value: "code-beautify",
+                            disabled: _vm.isBeautifyDisabled
+                          }
+                        },
+                        [_vm._v("Beautify")]
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "ui button",
+                    class: _vm.computedFormatActionButtonClassNameList,
+                    on: { click: _vm.doFormat }
+                  },
+                  [_vm._v("\n            Format\n          ")]
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "calcCopyButton" } }, [
+            _vm._v("\n        Calculator\n      ")
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "field" }, [
             _c(
@@ -16690,7 +16807,7 @@ var render = function() {
               {
                 staticClass: "ui button calc-button",
                 class: _vm.computedCalcButtonClassName,
-                attrs: { title: "Copy" },
+                attrs: { id: "calcCopyButton", title: "Copy" },
                 on: { click: _vm.copyCalcResult }
               },
               [_c("span", [_vm._v(_vm._s(_vm.computedCalcButtonText))])]
@@ -16701,16 +16818,7 @@ var render = function() {
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "field" }, [
-      _c("label", [_vm._v("Format")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -30317,11 +30425,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ReplacePanelWatch_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ReplacePanelWatch.js */ "./src/components/ReplacePanel/ReplacePanelWatch.js");
 /* harmony import */ var _ReplacePanelComputed_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ReplacePanelComputed.js */ "./src/components/ReplacePanel/ReplacePanelComputed.js");
 /* harmony import */ var _ReplacePanelComputedCalc_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ReplacePanelComputedCalc.js */ "./src/components/ReplacePanel/ReplacePanelComputedCalc.js");
-/* harmony import */ var _ReplacePanelMethodsInput_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ReplacePanelMethodsInput.js */ "./src/components/ReplacePanel/ReplacePanelMethodsInput.js");
-/* harmony import */ var _ReplacePanelMethodsReplace_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ReplacePanelMethodsReplace.js */ "./src/components/ReplacePanel/ReplacePanelMethodsReplace.js");
-/* harmony import */ var _ReplacePanelMethodsSearch_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ReplacePanelMethodsSearch.js */ "./src/components/ReplacePanel/ReplacePanelMethodsSearch.js");
-/* harmony import */ var _ReplacePanelMethodsTrim_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ReplacePanelMethodsTrim.js */ "./src/components/ReplacePanel/ReplacePanelMethodsTrim.js");
-/* harmony import */ var _ReplacePanelMethodsCalc_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ReplacePanelMethodsCalc.js */ "./src/components/ReplacePanel/ReplacePanelMethodsCalc.js");
+/* harmony import */ var _ReplacePanelComputedTrim_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ReplacePanelComputedTrim.js */ "./src/components/ReplacePanel/ReplacePanelComputedTrim.js");
+/* harmony import */ var _ReplacePanelComputedFormat_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ReplacePanelComputedFormat.js */ "./src/components/ReplacePanel/ReplacePanelComputedFormat.js");
+/* harmony import */ var _ReplacePanelMethodsInput_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ReplacePanelMethodsInput.js */ "./src/components/ReplacePanel/ReplacePanelMethodsInput.js");
+/* harmony import */ var _ReplacePanelMethodsReplace_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ReplacePanelMethodsReplace.js */ "./src/components/ReplacePanel/ReplacePanelMethodsReplace.js");
+/* harmony import */ var _ReplacePanelMethodsSearch_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ReplacePanelMethodsSearch.js */ "./src/components/ReplacePanel/ReplacePanelMethodsSearch.js");
+/* harmony import */ var _ReplacePanelMethodsTrim_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ReplacePanelMethodsTrim.js */ "./src/components/ReplacePanel/ReplacePanelMethodsTrim.js");
+/* harmony import */ var _ReplacePanelMethodsFormat_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./ReplacePanelMethodsFormat.js */ "./src/components/ReplacePanel/ReplacePanelMethodsFormat.js");
+/* harmony import */ var _ReplacePanelMethodsCalc_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./ReplacePanelMethodsCalc.js */ "./src/components/ReplacePanel/ReplacePanelMethodsCalc.js");
 /* global PULI_UTILS, CodeMirror */
 
 let ReplacePanel = {
@@ -30329,9 +30440,9 @@ let ReplacePanel = {
   data: null,
   watch: {}, // 轉移到 ReplacePanelWatch.js
   computed: {}, // 轉移到 ReplacePanelComputed.js
-//  mounted() {
-//    this.setPanelHeight()
-//  },
+  mounted() {
+    this.setPanelHeight()
+  },
   methods: {
     setPanelHeight() {
       //console.log('setPanelHeight', this.localConfig.displayReplacePanel, this.localConfig.replaceMode)
@@ -30369,27 +30480,38 @@ Object(_ReplacePanelData_js__WEBPACK_IMPORTED_MODULE_0__["default"])(ReplacePane
 
 Object(_ReplacePanelWatch_js__WEBPACK_IMPORTED_MODULE_1__["default"])(ReplacePanel)
 
+// ------------------------
+
 
 Object(_ReplacePanelComputed_js__WEBPACK_IMPORTED_MODULE_2__["default"])(ReplacePanel)
 
 
 Object(_ReplacePanelComputedCalc_js__WEBPACK_IMPORTED_MODULE_3__["default"])(ReplacePanel)
 
+
+Object(_ReplacePanelComputedTrim_js__WEBPACK_IMPORTED_MODULE_4__["default"])(ReplacePanel)
+
+
+Object(_ReplacePanelComputedFormat_js__WEBPACK_IMPORTED_MODULE_5__["default"])(ReplacePanel)
+
 // -----------------------------
 
-Object(_ReplacePanelMethodsInput_js__WEBPACK_IMPORTED_MODULE_4__["default"])(ReplacePanel)
+Object(_ReplacePanelMethodsInput_js__WEBPACK_IMPORTED_MODULE_6__["default"])(ReplacePanel)
 
 
-Object(_ReplacePanelMethodsReplace_js__WEBPACK_IMPORTED_MODULE_5__["default"])(ReplacePanel)
+Object(_ReplacePanelMethodsReplace_js__WEBPACK_IMPORTED_MODULE_7__["default"])(ReplacePanel)
 
 
-Object(_ReplacePanelMethodsSearch_js__WEBPACK_IMPORTED_MODULE_6__["default"])(ReplacePanel)
+Object(_ReplacePanelMethodsSearch_js__WEBPACK_IMPORTED_MODULE_8__["default"])(ReplacePanel)
 
 
-Object(_ReplacePanelMethodsTrim_js__WEBPACK_IMPORTED_MODULE_7__["default"])(ReplacePanel)
+Object(_ReplacePanelMethodsTrim_js__WEBPACK_IMPORTED_MODULE_9__["default"])(ReplacePanel)
 
 
-Object(_ReplacePanelMethodsCalc_js__WEBPACK_IMPORTED_MODULE_8__["default"])(ReplacePanel)
+Object(_ReplacePanelMethodsFormat_js__WEBPACK_IMPORTED_MODULE_10__["default"])(ReplacePanel)
+
+
+Object(_ReplacePanelMethodsCalc_js__WEBPACK_IMPORTED_MODULE_11__["default"])(ReplacePanel)
 
 /* harmony default export */ __webpack_exports__["default"] = (ReplacePanel);
 
@@ -30481,6 +30603,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function (ReplacePanel) {
+    ReplacePanel.computed.CodeMirrorEditor = function () {
+      return this.$parent.$refs.CodeMirrorEditor
+    }
+    
   ReplacePanel.computed.showReplaceLineOptionsSelect = function () {
     return (this.localConfig.replaceMode === 'line')
   }
@@ -30680,37 +30806,6 @@ __webpack_require__.r(__webpack_exports__);
     return `Replace (${this.replaceOccurCount})`
   }
 
-  ReplacePanel.computed.isTrimEnabled = function () {
-    for (let i = 0; i < this.textContentLines.length; i++) {
-      let line = this.textContentLines[i]
-      if (line !== line.trim()) {
-        return true
-      }
-    }
-    return false
-  }
-  ReplacePanel.computed.isLTrimEnabled = function () {
-    for (let i = 0; i < this.textContentLines.length; i++) {
-      let line = this.textContentLines[i]
-      let char = line.trim().slice(0, 1)
-      let index = line.indexOf(char)
-      if (index > 0) {
-        return true
-      }
-    }
-    return false
-  }
-  ReplacePanel.computed.isRTrimEnabled = function () {
-    for (let i = 0; i < this.textContentLines.length; i++) {
-      let line = this.textContentLines[i]
-      let char = line.trim().slice(-1)
-      let index = line.lastIndexOf(char)
-      if (index < line.length - 1) {
-        return true
-      }
-    }
-    return false
-  }
 });
 
 /***/ }),
@@ -30762,7 +30857,7 @@ __webpack_require__.r(__webpack_exports__);
     let result = this.calcResult
 
     if (!result) {
-      return '(Auto Calc)'
+      return '(NULL)'
     }
 
     let lengthLimit = 13
@@ -30774,6 +30869,145 @@ __webpack_require__.r(__webpack_exports__);
     }
     return `Copy: ${result}`
   }
+});
+
+/***/ }),
+
+/***/ "./src/components/ReplacePanel/ReplacePanelComputedFormat.js":
+/*!*******************************************************************!*\
+  !*** ./src/components/ReplacePanel/ReplacePanelComputedFormat.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (ReplacePanel) {
+  
+  ReplacePanel.computed.computedFormatActionButtonClassNameList = function () {
+    let list = []
+    
+    let tool = this.localConfig.formatTool
+    //console.log(tool, this.isTrimEnabled)
+    
+    if ((tool === 'lines-trim' && this.isTrimEnabled === false)
+            || (tool === 'lines-ltrim' && this.isLTrimEnabled === false)
+            || (tool === 'lines-rtrim' && this.isRTrimEnabled === false)) {
+      list.push('disabled')
+    }
+    
+    return list.join(' ')
+  }
+  
+  ReplacePanel.computed.isMinifyDisabled = function () {
+    let mode = this.CodeMirrorEditor.getMode()
+    if (mode !== 'javascript'
+            || mode !== 'css'
+            || mode !== 'html') {
+      return 'disabled'
+    }
+    
+    if (this.isTrimEnabled === true
+            || this.textContentLines.length > 1) {
+      return undefined
+    }
+    else {
+      return 'disabled'
+    }
+  }
+  
+  ReplacePanel.computed.isBeautifyDisabled = function () {
+    let mode = this.CodeMirrorEditor.getMode()
+    if (mode !== 'javascript'
+            || mode !== 'css'
+            || mode !== 'html') {
+      return 'disabled'
+    }
+    
+    if (this.isModifiedAfterBeautification === true) {
+      return undefined
+    }
+    else {
+      return 'disabled'
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/ReplacePanel/ReplacePanelComputedTrim.js":
+/*!*****************************************************************!*\
+  !*** ./src/components/ReplacePanel/ReplacePanelComputedTrim.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (ReplacePanel) {
+  
+  ReplacePanel.computed.isTrimEnabled = function () {
+    for (let i = 0; i < this.textContentLines.length; i++) {
+      let line = this.textContentLines[i]
+      if (line !== line.trim()) {
+        return true
+      }
+    }
+    return false
+  }
+  ReplacePanel.computed.isTrimDisabled = function () {
+    if (this.isTrimEnabled === true) {
+      return undefined
+    }
+    else {
+      return 'disabled'
+    }
+  }
+  
+  ReplacePanel.computed.isLTrimEnabled = function () {
+    for (let i = 0; i < this.textContentLines.length; i++) {
+      let line = this.textContentLines[i]
+      let char = line.trim().slice(0, 1)
+      let index = line.indexOf(char)
+      if (index > 0) {
+        return true
+      }
+    }
+    return false
+  }
+  
+  ReplacePanel.computed.isLTrimDisabled = function () {
+    if (this.isLTrimEnabled === true) {
+      return undefined
+    }
+    else {
+      return 'disabled'
+    }
+  }
+  
+  
+  ReplacePanel.computed.isRTrimEnabled = function () {
+    for (let i = 0; i < this.textContentLines.length; i++) {
+      let line = this.textContentLines[i]
+      let char = line.trim().slice(-1)
+      let index = line.lastIndexOf(char)
+      if (index < line.length - 1) {
+        return true
+      }
+    }
+    return false
+  }
+  
+  
+  ReplacePanel.computed.isRTrimDisabled = function () {
+    if (this.isRTrimEnabled === true) {
+      return undefined
+    }
+    else {
+      return 'disabled'
+    }
+  }
+  
 });
 
 /***/ }),
@@ -30794,6 +31028,7 @@ __webpack_require__.r(__webpack_exports__);
       textContentHistory: [],
       replaceLock: false,
       textContentModified: false,
+      isModifiedAfterBeautification: true,
       //panelHeight: '10.8rem'
       panelHeight: '12.5rem',
       calcResultCopied: false
@@ -30816,6 +31051,71 @@ __webpack_require__.r(__webpack_exports__);
   ReplacePanel.methods.copyCalcResult = function () {
     this.utils.ClipboardUtils.copyPlainString(this.calcResult)
     this.calcResultCopied = true
+  }
+});
+    
+
+/***/ }),
+
+/***/ "./src/components/ReplacePanel/ReplacePanelMethodsFormat.js":
+/*!******************************************************************!*\
+  !*** ./src/components/ReplacePanel/ReplacePanelMethodsFormat.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//import htmlMinifier from 'html-minifier-terser'
+//import cssMinifier from 'css-minifiers'
+//import jsmin  from "jsmin"
+ 
+/* harmony default export */ __webpack_exports__["default"] = (function (ReplacePanel) {
+
+  ReplacePanel.methods.doFormat = function () {
+    let tool = this.localConfig.formatTool
+    //console.log(tool)
+    if (tool === 'lines-trim') {
+      return this.trimTextContent()
+    }
+    else if (tool === 'lines-ltrim') {
+      return this.ltrimTextContent()
+    }
+    else if (tool === 'lines-rtrim') {
+      return this.rtrimTextContent()
+    }
+    else if (tool === 'code-minifiy') {
+      return this.minifiyCode()
+    }
+    else if (tool === 'code-beautify') {
+      return this.beautifyCode()
+    }
+  }
+  
+  ReplacePanel.methods.minifiyCode = async function () {
+    let mode = this.CodeMirrorEditor.getMode()
+    
+    if (mode === 'html') {
+      //this.localConfig.textContent = htmlMinifier(this.localConfig.textContent)
+    }
+    if (mode === 'css') {
+      //this.localConfig.textContent = await cssMinifier.csso(this.localConfig.textContent)
+    }
+    if (mode === 'javascript') {
+      this.localConfig.textContent = jsmin(this.localConfig.textContent)
+    }
+    
+    //console.error('minifiyCode')
+    //let result = await minify(this.localConfig.textContent)
+    //console.log(result)
+    //this.localConfig.textContent = result
+  }
+  
+  ReplacePanel.methods.beautifyCode = function () {
+    //console.error('beautifyCode')
+    this.$parent.$refs.CodeMirrorEditor.autoFormat()
+    //console.log()
+    this.isModifiedAfterBeautification = false
   }
 });
     
@@ -31143,11 +31443,11 @@ __webpack_require__.r(__webpack_exports__);
 //  }
 
   ReplacePanel.methods.findPrev = function () {
-    let CodeMirror = this.$parent.$refs.CodeMirror
+    let CodeMirror = this.$parent.$refs.CodeMirrorEditor
     return CodeMirror.findPrev()
   }
   ReplacePanel.methods.findNext = function () {
-    let CodeMirror = this.$parent.$refs.CodeMirror
+    let CodeMirror = this.$parent.$refs.CodeMirrorEditor
     return CodeMirror.findNext()
   }
 });
@@ -31164,7 +31464,22 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+
 /* harmony default export */ __webpack_exports__["default"] = (function (ReplacePanel) {
+//  ReplacePanel.methods.initDropdown = function () {
+//    console.log('222')
+//    console.log($(this.$refs.FormatToolDropdown).length)
+//    //console.log($(this.$el).find('.ui.selection.dropdown').length)
+//    $(this.$refs.FormatToolDropdown).dropdown({
+//      //clearable: true
+//      // you can use any ui transition
+//      action: 'combo'
+//    })
+//  }
+
   ReplacePanel.methods.trimTextContent = function () {
     this.saveHistory()
 
@@ -31271,6 +31586,7 @@ __webpack_require__.r(__webpack_exports__);
         return false
       }
       this.clearHistory()
+      this.isModifiedAfterBeautification = true
     },
     'localConfig.displayPanel'() {
       this.setPanelHeight()
@@ -31283,6 +31599,9 @@ __webpack_require__.r(__webpack_exports__);
         return false
       }
       this.setPanelHeight()
+      
+      //console.log('111')
+      this.initDropdown()
     }
   }
 });
@@ -31795,7 +32114,8 @@ let localConfig = {
   tab: {
     mode: 'tab',
     spaceNumber: 2,
-  }
+  },
+  formatTool: 'lines-trim'
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (localConfig);

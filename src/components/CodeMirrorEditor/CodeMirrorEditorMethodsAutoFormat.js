@@ -1,7 +1,9 @@
 import beautify from 'js-beautify'
 
 export default function (CodeMirrorEditor) {
-  CodeMirrorEditor.methods.autoFormat = function (cm) {
+  CodeMirrorEditor.methods.autoFormat = function () {
+    console.log('autoFormat')
+    let cm = this.codemirror
     let mode = this.getMode()
     
     let process

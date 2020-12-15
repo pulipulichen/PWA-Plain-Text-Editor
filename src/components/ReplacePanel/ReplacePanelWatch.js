@@ -5,6 +5,7 @@ export default function (ReplacePanel) {
         return false
       }
       this.clearHistory()
+      this.isModifiedAfterBeautification = true
     },
     'localConfig.displayPanel'() {
       this.setPanelHeight()
@@ -17,6 +18,9 @@ export default function (ReplacePanel) {
         return false
       }
       this.setPanelHeight()
+      
+      //console.log('111')
+      this.initDropdown()
     }
   }
 }

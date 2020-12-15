@@ -31,9 +31,9 @@
       </button>
     </div>
 
-    
+
     <!-- =========================================== -->
-    
+
     <div class="inline field">
       <label for="stringToReplaceWith">Replace with</label>
       <div class="ui action icon input string-to-replace-with-input-container"
@@ -52,14 +52,14 @@
              v-if="localConfig.stringToReplaceWith"
              v-on:click="localConfig.stringToReplaceWith = ''"></i>
         </div>
-          
+
         <select class="ui compact selection dropdown replace-mode-select"
                 v-model="localConfig.replaceMode">
           <option selected="" value="regex">Regex</option>
           <option value="raw">Raw</option>
           <option value="line">Line</option>
         </select>
-        
+
         <select v-model="localConfig.replaceLineOptions.mode"
                 class="ui compact selection dropdown replace-line-options-select"
                 v-show="showReplaceLineOptionsSelect">
@@ -68,14 +68,14 @@
           <option value="first">First</option>
           <option value="last">Last</option>
         </select>
-        
+
         <div class="ui button replace-count-button"
              v-on:click="doReplace"
              v-bind:class="{disabled: isReplaceDisabled, positive: !isReplaceDisabled}"
              v-bind:title="computedReplaceButtonTitle">
           {{ computedReplaceButtonText }}
         </div>
-        
+
         <div class="ui mini button"
              v-on:click="undo"
              v-if="!isUndoDisabled">
@@ -89,26 +89,53 @@
         </div>
         -->
       </div>
-      
+
     </div>
-    
+
     <!-- =========================================== -->
-    
-    
+
+
     <div class="inline fields">
-      
+
       <div class="field">
         <label>Format</label>
+
+        <div class="ui action icon input format-tool-container">
+          <select v-model="localConfig.formatTool"
+                  class="ui compact selection dropdown format-tool-select">
+            <optgroup label="Trim">
+              <option value="lines-trim" v-bind:disabled="isTrimDisabled">Lines Trim</option>
+              <option value="lines-ltrim" v-bind:disabled="isLTrimDisabled">Lines Left Trim</option>
+              <option value="lines-rtrim" v-bind:disabled="isRTrimDisabled">Lines Right Trim</option>
+            </optgroup>
+            <optgroup label="Compress">
+              <option value="code-minifiy" v-bind:disabled="isMinifyDisabled">Minify</option>
+              <option value="code-beautify" v-bind:disabled="isBeautifyDisabled">Beautify</option>
+            </optgroup>
+          </select>
+          <div class="ui button" 
+               v-bind:class="computedFormatActionButtonClassNameList"
+               v-on:click="doFormat">
+            Format
+          </div>
+        </div>
+
+
       </div>
       
+      <label for="calcCopyButton">
+        Calculator
+      </label>
       <div class="field">
+
         <div class="ui button calc-button"
-         v-bind:class="computedCalcButtonClassName"
-         v-on:click="copyCalcResult"
-         title="Copy"><span>{{ computedCalcButtonText }}</span></div>
+             id="calcCopyButton"
+             v-bind:class="computedCalcButtonClassName"
+             v-on:click="copyCalcResult"
+             title="Copy"><span>{{ computedCalcButtonText }}</span></div>
       </div>
-      
-      
+
+
       <!--
       <div class="inline field"
            v-if="isTrimEnabled">

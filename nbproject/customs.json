@@ -11,6 +11,7 @@
   "attributes": {
     "v-bind:class": {},
     "v-if": {},
+    "v-bind:disabled": {},
     "src": {},
     "v-bind:localConfig": {},
     "v-bind:editor": {},
