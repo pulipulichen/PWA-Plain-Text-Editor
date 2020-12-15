@@ -71,6 +71,7 @@
     "jsmin": "^1.0.1",
     "jsonlint": "^1.6.3",
     "jsonlint-webpack": "^1.1.0",
+    "minify-xml": "^2.4.0",
     "sortablejs": "^1.12.0",
     "toastr": "^2.1.4",
     "toastr2": "^3.0.0-alpha.15",

@@ -1,6 +1,8 @@
 import beautify from 'js-beautify'
+
 import {jsmin} from "jsmin"
 import cssmin from "cssmin"
+import minifyXML from "minify-xml"
 
 export default function (CodeMirrorEditor) {
   CodeMirrorEditor.methods.autoFormat = function () {
@@ -50,6 +52,10 @@ export default function (CodeMirrorEditor) {
     else if (mode === 'javascript') {
       //console.log(this.localConfig.textContent)
       selection = jsmin(selection)
+    }
+    else if (mode === 'html') {
+      //console.log(this.localConfig.textContent)
+      selection = minifyXML(selection)
     }
     else {
       // 刪掉多餘空白與換行

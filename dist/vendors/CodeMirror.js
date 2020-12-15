@@ -527,6 +527,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jsmin__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jsmin__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var cssmin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cssmin */ "./node_modules/cssmin/cssmin.js");
 /* harmony import */ var cssmin__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(cssmin__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var minify_xml__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! minify-xml */ "./node_modules/minify-xml/index.js");
+/* harmony import */ var minify_xml__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(minify_xml__WEBPACK_IMPORTED_MODULE_3__);
+
+
 
 
 
@@ -579,6 +583,10 @@ __webpack_require__.r(__webpack_exports__);
     else if (mode === 'javascript') {
       //console.log(this.localConfig.textContent)
       selection = Object(jsmin__WEBPACK_IMPORTED_MODULE_1__["jsmin"])(selection)
+    }
+    else if (mode === 'html') {
+      //console.log(this.localConfig.textContent)
+      selection = minify_xml__WEBPACK_IMPORTED_MODULE_3___default()(selection)
     }
     else {
       // 刪掉多餘空白與換行
@@ -1058,7 +1066,8 @@ __webpack_require__.r(__webpack_exports__);
             || mode === 'text/x-less') {
       mode = 'css'
     }
-    else if (mode === 'text/html') {
+    else if (mode === 'text/html' 
+            || mode === 'application/xml') {
       mode = 'html'
     }
     return mode

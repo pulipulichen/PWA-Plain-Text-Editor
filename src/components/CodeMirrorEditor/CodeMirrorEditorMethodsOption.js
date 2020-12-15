@@ -16,7 +16,8 @@ export default function (CodeMirrorEditor) {
             || mode === 'text/x-less') {
       mode = 'css'
     }
-    else if (mode === 'text/html') {
+    else if (mode === 'text/html' 
+            || mode === 'application/xml') {
       mode = 'html'
     }
     return mode

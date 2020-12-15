@@ -25,12 +25,12 @@ export default function (ReplacePanel) {
       return 'disabled'
     }
     
-//    let mode = editor.getMode()
-//    if (mode !== 'javascript'
-//            && mode !== 'css'
-//            && mode !== 'html') {
-//      return 'disabled'
-//    }
+    let mode = editor.getMode()
+    if (mode !== 'javascript'
+            && mode !== 'css'
+            && mode !== 'html') {
+      return 'disabled'
+    }
     
     if (this.isTrimEnabled === true
             || this.textContentLines.length > 1) {
