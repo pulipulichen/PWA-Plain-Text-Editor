@@ -163,46 +163,64 @@ export default function (CodeMirrorEditor) {
     return false  // 沒找到
   }
 
-  CodeMirrorEditor.methods.highlightClear = function () {
+  CodeMirrorEditor.methods.highlightClear = async function () {
     //console.log(this.codemirror$el.find('.' + this.highlightClassName).length)
     //this.codemirror$el.find('.' + this.highlightClassName).removeClass(this.highlightClassName)
-    this.markers = this.markers.filter(mark => {
-      mark.clear()
-      return false
-    })
+    while (this.markers.length > 0) {
+      let marker = this.markers.shift()
+      marker.clear()
+      await this.utils.AsyncUtils.sleep(0)
+    }
   }
+  
+  let highlighTextTimer
+  let highlighTextSearching
   CodeMirrorEditor.methods.highlightText = async function (text) {
-    console.error('highlightText')
-    return false
-
+    if (this.config.inited === false) {
+      return false
+    }
+    
     if (this.simpleMode === true) {
       return false
     }
 
-    if (!text) {
-      text = this.localConfig.stringToSearch
-    }
+    clearTimeout(highlighTextTimer)
+    highlighTextTimer = setTimeout(async () => {
+      if (!text) {
+        text = this.localConfig.stringToSearch
+      }
 
-    this.highlightClear()
+      highlighTextSearching = text
+      await this.highlightClear()
 
-    while (!this.codemirror.getSearchCursor) {
-      await this.utils.AsyncUtils.sleep()
-    }
+      if (text === '') {
+        return false
+      }
 
-    var cursor = this.codemirror.getSearchCursor(text)
-    //console.log(cursor)
-    while (cursor.findNext()) {
-      //CURSOR = cursor
+      while (!this.codemirror || !this.codemirror.getSearchCursor) {
+        //console.log('sleep', this.codemirror)
+        await this.utils.AsyncUtils.sleep()
+      }
 
-      let marker = this.codemirror.markText(
-              cursor.from(),
-              cursor.to(),
-              {className: this.highlightClassName}
-      )
-      this.markers.push(marker)
-
-      //MARKER = marker
-    }
+      var cursor = this.codemirror.getSearchCursor(text)
+      //console.log(cursor)
+      while (cursor.findNext()) {
+        //CURSOR = cursor
+        if (highlighTextSearching !== text) {
+          // 條件變更了，取消
+          return false
+        }
+        let marker = this.codemirror.markText(
+                cursor.from(),
+                cursor.to(),
+                {className: this.highlightClassName}
+        )
+        this.markers.push(marker)
+        await this.utils.AsyncUtils.sleep(0)
+        //MARKER = marker
+      }
+    }, 100)
+      
     //this.codemirror.setCursor({line: 1, ch: 0})
   }
 }

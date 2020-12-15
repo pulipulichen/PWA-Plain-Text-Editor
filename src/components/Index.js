@@ -6,8 +6,6 @@ import FloatActionButton from './FloatActionButton/FloatActionButton.vue'
 import FormatPanel from './FormatPanel/FormatPanel.vue'
 import ReplacePanel from './ReplacePanel/ReplacePanel.vue'
 
-import CodeMirrorEditor from './CodeMirrorEditor/CodeMirrorEditor.vue'
-
 let Index = {
   props: ['config', 'localConfig', 'utils'],
   data () {    
@@ -21,7 +19,7 @@ let Index = {
     FloatActionButton,
     FormatPanel,
     ReplacePanel,
-    CodeMirrorEditor
+    CodeMirrorEditor: () => import(/* webpackChunkName: "vendors/CodeMirror" */ './CodeMirrorEditor/CodeMirrorEditor.vue')
   },
   computed: {
   },
@@ -37,7 +35,10 @@ let Index = {
       if (!this.localConfig.displayPanel) {
         this.config.panelHeight = '0rem'
       }
-    }
+    },
+//    'localConfig.textContent' () {
+//      console.log('有變動')
+//    }
   },
 //  async mounted () {
 //    

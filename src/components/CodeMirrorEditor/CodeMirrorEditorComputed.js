@@ -1,4 +1,4 @@
-
+import $ from 'jquery'
 import CodeMirrorOptions from './vendors/codemirror.config.webpack.js'
 
 export default function (CodeMirrorEditor) {
@@ -29,6 +29,10 @@ export default function (CodeMirrorEditor) {
       return $(this.$refs.cmEditor.$el).find('.CodeMirror:first')
     },
     codemirror() {
+      if (!this.$refs.cmEditor) {
+        return undefined
+      }
       return this.$refs.cmEditor.codemirror
     }
+  }
 }

@@ -1,21 +1,22 @@
 /* global CodeMirror, PULI_UTILS */
 import $ from 'jquery'
+import codemirror from './vendors/codemirror.webpack.js'
 
 let CodeMirrorEditor = {
   props: ['config', 'localConfig', 'utils'],
   data: null,
   components: {
-    codemirror: () => import(/* webpackChunkName: "vendors/CodeMirror" */ './vendors/codemirror.webpack.js')
+    codemirror
   },
-  mounted: async function () {
-    //console.log(this.inited)
-    //await this.initCodeMirror()
-    //await this.onConfigInited()
-    //console.log(this.inited)
-    //this.testSearch1211()
-    //this.testSetValue1211()
-    //this.testSearch1213()
-  },
+//  mounted: async function () {
+//    //console.log(this.inited)
+//    //await this.initCodeMirror()
+//    //await this.onConfigInited()
+//    //console.log(this.inited)
+//    //this.testSearch1211()
+//    //this.testSetValue1211()
+//    //this.testSearch1213()
+//  },
   watch: {}, // 移動到 CodeMirrorEditorWatch
   computed: {}, // 移動到 CodeMirrorEditorComputed.js
   methods: {
@@ -45,31 +46,13 @@ let CodeMirrorEditor = {
       
       this.updateDocumentTitle()
     },
-    setMode (mode) {
-      if (this.simpleMode === true) {
-        return false
-      }
-      
-      setTimeout(() => {
-        this.codemirror.setOption("mode", mode)
-      }, 100)
-      
-      //this.codemirror$el = $('.CodeMirror:first')
-      
-      //console.log(this.codemirror$el)
-    },
+    
     onCodeMirrorKeyHandled (e, s) {
       //console.log(e, s)
       //this.$refs.cmEditor.codemirror.execCommand('autocomplete')
       this.$refs.cmEditor.codemirror.showHint()
       
-    },
-    
-    
-    
-    
-    // --------------------------
-    
+    }
   }
 }
 
@@ -79,7 +62,13 @@ CodeMirrorEditorData(CodeMirrorEditor)
 import CodeMirrorEditorComputed from './CodeMirrorEditorComputed.js'
 CodeMirrorEditorComputed(CodeMirrorEditor)
 
+import CodeMirrorEditorWatch from './CodeMirrorEditorWatch.js'
+CodeMirrorEditorWatch(CodeMirrorEditor)
+
 // -------------------
+
+import CodeMirrorEditorMethodsOption from './CodeMirrorEditorMethodsOption.js'
+CodeMirrorEditorMethodsOption(CodeMirrorEditor)
 
 import CodeMirrorEditorMethodsChange from './CodeMirrorEditorMethodsChange.js'
 CodeMirrorEditorMethodsChange(CodeMirrorEditor)

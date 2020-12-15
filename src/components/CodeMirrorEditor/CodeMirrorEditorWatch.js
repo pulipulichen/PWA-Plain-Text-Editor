@@ -1,5 +1,6 @@
 
 export default function (CodeMirrorEditor) {
+    
   CodeMirrorEditor.watch = {
     'config.inited': function () {
       this.onConfigInited()
@@ -8,6 +9,10 @@ export default function (CodeMirrorEditor) {
       this.resizeHeight()
     },
     'localConfig.stringToSearch'() {
+      
+      
+      //console.log('highlightText', this.localConfig.stringToSearch)
+      
       this.highlightText()
     },
     'localConfig.textContent': async function () {
