@@ -205,6 +205,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CodeMirrorEditorMethodsCursor_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./CodeMirrorEditorMethodsCursor.js */ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsCursor.js");
 /* harmony import */ var _CodeMirrorEditorMethodsFind_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./CodeMirrorEditorMethodsFind.js */ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsFind.js");
 /* harmony import */ var _CodeMirrorEditorMethodsDisplay_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./CodeMirrorEditorMethodsDisplay.js */ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsDisplay.js");
+/* harmony import */ var _CodeMirrorEditorMethodsFile_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./CodeMirrorEditorMethodsFile.js */ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsFile.js");
 /* global CodeMirror, PULI_UTILS */
 
 
@@ -306,6 +307,10 @@ Object(_CodeMirrorEditorMethodsFind_js__WEBPACK_IMPORTED_MODULE_9__["default"])(
 
 
 Object(_CodeMirrorEditorMethodsDisplay_js__WEBPACK_IMPORTED_MODULE_10__["default"])(CodeMirrorEditor)
+
+
+Object(_CodeMirrorEditorMethodsFile_js__WEBPACK_IMPORTED_MODULE_11__["default"])(CodeMirrorEditor)
+
 
 /* harmony default export */ __webpack_exports__["default"] = (CodeMirrorEditor);
 
@@ -431,6 +436,10 @@ __webpack_require__.r(__webpack_exports__);
 
       options.extraKeys['Ctrl-Alt-F'] = (cm) => {
         this.autoFormat(cm)
+      }
+      
+      options.extraKeys['Ctrl-S'] = (cm) => {
+        this.saveFile(cm)
       }
 
       //console.log(options)
@@ -801,6 +810,48 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsFile.js":
+/*!************************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsFile.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (CodeMirrorEditor) {
+  CodeMirrorEditor.methods.saveFile = function () {
+    let filename = this.getFilename()
+    
+    this.utils.FileUtils.download(filename, this.code)
+  }
+  
+  CodeMirrorEditor.methods.getFilename = function () {
+    let mode = this.getMode(false)
+    
+    let ext = 'txt'
+    if (mode.indexOf('/') > -1) {
+      ext = mode.slice(mode.lastIndexOf('/') + 1)
+    }
+    else {
+      ext = mode
+    }
+    
+    if (ext === 'javascript') {
+      ext = 'js'
+    }
+    
+    return dayjs__WEBPACK_IMPORTED_MODULE_0___default()().format('MMDD-hhmmss') + '.' + ext
+  }
+  
+});
+
+/***/ }),
+
 /***/ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsFind.js":
 /*!************************************************************************!*\
   !*** ./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsFind.js ***!
@@ -1049,26 +1100,28 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function (CodeMirrorEditor) {
-  CodeMirrorEditor.methods.getMode = function () {
+  CodeMirrorEditor.methods.getMode = function (useFilter = true) {
     let cm = this.codemirror
     let mode = cm.getOption('mode').name
     
-    if (mode === 'javascript'
-            || mode === 'text/javascript'
-            || mode === 'application/json'
-            || mode === 'application/ld+json'
-            || mode === 'text/typescript'
-            || mode === 'application/typescript') {
-      mode = 'javascript'
-    }
-    else if (mode === 'text/css'
-            || mode === 'text/x-scss'
-            || mode === 'text/x-less') {
-      mode = 'css'
-    }
-    else if (mode === 'text/html' 
-            || mode === 'application/xml') {
-      mode = 'html'
+    if (useFilter) {
+      if (mode === 'javascript'
+              || mode === 'text/javascript'
+              || mode === 'application/json'
+              || mode === 'application/ld+json'
+              || mode === 'text/typescript'
+              || mode === 'application/typescript') {
+        mode = 'javascript'
+      }
+      else if (mode === 'text/css'
+              || mode === 'text/x-scss'
+              || mode === 'text/x-less') {
+        mode = 'css'
+      }
+      else if (mode === 'text/html' 
+              || mode === 'application/xml') {
+        mode = 'html'
+      }
     }
     return mode
   }
@@ -1173,6 +1226,7 @@ let extraKeys = {
   "Ctrl-Shift-F": 'none',
   "Ctrl-H": 'none',
   "Ctrl-Shift-Q": 'none',
+  "Ctrl-S": 'none',
   "Ctrl-Alt-F": function (cm) {
     let mode = cm.getOption('mode').name
     

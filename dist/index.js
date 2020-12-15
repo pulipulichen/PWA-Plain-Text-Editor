@@ -32361,6 +32361,42 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/utils/FileUtils.js":
+/*!********************************!*\
+  !*** ./src/utils/FileUtils.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  /**
+   * 下載檔案
+   * https://stackoverflow.com/a/18197341/6645399
+   * @param {String} filename
+   * @param {String} text
+   * @returns {Boolean}
+   */
+  download: function (filename, text) {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+
+    return true
+  }
+});
+
+/***/ }),
+
 /***/ "./src/utils/date-helper.js":
 /*!**********************************!*\
   !*** ./src/utils/date-helper.js ***!
@@ -32405,8 +32441,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _AsyncUtils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AsyncUtils.js */ "./src/utils/AsyncUtils.js");
 /* harmony import */ var _ClipboardUtils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ClipboardUtils.js */ "./src/utils/ClipboardUtils.js");
 /* harmony import */ var _AxiosUtils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AxiosUtils.js */ "./src/utils/AxiosUtils.js");
-/* harmony import */ var _date_helper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./date-helper.js */ "./src/utils/date-helper.js");
-/* harmony import */ var _date_helper_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_date_helper_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _FileUtils_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FileUtils.js */ "./src/utils/FileUtils.js");
+/* harmony import */ var _date_helper_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./date-helper.js */ "./src/utils/date-helper.js");
+/* harmony import */ var _date_helper_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_date_helper_js__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -32415,7 +32453,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   AsyncUtils: _AsyncUtils_js__WEBPACK_IMPORTED_MODULE_0__["default"],
   ClipboardUtils: _ClipboardUtils_js__WEBPACK_IMPORTED_MODULE_1__["default"],
-  AxiosUtils: _AxiosUtils_js__WEBPACK_IMPORTED_MODULE_2__["default"]
+  AxiosUtils: _AxiosUtils_js__WEBPACK_IMPORTED_MODULE_2__["default"],
+  FileUtils: _FileUtils_js__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
 
 /***/ })

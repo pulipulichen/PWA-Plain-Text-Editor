@@ -15,6 +15,10 @@ export default function (CodeMirrorEditor) {
       options.extraKeys['Ctrl-Alt-F'] = (cm) => {
         this.autoFormat(cm)
       }
+      
+      options.extraKeys['Ctrl-S'] = (cm) => {
+        this.saveFile(cm)
+      }
 
       //console.log(options)
 

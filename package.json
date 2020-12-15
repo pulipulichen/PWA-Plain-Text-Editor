@@ -64,6 +64,7 @@
     "axios": "^0.20.0",
     "csslint": "^1.0.5",
     "cssmin": "^0.4.3",
+    "dayjs": "^1.9.7",
     "htmlhint": "^0.14.2",
     "jquery": "^3.5.1",
     "js-beautify": "^1.13.0",

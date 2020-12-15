@@ -100,4 +100,8 @@ CodeMirrorEditorMethodsFind(CodeMirrorEditor)
 import CodeMirrorEditorMethodsDisplay from './CodeMirrorEditorMethodsDisplay.js'
 CodeMirrorEditorMethodsDisplay(CodeMirrorEditor)
 
+import CodeMirrorEditorMethodsFile from './CodeMirrorEditorMethodsFile.js'
+CodeMirrorEditorMethodsFile(CodeMirrorEditor)
+
+
 export default CodeMirrorEditor
