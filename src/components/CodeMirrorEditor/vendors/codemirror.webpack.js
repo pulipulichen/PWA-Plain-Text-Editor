@@ -72,4 +72,7 @@ import 'codemirror/mode/htmlmixed/htmlmixed.js'
 import 'codemirror/addon/selection/active-line.js'
 import 'codemirror/addon/comment/continuecomment.js'
 
+// autoformat
+
+
 export default codemirror

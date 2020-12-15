@@ -14,7 +14,8 @@ export default function (Index) {
     //event.preventDefault()
     //event.stopPropagation()
 
-    let url = './[demo-content/javascript-example.js'
+    //let url = './[demo-content/javascript-example.js'
+    let url = './[demo-content/javascript-minified.js'
 
     let result = await this.utils.AxiosUtils.get(url)
     //let result = '111'

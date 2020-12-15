@@ -169,6 +169,9 @@ window.jsonlint = jsonlint_webpack__WEBPACK_IMPORTED_MODULE_32___default.a
 
 
 
+// autoformat
+
+
 /* harmony default export */ __webpack_exports__["default"] = (vue_codemirror__WEBPACK_IMPORTED_MODULE_0__["codemirror"]);
 
 /***/ })
