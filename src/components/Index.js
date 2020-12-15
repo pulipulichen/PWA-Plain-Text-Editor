@@ -3,22 +3,21 @@
 import ConfigModal from './ConfigModal/ConfigModal.vue'
 import FloatActionButton from './FloatActionButton/FloatActionButton.vue'
 
-import FormatPanel from './FormatPanel/FormatPanel.vue'
-import ReplacePanel from './ReplacePanel/ReplacePanel.vue'
+//import FormatPanel from './FormatPanel/FormatPanel.vue'
+//import ReplacePanel from './ReplacePanel/ReplacePanel.vue'
 
 let Index = {
   props: ['config', 'localConfig', 'utils'],
   data () {    
     this.$i18n.locale = this.config.locale
     return {
-      
     }
   },
   components: {
     ConfigModal,
     FloatActionButton,
-    FormatPanel,
-    ReplacePanel,
+    //FormatPanel,
+    ReplacePanel: () => import(/* webpackChunkName: "vendors/ReplacePanel" */ './ReplacePanel/ReplacePanel.vue'),
     CodeMirrorEditor: () => import(/* webpackChunkName: "vendors/CodeMirror" */ './CodeMirrorEditor/CodeMirrorEditor.vue')
   },
   computed: {

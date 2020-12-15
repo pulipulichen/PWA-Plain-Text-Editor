@@ -87,8 +87,15 @@ let VueController = {
   },
   watch: {},
   mounted: async function () {
+    //console.log('index.js mounted', 1)
+    
     this.restoreFromLocalStorage()
+    
+    //console.log('index.js mounted', 2)
+    
     await this.waitForSemanticUIReady()
+    
+    //console.log('index.js mounted', 3)
     
     this.config.inited = true
   },

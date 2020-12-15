@@ -216,7 +216,7 @@ let CodeMirrorEditor = {
   components: {
     codemirror: _vendors_codemirror_webpack_js__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
-//  mounted: async function () {
+  mounted: async function () {
 //    //console.log(this.inited)
 //    //await this.initCodeMirror()
 //    //await this.onConfigInited()
@@ -224,13 +224,16 @@ let CodeMirrorEditor = {
 //    //this.testSearch1211()
 //    //this.testSetValue1211()
 //    //this.testSearch1213()
-//  },
+    if (this.config.inited === true) {
+      this.onConfigInited()
+    } 
+  },
   watch: {}, // 移動到 CodeMirrorEditorWatch
   computed: {}, // 移動到 CodeMirrorEditorComputed.js
   methods: {
     
     onConfigInited: async function () {
-      console.log('onConfigInited', 1)
+      //console.log('onConfigInited', 1)
       
       //console.log(this.config.inited)
       if (this.config.inited === false
@@ -238,7 +241,7 @@ let CodeMirrorEditor = {
         return false
       }
       
-      console.log('onConfigInited', 2)
+      //console.log('onConfigInited', 2)
       //await this.utils.AsyncUtils.sleep(1000)
       //console.log('javascript')
       //this.codemirror.setOption("mode", 'html')
@@ -249,13 +252,13 @@ let CodeMirrorEditor = {
       await this.utils.AsyncUtils.sleep(0)
       this.changeLock = false
       
-      console.log('onConfigInited', 3)
+      //console.log('onConfigInited', 3)
       
       while (!this.$refs.cmEditor || !this.$refs.cmEditor.$el) {
         await this.utils.AsyncUtils.sleep()
       }
       
-      console.log('onConfigInited', 4)
+      //console.log('onConfigInited', 4)
       
       //console.log('go', this.localConfig.stringToSearch)
       this.highlightText(this.localConfig.stringToSearch)
@@ -265,7 +268,7 @@ let CodeMirrorEditor = {
       this.updateDocumentTitle()
       this.restoreCursorPosition()
       
-      console.log('onConfigInited', 5)
+      //console.log('onConfigInited', 5)
       
       this.inited = true
     },
