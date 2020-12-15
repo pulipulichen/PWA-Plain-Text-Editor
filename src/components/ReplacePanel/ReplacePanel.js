@@ -64,5 +64,7 @@ ReplacePanelMethodsSearch(ReplacePanel)
 import ReplacePanelMethodsTrim from './ReplacePanelMethodsTrim.js'
 ReplacePanelMethodsTrim(ReplacePanel)
 
+import ReplacePanelMethodsCalc from './ReplacePanelMethodsCalc.js'
+ReplacePanelMethodsCalc(ReplacePanel)
 
 export default ReplacePanel
