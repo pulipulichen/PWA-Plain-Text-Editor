@@ -229,13 +229,15 @@ let CodeMirrorEditor = {
   methods: {
     
     onConfigInited: async function () {
+      console.log('onConfigInited', 1)
+      
       //console.log(this.config.inited)
       if (this.config.inited === false
               || this.simpleMode === true) {
         return false
       }
       
-      
+      console.log('onConfigInited', 2)
       //await this.utils.AsyncUtils.sleep(1000)
       //console.log('javascript')
       //this.codemirror.setOption("mode", 'html')
@@ -246,9 +248,13 @@ let CodeMirrorEditor = {
       await this.utils.AsyncUtils.sleep(0)
       this.changeLock = false
       
+      console.log('onConfigInited', 3)
+      
       while (!this.$refs.cmEditor || !this.$refs.cmEditor.$el) {
         await this.utils.AsyncUtils.sleep()
       }
+      
+      console.log('onConfigInited', 4)
       
       //console.log('go', this.localConfig.stringToSearch)
       this.highlightText(this.localConfig.stringToSearch)
@@ -257,6 +263,8 @@ let CodeMirrorEditor = {
       
       this.updateDocumentTitle()
       this.restoreCursorPosition()
+      
+      console.log('onConfigInited', 5)
       
       this.inited = true
     },
@@ -639,13 +647,14 @@ __webpack_require__.r(__webpack_exports__);
 
     return this.codemirror.getCursor(position)
   }
-  
+   
   let cursorPositionKey = 'codemirror.cursor.position'
-  let viewportKey = 'codemirror.viewport.position'
+  //let viewportKey = 'codemirror.viewport.position'
   CodeMirrorEditor.methods.saveCursorPosition = function () {
     if (this.simpleMode === true
             || this.config.inited === false
-            || this.inited === false) {
+            || this.inited === false
+            || this.changeLock === true) {
       return false
     }
 
@@ -663,10 +672,10 @@ __webpack_require__.r(__webpack_exports__);
     
     let saved = JSON.stringify(this.cursorPositionSaved)
     localStorage.setItem(cursorPositionKey, saved)
-    
+    console.log('saveCursorPosition')
   }
   CodeMirrorEditor.methods.restoreCursorPosition = function () {
-    //console.log('restoreCursorPosition', this.config.inited, this.cursorPositionSaved.from.line)
+    console.log('restoreCursorPosition', this.config.inited, this.cursorPositionSaved.from)
     if (this.simpleMode === true
             || this.config.inited === false) {
       return false
@@ -683,7 +692,7 @@ __webpack_require__.r(__webpack_exports__);
             && this.cursorPositionSaved.from.ch === this.cursorPositionSaved.to.ch) {
       this.jumpToLine(this.cursorPositionSaved.from.line + 1, this.cursorPositionSaved.from.ch)
 
-      //console.log('restoreCursor cursor')
+      console.log('restoreCursor cursor')
     } else {
       let from = {
         line: this.cursorPositionSaved.from.line,
@@ -695,7 +704,7 @@ __webpack_require__.r(__webpack_exports__);
               }
       
       this.codemirror.setSelection(from, to)
-      //console.log('restoreCursor selection')
+      console.log('restoreCursor selection')
     }
 
     if (this.editorScroll$el) {
@@ -1068,8 +1077,8 @@ __webpack_require__.r(__webpack_exports__);
         return false
       }
 
-      this.changeLock = true
       this.saveCursorPosition()
+      this.changeLock = true
       this.code = this.localConfig.textContent
       await this.utils.AsyncUtils.sleep(0)
       this.restoreCursorPosition()
@@ -1166,7 +1175,7 @@ let options = {
   foldGutter: true,
   showMatchesOnScrollbar: true,
   lint: {
-    esversion: 8,
+    esversion: 9,
     "asi": true,
   },
   gutters: ["CodeMirror-lint-markers", "CodeMirror-linenumbers", "CodeMirror-foldgutter"],

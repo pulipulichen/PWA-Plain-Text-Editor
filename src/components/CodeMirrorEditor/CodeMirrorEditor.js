@@ -22,13 +22,15 @@ let CodeMirrorEditor = {
   methods: {
     
     onConfigInited: async function () {
+      console.log('onConfigInited', 1)
+      
       //console.log(this.config.inited)
       if (this.config.inited === false
               || this.simpleMode === true) {
         return false
       }
       
-      
+      console.log('onConfigInited', 2)
       //await this.utils.AsyncUtils.sleep(1000)
       //console.log('javascript')
       //this.codemirror.setOption("mode", 'html')
@@ -39,9 +41,13 @@ let CodeMirrorEditor = {
       await this.utils.AsyncUtils.sleep(0)
       this.changeLock = false
       
+      console.log('onConfigInited', 3)
+      
       while (!this.$refs.cmEditor || !this.$refs.cmEditor.$el) {
         await this.utils.AsyncUtils.sleep()
       }
+      
+      console.log('onConfigInited', 4)
       
       //console.log('go', this.localConfig.stringToSearch)
       this.highlightText(this.localConfig.stringToSearch)
@@ -50,6 +56,8 @@ let CodeMirrorEditor = {
       
       this.updateDocumentTitle()
       this.restoreCursorPosition()
+      
+      console.log('onConfigInited', 5)
       
       this.inited = true
     },

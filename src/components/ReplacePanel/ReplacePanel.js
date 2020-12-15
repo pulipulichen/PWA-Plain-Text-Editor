@@ -45,7 +45,7 @@ export default {
         return true
       }
 
-      if (this.config.replaceMode !== 'line'
+      if (this.localConfig.replaceMode !== 'line'
               && this.localConfig.stringToSearch === '') {
         return true
       }
@@ -62,18 +62,18 @@ export default {
         return 0
       }
 
-      if (this.config.replaceMode !== 'line'
+      if (this.localConfig.replaceMode !== 'line'
               && this.localConfig.stringToSearch === '') {
         return true
       }
 
       let count = 0
       //let stringToSearch = this.localConfig.stringToSearch
-      if (this.config.replaceMode === 'raw') {
+      if (this.localConfig.replaceMode === 'raw') {
         count = this.countOccurRaw
-      } else if (this.config.replaceMode === 'regex') {
+      } else if (this.localConfig.replaceMode === 'regex') {
         count = this.countOccurRegex
-      } else if (this.config.replaceMode === 'line') {
+      } else if (this.localConfig.replaceMode === 'line') {
         count = this.countOccurLine
       }
 
@@ -116,7 +116,7 @@ export default {
       return this.localConfig.stringToSearch.replace(/\\/g, '\\')
     },
     stringToReplaceWithRaw() {
-      return this.config.stringToReplaceWith.replace(/\\/g, '\\')
+      return this.localConfig.stringToReplaceWith.replace(/\\/g, '\\')
     },
     countOccurLine() {
       let stringToSearch = this.stringToSearchRaw

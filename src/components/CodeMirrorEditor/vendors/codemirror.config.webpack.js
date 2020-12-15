@@ -54,7 +54,7 @@ let options = {
   foldGutter: true,
   showMatchesOnScrollbar: true,
   lint: {
-    esversion: 8,
+    esversion: 9,
     "asi": true,
   },
   gutters: ["CodeMirror-lint-markers", "CodeMirror-linenumbers", "CodeMirror-foldgutter"],

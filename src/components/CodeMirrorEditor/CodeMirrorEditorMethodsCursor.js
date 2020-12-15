@@ -42,13 +42,14 @@ export default function (CodeMirrorEditor) {
 
     return this.codemirror.getCursor(position)
   }
-  
+   
   let cursorPositionKey = 'codemirror.cursor.position'
-  let viewportKey = 'codemirror.viewport.position'
+  //let viewportKey = 'codemirror.viewport.position'
   CodeMirrorEditor.methods.saveCursorPosition = function () {
     if (this.simpleMode === true
             || this.config.inited === false
-            || this.inited === false) {
+            || this.inited === false
+            || this.changeLock === true) {
       return false
     }
 
@@ -66,10 +67,10 @@ export default function (CodeMirrorEditor) {
     
     let saved = JSON.stringify(this.cursorPositionSaved)
     localStorage.setItem(cursorPositionKey, saved)
-    
+    console.log('saveCursorPosition')
   }
   CodeMirrorEditor.methods.restoreCursorPosition = function () {
-    //console.log('restoreCursorPosition', this.config.inited, this.cursorPositionSaved.from.line)
+    console.log('restoreCursorPosition', this.config.inited, this.cursorPositionSaved.from)
     if (this.simpleMode === true
             || this.config.inited === false) {
       return false
@@ -86,7 +87,7 @@ export default function (CodeMirrorEditor) {
             && this.cursorPositionSaved.from.ch === this.cursorPositionSaved.to.ch) {
       this.jumpToLine(this.cursorPositionSaved.from.line + 1, this.cursorPositionSaved.from.ch)
 
-      //console.log('restoreCursor cursor')
+      console.log('restoreCursor cursor')
     } else {
       let from = {
         line: this.cursorPositionSaved.from.line,
@@ -98,7 +99,7 @@ export default function (CodeMirrorEditor) {
               }
       
       this.codemirror.setSelection(from, to)
-      //console.log('restoreCursor selection')
+      console.log('restoreCursor selection')
     }
 
     if (this.editorScroll$el) {

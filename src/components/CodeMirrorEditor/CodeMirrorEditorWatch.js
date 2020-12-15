@@ -22,8 +22,8 @@ export default function (CodeMirrorEditor) {
         return false
       }
 
-      this.changeLock = true
       this.saveCursorPosition()
+      this.changeLock = true
       this.code = this.localConfig.textContent
       await this.utils.AsyncUtils.sleep(0)
       this.restoreCursorPosition()
