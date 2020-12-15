@@ -9,13 +9,13 @@ export default function (CodeMirrorEditor) {
       this.resizeHeight()
     },
     'localConfig.stringToSearch'() {
-      
-      
-      //console.log('highlightText', this.localConfig.stringToSearch)
-      
       this.highlightText()
     },
     'localConfig.textContent': async function () {
+      if (this.config.inited === false) {
+        return false
+      }
+      
       //this.restoreCursorPosition()
       //console.log('changed', this.localConfig.textContent)
       if (this.changeLock === true) {
@@ -33,6 +33,10 @@ export default function (CodeMirrorEditor) {
       //this.$refs.cmEditor.setValue(this.localConfig.textContent)
     },
     'code': async function () {
+      if (this.config.inited === false) {
+        return false
+      }
+      
       //console.log('code')
       if (this.changeLock === true) {
         return false

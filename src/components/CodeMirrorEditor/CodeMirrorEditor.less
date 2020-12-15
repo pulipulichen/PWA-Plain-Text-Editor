@@ -1,5 +1,15 @@
+.code-mirror-wrapper {
+  opacity: 0;
+  transition: opacity 0.5s;
+  
+  &.inited {
+    opacity: 1;
+  }
+}
 
 textarea.editor {
+  display: none;
+  
   height: 100vh !important;
   width: 100% !important;
   

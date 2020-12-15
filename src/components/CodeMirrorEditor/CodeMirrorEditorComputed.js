@@ -28,6 +28,14 @@ export default function (CodeMirrorEditor) {
 
       return $(this.$refs.cmEditor.$el).find('.CodeMirror:first')
     },
+    editorScroll$el () {
+      //console.log(this.$refs.cmEditor.$el)
+      if (!this.$refs.cmEditor) {
+        return undefined
+      }
+
+      return $(this.$refs.cmEditor.$el).find('.CodeMirror:first .CodeMirror-scroll:first')
+    },
     codemirror() {
       if (!this.$refs.cmEditor) {
         return undefined

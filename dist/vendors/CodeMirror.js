@@ -27,7 +27,7 @@ module.exports = function (Component) {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, "textarea.editor[data-v-6cc6c822] {\n  height: 100vh !important;\n  width: 100% !important;\n  width: 100vw;\n  height: 100vh;\n  line-height: 2.3rem;\n  font-size: 1.5rem;\n  padding: 0.5rem;\n  border: none;\n  overflow: auto;\n  outline: none;\n  -webkit-box-shadow: none;\n  -moz-box-shadow: none;\n  box-shadow: none;\n  resize: none;\n  /*remove the resize handle on the bottom right*/\n}\ntextarea.editor.disable-wrap[data-v-6cc6c822] {\n  white-space: nowrap;\n}\n", "",{"version":3,"sources":["CodeMirrorEditor.less"],"names":[],"mappings":"AAAA;EACE,wBAAwB;EACxB,sBAAsB;EACtB,YAAY;EACZ,aAAa;EACb,mBAAmB;EACnB,iBAAiB;EACjB,eAAe;EACf,YAAY;EACZ,cAAc;EACd,aAAa;EACb,wBAAwB;EACxB,qBAAqB;EACrB,gBAAgB;EAChB,YAAY;EACZ,+CAA+C;AACjD;AACA;EACE,mBAAmB;AACrB","file":"CodeMirrorEditor.less","sourcesContent":["textarea.editor[data-v-6cc6c822] {\n  height: 100vh !important;\n  width: 100% !important;\n  width: 100vw;\n  height: 100vh;\n  line-height: 2.3rem;\n  font-size: 1.5rem;\n  padding: 0.5rem;\n  border: none;\n  overflow: auto;\n  outline: none;\n  -webkit-box-shadow: none;\n  -moz-box-shadow: none;\n  box-shadow: none;\n  resize: none;\n  /*remove the resize handle on the bottom right*/\n}\ntextarea.editor.disable-wrap[data-v-6cc6c822] {\n  white-space: nowrap;\n}\n"]}]);
+exports.push([module.i, ".code-mirror-wrapper[data-v-6cc6c822] {\n  opacity: 0;\n  transition: opacity 0.5s;\n}\n.code-mirror-wrapper.inited[data-v-6cc6c822] {\n  opacity: 1;\n}\ntextarea.editor[data-v-6cc6c822] {\n  display: none;\n  height: 100vh !important;\n  width: 100% !important;\n  width: 100vw;\n  height: 100vh;\n  line-height: 2.3rem;\n  font-size: 1.5rem;\n  padding: 0.5rem;\n  border: none;\n  overflow: auto;\n  outline: none;\n  -webkit-box-shadow: none;\n  -moz-box-shadow: none;\n  box-shadow: none;\n  resize: none;\n  /*remove the resize handle on the bottom right*/\n}\ntextarea.editor.disable-wrap[data-v-6cc6c822] {\n  white-space: nowrap;\n}\n", "",{"version":3,"sources":["CodeMirrorEditor.less"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,wBAAwB;AAC1B;AACA;EACE,UAAU;AACZ;AACA;EACE,aAAa;EACb,wBAAwB;EACxB,sBAAsB;EACtB,YAAY;EACZ,aAAa;EACb,mBAAmB;EACnB,iBAAiB;EACjB,eAAe;EACf,YAAY;EACZ,cAAc;EACd,aAAa;EACb,wBAAwB;EACxB,qBAAqB;EACrB,gBAAgB;EAChB,YAAY;EACZ,+CAA+C;AACjD;AACA;EACE,mBAAmB;AACrB","file":"CodeMirrorEditor.less","sourcesContent":[".code-mirror-wrapper[data-v-6cc6c822] {\n  opacity: 0;\n  transition: opacity 0.5s;\n}\n.code-mirror-wrapper.inited[data-v-6cc6c822] {\n  opacity: 1;\n}\ntextarea.editor[data-v-6cc6c822] {\n  display: none;\n  height: 100vh !important;\n  width: 100% !important;\n  width: 100vw;\n  height: 100vh;\n  line-height: 2.3rem;\n  font-size: 1.5rem;\n  padding: 0.5rem;\n  border: none;\n  overflow: auto;\n  outline: none;\n  -webkit-box-shadow: none;\n  -moz-box-shadow: none;\n  box-shadow: none;\n  resize: none;\n  /*remove the resize handle on the bottom right*/\n}\ntextarea.editor.disable-wrap[data-v-6cc6c822] {\n  white-space: nowrap;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -69,7 +69,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "code-mirror-wrapper" },
+    { staticClass: "code-mirror-wrapper", class: { inited: _vm.inited } },
     [
       _vm.simpleMode
         ? _c("textarea", {
@@ -99,7 +99,11 @@ var render = function() {
         ? _c("codemirror", {
             ref: "cmEditor",
             attrs: { options: _vm.computedCodeMirrorOptions },
-            on: { inputRead: _vm.onCodeMirrorKeyHandled },
+            on: {
+              inputRead: _vm.onCodeMirrorKeyHandled,
+              cursorActivity: _vm.onCodeMirrorCursorActivity,
+              viewportChange: _vm.onCodeMirrorCursorActivity
+            },
             model: {
               value: _vm.code,
               callback: function($$v) {
@@ -237,6 +241,10 @@ let CodeMirrorEditor = {
       //this.codemirror.setOption("mode", 'html')
       
       //await this.utils.AsyncUtils.sleep(100)
+      this.changeLock = true
+      this.code = this.localConfig.textContent
+      await this.utils.AsyncUtils.sleep(0)
+      this.changeLock = false
       
       while (!this.$refs.cmEditor || !this.$refs.cmEditor.$el) {
         await this.utils.AsyncUtils.sleep()
@@ -248,6 +256,9 @@ let CodeMirrorEditor = {
       //console.log(this.markers.length)
       
       this.updateDocumentTitle()
+      this.restoreCursorPosition()
+      
+      this.inited = true
     },
     
     onCodeMirrorKeyHandled (e, s) {
@@ -426,6 +437,14 @@ __webpack_require__.r(__webpack_exports__);
 
       return jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.$refs.cmEditor.$el).find('.CodeMirror:first')
     },
+    editorScroll$el () {
+      //console.log(this.$refs.cmEditor.$el)
+      if (!this.$refs.cmEditor) {
+        return undefined
+      }
+
+      return jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.$refs.cmEditor.$el).find('.CodeMirror:first .CodeMirror-scroll:first')
+    },
     codemirror() {
       if (!this.$refs.cmEditor) {
         return undefined
@@ -450,6 +469,7 @@ __webpack_require__.r(__webpack_exports__);
   CodeMirrorEditor.data = function () {
     this.$i18n.locale = this.config.locale
     return {
+      inited: false,
       simpleMode: false,
       //editor: null,
       //editor$el: null,
@@ -459,7 +479,8 @@ __webpack_require__.r(__webpack_exports__);
       changeLock: false,
       cursorPositionSaved: {
         from: {line: null, ch: null},
-        to: {line: null, ch: null}
+        to: {line: null, ch: null},
+        scrollTop: null
       }
     }
   }
@@ -575,6 +596,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function (CodeMirrorEditor) {
+  CodeMirrorEditor.methods.onCodeMirrorCursorActivity = function () {
+    this.saveCursorPosition()
+  }
+    
   CodeMirrorEditor.methods.jumpToLine = function (i, from = 0) {
     if (this.simpleMode === true) {
       return false
@@ -614,9 +639,13 @@ __webpack_require__.r(__webpack_exports__);
 
     return this.codemirror.getCursor(position)
   }
+  
+  let cursorPositionKey = 'codemirror.cursor.position'
+  let viewportKey = 'codemirror.viewport.position'
   CodeMirrorEditor.methods.saveCursorPosition = function () {
     if (this.simpleMode === true
-            || this.config.inited === false) {
+            || this.config.inited === false
+            || this.inited === false) {
       return false
     }
 
@@ -627,13 +656,28 @@ __webpack_require__.r(__webpack_exports__);
     let toCursor = this.getCursor(false)
     this.cursorPositionSaved.to.line = toCursor.line
     this.cursorPositionSaved.to.ch = toCursor.ch
+    
+    this.cursorPositionSaved.scrollTop = this.editorScroll$el.scrollTop()
+    
+    //console.log(this.editor$el.scrollTop)
+    
+    let saved = JSON.stringify(this.cursorPositionSaved)
+    localStorage.setItem(cursorPositionKey, saved)
+    
   }
   CodeMirrorEditor.methods.restoreCursorPosition = function () {
+    //console.log('restoreCursorPosition', this.config.inited, this.cursorPositionSaved.from.line)
     if (this.simpleMode === true
             || this.config.inited === false) {
       return false
     }
 
+    
+    if (this.cursorPositionSaved.from.line === null) {
+      let saved = localStorage.getItem(cursorPositionKey)
+      this.cursorPositionSaved = JSON.parse(saved)
+      //console.log(saved)
+    }
 
     if (this.cursorPositionSaved.from.line === this.cursorPositionSaved.to.line
             && this.cursorPositionSaved.from.ch === this.cursorPositionSaved.to.ch) {
@@ -641,17 +685,22 @@ __webpack_require__.r(__webpack_exports__);
 
       //console.log('restoreCursor cursor')
     } else {
-      this.codemirror.setSelection({
+      let from = {
         line: this.cursorPositionSaved.from.line,
         ch: this.cursorPositionSaved.from.ch
-      },
-              {
+      }
+      let to = {
                 line: this.cursorPositionSaved.to.line,
                 ch: this.cursorPositionSaved.to.ch
-              })
+              }
+      
+      this.codemirror.setSelection(from, to)
       //console.log('restoreCursor selection')
     }
 
+    if (this.editorScroll$el) {
+      this.editorScroll$el.scrollTop(this.cursorPositionSaved.scrollTop)
+    }
   }
   CodeMirrorEditor.methods.getSelectedText = function () {
     if (this.simpleMode === true) {
@@ -1006,13 +1055,13 @@ __webpack_require__.r(__webpack_exports__);
       this.resizeHeight()
     },
     'localConfig.stringToSearch'() {
-      
-      
-      //console.log('highlightText', this.localConfig.stringToSearch)
-      
       this.highlightText()
     },
     'localConfig.textContent': async function () {
+      if (this.config.inited === false) {
+        return false
+      }
+      
       //this.restoreCursorPosition()
       //console.log('changed', this.localConfig.textContent)
       if (this.changeLock === true) {
@@ -1030,6 +1079,10 @@ __webpack_require__.r(__webpack_exports__);
       //this.$refs.cmEditor.setValue(this.localConfig.textContent)
     },
     'code': async function () {
+      if (this.config.inited === false) {
+        return false
+      }
+      
       //console.log('code')
       if (this.changeLock === true) {
         return false

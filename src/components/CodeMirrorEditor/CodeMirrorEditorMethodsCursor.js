@@ -1,4 +1,8 @@
 export default function (CodeMirrorEditor) {
+  CodeMirrorEditor.methods.onCodeMirrorCursorActivity = function () {
+    this.saveCursorPosition()
+  }
+    
   CodeMirrorEditor.methods.jumpToLine = function (i, from = 0) {
     if (this.simpleMode === true) {
       return false
@@ -38,9 +42,13 @@ export default function (CodeMirrorEditor) {
 
     return this.codemirror.getCursor(position)
   }
+  
+  let cursorPositionKey = 'codemirror.cursor.position'
+  let viewportKey = 'codemirror.viewport.position'
   CodeMirrorEditor.methods.saveCursorPosition = function () {
     if (this.simpleMode === true
-            || this.config.inited === false) {
+            || this.config.inited === false
+            || this.inited === false) {
       return false
     }
 
@@ -51,13 +59,28 @@ export default function (CodeMirrorEditor) {
     let toCursor = this.getCursor(false)
     this.cursorPositionSaved.to.line = toCursor.line
     this.cursorPositionSaved.to.ch = toCursor.ch
+    
+    this.cursorPositionSaved.scrollTop = this.editorScroll$el.scrollTop()
+    
+    //console.log(this.editor$el.scrollTop)
+    
+    let saved = JSON.stringify(this.cursorPositionSaved)
+    localStorage.setItem(cursorPositionKey, saved)
+    
   }
   CodeMirrorEditor.methods.restoreCursorPosition = function () {
+    //console.log('restoreCursorPosition', this.config.inited, this.cursorPositionSaved.from.line)
     if (this.simpleMode === true
             || this.config.inited === false) {
       return false
     }
 
+    
+    if (this.cursorPositionSaved.from.line === null) {
+      let saved = localStorage.getItem(cursorPositionKey)
+      this.cursorPositionSaved = JSON.parse(saved)
+      //console.log(saved)
+    }
 
     if (this.cursorPositionSaved.from.line === this.cursorPositionSaved.to.line
             && this.cursorPositionSaved.from.ch === this.cursorPositionSaved.to.ch) {
@@ -65,17 +88,22 @@ export default function (CodeMirrorEditor) {
 
       //console.log('restoreCursor cursor')
     } else {
-      this.codemirror.setSelection({
+      let from = {
         line: this.cursorPositionSaved.from.line,
         ch: this.cursorPositionSaved.from.ch
-      },
-              {
+      }
+      let to = {
                 line: this.cursorPositionSaved.to.line,
                 ch: this.cursorPositionSaved.to.ch
-              })
+              }
+      
+      this.codemirror.setSelection(from, to)
       //console.log('restoreCursor selection')
     }
 
+    if (this.editorScroll$el) {
+      this.editorScroll$el.scrollTop(this.cursorPositionSaved.scrollTop)
+    }
   }
   CodeMirrorEditor.methods.getSelectedText = function () {
     if (this.simpleMode === true) {

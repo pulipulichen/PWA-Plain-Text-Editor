@@ -1,4 +1,5 @@
-<div class="code-mirror-wrapper">
+<div class="code-mirror-wrapper"
+     v-bind:class="{inited: inited}">
   <textarea
     v-if="simpleMode"
     v-model="localConfig.textContent"
@@ -11,5 +12,7 @@
     v-model="code" 
     v-bind:options="computedCodeMirrorOptions"
     v-on:inputRead="onCodeMirrorKeyHandled"
+    v-on:cursorActivity="onCodeMirrorCursorActivity"
+    v-on:viewportChange="onCodeMirrorCursorActivity"
     v-if="!simpleMode"/>
 </div>

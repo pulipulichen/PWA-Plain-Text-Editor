@@ -34,6 +34,10 @@ let CodeMirrorEditor = {
       //this.codemirror.setOption("mode", 'html')
       
       //await this.utils.AsyncUtils.sleep(100)
+      this.changeLock = true
+      this.code = this.localConfig.textContent
+      await this.utils.AsyncUtils.sleep(0)
+      this.changeLock = false
       
       while (!this.$refs.cmEditor || !this.$refs.cmEditor.$el) {
         await this.utils.AsyncUtils.sleep()
@@ -45,6 +49,9 @@ let CodeMirrorEditor = {
       //console.log(this.markers.length)
       
       this.updateDocumentTitle()
+      this.restoreCursorPosition()
+      
+      this.inited = true
     },
     
     onCodeMirrorKeyHandled (e, s) {
