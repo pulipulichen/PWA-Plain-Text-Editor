@@ -97,10 +97,23 @@
     
     <div class="inline fields">
       
+      <div class="field">
+        <label>Format</label>
+      </div>
+      
+      <div class="field">
+        <div class="ui button calc-button"
+         v-bind:class="computedCalcButtonClassName"
+         v-on:click="copyCalcResult"
+         title="Copy"><span>{{ computedCalcButtonText }}</span></div>
+      </div>
+      
+      
+      <!--
       <div class="inline field"
            v-if="isTrimEnabled">
         <button type="button"
-          class="ui button"
+          class="ui mini button"
           v-on:click="trimTextContent">
             Trim
         </button>
@@ -108,7 +121,7 @@
       <div class="inline field"
            v-if="isLTrimEnabled">
         <button type="button"
-          class="ui button"
+          class="ui mini button"
           v-on:click="ltrimTextContent">
             LTrim
         </button>
@@ -116,11 +129,12 @@
       <div class="inline field"
            v-if="isRTrimEnabled">
         <button type="button"
-          class="ui button"
+          class="ui mini button"
           v-on:click="rtrimTextContent">
             RTrim
         </button>
       </div>
+      -->
     </div>
   </div>
 </div>
