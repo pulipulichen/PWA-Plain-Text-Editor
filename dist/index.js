@@ -27653,7 +27653,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _vendors_codemirror_config_webpack_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./vendors/codemirror.config.webpack.js */ "./src/components/CodeMirrorEditor/vendors/codemirror.config.webpack.js");
 /* global CodeMirror, PULI_UTILS */
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -27716,85 +27718,19 @@ __webpack_require__.r(__webpack_exports__);
     editor () {
       return this.$refs.cmEditor
     },
-    /**
-     * 如果要阻止CodeMirror的熱鍵，就在這裡設定
-     * @returns JSON
-     */
-    extraKeys () {
-      return {
-        "Ctrl-F": 'none',
-        "Ctrl-Shift-F": 'none',
-        "Ctrl-H": 'none',
-        "Ctrl-Shift-Q": 'none',
-        "Ctrl-.": "autocomplete",
-        "Tab": function(cm){
-          cm.replaceSelection("  " , "end");
-        }
-      }
-    },
-    
     computedCodeMirrorOptions () {
-      return {
-        lineNumbers: true,
-        lineWrapping: true,
-        matchBrackets: true,
-        autoCloseBrackets: true,
-        matchTags: true,
-        autoCloseTags: true,
-        foldGutter: true,
-        showMatchesOnScrollbar: true,
-        lint: true,
-        gutters: ["CodeMirror-lint-markers", "CodeMirror-linenumbers", "CodeMirror-foldgutter"],
-        mode: {name: "htmlmixed", globalVars: true},
-        //mode:  "javascript",
-        extraKeys: this.extraKeys,
-        hintOptions: {
-          alignWithWord: false,
-          completeSingle: false,
-        },
+      
+      let options = {
+        ..._vendors_codemirror_config_webpack_js__WEBPACK_IMPORTED_MODULE_1__["default"]
       }
+      
+      console.log(options)
+      
+      return options
     },
   },
   methods: {
-    initCodeMirror () {
-      if (this.simpleMode === true) {
-        this.editor$el = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.$refs.MainTextarea)
-        return false
-      }
-      
-      return new Promise((resolve) => {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()(() => {
-          if (typeof(CodeMirror) === 'undefined') {
-            setTimeout(async () => {
-              await this.initCodeMirror()
-              resolve(true)
-            }, 100)
-            return false
-          }
-
-          this.editor = CodeMirror.fromTextArea(this.$refs.MainTextarea, {
-            lineNumbers: true,
-            lineWrapping: true,
-
-            //mode:  "javascript",
-            extraKeys: this.extraKeys,
-          })
-
-          this.editor.on('change', () => {
-            this.onEditorChange()
-          })
-
-          this.editor$el = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.$el).find('.CodeMirror:first')
-          //setTimeout(() => {
-          this.resizeHeight()
-          
-          resolve(true)
-          
-          //}, 100)
-        })
-      })
-        
-    },
+    
     onConfigInited () {
       //console.log(this.config.inited)
       if (this.config.inited === false
@@ -28281,6 +28217,55 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_CodeMirrorEditorGlobal_less_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_CodeMirrorEditorGlobal_less_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_CodeMirrorEditorGlobal_less_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_CodeMirrorEditorGlobal_less_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/vendors/codemirror.config.webpack.js":
+/*!******************************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/vendors/codemirror.config.webpack.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+let extraKeys = {
+  "Ctrl-F": 'none',
+  "Ctrl-Shift-F": 'none',
+  "Ctrl-H": 'none',
+  "Ctrl-Shift-Q": 'none',
+  "Ctrl-.": "autocomplete",
+  "Tab": function(cm){
+    cm.replaceSelection("  " , "end");
+  }
+}
+
+let options = {
+  lineNumbers: true,
+        lineWrapping: true,
+        matchBrackets: true,
+        autoCloseBrackets: true,
+        matchTags: true,
+        autoCloseTags: true,
+        foldGutter: true,
+        showMatchesOnScrollbar: true,
+        lint: true,
+        gutters: ["CodeMirror-lint-markers", "CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+        mode: {name: "javascript", globalVars: true},
+        //mode:  "javascript",
+        extraKeys: extraKeys,
+        styleActiveLine: true,
+        continueComments: {
+          continueLineComment: true
+        },
+        hintOptions: {
+          alignWithWord: false,
+          completeSingle: false,
+        }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (options);
 
 /***/ }),
 

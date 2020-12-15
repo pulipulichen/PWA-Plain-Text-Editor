@@ -61,4 +61,8 @@ import 'codemirror/mode/xml/xml.js'
 import 'codemirror/mode/htmlembedded/htmlembedded.js'
 import 'codemirror/mode/htmlmixed/htmlmixed.js'
 
+// edit
+import 'codemirror/addon/selection/active-line.js'
+import 'codemirror/addon/comment/continuecomment.js'
+
 export default codemirror

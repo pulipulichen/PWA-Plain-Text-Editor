@@ -2752,6 +2752,128 @@ if ( true && module.exports) {
 
 /***/ }),
 
+/***/ "./node_modules/codemirror/addon/comment/continuecomment.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/codemirror/addon/comment/continuecomment.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// CodeMirror, copyright (c) by Marijn Haverbeke and others
+// Distributed under an MIT license: https://codemirror.net/LICENSE
+
+(function(mod) {
+  if (true) // CommonJS
+    mod(__webpack_require__(/*! ../../lib/codemirror */ "./node_modules/codemirror/lib/codemirror.js"));
+  else {}
+})(function(CodeMirror) {
+  var nonspace = /\S/g;
+  var repeat = String.prototype.repeat || function (n) { return Array(n + 1).join(this); };
+  function continueComment(cm) {
+    if (cm.getOption("disableInput")) return CodeMirror.Pass;
+    var ranges = cm.listSelections(), mode, inserts = [];
+    for (var i = 0; i < ranges.length; i++) {
+      var pos = ranges[i].head
+      if (!/\bcomment\b/.test(cm.getTokenTypeAt(pos))) return CodeMirror.Pass;
+      var modeHere = cm.getModeAt(pos)
+      if (!mode) mode = modeHere;
+      else if (mode != modeHere) return CodeMirror.Pass;
+
+      var insert = null, line, found;
+      var blockStart = mode.blockCommentStart, lineCmt = mode.lineComment;
+      if (blockStart && mode.blockCommentContinue) {
+        line = cm.getLine(pos.line);
+        var end = line.lastIndexOf(mode.blockCommentEnd, pos.ch - mode.blockCommentEnd.length);
+        // 1. if this block comment ended
+        // 2. if this is actually inside a line comment
+        if (end != -1 && end == pos.ch - mode.blockCommentEnd.length ||
+            lineCmt && (found = line.lastIndexOf(lineCmt, pos.ch - 1)) > -1 &&
+            /\bcomment\b/.test(cm.getTokenTypeAt({line: pos.line, ch: found + 1}))) {
+          // ...then don't continue it
+        } else if (pos.ch >= blockStart.length &&
+                   (found = line.lastIndexOf(blockStart, pos.ch - blockStart.length)) > -1 &&
+                   found > end) {
+          // reuse the existing leading spaces/tabs/mixed
+          // or build the correct indent using CM's tab/indent options
+          if (nonspaceAfter(0, line) >= found) {
+            insert = line.slice(0, found);
+          } else {
+            var tabSize = cm.options.tabSize, numTabs;
+            found = CodeMirror.countColumn(line, found, tabSize);
+            insert = !cm.options.indentWithTabs ? repeat.call(" ", found) :
+              repeat.call("\t", (numTabs = Math.floor(found / tabSize))) +
+              repeat.call(" ", found - tabSize * numTabs);
+          }
+        } else if ((found = line.indexOf(mode.blockCommentContinue)) > -1 &&
+                   found <= pos.ch &&
+                   found <= nonspaceAfter(0, line)) {
+          insert = line.slice(0, found);
+        }
+        if (insert != null) insert += mode.blockCommentContinue
+      }
+      if (insert == null && lineCmt && continueLineCommentEnabled(cm)) {
+        if (line == null) line = cm.getLine(pos.line);
+        found = line.indexOf(lineCmt);
+        // cursor at pos 0, line comment also at pos 0 => shift it down, don't continue
+        if (!pos.ch && !found) insert = "";
+        // continue only if the line starts with an optional space + line comment
+        else if (found > -1 && nonspaceAfter(0, line) >= found) {
+          // don't continue if there's only space(s) after cursor or the end of the line
+          insert = nonspaceAfter(pos.ch, line) > -1;
+          // but always continue if the next line starts with a line comment too
+          if (!insert) {
+            var next = cm.getLine(pos.line + 1) || '',
+                nextFound = next.indexOf(lineCmt);
+            insert = nextFound > -1 && nonspaceAfter(0, next) >= nextFound || null;
+          }
+          if (insert) {
+            insert = line.slice(0, found) + lineCmt +
+                     line.slice(found + lineCmt.length).match(/^\s*/)[0];
+          }
+        }
+      }
+      if (insert == null) return CodeMirror.Pass;
+      inserts[i] = "\n" + insert;
+    }
+
+    cm.operation(function() {
+      for (var i = ranges.length - 1; i >= 0; i--)
+        cm.replaceRange(inserts[i], ranges[i].from(), ranges[i].to(), "+insert");
+    });
+  }
+
+  function nonspaceAfter(ch, str) {
+    nonspace.lastIndex = ch;
+    var m = nonspace.exec(str);
+    return m ? m.index : -1;
+  }
+
+  function continueLineCommentEnabled(cm) {
+    var opt = cm.getOption("continueComments");
+    if (opt && typeof opt == "object")
+      return opt.continueLineComment !== false;
+    return true;
+  }
+
+  CodeMirror.defineOption("continueComments", null, function(cm, val, prev) {
+    if (prev && prev != CodeMirror.Init)
+      cm.removeKeyMap("continueComment");
+    if (val) {
+      var key = "Enter";
+      if (typeof val == "string")
+        key = val;
+      else if (typeof val == "object" && val.key)
+        key = val.key;
+      var map = {name: "continueComment"};
+      map[key] = continueComment;
+      cm.addKeyMap(map);
+    }
+  });
+});
+
+
+/***/ }),
+
 /***/ "./node_modules/codemirror/addon/edit/closebrackets.js":
 /*!*************************************************************!*\
   !*** ./node_modules/codemirror/addon/edit/closebrackets.js ***!
@@ -7086,6 +7208,86 @@ CodeMirror.multiplexingMode = function(outer /*, others */) {
     if (ranges.length)
       this.setSelections(ranges, 0)
   })
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/codemirror/addon/selection/active-line.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/codemirror/addon/selection/active-line.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// CodeMirror, copyright (c) by Marijn Haverbeke and others
+// Distributed under an MIT license: https://codemirror.net/LICENSE
+
+(function(mod) {
+  if (true) // CommonJS
+    mod(__webpack_require__(/*! ../../lib/codemirror */ "./node_modules/codemirror/lib/codemirror.js"));
+  else {}
+})(function(CodeMirror) {
+  "use strict";
+  var WRAP_CLASS = "CodeMirror-activeline";
+  var BACK_CLASS = "CodeMirror-activeline-background";
+  var GUTT_CLASS = "CodeMirror-activeline-gutter";
+
+  CodeMirror.defineOption("styleActiveLine", false, function(cm, val, old) {
+    var prev = old == CodeMirror.Init ? false : old;
+    if (val == prev) return
+    if (prev) {
+      cm.off("beforeSelectionChange", selectionChange);
+      clearActiveLines(cm);
+      delete cm.state.activeLines;
+    }
+    if (val) {
+      cm.state.activeLines = [];
+      updateActiveLines(cm, cm.listSelections());
+      cm.on("beforeSelectionChange", selectionChange);
+    }
+  });
+
+  function clearActiveLines(cm) {
+    for (var i = 0; i < cm.state.activeLines.length; i++) {
+      cm.removeLineClass(cm.state.activeLines[i], "wrap", WRAP_CLASS);
+      cm.removeLineClass(cm.state.activeLines[i], "background", BACK_CLASS);
+      cm.removeLineClass(cm.state.activeLines[i], "gutter", GUTT_CLASS);
+    }
+  }
+
+  function sameArray(a, b) {
+    if (a.length != b.length) return false;
+    for (var i = 0; i < a.length; i++)
+      if (a[i] != b[i]) return false;
+    return true;
+  }
+
+  function updateActiveLines(cm, ranges) {
+    var active = [];
+    for (var i = 0; i < ranges.length; i++) {
+      var range = ranges[i];
+      var option = cm.getOption("styleActiveLine");
+      if (typeof option == "object" && option.nonEmpty ? range.anchor.line != range.head.line : !range.empty())
+        continue
+      var line = cm.getLineHandleVisualStart(range.head.line);
+      if (active[active.length - 1] != line) active.push(line);
+    }
+    if (sameArray(cm.state.activeLines, active)) return;
+    cm.operation(function() {
+      clearActiveLines(cm);
+      for (var i = 0; i < active.length; i++) {
+        cm.addLineClass(active[i], "wrap", WRAP_CLASS);
+        cm.addLineClass(active[i], "background", BACK_CLASS);
+        cm.addLineClass(active[i], "gutter", GUTT_CLASS);
+      }
+      cm.state.activeLines = active;
+    });
+  }
+
+  function selectionChange(cm, sel) {
+    updateActiveLines(cm, sel.ranges);
+  }
 });
 
 

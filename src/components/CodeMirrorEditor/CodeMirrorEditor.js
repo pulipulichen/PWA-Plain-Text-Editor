@@ -1,5 +1,6 @@
 /* global CodeMirror, PULI_UTILS */
 import $ from 'jquery'
+import CodeMirrorOptions from './vendors/codemirror.config.webpack.js'
 
 export default {
   props: ['config', 'localConfig', 'utils'],
@@ -61,85 +62,19 @@ export default {
     editor () {
       return this.$refs.cmEditor
     },
-    /**
-     * 如果要阻止CodeMirror的熱鍵，就在這裡設定
-     * @returns JSON
-     */
-    extraKeys () {
-      return {
-        "Ctrl-F": 'none',
-        "Ctrl-Shift-F": 'none',
-        "Ctrl-H": 'none',
-        "Ctrl-Shift-Q": 'none',
-        "Ctrl-.": "autocomplete",
-        "Tab": function(cm){
-          cm.replaceSelection("  " , "end");
-        }
-      }
-    },
-    
     computedCodeMirrorOptions () {
-      return {
-        lineNumbers: true,
-        lineWrapping: true,
-        matchBrackets: true,
-        autoCloseBrackets: true,
-        matchTags: true,
-        autoCloseTags: true,
-        foldGutter: true,
-        showMatchesOnScrollbar: true,
-        lint: true,
-        gutters: ["CodeMirror-lint-markers", "CodeMirror-linenumbers", "CodeMirror-foldgutter"],
-        mode: {name: "htmlmixed", globalVars: true},
-        //mode:  "javascript",
-        extraKeys: this.extraKeys,
-        hintOptions: {
-          alignWithWord: false,
-          completeSingle: false,
-        },
+      
+      let options = {
+        ...CodeMirrorOptions
       }
+      
+      console.log(options)
+      
+      return options
     },
   },
   methods: {
-    initCodeMirror () {
-      if (this.simpleMode === true) {
-        this.editor$el = $(this.$refs.MainTextarea)
-        return false
-      }
-      
-      return new Promise((resolve) => {
-        $(() => {
-          if (typeof(CodeMirror) === 'undefined') {
-            setTimeout(async () => {
-              await this.initCodeMirror()
-              resolve(true)
-            }, 100)
-            return false
-          }
-
-          this.editor = CodeMirror.fromTextArea(this.$refs.MainTextarea, {
-            lineNumbers: true,
-            lineWrapping: true,
-
-            //mode:  "javascript",
-            extraKeys: this.extraKeys,
-          })
-
-          this.editor.on('change', () => {
-            this.onEditorChange()
-          })
-
-          this.editor$el = $(this.$el).find('.CodeMirror:first')
-          //setTimeout(() => {
-          this.resizeHeight()
-          
-          resolve(true)
-          
-          //}, 100)
-        })
-      })
-        
-    },
+    
     onConfigInited () {
       //console.log(this.config.inited)
       if (this.config.inited === false
