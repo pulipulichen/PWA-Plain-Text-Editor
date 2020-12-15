@@ -1058,6 +1058,7 @@ __webpack_require__.r(__webpack_exports__);
     
   CodeMirrorEditor.watch = {
     'config.inited': function () {
+      console.log(this.config.inited)
       this.onConfigInited()
     },
     'config.panelHeight'() {

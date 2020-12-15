@@ -3,6 +3,7 @@ export default function (CodeMirrorEditor) {
     
   CodeMirrorEditor.watch = {
     'config.inited': function () {
+      console.log(this.config.inited)
       this.onConfigInited()
     },
     'config.panelHeight'() {
