@@ -30834,8 +30834,16 @@ __webpack_require__.r(__webpack_exports__);
       }
     } else {
       // 試著把最後一行加上return
-      let lastBreak = textContent.lastIndexOf('\n')
-      textContent = textContent.slice(0, lastBreak + 1) + 'return ' + textContent.slice(lastBreak + 1)
+      //let lastBreak = textContent.lastIndexOf('\n')
+      //textContent = textContent.slice(0, lastBreak + 1) + 'return ' + textContent.slice(lastBreak + 1)
+      let lines = textContent.split('\n')
+      let lastLine = lines[(lines.length - 1)].trim()
+      if (!lastLine.startsWith('return ')) {
+        lines[(lines.length - 1)] = 'return ' + lastLine
+      }
+      
+      textContent = lines.join('\n')
+      //console.log(textContent)
 
       try {
         let result
@@ -30900,12 +30908,21 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   ReplacePanel.computed.isMinifyDisabled = function () {
-    let mode = this.CodeMirrorEditor.getMode()
-    if (mode !== 'javascript'
-            || mode !== 'css'
-            || mode !== 'html') {
+    if (this.config.inited === false) {
       return 'disabled'
     }
+    
+    let editor = this.$parent.$refs.CodeMirrorEditor
+    if (!editor) {
+      return 'disabled'
+    }
+    
+//    let mode = editor.getMode()
+//    if (mode !== 'javascript'
+//            && mode !== 'css'
+//            && mode !== 'html') {
+//      return 'disabled'
+//    }
     
     if (this.isTrimEnabled === true
             || this.textContentLines.length > 1) {
@@ -30917,10 +30934,21 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   ReplacePanel.computed.isBeautifyDisabled = function () {
-    let mode = this.CodeMirrorEditor.getMode()
+    if (this.config.inited === false) {
+      return 'disabled'
+    }
+    
+    let editor = this.$parent.$refs.CodeMirrorEditor
+    //console.log(editor)
+    if (!editor) {
+      return 'disabled'
+    }
+    
+    let mode = editor.getMode()
+    //console.log(mode)
     if (mode !== 'javascript'
-            || mode !== 'css'
-            || mode !== 'html') {
+            && mode !== 'css'
+            && mode !== 'html') {
       return 'disabled'
     }
     
@@ -31068,7 +31096,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 //import htmlMinifier from 'html-minifier-terser'
 //import cssMinifier from 'css-minifiers'
-//import jsmin  from "jsmin"
+
  
 /* harmony default export */ __webpack_exports__["default"] = (function (ReplacePanel) {
 
@@ -31093,17 +31121,9 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   ReplacePanel.methods.minifiyCode = async function () {
-    let mode = this.CodeMirrorEditor.getMode()
+    this.$parent.$refs.CodeMirrorEditor.minify()
+    //console.log(mode)
     
-    if (mode === 'html') {
-      //this.localConfig.textContent = htmlMinifier(this.localConfig.textContent)
-    }
-    if (mode === 'css') {
-      //this.localConfig.textContent = await cssMinifier.csso(this.localConfig.textContent)
-    }
-    if (mode === 'javascript') {
-      this.localConfig.textContent = jsmin(this.localConfig.textContent)
-    }
     
     //console.error('minifiyCode')
     //let result = await minify(this.localConfig.textContent)

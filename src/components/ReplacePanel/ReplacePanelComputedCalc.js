@@ -13,8 +13,16 @@ export default function (ReplacePanel) {
       }
     } else {
       // 試著把最後一行加上return
-      let lastBreak = textContent.lastIndexOf('\n')
-      textContent = textContent.slice(0, lastBreak + 1) + 'return ' + textContent.slice(lastBreak + 1)
+      //let lastBreak = textContent.lastIndexOf('\n')
+      //textContent = textContent.slice(0, lastBreak + 1) + 'return ' + textContent.slice(lastBreak + 1)
+      let lines = textContent.split('\n')
+      let lastLine = lines[(lines.length - 1)].trim()
+      if (!lastLine.startsWith('return ')) {
+        lines[(lines.length - 1)] = 'return ' + lastLine
+      }
+      
+      textContent = lines.join('\n')
+      //console.log(textContent)
 
       try {
         let result

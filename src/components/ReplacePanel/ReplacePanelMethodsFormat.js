@@ -1,6 +1,6 @@
 //import htmlMinifier from 'html-minifier-terser'
 //import cssMinifier from 'css-minifiers'
-//import jsmin  from "jsmin"
+
  
 export default function (ReplacePanel) {
 
@@ -25,17 +25,9 @@ export default function (ReplacePanel) {
   }
   
   ReplacePanel.methods.minifiyCode = async function () {
-    let mode = this.CodeMirrorEditor.getMode()
+    this.$parent.$refs.CodeMirrorEditor.minify()
+    //console.log(mode)
     
-    if (mode === 'html') {
-      //this.localConfig.textContent = htmlMinifier(this.localConfig.textContent)
-    }
-    if (mode === 'css') {
-      //this.localConfig.textContent = await cssMinifier.csso(this.localConfig.textContent)
-    }
-    if (mode === 'javascript') {
-      this.localConfig.textContent = jsmin(this.localConfig.textContent)
-    }
     
     //console.error('minifiyCode')
     //let result = await minify(this.localConfig.textContent)

@@ -16,12 +16,21 @@ export default function (ReplacePanel) {
   }
   
   ReplacePanel.computed.isMinifyDisabled = function () {
-    let mode = this.CodeMirrorEditor.getMode()
-    if (mode !== 'javascript'
-            || mode !== 'css'
-            || mode !== 'html') {
+    if (this.config.inited === false) {
       return 'disabled'
     }
+    
+    let editor = this.$parent.$refs.CodeMirrorEditor
+    if (!editor) {
+      return 'disabled'
+    }
+    
+//    let mode = editor.getMode()
+//    if (mode !== 'javascript'
+//            && mode !== 'css'
+//            && mode !== 'html') {
+//      return 'disabled'
+//    }
     
     if (this.isTrimEnabled === true
             || this.textContentLines.length > 1) {
@@ -33,10 +42,21 @@ export default function (ReplacePanel) {
   }
   
   ReplacePanel.computed.isBeautifyDisabled = function () {
-    let mode = this.CodeMirrorEditor.getMode()
+    if (this.config.inited === false) {
+      return 'disabled'
+    }
+    
+    let editor = this.$parent.$refs.CodeMirrorEditor
+    //console.log(editor)
+    if (!editor) {
+      return 'disabled'
+    }
+    
+    let mode = editor.getMode()
+    //console.log(mode)
     if (mode !== 'javascript'
-            || mode !== 'css'
-            || mode !== 'html') {
+            && mode !== 'css'
+            && mode !== 'html') {
       return 'disabled'
     }
     

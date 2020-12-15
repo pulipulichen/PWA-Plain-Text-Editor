@@ -523,11 +523,17 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var js_beautify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! js-beautify */ "./node_modules/js-beautify/js/index.js");
 /* harmony import */ var js_beautify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(js_beautify__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var jsmin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jsmin */ "./node_modules/jsmin/jsmin.js");
+/* harmony import */ var jsmin__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jsmin__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var cssmin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cssmin */ "./node_modules/cssmin/cssmin.js");
+/* harmony import */ var cssmin__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(cssmin__WEBPACK_IMPORTED_MODULE_2__);
+
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (CodeMirrorEditor) {
   CodeMirrorEditor.methods.autoFormat = function () {
-    console.log('autoFormat')
+    //console.log('autoFormat')
     let cm = this.codemirror
     let mode = this.getMode()
     
@@ -555,6 +561,35 @@ __webpack_require__.r(__webpack_exports__);
     cm.replaceSelection(selection);
     
     //console.log('aaa')
+  }
+  
+  CodeMirrorEditor.methods.minify = function () {
+    let cm = this.codemirror
+    let mode = this.getMode()
+    
+    //console.log()
+    
+    cm.execCommand('selectAll')
+    let selection = cm.getSelection()
+    
+    if (mode === 'css') {
+      //this.localConfig.textContent = await cssMinifier.csso(this.localConfig.textContent)
+      selection = cssmin__WEBPACK_IMPORTED_MODULE_2___default()(selection)
+    }
+    else if (mode === 'javascript') {
+      //console.log(this.localConfig.textContent)
+      selection = Object(jsmin__WEBPACK_IMPORTED_MODULE_1__["jsmin"])(selection)
+    }
+    else {
+      // 刪掉多餘空白與換行
+      selection = selection.split('\n').join('')
+      selection = selection.split('\t').join(' ')
+      while (selection.indexOf('  ') > -1) {
+        selection = selection.split('  ').join(' ')
+      }
+    }
+    //selection = selection + 'AAA'
+    cm.replaceSelection(selection)
   }
 });
 
@@ -674,10 +709,10 @@ __webpack_require__.r(__webpack_exports__);
     
     let saved = JSON.stringify(this.cursorPositionSaved)
     localStorage.setItem(cursorPositionKey, saved)
-    console.log('saveCursorPosition')
+    //console.log('saveCursorPosition')
   }
   CodeMirrorEditor.methods.restoreCursorPosition = function () {
-    console.log('restoreCursorPosition', this.config.inited, this.cursorPositionSaved.from)
+    //console.log('restoreCursorPosition', this.config.inited, this.cursorPositionSaved.from)
     if (this.simpleMode === true
             || this.config.inited === false) {
       return false
@@ -694,7 +729,7 @@ __webpack_require__.r(__webpack_exports__);
             && this.cursorPositionSaved.from.ch === this.cursorPositionSaved.to.ch) {
       this.jumpToLine(this.cursorPositionSaved.from.line + 1, this.cursorPositionSaved.from.ch)
 
-      console.log('restoreCursor cursor')
+      //console.log('restoreCursor cursor')
     } else {
       let from = {
         line: this.cursorPositionSaved.from.line,
@@ -706,7 +741,7 @@ __webpack_require__.r(__webpack_exports__);
               }
       
       this.codemirror.setSelection(from, to)
-      console.log('restoreCursor selection')
+      //console.log('restoreCursor selection')
     }
 
     if (this.editorScroll$el) {
@@ -1060,7 +1095,7 @@ __webpack_require__.r(__webpack_exports__);
     
   CodeMirrorEditor.watch = {
     'config.inited': function () {
-      console.log(this.config.inited)
+      //console.log(this.config.inited)
       this.onConfigInited()
     },
     'config.panelHeight'() {
