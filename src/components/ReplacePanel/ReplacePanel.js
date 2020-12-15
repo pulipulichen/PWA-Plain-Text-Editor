@@ -1,13 +1,14 @@
 /* global PULI_UTILS, CodeMirror */
 
-export default {
+let ReplacePanel = {
   props: ['config', 'localConfig', 'utils'],
   data: function () {
     this.$i18n.locale = this.config.locale
     return {
       textContentHistory: [],
       replaceLock: false,
-      textContentModified: false
+      textContentModified: false,
+      panelHeight: '10.5rem'
     }
   },
   watch: {
@@ -30,202 +31,7 @@ export default {
       this.setPanelHeight()
     }
   },
-  computed: {
-    showReplaceLineOptionsSelect() {
-      return (this.localConfig.replaceMode === 'line')
-    },
-    computedReplaceInputClassName() {
-      return {
-        'has-replace-line-options-select': this.showReplaceLineOptionsSelect,
-        'has-undo-button': !this.isUndoDisabled,
-      }
-    },
-    isReplaceDisabled() {
-      if (this.localConfig.textContent === '') {
-        return true
-      }
-
-      if (this.localConfig.replaceMode !== 'line'
-              && this.localConfig.stringToSearch === '') {
-        return true
-      }
-
-      if (this.replaceOccurCount === 0) {
-        return true
-      }
-
-      return false
-    },
-
-    replaceOccurCount() {
-      if (this.localConfig.textContent === '') {
-        return 0
-      }
-
-      if (this.localConfig.replaceMode !== 'line'
-              && this.localConfig.stringToSearch === '') {
-        return true
-      }
-
-      let count = 0
-      //let stringToSearch = this.localConfig.stringToSearch
-      if (this.localConfig.replaceMode === 'raw') {
-        count = this.countOccurRaw
-      } else if (this.localConfig.replaceMode === 'regex') {
-        count = this.countOccurRegex
-      } else if (this.localConfig.replaceMode === 'line') {
-        count = this.countOccurLine
-      }
-
-      //console.log(this.localConfig.textContent, this.localConfig.stringToSearch, count)
-
-      return count
-    },
-
-    // ----------------------------
-
-    countOccurRaw() {
-      let stringToSearch = this.stringToSearchRaw
-
-      return this.localConfig.textContent.split(stringToSearch).length - 1
-    },
-    countOccurRegex() {
-      let search = this.localConfig.stringToSearch
-      if (search === '') {
-        return 0
-      }
-      //return 0
-      //console.log(`'${search}'`)
-      //replace = replace.split('\\').join('\\\\')
-      let re
-      eval(`re = new RegExp("${search}", "g")`)
-      //console.log(re)
-      let count = ((this.localConfig.textContent || '').match(re) || []).length
-      return count
-    },
-    textContentTrim() {
-      return this.localConfig.textContent.trim()
-    },
-    textContentLines() {
-      return this.localConfig.textContent.split('\n')
-    },
-    textContentLinesTrim() {
-      return this.textContentLines.map(line => line.trim())
-    },
-    stringToSearchRaw() {
-      return this.localConfig.stringToSearch.replace(/\\/g, '\\')
-    },
-    stringToReplaceWithRaw() {
-      return this.localConfig.stringToReplaceWith.replace(/\\/g, '\\')
-    },
-    countOccurLine() {
-      let stringToSearch = this.stringToSearchRaw
-      //console.log(stringToSearch)
-      if (stringToSearch === '') {
-        return this.textContentLinesTrim.length
-      }
-
-      let count = 0
-
-      let mode = this.localConfig.replaceLineOptions.mode
-      if (mode === 'prefix') {
-        this.textContentLinesTrim.forEach((line) => {
-          if (line.startsWith(stringToSearch)) {
-            count++
-          }
-        })
-      } else if (mode === 'suffix') {
-        this.textContentLinesTrim.forEach((line) => {
-          if (line.endsWith(stringToSearch)) {
-            count++
-          }
-        })
-      } else {
-        this.textContentLinesTrim.forEach((line) => {
-          if (line.indexOf(stringToSearch) > -1) {
-            count++
-          }
-        })
-      }
-      //console.log(count)
-      return count
-    },
-
-    // ----------------------------
-
-    isUndoDisabled() {
-      if (this.textContentHistory.length === 0) {
-        return true
-      }
-      if (this.textContentHistoryIndex > 0) {
-        return false
-      }
-      return true
-    },
-    isRedoDisabled() {
-      if (this.textContentHistory.length === 0) {
-        return true
-      }
-      if (this.textContentHistoryIndex < this.textContentHistory.length - 1) {
-        return false
-      }
-      return true
-    },
-    stringToSearch() {
-      let stringToSearch
-      if (this.localConfig.replaceMode === 'regex') {
-        stringToSearch = this.localConfig.stringToSearch
-      } else {
-        stringToSearch = this.stringToSearchRaw
-      }
-      return stringToSearch
-    },
-    isSearchEnabled() {
-      if (this.stringToSearch === '') {
-        return false
-      }
-
-      return (this.localConfig.textContent.indexOf(this.stringToSearch) > -1)
-    },
-
-    // ----------------------------
-
-    computedReplaceButtonText() {
-      if (this.isReplaceDisabled === true) {
-        return 'Replace'
-      }
-      
-      let replaceOccurCount = this.replaceOccurCount
-      //replaceOccurCount = 121043
-      
-      let countLength = (replaceOccurCount + '').length
-      //console.log(countLength)
-      if (countLength <= 6) {
-        return `Replace (${replaceOccurCount})`
-      }
-      else if (countLength <= 8) {
-        let countK = Math.round(replaceOccurCount / 1000)
-        return `Replace (${countK}K)`
-      }
-      else if (countLength <= 10) {
-        let countK = Math.round(replaceOccurCount / 1000000)
-        return `Replace (${countK}M)`
-      }
-      else if (countLength <= 13) {
-        let countK = Math.round(replaceOccurCount / 1000000000)
-        return `Replace (${countK}B)`
-      }
-      else {
-        return 'Replace (...)'
-      }
-    },
-    computedReplaceButtonTitle() {
-      if (this.isReplaceDisabled === true) {
-        return 'Replace'
-      }
-      return `Replace (${this.replaceOccurCount})`
-    },
-  },
+  computed: {}, // 轉移到 ReplacePanelComputed.js
   mounted() {
     this.setPanelHeight()
   },
@@ -239,7 +45,7 @@ export default {
 //        else {
 //          this.config.panelHeight = '8rem'
 //        }
-        this.config.panelHeight = '7rem'
+        this.config.panelHeight = this.panelHeight
       }
       //console.log(this.config.panelHeight)
     },
@@ -625,3 +431,8 @@ export default {
     
   }
 }
+
+import ReplacePanelComputed from './ReplacePanelComputed.js'
+ReplacePanelComputed(ReplacePanel)
+
+export default ReplacePanel
