@@ -8,7 +8,7 @@
   
   <codemirror 
     ref="cmEditor"
-    v-model="localConfig.textContent" 
+    v-model="code" 
     v-bind:options="computedCodeMirrorOptions"
     v-on:inputRead="onCodeMirrorKeyHandled"
     v-if="!simpleMode"/>

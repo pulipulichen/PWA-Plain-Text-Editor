@@ -239,7 +239,7 @@ export default {
 //        else {
 //          this.config.panelHeight = '8rem'
 //        }
-        this.config.panelHeight = '8rem'
+        this.config.panelHeight = '7rem'
       }
       //console.log(this.config.panelHeight)
     },

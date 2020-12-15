@@ -140,7 +140,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+if (!jshint__WEBPACK_IMPORTED_MODULE_30__["JSHINT"].options) {
+  jshint__WEBPACK_IMPORTED_MODULE_30__["JSHINT"].options = {}
+}
+
+jshint__WEBPACK_IMPORTED_MODULE_30__["JSHINT"].options.esversion = 6
+
 window.JSHINT = jshint__WEBPACK_IMPORTED_MODULE_30__["JSHINT"]
+
 
 
 window.CSSLint = csslint__WEBPACK_IMPORTED_MODULE_31__["CSSLint"]

@@ -46,6 +46,9 @@ let Index = {
   }
 }
 
+import IndexComputedTextContent from './IndexComputedTextContent.js'
+IndexComputedTextContent(Index)
+
 import IndexMethodsKeyBindings from './IndexMethodsKeyBindings.js'
 IndexMethodsKeyBindings(Index)
 

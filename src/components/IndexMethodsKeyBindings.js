@@ -1,12 +1,28 @@
+import $ from 'jquery'
 import hotkeys from './vendors/hotkeys/hotkeys.webpack.js'
 
 export default function (Index) {
   Index.methods.getKeyBindsConfig = function () {
     return {
       'ctrl+shift+q': (event, handler) => {
-        console.log('ok')
+        this.hotkeyTestLoad(event)
       }
     }
+  }
+  
+  Index.methods.hotkeyTestLoad = async function (event) {
+    //event.preventDefault()
+    //event.stopPropagation()
+
+    let url = './[demo-content/javascript-example.js'
+
+    let result = await this.utils.AxiosUtils.get(url)
+    //let result = '111'
+    //console.log(result)
+    this.localConfig.textContent = result
+
+    return false
+
   }
     
   Index.methods.initKeyBinds = function () {

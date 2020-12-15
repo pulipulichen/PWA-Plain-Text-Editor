@@ -11,8 +11,9 @@ export default {
       //editor: null,
       //editor$el: null,
       markers: [],
+      code: '',
       highlightClassName: 'highlight',
-      setValueLock: false,
+      changeLock: false,
       cursorPositionSaved: {
         from: {line: null, ch: null},
         to: {line: null, ch: null}
@@ -35,47 +36,71 @@ export default {
     'config.inited': function () {
       this.onConfigInited()
     },
-    'localConfig.textContent' () {
-      if (this.simpleMode === true) {
-        return false
-      }
-      
-      if (this.setValueLock === true) {
-        return false
-      }
-      this.setValueLock = true
-      this.saveCursor()
-      this.editor.getDoc().setValue(this.localConfig.textContent)
-      this.restoreCursor()
-      this.highlightText()
-      this.setValueLock = false
-    },
     'config.panelHeight' () {
       this.resizeHeight()
     },
     'localConfig.stringToSearch' () {
       this.highlightText()
     },
-    
+    'localConfig.textContent': async function () {
+      //this.restoreCursorPosition()
+      //console.log('changed', this.localConfig.textContent)
+      if (this.changeLock === true) {
+        return false
+      }
+      
+      this.changeLock = true
+      this.saveCursorPosition()
+      this.code = this.localConfig.textContent
+      await this.utils.AsyncUtils.sleep(0)
+      this.restoreCursorPosition()
+      this.updateDocumentTitle()
+      this.changeLock = false
+      
+      //this.$refs.cmEditor.setValue(this.localConfig.textContent)
+    },
+    'code': async function () {
+      //console.log('code')
+      if (this.changeLock === true) {
+        return false
+      }
+      
+      this.changeLock = true
+      this.localConfig.textContent = this.code
+      await this.utils.AsyncUtils.sleep(0)
+      this.updateDocumentTitle()
+      this.changeLock = false
+    }
   },
   computed: {
-    editor () {
-      return this.$refs.cmEditor
-    },
+//    editor () {
+//      return this.$refs.cmEditor
+//    },
     computedCodeMirrorOptions () {
       
       let options = {
         ...CodeMirrorOptions
       }
       
-      console.log(options)
+      //console.log(options)
       
       return options
     },
+    editor$el () {
+      //console.log(this.$refs.cmEditor.$el)
+      if (!this.$refs.cmEditor) {
+        return undefined
+      }
+      
+      return $(this.$refs.cmEditor.$el).find('.CodeMirror:first')
+    },
+    codemirror () {
+      return this.$refs.cmEditor.codemirror
+    }
   },
   methods: {
     
-    onConfigInited () {
+    onConfigInited: async function () {
       //console.log(this.config.inited)
       if (this.config.inited === false
               || this.simpleMode === true) {
@@ -83,14 +108,19 @@ export default {
       }
       
       
-      //await PULI_UTILS.sleep(1000)
+      //await this.utils.AsyncUtils.sleep(1000)
       //console.log('javascript')
-      //this.editor.setOption("mode", 'html')
+      //this.codemirror.setOption("mode", 'html')
       
-      //await PULI_UTILS.sleep(100)
+      //await this.utils.AsyncUtils.sleep(100)
+      
+      while (!this.$refs.cmEditor || !this.$refs.cmEditor.$el) {
+        await this.utils.AsyncUtils.sleep()
+      }
       
       //console.log('go', this.localConfig.stringToSearch)
       this.highlightText(this.localConfig.stringToSearch)
+      this.resizeHeight()
       //console.log(this.markers.length)
       
       this.updateDocumentTitle()
@@ -101,16 +131,16 @@ export default {
       }
       
       setTimeout(() => {
-        this.editor.setOption("mode", mode)
+        this.codemirror.setOption("mode", mode)
       }, 100)
       
-      //this.editor$el = $('.CodeMirror:first')
+      //this.codemirror$el = $('.CodeMirror:first')
       
-      //console.log(this.editor$el)
+      //console.log(this.codemirror$el)
     },
     highlightClear () {
-      //console.log(this.editor$el.find('.' + this.highlightClassName).length)
-      //this.editor$el.find('.' + this.highlightClassName).removeClass(this.highlightClassName)
+      //console.log(this.codemirror$el.find('.' + this.highlightClassName).length)
+      //this.codemirror$el.find('.' + this.highlightClassName).removeClass(this.highlightClassName)
       this.markers = this.markers.filter(mark => {
         mark.clear()
         return false
@@ -130,16 +160,16 @@ export default {
       
       this.highlightClear()
       
-      while (!this.editor.getSearchCursor) {
+      while (!this.codemirror.getSearchCursor) {
         await this.utils.AsyncUtils.sleep()
       }
       
-      var cursor = this.editor.getSearchCursor(text)
+      var cursor = this.codemirror.getSearchCursor(text)
       //console.log(cursor)
       while (cursor.findNext()) {
           //CURSOR = cursor
 
-        let marker = this.editor.markText(
+        let marker = this.codemirror.markText(
                 cursor.from(),
                 cursor.to(),
                 {className: this.highlightClassName}
@@ -148,7 +178,7 @@ export default {
         
         //MARKER = marker
       }
-      //this.editor.setCursor({line: 1, ch: 0})
+      //this.codemirror.setCursor({line: 1, ch: 0})
     },
     onCodeMirrorKeyHandled (e, s) {
       //console.log(e, s)
@@ -162,19 +192,19 @@ export default {
       }
       
       
-      this.editor.focus()
-      var t = this.editor.charCoords({line: i, ch: 0}, "local").top; 
-      var middleHeight = this.editor.getScrollerElement().offsetHeight / 2; 
-      this.editor.scrollTo(null, t - middleHeight - 5)
+      this.codemirror.focus()
+      var t = this.codemirror.charCoords({line: i, ch: 0}, "local").top; 
+      var middleHeight = this.codemirror.getScrollerElement().offsetHeight / 2; 
+      this.codemirror.scrollTo(null, t - middleHeight - 5)
       
       //if (!to) {
-      this.editor.doc.setCursor(i - 1, from)
+      this.codemirror.doc.setCursor(i - 1, from)
       //if (to) {
-      //  this.editor.setSelection({line: 0, ch: 3}, {line: 0, ch: 9})
+      //  this.codemirror.setSelection({line: 0, ch: 3}, {line: 0, ch: 9})
       //}
       //}
       //else {
-      //  this.editor.doc.setSelection(i - 1, from)
+      //  this.codemirror.doc.setSelection(i - 1, from)
       //}
     },
     jumpToMarker (marker) {
@@ -183,19 +213,21 @@ export default {
       }
       
       
-      this.editor.focus()
+      this.codemirror.focus()
       let {fromLine, fromCh, toLine, toCh} = this.getMarkerPos(marker)
-      this.editor.setSelection({line: fromLine - 1, ch: fromCh}, {line: toLine - 1, ch: toCh})
+      this.codemirror.setSelection({line: fromLine - 1, ch: fromCh}, {line: toLine - 1, ch: toCh})
     },
     getCursor (position) {
-      if (this.simpleMode === true) {
+      if (this.simpleMode === true
+        || this.config.inited === false) {
         return false
       }
       
-      return this.editor.doc.getCursor(position)
+      return this.codemirror.getCursor(position)
     },
-    saveCursor () {
-      if (this.simpleMode === true) {
+    saveCursorPosition () {
+      if (this.simpleMode === true
+        || this.config.inited === false) {
         return false
       }
       
@@ -207,8 +239,9 @@ export default {
       this.cursorPositionSaved.to.line = toCursor.line
       this.cursorPositionSaved.to.ch = toCursor.ch
     },
-    restoreCursor () {
-      if (this.simpleMode === true) {
+    restoreCursorPosition () {
+      if (this.simpleMode === true
+        || this.config.inited === false) {
         return false
       }
       
@@ -220,7 +253,7 @@ export default {
         //console.log('restoreCursor cursor')
       }
       else {
-        this.editor.setSelection({
+        this.codemirror.setSelection({
           line: this.cursorPositionSaved.from.line, 
           ch: this.cursorPositionSaved.from.ch
         }, 
@@ -237,7 +270,7 @@ export default {
         return false
       }
       
-      return this.editor.getSelection()
+      return this.codemirror.getSelection()
     },
     findNext (search) {
       if (this.simpleMode === true) {
@@ -252,7 +285,7 @@ export default {
         return false
       } 
       
-      var cursor = this.editor.getSearchCursor(search);
+      var cursor = this.codemirror.getSearchCursor(search);
       
       let currentPosition = this.getCursor(true)
       //console.log(currentPosition)
@@ -264,7 +297,7 @@ export default {
       //let lastMarker
       
       while (cursor.findNext()) {
-        let marker = this.editor.markText(
+        let marker = this.codemirror.markText(
           cursor.from(),
           cursor.to()
         )
@@ -311,10 +344,10 @@ export default {
       if (!search || search.length === 0) {
         return false
       } 
-      //this.editor.focus()
+      //this.codemirror.focus()
       //console.log('findPrev')
       //console.log(search)
-      var cursor = this.editor.getSearchCursor(search);
+      var cursor = this.codemirror.getSearchCursor(search);
       
       let currentPosition = this.getCursor(true)
       //console.log(currentPosition)
@@ -327,7 +360,7 @@ export default {
       //let lastMarker
       
       while (cursor.findNext()) {
-        let marker = this.editor.markText(
+        let marker = this.codemirror.markText(
           cursor.from(),
           cursor.to()
         )
@@ -382,21 +415,21 @@ export default {
       return false  // 沒找到
     },
     resizeHeight: async function () {
+      if (this.config.inited === false) {
+        return false
+      }
       
       /*
       let className = 'display-replace-panel'
       if (this.localConfig.displayReplacePanel === true) {
-        this.editor$el.addClass(className)
+        this.codemirror$el.addClass(className)
       }
       else {
-        this.editor$el.removeClass(className)
+        this.codemirror$el.removeClass(className)
       }
        */
       
-      while (this.editor$el === null) {
-        await PULI_UTILS.sleep()
-      }
-      //console.log(this.editor$el, this.editor$el.css)
+      //console.log(this.codemirror$el, this.codemirror$el.css)
       this.editor$el.css('height', `calc(100vh - ${this.config.panelHeight})`)
       this.editor$el.css('max-height', `calc(100vh - ${this.config.panelHeight})`)
       //console.log('設定好了', `calc(100vh - ${this.config.panelHeight})`)
@@ -433,8 +466,8 @@ export default {
         return false
       }
       this.setValueLock = true
-      this.localConfig.textContent = this.editor.getValue()
-      await PULI_UTILS.sleep(0)
+      this.localConfig.textContent = this.codemirror.getValue()
+      await this.utils.AsyncUtils.sleep(0)
       this.highlightText()
       this.setValueLock = false
     },

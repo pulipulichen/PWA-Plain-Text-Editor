@@ -143,7 +143,7 @@ ${textContent}
     setPanelHeight() {
       //console.log(this.$parent.localConfig.displayPanel)
       if (this.localConfig.displayPanel === 'format') {
-        this.config.panelHeight = '8rem'
+        this.config.panelHeight = '7rem'
       }
     },
     copyCalcResult () {

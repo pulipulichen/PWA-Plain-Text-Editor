@@ -43,7 +43,14 @@ import 'codemirror/addon/lint/json-lint.js'
 import 'codemirror/addon/lint/css-lint.js'
 
 import {JSHINT} from 'jshint'
+if (!JSHINT.options) {
+  JSHINT.options = {}
+}
+
+JSHINT.options.esversion = 6
+
 window.JSHINT = JSHINT
+
 
 import {CSSLint} from 'csslint'
 window.CSSLint = CSSLint
