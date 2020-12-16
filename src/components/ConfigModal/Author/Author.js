@@ -3,7 +3,7 @@ import authorImageURL from './author.png'
 let Author = {
   props: ['config', 'utils', 'localConfig'],
   data() {    
-    this.$i18n.locale = this.config.locale
+    this.$i18n.locale = this.localConfig.locale
     return {
       authorImageURL
     }
@@ -13,6 +13,9 @@ let Author = {
   computed: {
   },
   watch: {
+    'localConfig.locale'() {
+      this.$i18n.locale = this.localConfig.locale;
+    },
   },
   mounted() {
   },

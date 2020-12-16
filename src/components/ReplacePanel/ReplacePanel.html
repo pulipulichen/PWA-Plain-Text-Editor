@@ -1,7 +1,9 @@
 <div class="replace-panel ui form"
      v-show="localConfig.displayPanel === 'replace' && config.inited === true">
   <div class="inline field">
-    <label for="stringToSearch">Search</label>
+    <label for="stringToSearch">
+      {{ $t('Search') }}
+    </label>
 
     <div class="ui action icon input string-to-search-input-container">
       <div class="ui icon fluid input string-to-search-input">

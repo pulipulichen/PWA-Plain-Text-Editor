@@ -78,5 +78,21 @@
     
     
   </div>
+  
+  
+  <div class="field">
+    <label for="CodeMirrorLanguage">
+      {{ $t('Language') }}
+    </label>
+    <select v-model="localConfig.locale"
+            id="CodeMirrorLanguage">
+      <option value="en-US">
+        {{ $t('en-US') }}
+      </option>
+      <option value="zh-TW">
+        {{ $t('zh-TW') }}
+      </option>
+    </select>
+  </div>
 
 </div>

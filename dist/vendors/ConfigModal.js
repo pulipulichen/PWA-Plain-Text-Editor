@@ -41,7 +41,7 @@ module.exports = function (Component) {
 
 module.exports = function (Component) {
   Component.options.__i18n = Component.options.__i18n || []
-  Component.options.__i18n.push('{"en":null,"zh-TW":{"Sync URL":"同步網址","How to setup a sync url?":"如何設定同步網址"}}')
+  Component.options.__i18n.push('{"en-US":null,"zh-TW":{"Editor Configuration":"編輯器設定"}}')
   delete Component.options._Ctor
 }
 
@@ -624,6 +624,53 @@ var render = function() {
             })
           ])
         : _vm._e()
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "field" }, [
+      _c("label", { attrs: { for: "CodeMirrorLanguage" } }, [
+        _vm._v("\r\n      " + _vm._s(_vm.$t("Language")) + "\r\n    ")
+      ]),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.localConfig.locale,
+              expression: "localConfig.locale"
+            }
+          ],
+          attrs: { id: "CodeMirrorLanguage" },
+          on: {
+            change: function($event) {
+              var $$selectedVal = Array.prototype.filter
+                .call($event.target.options, function(o) {
+                  return o.selected
+                })
+                .map(function(o) {
+                  var val = "_value" in o ? o._value : o.value
+                  return val
+                })
+              _vm.$set(
+                _vm.localConfig,
+                "locale",
+                $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+              )
+            }
+          }
+        },
+        [
+          _c("option", { attrs: { value: "en-US" } }, [
+            _vm._v("\r\n        " + _vm._s(_vm.$t("en-US")) + "\r\n      ")
+          ]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "zh-TW" } }, [
+            _vm._v("\r\n        " + _vm._s(_vm.$t("zh-TW")) + "\r\n      ")
+          ])
+        ]
+      )
     ])
   ])
 }
@@ -1000,7 +1047,7 @@ __webpack_require__.r(__webpack_exports__);
 let Author = {
   props: ['config', 'utils', 'localConfig'],
   data() {    
-    this.$i18n.locale = this.config.locale
+    this.$i18n.locale = this.localConfig.locale
     return {
       authorImageURL: (_author_png__WEBPACK_IMPORTED_MODULE_0___default())
     }
@@ -1010,6 +1057,9 @@ let Author = {
   computed: {
   },
   watch: {
+    'localConfig.locale'() {
+      this.$i18n.locale = this.localConfig.locale;
+    },
   },
   mounted() {
   },
@@ -1158,13 +1208,16 @@ let ConfigModal = {
     Statistics: _Statistics_Statistics_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
   },
   data () {    
-    this.$i18n.locale = this.config.locale
+    this.$i18n.locale = this.localConfig.locale
     return {
       modal: null,
       isOpened: false
     }
   },
   watch: {
+    'localConfig.locale'() {
+      this.$i18n.locale = this.localConfig.locale;
+    },
 //    'config.inited' () {
 //      //return false
 //      
@@ -1345,7 +1398,7 @@ __webpack_require__.r(__webpack_exports__);
 let EditorConfiguration = {
   props: ['config', 'utils', 'localConfig'],
   data() {    
-    this.$i18n.locale = this.config.locale
+    this.$i18n.locale = this.localConfig.locale
     return {
       modeOptions: _CodeMirrorEditor_vendors_codemirror_mode_util_webpack_js__WEBPACK_IMPORTED_MODULE_1__["default"].getModeSelectOptions()
     }
@@ -1360,7 +1413,10 @@ let EditorConfiguration = {
         return false
       }
       this.initCheckbox()
-    }
+    },
+    'localConfig.locale'() {
+      this.$i18n.locale = this.localConfig.locale;
+    },
   },
   mounted() {
     //this.initCheckbox()
@@ -1482,7 +1538,7 @@ __webpack_require__.r(__webpack_exports__);
 let Statistics = {
   props: ['config', 'utils', 'localConfig'],
   data() {    
-    this.$i18n.locale = this.config.locale
+    this.$i18n.locale = this.localConfig.locale
     return {
       
     }
@@ -1522,6 +1578,9 @@ let Statistics = {
     }
   },
   watch: {
+    'localConfig.locale'() {
+      this.$i18n.locale = this.localConfig.locale;
+    },
   },
   mounted() {
   },
@@ -1659,7 +1718,7 @@ __webpack_require__.r(__webpack_exports__);
 let TableOfContent = {
   props: ['config', 'headings', 'contentSelector', 'top', 'width'],
   data() {    
-    this.$i18n.locale = this.config.locale
+    this.$i18n.locale = this.localConfig.locale
     //console.log(this.headings)
     return {
       inited: false,
@@ -1673,9 +1732,12 @@ let TableOfContent = {
   },
   computed: {
   },
-  watch: {
-  },
   */
+  watch: {
+  'localConfig.locale'() {
+      this.$i18n.locale = this.localConfig.locale;
+    },
+  },
   mounted() {
     //console.log('init')
     this.init()

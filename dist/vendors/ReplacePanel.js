@@ -9,7 +9,7 @@
 
 module.exports = function (Component) {
   Component.options.__i18n = Component.options.__i18n || []
-  Component.options.__i18n.push('{"en":{"TEST_MESSAGE":"Test Message"},"zh-TW":{"TEST_MESSAGE":"測試訊息"}}')
+  Component.options.__i18n.push('{"en-US":{"Search":"Search"},"zh-TW":{"Search":"搜尋"}}')
   delete Component.options._Ctor
 }
 
@@ -67,7 +67,9 @@ var render = function() {
     },
     [
       _c("div", { staticClass: "inline field" }, [
-        _c("label", { attrs: { for: "stringToSearch" } }, [_vm._v("Search")]),
+        _c("label", { attrs: { for: "stringToSearch" } }, [
+          _vm._v("\n      " + _vm._s(_vm.$t("Search")) + "\n    ")
+        ]),
         _vm._v(" "),
         _c(
           "div",
@@ -1315,7 +1317,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function (ReplacePanel) {
   ReplacePanel.data = function () {
-    this.$i18n.locale = this.config.locale
+    this.$i18n.locale = this.localConfig.locale
     return {
       textContentHistory: [],
       replaceLock: false,
@@ -1883,6 +1885,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     'localConfig.replaceMode'() {
       this.setPanelHeight()
+    },
+    'localConfig.locale'() {
+      this.$i18n.locale = this.localConfig.locale;
     },
     'config.inited'() {
       if (this.config.inited === false) {

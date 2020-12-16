@@ -1,6 +1,6 @@
 export default function (ReplacePanel) {
   ReplacePanel.data = function () {
-    this.$i18n.locale = this.config.locale
+    this.$i18n.locale = this.localConfig.locale
     return {
       textContentHistory: [],
       replaceLock: false,

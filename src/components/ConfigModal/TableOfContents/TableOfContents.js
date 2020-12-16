@@ -4,7 +4,7 @@ import $ from 'jquery'
 let TableOfContent = {
   props: ['config', 'headings', 'contentSelector', 'top', 'width'],
   data() {    
-    this.$i18n.locale = this.config.locale
+    this.$i18n.locale = this.localConfig.locale
     //console.log(this.headings)
     return {
       inited: false,
@@ -18,9 +18,12 @@ let TableOfContent = {
   },
   computed: {
   },
-  watch: {
-  },
   */
+  watch: {
+  'localConfig.locale'() {
+      this.$i18n.locale = this.localConfig.locale;
+    },
+  },
   mounted() {
     //console.log('init')
     this.init()

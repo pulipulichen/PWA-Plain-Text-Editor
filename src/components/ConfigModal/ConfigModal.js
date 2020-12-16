@@ -15,13 +15,16 @@ let ConfigModal = {
     Statistics
   },
   data () {    
-    this.$i18n.locale = this.config.locale
+    this.$i18n.locale = this.localConfig.locale
     return {
       modal: null,
       isOpened: false
     }
   },
   watch: {
+    'localConfig.locale'() {
+      this.$i18n.locale = this.localConfig.locale;
+    },
 //    'config.inited' () {
 //      //return false
 //      

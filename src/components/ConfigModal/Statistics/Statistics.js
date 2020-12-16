@@ -1,7 +1,7 @@
 let Statistics = {
   props: ['config', 'utils', 'localConfig'],
   data() {    
-    this.$i18n.locale = this.config.locale
+    this.$i18n.locale = this.localConfig.locale
     return {
       
     }
@@ -41,6 +41,9 @@ let Statistics = {
     }
   },
   watch: {
+    'localConfig.locale'() {
+      this.$i18n.locale = this.localConfig.locale;
+    },
   },
   mounted() {
   },

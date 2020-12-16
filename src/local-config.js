@@ -1,4 +1,6 @@
 let localConfig = {
+  locale: 'zh-TW',
+  
   textContent: '',
   stringToSearch: '',
   stringToReplaceWith: '',

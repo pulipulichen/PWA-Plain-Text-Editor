@@ -3,7 +3,7 @@ import $ from 'jquery'
 export default {
     props: ['config', 'localConfig', 'utils'],
     data() {
-      this.$i18n.locale = this.config.locale
+      this.$i18n.locale = this.localConfig.locale
       return {
         showMenu: false,
         showMenuTimer: null,
@@ -11,6 +11,9 @@ export default {
       }
     },
     watch: {
+      'localConfig.locale'() {
+        this.$i18n.locale = this.localConfig.locale;
+      },
       showMenu () {
         if (this.showMenu === true) {
           this.clearDelayCloseMenu()

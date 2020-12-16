@@ -201,22 +201,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/DragDropOpener/DragDropOpener.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CDragDropOpener%5CDragDropOpener.vue&lang=yaml":
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@kazupon/vue-i18n-loader/lib!./src/components/DragDropOpener/DragDropOpener.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CDragDropOpener%5CDragDropOpener.vue&lang=yaml ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function (Component) {
-  Component.options.__i18n = Component.options.__i18n || []
-  Component.options.__i18n.push('{"en":{"TEST_MESSAGE":"Test Message"},"zh-TW":{"TEST_MESSAGE":"測試訊息"}}')
-  delete Component.options._Ctor
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/FloatActionButton/FloatActionButton.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CFloatActionButton%5CFloatActionButton.vue&lang=yaml":
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/@kazupon/vue-i18n-loader/lib!./src/components/FloatActionButton/FloatActionButton.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CFloatActionButton%5CFloatActionButton.vue&lang=yaml ***!
@@ -2101,24 +2085,6 @@ var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
 exports.push([module.i, "body {\n  overscroll-behavior-y: contain;\n  padding: 0;\n  margin: 0;\n}\nbody > .non-invasive-web-style-framework.dimmable {\n  overflow-x: initial !important;\n}\nbody {\n  min-height: 100vh !important;\n  min-height: -webkit-fill-available !important;\n}\nhtml {\n  height: -webkit-fill-available !important;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/PWA-Plain-Text-Editor/src/styles/global.less","global.less"],"names":[],"mappings":"AAAA;EACE,8BAAA;EAEA,UAAA;EACA,SAAA;ACAF;ADGA;EACE,8BAAA;ACDF;ADIA;EACE,4BAAA;EACA,6CAAA;ACFF;ADIA;EACE,yCAAA;ACFF","file":"global.less","sourcesContent":["body {\n  overscroll-behavior-y: contain;\n  //overflow-x: hidden;\n  padding: 0;\n  margin: 0;\n}\n\nbody > .non-invasive-web-style-framework.dimmable {\n  overflow-x: initial !important;\n}\n\nbody {\n  min-height: 100vh !important;\n  min-height: -webkit-fill-available !important;\n}\nhtml {\n  height: -webkit-fill-available !important;\n}\n","body {\n  overscroll-behavior-y: contain;\n  padding: 0;\n  margin: 0;\n}\nbody > .non-invasive-web-style-framework.dimmable {\n  overflow-x: initial !important;\n}\nbody {\n  min-height: 100vh !important;\n  min-height: -webkit-fill-available !important;\n}\nhtml {\n  height: -webkit-fill-available !important;\n}\n"]}]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/DragDropOpener/DragDropOpener.less?vue&type=style&index=0&id=08417b4f&lang=less&scoped=true&":
-/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--1-2!./src/components/DragDropOpener/DragDropOpener.less?vue&type=style&index=0&id=08417b4f&lang=less&scoped=true& ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(true);
-// Module
-exports.push([module.i, ".DragDropOpener[data-v-08417b4f] {\n  position: fixed;\n  background-color: rgba(255, 255, 255, 0.5);\n  border: 3px dotted #000;\n  z-index: 9999;\n  left: 0;\n  top: 0;\n  width: 100vw;\n  height: 100vh;\n  font-size: 32pt;\n  text-align: center;\n  padding-top: calc(50vh - 16pt);\n  font-weight: bold;\n  cursor: pointer;\n  use-select: none;\n  display: none;\n}\n.DragDropOpener.dragging[data-v-08417b4f] {\n  display: block;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/PWA-Plain-Text-Editor/src/components/DragDropOpener/DragDropOpener.less?vue&type=style&index=0&id=08417b4f&lang=less&scoped=true&","DragDropOpener.less"],"names":[],"mappings":"AAAA;EACE,eAAA;EACA,0CAAA;EACA,uBAAA;EACA,aAAA;EAEA,OAAA;EACA,MAAA;EACA,YAAA;EACA,aAAA;EACA,eAAA;EACA,kBAAA;EACA,8BAAA;EACA,iBAAA;EAEA,eAAA;EACA,gBAAA;EAEA,aAAA;ACFF;ADGE;EACE,cAAA;ACDJ","file":"DragDropOpener.less","sourcesContent":[".DragDropOpener {\n  position: fixed;\n  background-color: rgba(255,255,255, 0.5);\n  border: 3px dotted #000;\n  z-index: 9999;\n  \n  left: 0;\n  top: 0;\n  width: 100vw;\n  height: 100vh;\n  font-size: 32pt;\n  text-align: center;\n  padding-top: calc(50vh - 16pt);\n  font-weight: bold;\n  \n  cursor: pointer;\n  use-select: none;\n  \n  display: none;\n  &.dragging {\n    display: block;\n  }\n}",".DragDropOpener {\n  position: fixed;\n  background-color: rgba(255, 255, 255, 0.5);\n  border: 3px dotted #000;\n  z-index: 9999;\n  left: 0;\n  top: 0;\n  width: 100vw;\n  height: 100vh;\n  font-size: 32pt;\n  text-align: center;\n  padding-top: calc(50vh - 16pt);\n  font-weight: bold;\n  cursor: pointer;\n  use-select: none;\n  display: none;\n}\n.DragDropOpener.dragging {\n  display: block;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -15858,44 +15824,6 @@ VueI18n.version = '8.22.2';
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./src/components/DragDropOpener/DragDropOpener.html?vue&type=template&id=08417b4f&scoped=true&":
-/*!**********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./src/components/DragDropOpener/DragDropOpener.html?vue&type=template&id=08417b4f&scoped=true& ***!
-  \**********************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    {
-      staticClass: "DragDropOpener",
-      class: { dragging: _vm.dragging },
-      on: {
-        drop: function($event) {
-          $event.stopPropagation()
-          $event.preventDefault()
-          return _vm.onDrop($event)
-        }
-      }
-    },
-    [_vm._v("\n  " + _vm._s(_vm.$t("Drop to Open")) + "\n")]
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./src/components/FloatActionButton/FloatActionButton.html?vue&type=template&id=0f8fb719&scoped=true&":
 /*!****************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./src/components/FloatActionButton/FloatActionButton.html?vue&type=template&id=0f8fb719&scoped=true& ***!
@@ -16248,27 +16176,6 @@ function normalizeComponent (
   }
 }
 
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/DragDropOpener/DragDropOpener.less?vue&type=style&index=0&id=08417b4f&lang=less&scoped=true&":
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--1-2!./src/components/DragDropOpener/DragDropOpener.less?vue&type=style&index=0&id=08417b4f&lang=less&scoped=true& ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/less-loader/dist/cjs.js??ref--1-2!./DragDropOpener.less?vue&type=style&index=0&id=08417b4f&lang=less&scoped=true& */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/DragDropOpener/DragDropOpener.less?vue&type=style&index=0&id=08417b4f&lang=less&scoped=true&");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__(/*! ../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("3d742f7c", content, false, {});
-// Hot Module Replacement
-if(false) {}
 
 /***/ }),
 
@@ -28708,202 +28615,6 @@ module.exports = function(originalModule) {
 
 /***/ }),
 
-/***/ "./src/components/DragDropOpener/DragDropOpener.html?vue&type=template&id=08417b4f&scoped=true&":
-/*!******************************************************************************************************!*\
-  !*** ./src/components/DragDropOpener/DragDropOpener.html?vue&type=template&id=08417b4f&scoped=true& ***!
-  \******************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_DragDropOpener_html_vue_type_template_id_08417b4f_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./DragDropOpener.html?vue&type=template&id=08417b4f&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./src/components/DragDropOpener/DragDropOpener.html?vue&type=template&id=08417b4f&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_DragDropOpener_html_vue_type_template_id_08417b4f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_DragDropOpener_html_vue_type_template_id_08417b4f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./src/components/DragDropOpener/DragDropOpener.js?vue&type=script&lang=js&?3fa6":
-/*!**********************************************************************************!*\
-  !*** ./src/components/DragDropOpener/DragDropOpener.js?vue&type=script&lang=js& ***!
-  \**********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-
-
-let DragDropOpener = {
-  props: ['config', 'localConfig', 'utils'],
-  data () {    
-    this.$i18n.locale = this.localConfig.locale
-    return {
-      dragging: false
-    }
-  },
-  watch: {
-    'config.inited' () {
-      if (this.config.inited === false) {
-        return false
-      }
-      this.initDragEvent()
-    }
-  },
-//  computed: {
-//    
-//  },
-//  mounted() {
-//    
-//  },
-  methods: {
-    initDragEvent () {
-      let triggers = [
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()('body'),
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.CodeMirror')
-      ]
-      //let $window = $(window)
-      //console.log($body.length)
-      triggers.forEach(trigger => {
-        //console.log(trigger.length)
-        
-        trigger.on('dragenter', (event) => {
-          //console.log('dragenter')
-          event.stopPropagation()
-          event.preventDefault()
-
-          //this.dragging = true
-          setTimeout(() => {
-            this.dragging = false
-          }, 3000)
-        })
-        
-        trigger.on('drop', (event) => {
-          this.onDrop(event)
-        })
-
-        /*
-        trigger.on('mouseleave', (event) => {
-          event.stopPropagation()
-          event.preventDefault()
-
-          this.dragging = false
-        })
-         */
-      })
-    },
-    onDrop (event) {
-      console.log(event)
-      event.stopPropagation()
-      event.preventDefault()
-      
-      console.log('onDrop')
-      this.dragging = false
-      
-      return false
-    }
-  }
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (DragDropOpener);
-
-/***/ }),
-
-/***/ "./src/components/DragDropOpener/DragDropOpener.js?vue&type=script&lang=js&?ed72":
-/*!**********************************************************************************!*\
-  !*** ./src/components/DragDropOpener/DragDropOpener.js?vue&type=script&lang=js& ***!
-  \**********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _DragDropOpener_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./DragDropOpener.js?vue&type=script&lang=js& */ "./src/components/DragDropOpener/DragDropOpener.js?vue&type=script&lang=js&?3fa6");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_DragDropOpener_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./src/components/DragDropOpener/DragDropOpener.less?vue&type=style&index=0&id=08417b4f&lang=less&scoped=true&":
-/*!*********************************************************************************************************************!*\
-  !*** ./src/components/DragDropOpener/DragDropOpener.less?vue&type=style&index=0&id=08417b4f&lang=less&scoped=true& ***!
-  \*********************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_DragDropOpener_less_vue_type_style_index_0_id_08417b4f_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-style-loader!../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/less-loader/dist/cjs.js??ref--1-2!./DragDropOpener.less?vue&type=style&index=0&id=08417b4f&lang=less&scoped=true& */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/DragDropOpener/DragDropOpener.less?vue&type=style&index=0&id=08417b4f&lang=less&scoped=true&");
-/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_DragDropOpener_less_vue_type_style_index_0_id_08417b4f_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_DragDropOpener_less_vue_type_style_index_0_id_08417b4f_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_DragDropOpener_less_vue_type_style_index_0_id_08417b4f_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_DragDropOpener_less_vue_type_style_index_0_id_08417b4f_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-
-
-/***/ }),
-
-/***/ "./src/components/DragDropOpener/DragDropOpener.vue":
-/*!**********************************************************!*\
-  !*** ./src/components/DragDropOpener/DragDropOpener.vue ***!
-  \**********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _DragDropOpener_html_vue_type_template_id_08417b4f_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DragDropOpener.html?vue&type=template&id=08417b4f&scoped=true& */ "./src/components/DragDropOpener/DragDropOpener.html?vue&type=template&id=08417b4f&scoped=true&");
-/* harmony import */ var _DragDropOpener_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DragDropOpener.js?vue&type=script&lang=js& */ "./src/components/DragDropOpener/DragDropOpener.js?vue&type=script&lang=js&?ed72");
-/* empty/unused harmony star reexport *//* harmony import */ var _DragDropOpener_less_vue_type_style_index_0_id_08417b4f_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DragDropOpener.less?vue&type=style&index=0&id=08417b4f&lang=less&scoped=true& */ "./src/components/DragDropOpener/DragDropOpener.less?vue&type=style&index=0&id=08417b4f&lang=less&scoped=true&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-/* harmony import */ var _DragDropOpener_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CDragDropOpener_5CDragDropOpener_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./DragDropOpener.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CDragDropOpener%5CDragDropOpener.vue&lang=yaml */ "./src/components/DragDropOpener/DragDropOpener.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CDragDropOpener%5CDragDropOpener.vue&lang=yaml");
-
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
-  _DragDropOpener_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _DragDropOpener_html_vue_type_template_id_08417b4f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _DragDropOpener_html_vue_type_template_id_08417b4f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "08417b4f",
-  null
-  
-)
-
-/* custom blocks */
-
-if (typeof _DragDropOpener_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CDragDropOpener_5CDragDropOpener_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"] === 'function') Object(_DragDropOpener_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CDragDropOpener_5CDragDropOpener_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"])(component)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "src/components/DragDropOpener/DragDropOpener.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./src/components/DragDropOpener/DragDropOpener.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CDragDropOpener%5CDragDropOpener.vue&lang=yaml":
-/*!***********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./src/components/DragDropOpener/DragDropOpener.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CDragDropOpener%5CDragDropOpener.vue&lang=yaml ***!
-  \***********************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_DragDropOpener_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CDragDropOpener_5CDragDropOpener_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/@kazupon/vue-i18n-loader/lib!./DragDropOpener.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CDragDropOpener%5CDragDropOpener.vue&lang=yaml */ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/DragDropOpener/DragDropOpener.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CDragDropOpener%5CDragDropOpener.vue&lang=yaml");
-/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_DragDropOpener_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CDragDropOpener_5CDragDropOpener_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_DragDropOpener_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CDragDropOpener_5CDragDropOpener_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_DragDropOpener_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CDragDropOpener_5CDragDropOpener_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_DragDropOpener_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CDragDropOpener_5CDragDropOpener_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_DragDropOpener_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CDragDropOpener_5CDragDropOpener_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
 /***/ "./src/components/FloatActionButton/FloatActionButton.html?vue&type=template&id=0f8fb719&scoped=true&":
 /*!************************************************************************************************************!*\
   !*** ./src/components/FloatActionButton/FloatActionButton.html?vue&type=template&id=0f8fb719&scoped=true& ***!
@@ -28952,7 +28663,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['config', 'localConfig', 'utils'],
     data() {
-      this.$i18n.locale = this.config.locale
+      this.$i18n.locale = this.localConfig.locale
       return {
         showMenu: false,
         showMenuTimer: null,
@@ -28960,6 +28671,9 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     watch: {
+      'localConfig.locale'() {
+        this.$i18n.locale = this.localConfig.locale;
+      },
       showMenu () {
         if (this.showMenu === true) {
           this.clearDelayCloseMenu()
@@ -29181,12 +28895,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _FloatActionButton_FloatActionButton_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FloatActionButton/FloatActionButton.vue */ "./src/components/FloatActionButton/FloatActionButton.vue");
-/* harmony import */ var _DragDropOpener_DragDropOpener_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DragDropOpener/DragDropOpener.vue */ "./src/components/DragDropOpener/DragDropOpener.vue");
-/* harmony import */ var _IndexComputedTextContent_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./IndexComputedTextContent.js */ "./src/components/IndexComputedTextContent.js");
-/* harmony import */ var _IndexMethodsKeyBindings_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./IndexMethodsKeyBindings.js */ "./src/components/IndexMethodsKeyBindings.js");
+/* harmony import */ var _IndexComputedTextContent_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./IndexComputedTextContent.js */ "./src/components/IndexComputedTextContent.js");
+/* harmony import */ var _IndexMethodsKeyBindings_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./IndexMethodsKeyBindings.js */ "./src/components/IndexMethodsKeyBindings.js");
 /* global Node */
 //import $ from 'jquery'
-
 
 
 //import FormatPanel from './FormatPanel/FormatPanel.vue'
@@ -29195,13 +28907,12 @@ __webpack_require__.r(__webpack_exports__);
 let Index = {
   props: ['config', 'localConfig', 'utils'],
   data () {    
-    this.$i18n.locale = this.config.locale
+    this.$i18n.locale = this.config.localConfig
     return {
     }
   },
   components: {
     FloatActionButton: _FloatActionButton_FloatActionButton_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    DragDropOpener: _DragDropOpener_DragDropOpener_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
     ConfigModal: () => __webpack_require__.e(/*! import() | vendors/ConfigModal */ "vendors/ConfigModal").then(__webpack_require__.bind(null, /*! ./ConfigModal/ConfigModal.vue */ "./src/components/ConfigModal/ConfigModal.vue")),
     //FormatPanel,
     ReplacePanel: () => __webpack_require__.e(/*! import() | vendors/ReplacePanel */ "vendors/ReplacePanel").then(__webpack_require__.bind(null, /*! ./ReplacePanel/ReplacePanel.vue */ "./src/components/ReplacePanel/ReplacePanel.vue")),
@@ -29234,10 +28945,10 @@ let Index = {
 }
 
 
-Object(_IndexComputedTextContent_js__WEBPACK_IMPORTED_MODULE_2__["default"])(Index)
+Object(_IndexComputedTextContent_js__WEBPACK_IMPORTED_MODULE_1__["default"])(Index)
 
 
-Object(_IndexMethodsKeyBindings_js__WEBPACK_IMPORTED_MODULE_3__["default"])(Index)
+Object(_IndexMethodsKeyBindings_js__WEBPACK_IMPORTED_MODULE_2__["default"])(Index)
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
@@ -29568,7 +29279,7 @@ let config = {
     },
     enableRestore: true,
   },
-  locale: 'zh-TW',
+  
   inited: false,
   
   panelHeight: '0rem',
@@ -29990,6 +29701,8 @@ module.exports = "<div class=\"non-invasive-web-style-framework\">\r\n  <index\r
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 let localConfig = {
+  locale: 'zh-TW',
+  
   textContent: '',
   stringToSearch: '',
   stringToReplaceWith: '',

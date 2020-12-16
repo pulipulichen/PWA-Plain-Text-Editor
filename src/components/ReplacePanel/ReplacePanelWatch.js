@@ -13,6 +13,9 @@ export default function (ReplacePanel) {
     'localConfig.replaceMode'() {
       this.setPanelHeight()
     },
+    'localConfig.locale'() {
+      this.$i18n.locale = this.localConfig.locale;
+    },
     'config.inited'() {
       if (this.config.inited === false) {
         return false

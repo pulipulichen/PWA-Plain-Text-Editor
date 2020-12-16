@@ -528,7 +528,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function (CodeMirrorEditor) {
   CodeMirrorEditor.data = function () {
-    this.$i18n.locale = this.config.locale
+    this.$i18n.locale = this.localConfig.locale
     return {
       inited: false,
       simpleMode: false,

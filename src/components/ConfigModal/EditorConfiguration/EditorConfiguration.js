@@ -4,7 +4,7 @@ import cmModeUtil from './../../CodeMirrorEditor/vendors/codemirror.mode-util.we
 let EditorConfiguration = {
   props: ['config', 'utils', 'localConfig'],
   data() {    
-    this.$i18n.locale = this.config.locale
+    this.$i18n.locale = this.localConfig.locale
     return {
       modeOptions: cmModeUtil.getModeSelectOptions()
     }
@@ -19,7 +19,10 @@ let EditorConfiguration = {
         return false
       }
       this.initCheckbox()
-    }
+    },
+    'localConfig.locale'() {
+      this.$i18n.locale = this.localConfig.locale;
+    },
   },
   mounted() {
     //this.initCheckbox()

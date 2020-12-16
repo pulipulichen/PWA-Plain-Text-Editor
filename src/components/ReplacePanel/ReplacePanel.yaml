@@ -1,6 +1,6 @@
-en:
-  TEST_MESSAGE: Test Message
+en-US:
+  Search: Search
   
 zh-TW:
   # 這是註解
-  TEST_MESSAGE: 測試訊息
+  Search: 搜尋

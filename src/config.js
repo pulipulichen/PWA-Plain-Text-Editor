@@ -6,7 +6,7 @@ let config = {
     },
     enableRestore: true,
   },
-  locale: 'zh-TW',
+  
   inited: false,
   
   panelHeight: '0rem',
