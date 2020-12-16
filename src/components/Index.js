@@ -1,6 +1,7 @@
 /* global Node */
 //import $ from 'jquery'
 import FloatActionButton from './FloatActionButton/FloatActionButton.vue'
+import DragDropOpener from './DragDropOpener/DragDropOpener.vue'
 
 //import FormatPanel from './FormatPanel/FormatPanel.vue'
 //import ReplacePanel from './ReplacePanel/ReplacePanel.vue'
@@ -14,6 +15,7 @@ let Index = {
   },
   components: {
     FloatActionButton,
+    DragDropOpener,
     ConfigModal: () => import(/* webpackChunkName: "vendors/ConfigModal" */ './ConfigModal/ConfigModal.vue'),
     //FormatPanel,
     ReplacePanel: () => import(/* webpackChunkName: "vendors/ReplacePanel" */ './ReplacePanel/ReplacePanel.vue'),

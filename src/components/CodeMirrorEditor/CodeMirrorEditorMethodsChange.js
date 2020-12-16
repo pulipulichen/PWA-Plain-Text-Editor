@@ -1,4 +1,5 @@
 export default function (CodeMirrorEditor) {
+    
   CodeMirrorEditor.methods.onEditorChange = async function () {
     if (this.simpleMode === true) {
       return false
@@ -13,7 +14,12 @@ export default function (CodeMirrorEditor) {
     this.highlightText()
     this.setValueLock = false
   }
+  
   CodeMirrorEditor.methods.updateDocumentTitle = function () {
+    if (this.localConfig.filename) {
+      return this.localConfig.filename
+    }
+    
     let textContentTrim = this.$parent.textContentTrim
     if (textContentTrim === '') {
       document.title = 'Plain Text Editor'

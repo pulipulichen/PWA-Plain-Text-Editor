@@ -18,7 +18,8 @@ let localConfig = {
   },
   formatTool: 'lines-trim',
   syntax: 'javascript',
-  fontSize: 32
+  fontSize: 32,
+  filename: null,
 }
 
 export default localConfig

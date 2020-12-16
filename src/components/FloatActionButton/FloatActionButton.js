@@ -94,6 +94,7 @@ export default {
       clear() {
         if (window.confirm('Are you sure?')) {
           this.localConfig.textContent = ''
+          this.localConfig.filename = null
           //this.clearHistory()
         }
         this.closeMenu()

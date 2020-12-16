@@ -1,1 +1,1573 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{120:function(module,exports,__webpack_require__){eval("var api = __webpack_require__(6);\n            var content = __webpack_require__(281);\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\n\n\nmodule.exports = content.locals || {};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMTIwLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvQ29kZU1pcnJvckVkaXRvci9Db2RlTWlycm9yRWRpdG9yR2xvYmFsLmxlc3M/NDZjNCJdLCJzb3VyY2VzQ29udGVudCI6WyJ2YXIgYXBpID0gcmVxdWlyZShcIiEuLi8uLi8uLi9ub2RlX21vZHVsZXMvc3R5bGUtbG9hZGVyL2Rpc3QvcnVudGltZS9pbmplY3RTdHlsZXNJbnRvU3R5bGVUYWcuanNcIik7XG4gICAgICAgICAgICB2YXIgY29udGVudCA9IHJlcXVpcmUoXCIhIS4uLy4uLy4uL25vZGVfbW9kdWxlcy9jc3MtbG9hZGVyL2Rpc3QvY2pzLmpzPz9yZWYtLTEtMSEuLi8uLi8uLi9ub2RlX21vZHVsZXMvdnVlLWxvYWRlci9saWIvbG9hZGVycy9zdHlsZVBvc3RMb2FkZXIuanMhLi4vLi4vLi4vbm9kZV9tb2R1bGVzL3Bvc3Rjc3MtbG9hZGVyL3NyYy9pbmRleC5qcz8/cmVmLS0xLTIhLi4vLi4vLi4vbm9kZV9tb2R1bGVzL2xlc3MtbG9hZGVyL2Rpc3QvY2pzLmpzPz9yZWYtLTEtMyEuL0NvZGVNaXJyb3JFZGl0b3JHbG9iYWwubGVzcz92dWUmdHlwZT1zdHlsZSZpbmRleD0wJmxhbmc9bGVzcyZcIik7XG5cbiAgICAgICAgICAgIGNvbnRlbnQgPSBjb250ZW50Ll9fZXNNb2R1bGUgPyBjb250ZW50LmRlZmF1bHQgOiBjb250ZW50O1xuXG4gICAgICAgICAgICBpZiAodHlwZW9mIGNvbnRlbnQgPT09ICdzdHJpbmcnKSB7XG4gICAgICAgICAgICAgIGNvbnRlbnQgPSBbW21vZHVsZS5pZCwgY29udGVudCwgJyddXTtcbiAgICAgICAgICAgIH1cblxudmFyIG9wdGlvbnMgPSB7fTtcblxub3B0aW9ucy5pbnNlcnQgPSBcImhlYWRcIjtcbm9wdGlvbnMuc2luZ2xldG9uID0gZmFsc2U7XG5cbnZhciB1cGRhdGUgPSBhcGkoY29udGVudCwgb3B0aW9ucyk7XG5cblxuXG5tb2R1bGUuZXhwb3J0cyA9IGNvbnRlbnQubG9jYWxzIHx8IHt9OyJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///120\n")},121:function(module,exports,__webpack_require__){eval("var api = __webpack_require__(6);\n            var content = __webpack_require__(283);\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\n\n\nmodule.exports = content.locals || {};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMTIxLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvQ29kZU1pcnJvckVkaXRvci9Db2RlTWlycm9yRWRpdG9yLmxlc3M/MmI4ZSJdLCJzb3VyY2VzQ29udGVudCI6WyJ2YXIgYXBpID0gcmVxdWlyZShcIiEuLi8uLi8uLi9ub2RlX21vZHVsZXMvc3R5bGUtbG9hZGVyL2Rpc3QvcnVudGltZS9pbmplY3RTdHlsZXNJbnRvU3R5bGVUYWcuanNcIik7XG4gICAgICAgICAgICB2YXIgY29udGVudCA9IHJlcXVpcmUoXCIhIS4uLy4uLy4uL25vZGVfbW9kdWxlcy9jc3MtbG9hZGVyL2Rpc3QvY2pzLmpzPz9yZWYtLTEtMSEuLi8uLi8uLi9ub2RlX21vZHVsZXMvdnVlLWxvYWRlci9saWIvbG9hZGVycy9zdHlsZVBvc3RMb2FkZXIuanMhLi4vLi4vLi4vbm9kZV9tb2R1bGVzL3Bvc3Rjc3MtbG9hZGVyL3NyYy9pbmRleC5qcz8/cmVmLS0xLTIhLi4vLi4vLi4vbm9kZV9tb2R1bGVzL2xlc3MtbG9hZGVyL2Rpc3QvY2pzLmpzPz9yZWYtLTEtMyEuL0NvZGVNaXJyb3JFZGl0b3IubGVzcz92dWUmdHlwZT1zdHlsZSZpbmRleD0xJmlkPTZjYzZjODIyJmxhbmc9bGVzcyZzY29wZWQ9dHJ1ZSZcIik7XG5cbiAgICAgICAgICAgIGNvbnRlbnQgPSBjb250ZW50Ll9fZXNNb2R1bGUgPyBjb250ZW50LmRlZmF1bHQgOiBjb250ZW50O1xuXG4gICAgICAgICAgICBpZiAodHlwZW9mIGNvbnRlbnQgPT09ICdzdHJpbmcnKSB7XG4gICAgICAgICAgICAgIGNvbnRlbnQgPSBbW21vZHVsZS5pZCwgY29udGVudCwgJyddXTtcbiAgICAgICAgICAgIH1cblxudmFyIG9wdGlvbnMgPSB7fTtcblxub3B0aW9ucy5pbnNlcnQgPSBcImhlYWRcIjtcbm9wdGlvbnMuc2luZ2xldG9uID0gZmFsc2U7XG5cbnZhciB1cGRhdGUgPSBhcGkoY29udGVudCwgb3B0aW9ucyk7XG5cblxuXG5tb2R1bGUuZXhwb3J0cyA9IGNvbnRlbnQubG9jYWxzIHx8IHt9OyJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///121\n")},280:function(module,__webpack_exports__,__webpack_require__){"use strict";eval("/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_ref_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_1_2_node_modules_less_loader_dist_cjs_js_ref_1_3_CodeMirrorEditorGlobal_less_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(120);\n/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_ref_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_1_2_node_modules_less_loader_dist_cjs_js_ref_1_3_CodeMirrorEditorGlobal_less_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_ref_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_1_2_node_modules_less_loader_dist_cjs_js_ref_1_3_CodeMirrorEditorGlobal_less_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__);\n/* unused harmony reexport * */\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjgwLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvQ29kZU1pcnJvckVkaXRvci9Db2RlTWlycm9yRWRpdG9yR2xvYmFsLmxlc3M/YzdiYyJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgKiBmcm9tIFwiLSEuLi8uLi8uLi9ub2RlX21vZHVsZXMvc3R5bGUtbG9hZGVyL2Rpc3QvY2pzLmpzIS4uLy4uLy4uL25vZGVfbW9kdWxlcy9jc3MtbG9hZGVyL2Rpc3QvY2pzLmpzPz9yZWYtLTEtMSEuLi8uLi8uLi9ub2RlX21vZHVsZXMvdnVlLWxvYWRlci9saWIvbG9hZGVycy9zdHlsZVBvc3RMb2FkZXIuanMhLi4vLi4vLi4vbm9kZV9tb2R1bGVzL3Bvc3Rjc3MtbG9hZGVyL3NyYy9pbmRleC5qcz8/cmVmLS0xLTIhLi4vLi4vLi4vbm9kZV9tb2R1bGVzL2xlc3MtbG9hZGVyL2Rpc3QvY2pzLmpzPz9yZWYtLTEtMyEuL0NvZGVNaXJyb3JFZGl0b3JHbG9iYWwubGVzcz92dWUmdHlwZT1zdHlsZSZpbmRleD0wJmxhbmc9bGVzcyZcIiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBOyIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///280\n")},281:function(module,exports,__webpack_require__){eval('// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(5);\nexports = ___CSS_LOADER_API_IMPORT___(true);\n// Module\nexports.push([module.i, ".CodeMirror{font-family:Roboto,sans-serif!important;font-size:1.5rem;line-height:2rem}.CodeMirror .highlight{background-color:rgba(255,255,0,.5)}", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/PWA-Plain-Text-Editor/src/components/CodeMirrorEditor/D:/xampp/htdocs/projects-html5/PWA-Plain-Text-Editor/src/components/CodeMirrorEditor/CodeMirrorEditorGlobal.less?vue&type=style&index=0&lang=less&","D:/xampp/htdocs/projects-html5/PWA-Plain-Text-Editor/src/components/CodeMirrorEditor/CodeMirrorEditorGlobal.less"],"names":[],"mappings":"AAAA,YAEE,uCAAA,CAEA,gBAAA,CACA,gBCDF,CDJA,uBAiBI,mCCVJ","file":"CodeMirrorEditorGlobal.less","sourcesContent":[".CodeMirror {\\n  //font-family: Arial, monospace;\\n  font-family: \'Roboto\', sans-serif !important;\\n  \\n  font-size: 1.5rem;\\n  line-height: 2rem;\\n  \\n  //height: 100vh !important;\\n  \\n  &.display-replace-panel {\\n    //height: calc(100vh - @ReplacePanelHeight) !important;\\n  }\\n  \\n  \\n  .highlight {\\n    //background-color: yellow;\\n    //border: 1px solid yellow;\\n    background-color: rgba(255,255,0, 0.5);\\n  }\\n}\\n",".CodeMirror {\\n  font-family: \'Roboto\', sans-serif !important;\\n  font-size: 1.5rem;\\n  line-height: 2rem;\\n}\\n.CodeMirror .highlight {\\n  background-color: rgba(255, 255, 0, 0.5);\\n}\\n"]}]);\n// Exports\nmodule.exports = exports;\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjgxLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvQ29kZU1pcnJvckVkaXRvci9Db2RlTWlycm9yRWRpdG9yR2xvYmFsLmxlc3M/ODljZSJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBJbXBvcnRzXG52YXIgX19fQ1NTX0xPQURFUl9BUElfSU1QT1JUX19fID0gcmVxdWlyZShcIi4uLy4uLy4uL25vZGVfbW9kdWxlcy9jc3MtbG9hZGVyL2Rpc3QvcnVudGltZS9hcGkuanNcIik7XG5leHBvcnRzID0gX19fQ1NTX0xPQURFUl9BUElfSU1QT1JUX19fKHRydWUpO1xuLy8gTW9kdWxlXG5leHBvcnRzLnB1c2goW21vZHVsZS5pZCwgXCIuQ29kZU1pcnJvcntmb250LWZhbWlseTpSb2JvdG8sc2Fucy1zZXJpZiFpbXBvcnRhbnQ7Zm9udC1zaXplOjEuNXJlbTtsaW5lLWhlaWdodDoycmVtfS5Db2RlTWlycm9yIC5oaWdobGlnaHR7YmFja2dyb3VuZC1jb2xvcjpyZ2JhKDI1NSwyNTUsMCwuNSl9XCIsIFwiXCIse1widmVyc2lvblwiOjMsXCJzb3VyY2VzXCI6W1wiRDoveGFtcHAvaHRkb2NzL3Byb2plY3RzLWh0bWw1L1BXQS1QbGFpbi1UZXh0LUVkaXRvci9zcmMvY29tcG9uZW50cy9Db2RlTWlycm9yRWRpdG9yL0Q6L3hhbXBwL2h0ZG9jcy9wcm9qZWN0cy1odG1sNS9QV0EtUGxhaW4tVGV4dC1FZGl0b3Ivc3JjL2NvbXBvbmVudHMvQ29kZU1pcnJvckVkaXRvci9Db2RlTWlycm9yRWRpdG9yR2xvYmFsLmxlc3M/dnVlJnR5cGU9c3R5bGUmaW5kZXg9MCZsYW5nPWxlc3MmXCIsXCJEOi94YW1wcC9odGRvY3MvcHJvamVjdHMtaHRtbDUvUFdBLVBsYWluLVRleHQtRWRpdG9yL3NyYy9jb21wb25lbnRzL0NvZGVNaXJyb3JFZGl0b3IvQ29kZU1pcnJvckVkaXRvckdsb2JhbC5sZXNzXCJdLFwibmFtZXNcIjpbXSxcIm1hcHBpbmdzXCI6XCJBQUFBLFlBRUUsdUNBQUEsQ0FFQSxnQkFBQSxDQUNBLGdCQ0RGLENESkEsdUJBaUJJLG1DQ1ZKXCIsXCJmaWxlXCI6XCJDb2RlTWlycm9yRWRpdG9yR2xvYmFsLmxlc3NcIixcInNvdXJjZXNDb250ZW50XCI6W1wiLkNvZGVNaXJyb3Ige1xcbiAgLy9mb250LWZhbWlseTogQXJpYWwsIG1vbm9zcGFjZTtcXG4gIGZvbnQtZmFtaWx5OiAnUm9ib3RvJywgc2Fucy1zZXJpZiAhaW1wb3J0YW50O1xcbiAgXFxuICBmb250LXNpemU6IDEuNXJlbTtcXG4gIGxpbmUtaGVpZ2h0OiAycmVtO1xcbiAgXFxuICAvL2hlaWdodDogMTAwdmggIWltcG9ydGFudDtcXG4gIFxcbiAgJi5kaXNwbGF5LXJlcGxhY2UtcGFuZWwge1xcbiAgICAvL2hlaWdodDogY2FsYygxMDB2aCAtIEBSZXBsYWNlUGFuZWxIZWlnaHQpICFpbXBvcnRhbnQ7XFxuICB9XFxuICBcXG4gIFxcbiAgLmhpZ2hsaWdodCB7XFxuICAgIC8vYmFja2dyb3VuZC1jb2xvcjogeWVsbG93O1xcbiAgICAvL2JvcmRlcjogMXB4IHNvbGlkIHllbGxvdztcXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgyNTUsMjU1LDAsIDAuNSk7XFxuICB9XFxufVxcblwiLFwiLkNvZGVNaXJyb3Ige1xcbiAgZm9udC1mYW1pbHk6ICdSb2JvdG8nLCBzYW5zLXNlcmlmICFpbXBvcnRhbnQ7XFxuICBmb250LXNpemU6IDEuNXJlbTtcXG4gIGxpbmUtaGVpZ2h0OiAycmVtO1xcbn1cXG4uQ29kZU1pcnJvciAuaGlnaGxpZ2h0IHtcXG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDAsIDAuNSk7XFxufVxcblwiXX1dKTtcbi8vIEV4cG9ydHNcbm1vZHVsZS5leHBvcnRzID0gZXhwb3J0cztcbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7Iiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///281\n')},282:function(module,__webpack_exports__,__webpack_require__){"use strict";eval("/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_ref_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_1_2_node_modules_less_loader_dist_cjs_js_ref_1_3_CodeMirrorEditor_less_vue_type_style_index_1_id_6cc6c822_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(121);\n/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_ref_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_1_2_node_modules_less_loader_dist_cjs_js_ref_1_3_CodeMirrorEditor_less_vue_type_style_index_1_id_6cc6c822_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_ref_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_1_2_node_modules_less_loader_dist_cjs_js_ref_1_3_CodeMirrorEditor_less_vue_type_style_index_1_id_6cc6c822_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__);\n/* unused harmony reexport * */\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjgyLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvQ29kZU1pcnJvckVkaXRvci9Db2RlTWlycm9yRWRpdG9yLmxlc3M/MjM2OSJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgKiBmcm9tIFwiLSEuLi8uLi8uLi9ub2RlX21vZHVsZXMvc3R5bGUtbG9hZGVyL2Rpc3QvY2pzLmpzIS4uLy4uLy4uL25vZGVfbW9kdWxlcy9jc3MtbG9hZGVyL2Rpc3QvY2pzLmpzPz9yZWYtLTEtMSEuLi8uLi8uLi9ub2RlX21vZHVsZXMvdnVlLWxvYWRlci9saWIvbG9hZGVycy9zdHlsZVBvc3RMb2FkZXIuanMhLi4vLi4vLi4vbm9kZV9tb2R1bGVzL3Bvc3Rjc3MtbG9hZGVyL3NyYy9pbmRleC5qcz8/cmVmLS0xLTIhLi4vLi4vLi4vbm9kZV9tb2R1bGVzL2xlc3MtbG9hZGVyL2Rpc3QvY2pzLmpzPz9yZWYtLTEtMyEuL0NvZGVNaXJyb3JFZGl0b3IubGVzcz92dWUmdHlwZT1zdHlsZSZpbmRleD0xJmlkPTZjYzZjODIyJmxhbmc9bGVzcyZzY29wZWQ9dHJ1ZSZcIiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBOyIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///282\n")},283:function(module,exports,__webpack_require__){eval('// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(5);\nexports = ___CSS_LOADER_API_IMPORT___(true);\n// Module\nexports.push([module.i, ".code-mirror-wrapper[data-v-6cc6c822]{opacity:0;transition:opacity .5s}.code-mirror-wrapper.inited[data-v-6cc6c822]{opacity:1}.code-mirror-wrapper.text-wrap-disabled[data-v-6cc6c822]  .CodeMirror-hscrollbar{display:none}textarea.editor[data-v-6cc6c822]{display:none;height:100vh!important;width:100%!important;width:100vw;height:100vh;line-height:2.3rem;font-size:1.5rem;padding:.5rem;border:none;overflow:auto;outline:none;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;resize:none}textarea.editor.disable-wrap[data-v-6cc6c822]{white-space:nowrap}", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/PWA-Plain-Text-Editor/src/components/CodeMirrorEditor/D:/xampp/htdocs/projects-html5/PWA-Plain-Text-Editor/src/components/CodeMirrorEditor/CodeMirrorEditor.less?vue&type=style&index=1&id=6cc6c822&lang=less&scoped=true&","D:/xampp/htdocs/projects-html5/PWA-Plain-Text-Editor/src/components/CodeMirrorEditor/CodeMirrorEditor.less"],"names":[],"mappings":"AAAA,sCACE,SAAA,CACA,sBCCF,CDCE,6CACE,SCCJ,CDEE,iFACE,YCAJ,CDIA,iCACE,YAAA,CAEA,sBAAA,CACA,oBAAA,CAEA,WAAA,CACA,YAAA,CAEA,kBAAA,CACA,gBAAA,CACA,aAAA,CAEA,WAAA,CACA,aAAA,CACA,YAAA,CAEA,uBAAA,CACA,oBAAA,CACA,eAAA,CAEA,WCPF,CDSE,8CACE,kBCPJ","file":"CodeMirrorEditor.less","sourcesContent":[".code-mirror-wrapper {\\n  opacity: 0;\\n  transition: opacity 0.5s;\\n  \\n  &.inited {\\n    opacity: 1;\\n  }\\n  \\n  &.text-wrap-disabled ::v-deep .CodeMirror-hscrollbar {\\n    display: none;\\n  }\\n}\\n\\ntextarea.editor {\\n  display: none;\\n  \\n  height: 100vh !important;\\n  width: 100% !important;\\n  \\n  width: 100vw;\\n  height: 100vh;\\n\\n  line-height: 2.3rem;\\n  font-size: 1.5rem;\\n  padding: 0.5rem;\\n\\n  border: none;\\n  overflow: auto;\\n  outline: none;\\n\\n  -webkit-box-shadow: none;\\n  -moz-box-shadow: none;\\n  box-shadow: none;\\n\\n  resize: none; /*remove the resize handle on the bottom right*/\\n\\n  &.disable-wrap {\\n    white-space: nowrap;\\n  }\\n}",".code-mirror-wrapper {\\n  opacity: 0;\\n  transition: opacity 0.5s;\\n}\\n.code-mirror-wrapper.inited {\\n  opacity: 1;\\n}\\n.code-mirror-wrapper.text-wrap-disabled ::v-deep .CodeMirror-hscrollbar {\\n  display: none;\\n}\\ntextarea.editor {\\n  display: none;\\n  height: 100vh !important;\\n  width: 100% !important;\\n  width: 100vw;\\n  height: 100vh;\\n  line-height: 2.3rem;\\n  font-size: 1.5rem;\\n  padding: 0.5rem;\\n  border: none;\\n  overflow: auto;\\n  outline: none;\\n  -webkit-box-shadow: none;\\n  -moz-box-shadow: none;\\n  box-shadow: none;\\n  resize: none;\\n  /*remove the resize handle on the bottom right*/\\n}\\ntextarea.editor.disable-wrap {\\n  white-space: nowrap;\\n}\\n"]}]);\n// Exports\nmodule.exports = exports;\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjgzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvQ29kZU1pcnJvckVkaXRvci9Db2RlTWlycm9yRWRpdG9yLmxlc3M/ZDkyNCJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBJbXBvcnRzXG52YXIgX19fQ1NTX0xPQURFUl9BUElfSU1QT1JUX19fID0gcmVxdWlyZShcIi4uLy4uLy4uL25vZGVfbW9kdWxlcy9jc3MtbG9hZGVyL2Rpc3QvcnVudGltZS9hcGkuanNcIik7XG5leHBvcnRzID0gX19fQ1NTX0xPQURFUl9BUElfSU1QT1JUX19fKHRydWUpO1xuLy8gTW9kdWxlXG5leHBvcnRzLnB1c2goW21vZHVsZS5pZCwgXCIuY29kZS1taXJyb3Itd3JhcHBlcltkYXRhLXYtNmNjNmM4MjJde29wYWNpdHk6MDt0cmFuc2l0aW9uOm9wYWNpdHkgLjVzfS5jb2RlLW1pcnJvci13cmFwcGVyLmluaXRlZFtkYXRhLXYtNmNjNmM4MjJde29wYWNpdHk6MX0uY29kZS1taXJyb3Itd3JhcHBlci50ZXh0LXdyYXAtZGlzYWJsZWRbZGF0YS12LTZjYzZjODIyXSAgLkNvZGVNaXJyb3ItaHNjcm9sbGJhcntkaXNwbGF5Om5vbmV9dGV4dGFyZWEuZWRpdG9yW2RhdGEtdi02Y2M2YzgyMl17ZGlzcGxheTpub25lO2hlaWdodDoxMDB2aCFpbXBvcnRhbnQ7d2lkdGg6MTAwJSFpbXBvcnRhbnQ7d2lkdGg6MTAwdnc7aGVpZ2h0OjEwMHZoO2xpbmUtaGVpZ2h0OjIuM3JlbTtmb250LXNpemU6MS41cmVtO3BhZGRpbmc6LjVyZW07Ym9yZGVyOm5vbmU7b3ZlcmZsb3c6YXV0bztvdXRsaW5lOm5vbmU7LXdlYmtpdC1ib3gtc2hhZG93Om5vbmU7LW1vei1ib3gtc2hhZG93Om5vbmU7Ym94LXNoYWRvdzpub25lO3Jlc2l6ZTpub25lfXRleHRhcmVhLmVkaXRvci5kaXNhYmxlLXdyYXBbZGF0YS12LTZjYzZjODIyXXt3aGl0ZS1zcGFjZTpub3dyYXB9XCIsIFwiXCIse1widmVyc2lvblwiOjMsXCJzb3VyY2VzXCI6W1wiRDoveGFtcHAvaHRkb2NzL3Byb2plY3RzLWh0bWw1L1BXQS1QbGFpbi1UZXh0LUVkaXRvci9zcmMvY29tcG9uZW50cy9Db2RlTWlycm9yRWRpdG9yL0Q6L3hhbXBwL2h0ZG9jcy9wcm9qZWN0cy1odG1sNS9QV0EtUGxhaW4tVGV4dC1FZGl0b3Ivc3JjL2NvbXBvbmVudHMvQ29kZU1pcnJvckVkaXRvci9Db2RlTWlycm9yRWRpdG9yLmxlc3M/dnVlJnR5cGU9c3R5bGUmaW5kZXg9MSZpZD02Y2M2YzgyMiZsYW5nPWxlc3Mmc2NvcGVkPXRydWUmXCIsXCJEOi94YW1wcC9odGRvY3MvcHJvamVjdHMtaHRtbDUvUFdBLVBsYWluLVRleHQtRWRpdG9yL3NyYy9jb21wb25lbnRzL0NvZGVNaXJyb3JFZGl0b3IvQ29kZU1pcnJvckVkaXRvci5sZXNzXCJdLFwibmFtZXNcIjpbXSxcIm1hcHBpbmdzXCI6XCJBQUFBLHNDQUNFLFNBQUEsQ0FDQSxzQkNDRixDRENFLDZDQUNFLFNDQ0osQ0RFRSxpRkFDRSxZQ0FKLENESUEsaUNBQ0UsWUFBQSxDQUVBLHNCQUFBLENBQ0Esb0JBQUEsQ0FFQSxXQUFBLENBQ0EsWUFBQSxDQUVBLGtCQUFBLENBQ0EsZ0JBQUEsQ0FDQSxhQUFBLENBRUEsV0FBQSxDQUNBLGFBQUEsQ0FDQSxZQUFBLENBRUEsdUJBQUEsQ0FDQSxvQkFBQSxDQUNBLGVBQUEsQ0FFQSxXQ1BGLENEU0UsOENBQ0Usa0JDUEpcIixcImZpbGVcIjpcIkNvZGVNaXJyb3JFZGl0b3IubGVzc1wiLFwic291cmNlc0NvbnRlbnRcIjpbXCIuY29kZS1taXJyb3Itd3JhcHBlciB7XFxuICBvcGFjaXR5OiAwO1xcbiAgdHJhbnNpdGlvbjogb3BhY2l0eSAwLjVzO1xcbiAgXFxuICAmLmluaXRlZCB7XFxuICAgIG9wYWNpdHk6IDE7XFxuICB9XFxuICBcXG4gICYudGV4dC13cmFwLWRpc2FibGVkIDo6di1kZWVwIC5Db2RlTWlycm9yLWhzY3JvbGxiYXIge1xcbiAgICBkaXNwbGF5OiBub25lO1xcbiAgfVxcbn1cXG5cXG50ZXh0YXJlYS5lZGl0b3Ige1xcbiAgZGlzcGxheTogbm9uZTtcXG4gIFxcbiAgaGVpZ2h0OiAxMDB2aCAhaW1wb3J0YW50O1xcbiAgd2lkdGg6IDEwMCUgIWltcG9ydGFudDtcXG4gIFxcbiAgd2lkdGg6IDEwMHZ3O1xcbiAgaGVpZ2h0OiAxMDB2aDtcXG5cXG4gIGxpbmUtaGVpZ2h0OiAyLjNyZW07XFxuICBmb250LXNpemU6IDEuNXJlbTtcXG4gIHBhZGRpbmc6IDAuNXJlbTtcXG5cXG4gIGJvcmRlcjogbm9uZTtcXG4gIG92ZXJmbG93OiBhdXRvO1xcbiAgb3V0bGluZTogbm9uZTtcXG5cXG4gIC13ZWJraXQtYm94LXNoYWRvdzogbm9uZTtcXG4gIC1tb3otYm94LXNoYWRvdzogbm9uZTtcXG4gIGJveC1zaGFkb3c6IG5vbmU7XFxuXFxuICByZXNpemU6IG5vbmU7IC8qcmVtb3ZlIHRoZSByZXNpemUgaGFuZGxlIG9uIHRoZSBib3R0b20gcmlnaHQqL1xcblxcbiAgJi5kaXNhYmxlLXdyYXAge1xcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xcbiAgfVxcbn1cIixcIi5jb2RlLW1pcnJvci13cmFwcGVyIHtcXG4gIG9wYWNpdHk6IDA7XFxuICB0cmFuc2l0aW9uOiBvcGFjaXR5IDAuNXM7XFxufVxcbi5jb2RlLW1pcnJvci13cmFwcGVyLmluaXRlZCB7XFxuICBvcGFjaXR5OiAxO1xcbn1cXG4uY29kZS1taXJyb3Itd3JhcHBlci50ZXh0LXdyYXAtZGlzYWJsZWQgOjp2LWRlZXAgLkNvZGVNaXJyb3ItaHNjcm9sbGJhciB7XFxuICBkaXNwbGF5OiBub25lO1xcbn1cXG50ZXh0YXJlYS5lZGl0b3Ige1xcbiAgZGlzcGxheTogbm9uZTtcXG4gIGhlaWdodDogMTAwdmggIWltcG9ydGFudDtcXG4gIHdpZHRoOiAxMDAlICFpbXBvcnRhbnQ7XFxuICB3aWR0aDogMTAwdnc7XFxuICBoZWlnaHQ6IDEwMHZoO1xcbiAgbGluZS1oZWlnaHQ6IDIuM3JlbTtcXG4gIGZvbnQtc2l6ZTogMS41cmVtO1xcbiAgcGFkZGluZzogMC41cmVtO1xcbiAgYm9yZGVyOiBub25lO1xcbiAgb3ZlcmZsb3c6IGF1dG87XFxuICBvdXRsaW5lOiBub25lO1xcbiAgLXdlYmtpdC1ib3gtc2hhZG93OiBub25lO1xcbiAgLW1vei1ib3gtc2hhZG93OiBub25lO1xcbiAgYm94LXNoYWRvdzogbm9uZTtcXG4gIHJlc2l6ZTogbm9uZTtcXG4gIC8qcmVtb3ZlIHRoZSByZXNpemUgaGFuZGxlIG9uIHRoZSBib3R0b20gcmlnaHQqL1xcbn1cXG50ZXh0YXJlYS5lZGl0b3IuZGlzYWJsZS13cmFwIHtcXG4gIHdoaXRlLXNwYWNlOiBub3dyYXA7XFxufVxcblwiXX1dKTtcbi8vIEV4cG9ydHNcbm1vZHVsZS5leHBvcnRzID0gZXhwb3J0cztcbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7Iiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///283\n')},284:function(module,__webpack_exports__,__webpack_require__){"use strict";eval('/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_CodeMirrorEditor_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CCodeMirrorEditor_5CCodeMirrorEditor_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(89);\n/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_CodeMirrorEditor_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CCodeMirrorEditor_5CCodeMirrorEditor_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_CodeMirrorEditor_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CCodeMirrorEditor_5CCodeMirrorEditor_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);\n /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_CodeMirrorEditor_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CCodeMirrorEditor_5CCodeMirrorEditor_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); //# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjg0LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvQ29kZU1pcnJvckVkaXRvci9Db2RlTWlycm9yRWRpdG9yLnlhbWw/MjM3MyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgbW9kIGZyb20gXCItIS4uLy4uLy4uL25vZGVfbW9kdWxlcy9Aa2F6dXBvbi92dWUtaTE4bi1sb2FkZXIvbGliL2luZGV4LmpzIS4vQ29kZU1pcnJvckVkaXRvci55YW1sP3Z1ZSZ0eXBlPWN1c3RvbSZpbmRleD0wJmJsb2NrVHlwZT1pMThuJmlzc3VlclBhdGg9RCUzQSU1Q3hhbXBwJTVDaHRkb2NzJTVDcHJvamVjdHMtaHRtbDUlNUNQV0EtUGxhaW4tVGV4dC1FZGl0b3IlNUNzcmMlNUNjb21wb25lbnRzJTVDQ29kZU1pcnJvckVkaXRvciU1Q0NvZGVNaXJyb3JFZGl0b3IudnVlJmxhbmc9eWFtbFwiOyBleHBvcnQgZGVmYXVsdCBtb2Q7IGV4cG9ydCAqIGZyb20gXCItIS4uLy4uLy4uL25vZGVfbW9kdWxlcy9Aa2F6dXBvbi92dWUtaTE4bi1sb2FkZXIvbGliL2luZGV4LmpzIS4vQ29kZU1pcnJvckVkaXRvci55YW1sP3Z1ZSZ0eXBlPWN1c3RvbSZpbmRleD0wJmJsb2NrVHlwZT1pMThuJmlzc3VlclBhdGg9RCUzQSU1Q3hhbXBwJTVDaHRkb2NzJTVDcHJvamVjdHMtaHRtbDUlNUNQV0EtUGxhaW4tVGV4dC1FZGl0b3IlNUNzcmMlNUNjb21wb25lbnRzJTVDQ29kZU1pcnJvckVkaXRvciU1Q0NvZGVNaXJyb3JFZGl0b3IudnVlJmxhbmc9eWFtbFwiIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///284\n')},288:function(module,__webpack_exports__,__webpack_require__){"use strict";eval("// ESM COMPAT FLAG\n__webpack_require__.r(__webpack_exports__);\n\n// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./src/components/CodeMirrorEditor/CodeMirrorEditor.html?vue&type=template&id=6cc6c822&scoped=true&\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    {\n      staticClass: \"code-mirror-wrapper\",\n      class: _vm.computedCodeMirrorWrapperClassNameList\n    },\n    [\n      _vm.simpleMode\n        ? _c(\"textarea\", {\n            directives: [\n              {\n                name: \"model\",\n                rawName: \"v-model\",\n                value: _vm.localConfig.textContent,\n                expression: \"localConfig.textContent\"\n              }\n            ],\n            ref: \"MainTextarea\",\n            staticClass: \"editor\",\n            domProps: { value: _vm.localConfig.textContent },\n            on: {\n              input: function($event) {\n                if ($event.target.composing) {\n                  return\n                }\n                _vm.$set(_vm.localConfig, \"textContent\", $event.target.value)\n              }\n            }\n          })\n        : _vm._e(),\n      _vm._v(\" \"),\n      !_vm.simpleMode\n        ? _c(\"codemirror\", {\n            ref: \"cmEditor\",\n            attrs: { options: _vm.computedCodeMirrorOptions },\n            on: {\n              inputRead: _vm.onCodeMirrorKeyHandled,\n              cursorActivity: _vm.onCodeMirrorCursorActivity,\n              viewportChange: _vm.onCodeMirrorCursorActivity\n            },\n            model: {\n              value: _vm.code,\n              callback: function($$v) {\n                _vm.code = $$v\n              },\n              expression: \"code\"\n            }\n          })\n        : _vm._e()\n    ],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n// CONCATENATED MODULE: ./src/components/CodeMirrorEditor/CodeMirrorEditor.html?vue&type=template&id=6cc6c822&scoped=true&\n\n// EXTERNAL MODULE: ./node_modules/@babel/runtime/regenerator/index.js\nvar regenerator = __webpack_require__(0);\nvar regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);\n\n// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/asyncToGenerator.js\nvar asyncToGenerator = __webpack_require__(2);\nvar asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator);\n\n// EXTERNAL MODULE: ./node_modules/jquery/dist/jquery.js\nvar jquery = __webpack_require__(4);\nvar jquery_default = /*#__PURE__*/__webpack_require__.n(jquery);\n\n// EXTERNAL MODULE: ./node_modules/vue-codemirror/dist/vue-codemirror.js\nvar vue_codemirror = __webpack_require__(165);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/lib/codemirror.css\nvar codemirror = __webpack_require__(166);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/search/matchesonscrollbar.js\nvar matchesonscrollbar = __webpack_require__(168);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/search/searchcursor.js\nvar searchcursor = __webpack_require__(96);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/fold/foldcode.js\nvar foldcode = __webpack_require__(97);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/fold/foldgutter.js\nvar foldgutter = __webpack_require__(170);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/fold/foldgutter.css\nvar fold_foldgutter = __webpack_require__(171);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/fold/brace-fold.js\nvar brace_fold = __webpack_require__(173);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/fold/xml-fold.js\nvar xml_fold = __webpack_require__(78);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/fold/indent-fold.js\nvar indent_fold = __webpack_require__(174);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/fold/markdown-fold.js\nvar markdown_fold = __webpack_require__(175);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/fold/comment-fold.js\nvar comment_fold = __webpack_require__(176);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/edit/matchbrackets.js\nvar matchbrackets = __webpack_require__(177);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/edit/closebrackets.js\nvar closebrackets = __webpack_require__(178);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/edit/matchtags.js\nvar matchtags = __webpack_require__(179);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/edit/closetag.js\nvar closetag = __webpack_require__(180);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/hint/show-hint.js\nvar show_hint = __webpack_require__(181);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/hint/show-hint.css\nvar hint_show_hint = __webpack_require__(182);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/hint/javascript-hint.js\nvar javascript_hint = __webpack_require__(184);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/hint/html-hint.js\nvar html_hint = __webpack_require__(185);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/hint/css-hint.js\nvar css_hint = __webpack_require__(187);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/hint/anyword-hint.js\nvar anyword_hint = __webpack_require__(188);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/hint/sql-hint.js\nvar sql_hint = __webpack_require__(189);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/lint/lint.js\nvar lint = __webpack_require__(190);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/lint/lint.css\nvar lint_lint = __webpack_require__(191);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/lint/javascript-lint.js\nvar javascript_lint = __webpack_require__(193);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/lint/yaml-lint.js\nvar yaml_lint = __webpack_require__(194);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/lint/html-lint.js\nvar html_lint = __webpack_require__(195);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/lint/json-lint.js\nvar json_lint = __webpack_require__(231);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/lint/css-lint.js\nvar css_lint = __webpack_require__(232);\n\n// EXTERNAL MODULE: ./node_modules/jshint/src/jshint.js\nvar jshint = __webpack_require__(233);\n\n// EXTERNAL MODULE: ./node_modules/csslint/dist/csslint-node.js\nvar csslint_node = __webpack_require__(253);\n\n// EXTERNAL MODULE: ./node_modules/jsonlint-webpack/lib/jsonlint.js\nvar jsonlint = __webpack_require__(266);\nvar jsonlint_default = /*#__PURE__*/__webpack_require__.n(jsonlint);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/mode/javascript/javascript.js\nvar javascript = __webpack_require__(115);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/mode/php/php.js\nvar php = __webpack_require__(116);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/mode/css/css.js\nvar css = __webpack_require__(79);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/mode/sql/sql.js\nvar sql = __webpack_require__(98);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/mode/perl/perl.js\nvar perl = __webpack_require__(267);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/mode/clike/clike.js\nvar clike = __webpack_require__(118);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/mode/python/python.js\nvar python = __webpack_require__(268);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/mode/yaml/yaml.js\nvar yaml = __webpack_require__(269);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/mode/xml/xml.js\nvar xml = __webpack_require__(117);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/mode/htmlembedded/htmlembedded.js\nvar htmlembedded = __webpack_require__(270);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/mode/htmlmixed/htmlmixed.js\nvar htmlmixed = __webpack_require__(86);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/selection/active-line.js\nvar active_line = __webpack_require__(272);\n\n// EXTERNAL MODULE: ./node_modules/codemirror/addon/comment/continuecomment.js\nvar continuecomment = __webpack_require__(273);\n\n// CONCATENATED MODULE: ./src/components/CodeMirrorEditor/vendors/codemirror.webpack.js\n // import base style\n\n // search\n\n\n // fold\n\n\n\n\n\n\n\n\n // match close\n\n\n\n\n // hints\n\n\n\n\n\n\n\n // lint\n\n\n\n\n\n\n\n\n\n\nif (!jshint[\"JSHINT\"].options) {\n  jshint[\"JSHINT\"].options = {};\n}\n\njshint[\"JSHINT\"].options.esversion = 6;\nwindow.JSHINT = jshint[\"JSHINT\"];\n\nwindow.CSSLint = csslint_node[\"CSSLint\"];\n\nwindow.jsonlint = jsonlint_default.a; // modes\n\n\n\n\n\n\n\n\n\n\n\n\n // edit\n\n\n // autoformat\n\n/* harmony default export */ var codemirror_webpack = (vue_codemirror[\"codemirror\"]);\n// CONCATENATED MODULE: ./src/components/CodeMirrorEditor/CodeMirrorEditorData.js\n/* harmony default export */ var CodeMirrorEditorData = (function (CodeMirrorEditor) {\n  CodeMirrorEditor.data = function () {\n    this.$i18n.locale = this.config.locale;\n    return {\n      inited: false,\n      simpleMode: false,\n      //editor: null,\n      //editor$el: null,\n      markers: [],\n      code: '',\n      highlightClassName: 'highlight',\n      changeLock: false,\n      cursorPositionSaved: {\n        from: {\n          line: null,\n          ch: null\n        },\n        to: {\n          line: null,\n          ch: null\n        },\n        scrollTop: null\n      }\n    };\n  };\n});\n// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/defineProperty.js\nvar defineProperty = __webpack_require__(274);\nvar defineProperty_default = /*#__PURE__*/__webpack_require__.n(defineProperty);\n\n// EXTERNAL MODULE: ./node_modules/js-beautify/js/index.js\nvar js = __webpack_require__(119);\nvar js_default = /*#__PURE__*/__webpack_require__.n(js);\n\n// CONCATENATED MODULE: ./src/components/CodeMirrorEditor/vendors/codemirror.config.webpack.js\n\nvar extraKeys = {\n  \"Ctrl-F\": 'none',\n  \"Ctrl-Shift-F\": 'none',\n  \"Ctrl-H\": 'none',\n  \"Ctrl-Shift-Q\": 'none',\n  \"Ctrl-S\": 'none',\n  \"Ctrl-Alt-F\": function CtrlAltF(cm) {\n    var mode = cm.getOption('mode').name;\n    var process;\n\n    if (mode === 'javascript' || mode === 'text/javascript' || mode === 'application/json' || mode === 'application/ld+json' || mode === 'text/typescript' || mode === 'application/typescript') {\n      process = js_default.a.js_beautify;\n    } else if (mode === 'text/css' || mode === 'text/x-scss' || mode === 'text/x-less') {\n      process = js_default.a.css_beautify;\n    } else if (mode === 'text/html') {\n      process = js_default.a.html_beautify;\n    } //console.log()\n\n\n    var selection = cm.getSelection();\n\n    if (selection === '') {\n      cm.execCommand('selectAll');\n      selection = cm.getSelection();\n    }\n\n    selection = process(selection); //selection = selection + 'AAA'\n\n    cm.replaceSelection(selection); //console.log('aaa')\n  },\n  \"Ctrl-.\": \"autocomplete\",\n  \"Tab\": function Tab(cm) {\n    cm.replaceSelection(\"  \", \"end\");\n  }\n};\nvar codemirror_config_webpack_options = {\n  lineNumbers: true,\n  lineWrapping: true,\n  matchBrackets: true,\n  autoCloseBrackets: true,\n  matchTags: true,\n  autoCloseTags: true,\n  foldGutter: true,\n  showMatchesOnScrollbar: true,\n  lint: {\n    esversion: 9,\n    \"asi\": true\n  },\n  gutters: [\"CodeMirror-lint-markers\", \"CodeMirror-linenumbers\", \"CodeMirror-foldgutter\"],\n  mode: {\n    name: \"javascript\",\n    globalVars: true\n  },\n  //mode:  \"javascript\",\n  extraKeys: extraKeys,\n  styleActiveLine: true,\n  continueComments: {\n    continueLineComment: true\n  },\n  hintOptions: {\n    alignWithWord: false,\n    completeSingle: false\n  }\n};\n/* harmony default export */ var codemirror_config_webpack = (codemirror_config_webpack_options);\n// CONCATENATED MODULE: ./src/components/CodeMirrorEditor/CodeMirrorEditorComputed.js\n\n\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { defineProperty_default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }\n\n\n\n/* harmony default export */ var CodeMirrorEditorComputed = (function (CodeMirrorEditor) {\n  CodeMirrorEditor.computed = {\n    //    editor () {\n    //      return this.$refs.cmEditor\n    //    },\n    computedCodeMirrorOptions: function computedCodeMirrorOptions() {\n      var _this = this;\n\n      var options = _objectSpread({}, codemirror_config_webpack);\n\n      options.mode.name = this.localConfig.syntax;\n\n      options.extraKeys['Ctrl-Alt-F'] = function (cm) {\n        _this.autoFormat(cm);\n      };\n\n      options.extraKeys['Tab'] = function (cm) {\n        _this.inputTab(cm);\n      };\n\n      options.extraKeys['Ctrl-S'] = function (cm) {\n        _this.saveFile(cm);\n      };\n\n      options.lineWrapping = this.localConfig.lineWrapping; //console.log(options)\n\n      return options;\n    },\n    editor$el: function editor$el() {\n      //console.log(this.$refs.cmEditor.$el)\n      if (!this.$refs.cmEditor) {\n        return undefined;\n      }\n\n      return jquery_default()(this.$refs.cmEditor.$el).find('.CodeMirror:first');\n    },\n    editorScroll$el: function editorScroll$el() {\n      //console.log(this.$refs.cmEditor.$el)\n      if (!this.$refs.cmEditor) {\n        return undefined;\n      }\n\n      return jquery_default()(this.$refs.cmEditor.$el).find('.CodeMirror:first .CodeMirror-scroll:first');\n    },\n    codemirror: function codemirror() {\n      if (!this.$refs.cmEditor) {\n        return undefined;\n      }\n\n      return this.$refs.cmEditor.codemirror;\n    },\n    computedCodeMirrorWrapperClassNameList: function computedCodeMirrorWrapperClassNameList() {\n      var list = [];\n\n      if (this.inited === true) {\n        list.push('inited');\n      }\n\n      if (this.localConfig.lineWrapping === false) {\n        list.push('text-wrap-disabled');\n      }\n\n      return list.join(' ');\n    },\n    computedIndentSpaces: function computedIndentSpaces() {\n      if (this.localConfig.indent.mode === 'tab') {\n        return '\\t';\n      }\n\n      var spaces = [];\n\n      for (var i = 0; i < this.localConfig.indent.size; i++) {\n        spaces.push(' ');\n      }\n\n      return spaces.join('');\n    }\n  };\n});\n// CONCATENATED MODULE: ./src/components/CodeMirrorEditor/CodeMirrorEditorWatch.js\n\n\n/* harmony default export */ var CodeMirrorEditorWatch = (function (CodeMirrorEditor) {\n  CodeMirrorEditor.watch = {\n    'config.inited': function configInited() {\n      //console.log(this.config.inited)\n      this.onConfigInited();\n    },\n    'config.panelHeight': function configPanelHeight() {\n      this.resizeHeight();\n    },\n    'localConfig.stringToSearch': function localConfigStringToSearch() {\n      this.highlightText();\n    },\n    'localConfig.syntax': function localConfigSyntax() {\n      this.setMode(this.localConfig.syntax);\n    },\n    'localConfig.lineWrapping': function localConfigLineWrapping() {\n      console.log(this.localConfig.lineWrapping);\n      this.setOption('lineWrapping', this.localConfig.lineWrapping);\n    },\n    'localConfig.fontSize': function localConfigFontSize() {\n      this.setFontSize();\n    },\n    'localConfig.textContent': function () {\n      var _localConfigTextContent = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {\n        return regenerator_default.a.wrap(function _callee$(_context) {\n          while (1) {\n            switch (_context.prev = _context.next) {\n              case 0:\n                if (!(this.config.inited === false)) {\n                  _context.next = 2;\n                  break;\n                }\n\n                return _context.abrupt(\"return\", false);\n\n              case 2:\n                if (!(this.changeLock === true)) {\n                  _context.next = 4;\n                  break;\n                }\n\n                return _context.abrupt(\"return\", false);\n\n              case 4:\n                this.saveCursorPosition();\n                this.changeLock = true;\n                this.code = this.localConfig.textContent;\n                _context.next = 9;\n                return this.utils.AsyncUtils.sleep(0);\n\n              case 9:\n                this.restoreCursorPosition();\n                this.updateDocumentTitle();\n                this.changeLock = false; //this.$refs.cmEditor.setValue(this.localConfig.textContent)\n\n              case 12:\n              case \"end\":\n                return _context.stop();\n            }\n          }\n        }, _callee, this);\n      }));\n\n      function localConfigTextContent() {\n        return _localConfigTextContent.apply(this, arguments);\n      }\n\n      return localConfigTextContent;\n    }(),\n    'code': function () {\n      var _code = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee2() {\n        return regenerator_default.a.wrap(function _callee2$(_context2) {\n          while (1) {\n            switch (_context2.prev = _context2.next) {\n              case 0:\n                if (!(this.config.inited === false)) {\n                  _context2.next = 2;\n                  break;\n                }\n\n                return _context2.abrupt(\"return\", false);\n\n              case 2:\n                if (!(this.changeLock === true)) {\n                  _context2.next = 4;\n                  break;\n                }\n\n                return _context2.abrupt(\"return\", false);\n\n              case 4:\n                this.changeLock = true;\n                this.localConfig.textContent = this.code;\n                _context2.next = 8;\n                return this.utils.AsyncUtils.sleep(0);\n\n              case 8:\n                this.updateDocumentTitle();\n                this.changeLock = false;\n\n              case 10:\n              case \"end\":\n                return _context2.stop();\n            }\n          }\n        }, _callee2, this);\n      }));\n\n      function code() {\n        return _code.apply(this, arguments);\n      }\n\n      return code;\n    }()\n  };\n});\n// CONCATENATED MODULE: ./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsOption.js\n/* harmony default export */ var CodeMirrorEditorMethodsOption = (function (CodeMirrorEditor) {\n  CodeMirrorEditor.methods.getMode = function () {\n    var useFilter = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;\n    var cm = this.codemirror;\n    var mode = cm.getOption('mode').name;\n\n    if (useFilter) {\n      if (mode === 'javascript' || mode === 'text/javascript' || mode === 'application/json' || mode === 'application/ld+json' || mode === 'text/typescript' || mode === 'application/typescript') {\n        mode = 'javascript';\n      } else if (mode === 'text/css' || mode === 'text/x-scss' || mode === 'text/x-less') {\n        mode = 'css';\n      } else if (mode === 'text/html' || mode === 'application/xml') {\n        mode = 'html';\n      }\n    }\n\n    return mode;\n  };\n\n  CodeMirrorEditor.methods.setMode = function (mode) {\n    var _this = this;\n\n    if (this.simpleMode === true) {\n      return false;\n    }\n\n    setTimeout(function () {\n      _this.codemirror.setOption(\"mode\", mode);\n    }, 100); //this.codemirror$el = $('.CodeMirror:first')\n    //console.log(this.codemirror$el)\n  };\n\n  CodeMirrorEditor.methods.setOption = function (key, value) {\n    var _this2 = this;\n\n    setTimeout(function () {\n      _this2.codemirror.setOption(key, value);\n    }, 100);\n  };\n});\n// CONCATENATED MODULE: ./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsChange.js\n\n\n/* harmony default export */ var CodeMirrorEditorMethodsChange = (function (CodeMirrorEditor) {\n  CodeMirrorEditor.methods.onEditorChange = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {\n    return regenerator_default.a.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            if (!(this.simpleMode === true)) {\n              _context.next = 2;\n              break;\n            }\n\n            return _context.abrupt(\"return\", false);\n\n          case 2:\n            if (!(this.setValueLock === true)) {\n              _context.next = 4;\n              break;\n            }\n\n            return _context.abrupt(\"return\", false);\n\n          case 4:\n            this.setValueLock = true;\n            this.localConfig.textContent = this.codemirror.getValue();\n            _context.next = 8;\n            return this.utils.AsyncUtils.sleep(0);\n\n          case 8:\n            this.highlightText();\n            this.setValueLock = false;\n\n          case 10:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee, this);\n  }));\n\n  CodeMirrorEditor.methods.updateDocumentTitle = function () {\n    var textContentTrim = this.$parent.textContentTrim;\n\n    if (textContentTrim === '') {\n      document.title = 'Plain Text Editor';\n    } else {\n      document.title = textContentTrim;\n    }\n  };\n});\n// EXTERNAL MODULE: ./node_modules/jsmin/jsmin.js\nvar jsmin = __webpack_require__(276);\n\n// EXTERNAL MODULE: ./node_modules/cssmin/cssmin.js\nvar cssmin = __webpack_require__(277);\nvar cssmin_default = /*#__PURE__*/__webpack_require__.n(cssmin);\n\n// EXTERNAL MODULE: ./node_modules/minify-xml/index.js\nvar minify_xml = __webpack_require__(278);\nvar minify_xml_default = /*#__PURE__*/__webpack_require__.n(minify_xml);\n\n// CONCATENATED MODULE: ./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsFormat.js\n\n\n\n\n/* harmony default export */ var CodeMirrorEditorMethodsFormat = (function (CodeMirrorEditor) {\n  CodeMirrorEditor.methods.autoFormat = function () {\n    //console.log('autoFormat')\n    var cm = this.codemirror;\n    var mode = this.getMode();\n    var process;\n\n    if (mode === 'javascript') {\n      process = js_default.a.js_beautify;\n    } else if (mode === 'css') {\n      process = js_default.a.css_beautify;\n    } else if (mode === 'html') {\n      process = js_default.a.html_beautify;\n    } //console.log()\n\n\n    var selection = cm.getSelection();\n\n    if (selection === '') {\n      cm.execCommand('selectAll');\n      selection = cm.getSelection();\n    }\n\n    var options = {};\n\n    if (this.localConfig.indent.mode === 'space') {\n      options.indent_size = this.localConfig.indent.size;\n    }\n\n    selection = process(selection, options); //selection = selection + 'AAA'\n\n    cm.replaceSelection(selection); //console.log('aaa')\n  };\n\n  CodeMirrorEditor.methods.minify = function () {\n    var cm = this.codemirror;\n    var mode = this.getMode(); //console.log()\n\n    cm.execCommand('selectAll');\n    var selection = cm.getSelection();\n\n    if (mode === 'css') {\n      //this.localConfig.textContent = await cssMinifier.csso(this.localConfig.textContent)\n      selection = cssmin_default()(selection);\n    } else if (mode === 'javascript') {\n      //console.log(this.localConfig.textContent)\n      selection = Object(jsmin[\"jsmin\"])(selection);\n    } else if (mode === 'html') {\n      //console.log(this.localConfig.textContent)\n      selection = minify_xml_default()(selection);\n    } else {\n      // 刪掉多餘空白與換行\n      selection = selection.split('\\n').join('');\n      selection = selection.split('\\t').join(' ');\n\n      while (selection.indexOf('  ') > -1) {\n        selection = selection.split('  ').join(' ');\n      }\n    } //selection = selection + 'AAA'\n\n\n    cm.replaceSelection(selection);\n  };\n\n  CodeMirrorEditor.methods.inputTab = function () {\n    var cm = this.codemirror;\n    cm.replaceSelection(this.computedIndentSpaces, \"end\");\n  };\n\n  CodeMirrorEditor.methods.setFontSize = function () {\n    var fontSize = this.localConfig.fontSize;\n    this.editor$el.css('font-size', fontSize + 'pt');\n    this.editor$el.css('line-height', Math.round(fontSize * 1.5) + 'pt');\n  };\n});\n// CONCATENATED MODULE: ./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsCursor.js\n/* harmony default export */ var CodeMirrorEditorMethodsCursor = (function (CodeMirrorEditor) {\n  CodeMirrorEditor.methods.onCodeMirrorCursorActivity = function () {\n    this.saveCursorPosition();\n  };\n\n  CodeMirrorEditor.methods.jumpToLine = function (i) {\n    var from = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;\n\n    if (this.simpleMode === true) {\n      return false;\n    }\n\n    this.codemirror.focus();\n    var t = this.codemirror.charCoords({\n      line: i,\n      ch: 0\n    }, \"local\").top;\n    var middleHeight = this.codemirror.getScrollerElement().offsetHeight / 2;\n    this.codemirror.scrollTo(null, t - middleHeight - 5); //if (!to) {\n\n    this.codemirror.doc.setCursor(i - 1, from); //if (to) {\n    //  this.codemirror.setSelection({line: 0, ch: 3}, {line: 0, ch: 9})\n    //}\n    //}\n    //else {\n    //  this.codemirror.doc.setSelection(i - 1, from)\n    //}\n  };\n\n  CodeMirrorEditor.methods.jumpToMarker = function (marker) {\n    if (this.simpleMode === true) {\n      return false;\n    }\n\n    this.codemirror.focus();\n\n    var _this$getMarkerPos = this.getMarkerPos(marker),\n        fromLine = _this$getMarkerPos.fromLine,\n        fromCh = _this$getMarkerPos.fromCh,\n        toLine = _this$getMarkerPos.toLine,\n        toCh = _this$getMarkerPos.toCh;\n\n    this.codemirror.setSelection({\n      line: fromLine - 1,\n      ch: fromCh\n    }, {\n      line: toLine - 1,\n      ch: toCh\n    });\n  };\n\n  CodeMirrorEditor.methods.getCursor = function (position) {\n    if (this.simpleMode === true || this.config.inited === false) {\n      return false;\n    }\n\n    return this.codemirror.getCursor(position);\n  };\n\n  var cursorPositionKey = 'codemirror.cursor.position'; //let viewportKey = 'codemirror.viewport.position'\n\n  CodeMirrorEditor.methods.saveCursorPosition = function () {\n    if (this.simpleMode === true || this.config.inited === false || this.inited === false || this.changeLock === true) {\n      return false;\n    }\n\n    var fromCursor = this.getCursor(true);\n    this.cursorPositionSaved.from.line = fromCursor.line;\n    this.cursorPositionSaved.from.ch = fromCursor.ch;\n    var toCursor = this.getCursor(false);\n    this.cursorPositionSaved.to.line = toCursor.line;\n    this.cursorPositionSaved.to.ch = toCursor.ch;\n    this.cursorPositionSaved.scrollTop = this.editorScroll$el.scrollTop(); //console.log(this.editor$el.scrollTop)\n\n    var saved = JSON.stringify(this.cursorPositionSaved);\n    localStorage.setItem(cursorPositionKey, saved); //console.log('saveCursorPosition')\n  };\n\n  CodeMirrorEditor.methods.restoreCursorPosition = function () {\n    //console.log('restoreCursorPosition', this.config.inited, this.cursorPositionSaved.from)\n    if (this.simpleMode === true || this.config.inited === false) {\n      return false;\n    }\n\n    if (this.cursorPositionSaved.from.line === null) {\n      var saved = localStorage.getItem(cursorPositionKey);\n      this.cursorPositionSaved = JSON.parse(saved); //console.log(saved)\n    }\n\n    if (this.cursorPositionSaved.from.line === this.cursorPositionSaved.to.line && this.cursorPositionSaved.from.ch === this.cursorPositionSaved.to.ch) {\n      this.jumpToLine(this.cursorPositionSaved.from.line + 1, this.cursorPositionSaved.from.ch); //console.log('restoreCursor cursor')\n    } else {\n      var from = {\n        line: this.cursorPositionSaved.from.line,\n        ch: this.cursorPositionSaved.from.ch\n      };\n      var to = {\n        line: this.cursorPositionSaved.to.line,\n        ch: this.cursorPositionSaved.to.ch\n      };\n      this.codemirror.setSelection(from, to); //console.log('restoreCursor selection')\n    }\n\n    if (this.editorScroll$el) {\n      this.editorScroll$el.scrollTop(this.cursorPositionSaved.scrollTop);\n    }\n  };\n\n  CodeMirrorEditor.methods.getSelectedText = function () {\n    if (this.simpleMode === true) {\n      return false;\n    }\n\n    return this.codemirror.getSelection();\n  };\n});\n// CONCATENATED MODULE: ./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsFind.js\n\n\n/* harmony default export */ var CodeMirrorEditorMethodsFind = (function (CodeMirrorEditor) {\n  CodeMirrorEditor.methods.getMarkerPos = function (marker) {\n    if (this.simpleMode === true) {\n      return false;\n    }\n\n    var lines = marker.lines;\n    var firstLine = lines[0];\n    var fromLine = firstLine.lineNo() + 1;\n    var fromCh = firstLine.markedSpans[0].from;\n    var lastLine = lines[lines.length - 1];\n    var toLine = lastLine.lineNo() + 1;\n    var toCh = lastLine.markedSpans[0].to;\n    return {\n      fromLine: fromLine,\n      fromCh: fromCh,\n      toLine: toLine,\n      toCh: toCh\n    };\n  };\n\n  CodeMirrorEditor.methods.findNext = function (search) {\n    if (this.simpleMode === true) {\n      return false;\n    }\n\n    if (!search) {\n      search = this.localConfig.stringToSearch;\n    }\n\n    if (!search || search.length === 0) {\n      return false;\n    }\n\n    var cursor = this.codemirror.getSearchCursor(search);\n    var currentPosition = this.getCursor(true); //console.log(currentPosition)\n\n    var currentLine = currentPosition.line;\n    var currentCh = currentPosition.ch; //console.log('current', currentLine, currentCh)\n\n    var firstMarker; //let lastMarker\n\n    while (cursor.findNext()) {\n      var marker = this.codemirror.markText(cursor.from(), cursor.to());\n\n      if (!firstMarker) {\n        firstMarker = marker;\n      } //console.log(marker)\n\n\n      var _this$getMarkerPos = this.getMarkerPos(marker),\n          fromLine = _this$getMarkerPos.fromLine,\n          fromCh = _this$getMarkerPos.fromCh,\n          toLine = _this$getMarkerPos.toLine,\n          toCh = _this$getMarkerPos.toCh; //MARKER = marker.lines[0]\n      //console.log('marker', line, from, to)\n\n\n      if (fromLine - 1 > currentLine) {\n        // 對，就是要找這個\n        this.jumpToMarker(marker);\n        return true;\n      } else if (fromLine - 1 === currentLine) {\n        if (fromCh > currentCh) {\n          // 對，就是要找這個\n          this.jumpToMarker(marker);\n          return true;\n        }\n      }\n    }\n\n    if (firstMarker) {\n      this.jumpToMarker(firstMarker);\n      return true;\n    }\n\n    return false; // 沒找到\n  };\n\n  CodeMirrorEditor.methods.findPrev = function (search) {\n    if (this.simpleMode === true) {\n      return false;\n    }\n\n    if (!search) {\n      search = this.localConfig.stringToSearch;\n    }\n\n    if (!search || search.length === 0) {\n      return false;\n    } //this.codemirror.focus()\n    //console.log('findPrev')\n    //console.log(search)\n\n\n    var cursor = this.codemirror.getSearchCursor(search);\n    var currentPosition = this.getCursor(true); //console.log(currentPosition)\n\n    var currentLine = currentPosition.line;\n    var currentCh = currentPosition.ch; //console.log('current', currentLine, currentCh)\n\n    var lastMarker;\n    var jumpToLast = false; //let lastMarker\n\n    while (cursor.findNext()) {\n      var marker = this.codemirror.markText(cursor.from(), cursor.to());\n\n      if (jumpToLast === true) {\n        lastMarker = marker; //console.log('jumpToLast true')\n\n        continue;\n      } //if (!firstMarker) {\n      //}\n      //console.log(marker)\n\n\n      var _this$getMarkerPos2 = this.getMarkerPos(marker),\n          fromLine = _this$getMarkerPos2.fromLine,\n          fromCh = _this$getMarkerPos2.fromCh,\n          toLine = _this$getMarkerPos2.toLine,\n          toCh = _this$getMarkerPos2.toCh; //console.log(currentLine, currentCh, toLine, toCh, fromLine, fromCh)\n      //console.log('marker', line, from, to)\n\n\n      if (currentLine < fromLine - 1) {\n        // 對，就是要找這個\n        if (!lastMarker) {\n          jumpToLast = true; //console.log('jumpToLast')\n\n          continue;\n        }\n\n        this.jumpToMarker(lastMarker);\n        return true;\n      } else if (currentLine === fromLine - 1) {\n        //console.log(currentCh, fromCh)\n        if (currentCh <= fromCh || currentCh <= toCh) {\n          // 對，就是要找這個\n          if (!lastMarker) {\n            jumpToLast = true; //console.log('jumpToLast ch')\n\n            continue;\n          }\n\n          this.jumpToMarker(lastMarker);\n          return true;\n        }\n      }\n\n      lastMarker = marker;\n    }\n\n    if (lastMarker) {\n      this.jumpToMarker(lastMarker);\n      return true;\n    } //console.log('沒找到')\n\n\n    return false; // 沒找到\n  };\n\n  CodeMirrorEditor.methods.highlightClear = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {\n    var marker;\n    return regenerator_default.a.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            if (!(this.markers.length > 0)) {\n              _context.next = 7;\n              break;\n            }\n\n            marker = this.markers.shift();\n            marker.clear();\n            _context.next = 5;\n            return this.utils.AsyncUtils.sleep(0);\n\n          case 5:\n            _context.next = 0;\n            break;\n\n          case 7:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee, this);\n  }));\n  var highlighTextTimer;\n  var highlighTextSearching;\n\n  CodeMirrorEditor.methods.highlightText = /*#__PURE__*/function () {\n    var _ref2 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee3(text) {\n      var _this = this;\n\n      return regenerator_default.a.wrap(function _callee3$(_context3) {\n        while (1) {\n          switch (_context3.prev = _context3.next) {\n            case 0:\n              if (!(this.config.inited === false)) {\n                _context3.next = 2;\n                break;\n              }\n\n              return _context3.abrupt(\"return\", false);\n\n            case 2:\n              if (!(this.simpleMode === true)) {\n                _context3.next = 4;\n                break;\n              }\n\n              return _context3.abrupt(\"return\", false);\n\n            case 4:\n              clearTimeout(highlighTextTimer);\n              highlighTextTimer = setTimeout( /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee2() {\n                var cursor, marker;\n                return regenerator_default.a.wrap(function _callee2$(_context2) {\n                  while (1) {\n                    switch (_context2.prev = _context2.next) {\n                      case 0:\n                        if (!text) {\n                          text = _this.localConfig.stringToSearch;\n                        }\n\n                        highlighTextSearching = text;\n                        _context2.next = 4;\n                        return _this.highlightClear();\n\n                      case 4:\n                        if (!(text === '')) {\n                          _context2.next = 6;\n                          break;\n                        }\n\n                        return _context2.abrupt(\"return\", false);\n\n                      case 6:\n                        if (!(!_this.codemirror || !_this.codemirror.getSearchCursor)) {\n                          _context2.next = 11;\n                          break;\n                        }\n\n                        _context2.next = 9;\n                        return _this.utils.AsyncUtils.sleep();\n\n                      case 9:\n                        _context2.next = 6;\n                        break;\n\n                      case 11:\n                        cursor = _this.codemirror.getSearchCursor(text); //console.log(cursor)\n\n                      case 12:\n                        if (!cursor.findNext()) {\n                          _context2.next = 21;\n                          break;\n                        }\n\n                        if (!(highlighTextSearching !== text)) {\n                          _context2.next = 15;\n                          break;\n                        }\n\n                        return _context2.abrupt(\"return\", false);\n\n                      case 15:\n                        marker = _this.codemirror.markText(cursor.from(), cursor.to(), {\n                          className: _this.highlightClassName\n                        });\n\n                        _this.markers.push(marker);\n\n                        _context2.next = 19;\n                        return _this.utils.AsyncUtils.sleep(0);\n\n                      case 19:\n                        _context2.next = 12;\n                        break;\n\n                      case 21:\n                      case \"end\":\n                        return _context2.stop();\n                    }\n                  }\n                }, _callee2);\n              })), 100); //this.codemirror.setCursor({line: 1, ch: 0})\n\n            case 6:\n            case \"end\":\n              return _context3.stop();\n          }\n        }\n      }, _callee3, this);\n    }));\n\n    return function (_x) {\n      return _ref2.apply(this, arguments);\n    };\n  }();\n});\n// CONCATENATED MODULE: ./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsDisplay.js\n\n\n/* harmony default export */ var CodeMirrorEditorMethodsDisplay = (function (CodeMirrorEditor) {\n  CodeMirrorEditor.methods.resizeHeight = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {\n    return regenerator_default.a.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            if (!(this.config.inited === false)) {\n              _context.next = 2;\n              break;\n            }\n\n            return _context.abrupt(\"return\", false);\n\n          case 2:\n            /*\n             let className = 'display-replace-panel'\n             if (this.localConfig.displayReplacePanel === true) {\n             this.codemirror$el.addClass(className)\n             }\n             else {\n             this.codemirror$el.removeClass(className)\n             }\n             */\n            //console.log(this.codemirror$el, this.codemirror$el.css)\n            this.editor$el.css('height', \"calc(100vh - \".concat(this.config.panelHeight, \")\"));\n            this.editor$el.css('max-height', \"calc(100vh - \".concat(this.config.panelHeight, \")\")); //console.log('設定好了', `calc(100vh - ${this.config.panelHeight})`)\n\n          case 4:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee, this);\n  }));\n});\n// EXTERNAL MODULE: ./node_modules/dayjs/dayjs.min.js\nvar dayjs_min = __webpack_require__(279);\nvar dayjs_min_default = /*#__PURE__*/__webpack_require__.n(dayjs_min);\n\n// CONCATENATED MODULE: ./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsFile.js\n\n/* harmony default export */ var CodeMirrorEditorMethodsFile = (function (CodeMirrorEditor) {\n  CodeMirrorEditor.methods.saveFile = function () {\n    var filename = this.getFilename();\n    this.utils.FileUtils.download(filename, this.code);\n  };\n\n  CodeMirrorEditor.methods.getFilename = function () {\n    var mode = this.getMode(false);\n    var ext = 'txt';\n\n    if (mode.indexOf('/') > -1) {\n      ext = mode.slice(mode.lastIndexOf('/') + 1);\n\n      if (ext.indexOf('-') > -1) {\n        ext = ext.slice(ext.lastIndexOf('-') + 1);\n      }\n    } else {\n      ext = mode;\n    }\n\n    if (ext === 'javascript') {\n      ext = 'js';\n    } else if (ext === 'rsrc') {\n      ext = 'R';\n    }\n\n    return dayjs_min_default()().format('MMDD-hhmmss') + '.' + ext;\n  };\n});\n// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--6!./src/components/CodeMirrorEditor/CodeMirrorEditor.js?vue&type=script&lang=js&\n\n\n\n/* global CodeMirror, PULI_UTILS */\n\n\nvar CodeMirrorEditorvue_type_script_lang_js_CodeMirrorEditor = {\n  props: ['config', 'localConfig', 'utils'],\n  data: null,\n  components: {\n    codemirror: codemirror_webpack\n  },\n  mounted: function () {\n    var _mounted = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {\n      return regenerator_default.a.wrap(function _callee$(_context) {\n        while (1) {\n          switch (_context.prev = _context.next) {\n            case 0:\n              //    //console.log(this.inited)\n              //    //await this.initCodeMirror()\n              //    //await this.onConfigInited()\n              //    //console.log(this.inited)\n              //    //this.testSearch1211()\n              //    //this.testSetValue1211()\n              //    //this.testSearch1213()\n              if (this.config.inited === true) {\n                this.onConfigInited();\n              }\n\n            case 1:\n            case \"end\":\n              return _context.stop();\n          }\n        }\n      }, _callee, this);\n    }));\n\n    function mounted() {\n      return _mounted.apply(this, arguments);\n    }\n\n    return mounted;\n  }(),\n  watch: {},\n  // 移動到 CodeMirrorEditorWatch\n  computed: {},\n  // 移動到 CodeMirrorEditorComputed.js\n  methods: {\n    onConfigInited: function () {\n      var _onConfigInited = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee2() {\n        return regenerator_default.a.wrap(function _callee2$(_context2) {\n          while (1) {\n            switch (_context2.prev = _context2.next) {\n              case 0:\n                if (!(this.config.inited === false || this.simpleMode === true)) {\n                  _context2.next = 2;\n                  break;\n                }\n\n                return _context2.abrupt(\"return\", false);\n\n              case 2:\n                //console.log('onConfigInited', 2)\n                //await this.utils.AsyncUtils.sleep(1000)\n                //console.log('javascript')\n                //this.codemirror.setOption(\"mode\", 'html')\n                //await this.utils.AsyncUtils.sleep(100)\n                this.changeLock = true;\n                this.code = this.localConfig.textContent;\n                _context2.next = 6;\n                return this.utils.AsyncUtils.sleep(0);\n\n              case 6:\n                this.changeLock = false; //console.log('onConfigInited', 3)\n\n              case 7:\n                if (!(!this.$refs.cmEditor || !this.$refs.cmEditor.$el)) {\n                  _context2.next = 12;\n                  break;\n                }\n\n                _context2.next = 10;\n                return this.utils.AsyncUtils.sleep();\n\n              case 10:\n                _context2.next = 7;\n                break;\n\n              case 12:\n                //console.log('onConfigInited', 4)\n                //console.log('go', this.localConfig.stringToSearch)\n                this.highlightText(this.localConfig.stringToSearch);\n                this.resizeHeight(); //console.log(this.markers.length)\n\n                this.updateDocumentTitle();\n                this.restoreCursorPosition(); //console.log('onConfigInited', 5)\n\n                this.setFontSize();\n                this.inited = true;\n\n              case 18:\n              case \"end\":\n                return _context2.stop();\n            }\n          }\n        }, _callee2, this);\n      }));\n\n      function onConfigInited() {\n        return _onConfigInited.apply(this, arguments);\n      }\n\n      return onConfigInited;\n    }(),\n    onCodeMirrorKeyHandled: function onCodeMirrorKeyHandled(e, s) {\n      //console.log(e, s)\n      //this.$refs.cmEditor.codemirror.execCommand('autocomplete')\n      this.$refs.cmEditor.codemirror.showHint();\n    }\n  }\n};\n\nCodeMirrorEditorData(CodeMirrorEditorvue_type_script_lang_js_CodeMirrorEditor);\n\nCodeMirrorEditorComputed(CodeMirrorEditorvue_type_script_lang_js_CodeMirrorEditor);\n\nCodeMirrorEditorWatch(CodeMirrorEditorvue_type_script_lang_js_CodeMirrorEditor); // -------------------\n\n\nCodeMirrorEditorMethodsOption(CodeMirrorEditorvue_type_script_lang_js_CodeMirrorEditor);\n\nCodeMirrorEditorMethodsChange(CodeMirrorEditorvue_type_script_lang_js_CodeMirrorEditor);\n\nCodeMirrorEditorMethodsFormat(CodeMirrorEditorvue_type_script_lang_js_CodeMirrorEditor);\n\nCodeMirrorEditorMethodsCursor(CodeMirrorEditorvue_type_script_lang_js_CodeMirrorEditor);\n\nCodeMirrorEditorMethodsFind(CodeMirrorEditorvue_type_script_lang_js_CodeMirrorEditor);\n\nCodeMirrorEditorMethodsDisplay(CodeMirrorEditorvue_type_script_lang_js_CodeMirrorEditor);\n\nCodeMirrorEditorMethodsFile(CodeMirrorEditorvue_type_script_lang_js_CodeMirrorEditor);\n/* harmony default export */ var CodeMirrorEditorvue_type_script_lang_js_ = (CodeMirrorEditorvue_type_script_lang_js_CodeMirrorEditor);\n// CONCATENATED MODULE: ./src/components/CodeMirrorEditor/CodeMirrorEditor.js?vue&type=script&lang=js&\n /* harmony default export */ var CodeMirrorEditor_CodeMirrorEditorvue_type_script_lang_js_ = (CodeMirrorEditorvue_type_script_lang_js_); \n// EXTERNAL MODULE: ./src/components/CodeMirrorEditor/CodeMirrorEditorGlobal.less?vue&type=style&index=0&lang=less&\nvar CodeMirrorEditorGlobalvue_type_style_index_0_lang_less_ = __webpack_require__(280);\n\n// EXTERNAL MODULE: ./src/components/CodeMirrorEditor/CodeMirrorEditor.less?vue&type=style&index=1&id=6cc6c822&lang=less&scoped=true&\nvar CodeMirrorEditorvue_type_style_index_1_id_6cc6c822_lang_less_scoped_true_ = __webpack_require__(282);\n\n// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js\nvar componentNormalizer = __webpack_require__(8);\n\n// EXTERNAL MODULE: ./src/components/CodeMirrorEditor/CodeMirrorEditor.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CCodeMirrorEditor%5CCodeMirrorEditor.vue&lang=yaml\nvar CodeMirrorEditorvue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CCodeMirrorEditor_5CCodeMirrorEditor_vue_lang_yaml = __webpack_require__(284);\n\n// CONCATENATED MODULE: ./src/components/CodeMirrorEditor/CodeMirrorEditor.vue\n\n\n\n\n\n\n\n/* normalize component */\n\nvar component = Object(componentNormalizer[\"a\" /* default */])(\n  CodeMirrorEditor_CodeMirrorEditorvue_type_script_lang_js_,\n  render,\n  staticRenderFns,\n  false,\n  null,\n  \"6cc6c822\",\n  null\n  \n)\n\n/* custom blocks */\n\nif (typeof CodeMirrorEditorvue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CCodeMirrorEditor_5CCodeMirrorEditor_vue_lang_yaml[\"default\"] === 'function') Object(CodeMirrorEditorvue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CCodeMirrorEditor_5CCodeMirrorEditor_vue_lang_yaml[\"default\"])(component)\n\n/* hot reload */\nif (false) { var api; }\ncomponent.options.__file = \"src/components/CodeMirrorEditor/CodeMirrorEditor.vue\"\n/* harmony default export */ var CodeMirrorEditor_CodeMirrorEditor = __webpack_exports__[\"default\"] = (component.exports);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjg4LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvQ29kZU1pcnJvckVkaXRvci9Db2RlTWlycm9yRWRpdG9yLmh0bWw/NzdiNiIsIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9Db2RlTWlycm9yRWRpdG9yL3ZlbmRvcnMvY29kZW1pcnJvci53ZWJwYWNrLmpzP2U4ZTkiLCJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvQ29kZU1pcnJvckVkaXRvci9Db2RlTWlycm9yRWRpdG9yRGF0YS5qcz9hNTQ4Iiwid2VicGFjazovLy8uL3NyYy9jb21wb25lbnRzL0NvZGVNaXJyb3JFZGl0b3IvdmVuZG9ycy9jb2RlbWlycm9yLmNvbmZpZy53ZWJwYWNrLmpzPzZmNDUiLCJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvQ29kZU1pcnJvckVkaXRvci9Db2RlTWlycm9yRWRpdG9yQ29tcHV0ZWQuanM/NmU0MyIsIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9Db2RlTWlycm9yRWRpdG9yL0NvZGVNaXJyb3JFZGl0b3JXYXRjaC5qcz9mZjdlIiwid2VicGFjazovLy8uL3NyYy9jb21wb25lbnRzL0NvZGVNaXJyb3JFZGl0b3IvQ29kZU1pcnJvckVkaXRvck1ldGhvZHNPcHRpb24uanM/MjdlMCIsIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9Db2RlTWlycm9yRWRpdG9yL0NvZGVNaXJyb3JFZGl0b3JNZXRob2RzQ2hhbmdlLmpzP2IzYTgiLCJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvQ29kZU1pcnJvckVkaXRvci9Db2RlTWlycm9yRWRpdG9yTWV0aG9kc0Zvcm1hdC5qcz8yMzU4Iiwid2VicGFjazovLy8uL3NyYy9jb21wb25lbnRzL0NvZGVNaXJyb3JFZGl0b3IvQ29kZU1pcnJvckVkaXRvck1ldGhvZHNDdXJzb3IuanM/NzAzOSIsIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9Db2RlTWlycm9yRWRpdG9yL0NvZGVNaXJyb3JFZGl0b3JNZXRob2RzRmluZC5qcz82MTNiIiwid2VicGFjazovLy8uL3NyYy9jb21wb25lbnRzL0NvZGVNaXJyb3JFZGl0b3IvQ29kZU1pcnJvckVkaXRvck1ldGhvZHNEaXNwbGF5LmpzPzY0YjAiLCJ3ZWJwYWNrOi8vLy4vc3JjL2NvbXBvbmVudHMvQ29kZU1pcnJvckVkaXRvci9Db2RlTWlycm9yRWRpdG9yTWV0aG9kc0ZpbGUuanM/Y2U5ZiIsIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9Db2RlTWlycm9yRWRpdG9yL0NvZGVNaXJyb3JFZGl0b3IuanM/NWQ3ZCIsIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9Db2RlTWlycm9yRWRpdG9yL0NvZGVNaXJyb3JFZGl0b3IuanM/YjQzMCIsIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9Db2RlTWlycm9yRWRpdG9yL0NvZGVNaXJyb3JFZGl0b3IudnVlP2ZkM2UiXSwic291cmNlc0NvbnRlbnQiOlsidmFyIHJlbmRlciA9IGZ1bmN0aW9uKCkge1xuICB2YXIgX3ZtID0gdGhpc1xuICB2YXIgX2ggPSBfdm0uJGNyZWF0ZUVsZW1lbnRcbiAgdmFyIF9jID0gX3ZtLl9zZWxmLl9jIHx8IF9oXG4gIHJldHVybiBfYyhcbiAgICBcImRpdlwiLFxuICAgIHtcbiAgICAgIHN0YXRpY0NsYXNzOiBcImNvZGUtbWlycm9yLXdyYXBwZXJcIixcbiAgICAgIGNsYXNzOiBfdm0uY29tcHV0ZWRDb2RlTWlycm9yV3JhcHBlckNsYXNzTmFtZUxpc3RcbiAgICB9LFxuICAgIFtcbiAgICAgIF92bS5zaW1wbGVNb2RlXG4gICAgICAgID8gX2MoXCJ0ZXh0YXJlYVwiLCB7XG4gICAgICAgICAgICBkaXJlY3RpdmVzOiBbXG4gICAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICBuYW1lOiBcIm1vZGVsXCIsXG4gICAgICAgICAgICAgICAgcmF3TmFtZTogXCJ2LW1vZGVsXCIsXG4gICAgICAgICAgICAgICAgdmFsdWU6IF92bS5sb2NhbENvbmZpZy50ZXh0Q29udGVudCxcbiAgICAgICAgICAgICAgICBleHByZXNzaW9uOiBcImxvY2FsQ29uZmlnLnRleHRDb250ZW50XCJcbiAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgXSxcbiAgICAgICAgICAgIHJlZjogXCJNYWluVGV4dGFyZWFcIixcbiAgICAgICAgICAgIHN0YXRpY0NsYXNzOiBcImVkaXRvclwiLFxuICAgICAgICAgICAgZG9tUHJvcHM6IHsgdmFsdWU6IF92bS5sb2NhbENvbmZpZy50ZXh0Q29udGVudCB9LFxuICAgICAgICAgICAgb246IHtcbiAgICAgICAgICAgICAgaW5wdXQ6IGZ1bmN0aW9uKCRldmVudCkge1xuICAgICAgICAgICAgICAgIGlmICgkZXZlbnQudGFyZ2V0LmNvbXBvc2luZykge1xuICAgICAgICAgICAgICAgICAgcmV0dXJuXG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIF92bS4kc2V0KF92bS5sb2NhbENvbmZpZywgXCJ0ZXh0Q29udGVudFwiLCAkZXZlbnQudGFyZ2V0LnZhbHVlKVxuICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9XG4gICAgICAgICAgfSlcbiAgICAgICAgOiBfdm0uX2UoKSxcbiAgICAgIF92bS5fdihcIiBcIiksXG4gICAgICAhX3ZtLnNpbXBsZU1vZGVcbiAgICAgICAgPyBfYyhcImNvZGVtaXJyb3JcIiwge1xuICAgICAgICAgICAgcmVmOiBcImNtRWRpdG9yXCIsXG4gICAgICAgICAgICBhdHRyczogeyBvcHRpb25zOiBfdm0uY29tcHV0ZWRDb2RlTWlycm9yT3B0aW9ucyB9LFxuICAgICAgICAgICAgb246IHtcbiAgICAgICAgICAgICAgaW5wdXRSZWFkOiBfdm0ub25Db2RlTWlycm9yS2V5SGFuZGxlZCxcbiAgICAgICAgICAgICAgY3Vyc29yQWN0aXZpdHk6IF92bS5vbkNvZGVNaXJyb3JDdXJzb3JBY3Rpdml0eSxcbiAgICAgICAgICAgICAgdmlld3BvcnRDaGFuZ2U6IF92bS5vbkNvZGVNaXJyb3JDdXJzb3JBY3Rpdml0eVxuICAgICAgICAgICAgfSxcbiAgICAgICAgICAgIG1vZGVsOiB7XG4gICAgICAgICAgICAgIHZhbHVlOiBfdm0uY29kZSxcbiAgICAgICAgICAgICAgY2FsbGJhY2s6IGZ1bmN0aW9uKCQkdikge1xuICAgICAgICAgICAgICAgIF92bS5jb2RlID0gJCR2XG4gICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgIGV4cHJlc3Npb246IFwiY29kZVwiXG4gICAgICAgICAgICB9XG4gICAgICAgICAgfSlcbiAgICAgICAgOiBfdm0uX2UoKVxuICAgIF0sXG4gICAgMVxuICApXG59XG52YXIgc3RhdGljUmVuZGVyRm5zID0gW11cbnJlbmRlci5fd2l0aFN0cmlwcGVkID0gdHJ1ZVxuXG5leHBvcnQgeyByZW5kZXIsIHN0YXRpY1JlbmRlckZucyB9IiwiaW1wb3J0IHsgY29kZW1pcnJvciB9IGZyb20gJ3Z1ZS1jb2RlbWlycm9yJ1xuXG4vLyBpbXBvcnQgYmFzZSBzdHlsZVxuaW1wb3J0ICdjb2RlbWlycm9yL2xpYi9jb2RlbWlycm9yLmNzcydcblxuLy8gc2VhcmNoXG5pbXBvcnQgJ2NvZGVtaXJyb3IvYWRkb24vc2VhcmNoL21hdGNoZXNvbnNjcm9sbGJhci5qcydcbmltcG9ydCAnY29kZW1pcnJvci9hZGRvbi9zZWFyY2gvc2VhcmNoY3Vyc29yLmpzJ1xuXG4vLyBmb2xkXG5pbXBvcnQgJ2NvZGVtaXJyb3IvYWRkb24vZm9sZC9mb2xkY29kZS5qcydcbmltcG9ydCAnY29kZW1pcnJvci9hZGRvbi9mb2xkL2ZvbGRndXR0ZXIuanMnXG5pbXBvcnQgJ2NvZGVtaXJyb3IvYWRkb24vZm9sZC9mb2xkZ3V0dGVyLmNzcydcbmltcG9ydCAnY29kZW1pcnJvci9hZGRvbi9mb2xkL2JyYWNlLWZvbGQuanMnXG5pbXBvcnQgJ2NvZGVtaXJyb3IvYWRkb24vZm9sZC94bWwtZm9sZC5qcydcbmltcG9ydCAnY29kZW1pcnJvci9hZGRvbi9mb2xkL2luZGVudC1mb2xkLmpzJ1xuaW1wb3J0ICdjb2RlbWlycm9yL2FkZG9uL2ZvbGQvbWFya2Rvd24tZm9sZC5qcydcbmltcG9ydCAnY29kZW1pcnJvci9hZGRvbi9mb2xkL2NvbW1lbnQtZm9sZC5qcydcblxuLy8gbWF0Y2ggY2xvc2VcbmltcG9ydCAnY29kZW1pcnJvci9hZGRvbi9lZGl0L21hdGNoYnJhY2tldHMuanMnXG5pbXBvcnQgJ2NvZGVtaXJyb3IvYWRkb24vZWRpdC9jbG9zZWJyYWNrZXRzLmpzJ1xuaW1wb3J0ICdjb2RlbWlycm9yL2FkZG9uL2VkaXQvbWF0Y2h0YWdzLmpzJ1xuaW1wb3J0ICdjb2RlbWlycm9yL2FkZG9uL2VkaXQvY2xvc2V0YWcuanMnXG5cbi8vIGhpbnRzXG5pbXBvcnQgJ2NvZGVtaXJyb3IvYWRkb24vaGludC9zaG93LWhpbnQuanMnXG5pbXBvcnQgJ2NvZGVtaXJyb3IvYWRkb24vaGludC9zaG93LWhpbnQuY3NzJ1xuXG5pbXBvcnQgJ2NvZGVtaXJyb3IvYWRkb24vaGludC9qYXZhc2NyaXB0LWhpbnQuanMnXG5pbXBvcnQgJ2NvZGVtaXJyb3IvYWRkb24vaGludC9odG1sLWhpbnQuanMnXG5pbXBvcnQgJ2NvZGVtaXJyb3IvYWRkb24vaGludC9jc3MtaGludC5qcydcbmltcG9ydCAnY29kZW1pcnJvci9hZGRvbi9oaW50L2FueXdvcmQtaGludC5qcydcbmltcG9ydCAnY29kZW1pcnJvci9hZGRvbi9oaW50L3NxbC1oaW50LmpzJ1xuXG4vLyBsaW50XG5pbXBvcnQgJ2NvZGVtaXJyb3IvYWRkb24vbGludC9saW50LmpzJ1xuaW1wb3J0ICdjb2RlbWlycm9yL2FkZG9uL2xpbnQvbGludC5jc3MnXG5pbXBvcnQgJ2NvZGVtaXJyb3IvYWRkb24vbGludC9qYXZhc2NyaXB0LWxpbnQuanMnXG5pbXBvcnQgJ2NvZGVtaXJyb3IvYWRkb24vbGludC95YW1sLWxpbnQuanMnXG5pbXBvcnQgJ2NvZGVtaXJyb3IvYWRkb24vbGludC9odG1sLWxpbnQuanMnXG5pbXBvcnQgJ2NvZGVtaXJyb3IvYWRkb24vbGludC9qc29uLWxpbnQuanMnXG5pbXBvcnQgJ2NvZGVtaXJyb3IvYWRkb24vbGludC9jc3MtbGludC5qcydcblxuaW1wb3J0IHtKU0hJTlR9IGZyb20gJ2pzaGludCdcbmlmICghSlNISU5ULm9wdGlvbnMpIHtcbiAgSlNISU5ULm9wdGlvbnMgPSB7fVxufVxuXG5KU0hJTlQub3B0aW9ucy5lc3ZlcnNpb24gPSA2XG5cbndpbmRvdy5KU0hJTlQgPSBKU0hJTlRcblxuXG5pbXBvcnQge0NTU0xpbnR9IGZyb20gJ2Nzc2xpbnQnXG53aW5kb3cuQ1NTTGludCA9IENTU0xpbnRcblxuaW1wb3J0IGpzb25saW50IGZyb20gJ2pzb25saW50LXdlYnBhY2snXG53aW5kb3cuanNvbmxpbnQgPSBqc29ubGludFxuXG4vLyBtb2Rlc1xuaW1wb3J0ICdjb2RlbWlycm9yL21vZGUvamF2YXNjcmlwdC9qYXZhc2NyaXB0LmpzJ1xuaW1wb3J0ICdjb2RlbWlycm9yL21vZGUvcGhwL3BocC5qcydcbmltcG9ydCAnY29kZW1pcnJvci9tb2RlL2Nzcy9jc3MuanMnXG5pbXBvcnQgJ2NvZGVtaXJyb3IvbW9kZS9zcWwvc3FsLmpzJ1xuaW1wb3J0ICdjb2RlbWlycm9yL21vZGUvcGVybC9wZXJsLmpzJ1xuaW1wb3J0ICdjb2RlbWlycm9yL21vZGUvY2xpa2UvY2xpa2UuanMnXG5pbXBvcnQgJ2NvZGVtaXJyb3IvbW9kZS9waHAvcGhwLmpzJ1xuaW1wb3J0ICdjb2RlbWlycm9yL21vZGUvcHl0aG9uL3B5dGhvbi5qcydcbmltcG9ydCAnY29kZW1pcnJvci9tb2RlL3lhbWwveWFtbC5qcydcbmltcG9ydCAnY29kZW1pcnJvci9tb2RlL3htbC94bWwuanMnXG5pbXBvcnQgJ2NvZGVtaXJyb3IvbW9kZS9odG1sZW1iZWRkZWQvaHRtbGVtYmVkZGVkLmpzJ1xuaW1wb3J0ICdjb2RlbWlycm9yL21vZGUvaHRtbG1peGVkL2h0bWxtaXhlZC5qcydcblxuLy8gZWRpdFxuaW1wb3J0ICdjb2RlbWlycm9yL2FkZG9uL3NlbGVjdGlvbi9hY3RpdmUtbGluZS5qcydcbmltcG9ydCAnY29kZW1pcnJvci9hZGRvbi9jb21tZW50L2NvbnRpbnVlY29tbWVudC5qcydcblxuLy8gYXV0b2Zvcm1hdFxuXG5cbmV4cG9ydCBkZWZhdWx0IGNvZGVtaXJyb3IiLCJleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiAoQ29kZU1pcnJvckVkaXRvcikge1xuICBDb2RlTWlycm9yRWRpdG9yLmRhdGEgPSBmdW5jdGlvbiAoKSB7XG4gICAgdGhpcy4kaTE4bi5sb2NhbGUgPSB0aGlzLmNvbmZpZy5sb2NhbGVcbiAgICByZXR1cm4ge1xuICAgICAgaW5pdGVkOiBmYWxzZSxcbiAgICAgIHNpbXBsZU1vZGU6IGZhbHNlLFxuICAgICAgLy9lZGl0b3I6IG51bGwsXG4gICAgICAvL2VkaXRvciRlbDogbnVsbCxcbiAgICAgIG1hcmtlcnM6IFtdLFxuICAgICAgY29kZTogJycsXG4gICAgICBoaWdobGlnaHRDbGFzc05hbWU6ICdoaWdobGlnaHQnLFxuICAgICAgY2hhbmdlTG9jazogZmFsc2UsXG4gICAgICBjdXJzb3JQb3NpdGlvblNhdmVkOiB7XG4gICAgICAgIGZyb206IHtsaW5lOiBudWxsLCBjaDogbnVsbH0sXG4gICAgICAgIHRvOiB7bGluZTogbnVsbCwgY2g6IG51bGx9LFxuICAgICAgICBzY3JvbGxUb3A6IG51bGxcbiAgICAgIH1cbiAgICB9XG4gIH1cbn0iLCJpbXBvcnQgYmVhdXRpZnkgZnJvbSAnanMtYmVhdXRpZnknXG5cbmxldCBleHRyYUtleXMgPSB7XG4gIFwiQ3RybC1GXCI6ICdub25lJyxcbiAgXCJDdHJsLVNoaWZ0LUZcIjogJ25vbmUnLFxuICBcIkN0cmwtSFwiOiAnbm9uZScsXG4gIFwiQ3RybC1TaGlmdC1RXCI6ICdub25lJyxcbiAgXCJDdHJsLVNcIjogJ25vbmUnLFxuICBcIkN0cmwtQWx0LUZcIjogZnVuY3Rpb24gKGNtKSB7XG4gICAgbGV0IG1vZGUgPSBjbS5nZXRPcHRpb24oJ21vZGUnKS5uYW1lXG4gICAgXG4gICAgbGV0IHByb2Nlc3NcbiAgICBpZiAobW9kZSA9PT0gJ2phdmFzY3JpcHQnXG4gICAgICAgICAgICB8fCBtb2RlID09PSAndGV4dC9qYXZhc2NyaXB0J1xuICAgICAgICAgICAgfHwgbW9kZSA9PT0gJ2FwcGxpY2F0aW9uL2pzb24nXG4gICAgICAgICAgICB8fCBtb2RlID09PSAnYXBwbGljYXRpb24vbGQranNvbidcbiAgICAgICAgICAgIHx8IG1vZGUgPT09ICd0ZXh0L3R5cGVzY3JpcHQnXG4gICAgICAgICAgICB8fCBtb2RlID09PSAnYXBwbGljYXRpb24vdHlwZXNjcmlwdCcpIHtcbiAgICAgIHByb2Nlc3MgPSBiZWF1dGlmeS5qc19iZWF1dGlmeVxuICAgIH1cbiAgICBlbHNlIGlmIChtb2RlID09PSAndGV4dC9jc3MnXG4gICAgICAgICAgICB8fCBtb2RlID09PSAndGV4dC94LXNjc3MnXG4gICAgICAgICAgICB8fCBtb2RlID09PSAndGV4dC94LWxlc3MnKSB7XG4gICAgICBwcm9jZXNzID0gYmVhdXRpZnkuY3NzX2JlYXV0aWZ5XG4gICAgfVxuICAgIGVsc2UgaWYgKG1vZGUgPT09ICd0ZXh0L2h0bWwnKSB7XG4gICAgICBwcm9jZXNzID0gYmVhdXRpZnkuaHRtbF9iZWF1dGlmeVxuICAgIH1cbiAgICAvL2NvbnNvbGUubG9nKClcbiAgICBcbiAgICBsZXQgc2VsZWN0aW9uID0gY20uZ2V0U2VsZWN0aW9uKClcbiAgICBpZiAoc2VsZWN0aW9uID09PSAnJykge1xuICAgICAgY20uZXhlY0NvbW1hbmQoJ3NlbGVjdEFsbCcpXG4gICAgICBzZWxlY3Rpb24gPSBjbS5nZXRTZWxlY3Rpb24oKVxuICAgIH1cbiAgICBzZWxlY3Rpb24gPSBwcm9jZXNzKHNlbGVjdGlvbilcbiAgICAvL3NlbGVjdGlvbiA9IHNlbGVjdGlvbiArICdBQUEnXG4gICAgY20ucmVwbGFjZVNlbGVjdGlvbihzZWxlY3Rpb24pO1xuICAgIFxuICAgIC8vY29uc29sZS5sb2coJ2FhYScpXG4gIH0sXG4gIFwiQ3RybC0uXCI6IFwiYXV0b2NvbXBsZXRlXCIsXG4gIFwiVGFiXCI6IGZ1bmN0aW9uIChjbSkge1xuICAgIGNtLnJlcGxhY2VTZWxlY3Rpb24oXCIgIFwiLCBcImVuZFwiKTtcbiAgfVxufVxuXG5sZXQgb3B0aW9ucyA9IHtcbiAgbGluZU51bWJlcnM6IHRydWUsXG4gIGxpbmVXcmFwcGluZzogdHJ1ZSxcbiAgbWF0Y2hCcmFja2V0czogdHJ1ZSxcbiAgYXV0b0Nsb3NlQnJhY2tldHM6IHRydWUsXG4gIG1hdGNoVGFnczogdHJ1ZSxcbiAgYXV0b0Nsb3NlVGFnczogdHJ1ZSxcbiAgZm9sZEd1dHRlcjogdHJ1ZSxcbiAgc2hvd01hdGNoZXNPblNjcm9sbGJhcjogdHJ1ZSxcbiAgbGludDoge1xuICAgIGVzdmVyc2lvbjogOSxcbiAgICBcImFzaVwiOiB0cnVlLFxuICB9LFxuICBndXR0ZXJzOiBbXCJDb2RlTWlycm9yLWxpbnQtbWFya2Vyc1wiLCBcIkNvZGVNaXJyb3ItbGluZW51bWJlcnNcIiwgXCJDb2RlTWlycm9yLWZvbGRndXR0ZXJcIl0sXG4gIG1vZGU6IHtuYW1lOiBcImphdmFzY3JpcHRcIiwgZ2xvYmFsVmFyczogdHJ1ZX0sXG4gIC8vbW9kZTogIFwiamF2YXNjcmlwdFwiLFxuICBleHRyYUtleXM6IGV4dHJhS2V5cyxcbiAgc3R5bGVBY3RpdmVMaW5lOiB0cnVlLFxuICBjb250aW51ZUNvbW1lbnRzOiB7XG4gICAgY29udGludWVMaW5lQ29tbWVudDogdHJ1ZVxuICB9LFxuICBoaW50T3B0aW9uczoge1xuICAgIGFsaWduV2l0aFdvcmQ6IGZhbHNlLFxuICAgIGNvbXBsZXRlU2luZ2xlOiBmYWxzZSxcbiAgfVxufVxuXG5leHBvcnQgZGVmYXVsdCBvcHRpb25zIiwiaW1wb3J0ICQgZnJvbSAnanF1ZXJ5J1xuaW1wb3J0IENvZGVNaXJyb3JPcHRpb25zIGZyb20gJy4vdmVuZG9ycy9jb2RlbWlycm9yLmNvbmZpZy53ZWJwYWNrLmpzJ1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiAoQ29kZU1pcnJvckVkaXRvcikge1xuICBDb2RlTWlycm9yRWRpdG9yLmNvbXB1dGVkID0ge1xuLy8gICAgZWRpdG9yICgpIHtcbi8vICAgICAgcmV0dXJuIHRoaXMuJHJlZnMuY21FZGl0b3Jcbi8vICAgIH0sXG4gICAgY29tcHV0ZWRDb2RlTWlycm9yT3B0aW9ucygpIHtcblxuICAgICAgbGV0IG9wdGlvbnMgPSB7XG4gICAgICAgIC4uLkNvZGVNaXJyb3JPcHRpb25zXG4gICAgICB9XG4gICAgICBcbiAgICAgIG9wdGlvbnMubW9kZS5uYW1lID0gdGhpcy5sb2NhbENvbmZpZy5zeW50YXhcblxuICAgICAgb3B0aW9ucy5leHRyYUtleXNbJ0N0cmwtQWx0LUYnXSA9IChjbSkgPT4ge1xuICAgICAgICB0aGlzLmF1dG9Gb3JtYXQoY20pXG4gICAgICB9XG4gICAgICBcbiAgICAgIG9wdGlvbnMuZXh0cmFLZXlzWydUYWInXSA9IChjbSkgPT4ge1xuICAgICAgICB0aGlzLmlucHV0VGFiKGNtKVxuICAgICAgfVxuICAgICAgXG4gICAgICBvcHRpb25zLmV4dHJhS2V5c1snQ3RybC1TJ10gPSAoY20pID0+IHtcbiAgICAgICAgdGhpcy5zYXZlRmlsZShjbSlcbiAgICAgIH1cbiAgICAgIFxuICAgICAgb3B0aW9ucy5saW5lV3JhcHBpbmcgPSB0aGlzLmxvY2FsQ29uZmlnLmxpbmVXcmFwcGluZ1xuXG4gICAgICAvL2NvbnNvbGUubG9nKG9wdGlvbnMpXG5cbiAgICAgIHJldHVybiBvcHRpb25zXG4gICAgfSxcbiAgICBlZGl0b3IkZWwoKSB7XG4gICAgICAvL2NvbnNvbGUubG9nKHRoaXMuJHJlZnMuY21FZGl0b3IuJGVsKVxuICAgICAgaWYgKCF0aGlzLiRyZWZzLmNtRWRpdG9yKSB7XG4gICAgICAgIHJldHVybiB1bmRlZmluZWRcbiAgICAgIH1cblxuICAgICAgcmV0dXJuICQodGhpcy4kcmVmcy5jbUVkaXRvci4kZWwpLmZpbmQoJy5Db2RlTWlycm9yOmZpcnN0JylcbiAgICB9LFxuICAgIGVkaXRvclNjcm9sbCRlbCAoKSB7XG4gICAgICAvL2NvbnNvbGUubG9nKHRoaXMuJHJlZnMuY21FZGl0b3IuJGVsKVxuICAgICAgaWYgKCF0aGlzLiRyZWZzLmNtRWRpdG9yKSB7XG4gICAgICAgIHJldHVybiB1bmRlZmluZWRcbiAgICAgIH1cblxuICAgICAgcmV0dXJuICQodGhpcy4kcmVmcy5jbUVkaXRvci4kZWwpLmZpbmQoJy5Db2RlTWlycm9yOmZpcnN0IC5Db2RlTWlycm9yLXNjcm9sbDpmaXJzdCcpXG4gICAgfSxcbiAgICBjb2RlbWlycm9yKCkge1xuICAgICAgaWYgKCF0aGlzLiRyZWZzLmNtRWRpdG9yKSB7XG4gICAgICAgIHJldHVybiB1bmRlZmluZWRcbiAgICAgIH1cbiAgICAgIHJldHVybiB0aGlzLiRyZWZzLmNtRWRpdG9yLmNvZGVtaXJyb3JcbiAgICB9LFxuICAgIFxuICAgIGNvbXB1dGVkQ29kZU1pcnJvcldyYXBwZXJDbGFzc05hbWVMaXN0ICgpIHtcbiAgICAgIGxldCBsaXN0ID0gW11cbiAgICAgIFxuICAgICAgaWYgKHRoaXMuaW5pdGVkID09PSB0cnVlKSB7XG4gICAgICAgIGxpc3QucHVzaCgnaW5pdGVkJylcbiAgICAgIH1cbiAgICAgIFxuICAgICAgaWYgKHRoaXMubG9jYWxDb25maWcubGluZVdyYXBwaW5nID09PSBmYWxzZSkge1xuICAgICAgICBsaXN0LnB1c2goJ3RleHQtd3JhcC1kaXNhYmxlZCcpXG4gICAgICB9XG4gICAgICBcbiAgICAgIHJldHVybiBsaXN0LmpvaW4oJyAnKVxuICAgIH0sXG4gICAgY29tcHV0ZWRJbmRlbnRTcGFjZXMgKCkge1xuICAgICAgaWYgKHRoaXMubG9jYWxDb25maWcuaW5kZW50Lm1vZGUgPT09ICd0YWInKSB7XG4gICAgICAgIHJldHVybiAnXFx0J1xuICAgICAgfVxuICAgICAgXG4gICAgICBsZXQgc3BhY2VzID0gW11cbiAgICAgIGZvciAobGV0IGkgPSAwOyBpIDwgdGhpcy5sb2NhbENvbmZpZy5pbmRlbnQuc2l6ZTsgaSsrKSB7XG4gICAgICAgIHNwYWNlcy5wdXNoKCcgJylcbiAgICAgIH1cbiAgICAgIHJldHVybiBzcGFjZXMuam9pbignJylcbiAgICB9XG4gIH1cbn0iLCJcbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIChDb2RlTWlycm9yRWRpdG9yKSB7XG4gICAgXG4gIENvZGVNaXJyb3JFZGl0b3Iud2F0Y2ggPSB7XG4gICAgJ2NvbmZpZy5pbml0ZWQnOiBmdW5jdGlvbiAoKSB7XG4gICAgICAvL2NvbnNvbGUubG9nKHRoaXMuY29uZmlnLmluaXRlZClcbiAgICAgIHRoaXMub25Db25maWdJbml0ZWQoKVxuICAgIH0sXG4gICAgJ2NvbmZpZy5wYW5lbEhlaWdodCcoKSB7XG4gICAgICB0aGlzLnJlc2l6ZUhlaWdodCgpXG4gICAgfSxcbiAgICAnbG9jYWxDb25maWcuc3RyaW5nVG9TZWFyY2gnKCkge1xuICAgICAgdGhpcy5oaWdobGlnaHRUZXh0KClcbiAgICB9LFxuICAgICdsb2NhbENvbmZpZy5zeW50YXgnKCkge1xuICAgICAgdGhpcy5zZXRNb2RlKHRoaXMubG9jYWxDb25maWcuc3ludGF4KVxuICAgIH0sXG4gICAgJ2xvY2FsQ29uZmlnLmxpbmVXcmFwcGluZycoKSB7XG4gICAgICBjb25zb2xlLmxvZyh0aGlzLmxvY2FsQ29uZmlnLmxpbmVXcmFwcGluZylcbiAgICAgIHRoaXMuc2V0T3B0aW9uKCdsaW5lV3JhcHBpbmcnLCB0aGlzLmxvY2FsQ29uZmlnLmxpbmVXcmFwcGluZylcbiAgICB9LFxuICAgICdsb2NhbENvbmZpZy5mb250U2l6ZScoKSB7XG4gICAgICB0aGlzLnNldEZvbnRTaXplKClcbiAgICB9LFxuICAgICdsb2NhbENvbmZpZy50ZXh0Q29udGVudCc6IGFzeW5jIGZ1bmN0aW9uICgpIHtcbiAgICAgIGlmICh0aGlzLmNvbmZpZy5pbml0ZWQgPT09IGZhbHNlKSB7XG4gICAgICAgIHJldHVybiBmYWxzZVxuICAgICAgfVxuICAgICAgXG4gICAgICAvL3RoaXMucmVzdG9yZUN1cnNvclBvc2l0aW9uKClcbiAgICAgIC8vY29uc29sZS5sb2coJ2NoYW5nZWQnLCB0aGlzLmxvY2FsQ29uZmlnLnRleHRDb250ZW50KVxuICAgICAgaWYgKHRoaXMuY2hhbmdlTG9jayA9PT0gdHJ1ZSkge1xuICAgICAgICByZXR1cm4gZmFsc2VcbiAgICAgIH1cblxuICAgICAgdGhpcy5zYXZlQ3Vyc29yUG9zaXRpb24oKVxuICAgICAgdGhpcy5jaGFuZ2VMb2NrID0gdHJ1ZVxuICAgICAgdGhpcy5jb2RlID0gdGhpcy5sb2NhbENvbmZpZy50ZXh0Q29udGVudFxuICAgICAgYXdhaXQgdGhpcy51dGlscy5Bc3luY1V0aWxzLnNsZWVwKDApXG4gICAgICB0aGlzLnJlc3RvcmVDdXJzb3JQb3NpdGlvbigpXG4gICAgICB0aGlzLnVwZGF0ZURvY3VtZW50VGl0bGUoKVxuICAgICAgdGhpcy5jaGFuZ2VMb2NrID0gZmFsc2VcblxuICAgICAgLy90aGlzLiRyZWZzLmNtRWRpdG9yLnNldFZhbHVlKHRoaXMubG9jYWxDb25maWcudGV4dENvbnRlbnQpXG4gICAgfSxcbiAgICAnY29kZSc6IGFzeW5jIGZ1bmN0aW9uICgpIHtcbiAgICAgIGlmICh0aGlzLmNvbmZpZy5pbml0ZWQgPT09IGZhbHNlKSB7XG4gICAgICAgIHJldHVybiBmYWxzZVxuICAgICAgfVxuICAgICAgXG4gICAgICAvL2NvbnNvbGUubG9nKCdjb2RlJylcbiAgICAgIGlmICh0aGlzLmNoYW5nZUxvY2sgPT09IHRydWUpIHtcbiAgICAgICAgcmV0dXJuIGZhbHNlXG4gICAgICB9XG5cbiAgICAgIHRoaXMuY2hhbmdlTG9jayA9IHRydWVcbiAgICAgIHRoaXMubG9jYWxDb25maWcudGV4dENvbnRlbnQgPSB0aGlzLmNvZGVcbiAgICAgIGF3YWl0IHRoaXMudXRpbHMuQXN5bmNVdGlscy5zbGVlcCgwKVxuICAgICAgdGhpcy51cGRhdGVEb2N1bWVudFRpdGxlKClcbiAgICAgIHRoaXMuY2hhbmdlTG9jayA9IGZhbHNlXG4gICAgfVxuICB9XG59IiwiZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gKENvZGVNaXJyb3JFZGl0b3IpIHtcbiAgQ29kZU1pcnJvckVkaXRvci5tZXRob2RzLmdldE1vZGUgPSBmdW5jdGlvbiAodXNlRmlsdGVyID0gdHJ1ZSkge1xuICAgIGxldCBjbSA9IHRoaXMuY29kZW1pcnJvclxuICAgIGxldCBtb2RlID0gY20uZ2V0T3B0aW9uKCdtb2RlJykubmFtZVxuICAgIFxuICAgIGlmICh1c2VGaWx0ZXIpIHtcbiAgICAgIGlmIChtb2RlID09PSAnamF2YXNjcmlwdCdcbiAgICAgICAgICAgICAgfHwgbW9kZSA9PT0gJ3RleHQvamF2YXNjcmlwdCdcbiAgICAgICAgICAgICAgfHwgbW9kZSA9PT0gJ2FwcGxpY2F0aW9uL2pzb24nXG4gICAgICAgICAgICAgIHx8IG1vZGUgPT09ICdhcHBsaWNhdGlvbi9sZCtqc29uJ1xuICAgICAgICAgICAgICB8fCBtb2RlID09PSAndGV4dC90eXBlc2NyaXB0J1xuICAgICAgICAgICAgICB8fCBtb2RlID09PSAnYXBwbGljYXRpb24vdHlwZXNjcmlwdCcpIHtcbiAgICAgICAgbW9kZSA9ICdqYXZhc2NyaXB0J1xuICAgICAgfVxuICAgICAgZWxzZSBpZiAobW9kZSA9PT0gJ3RleHQvY3NzJ1xuICAgICAgICAgICAgICB8fCBtb2RlID09PSAndGV4dC94LXNjc3MnXG4gICAgICAgICAgICAgIHx8IG1vZGUgPT09ICd0ZXh0L3gtbGVzcycpIHtcbiAgICAgICAgbW9kZSA9ICdjc3MnXG4gICAgICB9XG4gICAgICBlbHNlIGlmIChtb2RlID09PSAndGV4dC9odG1sJyBcbiAgICAgICAgICAgICAgfHwgbW9kZSA9PT0gJ2FwcGxpY2F0aW9uL3htbCcpIHtcbiAgICAgICAgbW9kZSA9ICdodG1sJ1xuICAgICAgfVxuICAgIH1cbiAgICByZXR1cm4gbW9kZVxuICB9XG5cbiAgQ29kZU1pcnJvckVkaXRvci5tZXRob2RzLnNldE1vZGUgPSBmdW5jdGlvbiAobW9kZSkge1xuICAgIGlmICh0aGlzLnNpbXBsZU1vZGUgPT09IHRydWUpIHtcbiAgICAgIHJldHVybiBmYWxzZVxuICAgIH1cblxuICAgIHNldFRpbWVvdXQoKCkgPT4ge1xuICAgICAgdGhpcy5jb2RlbWlycm9yLnNldE9wdGlvbihcIm1vZGVcIiwgbW9kZSlcbiAgICB9LCAxMDApXG5cbiAgICAvL3RoaXMuY29kZW1pcnJvciRlbCA9ICQoJy5Db2RlTWlycm9yOmZpcnN0JylcblxuICAgIC8vY29uc29sZS5sb2codGhpcy5jb2RlbWlycm9yJGVsKVxuICB9XG4gIFxuICBDb2RlTWlycm9yRWRpdG9yLm1ldGhvZHMuc2V0T3B0aW9uID0gZnVuY3Rpb24gKGtleSwgdmFsdWUpIHtcblxuICAgIHNldFRpbWVvdXQoKCkgPT4ge1xuICAgICAgdGhpcy5jb2RlbWlycm9yLnNldE9wdGlvbihrZXksIHZhbHVlKVxuICAgIH0sIDEwMClcblxuICB9XG59IiwiZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gKENvZGVNaXJyb3JFZGl0b3IpIHtcbiAgQ29kZU1pcnJvckVkaXRvci5tZXRob2RzLm9uRWRpdG9yQ2hhbmdlID0gYXN5bmMgZnVuY3Rpb24gKCkge1xuICAgIGlmICh0aGlzLnNpbXBsZU1vZGUgPT09IHRydWUpIHtcbiAgICAgIHJldHVybiBmYWxzZVxuICAgIH1cblxuICAgIGlmICh0aGlzLnNldFZhbHVlTG9jayA9PT0gdHJ1ZSkge1xuICAgICAgcmV0dXJuIGZhbHNlXG4gICAgfVxuICAgIHRoaXMuc2V0VmFsdWVMb2NrID0gdHJ1ZVxuICAgIHRoaXMubG9jYWxDb25maWcudGV4dENvbnRlbnQgPSB0aGlzLmNvZGVtaXJyb3IuZ2V0VmFsdWUoKVxuICAgIGF3YWl0IHRoaXMudXRpbHMuQXN5bmNVdGlscy5zbGVlcCgwKVxuICAgIHRoaXMuaGlnaGxpZ2h0VGV4dCgpXG4gICAgdGhpcy5zZXRWYWx1ZUxvY2sgPSBmYWxzZVxuICB9XG4gIENvZGVNaXJyb3JFZGl0b3IubWV0aG9kcy51cGRhdGVEb2N1bWVudFRpdGxlID0gZnVuY3Rpb24gKCkge1xuICAgIGxldCB0ZXh0Q29udGVudFRyaW0gPSB0aGlzLiRwYXJlbnQudGV4dENvbnRlbnRUcmltXG4gICAgaWYgKHRleHRDb250ZW50VHJpbSA9PT0gJycpIHtcbiAgICAgIGRvY3VtZW50LnRpdGxlID0gJ1BsYWluIFRleHQgRWRpdG9yJ1xuICAgIH0gZWxzZSB7XG4gICAgICBkb2N1bWVudC50aXRsZSA9IHRleHRDb250ZW50VHJpbVxuICAgIH1cbiAgfVxufSIsImltcG9ydCBiZWF1dGlmeSBmcm9tICdqcy1iZWF1dGlmeSdcblxuaW1wb3J0IHtqc21pbn0gZnJvbSBcImpzbWluXCJcbmltcG9ydCBjc3NtaW4gZnJvbSBcImNzc21pblwiXG5pbXBvcnQgbWluaWZ5WE1MIGZyb20gXCJtaW5pZnkteG1sXCJcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gKENvZGVNaXJyb3JFZGl0b3IpIHtcbiAgQ29kZU1pcnJvckVkaXRvci5tZXRob2RzLmF1dG9Gb3JtYXQgPSBmdW5jdGlvbiAoKSB7XG4gICAgLy9jb25zb2xlLmxvZygnYXV0b0Zvcm1hdCcpXG4gICAgbGV0IGNtID0gdGhpcy5jb2RlbWlycm9yXG4gICAgbGV0IG1vZGUgPSB0aGlzLmdldE1vZGUoKVxuICAgIFxuICAgIGxldCBwcm9jZXNzXG4gICAgaWYgKG1vZGUgPT09ICdqYXZhc2NyaXB0Jykge1xuICAgICAgcHJvY2VzcyA9IGJlYXV0aWZ5LmpzX2JlYXV0aWZ5XG4gICAgfVxuICAgIGVsc2UgaWYgKG1vZGUgPT09ICdjc3MnKSB7XG4gICAgICBwcm9jZXNzID0gYmVhdXRpZnkuY3NzX2JlYXV0aWZ5XG4gICAgfVxuICAgIGVsc2UgaWYgKG1vZGUgPT09ICdodG1sJykge1xuICAgICAgcHJvY2VzcyA9IGJlYXV0aWZ5Lmh0bWxfYmVhdXRpZnlcbiAgICB9XG4gICAgLy9jb25zb2xlLmxvZygpXG4gICAgXG4gICAgbGV0IHNlbGVjdGlvbiA9IGNtLmdldFNlbGVjdGlvbigpXG4gICAgaWYgKHNlbGVjdGlvbiA9PT0gJycpIHtcbiAgICAgIGNtLmV4ZWNDb21tYW5kKCdzZWxlY3RBbGwnKVxuICAgICAgc2VsZWN0aW9uID0gY20uZ2V0U2VsZWN0aW9uKClcbiAgICB9XG4gICAgXG4gICAgbGV0IG9wdGlvbnMgPSB7fVxuICAgIGlmICh0aGlzLmxvY2FsQ29uZmlnLmluZGVudC5tb2RlID09PSAnc3BhY2UnKSB7XG4gICAgICBvcHRpb25zLmluZGVudF9zaXplID0gdGhpcy5sb2NhbENvbmZpZy5pbmRlbnQuc2l6ZVxuICAgIH1cbiAgICBcbiAgICBzZWxlY3Rpb24gPSBwcm9jZXNzKHNlbGVjdGlvbiwgb3B0aW9ucylcbiAgICAvL3NlbGVjdGlvbiA9IHNlbGVjdGlvbiArICdBQUEnXG4gICAgY20ucmVwbGFjZVNlbGVjdGlvbihzZWxlY3Rpb24pO1xuICAgIFxuICAgIC8vY29uc29sZS5sb2coJ2FhYScpXG4gIH1cbiAgXG4gIENvZGVNaXJyb3JFZGl0b3IubWV0aG9kcy5taW5pZnkgPSBmdW5jdGlvbiAoKSB7XG4gICAgbGV0IGNtID0gdGhpcy5jb2RlbWlycm9yXG4gICAgbGV0IG1vZGUgPSB0aGlzLmdldE1vZGUoKVxuICAgIFxuICAgIC8vY29uc29sZS5sb2coKVxuICAgIFxuICAgIGNtLmV4ZWNDb21tYW5kKCdzZWxlY3RBbGwnKVxuICAgIGxldCBzZWxlY3Rpb24gPSBjbS5nZXRTZWxlY3Rpb24oKVxuICAgIFxuICAgIGlmIChtb2RlID09PSAnY3NzJykge1xuICAgICAgLy90aGlzLmxvY2FsQ29uZmlnLnRleHRDb250ZW50ID0gYXdhaXQgY3NzTWluaWZpZXIuY3Nzbyh0aGlzLmxvY2FsQ29uZmlnLnRleHRDb250ZW50KVxuICAgICAgc2VsZWN0aW9uID0gY3NzbWluKHNlbGVjdGlvbilcbiAgICB9XG4gICAgZWxzZSBpZiAobW9kZSA9PT0gJ2phdmFzY3JpcHQnKSB7XG4gICAgICAvL2NvbnNvbGUubG9nKHRoaXMubG9jYWxDb25maWcudGV4dENvbnRlbnQpXG4gICAgICBzZWxlY3Rpb24gPSBqc21pbihzZWxlY3Rpb24pXG4gICAgfVxuICAgIGVsc2UgaWYgKG1vZGUgPT09ICdodG1sJykge1xuICAgICAgLy9jb25zb2xlLmxvZyh0aGlzLmxvY2FsQ29uZmlnLnRleHRDb250ZW50KVxuICAgICAgc2VsZWN0aW9uID0gbWluaWZ5WE1MKHNlbGVjdGlvbilcbiAgICB9XG4gICAgZWxzZSB7XG4gICAgICAvLyDliKrmjonlpJrppJjnqbrnmb3oiIfmj5vooYxcbiAgICAgIHNlbGVjdGlvbiA9IHNlbGVjdGlvbi5zcGxpdCgnXFxuJykuam9pbignJylcbiAgICAgIHNlbGVjdGlvbiA9IHNlbGVjdGlvbi5zcGxpdCgnXFx0Jykuam9pbignICcpXG4gICAgICB3aGlsZSAoc2VsZWN0aW9uLmluZGV4T2YoJyAgJykgPiAtMSkge1xuICAgICAgICBzZWxlY3Rpb24gPSBzZWxlY3Rpb24uc3BsaXQoJyAgJykuam9pbignICcpXG4gICAgICB9XG4gICAgfVxuICAgIC8vc2VsZWN0aW9uID0gc2VsZWN0aW9uICsgJ0FBQSdcbiAgICBjbS5yZXBsYWNlU2VsZWN0aW9uKHNlbGVjdGlvbilcbiAgfVxuICBcbiAgQ29kZU1pcnJvckVkaXRvci5tZXRob2RzLmlucHV0VGFiID0gZnVuY3Rpb24gKCkge1xuICAgIGxldCBjbSA9IHRoaXMuY29kZW1pcnJvclxuICAgIGNtLnJlcGxhY2VTZWxlY3Rpb24odGhpcy5jb21wdXRlZEluZGVudFNwYWNlcywgXCJlbmRcIik7XG4gIH1cbiAgXG4gIENvZGVNaXJyb3JFZGl0b3IubWV0aG9kcy5zZXRGb250U2l6ZSA9IGZ1bmN0aW9uICgpIHtcbiAgICBsZXQgZm9udFNpemUgPSB0aGlzLmxvY2FsQ29uZmlnLmZvbnRTaXplXG4gICAgdGhpcy5lZGl0b3IkZWwuY3NzKCdmb250LXNpemUnLCBmb250U2l6ZSArICdwdCcpXG4gICAgdGhpcy5lZGl0b3IkZWwuY3NzKCdsaW5lLWhlaWdodCcsIE1hdGgucm91bmQoZm9udFNpemUgKiAxLjUpICsgJ3B0JylcbiAgfVxufSIsImV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIChDb2RlTWlycm9yRWRpdG9yKSB7XG4gIENvZGVNaXJyb3JFZGl0b3IubWV0aG9kcy5vbkNvZGVNaXJyb3JDdXJzb3JBY3Rpdml0eSA9IGZ1bmN0aW9uICgpIHtcbiAgICB0aGlzLnNhdmVDdXJzb3JQb3NpdGlvbigpXG4gIH1cbiAgICBcbiAgQ29kZU1pcnJvckVkaXRvci5tZXRob2RzLmp1bXBUb0xpbmUgPSBmdW5jdGlvbiAoaSwgZnJvbSA9IDApIHtcbiAgICBpZiAodGhpcy5zaW1wbGVNb2RlID09PSB0cnVlKSB7XG4gICAgICByZXR1cm4gZmFsc2VcbiAgICB9XG5cblxuICAgIHRoaXMuY29kZW1pcnJvci5mb2N1cygpXG4gICAgdmFyIHQgPSB0aGlzLmNvZGVtaXJyb3IuY2hhckNvb3Jkcyh7bGluZTogaSwgY2g6IDB9LCBcImxvY2FsXCIpLnRvcDtcbiAgICB2YXIgbWlkZGxlSGVpZ2h0ID0gdGhpcy5jb2RlbWlycm9yLmdldFNjcm9sbGVyRWxlbWVudCgpLm9mZnNldEhlaWdodCAvIDI7XG4gICAgdGhpcy5jb2RlbWlycm9yLnNjcm9sbFRvKG51bGwsIHQgLSBtaWRkbGVIZWlnaHQgLSA1KVxuXG4gICAgLy9pZiAoIXRvKSB7XG4gICAgdGhpcy5jb2RlbWlycm9yLmRvYy5zZXRDdXJzb3IoaSAtIDEsIGZyb20pXG4gICAgLy9pZiAodG8pIHtcbiAgICAvLyAgdGhpcy5jb2RlbWlycm9yLnNldFNlbGVjdGlvbih7bGluZTogMCwgY2g6IDN9LCB7bGluZTogMCwgY2g6IDl9KVxuICAgIC8vfVxuICAgIC8vfVxuICAgIC8vZWxzZSB7XG4gICAgLy8gIHRoaXMuY29kZW1pcnJvci5kb2Muc2V0U2VsZWN0aW9uKGkgLSAxLCBmcm9tKVxuICAgIC8vfVxuICB9XG4gIENvZGVNaXJyb3JFZGl0b3IubWV0aG9kcy5qdW1wVG9NYXJrZXIgPSBmdW5jdGlvbiAobWFya2VyKSB7XG4gICAgaWYgKHRoaXMuc2ltcGxlTW9kZSA9PT0gdHJ1ZSkge1xuICAgICAgcmV0dXJuIGZhbHNlXG4gICAgfVxuXG5cbiAgICB0aGlzLmNvZGVtaXJyb3IuZm9jdXMoKVxuICAgIGxldCB7ZnJvbUxpbmUsIGZyb21DaCwgdG9MaW5lLCB0b0NofSA9IHRoaXMuZ2V0TWFya2VyUG9zKG1hcmtlcilcbiAgICB0aGlzLmNvZGVtaXJyb3Iuc2V0U2VsZWN0aW9uKHtsaW5lOiBmcm9tTGluZSAtIDEsIGNoOiBmcm9tQ2h9LCB7bGluZTogdG9MaW5lIC0gMSwgY2g6IHRvQ2h9KVxuICB9XG4gIENvZGVNaXJyb3JFZGl0b3IubWV0aG9kcy5nZXRDdXJzb3IgPSBmdW5jdGlvbiAocG9zaXRpb24pIHtcbiAgICBpZiAodGhpcy5zaW1wbGVNb2RlID09PSB0cnVlXG4gICAgICAgICAgICB8fCB0aGlzLmNvbmZpZy5pbml0ZWQgPT09IGZhbHNlKSB7XG4gICAgICByZXR1cm4gZmFsc2VcbiAgICB9XG5cbiAgICByZXR1cm4gdGhpcy5jb2RlbWlycm9yLmdldEN1cnNvcihwb3NpdGlvbilcbiAgfVxuICAgXG4gIGxldCBjdXJzb3JQb3NpdGlvbktleSA9ICdjb2RlbWlycm9yLmN1cnNvci5wb3NpdGlvbidcbiAgLy9sZXQgdmlld3BvcnRLZXkgPSAnY29kZW1pcnJvci52aWV3cG9ydC5wb3NpdGlvbidcbiAgQ29kZU1pcnJvckVkaXRvci5tZXRob2RzLnNhdmVDdXJzb3JQb3NpdGlvbiA9IGZ1bmN0aW9uICgpIHtcbiAgICBpZiAodGhpcy5zaW1wbGVNb2RlID09PSB0cnVlXG4gICAgICAgICAgICB8fCB0aGlzLmNvbmZpZy5pbml0ZWQgPT09IGZhbHNlXG4gICAgICAgICAgICB8fCB0aGlzLmluaXRlZCA9PT0gZmFsc2VcbiAgICAgICAgICAgIHx8IHRoaXMuY2hhbmdlTG9jayA9PT0gdHJ1ZSkge1xuICAgICAgcmV0dXJuIGZhbHNlXG4gICAgfVxuXG4gICAgbGV0IGZyb21DdXJzb3IgPSB0aGlzLmdldEN1cnNvcih0cnVlKVxuICAgIHRoaXMuY3Vyc29yUG9zaXRpb25TYXZlZC5mcm9tLmxpbmUgPSBmcm9tQ3Vyc29yLmxpbmVcbiAgICB0aGlzLmN1cnNvclBvc2l0aW9uU2F2ZWQuZnJvbS5jaCA9IGZyb21DdXJzb3IuY2hcblxuICAgIGxldCB0b0N1cnNvciA9IHRoaXMuZ2V0Q3Vyc29yKGZhbHNlKVxuICAgIHRoaXMuY3Vyc29yUG9zaXRpb25TYXZlZC50by5saW5lID0gdG9DdXJzb3IubGluZVxuICAgIHRoaXMuY3Vyc29yUG9zaXRpb25TYXZlZC50by5jaCA9IHRvQ3Vyc29yLmNoXG4gICAgXG4gICAgdGhpcy5jdXJzb3JQb3NpdGlvblNhdmVkLnNjcm9sbFRvcCA9IHRoaXMuZWRpdG9yU2Nyb2xsJGVsLnNjcm9sbFRvcCgpXG4gICAgXG4gICAgLy9jb25zb2xlLmxvZyh0aGlzLmVkaXRvciRlbC5zY3JvbGxUb3ApXG4gICAgXG4gICAgbGV0IHNhdmVkID0gSlNPTi5zdHJpbmdpZnkodGhpcy5jdXJzb3JQb3NpdGlvblNhdmVkKVxuICAgIGxvY2FsU3RvcmFnZS5zZXRJdGVtKGN1cnNvclBvc2l0aW9uS2V5LCBzYXZlZClcbiAgICAvL2NvbnNvbGUubG9nKCdzYXZlQ3Vyc29yUG9zaXRpb24nKVxuICB9XG4gIENvZGVNaXJyb3JFZGl0b3IubWV0aG9kcy5yZXN0b3JlQ3Vyc29yUG9zaXRpb24gPSBmdW5jdGlvbiAoKSB7XG4gICAgLy9jb25zb2xlLmxvZygncmVzdG9yZUN1cnNvclBvc2l0aW9uJywgdGhpcy5jb25maWcuaW5pdGVkLCB0aGlzLmN1cnNvclBvc2l0aW9uU2F2ZWQuZnJvbSlcbiAgICBpZiAodGhpcy5zaW1wbGVNb2RlID09PSB0cnVlXG4gICAgICAgICAgICB8fCB0aGlzLmNvbmZpZy5pbml0ZWQgPT09IGZhbHNlKSB7XG4gICAgICByZXR1cm4gZmFsc2VcbiAgICB9XG5cbiAgICBcbiAgICBpZiAodGhpcy5jdXJzb3JQb3NpdGlvblNhdmVkLmZyb20ubGluZSA9PT0gbnVsbCkge1xuICAgICAgbGV0IHNhdmVkID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oY3Vyc29yUG9zaXRpb25LZXkpXG4gICAgICB0aGlzLmN1cnNvclBvc2l0aW9uU2F2ZWQgPSBKU09OLnBhcnNlKHNhdmVkKVxuICAgICAgLy9jb25zb2xlLmxvZyhzYXZlZClcbiAgICB9XG5cbiAgICBpZiAodGhpcy5jdXJzb3JQb3NpdGlvblNhdmVkLmZyb20ubGluZSA9PT0gdGhpcy5jdXJzb3JQb3NpdGlvblNhdmVkLnRvLmxpbmVcbiAgICAgICAgICAgICYmIHRoaXMuY3Vyc29yUG9zaXRpb25TYXZlZC5mcm9tLmNoID09PSB0aGlzLmN1cnNvclBvc2l0aW9uU2F2ZWQudG8uY2gpIHtcbiAgICAgIHRoaXMuanVtcFRvTGluZSh0aGlzLmN1cnNvclBvc2l0aW9uU2F2ZWQuZnJvbS5saW5lICsgMSwgdGhpcy5jdXJzb3JQb3NpdGlvblNhdmVkLmZyb20uY2gpXG5cbiAgICAgIC8vY29uc29sZS5sb2coJ3Jlc3RvcmVDdXJzb3IgY3Vyc29yJylcbiAgICB9IGVsc2Uge1xuICAgICAgbGV0IGZyb20gPSB7XG4gICAgICAgIGxpbmU6IHRoaXMuY3Vyc29yUG9zaXRpb25TYXZlZC5mcm9tLmxpbmUsXG4gICAgICAgIGNoOiB0aGlzLmN1cnNvclBvc2l0aW9uU2F2ZWQuZnJvbS5jaFxuICAgICAgfVxuICAgICAgbGV0IHRvID0ge1xuICAgICAgICAgICAgICAgIGxpbmU6IHRoaXMuY3Vyc29yUG9zaXRpb25TYXZlZC50by5saW5lLFxuICAgICAgICAgICAgICAgIGNoOiB0aGlzLmN1cnNvclBvc2l0aW9uU2F2ZWQudG8uY2hcbiAgICAgICAgICAgICAgfVxuICAgICAgXG4gICAgICB0aGlzLmNvZGVtaXJyb3Iuc2V0U2VsZWN0aW9uKGZyb20sIHRvKVxuICAgICAgLy9jb25zb2xlLmxvZygncmVzdG9yZUN1cnNvciBzZWxlY3Rpb24nKVxuICAgIH1cblxuICAgIGlmICh0aGlzLmVkaXRvclNjcm9sbCRlbCkge1xuICAgICAgdGhpcy5lZGl0b3JTY3JvbGwkZWwuc2Nyb2xsVG9wKHRoaXMuY3Vyc29yUG9zaXRpb25TYXZlZC5zY3JvbGxUb3ApXG4gICAgfVxuICB9XG4gIENvZGVNaXJyb3JFZGl0b3IubWV0aG9kcy5nZXRTZWxlY3RlZFRleHQgPSBmdW5jdGlvbiAoKSB7XG4gICAgaWYgKHRoaXMuc2ltcGxlTW9kZSA9PT0gdHJ1ZSkge1xuICAgICAgcmV0dXJuIGZhbHNlXG4gICAgfVxuXG4gICAgcmV0dXJuIHRoaXMuY29kZW1pcnJvci5nZXRTZWxlY3Rpb24oKVxuICB9XG59IiwiZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gKENvZGVNaXJyb3JFZGl0b3IpIHtcbiAgQ29kZU1pcnJvckVkaXRvci5tZXRob2RzLmdldE1hcmtlclBvcyA9IGZ1bmN0aW9uIChtYXJrZXIpIHtcbiAgICBpZiAodGhpcy5zaW1wbGVNb2RlID09PSB0cnVlKSB7XG4gICAgICByZXR1cm4gZmFsc2VcbiAgICB9XG5cbiAgICBsZXQgbGluZXMgPSBtYXJrZXIubGluZXNcblxuICAgIGxldCBmaXJzdExpbmUgPSBsaW5lc1swXVxuICAgIGxldCBmcm9tTGluZSA9IGZpcnN0TGluZS5saW5lTm8oKSArIDFcbiAgICBsZXQgZnJvbUNoID0gZmlyc3RMaW5lLm1hcmtlZFNwYW5zWzBdLmZyb21cblxuICAgIGxldCBsYXN0TGluZSA9IGxpbmVzWyhsaW5lcy5sZW5ndGggLSAxKV1cbiAgICBsZXQgdG9MaW5lID0gbGFzdExpbmUubGluZU5vKCkgKyAxXG4gICAgbGV0IHRvQ2ggPSBsYXN0TGluZS5tYXJrZWRTcGFuc1swXS50b1xuXG4gICAgcmV0dXJuIHtcbiAgICAgIGZyb21MaW5lLFxuICAgICAgZnJvbUNoLFxuICAgICAgdG9MaW5lLFxuICAgICAgdG9DaFxuICAgIH1cbiAgfVxuXG4gIENvZGVNaXJyb3JFZGl0b3IubWV0aG9kcy5maW5kTmV4dCA9IGZ1bmN0aW9uIChzZWFyY2gpIHtcbiAgICBpZiAodGhpcy5zaW1wbGVNb2RlID09PSB0cnVlKSB7XG4gICAgICByZXR1cm4gZmFsc2VcbiAgICB9XG5cbiAgICBpZiAoIXNlYXJjaCkge1xuICAgICAgc2VhcmNoID0gdGhpcy5sb2NhbENvbmZpZy5zdHJpbmdUb1NlYXJjaFxuICAgIH1cblxuICAgIGlmICghc2VhcmNoIHx8IHNlYXJjaC5sZW5ndGggPT09IDApIHtcbiAgICAgIHJldHVybiBmYWxzZVxuICAgIH1cblxuICAgIHZhciBjdXJzb3IgPSB0aGlzLmNvZGVtaXJyb3IuZ2V0U2VhcmNoQ3Vyc29yKHNlYXJjaCk7XG5cbiAgICBsZXQgY3VycmVudFBvc2l0aW9uID0gdGhpcy5nZXRDdXJzb3IodHJ1ZSlcbiAgICAvL2NvbnNvbGUubG9nKGN1cnJlbnRQb3NpdGlvbilcbiAgICBsZXQgY3VycmVudExpbmUgPSBjdXJyZW50UG9zaXRpb24ubGluZVxuICAgIGxldCBjdXJyZW50Q2ggPSBjdXJyZW50UG9zaXRpb24uY2hcbiAgICAvL2NvbnNvbGUubG9nKCdjdXJyZW50JywgY3VycmVudExpbmUsIGN1cnJlbnRDaClcblxuICAgIGxldCBmaXJzdE1hcmtlclxuICAgIC8vbGV0IGxhc3RNYXJrZXJcblxuICAgIHdoaWxlIChjdXJzb3IuZmluZE5leHQoKSkge1xuICAgICAgbGV0IG1hcmtlciA9IHRoaXMuY29kZW1pcnJvci5tYXJrVGV4dChcbiAgICAgICAgICAgICAgY3Vyc29yLmZyb20oKSxcbiAgICAgICAgICAgICAgY3Vyc29yLnRvKClcbiAgICAgICAgICAgICAgKVxuXG4gICAgICBpZiAoIWZpcnN0TWFya2VyKSB7XG4gICAgICAgIGZpcnN0TWFya2VyID0gbWFya2VyXG4gICAgICB9XG5cbiAgICAgIC8vY29uc29sZS5sb2cobWFya2VyKVxuICAgICAgbGV0IHtmcm9tTGluZSwgZnJvbUNoLCB0b0xpbmUsIHRvQ2h9ID0gdGhpcy5nZXRNYXJrZXJQb3MobWFya2VyKVxuICAgICAgLy9NQVJLRVIgPSBtYXJrZXIubGluZXNbMF1cblxuICAgICAgLy9jb25zb2xlLmxvZygnbWFya2VyJywgbGluZSwgZnJvbSwgdG8pXG4gICAgICBpZiAoZnJvbUxpbmUgLSAxID4gY3VycmVudExpbmUpIHtcbiAgICAgICAgLy8g5bCN77yM5bCx5piv6KaB5om+6YCZ5YCLXG4gICAgICAgIHRoaXMuanVtcFRvTWFya2VyKG1hcmtlcilcbiAgICAgICAgcmV0dXJuIHRydWVcbiAgICAgIH0gZWxzZSBpZiAoZnJvbUxpbmUgLSAxID09PSBjdXJyZW50TGluZSkge1xuICAgICAgICBpZiAoZnJvbUNoID4gY3VycmVudENoKSB7XG4gICAgICAgICAgLy8g5bCN77yM5bCx5piv6KaB5om+6YCZ5YCLXG4gICAgICAgICAgdGhpcy5qdW1wVG9NYXJrZXIobWFya2VyKVxuICAgICAgICAgIHJldHVybiB0cnVlXG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG5cbiAgICBpZiAoZmlyc3RNYXJrZXIpIHtcbiAgICAgIHRoaXMuanVtcFRvTWFya2VyKGZpcnN0TWFya2VyKVxuICAgICAgcmV0dXJuIHRydWVcbiAgICB9XG5cbiAgICByZXR1cm4gZmFsc2UgIC8vIOaykuaJvuWIsFxuICB9XG4gIENvZGVNaXJyb3JFZGl0b3IubWV0aG9kcy5maW5kUHJldiA9IGZ1bmN0aW9uIChzZWFyY2gpIHtcbiAgICBpZiAodGhpcy5zaW1wbGVNb2RlID09PSB0cnVlKSB7XG4gICAgICByZXR1cm4gZmFsc2VcbiAgICB9XG5cbiAgICBpZiAoIXNlYXJjaCkge1xuICAgICAgc2VhcmNoID0gdGhpcy5sb2NhbENvbmZpZy5zdHJpbmdUb1NlYXJjaFxuICAgIH1cblxuICAgIGlmICghc2VhcmNoIHx8IHNlYXJjaC5sZW5ndGggPT09IDApIHtcbiAgICAgIHJldHVybiBmYWxzZVxuICAgIH1cbiAgICAvL3RoaXMuY29kZW1pcnJvci5mb2N1cygpXG4gICAgLy9jb25zb2xlLmxvZygnZmluZFByZXYnKVxuICAgIC8vY29uc29sZS5sb2coc2VhcmNoKVxuICAgIHZhciBjdXJzb3IgPSB0aGlzLmNvZGVtaXJyb3IuZ2V0U2VhcmNoQ3Vyc29yKHNlYXJjaCk7XG5cbiAgICBsZXQgY3VycmVudFBvc2l0aW9uID0gdGhpcy5nZXRDdXJzb3IodHJ1ZSlcbiAgICAvL2NvbnNvbGUubG9nKGN1cnJlbnRQb3NpdGlvbilcbiAgICBsZXQgY3VycmVudExpbmUgPSBjdXJyZW50UG9zaXRpb24ubGluZVxuICAgIGxldCBjdXJyZW50Q2ggPSBjdXJyZW50UG9zaXRpb24uY2hcbiAgICAvL2NvbnNvbGUubG9nKCdjdXJyZW50JywgY3VycmVudExpbmUsIGN1cnJlbnRDaClcblxuICAgIGxldCBsYXN0TWFya2VyXG4gICAgbGV0IGp1bXBUb0xhc3QgPSBmYWxzZVxuICAgIC8vbGV0IGxhc3RNYXJrZXJcblxuICAgIHdoaWxlIChjdXJzb3IuZmluZE5leHQoKSkge1xuICAgICAgbGV0IG1hcmtlciA9IHRoaXMuY29kZW1pcnJvci5tYXJrVGV4dChcbiAgICAgICAgICAgICAgY3Vyc29yLmZyb20oKSxcbiAgICAgICAgICAgICAgY3Vyc29yLnRvKClcbiAgICAgICAgICAgICAgKVxuXG4gICAgICBpZiAoanVtcFRvTGFzdCA9PT0gdHJ1ZSkge1xuICAgICAgICBsYXN0TWFya2VyID0gbWFya2VyXG4gICAgICAgIC8vY29uc29sZS5sb2coJ2p1bXBUb0xhc3QgdHJ1ZScpXG4gICAgICAgIGNvbnRpbnVlXG4gICAgICB9XG5cbiAgICAgIC8vaWYgKCFmaXJzdE1hcmtlcikge1xuXG4gICAgICAvL31cblxuICAgICAgLy9jb25zb2xlLmxvZyhtYXJrZXIpXG4gICAgICBsZXQge2Zyb21MaW5lLCBmcm9tQ2gsIHRvTGluZSwgdG9DaH0gPSB0aGlzLmdldE1hcmtlclBvcyhtYXJrZXIpXG4gICAgICAvL2NvbnNvbGUubG9nKGN1cnJlbnRMaW5lLCBjdXJyZW50Q2gsIHRvTGluZSwgdG9DaCwgZnJvbUxpbmUsIGZyb21DaClcblxuICAgICAgLy9jb25zb2xlLmxvZygnbWFya2VyJywgbGluZSwgZnJvbSwgdG8pXG4gICAgICBpZiAoY3VycmVudExpbmUgPCBmcm9tTGluZSAtIDEpIHtcbiAgICAgICAgLy8g5bCN77yM5bCx5piv6KaB5om+6YCZ5YCLXG4gICAgICAgIGlmICghbGFzdE1hcmtlcikge1xuICAgICAgICAgIGp1bXBUb0xhc3QgPSB0cnVlXG4gICAgICAgICAgLy9jb25zb2xlLmxvZygnanVtcFRvTGFzdCcpXG4gICAgICAgICAgY29udGludWVcbiAgICAgICAgfVxuICAgICAgICB0aGlzLmp1bXBUb01hcmtlcihsYXN0TWFya2VyKVxuICAgICAgICByZXR1cm4gdHJ1ZVxuICAgICAgfSBlbHNlIGlmIChjdXJyZW50TGluZSA9PT0gZnJvbUxpbmUgLSAxKSB7XG4gICAgICAgIC8vY29uc29sZS5sb2coY3VycmVudENoLCBmcm9tQ2gpXG4gICAgICAgIGlmIChjdXJyZW50Q2ggPD0gZnJvbUNoIHx8IGN1cnJlbnRDaCA8PSB0b0NoKSB7XG4gICAgICAgICAgLy8g5bCN77yM5bCx5piv6KaB5om+6YCZ5YCLXG4gICAgICAgICAgaWYgKCFsYXN0TWFya2VyKSB7XG4gICAgICAgICAgICBqdW1wVG9MYXN0ID0gdHJ1ZVxuICAgICAgICAgICAgLy9jb25zb2xlLmxvZygnanVtcFRvTGFzdCBjaCcpXG4gICAgICAgICAgICBjb250aW51ZVxuICAgICAgICAgIH1cbiAgICAgICAgICB0aGlzLmp1bXBUb01hcmtlcihsYXN0TWFya2VyKVxuICAgICAgICAgIHJldHVybiB0cnVlXG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgbGFzdE1hcmtlciA9IG1hcmtlclxuICAgIH1cblxuICAgIGlmIChsYXN0TWFya2VyKSB7XG4gICAgICB0aGlzLmp1bXBUb01hcmtlcihsYXN0TWFya2VyKVxuICAgICAgcmV0dXJuIHRydWVcbiAgICB9XG4gICAgLy9jb25zb2xlLmxvZygn5rKS5om+5YiwJylcbiAgICByZXR1cm4gZmFsc2UgIC8vIOaykuaJvuWIsFxuICB9XG5cbiAgQ29kZU1pcnJvckVkaXRvci5tZXRob2RzLmhpZ2hsaWdodENsZWFyID0gYXN5bmMgZnVuY3Rpb24gKCkge1xuICAgIC8vY29uc29sZS5sb2codGhpcy5jb2RlbWlycm9yJGVsLmZpbmQoJy4nICsgdGhpcy5oaWdobGlnaHRDbGFzc05hbWUpLmxlbmd0aClcbiAgICAvL3RoaXMuY29kZW1pcnJvciRlbC5maW5kKCcuJyArIHRoaXMuaGlnaGxpZ2h0Q2xhc3NOYW1lKS5yZW1vdmVDbGFzcyh0aGlzLmhpZ2hsaWdodENsYXNzTmFtZSlcbiAgICB3aGlsZSAodGhpcy5tYXJrZXJzLmxlbmd0aCA+IDApIHtcbiAgICAgIGxldCBtYXJrZXIgPSB0aGlzLm1hcmtlcnMuc2hpZnQoKVxuICAgICAgbWFya2VyLmNsZWFyKClcbiAgICAgIGF3YWl0IHRoaXMudXRpbHMuQXN5bmNVdGlscy5zbGVlcCgwKVxuICAgIH1cbiAgfVxuICBcbiAgbGV0IGhpZ2hsaWdoVGV4dFRpbWVyXG4gIGxldCBoaWdobGlnaFRleHRTZWFyY2hpbmdcbiAgQ29kZU1pcnJvckVkaXRvci5tZXRob2RzLmhpZ2hsaWdodFRleHQgPSBhc3luYyBmdW5jdGlvbiAodGV4dCkge1xuICAgIGlmICh0aGlzLmNvbmZpZy5pbml0ZWQgPT09IGZhbHNlKSB7XG4gICAgICByZXR1cm4gZmFsc2VcbiAgICB9XG4gICAgXG4gICAgaWYgKHRoaXMuc2ltcGxlTW9kZSA9PT0gdHJ1ZSkge1xuICAgICAgcmV0dXJuIGZhbHNlXG4gICAgfVxuXG4gICAgY2xlYXJUaW1lb3V0KGhpZ2hsaWdoVGV4dFRpbWVyKVxuICAgIGhpZ2hsaWdoVGV4dFRpbWVyID0gc2V0VGltZW91dChhc3luYyAoKSA9PiB7XG4gICAgICBpZiAoIXRleHQpIHtcbiAgICAgICAgdGV4dCA9IHRoaXMubG9jYWxDb25maWcuc3RyaW5nVG9TZWFyY2hcbiAgICAgIH1cblxuICAgICAgaGlnaGxpZ2hUZXh0U2VhcmNoaW5nID0gdGV4dFxuICAgICAgYXdhaXQgdGhpcy5oaWdobGlnaHRDbGVhcigpXG5cbiAgICAgIGlmICh0ZXh0ID09PSAnJykge1xuICAgICAgICByZXR1cm4gZmFsc2VcbiAgICAgIH1cblxuICAgICAgd2hpbGUgKCF0aGlzLmNvZGVtaXJyb3IgfHwgIXRoaXMuY29kZW1pcnJvci5nZXRTZWFyY2hDdXJzb3IpIHtcbiAgICAgICAgLy9jb25zb2xlLmxvZygnc2xlZXAnLCB0aGlzLmNvZGVtaXJyb3IpXG4gICAgICAgIGF3YWl0IHRoaXMudXRpbHMuQXN5bmNVdGlscy5zbGVlcCgpXG4gICAgICB9XG5cbiAgICAgIHZhciBjdXJzb3IgPSB0aGlzLmNvZGVtaXJyb3IuZ2V0U2VhcmNoQ3Vyc29yKHRleHQpXG4gICAgICAvL2NvbnNvbGUubG9nKGN1cnNvcilcbiAgICAgIHdoaWxlIChjdXJzb3IuZmluZE5leHQoKSkge1xuICAgICAgICAvL0NVUlNPUiA9IGN1cnNvclxuICAgICAgICBpZiAoaGlnaGxpZ2hUZXh0U2VhcmNoaW5nICE9PSB0ZXh0KSB7XG4gICAgICAgICAgLy8g5qKd5Lu26K6K5pu05LqG77yM5Y+W5raIXG4gICAgICAgICAgcmV0dXJuIGZhbHNlXG4gICAgICAgIH1cbiAgICAgICAgbGV0IG1hcmtlciA9IHRoaXMuY29kZW1pcnJvci5tYXJrVGV4dChcbiAgICAgICAgICAgICAgICBjdXJzb3IuZnJvbSgpLFxuICAgICAgICAgICAgICAgIGN1cnNvci50bygpLFxuICAgICAgICAgICAgICAgIHtjbGFzc05hbWU6IHRoaXMuaGlnaGxpZ2h0Q2xhc3NOYW1lfVxuICAgICAgICApXG4gICAgICAgIHRoaXMubWFya2Vycy5wdXNoKG1hcmtlcilcbiAgICAgICAgYXdhaXQgdGhpcy51dGlscy5Bc3luY1V0aWxzLnNsZWVwKDApXG4gICAgICAgIC8vTUFSS0VSID0gbWFya2VyXG4gICAgICB9XG4gICAgfSwgMTAwKVxuICAgICAgXG4gICAgLy90aGlzLmNvZGVtaXJyb3Iuc2V0Q3Vyc29yKHtsaW5lOiAxLCBjaDogMH0pXG4gIH1cbn0iLCJleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiAoQ29kZU1pcnJvckVkaXRvcikge1xuICBDb2RlTWlycm9yRWRpdG9yLm1ldGhvZHMucmVzaXplSGVpZ2h0ID0gYXN5bmMgZnVuY3Rpb24gKCkge1xuICAgIGlmICh0aGlzLmNvbmZpZy5pbml0ZWQgPT09IGZhbHNlKSB7XG4gICAgICByZXR1cm4gZmFsc2VcbiAgICB9XG5cbiAgICAvKlxuICAgICBsZXQgY2xhc3NOYW1lID0gJ2Rpc3BsYXktcmVwbGFjZS1wYW5lbCdcbiAgICAgaWYgKHRoaXMubG9jYWxDb25maWcuZGlzcGxheVJlcGxhY2VQYW5lbCA9PT0gdHJ1ZSkge1xuICAgICB0aGlzLmNvZGVtaXJyb3IkZWwuYWRkQ2xhc3MoY2xhc3NOYW1lKVxuICAgICB9XG4gICAgIGVsc2Uge1xuICAgICB0aGlzLmNvZGVtaXJyb3IkZWwucmVtb3ZlQ2xhc3MoY2xhc3NOYW1lKVxuICAgICB9XG4gICAgICovXG5cbiAgICAvL2NvbnNvbGUubG9nKHRoaXMuY29kZW1pcnJvciRlbCwgdGhpcy5jb2RlbWlycm9yJGVsLmNzcylcbiAgICB0aGlzLmVkaXRvciRlbC5jc3MoJ2hlaWdodCcsIGBjYWxjKDEwMHZoIC0gJHt0aGlzLmNvbmZpZy5wYW5lbEhlaWdodH0pYClcbiAgICB0aGlzLmVkaXRvciRlbC5jc3MoJ21heC1oZWlnaHQnLCBgY2FsYygxMDB2aCAtICR7dGhpcy5jb25maWcucGFuZWxIZWlnaHR9KWApXG4gICAgLy9jb25zb2xlLmxvZygn6Kit5a6a5aW95LqGJywgYGNhbGMoMTAwdmggLSAke3RoaXMuY29uZmlnLnBhbmVsSGVpZ2h0fSlgKVxuICB9XG59IiwiaW1wb3J0IGRheWpzIGZyb20gJ2RheWpzJ1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiAoQ29kZU1pcnJvckVkaXRvcikge1xuICBDb2RlTWlycm9yRWRpdG9yLm1ldGhvZHMuc2F2ZUZpbGUgPSBmdW5jdGlvbiAoKSB7XG4gICAgbGV0IGZpbGVuYW1lID0gdGhpcy5nZXRGaWxlbmFtZSgpXG4gICAgXG4gICAgdGhpcy51dGlscy5GaWxlVXRpbHMuZG93bmxvYWQoZmlsZW5hbWUsIHRoaXMuY29kZSlcbiAgfVxuICBcbiAgQ29kZU1pcnJvckVkaXRvci5tZXRob2RzLmdldEZpbGVuYW1lID0gZnVuY3Rpb24gKCkge1xuICAgIGxldCBtb2RlID0gdGhpcy5nZXRNb2RlKGZhbHNlKVxuICAgIFxuICAgIGxldCBleHQgPSAndHh0J1xuICAgIGlmIChtb2RlLmluZGV4T2YoJy8nKSA+IC0xKSB7XG4gICAgICBleHQgPSBtb2RlLnNsaWNlKG1vZGUubGFzdEluZGV4T2YoJy8nKSArIDEpXG4gICAgICBcbiAgICAgIGlmIChleHQuaW5kZXhPZignLScpID4gLTEpIHtcbiAgICAgICAgZXh0ID0gZXh0LnNsaWNlKGV4dC5sYXN0SW5kZXhPZignLScpICsgMSlcbiAgICAgIH1cbiAgICB9XG4gICAgZWxzZSB7XG4gICAgICBleHQgPSBtb2RlXG4gICAgfVxuICAgIFxuICAgIGlmIChleHQgPT09ICdqYXZhc2NyaXB0Jykge1xuICAgICAgZXh0ID0gJ2pzJ1xuICAgIH1cbiAgICBlbHNlIGlmIChleHQgPT09ICdyc3JjJykge1xuICAgICAgZXh0ID0gJ1InXG4gICAgfVxuICAgIFxuICAgIHJldHVybiBkYXlqcygpLmZvcm1hdCgnTU1ERC1oaG1tc3MnKSArICcuJyArIGV4dFxuICB9XG4gIFxufSIsIi8qIGdsb2JhbCBDb2RlTWlycm9yLCBQVUxJX1VUSUxTICovXHJcbmltcG9ydCAkIGZyb20gJ2pxdWVyeSdcclxuaW1wb3J0IGNvZGVtaXJyb3IgZnJvbSAnLi92ZW5kb3JzL2NvZGVtaXJyb3Iud2VicGFjay5qcydcclxuXHJcbmxldCBDb2RlTWlycm9yRWRpdG9yID0ge1xyXG4gIHByb3BzOiBbJ2NvbmZpZycsICdsb2NhbENvbmZpZycsICd1dGlscyddLFxyXG4gIGRhdGE6IG51bGwsXHJcbiAgY29tcG9uZW50czoge1xyXG4gICAgY29kZW1pcnJvclxyXG4gIH0sXHJcbiAgbW91bnRlZDogYXN5bmMgZnVuY3Rpb24gKCkge1xyXG4vLyAgICAvL2NvbnNvbGUubG9nKHRoaXMuaW5pdGVkKVxyXG4vLyAgICAvL2F3YWl0IHRoaXMuaW5pdENvZGVNaXJyb3IoKVxyXG4vLyAgICAvL2F3YWl0IHRoaXMub25Db25maWdJbml0ZWQoKVxyXG4vLyAgICAvL2NvbnNvbGUubG9nKHRoaXMuaW5pdGVkKVxyXG4vLyAgICAvL3RoaXMudGVzdFNlYXJjaDEyMTEoKVxyXG4vLyAgICAvL3RoaXMudGVzdFNldFZhbHVlMTIxMSgpXHJcbi8vICAgIC8vdGhpcy50ZXN0U2VhcmNoMTIxMygpXHJcbiAgICBpZiAodGhpcy5jb25maWcuaW5pdGVkID09PSB0cnVlKSB7XHJcbiAgICAgIHRoaXMub25Db25maWdJbml0ZWQoKVxyXG4gICAgfSBcclxuICB9LFxyXG4gIHdhdGNoOiB7fSwgLy8g56e75YuV5YiwIENvZGVNaXJyb3JFZGl0b3JXYXRjaFxyXG4gIGNvbXB1dGVkOiB7fSwgLy8g56e75YuV5YiwIENvZGVNaXJyb3JFZGl0b3JDb21wdXRlZC5qc1xyXG4gIG1ldGhvZHM6IHtcclxuICAgIFxyXG4gICAgb25Db25maWdJbml0ZWQ6IGFzeW5jIGZ1bmN0aW9uICgpIHtcclxuICAgICAgLy9jb25zb2xlLmxvZygnb25Db25maWdJbml0ZWQnLCAxKVxyXG4gICAgICBcclxuICAgICAgLy9jb25zb2xlLmxvZyh0aGlzLmNvbmZpZy5pbml0ZWQpXHJcbiAgICAgIGlmICh0aGlzLmNvbmZpZy5pbml0ZWQgPT09IGZhbHNlXHJcbiAgICAgICAgICAgICAgfHwgdGhpcy5zaW1wbGVNb2RlID09PSB0cnVlKSB7XHJcbiAgICAgICAgcmV0dXJuIGZhbHNlXHJcbiAgICAgIH1cclxuICAgICAgXHJcbiAgICAgIC8vY29uc29sZS5sb2coJ29uQ29uZmlnSW5pdGVkJywgMilcclxuICAgICAgLy9hd2FpdCB0aGlzLnV0aWxzLkFzeW5jVXRpbHMuc2xlZXAoMTAwMClcclxuICAgICAgLy9jb25zb2xlLmxvZygnamF2YXNjcmlwdCcpXHJcbiAgICAgIC8vdGhpcy5jb2RlbWlycm9yLnNldE9wdGlvbihcIm1vZGVcIiwgJ2h0bWwnKVxyXG4gICAgICBcclxuICAgICAgLy9hd2FpdCB0aGlzLnV0aWxzLkFzeW5jVXRpbHMuc2xlZXAoMTAwKVxyXG4gICAgICB0aGlzLmNoYW5nZUxvY2sgPSB0cnVlXHJcbiAgICAgIHRoaXMuY29kZSA9IHRoaXMubG9jYWxDb25maWcudGV4dENvbnRlbnRcclxuICAgICAgYXdhaXQgdGhpcy51dGlscy5Bc3luY1V0aWxzLnNsZWVwKDApXHJcbiAgICAgIHRoaXMuY2hhbmdlTG9jayA9IGZhbHNlXHJcbiAgICAgIFxyXG4gICAgICAvL2NvbnNvbGUubG9nKCdvbkNvbmZpZ0luaXRlZCcsIDMpXHJcbiAgICAgIFxyXG4gICAgICB3aGlsZSAoIXRoaXMuJHJlZnMuY21FZGl0b3IgfHwgIXRoaXMuJHJlZnMuY21FZGl0b3IuJGVsKSB7XHJcbiAgICAgICAgYXdhaXQgdGhpcy51dGlscy5Bc3luY1V0aWxzLnNsZWVwKClcclxuICAgICAgfVxyXG4gICAgICBcclxuICAgICAgLy9jb25zb2xlLmxvZygnb25Db25maWdJbml0ZWQnLCA0KVxyXG4gICAgICBcclxuICAgICAgLy9jb25zb2xlLmxvZygnZ28nLCB0aGlzLmxvY2FsQ29uZmlnLnN0cmluZ1RvU2VhcmNoKVxyXG4gICAgICB0aGlzLmhpZ2hsaWdodFRleHQodGhpcy5sb2NhbENvbmZpZy5zdHJpbmdUb1NlYXJjaClcclxuICAgICAgdGhpcy5yZXNpemVIZWlnaHQoKVxyXG4gICAgICAvL2NvbnNvbGUubG9nKHRoaXMubWFya2Vycy5sZW5ndGgpXHJcbiAgICAgIFxyXG4gICAgICB0aGlzLnVwZGF0ZURvY3VtZW50VGl0bGUoKVxyXG4gICAgICB0aGlzLnJlc3RvcmVDdXJzb3JQb3NpdGlvbigpXHJcbiAgICAgIFxyXG4gICAgICAvL2NvbnNvbGUubG9nKCdvbkNvbmZpZ0luaXRlZCcsIDUpXHJcbiAgICAgIHRoaXMuc2V0Rm9udFNpemUoKVxyXG4gICAgICBcclxuICAgICAgdGhpcy5pbml0ZWQgPSB0cnVlXHJcbiAgICB9LFxyXG4gICAgXHJcbiAgICBvbkNvZGVNaXJyb3JLZXlIYW5kbGVkIChlLCBzKSB7XHJcbiAgICAgIC8vY29uc29sZS5sb2coZSwgcylcclxuICAgICAgLy90aGlzLiRyZWZzLmNtRWRpdG9yLmNvZGVtaXJyb3IuZXhlY0NvbW1hbmQoJ2F1dG9jb21wbGV0ZScpXHJcbiAgICAgIHRoaXMuJHJlZnMuY21FZGl0b3IuY29kZW1pcnJvci5zaG93SGludCgpXHJcbiAgICAgIFxyXG4gICAgfVxyXG4gIH1cclxufVxyXG5cclxuaW1wb3J0IENvZGVNaXJyb3JFZGl0b3JEYXRhIGZyb20gJy4vQ29kZU1pcnJvckVkaXRvckRhdGEuanMnXHJcbkNvZGVNaXJyb3JFZGl0b3JEYXRhKENvZGVNaXJyb3JFZGl0b3IpXHJcblxyXG5pbXBvcnQgQ29kZU1pcnJvckVkaXRvckNvbXB1dGVkIGZyb20gJy4vQ29kZU1pcnJvckVkaXRvckNvbXB1dGVkLmpzJ1xyXG5Db2RlTWlycm9yRWRpdG9yQ29tcHV0ZWQoQ29kZU1pcnJvckVkaXRvcilcclxuXHJcbmltcG9ydCBDb2RlTWlycm9yRWRpdG9yV2F0Y2ggZnJvbSAnLi9Db2RlTWlycm9yRWRpdG9yV2F0Y2guanMnXHJcbkNvZGVNaXJyb3JFZGl0b3JXYXRjaChDb2RlTWlycm9yRWRpdG9yKVxyXG5cclxuLy8gLS0tLS0tLS0tLS0tLS0tLS0tLVxyXG5cclxuaW1wb3J0IENvZGVNaXJyb3JFZGl0b3JNZXRob2RzT3B0aW9uIGZyb20gJy4vQ29kZU1pcnJvckVkaXRvck1ldGhvZHNPcHRpb24uanMnXHJcbkNvZGVNaXJyb3JFZGl0b3JNZXRob2RzT3B0aW9uKENvZGVNaXJyb3JFZGl0b3IpXHJcblxyXG5pbXBvcnQgQ29kZU1pcnJvckVkaXRvck1ldGhvZHNDaGFuZ2UgZnJvbSAnLi9Db2RlTWlycm9yRWRpdG9yTWV0aG9kc0NoYW5nZS5qcydcclxuQ29kZU1pcnJvckVkaXRvck1ldGhvZHNDaGFuZ2UoQ29kZU1pcnJvckVkaXRvcilcclxuXHJcbmltcG9ydCBDb2RlTWlycm9yRWRpdG9yTWV0aG9kc0Zvcm1hdCBmcm9tICcuL0NvZGVNaXJyb3JFZGl0b3JNZXRob2RzRm9ybWF0LmpzJ1xyXG5Db2RlTWlycm9yRWRpdG9yTWV0aG9kc0Zvcm1hdChDb2RlTWlycm9yRWRpdG9yKVxyXG5cclxuaW1wb3J0IENvZGVNaXJyb3JFZGl0b3JNZXRob2RzQ3Vyc29yIGZyb20gJy4vQ29kZU1pcnJvckVkaXRvck1ldGhvZHNDdXJzb3IuanMnXHJcbkNvZGVNaXJyb3JFZGl0b3JNZXRob2RzQ3Vyc29yKENvZGVNaXJyb3JFZGl0b3IpXHJcblxyXG5pbXBvcnQgQ29kZU1pcnJvckVkaXRvck1ldGhvZHNGaW5kIGZyb20gJy4vQ29kZU1pcnJvckVkaXRvck1ldGhvZHNGaW5kLmpzJ1xyXG5Db2RlTWlycm9yRWRpdG9yTWV0aG9kc0ZpbmQoQ29kZU1pcnJvckVkaXRvcilcclxuXHJcbmltcG9ydCBDb2RlTWlycm9yRWRpdG9yTWV0aG9kc0Rpc3BsYXkgZnJvbSAnLi9Db2RlTWlycm9yRWRpdG9yTWV0aG9kc0Rpc3BsYXkuanMnXHJcbkNvZGVNaXJyb3JFZGl0b3JNZXRob2RzRGlzcGxheShDb2RlTWlycm9yRWRpdG9yKVxyXG5cclxuaW1wb3J0IENvZGVNaXJyb3JFZGl0b3JNZXRob2RzRmlsZSBmcm9tICcuL0NvZGVNaXJyb3JFZGl0b3JNZXRob2RzRmlsZS5qcydcclxuQ29kZU1pcnJvckVkaXRvck1ldGhvZHNGaWxlKENvZGVNaXJyb3JFZGl0b3IpXHJcblxyXG5cclxuZXhwb3J0IGRlZmF1bHQgQ29kZU1pcnJvckVkaXRvciIsImltcG9ydCBtb2QgZnJvbSBcIi0hLi4vLi4vLi4vbm9kZV9tb2R1bGVzL2JhYmVsLWxvYWRlci9saWIvaW5kZXguanM/P3JlZi0tNiEuL0NvZGVNaXJyb3JFZGl0b3IuanM/dnVlJnR5cGU9c2NyaXB0Jmxhbmc9anMmXCI7IGV4cG9ydCBkZWZhdWx0IG1vZDsgZXhwb3J0ICogZnJvbSBcIi0hLi4vLi4vLi4vbm9kZV9tb2R1bGVzL2JhYmVsLWxvYWRlci9saWIvaW5kZXguanM/P3JlZi0tNiEuL0NvZGVNaXJyb3JFZGl0b3IuanM/dnVlJnR5cGU9c2NyaXB0Jmxhbmc9anMmXCIiLCJpbXBvcnQgeyByZW5kZXIsIHN0YXRpY1JlbmRlckZucyB9IGZyb20gXCIuL0NvZGVNaXJyb3JFZGl0b3IuaHRtbD92dWUmdHlwZT10ZW1wbGF0ZSZpZD02Y2M2YzgyMiZzY29wZWQ9dHJ1ZSZcIlxuaW1wb3J0IHNjcmlwdCBmcm9tIFwiLi9Db2RlTWlycm9yRWRpdG9yLmpzP3Z1ZSZ0eXBlPXNjcmlwdCZsYW5nPWpzJlwiXG5leHBvcnQgKiBmcm9tIFwiLi9Db2RlTWlycm9yRWRpdG9yLmpzP3Z1ZSZ0eXBlPXNjcmlwdCZsYW5nPWpzJlwiXG5pbXBvcnQgc3R5bGUwIGZyb20gXCIuL0NvZGVNaXJyb3JFZGl0b3JHbG9iYWwubGVzcz92dWUmdHlwZT1zdHlsZSZpbmRleD0wJmxhbmc9bGVzcyZcIlxuaW1wb3J0IHN0eWxlMSBmcm9tIFwiLi9Db2RlTWlycm9yRWRpdG9yLmxlc3M/dnVlJnR5cGU9c3R5bGUmaW5kZXg9MSZpZD02Y2M2YzgyMiZsYW5nPWxlc3Mmc2NvcGVkPXRydWUmXCJcblxuXG4vKiBub3JtYWxpemUgY29tcG9uZW50ICovXG5pbXBvcnQgbm9ybWFsaXplciBmcm9tIFwiIS4uLy4uLy4uL25vZGVfbW9kdWxlcy92dWUtbG9hZGVyL2xpYi9ydW50aW1lL2NvbXBvbmVudE5vcm1hbGl6ZXIuanNcIlxudmFyIGNvbXBvbmVudCA9IG5vcm1hbGl6ZXIoXG4gIHNjcmlwdCxcbiAgcmVuZGVyLFxuICBzdGF0aWNSZW5kZXJGbnMsXG4gIGZhbHNlLFxuICBudWxsLFxuICBcIjZjYzZjODIyXCIsXG4gIG51bGxcbiAgXG4pXG5cbi8qIGN1c3RvbSBibG9ja3MgKi9cbmltcG9ydCBibG9jazAgZnJvbSBcIi4vQ29kZU1pcnJvckVkaXRvci55YW1sP3Z1ZSZ0eXBlPWN1c3RvbSZpbmRleD0wJmJsb2NrVHlwZT1pMThuJmlzc3VlclBhdGg9RCUzQSU1Q3hhbXBwJTVDaHRkb2NzJTVDcHJvamVjdHMtaHRtbDUlNUNQV0EtUGxhaW4tVGV4dC1FZGl0b3IlNUNzcmMlNUNjb21wb25lbnRzJTVDQ29kZU1pcnJvckVkaXRvciU1Q0NvZGVNaXJyb3JFZGl0b3IudnVlJmxhbmc9eWFtbFwiXG5pZiAodHlwZW9mIGJsb2NrMCA9PT0gJ2Z1bmN0aW9uJykgYmxvY2swKGNvbXBvbmVudClcblxuLyogaG90IHJlbG9hZCAqL1xuaWYgKG1vZHVsZS5ob3QpIHtcbiAgdmFyIGFwaSA9IHJlcXVpcmUoXCJEOlxcXFx4YW1wcFxcXFxodGRvY3NcXFxccHJvamVjdHMtaHRtbDVcXFxcUFdBLVBsYWluLVRleHQtRWRpdG9yXFxcXG5vZGVfbW9kdWxlc1xcXFx2dWUtaG90LXJlbG9hZC1hcGlcXFxcZGlzdFxcXFxpbmRleC5qc1wiKVxuICBhcGkuaW5zdGFsbChyZXF1aXJlKCd2dWUnKSlcbiAgaWYgKGFwaS5jb21wYXRpYmxlKSB7XG4gICAgbW9kdWxlLmhvdC5hY2NlcHQoKVxuICAgIGlmICghYXBpLmlzUmVjb3JkZWQoJzZjYzZjODIyJykpIHtcbiAgICAgIGFwaS5jcmVhdGVSZWNvcmQoJzZjYzZjODIyJywgY29tcG9uZW50Lm9wdGlvbnMpXG4gICAgfSBlbHNlIHtcbiAgICAgIGFwaS5yZWxvYWQoJzZjYzZjODIyJywgY29tcG9uZW50Lm9wdGlvbnMpXG4gICAgfVxuICAgIG1vZHVsZS5ob3QuYWNjZXB0KFwiLi9Db2RlTWlycm9yRWRpdG9yLmh0bWw/dnVlJnR5cGU9dGVtcGxhdGUmaWQ9NmNjNmM4MjImc2NvcGVkPXRydWUmXCIsIGZ1bmN0aW9uICgpIHtcbiAgICAgIGFwaS5yZXJlbmRlcignNmNjNmM4MjInLCB7XG4gICAgICAgIHJlbmRlcjogcmVuZGVyLFxuICAgICAgICBzdGF0aWNSZW5kZXJGbnM6IHN0YXRpY1JlbmRlckZuc1xuICAgICAgfSlcbiAgICB9KVxuICB9XG59XG5jb21wb25lbnQub3B0aW9ucy5fX2ZpbGUgPSBcInNyYy9jb21wb25lbnRzL0NvZGVNaXJyb3JFZGl0b3IvQ29kZU1pcnJvckVkaXRvci52dWVcIlxuZXhwb3J0IGRlZmF1bHQgY29tcG9uZW50LmV4cG9ydHMiXSwibWFwcGluZ3MiOiI7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQzNEQTtBQUNBO0FBRUE7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBR0E7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBSUE7O0FDakZBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBSEE7QUFUQTtBQWVBO0FBQ0E7Ozs7Ozs7Ozs7QUNuQkE7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUFBO0FBTUE7QUFDQTtBQUlBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBR0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQTFDQTtBQTZDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFGQTtBQUlBO0FBQ0E7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBREE7QUFHQTtBQUNBO0FBQ0E7QUFGQTtBQXJCQTtBQTJCQTs7Ozs7Ozs7QUMxRUE7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBR0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFHQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUFBO0FBQ0E7QUE1RUE7QUE4RUE7Ozs7QUNqRkE7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFDQTtBQURBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQ0E7QUFEQTtBQVdBO0FBQ0E7QUFDQTtBQWJBO0FBQUE7QUFDQTtBQURBO0FBZUE7QUFDQTtBQUNBO0FBQ0E7QUFsQkE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQXFCQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFDQTtBQURBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQ0E7QUFEQTtBQVVBO0FBQ0E7QUFYQTtBQUFBO0FBQ0E7QUFEQTtBQWFBO0FBQ0E7QUFDQTtBQWZBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUExQ0E7QUEyREE7O0FDOURBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFNQTtBQUNBO0FBSUE7QUFDQTtBQUdBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFJQTtBQUNBO0FBQ0E7QUFDQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUNBOzs7O0FDaERBO0FBQ0E7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFDQTtBQURBO0FBUUE7QUFDQTtBQVRBO0FBQUE7QUFDQTtBQURBO0FBV0E7QUFDQTtBQUNBO0FBYkE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQWFBO0FBQ0E7QUFDQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7Ozs7Ozs7Ozs7O0FDdkJBO0FBRUE7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUdBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUdBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQ3JGQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFQQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFPQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFBQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFJQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBR0E7QUFDQTtBQUVBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFFQTtBQUdBO0FBQ0E7QUFDQTtBQUNBO0FBRkE7QUFJQTtBQUNBO0FBQ0E7QUFGQTtBQUtBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7O0FDbkhBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUpBO0FBTUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUlBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFWQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBY0E7QUFDQTtBQUNBO0FBREE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFEQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFJQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBSUE7QUFFQTtBQUNBO0FBQ0E7QUFsQkE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQW9CQTtBQUNBO0FBQ0E7QUFEQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFHQTtBQUNBO0FBTEE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQVVBO0FBQ0E7QUFDQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFDQTtBQURBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQ0E7QUFEQTtBQVNBO0FBQ0E7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUxBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBaUJBO0FBQ0E7QUFsQkE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQ0E7QUFEQTtBQXlCQTtBQUdBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUEvQkE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBWEE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFBQTtBQUFBO0FBZ0RBOzs7O0FDak9BO0FBQ0E7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUNBO0FBREE7QUFLQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQWxCQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQW9CQTs7Ozs7O0FDckJBO0FBRUE7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFFQTs7Ozs7QUNsQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQURBO0FBR0E7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQVhBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUFZQTtBQUFBO0FBQ0E7QUFBQTtBQUNBO0FBRUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQ0E7QUFEQTtBQVNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBaEJBO0FBQUE7QUFDQTtBQURBO0FBa0JBO0FBQ0E7QUFuQkE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUNBO0FBREE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQTBCQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBRUE7QUFFQTtBQUNBO0FBeENBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFEQTtBQUFBO0FBQUE7QUFDQTtBQURBO0FBQUE7QUEwQ0E7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQWpEQTtBQXBCQTtBQXlFQTtBQUNBO0FBRUE7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUdBO0FBQ0E7QUFFQTtBQUNBO0FBRUE7QUFDQTtBQUVBO0FBQ0E7QUFFQTtBQUNBO0FBRUE7QUFDQTtBQUVBO0FBQ0E7QUFHQTs7QUM5R0E7Ozs7Ozs7Ozs7Ozs7O0FDQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSx1QkFpQkE7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///288\n")},89:function(module,exports){eval('module.exports = function (Component) {\n  Component.options.__i18n = Component.options.__i18n || []\n  Component.options.__i18n.push(\'{"en":{"TEST_MESSAGE":"Test Message"},"zh-TW":{"TEST_MESSAGE":"測試訊息"}}\')\n  delete Component.options._Ctor\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiODkuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9Db2RlTWlycm9yRWRpdG9yL0NvZGVNaXJyb3JFZGl0b3IueWFtbD81YjBkIl0sInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gZnVuY3Rpb24gKENvbXBvbmVudCkge1xuICBDb21wb25lbnQub3B0aW9ucy5fX2kxOG4gPSBDb21wb25lbnQub3B0aW9ucy5fX2kxOG4gfHwgW11cbiAgQ29tcG9uZW50Lm9wdGlvbnMuX19pMThuLnB1c2goJ3tcImVuXCI6e1wiVEVTVF9NRVNTQUdFXCI6XCJUZXN0IE1lc3NhZ2VcIn0sXCJ6aC1UV1wiOntcIlRFU1RfTUVTU0FHRVwiOlwi5ris6Kmm6KiK5oGvXCJ9fScpXG4gIGRlbGV0ZSBDb21wb25lbnQub3B0aW9ucy5fQ3RvclxufVxuIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOyIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///89\n')}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendors/CodeMirror"],{
+
+/***/ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/CodeMirrorEditor/CodeMirrorEditor.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CCodeMirrorEditor%5CCodeMirrorEditor.vue&lang=yaml":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@kazupon/vue-i18n-loader/lib!./src/components/CodeMirrorEditor/CodeMirrorEditor.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CCodeMirrorEditor%5CCodeMirrorEditor.vue&lang=yaml ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function (Component) {
+  Component.options.__i18n = Component.options.__i18n || []
+  Component.options.__i18n.push('{"en":{"TEST_MESSAGE":"Test Message"},"zh-TW":{"TEST_MESSAGE":"測試訊息"}}')
+  delete Component.options._Ctor
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/CodeMirrorEditor/CodeMirrorEditor.less?vue&type=style&index=1&id=6cc6c822&lang=less&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--1-2!./src/components/CodeMirrorEditor/CodeMirrorEditor.less?vue&type=style&index=1&id=6cc6c822&lang=less&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(true);
+// Module
+exports.push([module.i, ".code-mirror-wrapper[data-v-6cc6c822] {\n  opacity: 0;\n  transition: opacity 0.5s;\n}\n.code-mirror-wrapper.inited[data-v-6cc6c822] {\n  opacity: 1;\n}\n.code-mirror-wrapper.text-wrap-disabled[data-v-6cc6c822]  .CodeMirror-hscrollbar {\n  display: none;\n}\ntextarea.editor[data-v-6cc6c822] {\n  display: none;\n  height: 100vh !important;\n  width: 100% !important;\n  width: 100vw;\n  height: 100vh;\n  line-height: 2.3rem;\n  font-size: 1.5rem;\n  padding: 0.5rem;\n  border: none;\n  overflow: auto;\n  outline: none;\n  -webkit-box-shadow: none;\n  -moz-box-shadow: none;\n  box-shadow: none;\n  resize: none;\n  /*remove the resize handle on the bottom right*/\n}\ntextarea.editor.disable-wrap[data-v-6cc6c822] {\n  white-space: nowrap;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/PWA-Plain-Text-Editor/src/components/CodeMirrorEditor/CodeMirrorEditor.less?vue&type=style&index=1&id=6cc6c822&lang=less&scoped=true&","CodeMirrorEditor.less"],"names":[],"mappings":"AAAA;EACE,UAAA;EACA,wBAAA;ACCF;ADCE;EACE,UAAA;ACCJ;ADEE;EACE,aAAA;ACAJ;ADIA;EACE,aAAA;EAEA,wBAAA;EACA,sBAAA;EAEA,YAAA;EACA,aAAA;EAEA,mBAAA;EACA,iBAAA;EACA,eAAA;EAEA,YAAA;EACA,cAAA;EACA,aAAA;EAEA,wBAAA;EACA,qBAAA;EACA,gBAAA;EAEA,YAAA;ECRA,+CAA+C;AACjD;ADSE;EACE,mBAAA;ACPJ","file":"CodeMirrorEditor.less","sourcesContent":[".code-mirror-wrapper {\n  opacity: 0;\n  transition: opacity 0.5s;\n  \n  &.inited {\n    opacity: 1;\n  }\n  \n  &.text-wrap-disabled ::v-deep .CodeMirror-hscrollbar {\n    display: none;\n  }\n}\n\ntextarea.editor {\n  display: none;\n  \n  height: 100vh !important;\n  width: 100% !important;\n  \n  width: 100vw;\n  height: 100vh;\n\n  line-height: 2.3rem;\n  font-size: 1.5rem;\n  padding: 0.5rem;\n\n  border: none;\n  overflow: auto;\n  outline: none;\n\n  -webkit-box-shadow: none;\n  -moz-box-shadow: none;\n  box-shadow: none;\n\n  resize: none; /*remove the resize handle on the bottom right*/\n\n  &.disable-wrap {\n    white-space: nowrap;\n  }\n}",".code-mirror-wrapper {\n  opacity: 0;\n  transition: opacity 0.5s;\n}\n.code-mirror-wrapper.inited {\n  opacity: 1;\n}\n.code-mirror-wrapper.text-wrap-disabled ::v-deep .CodeMirror-hscrollbar {\n  display: none;\n}\ntextarea.editor {\n  display: none;\n  height: 100vh !important;\n  width: 100% !important;\n  width: 100vw;\n  height: 100vh;\n  line-height: 2.3rem;\n  font-size: 1.5rem;\n  padding: 0.5rem;\n  border: none;\n  overflow: auto;\n  outline: none;\n  -webkit-box-shadow: none;\n  -moz-box-shadow: none;\n  box-shadow: none;\n  resize: none;\n  /*remove the resize handle on the bottom right*/\n}\ntextarea.editor.disable-wrap {\n  white-space: nowrap;\n}\n"]}]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/CodeMirrorEditor/CodeMirrorEditorGlobal.less?vue&type=style&index=0&lang=less&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--1-2!./src/components/CodeMirrorEditor/CodeMirrorEditorGlobal.less?vue&type=style&index=0&lang=less& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(true);
+// Module
+exports.push([module.i, ".CodeMirror {\n  font-family: 'Roboto', sans-serif !important;\n  font-size: 1.5rem;\n  line-height: 2rem;\n}\n.CodeMirror .highlight {\n  background-color: rgba(255, 255, 0, 0.5);\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/PWA-Plain-Text-Editor/src/components/CodeMirrorEditor/CodeMirrorEditorGlobal.less?vue&type=style&index=0&lang=less&","CodeMirrorEditorGlobal.less"],"names":[],"mappings":"AAAA;EAEE,4CAAA;EAEA,iBAAA;EACA,iBAAA;ACDF;ADJA;EAiBI,wCAAA;ACVJ","file":"CodeMirrorEditorGlobal.less","sourcesContent":[".CodeMirror {\n  //font-family: Arial, monospace;\n  font-family: 'Roboto', sans-serif !important;\n  \n  font-size: 1.5rem;\n  line-height: 2rem;\n  \n  //height: 100vh !important;\n  \n  &.display-replace-panel {\n    //height: calc(100vh - @ReplacePanelHeight) !important;\n  }\n  \n  \n  .highlight {\n    //background-color: yellow;\n    //border: 1px solid yellow;\n    background-color: rgba(255,255,0, 0.5);\n  }\n}\n",".CodeMirror {\n  font-family: 'Roboto', sans-serif !important;\n  font-size: 1.5rem;\n  line-height: 2rem;\n}\n.CodeMirror .highlight {\n  background-color: rgba(255, 255, 0, 0.5);\n}\n"]}]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./src/components/CodeMirrorEditor/CodeMirrorEditor.html?vue&type=template&id=6cc6c822&scoped=true&":
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./src/components/CodeMirrorEditor/CodeMirrorEditor.html?vue&type=template&id=6cc6c822&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass: "code-mirror-wrapper",
+      class: _vm.computedCodeMirrorWrapperClassNameList
+    },
+    [
+      _vm.simpleMode
+        ? _c("textarea", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.localConfig.textContent,
+                expression: "localConfig.textContent"
+              }
+            ],
+            ref: "MainTextarea",
+            staticClass: "editor",
+            domProps: { value: _vm.localConfig.textContent },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.localConfig, "textContent", $event.target.value)
+              }
+            }
+          })
+        : _vm._e(),
+      _vm._v(" "),
+      !_vm.simpleMode
+        ? _c("codemirror", {
+            ref: "cmEditor",
+            attrs: { options: _vm.computedCodeMirrorOptions },
+            on: {
+              inputRead: _vm.onCodeMirrorKeyHandled,
+              cursorActivity: _vm.onCodeMirrorCursorActivity,
+              viewportChange: _vm.onCodeMirrorCursorActivity
+            },
+            model: {
+              value: _vm.code,
+              callback: function($$v) {
+                _vm.code = $$v
+              },
+              expression: "code"
+            }
+          })
+        : _vm._e()
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/CodeMirrorEditor/CodeMirrorEditor.less?vue&type=style&index=1&id=6cc6c822&lang=less&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--1-2!./src/components/CodeMirrorEditor/CodeMirrorEditor.less?vue&type=style&index=1&id=6cc6c822&lang=less&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/less-loader/dist/cjs.js??ref--1-2!./CodeMirrorEditor.less?vue&type=style&index=1&id=6cc6c822&lang=less&scoped=true& */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/CodeMirrorEditor/CodeMirrorEditor.less?vue&type=style&index=1&id=6cc6c822&lang=less&scoped=true&");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! ../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("472ab2e9", content, false, {});
+// Hot Module Replacement
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/CodeMirrorEditor/CodeMirrorEditorGlobal.less?vue&type=style&index=0&lang=less&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js??ref--1-2!./src/components/CodeMirrorEditor/CodeMirrorEditorGlobal.less?vue&type=style&index=0&lang=less& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/less-loader/dist/cjs.js??ref--1-2!./CodeMirrorEditorGlobal.less?vue&type=style&index=0&lang=less& */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/CodeMirrorEditor/CodeMirrorEditorGlobal.less?vue&type=style&index=0&lang=less&");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! ../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("0608574a", content, false, {});
+// Hot Module Replacement
+if(false) {}
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/CodeMirrorEditor.html?vue&type=template&id=6cc6c822&scoped=true&":
+/*!**********************************************************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/CodeMirrorEditor.html?vue&type=template&id=6cc6c822&scoped=true& ***!
+  \**********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_CodeMirrorEditor_html_vue_type_template_id_6cc6c822_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./CodeMirrorEditor.html?vue&type=template&id=6cc6c822&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./src/components/CodeMirrorEditor/CodeMirrorEditor.html?vue&type=template&id=6cc6c822&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_CodeMirrorEditor_html_vue_type_template_id_6cc6c822_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_CodeMirrorEditor_html_vue_type_template_id_6cc6c822_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/CodeMirrorEditor.js?vue&type=script&lang=js&?bb59":
+/*!**************************************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/CodeMirrorEditor.js?vue&type=script&lang=js& ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _vendors_codemirror_webpack_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./vendors/codemirror.webpack.js */ "./src/components/CodeMirrorEditor/vendors/codemirror.webpack.js");
+/* harmony import */ var _CodeMirrorEditorData_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CodeMirrorEditorData.js */ "./src/components/CodeMirrorEditor/CodeMirrorEditorData.js");
+/* harmony import */ var _CodeMirrorEditorComputed_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CodeMirrorEditorComputed.js */ "./src/components/CodeMirrorEditor/CodeMirrorEditorComputed.js");
+/* harmony import */ var _CodeMirrorEditorWatch_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./CodeMirrorEditorWatch.js */ "./src/components/CodeMirrorEditor/CodeMirrorEditorWatch.js");
+/* harmony import */ var _CodeMirrorEditorMethodsOption_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CodeMirrorEditorMethodsOption.js */ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsOption.js");
+/* harmony import */ var _CodeMirrorEditorMethodsChange_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./CodeMirrorEditorMethodsChange.js */ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsChange.js");
+/* harmony import */ var _CodeMirrorEditorMethodsFormat_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./CodeMirrorEditorMethodsFormat.js */ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsFormat.js");
+/* harmony import */ var _CodeMirrorEditorMethodsCursor_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./CodeMirrorEditorMethodsCursor.js */ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsCursor.js");
+/* harmony import */ var _CodeMirrorEditorMethodsFind_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./CodeMirrorEditorMethodsFind.js */ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsFind.js");
+/* harmony import */ var _CodeMirrorEditorMethodsDisplay_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./CodeMirrorEditorMethodsDisplay.js */ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsDisplay.js");
+/* harmony import */ var _CodeMirrorEditorMethodsFile_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./CodeMirrorEditorMethodsFile.js */ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsFile.js");
+/* global CodeMirror, PULI_UTILS */
+
+
+
+let CodeMirrorEditor = {
+  props: ['config', 'localConfig', 'utils'],
+  data: null,
+  components: {
+    codemirror: _vendors_codemirror_webpack_js__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  mounted: async function () {
+//    //console.log(this.inited)
+//    //await this.initCodeMirror()
+//    //await this.onConfigInited()
+//    //console.log(this.inited)
+//    //this.testSearch1211()
+//    //this.testSetValue1211()
+//    //this.testSearch1213()
+    if (this.config.inited === true) {
+      this.onConfigInited()
+    } 
+  },
+  watch: {}, // 移動到 CodeMirrorEditorWatch
+  computed: {}, // 移動到 CodeMirrorEditorComputed.js
+  methods: {
+    
+    onConfigInited: async function () {
+      //console.log('onConfigInited', 1)
+      
+      //console.log(this.config.inited)
+      if (this.config.inited === false
+              || this.simpleMode === true) {
+        return false
+      }
+      
+      //console.log('onConfigInited', 2)
+      //await this.utils.AsyncUtils.sleep(1000)
+      //console.log('javascript')
+      //this.codemirror.setOption("mode", 'html')
+      
+      //await this.utils.AsyncUtils.sleep(100)
+      this.changeLock = true
+      this.code = this.localConfig.textContent
+      await this.utils.AsyncUtils.sleep(0)
+      this.changeLock = false
+      
+      //console.log('onConfigInited', 3)
+      
+      while (!this.$refs.cmEditor || !this.$refs.cmEditor.$el) {
+        await this.utils.AsyncUtils.sleep()
+      }
+      
+      //console.log('onConfigInited', 4)
+      
+      //console.log('go', this.localConfig.stringToSearch)
+      this.highlightText(this.localConfig.stringToSearch)
+      this.resizeHeight()
+      //console.log(this.markers.length)
+      
+      this.updateDocumentTitle()
+      this.restoreCursorPosition()
+      
+      //console.log('onConfigInited', 5)
+      this.setFontSize()
+      
+      this.inited = true
+    },
+    
+    onCodeMirrorKeyHandled (e, s) {
+      //console.log(e, s)
+      //this.$refs.cmEditor.codemirror.execCommand('autocomplete')
+      this.$refs.cmEditor.codemirror.showHint()
+      
+    }
+  }
+}
+
+
+Object(_CodeMirrorEditorData_js__WEBPACK_IMPORTED_MODULE_2__["default"])(CodeMirrorEditor)
+
+
+Object(_CodeMirrorEditorComputed_js__WEBPACK_IMPORTED_MODULE_3__["default"])(CodeMirrorEditor)
+
+
+Object(_CodeMirrorEditorWatch_js__WEBPACK_IMPORTED_MODULE_4__["default"])(CodeMirrorEditor)
+
+// -------------------
+
+
+Object(_CodeMirrorEditorMethodsOption_js__WEBPACK_IMPORTED_MODULE_5__["default"])(CodeMirrorEditor)
+
+
+Object(_CodeMirrorEditorMethodsChange_js__WEBPACK_IMPORTED_MODULE_6__["default"])(CodeMirrorEditor)
+
+
+Object(_CodeMirrorEditorMethodsFormat_js__WEBPACK_IMPORTED_MODULE_7__["default"])(CodeMirrorEditor)
+
+
+Object(_CodeMirrorEditorMethodsCursor_js__WEBPACK_IMPORTED_MODULE_8__["default"])(CodeMirrorEditor)
+
+
+Object(_CodeMirrorEditorMethodsFind_js__WEBPACK_IMPORTED_MODULE_9__["default"])(CodeMirrorEditor)
+
+
+Object(_CodeMirrorEditorMethodsDisplay_js__WEBPACK_IMPORTED_MODULE_10__["default"])(CodeMirrorEditor)
+
+
+Object(_CodeMirrorEditorMethodsFile_js__WEBPACK_IMPORTED_MODULE_11__["default"])(CodeMirrorEditor)
+
+
+/* harmony default export */ __webpack_exports__["default"] = (CodeMirrorEditor);
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/CodeMirrorEditor.js?vue&type=script&lang=js&?d1a8":
+/*!**************************************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/CodeMirrorEditor.js?vue&type=script&lang=js& ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CodeMirrorEditor_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./CodeMirrorEditor.js?vue&type=script&lang=js& */ "./src/components/CodeMirrorEditor/CodeMirrorEditor.js?vue&type=script&lang=js&?bb59");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_CodeMirrorEditor_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/CodeMirrorEditor.less?vue&type=style&index=1&id=6cc6c822&lang=less&scoped=true&":
+/*!*************************************************************************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/CodeMirrorEditor.less?vue&type=style&index=1&id=6cc6c822&lang=less&scoped=true& ***!
+  \*************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_CodeMirrorEditor_less_vue_type_style_index_1_id_6cc6c822_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-style-loader!../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/less-loader/dist/cjs.js??ref--1-2!./CodeMirrorEditor.less?vue&type=style&index=1&id=6cc6c822&lang=less&scoped=true& */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/CodeMirrorEditor/CodeMirrorEditor.less?vue&type=style&index=1&id=6cc6c822&lang=less&scoped=true&");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_CodeMirrorEditor_less_vue_type_style_index_1_id_6cc6c822_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_CodeMirrorEditor_less_vue_type_style_index_1_id_6cc6c822_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_CodeMirrorEditor_less_vue_type_style_index_1_id_6cc6c822_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_CodeMirrorEditor_less_vue_type_style_index_1_id_6cc6c822_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/CodeMirrorEditor.vue":
+/*!**************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/CodeMirrorEditor.vue ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CodeMirrorEditor_html_vue_type_template_id_6cc6c822_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CodeMirrorEditor.html?vue&type=template&id=6cc6c822&scoped=true& */ "./src/components/CodeMirrorEditor/CodeMirrorEditor.html?vue&type=template&id=6cc6c822&scoped=true&");
+/* harmony import */ var _CodeMirrorEditor_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CodeMirrorEditor.js?vue&type=script&lang=js& */ "./src/components/CodeMirrorEditor/CodeMirrorEditor.js?vue&type=script&lang=js&?d1a8");
+/* empty/unused harmony star reexport *//* harmony import */ var _CodeMirrorEditorGlobal_less_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CodeMirrorEditorGlobal.less?vue&type=style&index=0&lang=less& */ "./src/components/CodeMirrorEditor/CodeMirrorEditorGlobal.less?vue&type=style&index=0&lang=less&");
+/* harmony import */ var _CodeMirrorEditor_less_vue_type_style_index_1_id_6cc6c822_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CodeMirrorEditor.less?vue&type=style&index=1&id=6cc6c822&lang=less&scoped=true& */ "./src/components/CodeMirrorEditor/CodeMirrorEditor.less?vue&type=style&index=1&id=6cc6c822&lang=less&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _CodeMirrorEditor_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CCodeMirrorEditor_5CCodeMirrorEditor_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CodeMirrorEditor.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CCodeMirrorEditor%5CCodeMirrorEditor.vue&lang=yaml */ "./src/components/CodeMirrorEditor/CodeMirrorEditor.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CCodeMirrorEditor%5CCodeMirrorEditor.vue&lang=yaml");
+
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__["default"])(
+  _CodeMirrorEditor_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CodeMirrorEditor_html_vue_type_template_id_6cc6c822_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CodeMirrorEditor_html_vue_type_template_id_6cc6c822_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "6cc6c822",
+  null
+  
+)
+
+/* custom blocks */
+
+if (typeof _CodeMirrorEditor_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CCodeMirrorEditor_5CCodeMirrorEditor_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_5__["default"] === 'function') Object(_CodeMirrorEditor_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CCodeMirrorEditor_5CCodeMirrorEditor_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_5__["default"])(component)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "src/components/CodeMirrorEditor/CodeMirrorEditor.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/CodeMirrorEditor.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CCodeMirrorEditor%5CCodeMirrorEditor.vue&lang=yaml":
+/*!*******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/CodeMirrorEditor.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CCodeMirrorEditor%5CCodeMirrorEditor.vue&lang=yaml ***!
+  \*******************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_CodeMirrorEditor_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CCodeMirrorEditor_5CCodeMirrorEditor_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/@kazupon/vue-i18n-loader/lib!./CodeMirrorEditor.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CCodeMirrorEditor%5CCodeMirrorEditor.vue&lang=yaml */ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/CodeMirrorEditor/CodeMirrorEditor.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=D%3A%5Cxampp%5Chtdocs%5Cprojects-html5%5CPWA-Plain-Text-Editor%5Csrc%5Ccomponents%5CCodeMirrorEditor%5CCodeMirrorEditor.vue&lang=yaml");
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_CodeMirrorEditor_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CCodeMirrorEditor_5CCodeMirrorEditor_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_CodeMirrorEditor_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CCodeMirrorEditor_5CCodeMirrorEditor_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_CodeMirrorEditor_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CCodeMirrorEditor_5CCodeMirrorEditor_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_CodeMirrorEditor_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CCodeMirrorEditor_5CCodeMirrorEditor_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_CodeMirrorEditor_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_D_3A_5Cxampp_5Chtdocs_5Cprojects_html5_5CPWA_Plain_Text_Editor_5Csrc_5Ccomponents_5CCodeMirrorEditor_5CCodeMirrorEditor_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/CodeMirrorEditorComputed.js":
+/*!*********************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/CodeMirrorEditorComputed.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _vendors_codemirror_config_webpack_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./vendors/codemirror.config.webpack.js */ "./src/components/CodeMirrorEditor/vendors/codemirror.config.webpack.js");
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (CodeMirrorEditor) {
+  CodeMirrorEditor.computed = {
+//    editor () {
+//      return this.$refs.cmEditor
+//    },
+    computedCodeMirrorOptions() {
+
+      let options = {
+        ..._vendors_codemirror_config_webpack_js__WEBPACK_IMPORTED_MODULE_1__["default"]
+      }
+      
+      options.mode.name = this.localConfig.syntax
+
+      options.extraKeys['Ctrl-Alt-F'] = (cm) => {
+        this.autoFormat(cm)
+      }
+      
+      options.extraKeys['Tab'] = (cm) => {
+        this.inputTab(cm)
+      }
+      
+      options.extraKeys['Ctrl-S'] = (cm) => {
+        this.saveFile(cm)
+      }
+      
+      options.lineWrapping = this.localConfig.lineWrapping
+
+      //console.log(options)
+
+      return options
+    },
+    editor$el() {
+      //console.log(this.$refs.cmEditor.$el)
+      if (!this.$refs.cmEditor) {
+        return undefined
+      }
+
+      return jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.$refs.cmEditor.$el).find('.CodeMirror:first')
+    },
+    editorScroll$el () {
+      //console.log(this.$refs.cmEditor.$el)
+      if (!this.$refs.cmEditor) {
+        return undefined
+      }
+
+      return jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.$refs.cmEditor.$el).find('.CodeMirror:first .CodeMirror-scroll:first')
+    },
+    codemirror() {
+      if (!this.$refs.cmEditor) {
+        return undefined
+      }
+      return this.$refs.cmEditor.codemirror
+    },
+    
+    computedCodeMirrorWrapperClassNameList () {
+      let list = []
+      
+      if (this.inited === true) {
+        list.push('inited')
+      }
+      
+      if (this.localConfig.lineWrapping === false) {
+        list.push('text-wrap-disabled')
+      }
+      
+      return list.join(' ')
+    },
+    computedIndentSpaces () {
+      if (this.localConfig.indent.mode === 'tab') {
+        return '\t'
+      }
+      
+      let spaces = []
+      for (let i = 0; i < this.localConfig.indent.size; i++) {
+        spaces.push(' ')
+      }
+      return spaces.join('')
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/CodeMirrorEditorData.js":
+/*!*****************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/CodeMirrorEditorData.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (CodeMirrorEditor) {
+  CodeMirrorEditor.data = function () {
+    this.$i18n.locale = this.config.locale
+    return {
+      inited: false,
+      simpleMode: false,
+      //editor: null,
+      //editor$el: null,
+      markers: [],
+      code: '',
+      highlightClassName: 'highlight',
+      changeLock: false,
+      cursorPositionSaved: {
+        from: {line: null, ch: null},
+        to: {line: null, ch: null},
+        scrollTop: null
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/CodeMirrorEditorGlobal.less?vue&type=style&index=0&lang=less&":
+/*!*******************************************************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/CodeMirrorEditorGlobal.less?vue&type=style&index=0&lang=less& ***!
+  \*******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_CodeMirrorEditorGlobal_less_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-style-loader!../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/less-loader/dist/cjs.js??ref--1-2!./CodeMirrorEditorGlobal.less?vue&type=style&index=0&lang=less& */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/CodeMirrorEditor/CodeMirrorEditorGlobal.less?vue&type=style&index=0&lang=less&");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_CodeMirrorEditorGlobal_less_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_CodeMirrorEditorGlobal_less_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_CodeMirrorEditorGlobal_less_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_sourceMap_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_ref_1_2_CodeMirrorEditorGlobal_less_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsChange.js":
+/*!**************************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsChange.js ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (CodeMirrorEditor) {
+    
+  CodeMirrorEditor.methods.onEditorChange = async function () {
+    if (this.simpleMode === true) {
+      return false
+    }
+
+    if (this.setValueLock === true) {
+      return false
+    }
+    this.setValueLock = true
+    this.localConfig.textContent = this.codemirror.getValue()
+    await this.utils.AsyncUtils.sleep(0)
+    this.highlightText()
+    this.setValueLock = false
+  }
+  
+  CodeMirrorEditor.methods.updateDocumentTitle = function () {
+    if (this.localConfig.filename) {
+      return this.localConfig.filename
+    }
+    
+    let textContentTrim = this.$parent.textContentTrim
+    if (textContentTrim === '') {
+      document.title = 'Plain Text Editor'
+    } else {
+      document.title = textContentTrim
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsCursor.js":
+/*!**************************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsCursor.js ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (CodeMirrorEditor) {
+  CodeMirrorEditor.methods.onCodeMirrorCursorActivity = function () {
+    this.saveCursorPosition()
+  }
+    
+  CodeMirrorEditor.methods.jumpToLine = function (i, from = 0) {
+    if (this.simpleMode === true) {
+      return false
+    }
+
+
+    this.codemirror.focus()
+    var t = this.codemirror.charCoords({line: i, ch: 0}, "local").top;
+    var middleHeight = this.codemirror.getScrollerElement().offsetHeight / 2;
+    this.codemirror.scrollTo(null, t - middleHeight - 5)
+
+    //if (!to) {
+    this.codemirror.doc.setCursor(i - 1, from)
+    //if (to) {
+    //  this.codemirror.setSelection({line: 0, ch: 3}, {line: 0, ch: 9})
+    //}
+    //}
+    //else {
+    //  this.codemirror.doc.setSelection(i - 1, from)
+    //}
+  }
+  CodeMirrorEditor.methods.jumpToMarker = function (marker) {
+    if (this.simpleMode === true) {
+      return false
+    }
+
+
+    this.codemirror.focus()
+    let {fromLine, fromCh, toLine, toCh} = this.getMarkerPos(marker)
+    this.codemirror.setSelection({line: fromLine - 1, ch: fromCh}, {line: toLine - 1, ch: toCh})
+  }
+  CodeMirrorEditor.methods.getCursor = function (position) {
+    if (this.simpleMode === true
+            || this.config.inited === false) {
+      return false
+    }
+
+    return this.codemirror.getCursor(position)
+  }
+   
+  let cursorPositionKey = 'codemirror.cursor.position'
+  //let viewportKey = 'codemirror.viewport.position'
+  CodeMirrorEditor.methods.saveCursorPosition = function () {
+    if (this.simpleMode === true
+            || this.config.inited === false
+            || this.inited === false
+            || this.changeLock === true) {
+      return false
+    }
+
+    let fromCursor = this.getCursor(true)
+    this.cursorPositionSaved.from.line = fromCursor.line
+    this.cursorPositionSaved.from.ch = fromCursor.ch
+
+    let toCursor = this.getCursor(false)
+    this.cursorPositionSaved.to.line = toCursor.line
+    this.cursorPositionSaved.to.ch = toCursor.ch
+    
+    this.cursorPositionSaved.scrollTop = this.editorScroll$el.scrollTop()
+    
+    //console.log(this.editor$el.scrollTop)
+    
+    let saved = JSON.stringify(this.cursorPositionSaved)
+    localStorage.setItem(cursorPositionKey, saved)
+    //console.log('saveCursorPosition')
+  }
+  CodeMirrorEditor.methods.restoreCursorPosition = function () {
+    //console.log('restoreCursorPosition', this.config.inited, this.cursorPositionSaved.from)
+    if (this.simpleMode === true
+            || this.config.inited === false) {
+      return false
+    }
+
+    
+    if (this.cursorPositionSaved.from.line === null) {
+      let saved = localStorage.getItem(cursorPositionKey)
+      this.cursorPositionSaved = JSON.parse(saved)
+      //console.log(saved)
+    }
+
+    if (this.cursorPositionSaved.from.line === this.cursorPositionSaved.to.line
+            && this.cursorPositionSaved.from.ch === this.cursorPositionSaved.to.ch) {
+      this.jumpToLine(this.cursorPositionSaved.from.line + 1, this.cursorPositionSaved.from.ch)
+
+      //console.log('restoreCursor cursor')
+    } else {
+      let from = {
+        line: this.cursorPositionSaved.from.line,
+        ch: this.cursorPositionSaved.from.ch
+      }
+      let to = {
+                line: this.cursorPositionSaved.to.line,
+                ch: this.cursorPositionSaved.to.ch
+              }
+      
+      this.codemirror.setSelection(from, to)
+      //console.log('restoreCursor selection')
+    }
+
+    if (this.editorScroll$el) {
+      this.editorScroll$el.scrollTop(this.cursorPositionSaved.scrollTop)
+    }
+  }
+  CodeMirrorEditor.methods.getSelectedText = function () {
+    if (this.simpleMode === true) {
+      return false
+    }
+
+    return this.codemirror.getSelection()
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsDisplay.js":
+/*!***************************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsDisplay.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (CodeMirrorEditor) {
+  CodeMirrorEditor.methods.resizeHeight = async function () {
+    if (this.config.inited === false) {
+      return false
+    }
+
+    /*
+     let className = 'display-replace-panel'
+     if (this.localConfig.displayReplacePanel === true) {
+     this.codemirror$el.addClass(className)
+     }
+     else {
+     this.codemirror$el.removeClass(className)
+     }
+     */
+
+    //console.log(this.codemirror$el, this.codemirror$el.css)
+    this.editor$el.css('height', `calc(100vh - ${this.config.panelHeight})`)
+    this.editor$el.css('max-height', `calc(100vh - ${this.config.panelHeight})`)
+    //console.log('設定好了', `calc(100vh - ${this.config.panelHeight})`)
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsFile.js":
+/*!************************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsFile.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js");
+/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (CodeMirrorEditor) {
+  CodeMirrorEditor.methods.saveFile = function () {
+    let filename = this.getFilename()
+    
+    this.utils.FileUtils.download(filename, this.code)
+  }
+  
+  CodeMirrorEditor.methods.getFilename = function () {
+    let mode = this.getMode(false)
+    
+    let ext = 'txt'
+    if (mode.indexOf('/') > -1) {
+      ext = mode.slice(mode.lastIndexOf('/') + 1)
+      
+      if (ext.indexOf('-') > -1) {
+        ext = ext.slice(ext.lastIndexOf('-') + 1)
+      }
+    }
+    else {
+      ext = mode
+    }
+    
+    if (ext === 'javascript') {
+      ext = 'js'
+    }
+    else if (ext === 'rsrc') {
+      ext = 'R'
+    }
+    
+    return dayjs__WEBPACK_IMPORTED_MODULE_0___default()().format('MMDD-hhmmss') + '.' + ext
+  }
+  
+});
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsFind.js":
+/*!************************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsFind.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (CodeMirrorEditor) {
+  CodeMirrorEditor.methods.getMarkerPos = function (marker) {
+    if (this.simpleMode === true) {
+      return false
+    }
+
+    let lines = marker.lines
+
+    let firstLine = lines[0]
+    let fromLine = firstLine.lineNo() + 1
+    let fromCh = firstLine.markedSpans[0].from
+
+    let lastLine = lines[(lines.length - 1)]
+    let toLine = lastLine.lineNo() + 1
+    let toCh = lastLine.markedSpans[0].to
+
+    return {
+      fromLine,
+      fromCh,
+      toLine,
+      toCh
+    }
+  }
+
+  CodeMirrorEditor.methods.findNext = function (search) {
+    if (this.simpleMode === true) {
+      return false
+    }
+
+    if (!search) {
+      search = this.localConfig.stringToSearch
+    }
+
+    if (!search || search.length === 0) {
+      return false
+    }
+
+    var cursor = this.codemirror.getSearchCursor(search);
+
+    let currentPosition = this.getCursor(true)
+    //console.log(currentPosition)
+    let currentLine = currentPosition.line
+    let currentCh = currentPosition.ch
+    //console.log('current', currentLine, currentCh)
+
+    let firstMarker
+    //let lastMarker
+
+    while (cursor.findNext()) {
+      let marker = this.codemirror.markText(
+              cursor.from(),
+              cursor.to()
+              )
+
+      if (!firstMarker) {
+        firstMarker = marker
+      }
+
+      //console.log(marker)
+      let {fromLine, fromCh, toLine, toCh} = this.getMarkerPos(marker)
+      //MARKER = marker.lines[0]
+
+      //console.log('marker', line, from, to)
+      if (fromLine - 1 > currentLine) {
+        // 對，就是要找這個
+        this.jumpToMarker(marker)
+        return true
+      } else if (fromLine - 1 === currentLine) {
+        if (fromCh > currentCh) {
+          // 對，就是要找這個
+          this.jumpToMarker(marker)
+          return true
+        }
+      }
+    }
+
+    if (firstMarker) {
+      this.jumpToMarker(firstMarker)
+      return true
+    }
+
+    return false  // 沒找到
+  }
+  CodeMirrorEditor.methods.findPrev = function (search) {
+    if (this.simpleMode === true) {
+      return false
+    }
+
+    if (!search) {
+      search = this.localConfig.stringToSearch
+    }
+
+    if (!search || search.length === 0) {
+      return false
+    }
+    //this.codemirror.focus()
+    //console.log('findPrev')
+    //console.log(search)
+    var cursor = this.codemirror.getSearchCursor(search);
+
+    let currentPosition = this.getCursor(true)
+    //console.log(currentPosition)
+    let currentLine = currentPosition.line
+    let currentCh = currentPosition.ch
+    //console.log('current', currentLine, currentCh)
+
+    let lastMarker
+    let jumpToLast = false
+    //let lastMarker
+
+    while (cursor.findNext()) {
+      let marker = this.codemirror.markText(
+              cursor.from(),
+              cursor.to()
+              )
+
+      if (jumpToLast === true) {
+        lastMarker = marker
+        //console.log('jumpToLast true')
+        continue
+      }
+
+      //if (!firstMarker) {
+
+      //}
+
+      //console.log(marker)
+      let {fromLine, fromCh, toLine, toCh} = this.getMarkerPos(marker)
+      //console.log(currentLine, currentCh, toLine, toCh, fromLine, fromCh)
+
+      //console.log('marker', line, from, to)
+      if (currentLine < fromLine - 1) {
+        // 對，就是要找這個
+        if (!lastMarker) {
+          jumpToLast = true
+          //console.log('jumpToLast')
+          continue
+        }
+        this.jumpToMarker(lastMarker)
+        return true
+      } else if (currentLine === fromLine - 1) {
+        //console.log(currentCh, fromCh)
+        if (currentCh <= fromCh || currentCh <= toCh) {
+          // 對，就是要找這個
+          if (!lastMarker) {
+            jumpToLast = true
+            //console.log('jumpToLast ch')
+            continue
+          }
+          this.jumpToMarker(lastMarker)
+          return true
+        }
+      }
+
+      lastMarker = marker
+    }
+
+    if (lastMarker) {
+      this.jumpToMarker(lastMarker)
+      return true
+    }
+    //console.log('沒找到')
+    return false  // 沒找到
+  }
+
+  CodeMirrorEditor.methods.highlightClear = async function () {
+    //console.log(this.codemirror$el.find('.' + this.highlightClassName).length)
+    //this.codemirror$el.find('.' + this.highlightClassName).removeClass(this.highlightClassName)
+    while (this.markers.length > 0) {
+      let marker = this.markers.shift()
+      marker.clear()
+      await this.utils.AsyncUtils.sleep(0)
+    }
+  }
+  
+  let highlighTextTimer
+  let highlighTextSearching
+  CodeMirrorEditor.methods.highlightText = async function (text) {
+    if (this.config.inited === false) {
+      return false
+    }
+    
+    if (this.simpleMode === true) {
+      return false
+    }
+
+    clearTimeout(highlighTextTimer)
+    highlighTextTimer = setTimeout(async () => {
+      if (!text) {
+        text = this.localConfig.stringToSearch
+      }
+
+      highlighTextSearching = text
+      await this.highlightClear()
+
+      if (text === '') {
+        return false
+      }
+
+      while (!this.codemirror || !this.codemirror.getSearchCursor) {
+        //console.log('sleep', this.codemirror)
+        await this.utils.AsyncUtils.sleep()
+      }
+
+      var cursor = this.codemirror.getSearchCursor(text)
+      //console.log(cursor)
+      while (cursor.findNext()) {
+        //CURSOR = cursor
+        if (highlighTextSearching !== text) {
+          // 條件變更了，取消
+          return false
+        }
+        let marker = this.codemirror.markText(
+                cursor.from(),
+                cursor.to(),
+                {className: this.highlightClassName}
+        )
+        this.markers.push(marker)
+        await this.utils.AsyncUtils.sleep(0)
+        //MARKER = marker
+      }
+    }, 100)
+      
+    //this.codemirror.setCursor({line: 1, ch: 0})
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsFormat.js":
+/*!**************************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsFormat.js ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var js_beautify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! js-beautify */ "./node_modules/js-beautify/js/index.js");
+/* harmony import */ var js_beautify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(js_beautify__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var jsmin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jsmin */ "./node_modules/jsmin/jsmin.js");
+/* harmony import */ var jsmin__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jsmin__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var cssmin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cssmin */ "./node_modules/cssmin/cssmin.js");
+/* harmony import */ var cssmin__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(cssmin__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var minify_xml__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! minify-xml */ "./node_modules/minify-xml/index.js");
+/* harmony import */ var minify_xml__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(minify_xml__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (CodeMirrorEditor) {
+  CodeMirrorEditor.methods.autoFormat = function () {
+    //console.log('autoFormat')
+    let cm = this.codemirror
+    let mode = this.getMode()
+    
+    let process
+    if (mode === 'javascript') {
+      process = js_beautify__WEBPACK_IMPORTED_MODULE_0___default.a.js_beautify
+    }
+    else if (mode === 'css') {
+      process = js_beautify__WEBPACK_IMPORTED_MODULE_0___default.a.css_beautify
+    }
+    else if (mode === 'html') {
+      process = js_beautify__WEBPACK_IMPORTED_MODULE_0___default.a.html_beautify
+    }
+    //console.log()
+    
+    let selection = cm.getSelection()
+    if (selection === '') {
+      cm.execCommand('selectAll')
+      selection = cm.getSelection()
+    }
+    
+    let options = {}
+    if (this.localConfig.indent.mode === 'space') {
+      options.indent_size = this.localConfig.indent.size
+    }
+    
+    selection = process(selection, options)
+    //selection = selection + 'AAA'
+    cm.replaceSelection(selection);
+    
+    //console.log('aaa')
+  }
+  
+  CodeMirrorEditor.methods.minify = function () {
+    let cm = this.codemirror
+    let mode = this.getMode()
+    
+    //console.log()
+    
+    cm.execCommand('selectAll')
+    let selection = cm.getSelection()
+    
+    if (mode === 'css') {
+      //this.localConfig.textContent = await cssMinifier.csso(this.localConfig.textContent)
+      selection = cssmin__WEBPACK_IMPORTED_MODULE_2___default()(selection)
+    }
+    else if (mode === 'javascript') {
+      //console.log(this.localConfig.textContent)
+      selection = Object(jsmin__WEBPACK_IMPORTED_MODULE_1__["jsmin"])(selection)
+    }
+    else if (mode === 'html') {
+      //console.log(this.localConfig.textContent)
+      selection = minify_xml__WEBPACK_IMPORTED_MODULE_3___default()(selection)
+    }
+    else {
+      // 刪掉多餘空白與換行
+      selection = selection.split('\n').join('')
+      selection = selection.split('\t').join(' ')
+      while (selection.indexOf('  ') > -1) {
+        selection = selection.split('  ').join(' ')
+      }
+    }
+    //selection = selection + 'AAA'
+    cm.replaceSelection(selection)
+  }
+  
+  CodeMirrorEditor.methods.inputTab = function () {
+    let cm = this.codemirror
+    cm.replaceSelection(this.computedIndentSpaces, "end");
+  }
+  
+  CodeMirrorEditor.methods.setFontSize = function () {
+    let fontSize = this.localConfig.fontSize
+    this.editor$el.css('font-size', fontSize + 'pt')
+    this.editor$el.css('line-height', Math.round(fontSize * 1.5) + 'pt')
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsOption.js":
+/*!**************************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/CodeMirrorEditorMethodsOption.js ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (CodeMirrorEditor) {
+  CodeMirrorEditor.methods.getMode = function (useFilter = true) {
+    let cm = this.codemirror
+    let mode = cm.getOption('mode').name
+    
+    if (useFilter) {
+      if (mode === 'javascript'
+              || mode === 'text/javascript'
+              || mode === 'application/json'
+              || mode === 'application/ld+json'
+              || mode === 'text/typescript'
+              || mode === 'application/typescript') {
+        mode = 'javascript'
+      }
+      else if (mode === 'text/css'
+              || mode === 'text/x-scss'
+              || mode === 'text/x-less') {
+        mode = 'css'
+      }
+      else if (mode === 'text/html' 
+              || mode === 'application/xml') {
+        mode = 'html'
+      }
+    }
+    return mode
+  }
+
+  CodeMirrorEditor.methods.setMode = function (mode) {
+    if (this.simpleMode === true) {
+      return false
+    }
+
+    setTimeout(() => {
+      this.codemirror.setOption("mode", mode)
+    }, 100)
+
+    //this.codemirror$el = $('.CodeMirror:first')
+
+    //console.log(this.codemirror$el)
+  }
+  
+  CodeMirrorEditor.methods.setOption = function (key, value) {
+
+    setTimeout(() => {
+      this.codemirror.setOption(key, value)
+    }, 100)
+
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/CodeMirrorEditorWatch.js":
+/*!******************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/CodeMirrorEditorWatch.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+/* harmony default export */ __webpack_exports__["default"] = (function (CodeMirrorEditor) {
+    
+  CodeMirrorEditor.watch = {
+    'config.inited': function () {
+      //console.log(this.config.inited)
+      this.onConfigInited()
+    },
+    'config.panelHeight'() {
+      this.resizeHeight()
+    },
+    'localConfig.stringToSearch'() {
+      this.highlightText()
+    },
+    'localConfig.syntax'() {
+      this.setMode(this.localConfig.syntax)
+    },
+    'localConfig.lineWrapping'() {
+      console.log(this.localConfig.lineWrapping)
+      this.setOption('lineWrapping', this.localConfig.lineWrapping)
+    },
+    'localConfig.fontSize'() {
+      this.setFontSize()
+    },
+    'localConfig.textContent': async function () {
+      if (this.config.inited === false) {
+        return false
+      }
+      
+      //this.restoreCursorPosition()
+      //console.log('changed', this.localConfig.textContent)
+      if (this.changeLock === true) {
+        return false
+      }
+
+      this.saveCursorPosition()
+      this.changeLock = true
+      this.code = this.localConfig.textContent
+      await this.utils.AsyncUtils.sleep(0)
+      this.restoreCursorPosition()
+      this.updateDocumentTitle()
+      this.changeLock = false
+
+      //this.$refs.cmEditor.setValue(this.localConfig.textContent)
+    },
+    'code': async function () {
+      if (this.config.inited === false) {
+        return false
+      }
+      
+      //console.log('code')
+      if (this.changeLock === true) {
+        return false
+      }
+
+      this.changeLock = true
+      this.localConfig.textContent = this.code
+      await this.utils.AsyncUtils.sleep(0)
+      this.updateDocumentTitle()
+      this.changeLock = false
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/vendors/codemirror.config.webpack.js":
+/*!******************************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/vendors/codemirror.config.webpack.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var js_beautify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! js-beautify */ "./node_modules/js-beautify/js/index.js");
+/* harmony import */ var js_beautify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(js_beautify__WEBPACK_IMPORTED_MODULE_0__);
+
+
+let extraKeys = {
+  "Ctrl-F": 'none',
+  "Ctrl-Shift-F": 'none',
+  "Ctrl-H": 'none',
+  "Ctrl-Shift-Q": 'none',
+  "Ctrl-S": 'none',
+  "Ctrl-Alt-F": function (cm) {
+    let mode = cm.getOption('mode').name
+    
+    let process
+    if (mode === 'javascript'
+            || mode === 'text/javascript'
+            || mode === 'application/json'
+            || mode === 'application/ld+json'
+            || mode === 'text/typescript'
+            || mode === 'application/typescript') {
+      process = js_beautify__WEBPACK_IMPORTED_MODULE_0___default.a.js_beautify
+    }
+    else if (mode === 'text/css'
+            || mode === 'text/x-scss'
+            || mode === 'text/x-less') {
+      process = js_beautify__WEBPACK_IMPORTED_MODULE_0___default.a.css_beautify
+    }
+    else if (mode === 'text/html') {
+      process = js_beautify__WEBPACK_IMPORTED_MODULE_0___default.a.html_beautify
+    }
+    //console.log()
+    
+    let selection = cm.getSelection()
+    if (selection === '') {
+      cm.execCommand('selectAll')
+      selection = cm.getSelection()
+    }
+    selection = process(selection)
+    //selection = selection + 'AAA'
+    cm.replaceSelection(selection);
+    
+    //console.log('aaa')
+  },
+  "Ctrl-.": "autocomplete",
+  "Tab": function (cm) {
+    cm.replaceSelection("  ", "end");
+  }
+}
+
+let options = {
+  lineNumbers: true,
+  lineWrapping: true,
+  matchBrackets: true,
+  autoCloseBrackets: true,
+  matchTags: true,
+  autoCloseTags: true,
+  foldGutter: true,
+  showMatchesOnScrollbar: true,
+  lint: {
+    esversion: 9,
+    "asi": true,
+  },
+  gutters: ["CodeMirror-lint-markers", "CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+  mode: {name: "javascript", globalVars: true},
+  //mode:  "javascript",
+  extraKeys: extraKeys,
+  styleActiveLine: true,
+  continueComments: {
+    continueLineComment: true
+  },
+  hintOptions: {
+    alignWithWord: false,
+    completeSingle: false,
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (options);
+
+/***/ }),
+
+/***/ "./src/components/CodeMirrorEditor/vendors/codemirror.webpack.js":
+/*!***********************************************************************!*\
+  !*** ./src/components/CodeMirrorEditor/vendors/codemirror.webpack.js ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_codemirror__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-codemirror */ "./node_modules/vue-codemirror/dist/vue-codemirror.js");
+/* harmony import */ var vue_codemirror__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_codemirror__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var codemirror_lib_codemirror_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! codemirror/lib/codemirror.css */ "./node_modules/codemirror/lib/codemirror.css");
+/* harmony import */ var codemirror_lib_codemirror_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(codemirror_lib_codemirror_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var codemirror_addon_search_matchesonscrollbar_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! codemirror/addon/search/matchesonscrollbar.js */ "./node_modules/codemirror/addon/search/matchesonscrollbar.js");
+/* harmony import */ var codemirror_addon_search_matchesonscrollbar_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_search_matchesonscrollbar_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var codemirror_addon_search_searchcursor_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! codemirror/addon/search/searchcursor.js */ "./node_modules/codemirror/addon/search/searchcursor.js");
+/* harmony import */ var codemirror_addon_search_searchcursor_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_search_searchcursor_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var codemirror_addon_fold_foldcode_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! codemirror/addon/fold/foldcode.js */ "./node_modules/codemirror/addon/fold/foldcode.js");
+/* harmony import */ var codemirror_addon_fold_foldcode_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_fold_foldcode_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var codemirror_addon_fold_foldgutter_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! codemirror/addon/fold/foldgutter.js */ "./node_modules/codemirror/addon/fold/foldgutter.js");
+/* harmony import */ var codemirror_addon_fold_foldgutter_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_fold_foldgutter_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var codemirror_addon_fold_foldgutter_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! codemirror/addon/fold/foldgutter.css */ "./node_modules/codemirror/addon/fold/foldgutter.css");
+/* harmony import */ var codemirror_addon_fold_foldgutter_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_fold_foldgutter_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var codemirror_addon_fold_brace_fold_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! codemirror/addon/fold/brace-fold.js */ "./node_modules/codemirror/addon/fold/brace-fold.js");
+/* harmony import */ var codemirror_addon_fold_brace_fold_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_fold_brace_fold_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var codemirror_addon_fold_xml_fold_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! codemirror/addon/fold/xml-fold.js */ "./node_modules/codemirror/addon/fold/xml-fold.js");
+/* harmony import */ var codemirror_addon_fold_xml_fold_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_fold_xml_fold_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var codemirror_addon_fold_indent_fold_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! codemirror/addon/fold/indent-fold.js */ "./node_modules/codemirror/addon/fold/indent-fold.js");
+/* harmony import */ var codemirror_addon_fold_indent_fold_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_fold_indent_fold_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var codemirror_addon_fold_markdown_fold_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! codemirror/addon/fold/markdown-fold.js */ "./node_modules/codemirror/addon/fold/markdown-fold.js");
+/* harmony import */ var codemirror_addon_fold_markdown_fold_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_fold_markdown_fold_js__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var codemirror_addon_fold_comment_fold_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! codemirror/addon/fold/comment-fold.js */ "./node_modules/codemirror/addon/fold/comment-fold.js");
+/* harmony import */ var codemirror_addon_fold_comment_fold_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_fold_comment_fold_js__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var codemirror_addon_edit_matchbrackets_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! codemirror/addon/edit/matchbrackets.js */ "./node_modules/codemirror/addon/edit/matchbrackets.js");
+/* harmony import */ var codemirror_addon_edit_matchbrackets_js__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_edit_matchbrackets_js__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var codemirror_addon_edit_closebrackets_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! codemirror/addon/edit/closebrackets.js */ "./node_modules/codemirror/addon/edit/closebrackets.js");
+/* harmony import */ var codemirror_addon_edit_closebrackets_js__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_edit_closebrackets_js__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var codemirror_addon_edit_matchtags_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! codemirror/addon/edit/matchtags.js */ "./node_modules/codemirror/addon/edit/matchtags.js");
+/* harmony import */ var codemirror_addon_edit_matchtags_js__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_edit_matchtags_js__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var codemirror_addon_edit_closetag_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! codemirror/addon/edit/closetag.js */ "./node_modules/codemirror/addon/edit/closetag.js");
+/* harmony import */ var codemirror_addon_edit_closetag_js__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_edit_closetag_js__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var codemirror_addon_hint_show_hint_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! codemirror/addon/hint/show-hint.js */ "./node_modules/codemirror/addon/hint/show-hint.js");
+/* harmony import */ var codemirror_addon_hint_show_hint_js__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_hint_show_hint_js__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var codemirror_addon_hint_show_hint_css__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! codemirror/addon/hint/show-hint.css */ "./node_modules/codemirror/addon/hint/show-hint.css");
+/* harmony import */ var codemirror_addon_hint_show_hint_css__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_hint_show_hint_css__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var codemirror_addon_hint_javascript_hint_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! codemirror/addon/hint/javascript-hint.js */ "./node_modules/codemirror/addon/hint/javascript-hint.js");
+/* harmony import */ var codemirror_addon_hint_javascript_hint_js__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_hint_javascript_hint_js__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var codemirror_addon_hint_html_hint_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! codemirror/addon/hint/html-hint.js */ "./node_modules/codemirror/addon/hint/html-hint.js");
+/* harmony import */ var codemirror_addon_hint_html_hint_js__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_hint_html_hint_js__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var codemirror_addon_hint_css_hint_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! codemirror/addon/hint/css-hint.js */ "./node_modules/codemirror/addon/hint/css-hint.js");
+/* harmony import */ var codemirror_addon_hint_css_hint_js__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_hint_css_hint_js__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var codemirror_addon_hint_anyword_hint_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! codemirror/addon/hint/anyword-hint.js */ "./node_modules/codemirror/addon/hint/anyword-hint.js");
+/* harmony import */ var codemirror_addon_hint_anyword_hint_js__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_hint_anyword_hint_js__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var codemirror_addon_hint_sql_hint_js__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! codemirror/addon/hint/sql-hint.js */ "./node_modules/codemirror/addon/hint/sql-hint.js");
+/* harmony import */ var codemirror_addon_hint_sql_hint_js__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_hint_sql_hint_js__WEBPACK_IMPORTED_MODULE_22__);
+/* harmony import */ var codemirror_addon_lint_lint_js__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! codemirror/addon/lint/lint.js */ "./node_modules/codemirror/addon/lint/lint.js");
+/* harmony import */ var codemirror_addon_lint_lint_js__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_lint_lint_js__WEBPACK_IMPORTED_MODULE_23__);
+/* harmony import */ var codemirror_addon_lint_lint_css__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! codemirror/addon/lint/lint.css */ "./node_modules/codemirror/addon/lint/lint.css");
+/* harmony import */ var codemirror_addon_lint_lint_css__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_lint_lint_css__WEBPACK_IMPORTED_MODULE_24__);
+/* harmony import */ var codemirror_addon_lint_javascript_lint_js__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! codemirror/addon/lint/javascript-lint.js */ "./node_modules/codemirror/addon/lint/javascript-lint.js");
+/* harmony import */ var codemirror_addon_lint_javascript_lint_js__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_lint_javascript_lint_js__WEBPACK_IMPORTED_MODULE_25__);
+/* harmony import */ var codemirror_addon_lint_yaml_lint_js__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! codemirror/addon/lint/yaml-lint.js */ "./node_modules/codemirror/addon/lint/yaml-lint.js");
+/* harmony import */ var codemirror_addon_lint_yaml_lint_js__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_lint_yaml_lint_js__WEBPACK_IMPORTED_MODULE_26__);
+/* harmony import */ var codemirror_addon_lint_html_lint_js__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! codemirror/addon/lint/html-lint.js */ "./node_modules/codemirror/addon/lint/html-lint.js");
+/* harmony import */ var codemirror_addon_lint_html_lint_js__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_lint_html_lint_js__WEBPACK_IMPORTED_MODULE_27__);
+/* harmony import */ var codemirror_addon_lint_json_lint_js__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! codemirror/addon/lint/json-lint.js */ "./node_modules/codemirror/addon/lint/json-lint.js");
+/* harmony import */ var codemirror_addon_lint_json_lint_js__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_lint_json_lint_js__WEBPACK_IMPORTED_MODULE_28__);
+/* harmony import */ var codemirror_addon_lint_css_lint_js__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! codemirror/addon/lint/css-lint.js */ "./node_modules/codemirror/addon/lint/css-lint.js");
+/* harmony import */ var codemirror_addon_lint_css_lint_js__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_lint_css_lint_js__WEBPACK_IMPORTED_MODULE_29__);
+/* harmony import */ var jshint__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! jshint */ "./node_modules/jshint/src/jshint.js");
+/* harmony import */ var jshint__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(jshint__WEBPACK_IMPORTED_MODULE_30__);
+/* harmony import */ var csslint__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! csslint */ "./node_modules/csslint/dist/csslint-node.js");
+/* harmony import */ var csslint__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(csslint__WEBPACK_IMPORTED_MODULE_31__);
+/* harmony import */ var jsonlint_webpack__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! jsonlint-webpack */ "./node_modules/jsonlint-webpack/lib/jsonlint.js");
+/* harmony import */ var jsonlint_webpack__WEBPACK_IMPORTED_MODULE_32___default = /*#__PURE__*/__webpack_require__.n(jsonlint_webpack__WEBPACK_IMPORTED_MODULE_32__);
+/* harmony import */ var codemirror_mode_javascript_javascript_js__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! codemirror/mode/javascript/javascript.js */ "./node_modules/codemirror/mode/javascript/javascript.js");
+/* harmony import */ var codemirror_mode_javascript_javascript_js__WEBPACK_IMPORTED_MODULE_33___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_javascript_javascript_js__WEBPACK_IMPORTED_MODULE_33__);
+/* harmony import */ var codemirror_mode_php_php_js__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! codemirror/mode/php/php.js */ "./node_modules/codemirror/mode/php/php.js");
+/* harmony import */ var codemirror_mode_php_php_js__WEBPACK_IMPORTED_MODULE_34___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_php_php_js__WEBPACK_IMPORTED_MODULE_34__);
+/* harmony import */ var codemirror_mode_css_css_js__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! codemirror/mode/css/css.js */ "./node_modules/codemirror/mode/css/css.js");
+/* harmony import */ var codemirror_mode_css_css_js__WEBPACK_IMPORTED_MODULE_35___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_css_css_js__WEBPACK_IMPORTED_MODULE_35__);
+/* harmony import */ var codemirror_mode_sql_sql_js__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! codemirror/mode/sql/sql.js */ "./node_modules/codemirror/mode/sql/sql.js");
+/* harmony import */ var codemirror_mode_sql_sql_js__WEBPACK_IMPORTED_MODULE_36___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_sql_sql_js__WEBPACK_IMPORTED_MODULE_36__);
+/* harmony import */ var codemirror_mode_perl_perl_js__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! codemirror/mode/perl/perl.js */ "./node_modules/codemirror/mode/perl/perl.js");
+/* harmony import */ var codemirror_mode_perl_perl_js__WEBPACK_IMPORTED_MODULE_37___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_perl_perl_js__WEBPACK_IMPORTED_MODULE_37__);
+/* harmony import */ var codemirror_mode_clike_clike_js__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! codemirror/mode/clike/clike.js */ "./node_modules/codemirror/mode/clike/clike.js");
+/* harmony import */ var codemirror_mode_clike_clike_js__WEBPACK_IMPORTED_MODULE_38___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_clike_clike_js__WEBPACK_IMPORTED_MODULE_38__);
+/* harmony import */ var codemirror_mode_python_python_js__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! codemirror/mode/python/python.js */ "./node_modules/codemirror/mode/python/python.js");
+/* harmony import */ var codemirror_mode_python_python_js__WEBPACK_IMPORTED_MODULE_39___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_python_python_js__WEBPACK_IMPORTED_MODULE_39__);
+/* harmony import */ var codemirror_mode_yaml_yaml_js__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! codemirror/mode/yaml/yaml.js */ "./node_modules/codemirror/mode/yaml/yaml.js");
+/* harmony import */ var codemirror_mode_yaml_yaml_js__WEBPACK_IMPORTED_MODULE_40___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_yaml_yaml_js__WEBPACK_IMPORTED_MODULE_40__);
+/* harmony import */ var codemirror_mode_xml_xml_js__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! codemirror/mode/xml/xml.js */ "./node_modules/codemirror/mode/xml/xml.js");
+/* harmony import */ var codemirror_mode_xml_xml_js__WEBPACK_IMPORTED_MODULE_41___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_xml_xml_js__WEBPACK_IMPORTED_MODULE_41__);
+/* harmony import */ var codemirror_mode_htmlembedded_htmlembedded_js__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! codemirror/mode/htmlembedded/htmlembedded.js */ "./node_modules/codemirror/mode/htmlembedded/htmlembedded.js");
+/* harmony import */ var codemirror_mode_htmlembedded_htmlembedded_js__WEBPACK_IMPORTED_MODULE_42___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_htmlembedded_htmlembedded_js__WEBPACK_IMPORTED_MODULE_42__);
+/* harmony import */ var codemirror_mode_htmlmixed_htmlmixed_js__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! codemirror/mode/htmlmixed/htmlmixed.js */ "./node_modules/codemirror/mode/htmlmixed/htmlmixed.js");
+/* harmony import */ var codemirror_mode_htmlmixed_htmlmixed_js__WEBPACK_IMPORTED_MODULE_43___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_htmlmixed_htmlmixed_js__WEBPACK_IMPORTED_MODULE_43__);
+/* harmony import */ var codemirror_addon_selection_active_line_js__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! codemirror/addon/selection/active-line.js */ "./node_modules/codemirror/addon/selection/active-line.js");
+/* harmony import */ var codemirror_addon_selection_active_line_js__WEBPACK_IMPORTED_MODULE_44___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_selection_active_line_js__WEBPACK_IMPORTED_MODULE_44__);
+/* harmony import */ var codemirror_addon_comment_continuecomment_js__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! codemirror/addon/comment/continuecomment.js */ "./node_modules/codemirror/addon/comment/continuecomment.js");
+/* harmony import */ var codemirror_addon_comment_continuecomment_js__WEBPACK_IMPORTED_MODULE_45___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_comment_continuecomment_js__WEBPACK_IMPORTED_MODULE_45__);
+
+
+// import base style
+
+
+// search
+
+
+
+// fold
+
+
+
+
+
+
+
+
+
+// match close
+
+
+
+
+
+// hints
+
+
+
+
+
+
+
+
+
+// lint
+
+
+
+
+
+
+
+
+
+if (!jshint__WEBPACK_IMPORTED_MODULE_30__["JSHINT"].options) {
+  jshint__WEBPACK_IMPORTED_MODULE_30__["JSHINT"].options = {}
+}
+
+jshint__WEBPACK_IMPORTED_MODULE_30__["JSHINT"].options.esversion = 6
+
+window.JSHINT = jshint__WEBPACK_IMPORTED_MODULE_30__["JSHINT"]
+
+
+
+window.CSSLint = csslint__WEBPACK_IMPORTED_MODULE_31__["CSSLint"]
+
+
+window.jsonlint = jsonlint_webpack__WEBPACK_IMPORTED_MODULE_32___default.a
+
+// modes
+
+
+
+
+
+
+
+
+
+
+
+
+
+// edit
+
+
+
+// autoformat
+
+
+/* harmony default export */ __webpack_exports__["default"] = (vue_codemirror__WEBPACK_IMPORTED_MODULE_0__["codemirror"]);
+
+/***/ })
+
+}]);
+//# sourceMappingURL=CodeMirror.js.map
