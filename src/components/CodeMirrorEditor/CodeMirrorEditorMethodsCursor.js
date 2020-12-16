@@ -79,6 +79,9 @@ export default function (CodeMirrorEditor) {
     
     if (this.cursorPositionSaved.from.line === null) {
       let saved = localStorage.getItem(cursorPositionKey)
+      if (saved === null) {
+        return false
+      }
       this.cursorPositionSaved = JSON.parse(saved)
       //console.log(saved)
     }
