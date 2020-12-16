@@ -2,7 +2,8 @@
      v-on:mouseout="delayCloseMenu"
      v-on:mousein="clearDelayCloseMenu"
      v-bind:style="computedStyle"
-     v-bind:class="computedClassNameList">
+     v-bind:class="computedClassNameList"
+     v-show="config.inited === true">
   <a class="zoom-fab zoom-btn-large tooltip" id="zoomBtn"
      v-on:mouseover="showMenu = true"
      v-on:click="copy">
@@ -11,15 +12,6 @@
   </a>
   <ul class="zoom-menu"
       v-bind:class="{'show': showMenu}">
-
-    <li title="Configuration" class="tooltip"
-        v-on:click="openConfigModal">
-      <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition"
-         v-bind:class="{'scale-out': !showMenu}">
-        <i class="cogs icon"></i>
-      </a>
-      <span class="tooltiptext" style="left: -100%;">Configuration</span>
-    </li>
 
     <!--
     <li title="Format" class="tooltip"
@@ -57,6 +49,15 @@
         <i class="eraser icon"></i>
       </a>
       <span class="tooltiptext">Clear</span>
+    </li>
+
+    <li title="Configuration" class="tooltip"
+        v-on:click="openConfigModal">
+      <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition"
+         v-bind:class="{'scale-out': !showMenu}">
+        <i class="cogs icon"></i>
+      </a>
+      <span class="tooltiptext" style="left: -100%;">Configuration</span>
     </li>
 
     <!--

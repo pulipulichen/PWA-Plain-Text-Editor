@@ -22,14 +22,14 @@ let ConfigModal = {
     }
   },
   watch: {
-    'config.inited' () {
-      //return false
-      
-      if (this.config.inited === false) {
-        return false
-      }
-      this.open()
-    }
+//    'config.inited' () {
+//      //return false
+//      
+//      if (this.config.inited === false) {
+//        return false
+//      }
+//      this.open()
+//    }
   },
 //  mounted () {
 //    this.init()
