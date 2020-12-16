@@ -2,11 +2,14 @@
 import $ from 'jquery'
 import codemirror from './vendors/codemirror.webpack.js'
 
+import OpenFile from './OpenFile/OpenFile.vue'
+
 let CodeMirrorEditor = {
   props: ['config', 'localConfig', 'utils'],
   data: null,
   components: {
-    codemirror
+    codemirror,
+    OpenFile
   },
   mounted: async function () {
 //    //console.log(this.inited)

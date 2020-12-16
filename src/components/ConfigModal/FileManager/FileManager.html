@@ -1,0 +1,24 @@
+<div class="ui segment">
+  <h2 class="header" id="File">
+    {{ $t('File') }}
+  </h2>
+
+  <div class="fields">
+    <div class="eight wide field">
+      <button class="ui labeled icon fluid button"
+              type="button"
+              v-on:click="openFile">
+        <i class="open folder icon"></i>
+        {{ $t('Open') }}
+      </button>
+    </div>
+    <div class="eight wide field">
+      <button class="ui right labeled icon fluid button"
+              type="button"
+              v-on:click="saveFile">
+        <i class="save icon"></i>
+        {{ $t('Save') }}
+      </button>
+    </div>
+  </div>
+</div>

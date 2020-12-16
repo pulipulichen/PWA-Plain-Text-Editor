@@ -6,7 +6,9 @@ let TemplateExample = {
     }
   },
   watch: {
-    
+    'localConfig.locale'() {
+      this.$i18n.locale = this.localConfig.locale;
+    },
   },
   computed: {
     

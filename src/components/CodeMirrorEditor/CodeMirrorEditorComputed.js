@@ -22,6 +22,10 @@ export default function (CodeMirrorEditor) {
         this.inputTab(cm)
       }
       
+      options.extraKeys['Ctrl-O'] = (cm) => {
+        this.openFile()
+      }
+      
       options.extraKeys['Ctrl-S'] = (cm) => {
         this.saveFile(cm)
       }

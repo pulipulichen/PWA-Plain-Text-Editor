@@ -28,7 +28,7 @@ export default {
       return 'text/javascript'
     } else if (ext === 'css' || ext === 'less') {
       return 'text/css'
-    } else if (ext === 'html' || ext === 'htm') {
+    } else if (ext === 'html' || ext === 'htm' || ext === 'xml' || ext === 'svg') {
       return 'text/html'
     } else if (ext === 'c') {
       return 'text/x-c++src'
@@ -56,7 +56,7 @@ export default {
       {value: "text/plain", text: "Txt"},
       {value: "text/javascript", text: "JavaScript"},
       {value: "text/css", text: "CSS / LESS"},
-      {value: "text/html", text: "HTML / XML"},
+      {value: "text/html", text: "HTML / XML / SVG"},
       {value: "text/x-markdown", text: "Markdown"},
       {value: "text/x-c++src", text: "C / C++"},
       {value: "text/x-csharp", text: "C#"},
