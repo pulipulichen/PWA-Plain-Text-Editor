@@ -1,23 +1,32 @@
 <div class="ui modal ConfigModal" ref="Modal">
-  <div class="header">Configuration</div>
-  <div class="scrolling content">
-    <div class="ui form">
-
-      <div class="field">
-        <div class="ui toggle checkbox">
-          <input type="checkbox" tabindex="0" class="hidden"
-                 id="EnableTextWrap"
-                 v-model="localConfig.enableTextWrap" />
-          <label for="EnableTextWrap">Enable Text wrap</label>
-        </div>
-      </div>
-
-      <div class="field">
-        <label>Tab type</label>
-
-      </div>
-
-    </div>
+  <div class="header">
+    Configuration
+  </div>
+  <div class="scrolling content config-modal-content">
+    <table-of-contents 
+      v-bind:config="config"
+      headings="h2"
+      contentSelector=".config-modal-content"
+      top="5rem"
+      width="10rem"
+      ref='toc'>
+    </table-of-contents>
+    
+    <form class="ui form">
+      
+      <EditorConfiguration 
+        v-bind:config="config"
+        v-bind:utils="utils"
+        v-bind:localConfig="localConfig">
+      </EditorConfiguration>
+      
+      <author 
+        v-bind:config="config"
+        v-bind:utils="utils"
+        v-bind:localConfig="localConfig">
+      </author>
+      
+    </form>
 
   </div>
   <div class="actions">

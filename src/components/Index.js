@@ -1,6 +1,5 @@
 /* global Node */
 //import $ from 'jquery'
-import ConfigModal from './ConfigModal/ConfigModal.vue'
 import FloatActionButton from './FloatActionButton/FloatActionButton.vue'
 
 //import FormatPanel from './FormatPanel/FormatPanel.vue'
@@ -14,8 +13,8 @@ let Index = {
     }
   },
   components: {
-    ConfigModal,
     FloatActionButton,
+    ConfigModal: () => import(/* webpackChunkName: "vendors/ConfigModal" */ './ConfigModal/ConfigModal.vue'),
     //FormatPanel,
     ReplacePanel: () => import(/* webpackChunkName: "vendors/ReplacePanel" */ './ReplacePanel/ReplacePanel.vue'),
     CodeMirrorEditor: () => import(/* webpackChunkName: "vendors/CodeMirror" */ './CodeMirrorEditor/CodeMirrorEditor.vue')
