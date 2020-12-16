@@ -11,13 +11,14 @@ let localConfig = {
     lTrim: false,
     rTrim: false
   },
-  enableTextWrap: false,
+  lineWrapping: false,
   indent: {
     mode: 'tab',
     size: 2,
   },
   formatTool: 'lines-trim',
-  syntax: 'javascript'
+  syntax: 'javascript',
+  fontSize: 32
 }
 
 export default localConfig

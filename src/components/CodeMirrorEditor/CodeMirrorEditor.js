@@ -61,6 +61,7 @@ let CodeMirrorEditor = {
       this.restoreCursorPosition()
       
       //console.log('onConfigInited', 5)
+      this.setFontSize()
       
       this.inited = true
     },

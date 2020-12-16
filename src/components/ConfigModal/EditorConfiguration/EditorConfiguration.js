@@ -24,7 +24,7 @@ let EditorConfiguration = {
   },
   methods: {
     initCheckbox () {
-      $(this.$el).find('.ui.radio.checkbox').checkbox()
+      $(this.$el).find('.ui.checkbox').checkbox()
     }
   } // methods
 }

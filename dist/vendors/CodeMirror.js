@@ -272,6 +272,7 @@ let CodeMirrorEditor = {
       this.restoreCursorPosition()
       
       //console.log('onConfigInited', 5)
+      this.setFontSize()
       
       this.inited = true
     },
@@ -1141,6 +1142,12 @@ __webpack_require__.r(__webpack_exports__);
     let cm = this.codemirror
     cm.replaceSelection(this.computedIndentSpaces, "end");
   }
+  
+  CodeMirrorEditor.methods.setFontSize = function () {
+    let fontSize = this.localConfig.fontSize
+    this.editor$el.css('font-size', fontSize + 'pt')
+    this.editor$el.css('line-height', Math.round(fontSize * 1.5) + 'pt')
+  }
 });
 
 /***/ }),
@@ -1233,7 +1240,11 @@ __webpack_require__.r(__webpack_exports__);
       this.setMode(this.localConfig.syntax)
     },
     'localConfig.lineWrapping'() {
+      console.log(this.localConfig.lineWrapping)
       this.setOption('lineWrapping', this.localConfig.lineWrapping)
+    },
+    'localConfig.fontSize'() {
+      this.setFontSize()
     },
     'localConfig.textContent': async function () {
       if (this.config.inited === false) {

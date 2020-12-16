@@ -77,4 +77,10 @@ export default function (CodeMirrorEditor) {
     let cm = this.codemirror
     cm.replaceSelection(this.computedIndentSpaces, "end");
   }
+  
+  CodeMirrorEditor.methods.setFontSize = function () {
+    let fontSize = this.localConfig.fontSize
+    this.editor$el.css('font-size', fontSize + 'pt')
+    this.editor$el.css('line-height', Math.round(fontSize * 1.5) + 'pt')
+  }
 }

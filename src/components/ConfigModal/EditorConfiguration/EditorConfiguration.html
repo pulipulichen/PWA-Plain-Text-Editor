@@ -25,44 +25,67 @@
     </select>
   </div>
   
-  <div class="field">
-    <div class="ui toggle checkbox">
-      <input type="checkbox" tabindex="0" class="hidden"
-             id="EnableTextWrap"
-             v-model="localConfig.lineWrapping" />
-      <label for="EnableTextWrap">Enable Text wrap</label>
+  <!-- =================================================== -->
+  
+  <div class="fields">
+    <div class="eight wide field">
+      <div class="ui toggle checkbox">
+        <input type="checkbox" tabindex="0" class="hidden"
+               id="EnableTextWrap"
+               v-model="localConfig.lineWrapping" />
+        <label for="EnableTextWrap">Enable Text wrap</label>
+      </div>
+    </div>
+    
+    <div class="eight wide inline field">
+      <label for="CodeMirrorFontSize">
+        {{ $t('Font Size (pt)') }}
+      </label>
+      <input type="number" min="10" max="32" step="2"
+             v-model="localConfig.fontSize" />
     </div>
   </div>
+  
+    
 
-  <div class="inline fields">
-    <div class="field">
+  
+  
+    
+  
+  <!-- =================================================== -->
+  
+  <div class="fields">
+    <div class="eight wide inline field">
       <label>
         {{ $t('Indent') }}
       </label>
 
       <div class="ui radio checkbox">
         <input type="radio" name="indentStyle" value="tab" tabindex="0" class="hidden"
-               v-model="localConfig.indent.mode">
-        <label>
+               v-model="localConfig.indent.mode"
+               id="localConfig.indent.mode.tab">
+        <label for="localConfig.indent.mode.tab">
           {{ $t('Tab') }}
         </label>
       </div>
 
       <div class="ui radio checkbox">
         <input type="radio" name="indentStyle" value="space" tabindex="0" class="hidden"
-               v-model="localConfig.indent.mode">
-        <label>
+               v-model="localConfig.indent.mode"
+               id="localConfig.indent.mode.space">
+        <label for="localConfig.indent.mode.space">
           {{ $t('Space') }}
         </label>
       </div>
     </div>
     
-    <div class="field" 
+    <div class="eight wide inline field" 
          v-if="localConfig.indent.mode === 'space'">
       <label for="CodeMirrorSpaceSize">
         {{ $t('Size') }}
       </label>
       <input type="number" min="0" max="4"
+             id="CodeMirrorSpaceSize"
              v-model="localConfig.indent.size" />
       
     </div>

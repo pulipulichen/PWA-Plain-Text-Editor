@@ -16,7 +16,11 @@ export default function (CodeMirrorEditor) {
       this.setMode(this.localConfig.syntax)
     },
     'localConfig.lineWrapping'() {
+      console.log(this.localConfig.lineWrapping)
       this.setOption('lineWrapping', this.localConfig.lineWrapping)
+    },
+    'localConfig.fontSize'() {
+      this.setFontSize()
     },
     'localConfig.textContent': async function () {
       if (this.config.inited === false) {
