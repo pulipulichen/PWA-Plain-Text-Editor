@@ -1,10 +1,12 @@
 import $ from 'jquery'
+import cmModeUtil from './../../CodeMirrorEditor/vendors/codemirror.mode-util.webpack.js'
 
 let EditorConfiguration = {
   props: ['config', 'utils', 'localConfig'],
   data() {    
     this.$i18n.locale = this.config.locale
     return {
+      modeOptions: cmModeUtil.getModeSelectOptions()
     }
   },
 //  components: {

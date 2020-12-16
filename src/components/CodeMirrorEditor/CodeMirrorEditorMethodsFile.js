@@ -1,4 +1,5 @@
 import dayjs from 'dayjs'
+import cmModeUtil from './vendors/codemirror.mode-util.webpack.js'
 
 export default function (CodeMirrorEditor) {
   CodeMirrorEditor.methods.saveFile = function () {
@@ -13,25 +14,7 @@ export default function (CodeMirrorEditor) {
     }
     
     let mode = this.getMode(false)
-    
-    let ext = 'txt'
-    if (mode.indexOf('/') > -1) {
-      ext = mode.slice(mode.lastIndexOf('/') + 1)
-      
-      if (ext.indexOf('-') > -1) {
-        ext = ext.slice(ext.lastIndexOf('-') + 1)
-      }
-    }
-    else {
-      ext = mode
-    }
-    
-    if (ext === 'javascript') {
-      ext = 'js'
-    }
-    else if (ext === 'rsrc') {
-      ext = 'R'
-    }
+    let ext = cmModeUtil.getExtFromMode(mode)
     
     return dayjs().format('MMDD-hhmmss') + '.' + ext
   }

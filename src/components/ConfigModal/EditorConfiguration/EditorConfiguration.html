@@ -9,19 +9,10 @@
     </label>
     <select v-model="localConfig.syntax"
             id="CodeMirrorSyntax">
-      <option value="text/plain">Txt</option>
-      <option value="text/javascript">JavaScript</option>
-      <option value="text/css">CSS / LESS</option>
-      <option value="text/html">HTML / XML</option>
-      <option value="text/x-c++src">C / C++</option>
-      <option value="text/x-csharp">C#</option>
-      <option value="text/x-java">Java</option>
-      <option value="text/x-perl">Perl</option>
-      <option value="application/x-httpd-php">PHP</option>
-      <option value="text/x-python">Python</option>
-      <option value="text/x-rsrc">R</option>
-      <option value="text/x-sh">Linux Shell</option>
-      <option value="text/x-yaml">YAML</option>
+      <option v-for="option in modeOptions"
+              v-bind:value="option.value">
+        {{ $t(option.text) }}
+      </option>
     </select>
   </div>
   
