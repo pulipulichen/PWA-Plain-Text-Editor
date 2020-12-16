@@ -823,6 +823,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (CodeMirrorEditor) {
+  CodeMirrorEditor.methods.openFile = function () {
+    console.log('open file')
+  }
+    
   CodeMirrorEditor.methods.saveFile = function () {
     let filename = this.getFilename()
     

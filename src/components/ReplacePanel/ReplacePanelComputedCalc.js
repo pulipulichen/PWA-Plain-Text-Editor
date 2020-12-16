@@ -1,5 +1,9 @@
 export default function (ReplacePanel) {
   ReplacePanel.computed.calcResult = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     let textContent = this.localConfig.textContent.trim()
     this.calcResultCopied = false
 
@@ -35,12 +39,20 @@ export default function (ReplacePanel) {
     }
   }
   ReplacePanel.computed.computedCalcButtonClassName = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     return {
       'disabled': !this.calcResult,
       'positive': (this.calcResult && this.calcResultCopied === false)
     }
   }
   ReplacePanel.computed.computedCalcButtonText = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     let result = this.calcResult
 
     if (!result) {

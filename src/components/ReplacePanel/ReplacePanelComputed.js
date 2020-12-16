@@ -1,7 +1,14 @@
+/* global ReplacePanel */
+
 export default function (ReplacePanel) {
-    ReplacePanel.computed.CodeMirrorEditor = function () {
-      return this.$parent.$refs.CodeMirrorEditor
-    }
+    
+  ReplacePanel.computed.isEnable = function () {
+    return (this.localConfig.displayPanel === 'replace')
+  }
+
+  ReplacePanel.computed.CodeMirrorEditor = function () {
+    return this.$parent.$refs.CodeMirrorEditor
+  }
     
   ReplacePanel.computed.showReplaceLineOptionsSelect = function () {
     return (this.localConfig.replaceMode === 'line')
@@ -18,6 +25,13 @@ export default function (ReplacePanel) {
     if (this.localConfig.textContent === '') {
       return true
     }
+    
+    
+    if (this.localConfig.stringToReplaceWith === ''
+            && this.localConfig.stringToSearch === '') {
+      return true
+    }
+    
 
     if (this.localConfig.replaceMode !== 'line'
             && this.localConfig.stringToSearch === '') {
@@ -32,6 +46,10 @@ export default function (ReplacePanel) {
   }
 
   ReplacePanel.computed.replaceOccurCount = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.localConfig.textContent === '') {
       return 0
     }
@@ -59,12 +77,20 @@ export default function (ReplacePanel) {
   // ----------------------------
 
   ReplacePanel.computed.countOccurRaw = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     let stringToSearch = this.stringToSearchRaw
 
     return this.localConfig.textContent.split(stringToSearch).length - 1
   }
 
   ReplacePanel.computed.countOccurRegex = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     let search = this.localConfig.stringToSearch
     if (search === '') {
       return 0
@@ -80,23 +106,46 @@ export default function (ReplacePanel) {
     return count
   }
   ReplacePanel.computed.textContentTrim = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     return this.localConfig.textContent.trim()
   }
   ReplacePanel.computed.textContentLines = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     return this.localConfig.textContent.split('\n')
   }
   ReplacePanel.computed.textContentLinesTrim = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     return this.textContentLines.map(line => line.trim())
   }
   ReplacePanel.computed.stringToSearchRaw = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     return this.localConfig.stringToSearch.replace(/\\/g, '\\')
   }
 
   ReplacePanel.computed.stringToReplaceWithRaw = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
     return this.localConfig.stringToReplaceWith.replace(/\\/g, '\\')
   }
 
   ReplacePanel.computed.countOccurLine = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     let stringToSearch = this.stringToSearchRaw
     //console.log(stringToSearch)
     if (stringToSearch === '') {
@@ -132,6 +181,10 @@ export default function (ReplacePanel) {
   // ----------------------------
 
   ReplacePanel.computed.isUndoDisabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.textContentHistory.length === 0) {
       return true
     }
@@ -142,6 +195,10 @@ export default function (ReplacePanel) {
   }
 
   ReplacePanel.computed.isRedoDisabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.textContentHistory.length === 0) {
       return true
     }
@@ -152,6 +209,10 @@ export default function (ReplacePanel) {
   }
 
   ReplacePanel.computed.stringToSearch = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     let stringToSearch
     if (this.localConfig.replaceMode === 'regex') {
       stringToSearch = this.localConfig.stringToSearch
@@ -160,7 +221,12 @@ export default function (ReplacePanel) {
     }
     return stringToSearch
   }
+  
   ReplacePanel.computed.isSearchEnabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.stringToSearch === '') {
       return false
     }
@@ -171,6 +237,10 @@ export default function (ReplacePanel) {
   // ----------------------------
 
   ReplacePanel.computed.computedReplaceButtonText = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.isReplaceDisabled === true) {
       return 'Replace'
     }
@@ -196,6 +266,10 @@ export default function (ReplacePanel) {
     }
   }
   ReplacePanel.computed.computedReplaceButtonTitle = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.isReplaceDisabled === true) {
       return 'Replace'
     }

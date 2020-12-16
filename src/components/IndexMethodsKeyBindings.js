@@ -2,13 +2,78 @@ import $ from 'jquery'
 import hotkeys from './vendors/hotkeys/hotkeys.webpack.js'
 
 export default function (Index) {
+    
   Index.methods.getKeyBindsConfig = function () {
+    
     return {
       'ctrl+shift+q': (event, handler) => {
         this.hotkeyTestLoad(event)
+      },
+      'ctrl+f': (event, handler) => {
+        this.hotkeyFind(event, () => {
+          this.$refs.CodeMirrorEditor.findNext()
+        })
+      },
+      'ctrl+shift+f': (event, handler) => {
+        this.hotkeyFind(event, () => {
+          this.$refs.CodeMirrorEditor.findPrev()
+        })
+      },
+      'ctrl+h': (event, handler) => {
+        this.hotkeyReplace(event)
       }
     }
   }
+  
+  // -------------------
+  
+  Index.methods.hotkeyFind = function (event, find) {
+    event.stopPropagation()
+    event.preventDefault()
+
+    let selection = this.$refs.CodeMirrorEditor.getSelectedText()
+    if (selection === '') {
+      if (this.localConfig.stringToSearch !== '') {
+        find()
+      }
+      else {
+        this.hotkeyStartSearch()
+      }
+    }
+    else {
+      this.localConfig.displayPanel = 'replace'
+      
+      if (this.localConfig.stringToSearch !== selection) {
+        this.localConfig.stringToSearch = selection
+        this.hotkeyStartSearch()
+      }
+      else {
+        find()
+      }
+    }
+  }
+  
+  Index.methods.hotkeyStartSearch = function () {
+    this.localConfig.displayPanel = 'replace'
+    this.$refs.ReplacePanel.selectSearchInput()
+  }
+  
+  // --------------------
+  
+  Index.methods.hotkeyReplace = function (event) {
+    event.stopPropagation()
+    event.preventDefault()
+
+    this.localConfig.displayPanel = 'replace'
+    
+    let selection = this.$refs.CodeMirrorEditor.getSelectedText()
+    if (selection !== '') {
+      this.localConfig.stringToSearch = selection
+    }
+    this.$refs.ReplacePanel.selectReplaceInput()
+  }
+  
+  // -------------------
   
   Index.methods.hotkeyTestLoad = async function (event) {
     //event.preventDefault()

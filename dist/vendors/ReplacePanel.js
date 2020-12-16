@@ -742,10 +742,17 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* global ReplacePanel */
+
 /* harmony default export */ __webpack_exports__["default"] = (function (ReplacePanel) {
-    ReplacePanel.computed.CodeMirrorEditor = function () {
-      return this.$parent.$refs.CodeMirrorEditor
-    }
+    
+  ReplacePanel.computed.isEnable = function () {
+    return (this.localConfig.displayPanel === 'replace')
+  }
+
+  ReplacePanel.computed.CodeMirrorEditor = function () {
+    return this.$parent.$refs.CodeMirrorEditor
+  }
     
   ReplacePanel.computed.showReplaceLineOptionsSelect = function () {
     return (this.localConfig.replaceMode === 'line')
@@ -762,6 +769,13 @@ __webpack_require__.r(__webpack_exports__);
     if (this.localConfig.textContent === '') {
       return true
     }
+    
+    
+    if (this.localConfig.stringToReplaceWith === ''
+            && this.localConfig.stringToSearch === '') {
+      return true
+    }
+    
 
     if (this.localConfig.replaceMode !== 'line'
             && this.localConfig.stringToSearch === '') {
@@ -776,6 +790,10 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   ReplacePanel.computed.replaceOccurCount = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.localConfig.textContent === '') {
       return 0
     }
@@ -803,12 +821,20 @@ __webpack_require__.r(__webpack_exports__);
   // ----------------------------
 
   ReplacePanel.computed.countOccurRaw = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     let stringToSearch = this.stringToSearchRaw
 
     return this.localConfig.textContent.split(stringToSearch).length - 1
   }
 
   ReplacePanel.computed.countOccurRegex = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     let search = this.localConfig.stringToSearch
     if (search === '') {
       return 0
@@ -824,23 +850,46 @@ __webpack_require__.r(__webpack_exports__);
     return count
   }
   ReplacePanel.computed.textContentTrim = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     return this.localConfig.textContent.trim()
   }
   ReplacePanel.computed.textContentLines = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     return this.localConfig.textContent.split('\n')
   }
   ReplacePanel.computed.textContentLinesTrim = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     return this.textContentLines.map(line => line.trim())
   }
   ReplacePanel.computed.stringToSearchRaw = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     return this.localConfig.stringToSearch.replace(/\\/g, '\\')
   }
 
   ReplacePanel.computed.stringToReplaceWithRaw = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
     return this.localConfig.stringToReplaceWith.replace(/\\/g, '\\')
   }
 
   ReplacePanel.computed.countOccurLine = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     let stringToSearch = this.stringToSearchRaw
     //console.log(stringToSearch)
     if (stringToSearch === '') {
@@ -876,6 +925,10 @@ __webpack_require__.r(__webpack_exports__);
   // ----------------------------
 
   ReplacePanel.computed.isUndoDisabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.textContentHistory.length === 0) {
       return true
     }
@@ -886,6 +939,10 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   ReplacePanel.computed.isRedoDisabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.textContentHistory.length === 0) {
       return true
     }
@@ -896,6 +953,10 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   ReplacePanel.computed.stringToSearch = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     let stringToSearch
     if (this.localConfig.replaceMode === 'regex') {
       stringToSearch = this.localConfig.stringToSearch
@@ -904,7 +965,12 @@ __webpack_require__.r(__webpack_exports__);
     }
     return stringToSearch
   }
+  
   ReplacePanel.computed.isSearchEnabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.stringToSearch === '') {
       return false
     }
@@ -915,6 +981,10 @@ __webpack_require__.r(__webpack_exports__);
   // ----------------------------
 
   ReplacePanel.computed.computedReplaceButtonText = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.isReplaceDisabled === true) {
       return 'Replace'
     }
@@ -940,6 +1010,10 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
   ReplacePanel.computed.computedReplaceButtonTitle = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.isReplaceDisabled === true) {
       return 'Replace'
     }
@@ -961,6 +1035,10 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function (ReplacePanel) {
   ReplacePanel.computed.calcResult = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     let textContent = this.localConfig.textContent.trim()
     this.calcResultCopied = false
 
@@ -996,12 +1074,20 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
   ReplacePanel.computed.computedCalcButtonClassName = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     return {
       'disabled': !this.calcResult,
       'positive': (this.calcResult && this.calcResultCopied === false)
     }
   }
   ReplacePanel.computed.computedCalcButtonText = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     let result = this.calcResult
 
     if (!result) {
@@ -1033,6 +1119,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function (ReplacePanel) {
   
   ReplacePanel.computed.computedFormatActionButtonClassNameList = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     let list = []
     
     let tool = this.localConfig.formatTool
@@ -1048,6 +1138,10 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   ReplacePanel.computed.isMinifyDisabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.config.inited === false) {
       return 'disabled'
     }
@@ -1076,6 +1170,10 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   ReplacePanel.computed.isBeautifyDisabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.config.inited === false) {
       return 'disabled'
     }
@@ -1117,6 +1215,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function (ReplacePanel) {
   
   ReplacePanel.computed.isTrimEnabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     for (let i = 0; i < this.textContentLines.length; i++) {
       let line = this.textContentLines[i]
       if (line !== line.trim()) {
@@ -1126,6 +1228,10 @@ __webpack_require__.r(__webpack_exports__);
     return false
   }
   ReplacePanel.computed.isTrimDisabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.isTrimEnabled === true) {
       return undefined
     }
@@ -1135,6 +1241,10 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   ReplacePanel.computed.isLTrimEnabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     for (let i = 0; i < this.textContentLines.length; i++) {
       let line = this.textContentLines[i]
       let char = line.trim().slice(0, 1)
@@ -1147,6 +1257,10 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   ReplacePanel.computed.isLTrimDisabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.isLTrimEnabled === true) {
       return undefined
     }
@@ -1157,6 +1271,10 @@ __webpack_require__.r(__webpack_exports__);
   
   
   ReplacePanel.computed.isRTrimEnabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     for (let i = 0; i < this.textContentLines.length; i++) {
       let line = this.textContentLines[i]
       let char = line.trim().slice(-1)
@@ -1170,6 +1288,10 @@ __webpack_require__.r(__webpack_exports__);
   
   
   ReplacePanel.computed.isRTrimDisabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.isRTrimEnabled === true) {
       return undefined
     }
@@ -1297,6 +1419,12 @@ __webpack_require__.r(__webpack_exports__);
   ReplacePanel.methods.focus = async function () {
     await this.utils.AsyncUtils.sleep(0)
     this.$refs.SearchInput.focus()
+  }
+  
+  ReplacePanel.methods.selectSearchInput = async function () {
+    await this.utils.AsyncUtils.sleep(0)
+    this.$refs.SearchInput.focus()
+    this.$refs.SearchInput.select()
   }
 
   ReplacePanel.methods.selectReplaceInput = async function () {

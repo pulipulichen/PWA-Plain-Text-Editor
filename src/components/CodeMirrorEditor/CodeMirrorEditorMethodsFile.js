@@ -2,6 +2,10 @@ import dayjs from 'dayjs'
 import cmModeUtil from './vendors/codemirror.mode-util.webpack.js'
 
 export default function (CodeMirrorEditor) {
+  CodeMirrorEditor.methods.openFile = function () {
+    console.log('open file')
+  }
+    
   CodeMirrorEditor.methods.saveFile = function () {
     let filename = this.getFilename()
     

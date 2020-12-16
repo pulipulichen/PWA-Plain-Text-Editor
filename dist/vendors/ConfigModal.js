@@ -511,14 +511,11 @@ var render = function() {
               expression: "localConfig.fontSize"
             }
           ],
-          attrs: { type: "number", min: "10", max: "32", step: "2" },
+          attrs: { type: "range", min: "10", max: "32", step: "2" },
           domProps: { value: _vm.localConfig.fontSize },
           on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.localConfig, "fontSize", $event.target.value)
+            __r: function($event) {
+              return _vm.$set(_vm.localConfig, "fontSize", $event.target.value)
             }
           }
         })

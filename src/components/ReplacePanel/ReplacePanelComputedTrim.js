@@ -1,6 +1,10 @@
 export default function (ReplacePanel) {
   
   ReplacePanel.computed.isTrimEnabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     for (let i = 0; i < this.textContentLines.length; i++) {
       let line = this.textContentLines[i]
       if (line !== line.trim()) {
@@ -10,6 +14,10 @@ export default function (ReplacePanel) {
     return false
   }
   ReplacePanel.computed.isTrimDisabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.isTrimEnabled === true) {
       return undefined
     }
@@ -19,6 +27,10 @@ export default function (ReplacePanel) {
   }
   
   ReplacePanel.computed.isLTrimEnabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     for (let i = 0; i < this.textContentLines.length; i++) {
       let line = this.textContentLines[i]
       let char = line.trim().slice(0, 1)
@@ -31,6 +43,10 @@ export default function (ReplacePanel) {
   }
   
   ReplacePanel.computed.isLTrimDisabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.isLTrimEnabled === true) {
       return undefined
     }
@@ -41,6 +57,10 @@ export default function (ReplacePanel) {
   
   
   ReplacePanel.computed.isRTrimEnabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     for (let i = 0; i < this.textContentLines.length; i++) {
       let line = this.textContentLines[i]
       let char = line.trim().slice(-1)
@@ -54,6 +74,10 @@ export default function (ReplacePanel) {
   
   
   ReplacePanel.computed.isRTrimDisabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.isRTrimEnabled === true) {
       return undefined
     }

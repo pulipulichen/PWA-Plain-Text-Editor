@@ -1,6 +1,10 @@
 export default function (ReplacePanel) {
   
   ReplacePanel.computed.computedFormatActionButtonClassNameList = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     let list = []
     
     let tool = this.localConfig.formatTool
@@ -16,6 +20,10 @@ export default function (ReplacePanel) {
   }
   
   ReplacePanel.computed.isMinifyDisabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.config.inited === false) {
       return 'disabled'
     }
@@ -44,6 +52,10 @@ export default function (ReplacePanel) {
   }
   
   ReplacePanel.computed.isBeautifyDisabled = function () {
+    if (!this.isEnable) {
+      return undefined
+    }
+    
     if (this.config.inited === false) {
       return 'disabled'
     }
