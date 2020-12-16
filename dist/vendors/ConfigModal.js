@@ -229,14 +229,13 @@ var render = function() {
           {
             staticClass: "ui basic button",
             attrs: {
-              href:
-                "https://docs.google.com/spreadsheets/d/1FhwAVlu6y5rJ1-W8uTaDe7C5vxPEpcy3cwhgTFVJ4UI/edit#gid=0",
+              href: "http://blog.pulipuli.info/p/donation.html",
               target: "_blank"
             }
           },
           [
-            _c("i", { staticClass: "table icon" }),
-            _vm._v("\r\n          " + _vm._s(_vm.$t("Data")) + "\r\n        ")
+            _c("i", { staticClass: "coffee icon" }),
+            _vm._v("\r\n          " + _vm._s(_vm.$t("Donate")) + "\r\n        ")
           ]
         ),
         _vm._v(" "),
