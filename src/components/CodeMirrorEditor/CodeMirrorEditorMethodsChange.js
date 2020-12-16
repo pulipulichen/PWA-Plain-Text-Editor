@@ -16,8 +16,10 @@ export default function (CodeMirrorEditor) {
   }
   
   CodeMirrorEditor.methods.updateDocumentTitle = function () {
+    //console.log(this.localConfig.filename)
     if (this.localConfig.filename) {
-      return this.localConfig.filename
+      document.title = this.localConfig.filename
+      return true
     }
     
     let textContentTrim = this.$parent.textContentTrim
@@ -26,5 +28,38 @@ export default function (CodeMirrorEditor) {
     } else {
       document.title = textContentTrim
     }
+  }
+  
+  CodeMirrorEditor.methods.onCodeMirrorDrop = function (codemirror, event) {
+    //console.log(event)
+    //console.log('onCodeMirrorDrop')
+    event.preventDefault()
+    event.stopPropagation()
+    
+    
+    //console.log(event)
+    let dt = event.dataTransfer
+    let files = dt.files
+
+
+    if (files.length === 0) {
+      return false
+    }
+    //console.log(files.length)
+    
+    let file = files[0]
+    
+    let filename = file.name
+    //console.log(file)
+    let reader = new FileReader()
+    
+    reader.onloadend = () => {
+      //this.imgSrc = reader.result
+      this.code = reader.result
+      this.localConfig.filename = filename
+      //console.log(filename)
+      this.setModeByFilename(filename)
+    }
+    reader.readAsText(file)
   }
 }

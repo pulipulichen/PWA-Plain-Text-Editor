@@ -105,7 +105,8 @@ var render = function() {
             on: {
               inputRead: _vm.onCodeMirrorKeyHandled,
               cursorActivity: _vm.onCodeMirrorCursorActivity,
-              viewportChange: _vm.onCodeMirrorCursorActivity
+              viewportChange: _vm.onCodeMirrorCursorActivity,
+              drop: _vm.onCodeMirrorDrop
             },
             model: {
               value: _vm.code,
@@ -273,6 +274,8 @@ let CodeMirrorEditor = {
       
       //console.log('onConfigInited', 5)
       this.setFontSize()
+      
+      this.codemirror.on('drop', this.onCodeMirrorDrop);
       
       this.inited = true
     },
@@ -481,6 +484,7 @@ __webpack_require__.r(__webpack_exports__);
       if (!this.$refs.cmEditor) {
         return undefined
       }
+      
       return this.$refs.cmEditor.codemirror
     },
     
@@ -588,8 +592,10 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   CodeMirrorEditor.methods.updateDocumentTitle = function () {
+    //console.log(this.localConfig.filename)
     if (this.localConfig.filename) {
-      return this.localConfig.filename
+      document.title = this.localConfig.filename
+      return true
     }
     
     let textContentTrim = this.$parent.textContentTrim
@@ -598,6 +604,39 @@ __webpack_require__.r(__webpack_exports__);
     } else {
       document.title = textContentTrim
     }
+  }
+  
+  CodeMirrorEditor.methods.onCodeMirrorDrop = function (codemirror, event) {
+    //console.log(event)
+    //console.log('onCodeMirrorDrop')
+    event.preventDefault()
+    event.stopPropagation()
+    
+    
+    //console.log(event)
+    let dt = event.dataTransfer
+    let files = dt.files
+
+
+    if (files.length === 0) {
+      return false
+    }
+    //console.log(files.length)
+    
+    let file = files[0]
+    
+    let filename = file.name
+    //console.log(file)
+    let reader = new FileReader()
+    
+    reader.onloadend = () => {
+      //this.imgSrc = reader.result
+      this.code = reader.result
+      this.localConfig.filename = filename
+      //console.log(filename)
+      this.setModeByFilename(filename)
+    }
+    reader.readAsText(file)
   }
 });
 
@@ -786,6 +825,10 @@ __webpack_require__.r(__webpack_exports__);
   }
   
   CodeMirrorEditor.methods.getFilename = function () {
+    if (this.localConfig.filename) {
+      return this.localConfig.filename
+    }
+    
     let mode = this.getMode(false)
     
     let ext = 'txt'
@@ -1208,6 +1251,47 @@ __webpack_require__.r(__webpack_exports__);
     //console.log(this.codemirror$el)
   }
   
+  CodeMirrorEditor.methods.setModeByFilename = function (filename) {
+    let ext = filename.slice(filename.lastIndexOf('.') + 1).toLowerCase()
+    
+    if (ext === 'txt') {
+      this.localConfig.syntax = 'text/plain'
+    }
+    else if (ext === 'js') {
+      this.localConfig.syntax = 'text/javascript'
+    }
+    else if (ext === 'css' || ext === 'less') {
+      this.localConfig.syntax = 'text/css'
+    }
+    else if (ext === 'html' || ext === 'htm') {
+      this.localConfig.syntax = 'text/html'
+    }
+    else if (ext === 'c') {
+      this.localConfig.syntax = 'text/x-c++src'
+    }
+    else if (ext === 'java') {
+      this.localConfig.syntax = 'text/x-java'
+    }
+    else if (ext === 'perl') {
+      this.localConfig.syntax = 'text/x-perl'
+    }
+    else if (ext === 'php') {
+      this.localConfig.syntax = 'application/x-httpd-php'
+    }
+    else if (ext === 'py') {
+      this.localConfig.syntax = 'text/x-python'
+    }
+    else if (ext === 'r') {
+      this.localConfig.syntax = 'text/x-rsrc'
+    }
+    else if (ext === 'sh') {
+      this.localConfig.syntax = 'text/x-sh'
+    }
+    else if (ext === 'yaml') {
+      this.localConfig.syntax = 'text/x-yaml'
+    }
+  }
+  
   CodeMirrorEditor.methods.setOption = function (key, value) {
 
     setTimeout(() => {
@@ -1238,6 +1322,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     'config.panelHeight'() {
       this.resizeHeight()
+    },
+    'localConfig.filename'() {
+      this.updateDocumentTitle()
     },
     'localConfig.stringToSearch'() {
       this.highlightText()
@@ -1458,32 +1545,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var csslint__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(csslint__WEBPACK_IMPORTED_MODULE_31__);
 /* harmony import */ var jsonlint_webpack__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! jsonlint-webpack */ "./node_modules/jsonlint-webpack/lib/jsonlint.js");
 /* harmony import */ var jsonlint_webpack__WEBPACK_IMPORTED_MODULE_32___default = /*#__PURE__*/__webpack_require__.n(jsonlint_webpack__WEBPACK_IMPORTED_MODULE_32__);
-/* harmony import */ var codemirror_mode_javascript_javascript_js__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! codemirror/mode/javascript/javascript.js */ "./node_modules/codemirror/mode/javascript/javascript.js");
-/* harmony import */ var codemirror_mode_javascript_javascript_js__WEBPACK_IMPORTED_MODULE_33___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_javascript_javascript_js__WEBPACK_IMPORTED_MODULE_33__);
-/* harmony import */ var codemirror_mode_php_php_js__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! codemirror/mode/php/php.js */ "./node_modules/codemirror/mode/php/php.js");
-/* harmony import */ var codemirror_mode_php_php_js__WEBPACK_IMPORTED_MODULE_34___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_php_php_js__WEBPACK_IMPORTED_MODULE_34__);
-/* harmony import */ var codemirror_mode_css_css_js__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! codemirror/mode/css/css.js */ "./node_modules/codemirror/mode/css/css.js");
-/* harmony import */ var codemirror_mode_css_css_js__WEBPACK_IMPORTED_MODULE_35___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_css_css_js__WEBPACK_IMPORTED_MODULE_35__);
-/* harmony import */ var codemirror_mode_sql_sql_js__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! codemirror/mode/sql/sql.js */ "./node_modules/codemirror/mode/sql/sql.js");
-/* harmony import */ var codemirror_mode_sql_sql_js__WEBPACK_IMPORTED_MODULE_36___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_sql_sql_js__WEBPACK_IMPORTED_MODULE_36__);
-/* harmony import */ var codemirror_mode_perl_perl_js__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! codemirror/mode/perl/perl.js */ "./node_modules/codemirror/mode/perl/perl.js");
-/* harmony import */ var codemirror_mode_perl_perl_js__WEBPACK_IMPORTED_MODULE_37___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_perl_perl_js__WEBPACK_IMPORTED_MODULE_37__);
-/* harmony import */ var codemirror_mode_clike_clike_js__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! codemirror/mode/clike/clike.js */ "./node_modules/codemirror/mode/clike/clike.js");
-/* harmony import */ var codemirror_mode_clike_clike_js__WEBPACK_IMPORTED_MODULE_38___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_clike_clike_js__WEBPACK_IMPORTED_MODULE_38__);
-/* harmony import */ var codemirror_mode_python_python_js__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! codemirror/mode/python/python.js */ "./node_modules/codemirror/mode/python/python.js");
-/* harmony import */ var codemirror_mode_python_python_js__WEBPACK_IMPORTED_MODULE_39___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_python_python_js__WEBPACK_IMPORTED_MODULE_39__);
-/* harmony import */ var codemirror_mode_yaml_yaml_js__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! codemirror/mode/yaml/yaml.js */ "./node_modules/codemirror/mode/yaml/yaml.js");
-/* harmony import */ var codemirror_mode_yaml_yaml_js__WEBPACK_IMPORTED_MODULE_40___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_yaml_yaml_js__WEBPACK_IMPORTED_MODULE_40__);
-/* harmony import */ var codemirror_mode_xml_xml_js__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! codemirror/mode/xml/xml.js */ "./node_modules/codemirror/mode/xml/xml.js");
-/* harmony import */ var codemirror_mode_xml_xml_js__WEBPACK_IMPORTED_MODULE_41___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_xml_xml_js__WEBPACK_IMPORTED_MODULE_41__);
-/* harmony import */ var codemirror_mode_htmlembedded_htmlembedded_js__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! codemirror/mode/htmlembedded/htmlembedded.js */ "./node_modules/codemirror/mode/htmlembedded/htmlembedded.js");
-/* harmony import */ var codemirror_mode_htmlembedded_htmlembedded_js__WEBPACK_IMPORTED_MODULE_42___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_htmlembedded_htmlembedded_js__WEBPACK_IMPORTED_MODULE_42__);
-/* harmony import */ var codemirror_mode_htmlmixed_htmlmixed_js__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! codemirror/mode/htmlmixed/htmlmixed.js */ "./node_modules/codemirror/mode/htmlmixed/htmlmixed.js");
-/* harmony import */ var codemirror_mode_htmlmixed_htmlmixed_js__WEBPACK_IMPORTED_MODULE_43___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_htmlmixed_htmlmixed_js__WEBPACK_IMPORTED_MODULE_43__);
-/* harmony import */ var codemirror_addon_selection_active_line_js__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! codemirror/addon/selection/active-line.js */ "./node_modules/codemirror/addon/selection/active-line.js");
-/* harmony import */ var codemirror_addon_selection_active_line_js__WEBPACK_IMPORTED_MODULE_44___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_selection_active_line_js__WEBPACK_IMPORTED_MODULE_44__);
-/* harmony import */ var codemirror_addon_comment_continuecomment_js__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! codemirror/addon/comment/continuecomment.js */ "./node_modules/codemirror/addon/comment/continuecomment.js");
-/* harmony import */ var codemirror_addon_comment_continuecomment_js__WEBPACK_IMPORTED_MODULE_45___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_comment_continuecomment_js__WEBPACK_IMPORTED_MODULE_45__);
+/* harmony import */ var js_yaml__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! js-yaml */ "./node_modules/js-yaml/index.js");
+/* harmony import */ var js_yaml__WEBPACK_IMPORTED_MODULE_33___default = /*#__PURE__*/__webpack_require__.n(js_yaml__WEBPACK_IMPORTED_MODULE_33__);
+/* harmony import */ var codemirror_mode_javascript_javascript_js__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! codemirror/mode/javascript/javascript.js */ "./node_modules/codemirror/mode/javascript/javascript.js");
+/* harmony import */ var codemirror_mode_javascript_javascript_js__WEBPACK_IMPORTED_MODULE_34___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_javascript_javascript_js__WEBPACK_IMPORTED_MODULE_34__);
+/* harmony import */ var codemirror_mode_php_php_js__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! codemirror/mode/php/php.js */ "./node_modules/codemirror/mode/php/php.js");
+/* harmony import */ var codemirror_mode_php_php_js__WEBPACK_IMPORTED_MODULE_35___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_php_php_js__WEBPACK_IMPORTED_MODULE_35__);
+/* harmony import */ var codemirror_mode_css_css_js__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! codemirror/mode/css/css.js */ "./node_modules/codemirror/mode/css/css.js");
+/* harmony import */ var codemirror_mode_css_css_js__WEBPACK_IMPORTED_MODULE_36___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_css_css_js__WEBPACK_IMPORTED_MODULE_36__);
+/* harmony import */ var codemirror_mode_sql_sql_js__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! codemirror/mode/sql/sql.js */ "./node_modules/codemirror/mode/sql/sql.js");
+/* harmony import */ var codemirror_mode_sql_sql_js__WEBPACK_IMPORTED_MODULE_37___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_sql_sql_js__WEBPACK_IMPORTED_MODULE_37__);
+/* harmony import */ var codemirror_mode_perl_perl_js__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! codemirror/mode/perl/perl.js */ "./node_modules/codemirror/mode/perl/perl.js");
+/* harmony import */ var codemirror_mode_perl_perl_js__WEBPACK_IMPORTED_MODULE_38___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_perl_perl_js__WEBPACK_IMPORTED_MODULE_38__);
+/* harmony import */ var codemirror_mode_clike_clike_js__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! codemirror/mode/clike/clike.js */ "./node_modules/codemirror/mode/clike/clike.js");
+/* harmony import */ var codemirror_mode_clike_clike_js__WEBPACK_IMPORTED_MODULE_39___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_clike_clike_js__WEBPACK_IMPORTED_MODULE_39__);
+/* harmony import */ var codemirror_mode_python_python_js__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! codemirror/mode/python/python.js */ "./node_modules/codemirror/mode/python/python.js");
+/* harmony import */ var codemirror_mode_python_python_js__WEBPACK_IMPORTED_MODULE_40___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_python_python_js__WEBPACK_IMPORTED_MODULE_40__);
+/* harmony import */ var codemirror_mode_yaml_yaml_js__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! codemirror/mode/yaml/yaml.js */ "./node_modules/codemirror/mode/yaml/yaml.js");
+/* harmony import */ var codemirror_mode_yaml_yaml_js__WEBPACK_IMPORTED_MODULE_41___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_yaml_yaml_js__WEBPACK_IMPORTED_MODULE_41__);
+/* harmony import */ var codemirror_mode_xml_xml_js__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! codemirror/mode/xml/xml.js */ "./node_modules/codemirror/mode/xml/xml.js");
+/* harmony import */ var codemirror_mode_xml_xml_js__WEBPACK_IMPORTED_MODULE_42___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_xml_xml_js__WEBPACK_IMPORTED_MODULE_42__);
+/* harmony import */ var codemirror_mode_htmlembedded_htmlembedded_js__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! codemirror/mode/htmlembedded/htmlembedded.js */ "./node_modules/codemirror/mode/htmlembedded/htmlembedded.js");
+/* harmony import */ var codemirror_mode_htmlembedded_htmlembedded_js__WEBPACK_IMPORTED_MODULE_43___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_htmlembedded_htmlembedded_js__WEBPACK_IMPORTED_MODULE_43__);
+/* harmony import */ var codemirror_mode_htmlmixed_htmlmixed_js__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! codemirror/mode/htmlmixed/htmlmixed.js */ "./node_modules/codemirror/mode/htmlmixed/htmlmixed.js");
+/* harmony import */ var codemirror_mode_htmlmixed_htmlmixed_js__WEBPACK_IMPORTED_MODULE_44___default = /*#__PURE__*/__webpack_require__.n(codemirror_mode_htmlmixed_htmlmixed_js__WEBPACK_IMPORTED_MODULE_44__);
+/* harmony import */ var codemirror_addon_selection_active_line_js__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! codemirror/addon/selection/active-line.js */ "./node_modules/codemirror/addon/selection/active-line.js");
+/* harmony import */ var codemirror_addon_selection_active_line_js__WEBPACK_IMPORTED_MODULE_45___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_selection_active_line_js__WEBPACK_IMPORTED_MODULE_45__);
+/* harmony import */ var codemirror_addon_comment_continuecomment_js__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! codemirror/addon/comment/continuecomment.js */ "./node_modules/codemirror/addon/comment/continuecomment.js");
+/* harmony import */ var codemirror_addon_comment_continuecomment_js__WEBPACK_IMPORTED_MODULE_46___default = /*#__PURE__*/__webpack_require__.n(codemirror_addon_comment_continuecomment_js__WEBPACK_IMPORTED_MODULE_46__);
 
 
 // import base style
@@ -1543,6 +1632,9 @@ window.CSSLint = csslint__WEBPACK_IMPORTED_MODULE_31__["CSSLint"]
 
 
 window.jsonlint = jsonlint_webpack__WEBPACK_IMPORTED_MODULE_32___default.a
+
+
+window.jsyaml = js_yaml__WEBPACK_IMPORTED_MODULE_33___default.a
 
 // modes
 

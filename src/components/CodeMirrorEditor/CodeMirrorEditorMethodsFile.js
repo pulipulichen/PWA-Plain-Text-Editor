@@ -8,6 +8,10 @@ export default function (CodeMirrorEditor) {
   }
   
   CodeMirrorEditor.methods.getFilename = function () {
+    if (this.localConfig.filename) {
+      return this.localConfig.filename
+    }
+    
     let mode = this.getMode(false)
     
     let ext = 'txt'

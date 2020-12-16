@@ -63,6 +63,8 @@ let CodeMirrorEditor = {
       //console.log('onConfigInited', 5)
       this.setFontSize()
       
+      this.codemirror.on('drop', this.onCodeMirrorDrop);
+      
       this.inited = true
     },
     

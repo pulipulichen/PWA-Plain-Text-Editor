@@ -58,6 +58,9 @@ window.CSSLint = CSSLint
 import jsonlint from 'jsonlint-webpack'
 window.jsonlint = jsonlint
 
+import jsyaml from 'js-yaml'
+window.jsyaml = jsyaml
+
 // modes
 import 'codemirror/mode/javascript/javascript.js'
 import 'codemirror/mode/php/php.js'

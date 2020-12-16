@@ -2118,7 +2118,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, ".DragDropOpener[data-v-08417b4f] {\n  position: fixed;\n  background-color: rgba(255, 255, 255, 0.5);\n  border: 3px dotted #000;\n  z-index: 9999;\n  left: 0;\n  top: 0;\n  width: 100vw;\n  height: 100vh;\n  font-size: 32pt;\n  text-align: center;\n  padding-top: calc(50vh - 16pt);\n  font-weight: bold;\n}\n.DragDropOpener.dragging[data-v-08417b4f] {\n  display: block;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/PWA-Plain-Text-Editor/src/components/DragDropOpener/DragDropOpener.less?vue&type=style&index=0&id=08417b4f&lang=less&scoped=true&","DragDropOpener.less"],"names":[],"mappings":"AAAA;EACE,eAAA;EACA,0CAAA;EACA,uBAAA;EACA,aAAA;EAEA,OAAA;EACA,MAAA;EACA,YAAA;EACA,aAAA;EACA,eAAA;EACA,kBAAA;EACA,8BAAA;EACA,iBAAA;ACAF;ADGE;EACE,cAAA;ACDJ","file":"DragDropOpener.less","sourcesContent":[".DragDropOpener {\n  position: fixed;\n  background-color: rgba(255,255,255, 0.5);\n  border: 3px dotted #000;\n  z-index: 9999;\n  \n  left: 0;\n  top: 0;\n  width: 100vw;\n  height: 100vh;\n  font-size: 32pt;\n  text-align: center;\n  padding-top: calc(50vh - 16pt);\n  font-weight: bold;\n  \n  //display: none;\n  &.dragging {\n    display: block;\n  }\n}",".DragDropOpener {\n  position: fixed;\n  background-color: rgba(255, 255, 255, 0.5);\n  border: 3px dotted #000;\n  z-index: 9999;\n  left: 0;\n  top: 0;\n  width: 100vw;\n  height: 100vh;\n  font-size: 32pt;\n  text-align: center;\n  padding-top: calc(50vh - 16pt);\n  font-weight: bold;\n}\n.DragDropOpener.dragging {\n  display: block;\n}\n"]}]);
+exports.push([module.i, ".DragDropOpener[data-v-08417b4f] {\n  position: fixed;\n  background-color: rgba(255, 255, 255, 0.5);\n  border: 3px dotted #000;\n  z-index: 9999;\n  left: 0;\n  top: 0;\n  width: 100vw;\n  height: 100vh;\n  font-size: 32pt;\n  text-align: center;\n  padding-top: calc(50vh - 16pt);\n  font-weight: bold;\n  cursor: pointer;\n  use-select: none;\n  display: none;\n}\n.DragDropOpener.dragging[data-v-08417b4f] {\n  display: block;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/PWA-Plain-Text-Editor/src/components/DragDropOpener/DragDropOpener.less?vue&type=style&index=0&id=08417b4f&lang=less&scoped=true&","DragDropOpener.less"],"names":[],"mappings":"AAAA;EACE,eAAA;EACA,0CAAA;EACA,uBAAA;EACA,aAAA;EAEA,OAAA;EACA,MAAA;EACA,YAAA;EACA,aAAA;EACA,eAAA;EACA,kBAAA;EACA,8BAAA;EACA,iBAAA;EAEA,eAAA;EACA,gBAAA;EAEA,aAAA;ACFF;ADGE;EACE,cAAA;ACDJ","file":"DragDropOpener.less","sourcesContent":[".DragDropOpener {\n  position: fixed;\n  background-color: rgba(255,255,255, 0.5);\n  border: 3px dotted #000;\n  z-index: 9999;\n  \n  left: 0;\n  top: 0;\n  width: 100vw;\n  height: 100vh;\n  font-size: 32pt;\n  text-align: center;\n  padding-top: calc(50vh - 16pt);\n  font-weight: bold;\n  \n  cursor: pointer;\n  use-select: none;\n  \n  display: none;\n  &.dragging {\n    display: block;\n  }\n}",".DragDropOpener {\n  position: fixed;\n  background-color: rgba(255, 255, 255, 0.5);\n  border: 3px dotted #000;\n  z-index: 9999;\n  left: 0;\n  top: 0;\n  width: 100vw;\n  height: 100vh;\n  font-size: 32pt;\n  text-align: center;\n  padding-top: calc(50vh - 16pt);\n  font-weight: bold;\n  cursor: pointer;\n  use-select: none;\n  display: none;\n}\n.DragDropOpener.dragging {\n  display: block;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -15875,7 +15875,17 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "DragDropOpener", class: { dragging: _vm.dragging } },
+    {
+      staticClass: "DragDropOpener",
+      class: { dragging: _vm.dragging },
+      on: {
+        drop: function($event) {
+          $event.stopPropagation()
+          $event.preventDefault()
+          return _vm.onDrop($event)
+        }
+      }
+    },
     [_vm._v("\n  " + _vm._s(_vm.$t("Drop to Open")) + "\n")]
   )
 }
@@ -16085,15 +16095,6 @@ var render = function() {
     [
       _c("CodeMirrorEditor", {
         ref: "CodeMirrorEditor",
-        attrs: {
-          config: _vm.config,
-          localConfig: _vm.localConfig,
-          utils: _vm.utils
-        }
-      }),
-      _vm._v(" "),
-      _c("DragDropOpener", {
-        ref: "DragDropOpener",
         attrs: {
           config: _vm.config,
           localConfig: _vm.localConfig,
@@ -28747,17 +28748,64 @@ let DragDropOpener = {
     }
   },
   watch: {
-    
+    'config.inited' () {
+      if (this.config.inited === false) {
+        return false
+      }
+      this.initDragEvent()
+    }
   },
-  computed: {
-    
-  },
-  mounted() {
-    
-  },
+//  computed: {
+//    
+//  },
+//  mounted() {
+//    
+//  },
   methods: {
     initDragEvent () {
+      let triggers = [
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('body'),
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.CodeMirror')
+      ]
+      //let $window = $(window)
+      //console.log($body.length)
+      triggers.forEach(trigger => {
+        //console.log(trigger.length)
+        
+        trigger.on('dragenter', (event) => {
+          //console.log('dragenter')
+          event.stopPropagation()
+          event.preventDefault()
+
+          //this.dragging = true
+          setTimeout(() => {
+            this.dragging = false
+          }, 3000)
+        })
+        
+        trigger.on('drop', (event) => {
+          this.onDrop(event)
+        })
+
+        /*
+        trigger.on('mouseleave', (event) => {
+          event.stopPropagation()
+          event.preventDefault()
+
+          this.dragging = false
+        })
+         */
+      })
+    },
+    onDrop (event) {
+      console.log(event)
+      event.stopPropagation()
+      event.preventDefault()
       
+      console.log('onDrop')
+      this.dragging = false
+      
+      return false
     }
   }
 }

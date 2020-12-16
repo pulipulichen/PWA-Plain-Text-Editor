@@ -52,6 +52,7 @@ export default function (CodeMirrorEditor) {
       if (!this.$refs.cmEditor) {
         return undefined
       }
+      
       return this.$refs.cmEditor.codemirror
     },
     

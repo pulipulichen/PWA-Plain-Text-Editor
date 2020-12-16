@@ -68,6 +68,7 @@
     "htmlhint": "^0.14.2",
     "jquery": "^3.5.1",
     "js-beautify": "^1.13.0",
+    "js-yaml": "^3.14.1",
     "jshint": "^2.12.0",
     "jsmin": "^1.0.1",
     "jsonlint": "^1.6.3",

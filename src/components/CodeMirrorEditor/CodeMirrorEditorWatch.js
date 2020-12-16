@@ -9,6 +9,9 @@ export default function (CodeMirrorEditor) {
     'config.panelHeight'() {
       this.resizeHeight()
     },
+    'localConfig.filename'() {
+      this.updateDocumentTitle()
+    },
     'localConfig.stringToSearch'() {
       this.highlightText()
     },
