@@ -14,6 +14,8 @@ let config = {
   textContentHistoryIndex: -1,
   textContentModified: true,
   searchPostion: -1,
+  urlGithub: 'https://github.com/pulipulichen/PWA-Plain-Text-Editor/',
+  urlIssue: 'https://github.com/pulipulichen/PWA-Plain-Text-Editor/issues/new',
 }
 
 import styleConfig from './styles/style.config.js'

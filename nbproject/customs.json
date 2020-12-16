@@ -12,6 +12,7 @@
     "v-bind:class": {},
     "v-if": {},
     "v-bind:disabled": {},
+    "v-bind:href": {},
     "src": {},
     "v-bind:localConfig": {},
     "v-bind:src": {},
