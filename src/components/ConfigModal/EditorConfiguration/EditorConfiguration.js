@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 let EditorConfiguration = {
   props: ['config', 'utils', 'localConfig'],
   data() {    
@@ -10,10 +12,20 @@ let EditorConfiguration = {
   computed: {
   },
   watch: {
+    'config.inited' () {
+      if (this.config.inited === false) {
+        return false
+      }
+      this.initCheckbox()
+    }
   },
   mounted() {
+    //this.initCheckbox()
   },
   methods: {
+    initCheckbox () {
+      $(this.$el).find('.ui.radio.checkbox').checkbox()
+    }
   } // methods
 }
 

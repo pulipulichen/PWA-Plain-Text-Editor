@@ -5,6 +5,10 @@
   &.inited {
     opacity: 1;
   }
+  
+  &.text-wrap-disabled ::v-deep .CodeMirror-hscrollbar {
+    display: none;
+  }
 }
 
 textarea.editor {

@@ -26,6 +26,8 @@ export default function (ReplacePanel) {
     }
     
     let mode = editor.getMode()
+    //console.log(mode)
+    
     if (mode !== 'javascript'
             && mode !== 'css'
             && mode !== 'html') {

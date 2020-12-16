@@ -2,20 +2,73 @@
   <h2 class="header" id="EditorConfiguration">
     {{ $t('Editor Configuration') }}
   </h2>
+
+  <div class="field">
+    <label for="CodeMirrorSyntax">
+      {{ $t('Syntax') }}
+    </label>
+    <select v-model="localConfig.syntax"
+            id="CodeMirrorSyntax">
+      <option value="text/plain">Txt</option>
+      <option value="text/javascript">JavaScript</option>
+      <option value="text/css">CSS / LESS</option>
+      <option value="text/html">HTML / XML</option>
+      <option value="text/x-c++src">C / C++</option>
+      <option value="text/x-csharp">C#</option>
+      <option value="text/x-java">Java</option>
+      <option value="text/x-perl">Perl</option>
+      <option value="application/x-httpd-php">PHP</option>
+      <option value="text/x-python">Python</option>
+      <option value="text/x-rsrc">R</option>
+      <option value="text/x-sh">Linux Shell</option>
+      <option value="text/x-yaml">YAML</option>
+    </select>
+  </div>
   
-  
-      <div class="field">
-        <div class="ui toggle checkbox">
-          <input type="checkbox" tabindex="0" class="hidden"
-                 id="EnableTextWrap"
-                 v-model="localConfig.enableTextWrap" />
-          <label for="EnableTextWrap">Enable Text wrap</label>
-        </div>
+  <div class="field">
+    <div class="ui toggle checkbox">
+      <input type="checkbox" tabindex="0" class="hidden"
+             id="EnableTextWrap"
+             v-model="localConfig.lineWrapping" />
+      <label for="EnableTextWrap">Enable Text wrap</label>
+    </div>
+  </div>
+
+  <div class="inline fields">
+    <div class="field">
+      <label>
+        {{ $t('Indent') }}
+      </label>
+
+      <div class="ui radio checkbox">
+        <input type="radio" name="indentStyle" value="tab" tabindex="0" class="hidden"
+               v-model="localConfig.indent.mode">
+        <label>
+          {{ $t('Tab') }}
+        </label>
       </div>
 
-      <div class="field">
-        <label>Tab type</label>
-
+      <div class="ui radio checkbox">
+        <input type="radio" name="indentStyle" value="space" tabindex="0" class="hidden"
+               v-model="localConfig.indent.mode">
+        <label>
+          {{ $t('Space') }}
+        </label>
       </div>
+    </div>
+    
+    <div class="field" 
+         v-if="localConfig.indent.mode === 'space'">
+      <label for="CodeMirrorSpaceSize">
+        {{ $t('Size') }}
+      </label>
+      <input type="number" min="0" max="4"
+             v-model="localConfig.indent.size" />
+      
+    </div>
+    
+    
+    
+  </div>
 
 </div>

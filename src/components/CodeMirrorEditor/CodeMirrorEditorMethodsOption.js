@@ -38,4 +38,12 @@ export default function (CodeMirrorEditor) {
 
     //console.log(this.codemirror$el)
   }
+  
+  CodeMirrorEditor.methods.setOption = function (key, value) {
+
+    setTimeout(() => {
+      this.codemirror.setOption(key, value)
+    }, 100)
+
+  }
 }

@@ -27,7 +27,7 @@ module.exports = function (Component) {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, ".replace-panel[data-v-8d37a762] {\n  background-color: #e1f7f7;\n  border-top: 1px solid #10a3a3;\n  padding-bottom: 0.5rem;\n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n}\n.replace-panel .close-icon[data-v-8d37a762] {\n  float: right;\n  cursor: pointer;\n}\n.replace-panel .field[data-v-8d37a762] {\n  clear: none !important;\n}\n.replace-panel label[data-v-8d37a762] {\n  width: 6rem !important;\n  display: inline-block;\n  text-align: right;\n  user-select: none;\n  cursor: pointer !important;\n}\n.replace-panel .string-to-search-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 1rem) !important;\n}\n.replace-panel .string-to-search-input-container[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 2rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 1rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select.has-undo-button .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-undo-button .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem) !important;\n}\n.replace-panel select[data-v-8d37a762] {\n  width: 8rem;\n  padding-top: 0 !important;\n  padding-bottom: 0 !important;\n  white-space: nowrap !important;\n}\n.replace-panel .ui.icon.input input[data-v-8d37a762] {\n  padding-right: 4.5rem !important;\n}\n.replace-panel .ui.icon.input i.icon[data-v-8d37a762] {\n  cursor: pointer;\n}\n.replace-panel .ui.icon.input i.icon[data-v-8d37a762]:not(:first-of-type) {\n  right: 2em !important;\n}\n.replace-panel .checkbox label[data-v-8d37a762] {\n  width: auto !important;\n}\n.replace-panel .replace-mode-select[data-v-8d37a762] {\n  width: 8rem !important;\n}\n.replace-panel .replace-line-options-select[data-v-8d37a762] {\n  width: 8rem !important;\n}\n.replace-panel .replace-count-button[data-v-8d37a762] {\n  width: 9rem;\n  max-width: 9rem;\n  overflow-x: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  display: inline-block !important;\n  padding-left: 0.5rem !important;\n  padding-right: 0.5rem !important;\n}\n.inline.field[data-v-8d37a762] {\n  margin-top: 0.5rem !important;\n}\n.format-tool-container .format-tool-select[data-v-8d37a762] {\n  width: 13rem;\n  border-bottom-right-radius: 0 !important;\n  border-top-right-radius: 0 !important;\n}\n.format-tool-container .button[data-v-8d37a762] {\n  border-bottom-left-radius: 0 !important;\n  border-top-left-radius: 0 !important;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/PWA-Plain-Text-Editor/src/components/ReplacePanel/ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true&","ReplacePanel.less"],"names":[],"mappings":"AAAA;EAME,yBAAA;EACA,6BAAA;EAEA,sBAAA;EAEA,0BAAA;EACA,SAAA;EACA,YAAA;EACA,OAAA;ACNF;ADRA;EAkBI,YAAA;EAEA,eAAA;ACRJ;ADZA;EAwBI,sBAAA;ACTJ;ADfA;EA4BI,sBAAA;EACA,qBAAA;EACA,iBAAA;EACA,iBAAA;EACA,0BAAA;ACVJ;ADtBA;EAuCI,iDAAA;ACdJ;ADzBA;EA4CI,uDAAA;AChBJ;AD5BA;EAiDI,uDAAA;AClBJ;AD/BA;EAoDM,wDAAA;AClBN;ADqBI;EAII,+DAAA;ACtBR;ADyBM;EACE,wEAAA;ACvBR;AD2BI;EACE,iEAAA;ACzBN;AD3CA;EAyEI,WAAA;EACA,yBAAA;EACA,4BAAA;EACA,8BAAA;AC3BJ;ADjDA;EAiFM,gCAAA;AC7BN;ADpDA;EAqFM,eAAA;AC9BN;ADvDA;EAwFM,qBAAA;AC9BN;AD1DA;EA6FI,sBAAA;AChCJ;AD7DA;EAkGI,sBAAA;AClCJ;ADhEA;EAqGI,sBAAA;AClCJ;ADnEA;EAyGI,WAAA;EACA,eAAA;EACA,kBAAA;EACA,uBAAA;EACA,mBAAA;EACA,gCAAA;EAEA,+BAAA;EACA,gCAAA;ACpCJ;ADwCA;EACE,6BAAA;ACtCF;ADyCA;EAEI,YAAA;EACA,wCAAA;EACA,qCAAA;ACxCJ;ADoCA;EAQI,uCAAA;EACA,oCAAA;ACzCJ","file":"ReplacePanel.less","sourcesContent":[".replace-panel {\n  @labelWidth: 6rem;\n  @ReplaceModeSelectWidth: 8rem;\n  @ReplaceLineModeSelectWidth: 8rem;\n  @ReplaceButtonWidth: 9rem;\n  @UndoButtonWidth: 2.5rem;\n  background-color: #e1f7f7;\n  border-top: 1px solid #10a3a3;\n  //padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  \n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n  \n  \n  .close-icon {\n    float: right;\n    //margin-top: 1rem;\n    cursor: pointer;\n  }\n  \n  .field {\n    clear: none !important; \n  }\n  \n  label {\n    width: @labelWidth !important;\n    display: inline-block;\n    text-align: right;\n    user-select: none;\n    cursor: pointer !important;\n  }\n  \n  //@closePanelIconWidth: 1rem;\n  @closePanelIconWidth: 0rem;\n  \n  .string-to-search-input {\n    width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem) !important;\n    \n  }\n  \n  .string-to-search-input-container {\n    width: calc(100% - @labelWidth - @closePanelIconWidth - 2rem - 1px) !important;\n  }\n  \n  .string-to-replace-with-input-container {\n    \n    width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem - 1px) !important;\n    \n    .string-to-replace-with-input {\n      width: calc(100% - @labelWidth - @closePanelIconWidth - 3rem - @ReplaceButtonWidth) !important;\n    }\n    \n    &.has-replace-line-options-select {\n      //width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem - @ReplaceLineModeSelectWidth) !important;\n      \n      .string-to-replace-with-input {\n        width: calc(100% - @labelWidth - @closePanelIconWidth - 3rem - @ReplaceButtonWidth - @ReplaceLineModeSelectWidth) !important;\n      }\n      \n      &.has-undo-button .string-to-replace-with-input {\n        width: calc(100% - @labelWidth - @closePanelIconWidth - 4rem - @UndoButtonWidth - @ReplaceButtonWidth - @ReplaceLineModeSelectWidth) !important;\n      }\n    }\n    \n    &.has-undo-button .string-to-replace-with-input {\n      width: calc(100% - @labelWidth - @closePanelIconWidth - 4rem - @UndoButtonWidth - @ReplaceButtonWidth) !important;\n    }\n  } \n  \n  select {\n    width: 8rem;\n    padding-top: 0 !important;\n    padding-bottom: 0 !important;\n    white-space: nowrap !important;\n  }\n  \n  .ui.icon.input {\n    input {\n      padding-right: 4.5rem !important;\n    }\n    \n    i.icon {\n      cursor: pointer;\n    }\n    i.icon:not(:first-of-type) {\n      right: 2em !important;\n    }\n  }\n  \n  .checkbox label {\n    width: auto !important;\n    //padding-left: 0 !important;\n  }\n  \n  .replace-mode-select {\n    width: @ReplaceModeSelectWidth !important;\n  }\n  .replace-line-options-select {\n    width: @ReplaceLineModeSelectWidth !important;\n  }\n  \n  .replace-count-button {\n    width: @ReplaceButtonWidth;\n    max-width: @ReplaceButtonWidth;\n    overflow-x: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    display: inline-block !important;\n    \n    padding-left: 0.5rem !important;\n    padding-right: 0.5rem !important;\n  }\n}\n\n.inline.field {\n  margin-top: 0.5rem !important;\n}\n\n.format-tool-container {\n  .format-tool-select {\n    width: 13rem;\n    border-bottom-right-radius: 0 !important;\n    border-top-right-radius: 0 !important;\n  }\n  \n  .button {\n    border-bottom-left-radius: 0 !important;\n    border-top-left-radius: 0 !important;\n  }\n}\n  ",".replace-panel {\n  background-color: #e1f7f7;\n  border-top: 1px solid #10a3a3;\n  padding-bottom: 0.5rem;\n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n}\n.replace-panel .close-icon {\n  float: right;\n  cursor: pointer;\n}\n.replace-panel .field {\n  clear: none !important;\n}\n.replace-panel label {\n  width: 6rem !important;\n  display: inline-block;\n  text-align: right;\n  user-select: none;\n  cursor: pointer !important;\n}\n.replace-panel .string-to-search-input {\n  width: calc(100% - 6rem - 0rem - 1rem) !important;\n}\n.replace-panel .string-to-search-input-container {\n  width: calc(100% - 6rem - 0rem - 2rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container {\n  width: calc(100% - 6rem - 0rem - 1rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select.has-undo-button .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-undo-button .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem) !important;\n}\n.replace-panel select {\n  width: 8rem;\n  padding-top: 0 !important;\n  padding-bottom: 0 !important;\n  white-space: nowrap !important;\n}\n.replace-panel .ui.icon.input input {\n  padding-right: 4.5rem !important;\n}\n.replace-panel .ui.icon.input i.icon {\n  cursor: pointer;\n}\n.replace-panel .ui.icon.input i.icon:not(:first-of-type) {\n  right: 2em !important;\n}\n.replace-panel .checkbox label {\n  width: auto !important;\n}\n.replace-panel .replace-mode-select {\n  width: 8rem !important;\n}\n.replace-panel .replace-line-options-select {\n  width: 8rem !important;\n}\n.replace-panel .replace-count-button {\n  width: 9rem;\n  max-width: 9rem;\n  overflow-x: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  display: inline-block !important;\n  padding-left: 0.5rem !important;\n  padding-right: 0.5rem !important;\n}\n.inline.field {\n  margin-top: 0.5rem !important;\n}\n.format-tool-container .format-tool-select {\n  width: 13rem;\n  border-bottom-right-radius: 0 !important;\n  border-top-right-radius: 0 !important;\n}\n.format-tool-container .button {\n  border-bottom-left-radius: 0 !important;\n  border-top-left-radius: 0 !important;\n}\n"]}]);
+exports.push([module.i, ".replace-panel[data-v-8d37a762] {\n  background-color: #e1f7f7;\n  border-top: 1px solid #10a3a3;\n  padding-bottom: 0.5rem;\n  height: 10.5rem;\n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n  z-index: 9;\n}\n.replace-panel .close-icon[data-v-8d37a762] {\n  float: right;\n  cursor: pointer;\n}\n.replace-panel .field[data-v-8d37a762] {\n  clear: none !important;\n}\n.replace-panel label[data-v-8d37a762] {\n  width: 6rem !important;\n  display: inline-block;\n  text-align: right;\n  user-select: none;\n  cursor: pointer !important;\n}\n.replace-panel .string-to-search-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 1rem) !important;\n}\n.replace-panel .string-to-search-input-container[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 2rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 1rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select.has-undo-button .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-undo-button .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem) !important;\n}\n.replace-panel select[data-v-8d37a762] {\n  width: 8rem;\n  padding-top: 0 !important;\n  padding-bottom: 0 !important;\n  white-space: nowrap !important;\n}\n.replace-panel .ui.icon.input input[data-v-8d37a762] {\n  padding-right: 4.5rem !important;\n}\n.replace-panel .ui.icon.input i.icon[data-v-8d37a762] {\n  cursor: pointer;\n}\n.replace-panel .ui.icon.input i.icon[data-v-8d37a762]:not(:first-of-type) {\n  right: 2em !important;\n}\n.replace-panel .checkbox label[data-v-8d37a762] {\n  width: auto !important;\n}\n.replace-panel .replace-mode-select[data-v-8d37a762] {\n  width: 8rem !important;\n}\n.replace-panel .replace-line-options-select[data-v-8d37a762] {\n  width: 8rem !important;\n}\n.replace-panel .replace-count-button[data-v-8d37a762] {\n  width: 9rem;\n  max-width: 9rem;\n  overflow-x: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  display: inline-block !important;\n  padding-left: 0.5rem !important;\n  padding-right: 0.5rem !important;\n}\n.inline.field[data-v-8d37a762] {\n  margin-top: 0.5rem !important;\n  margin-bottom: 0.5rem !important;\n}\n.format-tool-container .format-tool-select[data-v-8d37a762] {\n  width: 13rem;\n  border-bottom-right-radius: 0 !important;\n  border-top-right-radius: 0 !important;\n}\n.format-tool-container .button[data-v-8d37a762] {\n  border-bottom-left-radius: 0 !important;\n  border-top-left-radius: 0 !important;\n}\n", "",{"version":3,"sources":["D:/xampp/htdocs/projects-html5/PWA-Plain-Text-Editor/src/components/ReplacePanel/ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true&","ReplacePanel.less"],"names":[],"mappings":"AAAA;EAME,yBAAA;EACA,6BAAA;EAEA,sBAAA;EAEA,eAAA;EAEA,0BAAA;EACA,SAAA;EACA,YAAA;EACA,OAAA;EACA,UAAA;ACPF;ADVA;EAoBI,YAAA;EAEA,eAAA;ACRJ;ADdA;EA0BI,sBAAA;ACTJ;ADjBA;EA8BI,sBAAA;EACA,qBAAA;EACA,iBAAA;EACA,iBAAA;EACA,0BAAA;ACVJ;ADxBA;EAyCI,iDAAA;ACdJ;AD3BA;EA8CI,uDAAA;AChBJ;AD9BA;EAmDI,uDAAA;AClBJ;ADjCA;EAsDM,wDAAA;AClBN;ADqBI;EAII,+DAAA;ACtBR;ADyBM;EACE,wEAAA;ACvBR;AD2BI;EACE,iEAAA;ACzBN;AD7CA;EA2EI,WAAA;EACA,yBAAA;EACA,4BAAA;EACA,8BAAA;AC3BJ;ADnDA;EAmFM,gCAAA;AC7BN;ADtDA;EAuFM,eAAA;AC9BN;ADzDA;EA0FM,qBAAA;AC9BN;AD5DA;EA+FI,sBAAA;AChCJ;AD/DA;EAoGI,sBAAA;AClCJ;ADlEA;EAuGI,sBAAA;AClCJ;ADrEA;EA2GI,WAAA;EACA,eAAA;EACA,kBAAA;EACA,uBAAA;EACA,mBAAA;EACA,gCAAA;EAEA,+BAAA;EACA,gCAAA;ACpCJ;ADwCA;EACE,6BAAA;EACA,gCAAA;ACtCF;ADyCA;EAEI,YAAA;EACA,wCAAA;EACA,qCAAA;ACxCJ;ADoCA;EAQI,uCAAA;EACA,oCAAA;ACzCJ","file":"ReplacePanel.less","sourcesContent":[".replace-panel {\n  @labelWidth: 6rem;\n  @ReplaceModeSelectWidth: 8rem;\n  @ReplaceLineModeSelectWidth: 8rem;\n  @ReplaceButtonWidth: 9rem;\n  @UndoButtonWidth: 2.5rem;\n  background-color: #e1f7f7;\n  border-top: 1px solid #10a3a3;\n  //padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  \n  height: 10.5rem;\n  \n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n  z-index: 9;\n  \n  .close-icon {\n    float: right;\n    //margin-top: 1rem;\n    cursor: pointer;\n  }\n  \n  .field {\n    clear: none !important; \n  }\n  \n  label {\n    width: @labelWidth !important;\n    display: inline-block;\n    text-align: right;\n    user-select: none;\n    cursor: pointer !important;\n  }\n  \n  //@closePanelIconWidth: 1rem;\n  @closePanelIconWidth: 0rem;\n  \n  .string-to-search-input {\n    width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem) !important;\n    \n  }\n  \n  .string-to-search-input-container {\n    width: calc(100% - @labelWidth - @closePanelIconWidth - 2rem - 1px) !important;\n  }\n  \n  .string-to-replace-with-input-container {\n    \n    width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem - 1px) !important;\n    \n    .string-to-replace-with-input {\n      width: calc(100% - @labelWidth - @closePanelIconWidth - 3rem - @ReplaceButtonWidth) !important;\n    }\n    \n    &.has-replace-line-options-select {\n      //width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem - @ReplaceLineModeSelectWidth) !important;\n      \n      .string-to-replace-with-input {\n        width: calc(100% - @labelWidth - @closePanelIconWidth - 3rem - @ReplaceButtonWidth - @ReplaceLineModeSelectWidth) !important;\n      }\n      \n      &.has-undo-button .string-to-replace-with-input {\n        width: calc(100% - @labelWidth - @closePanelIconWidth - 4rem - @UndoButtonWidth - @ReplaceButtonWidth - @ReplaceLineModeSelectWidth) !important;\n      }\n    }\n    \n    &.has-undo-button .string-to-replace-with-input {\n      width: calc(100% - @labelWidth - @closePanelIconWidth - 4rem - @UndoButtonWidth - @ReplaceButtonWidth) !important;\n    }\n  } \n  \n  select {\n    width: 8rem;\n    padding-top: 0 !important;\n    padding-bottom: 0 !important;\n    white-space: nowrap !important;\n  }\n  \n  .ui.icon.input {\n    input {\n      padding-right: 4.5rem !important;\n    }\n    \n    i.icon {\n      cursor: pointer;\n    }\n    i.icon:not(:first-of-type) {\n      right: 2em !important;\n    }\n  }\n  \n  .checkbox label {\n    width: auto !important;\n    //padding-left: 0 !important;\n  }\n  \n  .replace-mode-select {\n    width: @ReplaceModeSelectWidth !important;\n  }\n  .replace-line-options-select {\n    width: @ReplaceLineModeSelectWidth !important;\n  }\n  \n  .replace-count-button {\n    width: @ReplaceButtonWidth;\n    max-width: @ReplaceButtonWidth;\n    overflow-x: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    display: inline-block !important;\n    \n    padding-left: 0.5rem !important;\n    padding-right: 0.5rem !important;\n  }\n}\n\n.inline.field {\n  margin-top: 0.5rem !important;\n  margin-bottom: 0.5rem !important;\n}\n\n.format-tool-container {\n  .format-tool-select {\n    width: 13rem;\n    border-bottom-right-radius: 0 !important;\n    border-top-right-radius: 0 !important;\n  }\n  \n  .button {\n    border-bottom-left-radius: 0 !important;\n    border-top-left-radius: 0 !important;\n  }\n}\n  ",".replace-panel {\n  background-color: #e1f7f7;\n  border-top: 1px solid #10a3a3;\n  padding-bottom: 0.5rem;\n  height: 10.5rem;\n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n  z-index: 9;\n}\n.replace-panel .close-icon {\n  float: right;\n  cursor: pointer;\n}\n.replace-panel .field {\n  clear: none !important;\n}\n.replace-panel label {\n  width: 6rem !important;\n  display: inline-block;\n  text-align: right;\n  user-select: none;\n  cursor: pointer !important;\n}\n.replace-panel .string-to-search-input {\n  width: calc(100% - 6rem - 0rem - 1rem) !important;\n}\n.replace-panel .string-to-search-input-container {\n  width: calc(100% - 6rem - 0rem - 2rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container {\n  width: calc(100% - 6rem - 0rem - 1rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select.has-undo-button .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-undo-button .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem) !important;\n}\n.replace-panel select {\n  width: 8rem;\n  padding-top: 0 !important;\n  padding-bottom: 0 !important;\n  white-space: nowrap !important;\n}\n.replace-panel .ui.icon.input input {\n  padding-right: 4.5rem !important;\n}\n.replace-panel .ui.icon.input i.icon {\n  cursor: pointer;\n}\n.replace-panel .ui.icon.input i.icon:not(:first-of-type) {\n  right: 2em !important;\n}\n.replace-panel .checkbox label {\n  width: auto !important;\n}\n.replace-panel .replace-mode-select {\n  width: 8rem !important;\n}\n.replace-panel .replace-line-options-select {\n  width: 8rem !important;\n}\n.replace-panel .replace-count-button {\n  width: 9rem;\n  max-width: 9rem;\n  overflow-x: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  display: inline-block !important;\n  padding-left: 0.5rem !important;\n  padding-right: 0.5rem !important;\n}\n.inline.field {\n  margin-top: 0.5rem !important;\n  margin-bottom: 0.5rem !important;\n}\n.format-tool-container .format-tool-select {\n  width: 13rem;\n  border-bottom-right-radius: 0 !important;\n  border-top-right-radius: 0 !important;\n}\n.format-tool-container .button {\n  border-bottom-left-radius: 0 !important;\n  border-top-left-radius: 0 !important;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -153,80 +153,214 @@ var render = function() {
               [_c("i", { staticClass: "long arrow alternate right icon" })]
             )
           ]
-        ),
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "inline field" }, [
+        _c("label", { attrs: { for: "stringToReplaceWith" } }, [
+          _vm._v("Replace with")
+        ]),
         _vm._v(" "),
-        _c("div", { staticClass: "inline field" }, [
-          _c("label", { attrs: { for: "stringToReplaceWith" } }, [
-            _vm._v("Replace with")
-          ]),
+        _c(
+          "div",
+          {
+            staticClass:
+              "ui action icon input string-to-replace-with-input-container",
+            class: _vm.computedReplaceInputClassName
+          },
+          [
+            _c(
+              "div",
+              { staticClass: "ui icon input string-to-replace-with-input" },
+              [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.localConfig.stringToReplaceWith,
+                      expression: "localConfig.stringToReplaceWith"
+                    }
+                  ],
+                  ref: "ReplaceInput",
+                  attrs: {
+                    type: "text",
+                    placeholder: "Replace with...",
+                    id: "stringToReplaceWith"
+                  },
+                  domProps: { value: _vm.localConfig.stringToReplaceWith },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.localConfig,
+                        "stringToReplaceWith",
+                        $event.target.value
+                      )
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("i", {
+                  staticClass: "link paragraph icon",
+                  attrs: { titl: "New line" },
+                  on: {
+                    click: function($event) {
+                      _vm.localConfig.stringToReplaceWith =
+                        _vm.localConfig.stringToReplaceWith + "\\n"
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _vm.localConfig.stringToReplaceWith
+                  ? _c("i", {
+                      staticClass: "link close icon",
+                      attrs: { titl: "Clear" },
+                      on: {
+                        click: function($event) {
+                          _vm.localConfig.stringToReplaceWith = ""
+                        }
+                      }
+                    })
+                  : _vm._e()
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.localConfig.replaceMode,
+                    expression: "localConfig.replaceMode"
+                  }
+                ],
+                staticClass:
+                  "ui compact selection dropdown replace-mode-select",
+                on: {
+                  change: function($event) {
+                    var $$selectedVal = Array.prototype.filter
+                      .call($event.target.options, function(o) {
+                        return o.selected
+                      })
+                      .map(function(o) {
+                        var val = "_value" in o ? o._value : o.value
+                        return val
+                      })
+                    _vm.$set(
+                      _vm.localConfig,
+                      "replaceMode",
+                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                    )
+                  }
+                }
+              },
+              [
+                _c("option", { attrs: { selected: "", value: "regex" } }, [
+                  _vm._v("Regex")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "raw" } }, [_vm._v("Raw")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "line" } }, [_vm._v("Line")])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.localConfig.replaceLineOptions.mode,
+                    expression: "localConfig.replaceLineOptions.mode"
+                  },
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.showReplaceLineOptionsSelect,
+                    expression: "showReplaceLineOptionsSelect"
+                  }
+                ],
+                staticClass:
+                  "ui compact selection dropdown replace-line-options-select",
+                on: {
+                  change: function($event) {
+                    var $$selectedVal = Array.prototype.filter
+                      .call($event.target.options, function(o) {
+                        return o.selected
+                      })
+                      .map(function(o) {
+                        var val = "_value" in o ? o._value : o.value
+                        return val
+                      })
+                    _vm.$set(
+                      _vm.localConfig.replaceLineOptions,
+                      "mode",
+                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                    )
+                  }
+                }
+              },
+              [
+                _c("option", { attrs: { value: "prefix" } }, [
+                  _vm._v("Prefix")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "suffix" } }, [
+                  _vm._v("Suffix")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "first" } }, [_vm._v("First")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "last" } }, [_vm._v("Last")])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "ui button replace-count-button",
+                class: {
+                  disabled: _vm.isReplaceDisabled,
+                  positive: !_vm.isReplaceDisabled
+                },
+                attrs: { title: _vm.computedReplaceButtonTitle },
+                on: { click: _vm.doReplace }
+              },
+              [
+                _vm._v(
+                  "\n        " +
+                    _vm._s(_vm.computedReplaceButtonText) +
+                    "\n      "
+                )
+              ]
+            ),
+            _vm._v(" "),
+            !_vm.isUndoDisabled
+              ? _c(
+                  "div",
+                  { staticClass: "ui mini button", on: { click: _vm.undo } },
+                  [_c("i", { staticClass: "undo icon" })]
+                )
+              : _vm._e()
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "inline fields" }, [
+        _c("div", { staticClass: "field" }, [
+          _c("label", [_vm._v("Format")]),
           _vm._v(" "),
           _c(
             "div",
-            {
-              staticClass:
-                "ui action icon input string-to-replace-with-input-container",
-              class: _vm.computedReplaceInputClassName
-            },
+            { staticClass: "ui action icon input format-tool-container" },
             [
-              _c(
-                "div",
-                { staticClass: "ui icon input string-to-replace-with-input" },
-                [
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.localConfig.stringToReplaceWith,
-                        expression: "localConfig.stringToReplaceWith"
-                      }
-                    ],
-                    ref: "ReplaceInput",
-                    attrs: {
-                      type: "text",
-                      placeholder: "Replace with...",
-                      id: "stringToReplaceWith"
-                    },
-                    domProps: { value: _vm.localConfig.stringToReplaceWith },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(
-                          _vm.localConfig,
-                          "stringToReplaceWith",
-                          $event.target.value
-                        )
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("i", {
-                    staticClass: "link paragraph icon",
-                    attrs: { titl: "New line" },
-                    on: {
-                      click: function($event) {
-                        _vm.localConfig.stringToReplaceWith =
-                          _vm.localConfig.stringToReplaceWith + "\\n"
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _vm.localConfig.stringToReplaceWith
-                    ? _c("i", {
-                        staticClass: "link close icon",
-                        attrs: { titl: "Clear" },
-                        on: {
-                          click: function($event) {
-                            _vm.localConfig.stringToReplaceWith = ""
-                          }
-                        }
-                      })
-                    : _vm._e()
-                ]
-              ),
-              _vm._v(" "),
               _c(
                 "select",
                 {
@@ -234,12 +368,12 @@ var render = function() {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.localConfig.replaceMode,
-                      expression: "localConfig.replaceMode"
+                      value: _vm.localConfig.formatTool,
+                      expression: "localConfig.formatTool"
                     }
                   ],
                   staticClass:
-                    "ui compact selection dropdown replace-mode-select",
+                    "ui compact selection dropdown format-tool-select",
                   on: {
                     change: function($event) {
                       var $$selectedVal = Array.prototype.filter
@@ -252,7 +386,7 @@ var render = function() {
                         })
                       _vm.$set(
                         _vm.localConfig,
-                        "replaceMode",
+                        "formatTool",
                         $event.target.multiple
                           ? $$selectedVal
                           : $$selectedVal[0]
@@ -261,235 +395,95 @@ var render = function() {
                   }
                 },
                 [
-                  _c("option", { attrs: { selected: "", value: "regex" } }, [
-                    _vm._v("Regex")
+                  _c("optgroup", { attrs: { label: "Trim" } }, [
+                    _c(
+                      "option",
+                      {
+                        attrs: {
+                          value: "lines-trim",
+                          disabled: _vm.isTrimDisabled
+                        }
+                      },
+                      [_vm._v("Lines Trim")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "option",
+                      {
+                        attrs: {
+                          value: "lines-ltrim",
+                          disabled: _vm.isLTrimDisabled
+                        }
+                      },
+                      [_vm._v("Lines Left Trim")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "option",
+                      {
+                        attrs: {
+                          value: "lines-rtrim",
+                          disabled: _vm.isRTrimDisabled
+                        }
+                      },
+                      [_vm._v("Lines Right Trim")]
+                    )
                   ]),
                   _vm._v(" "),
-                  _c("option", { attrs: { value: "raw" } }, [_vm._v("Raw")]),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "line" } }, [_vm._v("Line")])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "select",
-                {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.localConfig.replaceLineOptions.mode,
-                      expression: "localConfig.replaceLineOptions.mode"
-                    },
-                    {
-                      name: "show",
-                      rawName: "v-show",
-                      value: _vm.showReplaceLineOptionsSelect,
-                      expression: "showReplaceLineOptionsSelect"
-                    }
-                  ],
-                  staticClass:
-                    "ui compact selection dropdown replace-line-options-select",
-                  on: {
-                    change: function($event) {
-                      var $$selectedVal = Array.prototype.filter
-                        .call($event.target.options, function(o) {
-                          return o.selected
-                        })
-                        .map(function(o) {
-                          var val = "_value" in o ? o._value : o.value
-                          return val
-                        })
-                      _vm.$set(
-                        _vm.localConfig.replaceLineOptions,
-                        "mode",
-                        $event.target.multiple
-                          ? $$selectedVal
-                          : $$selectedVal[0]
-                      )
-                    }
-                  }
-                },
-                [
-                  _c("option", { attrs: { value: "prefix" } }, [
-                    _vm._v("Prefix")
-                  ]),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "suffix" } }, [
-                    _vm._v("Suffix")
-                  ]),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "first" } }, [
-                    _vm._v("First")
-                  ]),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "last" } }, [_vm._v("Last")])
+                  _c("optgroup", { attrs: { label: "Compress" } }, [
+                    _c(
+                      "option",
+                      {
+                        attrs: {
+                          value: "code-minifiy",
+                          disabled: _vm.isMinifyDisabled
+                        }
+                      },
+                      [_vm._v("Minify")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "option",
+                      {
+                        attrs: {
+                          value: "code-beautify",
+                          disabled: _vm.isBeautifyDisabled
+                        }
+                      },
+                      [_vm._v("Beautify")]
+                    )
+                  ])
                 ]
               ),
               _vm._v(" "),
               _c(
                 "div",
                 {
-                  staticClass: "ui button replace-count-button",
-                  class: {
-                    disabled: _vm.isReplaceDisabled,
-                    positive: !_vm.isReplaceDisabled
-                  },
-                  attrs: { title: _vm.computedReplaceButtonTitle },
-                  on: { click: _vm.doReplace }
+                  staticClass: "ui button",
+                  class: _vm.computedFormatActionButtonClassNameList,
+                  on: { click: _vm.doFormat }
                 },
-                [
-                  _vm._v(
-                    "\n          " +
-                      _vm._s(_vm.computedReplaceButtonText) +
-                      "\n        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              !_vm.isUndoDisabled
-                ? _c(
-                    "div",
-                    { staticClass: "ui mini button", on: { click: _vm.undo } },
-                    [_c("i", { staticClass: "undo icon" })]
-                  )
-                : _vm._e()
+                [_vm._v("\n          Format\n        ")]
+              )
             ]
           )
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "inline fields" }, [
-          _c("div", { staticClass: "field" }, [
-            _c("label", [_vm._v("Format")]),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "ui action icon input format-tool-container" },
-              [
-                _c(
-                  "select",
-                  {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.localConfig.formatTool,
-                        expression: "localConfig.formatTool"
-                      }
-                    ],
-                    staticClass:
-                      "ui compact selection dropdown format-tool-select",
-                    on: {
-                      change: function($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function(o) {
-                            return o.selected
-                          })
-                          .map(function(o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.$set(
-                          _vm.localConfig,
-                          "formatTool",
-                          $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
-                        )
-                      }
-                    }
-                  },
-                  [
-                    _c("optgroup", { attrs: { label: "Trim" } }, [
-                      _c(
-                        "option",
-                        {
-                          attrs: {
-                            value: "lines-trim",
-                            disabled: _vm.isTrimDisabled
-                          }
-                        },
-                        [_vm._v("Lines Trim")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "option",
-                        {
-                          attrs: {
-                            value: "lines-ltrim",
-                            disabled: _vm.isLTrimDisabled
-                          }
-                        },
-                        [_vm._v("Lines Left Trim")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "option",
-                        {
-                          attrs: {
-                            value: "lines-rtrim",
-                            disabled: _vm.isRTrimDisabled
-                          }
-                        },
-                        [_vm._v("Lines Right Trim")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("optgroup", { attrs: { label: "Compress" } }, [
-                      _c(
-                        "option",
-                        {
-                          attrs: {
-                            value: "code-minifiy",
-                            disabled: _vm.isMinifyDisabled
-                          }
-                        },
-                        [_vm._v("Minify")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "option",
-                        {
-                          attrs: {
-                            value: "code-beautify",
-                            disabled: _vm.isBeautifyDisabled
-                          }
-                        },
-                        [_vm._v("Beautify")]
-                      )
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "ui button",
-                    class: _vm.computedFormatActionButtonClassNameList,
-                    on: { click: _vm.doFormat }
-                  },
-                  [_vm._v("\n            Format\n          ")]
-                )
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("label", { attrs: { for: "calcCopyButton" } }, [
-            _vm._v("\n        Calculator\n      ")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "field" }, [
-            _c(
-              "div",
-              {
-                staticClass: "ui button calc-button",
-                class: _vm.computedCalcButtonClassName,
-                attrs: { id: "calcCopyButton", title: "Copy" },
-                on: { click: _vm.copyCalcResult }
-              },
-              [_c("span", [_vm._v(_vm._s(_vm.computedCalcButtonText))])]
-            )
-          ])
+        _c("label", { attrs: { for: "calcCopyButton" } }, [
+          _vm._v("\n      Calculator\n    ")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "field" }, [
+          _c(
+            "div",
+            {
+              staticClass: "ui button calc-button",
+              class: _vm.computedCalcButtonClassName,
+              attrs: { id: "calcCopyButton", title: "Copy" },
+              on: { click: _vm.copyCalcResult }
+            },
+            [_c("span", [_vm._v(_vm._s(_vm.computedCalcButtonText))])]
+          )
         ])
       ])
     ]
@@ -1061,6 +1055,8 @@ __webpack_require__.r(__webpack_exports__);
     }
     
     let mode = editor.getMode()
+    //console.log(mode)
+    
     if (mode !== 'javascript'
             && mode !== 'css'
             && mode !== 'html') {
@@ -1201,7 +1197,7 @@ __webpack_require__.r(__webpack_exports__);
       textContentModified: false,
       isModifiedAfterBeautification: true,
       //panelHeight: '10.8rem'
-      panelHeight: '12.5rem',
+      panelHeight: '10.5rem',
       calcResultCopied: false
     }
   }

@@ -11,14 +11,22 @@ export default function (CodeMirrorEditor) {
       let options = {
         ...CodeMirrorOptions
       }
+      
+      options.mode.name = this.localConfig.syntax
 
       options.extraKeys['Ctrl-Alt-F'] = (cm) => {
         this.autoFormat(cm)
       }
       
+      options.extraKeys['Tab'] = (cm) => {
+        this.inputTab(cm)
+      }
+      
       options.extraKeys['Ctrl-S'] = (cm) => {
         this.saveFile(cm)
       }
+      
+      options.lineWrapping = this.localConfig.lineWrapping
 
       //console.log(options)
 
@@ -45,6 +53,31 @@ export default function (CodeMirrorEditor) {
         return undefined
       }
       return this.$refs.cmEditor.codemirror
+    },
+    
+    computedCodeMirrorWrapperClassNameList () {
+      let list = []
+      
+      if (this.inited === true) {
+        list.push('inited')
+      }
+      
+      if (this.localConfig.lineWrapping === false) {
+        list.push('text-wrap-disabled')
+      }
+      
+      return list.join(' ')
+    },
+    computedIndentSpaces () {
+      if (this.localConfig.indent.mode === 'tab') {
+        return '\t'
+      }
+      
+      let spaces = []
+      for (let i = 0; i < this.localConfig.indent.size; i++) {
+        spaces.push(' ')
+      }
+      return spaces.join('')
     }
   }
 }

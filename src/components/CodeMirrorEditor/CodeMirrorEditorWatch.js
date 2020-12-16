@@ -12,6 +12,12 @@ export default function (CodeMirrorEditor) {
     'localConfig.stringToSearch'() {
       this.highlightText()
     },
+    'localConfig.syntax'() {
+      this.setMode(this.localConfig.syntax)
+    },
+    'localConfig.lineWrapping'() {
+      this.setOption('lineWrapping', this.localConfig.lineWrapping)
+    },
     'localConfig.textContent': async function () {
       if (this.config.inited === false) {
         return false

@@ -364,26 +364,105 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "field" }, [
+      _c("label", { attrs: { for: "CodeMirrorSyntax" } }, [
+        _vm._v("\r\n      " + _vm._s(_vm.$t("Syntax")) + "\r\n    ")
+      ]),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.localConfig.syntax,
+              expression: "localConfig.syntax"
+            }
+          ],
+          attrs: { id: "CodeMirrorSyntax" },
+          on: {
+            change: function($event) {
+              var $$selectedVal = Array.prototype.filter
+                .call($event.target.options, function(o) {
+                  return o.selected
+                })
+                .map(function(o) {
+                  var val = "_value" in o ? o._value : o.value
+                  return val
+                })
+              _vm.$set(
+                _vm.localConfig,
+                "syntax",
+                $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+              )
+            }
+          }
+        },
+        [
+          _c("option", { attrs: { value: "text/plain" } }, [_vm._v("Txt")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "text/javascript" } }, [
+            _vm._v("JavaScript")
+          ]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "text/css" } }, [
+            _vm._v("CSS / LESS")
+          ]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "text/html" } }, [
+            _vm._v("HTML / XML")
+          ]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "text/x-c++src" } }, [
+            _vm._v("C / C++")
+          ]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "text/x-csharp" } }, [_vm._v("C#")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "text/x-java" } }, [_vm._v("Java")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "text/x-perl" } }, [_vm._v("Perl")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "application/x-httpd-php" } }, [
+            _vm._v("PHP")
+          ]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "text/x-python" } }, [
+            _vm._v("Python")
+          ]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "text/x-rsrc" } }, [_vm._v("R")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "text/x-sh" } }, [
+            _vm._v("Linux Shell")
+          ]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "text/x-yaml" } }, [_vm._v("YAML")])
+        ]
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "field" }, [
       _c("div", { staticClass: "ui toggle checkbox" }, [
         _c("input", {
           directives: [
             {
               name: "model",
               rawName: "v-model",
-              value: _vm.localConfig.enableTextWrap,
-              expression: "localConfig.enableTextWrap"
+              value: _vm.localConfig.lineWrapping,
+              expression: "localConfig.lineWrapping"
             }
           ],
           staticClass: "hidden",
           attrs: { type: "checkbox", tabindex: "0", id: "EnableTextWrap" },
           domProps: {
-            checked: Array.isArray(_vm.localConfig.enableTextWrap)
-              ? _vm._i(_vm.localConfig.enableTextWrap, null) > -1
-              : _vm.localConfig.enableTextWrap
+            checked: Array.isArray(_vm.localConfig.lineWrapping)
+              ? _vm._i(_vm.localConfig.lineWrapping, null) > -1
+              : _vm.localConfig.lineWrapping
           },
           on: {
             change: function($event) {
-              var $$a = _vm.localConfig.enableTextWrap,
+              var $$a = _vm.localConfig.lineWrapping,
                 $$el = $event.target,
                 $$c = $$el.checked ? true : false
               if (Array.isArray($$a)) {
@@ -391,21 +470,17 @@ var render = function() {
                   $$i = _vm._i($$a, $$v)
                 if ($$el.checked) {
                   $$i < 0 &&
-                    _vm.$set(
-                      _vm.localConfig,
-                      "enableTextWrap",
-                      $$a.concat([$$v])
-                    )
+                    _vm.$set(_vm.localConfig, "lineWrapping", $$a.concat([$$v]))
                 } else {
                   $$i > -1 &&
                     _vm.$set(
                       _vm.localConfig,
-                      "enableTextWrap",
+                      "lineWrapping",
                       $$a.slice(0, $$i).concat($$a.slice($$i + 1))
                     )
                 }
               } else {
-                _vm.$set(_vm.localConfig, "enableTextWrap", $$c)
+                _vm.$set(_vm.localConfig, "lineWrapping", $$c)
               }
             }
           }
@@ -417,19 +492,105 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _vm._m(0)
+    _c("div", { staticClass: "inline fields" }, [
+      _c("div", { staticClass: "field" }, [
+        _c("label", [
+          _vm._v("\r\n        " + _vm._s(_vm.$t("Indent")) + "\r\n      ")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "ui radio checkbox" }, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.localConfig.indent.mode,
+                expression: "localConfig.indent.mode"
+              }
+            ],
+            staticClass: "hidden",
+            attrs: {
+              type: "radio",
+              name: "indentStyle",
+              value: "tab",
+              tabindex: "0"
+            },
+            domProps: { checked: _vm._q(_vm.localConfig.indent.mode, "tab") },
+            on: {
+              change: function($event) {
+                return _vm.$set(_vm.localConfig.indent, "mode", "tab")
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("label", [
+            _vm._v("\r\n          " + _vm._s(_vm.$t("Tab")) + "\r\n        ")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "ui radio checkbox" }, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.localConfig.indent.mode,
+                expression: "localConfig.indent.mode"
+              }
+            ],
+            staticClass: "hidden",
+            attrs: {
+              type: "radio",
+              name: "indentStyle",
+              value: "space",
+              tabindex: "0"
+            },
+            domProps: { checked: _vm._q(_vm.localConfig.indent.mode, "space") },
+            on: {
+              change: function($event) {
+                return _vm.$set(_vm.localConfig.indent, "mode", "space")
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("label", [
+            _vm._v("\r\n          " + _vm._s(_vm.$t("Space")) + "\r\n        ")
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _vm.localConfig.indent.mode === "space"
+        ? _c("div", { staticClass: "field" }, [
+            _c("label", { attrs: { for: "CodeMirrorSpaceSize" } }, [
+              _vm._v("\r\n        " + _vm._s(_vm.$t("Size")) + "\r\n      ")
+            ]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.localConfig.indent.size,
+                  expression: "localConfig.indent.size"
+                }
+              ],
+              attrs: { type: "number", min: "0", max: "4" },
+              domProps: { value: _vm.localConfig.indent.size },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.localConfig.indent, "size", $event.target.value)
+                }
+              }
+            })
+          ])
+        : _vm._e()
+    ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "field" }, [
-      _c("label", [_vm._v("Tab type")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -909,6 +1070,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+
 let EditorConfiguration = {
   props: ['config', 'utils', 'localConfig'],
   data() {    
@@ -921,10 +1086,20 @@ let EditorConfiguration = {
   computed: {
   },
   watch: {
+    'config.inited' () {
+      if (this.config.inited === false) {
+        return false
+      }
+      this.initCheckbox()
+    }
   },
   mounted() {
+    //this.initCheckbox()
   },
   methods: {
+    initCheckbox () {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.$el).find('.ui.radio.checkbox').checkbox()
+    }
   } // methods
 }
 

@@ -91,8 +91,8 @@ CodeMirrorEditorMethodsOption(CodeMirrorEditor)
 import CodeMirrorEditorMethodsChange from './CodeMirrorEditorMethodsChange.js'
 CodeMirrorEditorMethodsChange(CodeMirrorEditor)
 
-import CodeMirrorEditorMethodsAutoFormat from './CodeMirrorEditorMethodsAutoFormat.js'
-CodeMirrorEditorMethodsAutoFormat(CodeMirrorEditor)
+import CodeMirrorEditorMethodsFormat from './CodeMirrorEditorMethodsFormat.js'
+CodeMirrorEditorMethodsFormat(CodeMirrorEditor)
 
 import CodeMirrorEditorMethodsCursor from './CodeMirrorEditorMethodsCursor.js'
 CodeMirrorEditorMethodsCursor(CodeMirrorEditor)

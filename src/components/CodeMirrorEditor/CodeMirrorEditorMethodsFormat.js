@@ -27,9 +27,13 @@ export default function (CodeMirrorEditor) {
       cm.execCommand('selectAll')
       selection = cm.getSelection()
     }
-    selection = process(selection, {
-      indent_size: this.localConfig.indent.size
-    })
+    
+    let options = {}
+    if (this.localConfig.indent.mode === 'space') {
+      options.indent_size = this.localConfig.indent.size
+    }
+    
+    selection = process(selection, options)
     //selection = selection + 'AAA'
     cm.replaceSelection(selection);
     
@@ -67,5 +71,10 @@ export default function (CodeMirrorEditor) {
     }
     //selection = selection + 'AAA'
     cm.replaceSelection(selection)
+  }
+  
+  CodeMirrorEditor.methods.inputTab = function () {
+    let cm = this.codemirror
+    cm.replaceSelection(this.computedIndentSpaces, "end");
   }
 }

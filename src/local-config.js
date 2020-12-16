@@ -12,11 +12,12 @@ let localConfig = {
     rTrim: false
   },
   enableTextWrap: false,
-  tab: {
+  indent: {
     mode: 'tab',
-    spaceNumber: 2,
+    size: 2,
   },
-  formatTool: 'lines-trim'
+  formatTool: 'lines-trim',
+  syntax: 'javascript'
 }
 
 export default localConfig

@@ -7,7 +7,7 @@ export default function (ReplacePanel) {
       textContentModified: false,
       isModifiedAfterBeautification: true,
       //panelHeight: '10.8rem'
-      panelHeight: '12.5rem',
+      panelHeight: '10.5rem',
       calcResultCopied: false
     }
   }
