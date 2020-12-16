@@ -1,6 +1,6 @@
 import authorImageURL from './author.png'
 
-let StyleConfig = {
+let Author = {
   props: ['config', 'utils', 'localConfig'],
   data() {    
     this.$i18n.locale = this.config.locale
@@ -20,4 +20,4 @@ let StyleConfig = {
   } // methods
 }
 
-export default StyleConfig
+export default Author

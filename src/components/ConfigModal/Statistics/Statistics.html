@@ -1,0 +1,35 @@
+<div class="ui segment">
+  <h2 class="header" id="Statistics">
+    {{ $t('Statistics') }}
+  </h2>
+
+  <table class="ui table">
+    <tbody>
+      <tr>
+        <td>
+          {{ $t('Lines Count') }}
+        </td>
+        <td>
+          {{ lineCount }}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {{ $t('Characters Count') }}
+        </td>
+        <td>
+          {{ charCount }}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {{ $t('Characters Count without spaces') }}
+        </td>
+        <td>
+          {{ charNoSpacesCount }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

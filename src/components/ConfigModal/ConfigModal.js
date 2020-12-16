@@ -4,17 +4,21 @@ import TableOfContents from './TableOfContents/TableOfContents.vue'
 
 import Author from './Author/Author.vue'
 import EditorConfiguration from './EditorConfiguration/EditorConfiguration.vue'
+import Statistics from './Statistics/Statistics.vue'
 
 let ConfigModal = {
   props: ['config', 'localConfig', 'utils'],
   components: {
     'author': Author,
     'table-of-contents': TableOfContents,
-    EditorConfiguration
+    EditorConfiguration,
+    Statistics
   },
   data () {    
     this.$i18n.locale = this.config.locale
     return {
+      modal: null,
+      isOpened: false
     }
   },
   watch: {
@@ -27,10 +31,29 @@ let ConfigModal = {
       this.open()
     }
   },
+//  mounted () {
+//    this.init()
+//  },
   methods: {
-    open: async function () {
-      $(this.$refs.Modal).modal('show')
+    init: function () {
+      this.modal = $(this.$refs.Modal)
       
+      this.modal.modal({
+        onShow: () => {
+          //console.log('open')
+          this.isOpened = true
+        },
+        onHidden: () => {
+          this.isOpened = false
+        }
+      })
+    },
+    open: async function () {
+      if (!this.modal) {
+        this.init()
+      }
+      
+      this.modal.modal('show')
     }
   }
 }
