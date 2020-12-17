@@ -38,6 +38,9 @@ export default function (FloatActionButton) {
     else if (this.isEmailSelected) {
       list.push('envelope outline')
     }
+    else if (this.hasSelectedText) {
+      list.push('search')
+    }
     else {
       list.push('copy')
     }
@@ -49,6 +52,12 @@ export default function (FloatActionButton) {
   FloatActionButton.computed.computedMainIconText = function () {
     if (this.isURLSelected) {
       return 'Open link'
+    }
+    else if (this.isEmailSelected) {
+      return 'Send e-mail'
+    }
+    else if (this.hasSelectedText) {
+      return 'Search web'
     }
     else {
       return 'Copy'

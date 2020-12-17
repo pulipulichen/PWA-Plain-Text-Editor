@@ -28,6 +28,9 @@ export default function (FloatActionButton) {
       window.open(url, '_blank')
       this.utils.ClipboardUtils.copyPlainString(email)
     }
+    else if (this.hasSelectedText) {
+      this.searchWeb()
+    }
     else {
       let text = this.localConfig.textContent
       this.utils.ClipboardUtils.copyPlainString(text)
