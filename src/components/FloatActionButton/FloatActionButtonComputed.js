@@ -55,4 +55,7 @@ export default function (FloatActionButton) {
     }
   }
   
+  FloatActionButton.computed.hasSelectedText = function () {
+    return (this.config.selectedText && this.config.selectedText !== '')
+  }
 }

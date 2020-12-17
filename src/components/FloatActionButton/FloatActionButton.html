@@ -101,6 +101,17 @@
       </span>
     </li>
 
+    <li v-bind:title="$t('Search Web')" class="tooltip"
+        v-if="hasSelectedText"
+        v-on:click="searchWeb">
+      <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition"
+         v-bind:class="{'scale-out': !showMenu}">
+        <i class="search icon"></i>
+      </a>
+      <span class="tooltiptext" style="left: -112%;">
+        {{ $t('Search Web') }}
+      </span>
+    </li>
 
   </ul>
 </div>

@@ -69,6 +69,20 @@ export default function (FloatActionButton) {
     }
     this.closeMenu()
   }
+  
+  FloatActionButton.methods.searchWeb = function () {
+    let text = this.config.selectedText
+    
+    if (!text || text === '') {
+      this.closeMenu()
+      return false
+    }
+    
+    let url = `https://www.google.com/search?q=` + text
+    window.open(url, '_blank')
+    
+    this.closeMenu()
+  }
   /*
    formatCode () {
    this.$parent.formatCode()
