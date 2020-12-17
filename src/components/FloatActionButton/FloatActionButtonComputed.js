@@ -24,11 +24,19 @@ export default function (FloatActionButton) {
     return this.utils.URLUtils.isURL(this.config.selectedText)
   }
   
+  FloatActionButton.computed.isEmailSelected = function () {
+    //console.log(this.config.selectedText, this.utils.URLUtils.isEmail(this.config.selectedText))
+    return this.utils.URLUtils.isEmail(this.config.selectedText)
+  }
+  
   FloatActionButton.computed.computedMainIconClassNameList = function () {
     let list = []
     
     if (this.isURLSelected) {
       list.push('linkify')
+    }
+    else if (this.isEmailSelected) {
+      list.push('envelope outline')
     }
     else {
       list.push('copy')

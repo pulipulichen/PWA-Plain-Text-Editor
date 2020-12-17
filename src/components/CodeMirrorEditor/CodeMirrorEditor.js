@@ -70,13 +70,6 @@ let CodeMirrorEditor = {
       
       this.inited = true
     },
-    
-    onCodeMirrorKeyHandled (e, s) {
-      //console.log(e, s)
-      //this.$refs.cmEditor.codemirror.execCommand('autocomplete')
-      this.$refs.cmEditor.codemirror.showHint()
-      
-    }
   }
 }
 
@@ -115,5 +108,7 @@ CodeMirrorEditorMethodsDisplay(CodeMirrorEditor)
 import CodeMirrorEditorMethodsFile from './CodeMirrorEditorMethodsFile.js'
 CodeMirrorEditorMethodsFile(CodeMirrorEditor)
 
+import CodeMirrorEditorMethodsHotKey from './CodeMirrorEditorMethodsHotKey.js'
+CodeMirrorEditorMethodsHotKey(CodeMirrorEditor)
 
 export default CodeMirrorEditor

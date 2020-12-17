@@ -16,11 +16,17 @@ export default function (FloatActionButton) {
     clearTimeout(this.showMenuTimer)
     this.showMenuTimer = null
   }
-  FloatActionButton.methods.copy = function () {
+  FloatActionButton.methods.onMainIconClick = function () {
     if (this.isURLSelected) {
       let url = this.config.selectedText
       window.open(url, '_blank')
       this.utils.ClipboardUtils.copyPlainString(url)
+    }
+    else if (this.isEmailSelected) {
+      let email = this.config.selectedText
+      let url = `mailto:${email}`
+      window.open(url, '_blank')
+      this.utils.ClipboardUtils.copyPlainString(email)
     }
     else {
       let text = this.localConfig.textContent
