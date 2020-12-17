@@ -4,7 +4,13 @@ export default function (ReplacePanel) {
       return undefined
     }
     
-    let textContent = this.localConfig.textContent.trim()
+    let textContent
+    if (this.config.selectedText && this.config.selectedText !== '') {
+      textContent = this.config.selectedText
+    }
+    else {
+      textContent = this.localConfig.textContent.trim()
+    }
     this.calcResultCopied = false
 
     if (textContent.indexOf('\n') === -1) {
