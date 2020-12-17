@@ -7,8 +7,10 @@
   <a class="zoom-fab zoom-btn-large tooltip" id="zoomBtn"
      v-on:mouseover="showMenu = true"
      v-on:click="copy">
-    <i class="copy icon"></i>
-    <span class="tooltiptext" style="left: 10%">Copy</span>
+    <i v-bind:class="computedMainIconClassNameList"></i>
+    <span class="tooltiptext" style="left: 10%">
+      {{ $t(computedMainIconText) }}
+    </span>
   </a>
   <ul class="zoom-menu"
       v-bind:class="{'show': showMenu}">

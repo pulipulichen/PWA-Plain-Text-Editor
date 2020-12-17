@@ -1,6 +1,11 @@
 export default function (CodeMirrorEditor) {
-  CodeMirrorEditor.methods.onCodeMirrorCursorActivity = function () {
+  CodeMirrorEditor.methods.onCodeMirrorCursorActivity = async function () {
+    //console.log(1, this.getSelectedText())
+    
     this.saveCursorPosition()
+    
+    //console.log(1, this.selectedText())
+    this.config.selectedText = this.getSelectedText()
   }
     
   CodeMirrorEditor.methods.jumpToLine = function (i, from = 0) {
@@ -115,5 +120,10 @@ export default function (CodeMirrorEditor) {
     }
 
     return this.codemirror.getSelection()
+  }
+  
+  CodeMirrorEditor.methods.onCodeMirrorBeforeSelectionChange = function () {
+    
+    console.log(this.getSelectedText())
   }
 }

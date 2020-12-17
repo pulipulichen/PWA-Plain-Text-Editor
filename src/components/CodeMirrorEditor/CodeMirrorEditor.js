@@ -86,6 +86,9 @@ CodeMirrorEditorData(CodeMirrorEditor)
 import CodeMirrorEditorComputed from './CodeMirrorEditorComputed.js'
 CodeMirrorEditorComputed(CodeMirrorEditor)
 
+import CodeMirrorEditorComputedOptions from './CodeMirrorEditorComputedOptions.js'
+CodeMirrorEditorComputedOptions(CodeMirrorEditor)
+
 import CodeMirrorEditorWatch from './CodeMirrorEditorWatch.js'
 CodeMirrorEditorWatch(CodeMirrorEditor)
 
