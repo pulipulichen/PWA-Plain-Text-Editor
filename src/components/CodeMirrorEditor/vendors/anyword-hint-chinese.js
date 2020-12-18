@@ -1,17 +1,5 @@
 /* global CodeMirror, define */
-
-// CodeMirror, copyright (c) by Marijn Haverbeke and others
-// Distributed under an MIT license: https://codemirror.net/LICENSE
-
-(function(mod) {
-  if (typeof exports === "object" && typeof module === "object") // CommonJS
-    mod(require("codemirror"));
-  else if (typeof define === "function" && define.amd) // AMD
-    define(["codemirror"], mod);
-  else // Plain browser env
-    mod(CodeMirror);
-})(function(CodeMirror) {
-  "use strict";
+import CodeMirror from 'codemirror'
 
   //var WORD = /[\w$]+/, RANGE = 500;
   var WORD = /[\w$]+|[\u4E00-\u9FFF$]+/, RANGE = 500;
@@ -41,4 +29,3 @@
     }
     return {list: list, from: CodeMirror.Pos(cur.line, start), to: CodeMirror.Pos(cur.line, end)};
   });
-});

@@ -59,6 +59,9 @@ let ConfigModal = {
       }
       
       this.modal.modal('show')
+    },
+    close () {
+      this.modal.modal('hide')
     }
   }
 }

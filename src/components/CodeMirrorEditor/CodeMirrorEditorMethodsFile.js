@@ -10,7 +10,9 @@ export default function (CodeMirrorEditor) {
     if (file) {
       this.localConfig.filename = file.filename
       this.code = file.content
+      return true
     }
+    return false
   }
     
   CodeMirrorEditor.methods.saveFile = function () {

@@ -19,12 +19,16 @@ let FileManager = {
 //    
 //  },
   methods: {
-    openFile () {
-      console.log('openFile', this.CodeMirror)
-      this.CodeMirror.openFile()
+    openFile: async function () {
+      //console.log('openFile', this.CodeMirror)
+      if (await this.CodeMirror.openFile() === true) {
+        this.$parent.close()
+      }
+      
     },
     saveFile () {
       this.CodeMirror.saveFile()
+      this.$parent.close()
     }
   }
 }
