@@ -1721,7 +1721,7 @@ component.options.__file = "src/components/CodeMirrorEditor/OpenFile/OpenFile.vu
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* global CodeMirror */
+/* global CodeMirror, define */
 
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: https://codemirror.net/LICENSE
