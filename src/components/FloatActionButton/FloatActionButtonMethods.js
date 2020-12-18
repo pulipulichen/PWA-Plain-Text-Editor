@@ -93,4 +93,10 @@ export default function (FloatActionButton) {
    }
    */
 
+   FloatActionButton.methods.initPopup = function () {
+     console.log('initPopup')
+     let $el = $(this.$el)
+     
+     
+   }
 }

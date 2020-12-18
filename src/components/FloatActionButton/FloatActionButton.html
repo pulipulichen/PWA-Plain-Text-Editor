@@ -1,17 +1,21 @@
 <div class="float-action-button zoom"
      v-on:mouseout="delayCloseMenu"
      v-on:mousein="clearDelayCloseMenu"
+     v-on:mouseover="initPopup"
      v-bind:style="computedStyle"
      v-bind:class="computedClassNameList"
      v-show="config.inited === true">
   <a class="zoom-fab zoom-btn-large tooltip" id="zoomBtn"
      v-bind:title="$t(computedMainIconText)"
      v-on:mouseover="showMenu = true"
-     v-on:click="onMainIconClick">
+     v-on:click="onMainIconClick"
+     v-bind:data-content="$t(computedMainIconText)">
     <i v-bind:class="computedMainIconClassNameList"></i>
+    <!--
     <span class="tooltiptext" style="left: 10%">
       {{ $t(computedMainIconText) }}
     </span>
+    -->
   </a>
   <ul class="zoom-menu"
       v-bind:class="{'show': showMenu}">

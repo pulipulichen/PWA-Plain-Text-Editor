@@ -89,6 +89,9 @@ export default {
     else if (ext === 'rsrc') {
       ext = 'R'
     }
+    else if (ext === 'plain') {
+      ext = 'txt'
+    }
     else if (ext === 'markdown') {
       ext = 'md'
     }
