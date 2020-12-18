@@ -94,9 +94,18 @@ export default function (FloatActionButton) {
    */
 
    FloatActionButton.methods.initPopup = function () {
-     console.log('initPopup')
+     //console.log('initPopup')
      let $el = $(this.$el)
      
+     let options = {
+       position: 'top center',
+       boundary: 'body'
+     }
      
+     if (this.positionBottom === false) {
+       options.position = 'bottom center'
+     }
+     
+     $el.find('.popup:not(.inited)').addClass('inited').popup(options)
    }
 }

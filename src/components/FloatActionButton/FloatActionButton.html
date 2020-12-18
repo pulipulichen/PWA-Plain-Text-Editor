@@ -5,7 +5,8 @@
      v-bind:style="computedStyle"
      v-bind:class="computedClassNameList"
      v-show="config.inited === true">
-  <a class="zoom-fab zoom-btn-large tooltip" id="zoomBtn"
+  
+  <a class="zoom-fab zoom-btn-large tooltip popup" id="zoomBtn"
      v-bind:title="$t(computedMainIconText)"
      v-on:mouseover="showMenu = true"
      v-on:click="onMainIconClick"
@@ -50,25 +51,31 @@
       <span class="tooltiptext">Search</span>
     </li>
     -->
-    <li v-bind:title="$t('Clear')" v-on:click="clear" class="tooltip">
-      <a class="zoom-fab zoom-btn-sm zoom-btn-person scale-transition"
+    <li v-on:click="clear" class="tooltip">
+      <a class="zoom-fab zoom-btn-sm zoom-btn-person scale-transition popup"
+         v-bind:data-content="$t('Clear')"
          v-bind:class="{'scale-out': !showMenu}">
         <i class="eraser icon"></i>
       </a>
+      <!--
       <span class="tooltiptext">
         {{ $t('Clear') }}
       </span>
+      -->
     </li>
 
-    <li v-bind:title="$t('Configuration')" class="tooltip"
+    <li class="tooltip"
         v-on:click="openConfigModal">
-      <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition"
+      <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition popup"
+         v-bind:data-content="$t('Configuration')"
          v-bind:class="{'scale-out': !showMenu}">
         <i class="cogs icon"></i>
       </a>
+      <!--
       <span class="tooltiptext" style="left: -100%;">
         {{ $t('Configuration') }}
       </span>
+      -->
     </li>
 
     <!--
@@ -82,27 +89,33 @@
     </li>      
     -->
 
-    <li v-bind:title="$t('Toggle Replace Panel')" class="tooltip"
+    <li class="tooltip"
         v-on:click="toggleReplacePanel">
-      <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition"
-         v-bind:class="{'scale-out': !showMenu}">
+      <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition popup"
+         v-bind:class="{'scale-out': !showMenu}"
+         v-bind:data-content="$t('Toggle Replace Panel')">
         <i class="edit icon"></i>
       </a>
+      <!--
       <span class="tooltiptext" style="left: -100%;">
         {{ $t('Toggle Replace Panel') }}
       </span>
+      -->
     </li>      
 
-    <li v-bind:title="$t('Change Button Position')" class="tooltip"
+    <li class="tooltip"
         v-on:click="positionBottom = !positionBottom">
-      <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition"
+      <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition popup"
+         v-bind:data-content="$t('Change Button Position')" 
          v-bind:class="{'scale-out': !showMenu}">
         <i class="arrow up icon" v-if="positionBottom"></i>
         <i class="arrow down icon" v-if="!positionBottom"></i>
       </a>
+      <!--
       <span class="tooltiptext" style="left: -112%;">
         {{ $t('Change Button Position') }}
       </span>
+      -->
     </li>
 
     <!--
