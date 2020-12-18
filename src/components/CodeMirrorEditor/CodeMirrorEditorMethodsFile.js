@@ -1,5 +1,5 @@
 import dayjs from 'dayjs'
-import cmModeUtil from './vendors/codemirror.mode-util.webpack.js'
+import cmModeUtil from './codemirror/codemirror.mode-util.webpack.js'
 
 export default function (CodeMirrorEditor) {
   CodeMirrorEditor.methods.openFile = async function () {

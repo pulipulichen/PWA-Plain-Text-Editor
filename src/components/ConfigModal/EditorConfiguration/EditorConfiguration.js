@@ -1,5 +1,5 @@
 import $ from 'jquery'
-import cmModeUtil from './../../CodeMirrorEditor/vendors/codemirror.mode-util.webpack.js'
+import cmModeUtil from './../../CodeMirrorEditor/codemirror/codemirror.mode-util.webpack.js'
 
 let EditorConfiguration = {
   props: ['config', 'utils', 'localConfig'],

@@ -1,5 +1,5 @@
 import $ from 'jquery'
-import CodeMirrorOptions from './vendors/codemirror.config.webpack.js'
+import CodeMirrorOptions from './codemirror/codemirror.config.webpack.js'
 
 export default function (CodeMirrorEditor) {
   CodeMirrorEditor.computed.editor$el = function () {

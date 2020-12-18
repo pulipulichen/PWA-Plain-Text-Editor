@@ -1,6 +1,6 @@
 /* global CodeMirror, PULI_UTILS */
 import $ from 'jquery'
-import codemirror from './vendors/codemirror.webpack.js'
+import codemirror from './codemirror/codemirror.webpack.js'
 
 import OpenFile from './OpenFile/OpenFile.vue'
 
@@ -68,7 +68,7 @@ let CodeMirrorEditor = {
       
       this.codemirror.on('drop', this.onCodeMirrorDrop);
       
-      this.initAnywordHint()
+      //this.initAnywordHint()
       this.inited = true
     },
   }

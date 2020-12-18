@@ -22,6 +22,7 @@ let localConfig = {
   syntax: 'text/javascript',
   fontSize: 16,
   filename: null,
+  enableTypewritterSound: true,
 }
 
 export default localConfig

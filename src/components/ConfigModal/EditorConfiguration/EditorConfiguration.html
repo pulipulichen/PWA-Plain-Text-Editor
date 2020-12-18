@@ -24,7 +24,18 @@
         <input type="checkbox" tabindex="0" class="hidden"
                id="EnableTextWrap"
                v-model="localConfig.lineWrapping" />
-        <label for="EnableTextWrap">Enable Text wrap</label>
+        <label for="EnableTextWrap">
+          {{ $t('Enable text wrap') }}
+        </label>
+      </div>
+      
+      <div class="ui toggle checkbox">
+        <input type="checkbox" tabindex="0" class="hidden"
+               id="EnableTypewritterSound"
+               v-model="localConfig.enableTypewritterSound" />
+        <label for="EnableTypewritterSound">
+          {{ $t('Enable typewritter sound') }}
+        </label>
       </div>
     </div>
     
