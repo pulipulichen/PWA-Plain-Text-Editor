@@ -30,7 +30,7 @@ import 'codemirror/addon/hint/show-hint.css'
 import 'codemirror/addon/hint/javascript-hint.js'
 import 'codemirror/addon/hint/html-hint.js'
 import 'codemirror/addon/hint/css-hint.js'
-import 'codemirror/addon/hint/anyword-hint.js'
+import './anyword-hint-chinese.js'
 import 'codemirror/addon/hint/sql-hint.js'
 
 // lint

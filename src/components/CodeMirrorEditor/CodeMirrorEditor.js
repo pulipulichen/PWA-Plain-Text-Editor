@@ -68,6 +68,7 @@ let CodeMirrorEditor = {
       
       this.codemirror.on('drop', this.onCodeMirrorDrop);
       
+      this.initAnywordHint()
       this.inited = true
     },
   }
