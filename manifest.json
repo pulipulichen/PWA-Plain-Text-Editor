@@ -1,21 +1,13 @@
 {
-  "name": "Responsive Mockup Frame",
-  "short_name": "MockupFrame",
+  "name": "PWA Plain TextEditor",
+  "short_name": "PlainText Editor",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#fff",
-  "description": "Frame your picture in the browser, the phone, or the tablet.",
+  "background_color": "#E1F7F7",
+  "description": "A PWA editor for plain text with search and replace funtions.",
   "icons": [{
-    "src": "img/favicon/favicon.svg",
-    "sizes": "981x981",
-    "type": "image/svg"
-  },{
-    "src": "img/favicon/favicon144.png",
-    "sizes": "144x144",
-    "type": "image/png"
-  },{
     "src": "img/favicon/favicon.png",
-    "sizes": "981x981",
+    "sizes": "512x512",
     "type": "image/png"
   },
   {
