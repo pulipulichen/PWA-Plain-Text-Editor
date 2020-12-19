@@ -51,16 +51,16 @@ export default function (FloatActionButton) {
   
   FloatActionButton.computed.computedMainIconText = function () {
     if (this.isURLSelected) {
-      return 'Open link'
+      return 'Open link (Alt+O)'
     }
     else if (this.isEmailSelected) {
-      return 'Send e-mail'
+      return 'Send e-mail (Alt+O)'
     }
     else if (this.hasSelectedText) {
-      return 'Search web'
+      return 'Search web (Alt+O)'
     }
     else {
-      return 'Copy'
+      return 'Copy (Alt+O)'
     }
   }
   

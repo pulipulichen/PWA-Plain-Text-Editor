@@ -25,6 +25,9 @@ export default function (CodeMirrorEditor) {
     'localConfig.fontSize'() {
       this.setFontSize()
     },
+    'localConfig.enableTypewritterSound' () {
+      this.TypewriterSoundEffect.setEnable(this.localConfig.enableTypewritterSound)
+    },
     'localConfig.textContent': async function () {
       if (this.config.inited === false) {
         return false

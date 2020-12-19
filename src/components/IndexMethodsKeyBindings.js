@@ -21,6 +21,9 @@ export default function (Index) {
       },
       'ctrl+h': (event, handler) => {
         this.hotkeyReplace(event)
+      },
+      'alt+o': (event, handler) => {
+        this.clickFABMainButton(event)
       }
     }
   }
@@ -104,5 +107,9 @@ export default function (Index) {
         }
       }
     })
+  }
+  
+  Index.methods.clickFABMainButton = function (event) {
+    this.$refs.FloatActionButton.onMainIconClick()
   }
 }

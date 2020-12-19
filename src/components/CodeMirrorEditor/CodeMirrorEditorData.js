@@ -1,3 +1,5 @@
+import TypewriterSoundEffect from './TypewriterSoundEffect/TypewriterSoundEffect.js'
+
 export default function (CodeMirrorEditor) {
   CodeMirrorEditor.data = function () {
     this.$i18n.locale = this.localConfig.locale
@@ -8,6 +10,7 @@ export default function (CodeMirrorEditor) {
       //editor$el: null,
       markers: [],
       code: '',
+      TypewriterSoundEffect,
       highlightClassName: 'highlight',
       changeLock: false,
       cursorPositionSaved: {
