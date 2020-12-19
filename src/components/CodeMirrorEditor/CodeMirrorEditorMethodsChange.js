@@ -16,13 +16,20 @@ export default function (CodeMirrorEditor) {
   }
   
   CodeMirrorEditor.methods.updateDocumentTitle = function () {
+    let textContentTrim = this.$parent.textContentTrim
+    if (textContentTrim === '') {
+      document.title = 'Plain Text Editor'
+      this.localConfig.filename = null
+      return false
+    }
+    
     //console.log(this.localConfig.filename)
     if (this.localConfig.filename) {
       document.title = this.localConfig.filename
       return true
     }
     
-    let textContentTrim = this.$parent.textContentTrim
+    //let textContentTrim = this.$parent.textContentTrim
     if (textContentTrim === '') {
       document.title = 'Plain Text Editor'
     } else {
