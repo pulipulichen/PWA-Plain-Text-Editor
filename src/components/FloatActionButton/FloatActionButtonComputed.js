@@ -29,6 +29,16 @@ export default function (FloatActionButton) {
     return this.utils.URLUtils.isEmail(this.config.selectedText)
   }
   
+  FloatActionButton.computed.isPuliWorkSelected = function () {
+    //console.log(this.config.selectedText, this.utils.URLUtils.isEmail(this.config.selectedText))
+    let text = this.config.selectedText
+    if (!text) {
+      text = this.localConfig.textContent
+    }
+    
+    return text.trim().startsWith('#PULI_WORK\n')
+  }
+  
   FloatActionButton.computed.computedMainIconClassNameList = function () {
     let list = []
     
@@ -37,6 +47,9 @@ export default function (FloatActionButton) {
     }
     else if (this.isEmailSelected) {
       list.push('envelope outline')
+    }
+    else if (this.isPuliWorkSelected) {
+      list.push('facebook')
     }
     else if (this.hasSelectedText) {
       list.push('search')
@@ -55,6 +68,9 @@ export default function (FloatActionButton) {
     }
     else if (this.isEmailSelected) {
       return 'Send e-mail (Alt+O)'
+    }
+    else if (this.isPuliWorkSelected) {
+      return 'Open #PULI_WORK (Alt+O)'
     }
     else if (this.hasSelectedText) {
       return 'Search web (Alt+O)'

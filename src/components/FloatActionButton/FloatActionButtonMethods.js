@@ -28,6 +28,11 @@ export default function (FloatActionButton) {
       window.open(url, '_blank')
       this.utils.ClipboardUtils.copyPlainString(email)
     }
+    else if (this.isPuliWorkSelected) {
+      let url = `https://www.facebook.com/pulipuli.chen`
+      window.open(url, '_blank') 
+      this.utils.ClipboardUtils.copyPlainString(this.config.selectedText)
+    }
     else if (this.hasSelectedText) {
       this.searchWeb()
     }
