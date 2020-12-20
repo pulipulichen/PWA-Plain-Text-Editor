@@ -7,6 +7,7 @@ let extraKeys = {
   "Ctrl-Shift-Q": 'none',
   "Ctrl-S": 'none',
   "Atl-O": 'none',
+  "Esc": 'none',
   "Ctrl-Alt-F": function (cm) {
     let mode = cm.getOption('mode').name
     

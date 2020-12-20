@@ -24,6 +24,9 @@ export default function (Index) {
       },
       'alt+o': (event, handler) => {
         this.clickFABMainButton(event)
+      },
+      'esc': (event, handler) => {
+        this.onPressEsc(event)
       }
     }
   }
@@ -111,5 +114,35 @@ export default function (Index) {
   
   Index.methods.clickFABMainButton = function (event) {
     this.$refs.FloatActionButton.onMainIconClick()
+  }
+  
+  // 連續間隔期間
+  let lastPressEscTime
+  let pressEscInterval = 2000
+  
+  Index.methods.onPressEsc = function (event) {
+    event.stopPropagation()
+    event.preventDefault()
+
+    let currentTime = (new Date()).getTime()
+    if (!lastPressEscTime
+            || (currentTime - lastPressEscTime) > pressEscInterval) {
+      lastPressEscTime = currentTime
+      return false
+    }
+
+    // 開始正式執行
+    this.localConfig.filename = null
+    if (this.localConfig.textContent !== '') {
+      this.localConfig.textContent = ''
+    }
+    else {
+      setTimeout(() => {
+        window.close()
+      }, 50)
+    }
+    
+    lastPressEscTime = null
+    return true
   }
 }
