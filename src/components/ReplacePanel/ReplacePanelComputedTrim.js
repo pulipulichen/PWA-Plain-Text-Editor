@@ -86,4 +86,20 @@ export default function (ReplacePanel) {
     }
   }
   
+  ReplacePanel.computed.hasEmptyLines = function () {
+    if (!this.textContentLines) {
+      return false
+    }
+    
+    for (let i = 0; i < this.textContentLines.length; i++) {
+      let line = this.textContentLines[i].trim()
+      
+      if (line === '') {
+        return true
+      }
+    }
+    return false
+  }
+  
+  
 }

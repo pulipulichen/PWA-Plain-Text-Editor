@@ -22,6 +22,9 @@ export default function (ReplacePanel) {
     else if (tool === 'code-beautify') {
       return this.beautifyCode()
     }
+    else if (tool === 'empty-lines-remove') {
+      return this.removeEmptyLines()
+    }
   }
   
   ReplacePanel.methods.minifiyCode = async function () {

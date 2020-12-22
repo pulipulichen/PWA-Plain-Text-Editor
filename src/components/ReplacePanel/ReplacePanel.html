@@ -110,6 +110,7 @@
             <option value="lines-trim" v-bind:disabled="isTrimDisabled">Lines Trim</option>
             <option value="lines-ltrim" v-bind:disabled="isLTrimDisabled">Lines Left Trim</option>
             <option value="lines-rtrim" v-bind:disabled="isRTrimDisabled">Lines Right Trim</option>
+            <option value="empty-lines-remove" v-bind:disabled="!hasEmptyLines">Remove Empoty Lines</option>
           </optgroup>
           <optgroup label="Compress">
             <option value="code-minifiy" v-bind:disabled="isMinifyDisabled">Minify</option>

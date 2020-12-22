@@ -43,6 +43,14 @@ export default function (ReplacePanel) {
       }
     }).join('\n')
   }
+  
+  
+  ReplacePanel.methods.removeEmptyLines = function () {
+    this.saveHistory()
+
+    this.localConfig.textContent = this.textContentLines.filter(line => line.trim() !== '').join('\n')
+  }
+  
   /*
    formatCode () {
    if (this.isFormatJSONEnabled) {
