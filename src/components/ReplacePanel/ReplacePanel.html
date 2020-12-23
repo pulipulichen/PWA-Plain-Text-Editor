@@ -58,18 +58,32 @@
 
       <select class="ui compact selection dropdown replace-mode-select"
               v-model="localConfig.replaceMode">
-        <option selected="" value="regex">Regex</option>
-        <option value="raw">Raw</option>
-        <option value="line">Line</option>
+        <option selected="" value="regex">
+          {{ $t('Regex') }}
+        </option>
+        <option value="raw">
+          {{ $t('Raw') }}
+        </option>
+        <option value="line">
+          {{ $t('Line') }}
+        </option>
       </select>
 
       <select v-model="localConfig.replaceLineOptions.mode"
               class="ui compact selection dropdown replace-line-options-select"
               v-show="showReplaceLineOptionsSelect">
-        <option value="prefix">Prefix</option>
-        <option value="suffix">Suffix</option>
-        <option value="first">First</option>
-        <option value="last">Last</option>
+        <option value="prefix">
+          {{ $t('Prefix') }}
+        </option>
+        <option value="suffix">
+          {{ $t('Suffix') }}
+        </option>
+        <option value="first">
+          {{ $t('First') }}
+        </option>
+        <option value="last">
+          {{ $t('Last') }}
+        </option>
       </select>
 
       <div class="ui button replace-count-button"
@@ -101,26 +115,43 @@
   <div class="inline fields">
 
     <div class="field">
-      <label>Format</label>
+      <label>
+        {{ $t('Format') }}
+      </label>
 
       <div class="ui action icon input format-tool-container">
         <select v-model="localConfig.formatTool"
                 class="ui compact selection dropdown format-tool-select">
           <optgroup label="Trim">
-            <option value="lines-trim" v-bind:disabled="isTrimDisabled">Lines Trim</option>
-            <option value="lines-ltrim" v-bind:disabled="isLTrimDisabled">Lines Left Trim</option>
-            <option value="lines-rtrim" v-bind:disabled="isRTrimDisabled">Lines Right Trim</option>
-            <option value="empty-lines-remove" v-bind:disabled="!hasEmptyLines">Remove Empoty Lines</option>
+            <option value="lines-trim" v-bind:disabled="isTrimDisabled">
+              {{ $t('Lines Trim') }}
+            </option>
+            <option value="lines-ltrim" v-bind:disabled="isLTrimDisabled">
+              {{ $t('Lines Left Trim') }}
+            </option>
+            <option value="lines-rtrim" v-bind:disabled="isRTrimDisabled">
+              {{ $t('Lines Right Trim') }}
+            </option>
+            <option value="empty-lines-remove" v-bind:disabled="!hasEmptyLines">
+              {{ $t('Remove Empty Lines') }}
+            </option>
+            <option value="duplicate-empty-lines-remove" v-bind:disabled="!hasEmptyLines">
+              {{ $t('Remove Duplicate Empty Lines') }}
+            </option>
           </optgroup>
           <optgroup label="Compress">
-            <option value="code-minifiy" v-bind:disabled="isMinifyDisabled">Minify</option>
-            <option value="code-beautify" v-bind:disabled="isBeautifyDisabled">Beautify</option>
+            <option value="code-minifiy" v-bind:disabled="isMinifyDisabled">
+              {{ $t('Minify') }}
+            </option>
+            <option value="code-beautify" v-bind:disabled="isBeautifyDisabled">
+              {{ $t('Beautify') }}
+            </option>
           </optgroup>
         </select>
         <div class="ui button" 
              v-bind:class="computedFormatActionButtonClassNameList"
              v-on:click="doFormat">
-          Format
+          {{ $t('Format') }}
         </div>
       </div>
 
@@ -128,7 +159,7 @@
     </div>
 
     <label for="calcCopyButton">
-      Calculator
+      {{ $t('Calculator') }}
     </label>
     <div class="field">
 

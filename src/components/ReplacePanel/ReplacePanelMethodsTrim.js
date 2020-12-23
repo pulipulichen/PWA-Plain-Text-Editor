@@ -17,6 +17,7 @@ export default function (ReplacePanel) {
 
     this.localConfig.textContent = this.textContentLines.map(line => line.trim()).join('\n')
   }
+  
   ReplacePanel.methods.ltrimTextContent = function () {
     this.saveHistory()
 
@@ -30,6 +31,7 @@ export default function (ReplacePanel) {
       }
     }).join('\n')
   }
+  
   ReplacePanel.methods.rtrimTextContent = function () {
     this.saveHistory()
 
@@ -49,6 +51,29 @@ export default function (ReplacePanel) {
     this.saveHistory()
 
     this.localConfig.textContent = this.textContentLines.filter(line => line.trim() !== '').join('\n')
+  }
+  
+  ReplacePanel.methods.removeDuplicateEmptyLines = function () {
+    this.saveHistory()
+
+    let lastIsEmptyLine = true
+    this.localConfig.textContent = this.textContentLines.filter(line => {
+      let isEmptyLine = (line.trim() === '')
+      
+      if (isEmptyLine === false) {
+        lastIsEmptyLine = false
+        return true
+      }
+      else {
+        if (lastIsEmptyLine === true) {
+          return false
+        }
+        else {
+          lastIsEmptyLine = true
+          return true
+        }
+      }
+    }).join('\n')
   }
   
   /*

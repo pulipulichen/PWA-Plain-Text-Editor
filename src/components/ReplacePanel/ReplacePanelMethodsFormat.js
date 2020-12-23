@@ -25,6 +25,9 @@ export default function (ReplacePanel) {
     else if (tool === 'empty-lines-remove') {
       return this.removeEmptyLines()
     }
+    else if (tool === 'duplicate-empty-lines-remove') {
+      return this.removeDuplicateEmptyLines()
+    }
   }
   
   ReplacePanel.methods.minifiyCode = async function () {
