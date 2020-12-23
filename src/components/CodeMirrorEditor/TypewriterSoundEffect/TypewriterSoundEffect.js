@@ -1,6 +1,6 @@
 import soundKeys from './soundKeys.js'
 
-let {soundKeyEnterURL, soundKeyAny} = soundKeys
+        let {soundKeyEnterURL, soundKeyAny} = soundKeys
 let audioEnterObject = new Audio(soundKeyEnterURL)
 let audioObjects = []
 for (let i = 0;
@@ -28,7 +28,7 @@ export default {
     }
   },
   playKeysSound: function (keyCode) {
-    if (this.localConfig.enableTypewritterSound === false) {
+    if (this.enable === false) {
       return false
     }
 
