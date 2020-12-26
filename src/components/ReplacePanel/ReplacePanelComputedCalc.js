@@ -25,7 +25,7 @@ export default function (ReplacePanel) {
       // 試著把最後一行加上return
       //let lastBreak = textContent.lastIndexOf('\n')
       //textContent = textContent.slice(0, lastBreak + 1) + 'return ' + textContent.slice(lastBreak + 1)
-      let lines = textContent.split('\n')
+      let lines = textContent.trim().split('\n')
       let lastLine = lines[(lines.length - 1)].trim()
       if (!lastLine.startsWith('return ')) {
         lines[(lines.length - 1)] = 'return ' + lastLine
