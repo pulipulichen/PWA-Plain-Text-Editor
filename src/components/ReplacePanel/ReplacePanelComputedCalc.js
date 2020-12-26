@@ -18,6 +18,11 @@ export default function (ReplacePanel) {
       try {
         let result
         eval(`result = (${textContent})`)
+        
+        if (typeof(result) === 'object' && result.toString() == '[object Object]') {
+          return undefined
+        }
+        
         return result
       } catch (e) {
       }
@@ -39,6 +44,11 @@ export default function (ReplacePanel) {
         eval(`result = (function () {
   ${textContent}
   })()`)
+        
+        if (typeof(result) === 'object' && result.toString() == '[object Object]') {
+          return undefined
+        }
+        
         return result
       } catch (e) {
       }
