@@ -4,7 +4,7 @@ export default function (CodeMirrorEditor) {
   CodeMirrorEditor.methods.getMode = function (useFilter = true) {
     let cm = this.codemirror
     let mode = cm.getOption('mode').name
-    
+    //console.log(mode)
     return cmModeUtil.getMode(mode, useFilter)
   }
 

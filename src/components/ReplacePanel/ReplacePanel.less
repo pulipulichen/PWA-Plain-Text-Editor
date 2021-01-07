@@ -120,6 +120,11 @@
 .inline.field {
   margin-top: 0.5rem !important;
   margin-bottom: 0.5rem !important;
+  user-select: none;
+}
+
+.inline.fields {
+  user-select: none;
 }
 
 .format-tool-container {
@@ -135,3 +140,16 @@
   }
 }
   
+
+.inline-fields-wrapper {
+  
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100vw;
+  max-height: 3.5rem;
+  
+  .inline.fields {
+    min-width: 50rem;
+  }
+}
+
