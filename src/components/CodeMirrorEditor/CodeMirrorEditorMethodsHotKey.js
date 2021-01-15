@@ -7,13 +7,14 @@ export default function (CodeMirrorEditor) {
 //  }
     
   let hintExcludeText = [
+    '',
     ' ',
     '\t',
     '\n'
   ]
   
   let inputedText = ''
-  CodeMirrorEditor.methods.onCodeMirrorKeyHandled = function (cm, input) {
+  CodeMirrorEditor.methods.onCodeMirrorHintHandler = function (cm, input) {
     if (input.origin === 'paste') {
       return false
     }
@@ -31,8 +32,7 @@ export default function (CodeMirrorEditor) {
     
     let text = inputedText + t
     //console.log(text)
-    
-    
+        
     //console.log(cm)
     //console.log(pos)
     //console.log(e, s)

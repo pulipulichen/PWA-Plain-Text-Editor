@@ -11,7 +11,7 @@
     ref="cmEditor"
     v-model="code" 
     v-bind:options="computedCodeMirrorOptions"
-    v-on:inputRead="onCodeMirrorKeyHandled"
+    v-on:inputRead="onCodeMirrorHintHandler"
     v-on:cursorActivity="onCodeMirrorCursorActivity"
     v-on:viewportChange="onCodeMirrorCursorActivity"
     v-on:drop="onCodeMirrorDrop"
