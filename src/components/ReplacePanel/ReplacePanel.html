@@ -158,18 +158,25 @@
 
     </div>
 
-    <label for="calcCopyButton">
-      {{ $t('Calculator') }}
-    </label>
-    <div class="field">
-
-      <div class="ui button calc-button"
-           id="calcCopyButton"
-           v-bind:class="computedCalcButtonClassName"
-           v-on:click="copyCalcResult"
-           title="Copy"><span>{{ computedCalcButtonText }}</span></div>
-    </div>
-
+    <template v-if="computedCalcButtonText !== '(NULL)'"
+         style="white-space: nowrap">
+      <label for="calcCopyButton">
+        {{ $t('Calculator') }}
+      </label>
+      <span>
+        <div class="ui button calc-button"
+             id="calcCopyButton"
+             v-bind:class="computedCalcButtonClassName"
+             v-on:click="copyCalcResult"
+             title="Copy"><span>{{ computedCalcButtonText }}</span></div>
+      </span>
+    </template>
+     
+    <CharacterCounter 
+      v-bind:config="config"
+      v-bind:localConfig="localConfig"
+      v-bind:utils="utils">
+    </CharacterCounter>
 
     <!--
     <div class="inline field"

@@ -1,3 +1,5 @@
+/* global ReplacePanel */
+
 export default function (ReplacePanel) {
   ReplacePanel.computed.calcResult = function () {
     if (!this.isEnable) {

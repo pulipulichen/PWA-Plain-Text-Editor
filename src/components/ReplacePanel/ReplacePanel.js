@@ -1,8 +1,13 @@
 /* global PULI_UTILS, CodeMirror */
 
+import CharacterCounter from './CharacterCounter/CharacterCounter.vue'
+
 let ReplacePanel = {
   props: ['config', 'localConfig', 'utils'],
   data: null,
+  components: {
+    CharacterCounter
+  },
   watch: {}, // 轉移到 ReplacePanelWatch.js
   computed: {}, // 轉移到 ReplacePanelComputed.js
   mounted() {
