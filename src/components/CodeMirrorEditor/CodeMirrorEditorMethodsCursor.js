@@ -1,11 +1,16 @@
 export default function (CodeMirrorEditor) {
+    
+  let selectedTextTimer
   CodeMirrorEditor.methods.onCodeMirrorCursorActivity = async function () {
     //console.log(1, this.getSelectedText())
     
     this.saveCursorPosition()
     
     //console.log(1, this.selectedText())
-    this.config.selectedText = this.getSelectedText()
+    clearTimeout(selectedTextTimer)
+    selectedTextTimer = setTimeout(() => {
+      this.config.selectedText = this.getSelectedText()
+    }, 1000)
   }
     
   CodeMirrorEditor.methods.jumpToLine = function (i, from = 0) {

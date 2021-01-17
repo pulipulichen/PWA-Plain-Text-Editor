@@ -8,7 +8,7 @@ export default function (ReplacePanel) {
       isModifiedAfterBeautification: true,
       //panelHeight: '10.8rem'
       panelHeight: '10.5rem',
-      calcResultCopied: false
+      calcResultCopied: false,
     }
   }
 }
