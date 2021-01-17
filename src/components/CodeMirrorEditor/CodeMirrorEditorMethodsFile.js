@@ -18,7 +18,10 @@ export default function (CodeMirrorEditor) {
   CodeMirrorEditor.methods.saveFile = function () {
     let filename = this.getFilename()
     
-    this.utils.FileUtils.download(filename, this.code)
+    filename = window.prompt(this.$t('File name:'), filename)
+    if (filename) {
+      this.utils.FileUtils.download(filename, this.code)
+    }
   }
   
   CodeMirrorEditor.methods.getFilename = function () {
