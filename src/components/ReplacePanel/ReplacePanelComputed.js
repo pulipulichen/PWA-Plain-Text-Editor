@@ -32,6 +32,10 @@ export default function (ReplacePanel) {
       return true
     }
     
+    if (this.localConfig.stringToReplaceWith === this.localConfig.stringToSearch) {
+      return true
+    }
+    
 
     if (this.localConfig.replaceMode !== 'line'
             && this.localConfig.stringToSearch === '') {
