@@ -99,7 +99,9 @@ export default function (ReplacePanel) {
     //console.log(`'${search}'`)
     //replace = replace.split('\\').join('\\\\')
     let re
-    eval(`re = new RegExp("${search}", "g")`)
+    (function () {
+      eval(`re = new RegExp("${search}", "g")`)
+    })()
     //console.log(re)
     let count = 0
     count = ((this.localConfig.textContent || '').match(re) || []).length

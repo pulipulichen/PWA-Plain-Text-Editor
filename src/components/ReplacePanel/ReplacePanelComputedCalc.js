@@ -19,7 +19,9 @@ export default function (ReplacePanel) {
       // 表示只有一行
       try {
         let result
-        eval(`result = (${textContent})`)
+        (function () {
+          eval(`result = (${textContent})`)
+        })()
         
         if (typeof(result) === 'object' && result.toString() == '[object Object]') {
           return undefined
@@ -43,9 +45,12 @@ export default function (ReplacePanel) {
 
       try {
         let result
+        (function () {
         eval(`result = (function () {
   ${textContent}
-  })()`)
+  })()`)  
+        })()
+        
         
         if (typeof(result) === 'object' && result.toString() == '[object Object]') {
           return undefined
