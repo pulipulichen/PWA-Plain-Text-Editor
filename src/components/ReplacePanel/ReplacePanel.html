@@ -132,7 +132,7 @@
             <option value="lines-rtrim" v-bind:disabled="isRTrimDisabled">
               {{ $t('Lines Right Trim') }}
             </option>
-            <option value="remove-line-breaks" v-bind:disabled="localConfig.textContent.indexOf('\n') > -1">
+            <option value="remove-line-breaks" v-bind:disabled="localConfig.textContent.indexOf('\n') === -1">
               {{ $t('Remove Line Breaks') }}
             </option>
             <option value="empty-lines-remove" v-bind:disabled="!hasEmptyLines">
