@@ -16,6 +16,7 @@ export default function (FloatActionButton) {
   FloatActionButton.computed.computedClassNameList = function () {
     return {
       top: !this.positionBottom,
+      compact: (this.config.viewportSize.height < this.viewportHeightPositionThreshold)
       //'display-replace-panel': (this.$parent.config.displayPanel === 'replace')
     }
   }
@@ -42,6 +43,9 @@ export default function (FloatActionButton) {
   FloatActionButton.computed.computedMainIconClassNameList = function () {
     let list = []
     
+//    if (this.config.viewportSize.height < this.viewportHeightMainButtonThreshold) {
+//      list.push('angle down')
+//    }
     if (this.isURLSelected) {
       list.push('linkify')
     }
@@ -72,6 +76,9 @@ export default function (FloatActionButton) {
   }
   
   FloatActionButton.computed.computedMainIconText = function () {
+//    if (this.config.viewportSize.height < this.viewportHeightMainButtonThreshold) {
+//      return undefined
+//    }
     if (this.isURLSelected) {
       return 'Open link (Alt+O)'
     }

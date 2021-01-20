@@ -23,7 +23,7 @@ let localConfig = {
   fontSize: 16,
   filename: null,
   enableTypewritterSound: true,
-  mainButtonAction: 'copy'
+  mainButtonAction: 'copy & clear'
 }
 
 export default localConfig

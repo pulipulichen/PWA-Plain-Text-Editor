@@ -17,6 +17,9 @@ export default function (FloatActionButton) {
     this.showMenuTimer = null
   }
   FloatActionButton.methods.onMainIconClick = function () {
+//    if (this.config.viewportSize.height < this.viewportHeightThreshold) {
+//      return undefined
+//    }
     if (this.isURLSelected) {
       let url = this.config.selectedText
       window.open(url, '_blank')
@@ -46,6 +49,7 @@ export default function (FloatActionButton) {
       else if (mainButtonAction === 'copy & clear') {
         this.utils.ClipboardUtils.copyPlainString(text)
         this.localConfig.textContent = ''
+        this.$parent.$refs.CodeMirrorEditor.focus()
       }
       else if (mainButtonAction === 'select all') {
         this.$parent.$refs.CodeMirrorEditor.selectAll()
@@ -116,7 +120,8 @@ export default function (FloatActionButton) {
      
      let options = {
        position: 'top center',
-       boundary: 'body'
+       boundary: 'body',
+       exclusive: true,
      }
      
      if (this.positionBottom === false) {
@@ -124,5 +129,13 @@ export default function (FloatActionButton) {
      }
      
      $el.find('.popup:not(.inited)').addClass('inited').popup(options)
+             .click(function () {
+               $(this).popup('hide all')
+              })
+              
+      let $body = $('body')
+      $body.click(() => {
+        $body.popup('hide all')
+      })
    }
 }

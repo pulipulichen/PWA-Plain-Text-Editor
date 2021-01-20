@@ -16,6 +16,9 @@ export default function (ReplacePanel) {
     else if (tool === 'lines-rtrim') {
       return this.rtrimTextContent()
     }
+    else if (tool === 'remove-line-breaks') {
+      return this.localConfig.textContent = this.localConfig.textContent.split('\n').join('')
+    }
     else if (tool === 'code-minifiy') {
       return this.minifiyCode()
     }

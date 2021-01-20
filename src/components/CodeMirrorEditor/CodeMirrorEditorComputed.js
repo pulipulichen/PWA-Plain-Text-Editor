@@ -35,6 +35,10 @@ export default function (CodeMirrorEditor) {
     if (this.localConfig.lineWrapping === false) {
       list.push('text-wrap-disabled')
     }
+    
+    if (this.isCompact) {
+      list.push('compact')
+    }
 
     return list.join(' ')
   }
@@ -49,5 +53,9 @@ export default function (CodeMirrorEditor) {
       spaces.push(' ')
     }
     return spaces.join('')
+  }
+  
+  CodeMirrorEditor.computed.isCompact = function () {
+    return this.config.viewportSize.height < this.viewportHeightThreshold
   }
 }

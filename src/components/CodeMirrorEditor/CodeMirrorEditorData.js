@@ -17,7 +17,8 @@ export default function (CodeMirrorEditor) {
         from: {line: null, ch: null},
         to: {line: null, ch: null},
         scrollTop: null
-      }
+      },
+      viewportHeightThreshold: 300
     }
   }
 }

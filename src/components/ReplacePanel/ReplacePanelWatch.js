@@ -1,5 +1,16 @@
 export default function (ReplacePanel) {
   ReplacePanel.watch = {
+    'config.viewportSize.height' (height) {
+      if (this.localConfig.displayPanel === 'replace') {
+        //console.log(height, this.viewportHeightThreshold)
+        if (height > this.viewportHeightThreshold) {
+          this.config.panelHeight = this.panelHeight
+        }
+        else {
+          this.config.panelHeight = '0rem'
+        }
+      }
+    },
     'localConfig.textContent'() {
       if (this.replaceLock === true) {
         return false

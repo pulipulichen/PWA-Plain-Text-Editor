@@ -7,7 +7,9 @@ let FloatActionButton = {
     return {
       showMenu: false,
       showMenuTimer: null,
-      positionBottom: true
+      positionBottom: true,
+      viewportHeightPositionThreshold: 300,
+      viewportHeightMainButtonThreshold: 150
     }
   },
   watch: {

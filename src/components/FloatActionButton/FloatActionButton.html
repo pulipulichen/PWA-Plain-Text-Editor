@@ -9,6 +9,7 @@
   <a class="zoom-fab zoom-btn-large tooltip popup" id="zoomBtn"
      v-bind:title="$t(computedMainIconText)"
      v-on:mouseover="showMenu = true"
+     v-on:dblclick="showMenu = true"
      v-on:click="onMainIconClick"
      v-bind:data-content="$t(computedMainIconText)">
     <i v-bind:class="computedMainIconClassNameList"></i>

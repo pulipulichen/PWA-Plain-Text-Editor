@@ -223,4 +223,8 @@ export default function (CodeMirrorEditor) {
       
     //this.codemirror.setCursor({line: 1, ch: 0})
   }
+  
+  CodeMirrorEditor.methods.focus = function () {
+    this.codemirror.focus()
+  }
 }

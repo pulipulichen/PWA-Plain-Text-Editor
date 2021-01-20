@@ -95,6 +95,8 @@ let VueController = {
     
     await this.waitForSemanticUIReady()
     
+    this.addViewportListener()
+    
     //console.log('index.js mounted', 3)
     
     this.config.inited = true
@@ -140,6 +142,30 @@ let VueController = {
       //console.log(data)
       localStorage.setItem(this.config.appName, data)
     },
+    addViewportListener () {
+      let $window = $(window)
+      
+      let resizeHandlerTimer
+      
+      let resizeHandler = () => {
+          //  Little JS Tip, No need to write `var` 50thousand times. Just use a comma and write your new variable
+          let x = $window.width(),    //  variable for window width assigned to `x`
+              y = $window.height(),   //  variable for window height assigned to `y`
+              z = x/y    //  your conversion you were using in the code you have in your question, there's plenty of different ways to test for size changes, do some Googling on "aspect ratio" as it's usually best way to go
+          
+          this.config.viewportSize.width = x
+          this.config.viewportSize.height = y
+          this.config.viewportSize.ratio = z
+      }
+      
+      $window.on('resize', () => {
+        clearTimeout(resizeHandlerTimer)
+        resizeHandlerTimer = setTimeout(() => {
+          resizeHandler()
+        }, 100)
+      })
+      resizeHandler()
+    }
   }
 }
 

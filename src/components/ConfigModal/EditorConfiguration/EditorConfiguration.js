@@ -9,12 +9,12 @@ let EditorConfiguration = {
       modeOptions: cmModeUtil.getModeSelectOptions(),
       mainButtonActionOptions: [
         {
-          value: 'copy',
-          text: 'Copy'
-        },
-        {
           value: 'copy & clear',
           text: 'Copy & Clear'
+        },
+        {
+          value: 'copy',
+          text: 'Copy'
         },
         {
           value: 'select all',

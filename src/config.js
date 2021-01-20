@@ -17,6 +17,11 @@ let config = {
   urlGithub: 'https://github.com/pulipulichen/PWA-Plain-Text-Editor/',
   urlIssue: 'https://github.com/pulipulichen/PWA-Plain-Text-Editor/issues/new',
   selectedText: null,
+  viewportSize: {
+    width: 0,
+    height: 0,
+    ratio: 1
+  }
 }
 
 import styleConfig from './styles/style.config.js'

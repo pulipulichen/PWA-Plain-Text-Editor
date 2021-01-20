@@ -48,12 +48,12 @@ export default function (ReplacePanel) {
     let stringToSearch = this.stringToSearchRaw
     let stringToReplaceWith = this.stringToReplaceWithRaw
 
-    console.log(stringToSearch, stringToReplaceWith)
+    //console.log(stringToSearch, stringToReplaceWith)
 
     this.localConfig.textContent = this.localConfig.textContent.split(stringToSearch)
             .join(stringToReplaceWith)
 
-    console.log(this.localConfig.textContent)
+    //console.log(this.localConfig.textContent)
   }
   ReplacePanel.methods.doReplaceRegex = function () {
     let stringToSearch = this.localConfig.stringToSearch

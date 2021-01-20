@@ -6,6 +6,15 @@ export default function (CodeMirrorEditor) {
       //console.log(this.config.inited)
       this.onConfigInited()
     },
+    'config.viewportSize.height' (height) {
+      if (height < this.viewportHeightThreshold) {
+        this.setOption('lineWrapping', true)
+        
+      }
+      else {
+        this.setOption('lineWrapping', this.localConfig.lineWrapping)
+      }
+    },
     'config.panelHeight'() {
       this.resizeHeight()
     },
@@ -19,7 +28,7 @@ export default function (CodeMirrorEditor) {
       this.setMode(this.localConfig.syntax)
     },
     'localConfig.lineWrapping'() {
-      console.log(this.localConfig.lineWrapping)
+      //console.log(this.localConfig.lineWrapping)
       this.setOption('lineWrapping', this.localConfig.lineWrapping)
     },
     'localConfig.fontSize'() {

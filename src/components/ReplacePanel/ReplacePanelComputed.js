@@ -2,6 +2,17 @@
 
 export default function (ReplacePanel) {
     
+  ReplacePanel.computed.isVisible = function () {
+//    console.log([
+//      this.localConfig.displayPanel,
+//      this.config.inited,
+//      this.config.viewportSize.height
+//    ])
+    return (this.localConfig.displayPanel === 'replace' 
+            && this.config.inited === true
+            && this.config.viewportSize.height > this.viewportHeightThreshold)
+  }
+    
   ReplacePanel.computed.isEnable = function () {
     return (this.localConfig.displayPanel === 'replace')
   }
