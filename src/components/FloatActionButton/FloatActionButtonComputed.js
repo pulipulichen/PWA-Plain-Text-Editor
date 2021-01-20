@@ -55,7 +55,16 @@ export default function (FloatActionButton) {
       list.push('search')
     }
     else {
-      list.push('copy')
+      let mainButtonAction = this.localConfig.mainButtonAction
+      if (mainButtonAction === 'copy') {
+        list.push('copy')
+      }
+      else if (mainButtonAction === 'copy & clear') {
+        list.push('copy outline')
+      }
+      else if (mainButtonAction === 'select all') {
+        list.push('i cursor')
+      }
     }
     list.push('icon')
     
@@ -76,7 +85,16 @@ export default function (FloatActionButton) {
       return 'Search web (Alt+O)'
     }
     else {
-      return 'Copy (Alt+O)'
+      let mainButtonAction = this.localConfig.mainButtonAction
+      if (mainButtonAction === 'copy') {
+        return 'Copy (Alt+O)'
+      }
+      else if (mainButtonAction === 'copy & clear') {
+        return 'Copy & Clear (Alt+O)'
+      }
+      else if (mainButtonAction === 'select all') {
+        return 'Select All (Ctrl+A)'
+      }
     }
   }
   

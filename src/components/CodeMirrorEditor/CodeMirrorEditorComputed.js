@@ -24,20 +24,20 @@ export default function (CodeMirrorEditor) {
     }
 
     return this.$refs.cmEditor.codemirror
-  },
-          CodeMirrorEditor.computed.computedCodeMirrorWrapperClassNameList = function () {
-            let list = []
+  }
+  CodeMirrorEditor.computed.computedCodeMirrorWrapperClassNameList = function () {
+    let list = []
 
-            if (this.inited === true) {
-              list.push('inited')
-            }
+    if (this.inited === true) {
+      list.push('inited')
+    }
 
-            if (this.localConfig.lineWrapping === false) {
-              list.push('text-wrap-disabled')
-            }
+    if (this.localConfig.lineWrapping === false) {
+      list.push('text-wrap-disabled')
+    }
 
-            return list.join(' ')
-          }
+    return list.join(' ')
+  }
   CodeMirrorEditor.computed.computedIndentSpaces = function () {
     if (this.localConfig.indent.mode === 'tab') {
       return '\t'

@@ -79,6 +79,7 @@ export default function (CodeMirrorEditor) {
     localStorage.setItem(cursorPositionKey, saved)
     //console.log('saveCursorPosition')
   }
+  
   CodeMirrorEditor.methods.restoreCursorPosition = function () {
     //console.log('restoreCursorPosition', this.config.inited, this.cursorPositionSaved.from)
     if (this.simpleMode === true
@@ -127,8 +128,12 @@ export default function (CodeMirrorEditor) {
     return this.codemirror.getSelection()
   }
   
-  CodeMirrorEditor.methods.onCodeMirrorBeforeSelectionChange = function () {
-    
+  CodeMirrorEditor.methods.onCodeMirrorBeforeSelectionChange = function () { 
     console.log(this.getSelectedText())
+  }
+  
+  CodeMirrorEditor.methods.selectAll = function () { 
+    //console.log(this.codemirror)
+    this.codemirror.execCommand('selectAll')
   }
 }

@@ -23,6 +23,7 @@ let localConfig = {
   fontSize: 16,
   filename: null,
   enableTypewritterSound: true,
+  mainButtonAction: 'copy'
 }
 
 export default localConfig

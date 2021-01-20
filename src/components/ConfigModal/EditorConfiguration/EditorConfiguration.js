@@ -6,7 +6,21 @@ let EditorConfiguration = {
   data() {    
     this.$i18n.locale = this.localConfig.locale
     return {
-      modeOptions: cmModeUtil.getModeSelectOptions()
+      modeOptions: cmModeUtil.getModeSelectOptions(),
+      mainButtonActionOptions: [
+        {
+          value: 'copy',
+          text: 'Copy'
+        },
+        {
+          value: 'copy & clear',
+          text: 'Copy & Clear'
+        },
+        {
+          value: 'select all',
+          text: 'Select All'
+        },
+      ]
     }
   },
 //  components: {

@@ -4,6 +4,19 @@
   </h2>
 
   <div class="field">
+    <label for="MainButtonAction">
+      {{ $t('Syntax') }}
+    </label>
+    <select v-model="localConfig.mainButtonAction"
+            id="MainButtonAction">
+      <option v-for="option in mainButtonActionOptions"
+              v-bind:value="option.value">
+        {{ $t(option.text) }}
+      </option>
+    </select>
+  </div>
+  
+  <div class="field">
     <label for="CodeMirrorSyntax">
       {{ $t('Syntax') }}
     </label>

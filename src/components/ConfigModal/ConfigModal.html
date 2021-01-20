@@ -14,17 +14,17 @@
     
     <form class="ui form">
       
-      <FileManager 
-        v-bind:config="config"
-        v-bind:utils="utils"
-        v-bind:localConfig="localConfig">
-      </FileManager>
-      
       <EditorConfiguration 
         v-bind:config="config"
         v-bind:utils="utils"
         v-bind:localConfig="localConfig">
       </EditorConfiguration>
+      
+      <FileManager 
+        v-bind:config="config"
+        v-bind:utils="utils"
+        v-bind:localConfig="localConfig">
+      </FileManager>
       
       <Statistics 
         v-bind:config="config"

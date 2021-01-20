@@ -37,8 +37,20 @@ export default function (FloatActionButton) {
       this.searchWeb()
     }
     else {
+      let mainButtonAction = this.localConfig.mainButtonAction
       let text = this.localConfig.textContent
-      this.utils.ClipboardUtils.copyPlainString(text)
+      
+      if (mainButtonAction === 'copy') {
+        this.utils.ClipboardUtils.copyPlainString(text)
+      }
+      else if (mainButtonAction === 'copy & clear') {
+        this.utils.ClipboardUtils.copyPlainString(text)
+        this.localConfig.textContent = ''
+      }
+      else if (mainButtonAction === 'select all') {
+        this.$parent.$refs.CodeMirrorEditor.selectAll()
+      }
+      
     }
 
     this.showMenu = false
