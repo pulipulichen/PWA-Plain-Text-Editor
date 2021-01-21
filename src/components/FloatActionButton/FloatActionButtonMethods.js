@@ -6,16 +6,19 @@ export default function (FloatActionButton) {
     //console.log(this.$parent.$refs)
     this.$parent.$refs.ConfigModal.open()
   }
+  
   FloatActionButton.methods.delayCloseMenu = function () {
     clearTimeout(this.showMenuTimer)
     this.showMenuTimer = setTimeout(() => {
       this.showMenu = false
     }, 3 * 1000)
   }
+  
   FloatActionButton.methods.clearDelayCloseMenu = function () {
     clearTimeout(this.showMenuTimer)
     this.showMenuTimer = null
   }
+  
   FloatActionButton.methods.onMainIconClick = function () {
 //    if (this.config.viewportSize.height < this.viewportHeightThreshold) {
 //      return undefined
@@ -43,12 +46,16 @@ export default function (FloatActionButton) {
       let mainButtonAction = this.localConfig.mainButtonAction
       let text = this.localConfig.textContent
       
-      if (mainButtonAction === 'copy') {
+      if (this.lastTextContent !== '') {
+        this.restore()
+      }
+      else if (mainButtonAction === 'copy') {
         this.utils.ClipboardUtils.copyPlainString(text)
       }
       else if (mainButtonAction === 'copy & clear') {
         this.utils.ClipboardUtils.copyPlainString(text)
-        this.localConfig.textContent = ''
+        //this.localConfig.textContent = ''
+        this.clear()
         this.$parent.$refs.CodeMirrorEditor.focus()
       }
       else if (mainButtonAction === 'select all') {
@@ -59,9 +66,11 @@ export default function (FloatActionButton) {
 
     this.showMenu = false
   }
+  
   FloatActionButton.methods.closeMenu = function () {
     this.showMenu = false
   }
+  
   FloatActionButton.methods.toggleReplacePanel = function () {
     //this.$parent.config.displayReplacePanel = !this.$parent.config.displayReplacePanel
     //console.log(this.$parent.config.displayReplacePanel)
@@ -73,6 +82,7 @@ export default function (FloatActionButton) {
 
     this.closeMenu()
   }
+  
   FloatActionButton.methods.toggleFormatPanel = function () {
     //this.$parent.config.displayReplacePanel = !this.$parent.config.displayReplacePanel
     //console.log(this.$parent.config.displayReplacePanel)
@@ -85,12 +95,34 @@ export default function (FloatActionButton) {
 
     this.closeMenu()
   }
-  FloatActionButton.methods.clear = function () {
-    if (window.confirm('Are you sure?')) {
-      this.localConfig.textContent = ''
-      this.localConfig.filename = null
-      //this.clearHistory()
+  
+  FloatActionButton.methods.restore = function () {
+    if (this.lastTextContent === '') {
+      return false
     }
+    
+    this.localConfig.textContent = this.lastTextContent
+    this.localConfig.filename = this.lastFilename
+    
+    this.lastTextContent = ''
+    this.lastFilename = null
+    
+    this.closeMenu()
+  }
+  
+  FloatActionButton.methods.clear = function () {
+    this.lastTextContent = this.localConfig.textContent
+    this.lastFilename = this.localConfig.filename
+    
+//    if (window.confirm('Are you sure?')) {
+//      this.localConfig.textContent = ''
+//      this.localConfig.filename = null
+//      //this.clearHistory()
+//    }
+    
+    this.localConfig.textContent = ''
+    this.localConfig.filename = null
+    
     this.closeMenu()
   }
   

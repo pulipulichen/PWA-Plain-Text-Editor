@@ -9,12 +9,22 @@ let FloatActionButton = {
       showMenuTimer: null,
       positionBottom: true,
       viewportHeightPositionThreshold: 300,
-      viewportHeightMainButtonThreshold: 150
+      viewportHeightMainButtonThreshold: 150,
+      lastTextContent: '',
+      lastFilename: null
     }
   },
   watch: {
     'localConfig.locale'() {
       this.$i18n.locale = this.localConfig.locale;
+    },
+    'localConfig.textContent'(textContent) {
+      if (this.lastTextContent !== '') {
+        if (textContent !== '') {
+          this.lastTextContent = ''
+          this.lastFilename = null
+        }
+      }
     },
     showMenu() {
       if (this.showMenu === true) {

@@ -60,7 +60,11 @@ export default function (FloatActionButton) {
     }
     else {
       let mainButtonAction = this.localConfig.mainButtonAction
-      if (mainButtonAction === 'copy') {
+      
+      if (this.lastTextContent !== '') {
+        list.push('undo')
+      }
+      else if (mainButtonAction === 'copy') {
         list.push('copy')
       }
       else if (mainButtonAction === 'copy & clear') {
@@ -93,7 +97,11 @@ export default function (FloatActionButton) {
     }
     else {
       let mainButtonAction = this.localConfig.mainButtonAction
-      if (mainButtonAction === 'copy') {
+      
+      if (this.lastTextContent !== '') {
+        return 'Redo (Alt+O)'
+      }
+      else if (mainButtonAction === 'copy') {
         return 'Copy (Alt+O)'
       }
       else if (mainButtonAction === 'copy & clear') {
