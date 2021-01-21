@@ -48,6 +48,8 @@ export default function (CodeMirrorEditor) {
         return false
       }
 
+      //this.TypewriterSoundEffect.playKeysSound()
+    
       this.saveCursorPosition()
       this.changeLock = true
       this.code = this.localConfig.textContent
@@ -67,7 +69,10 @@ export default function (CodeMirrorEditor) {
       if (this.changeLock === true) {
         return false
       }
-
+      
+      //let lastTextContent = this.code
+      this.playSoundOnCodeDifference()
+      
       this.changeLock = true
       this.localConfig.textContent = this.code
       await this.utils.AsyncUtils.sleep(0)

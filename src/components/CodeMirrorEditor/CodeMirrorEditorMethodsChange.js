@@ -1,5 +1,8 @@
 export default function (CodeMirrorEditor) {
-    
+  
+  /**
+   * 這一個似乎是無效的
+   */
   CodeMirrorEditor.methods.onEditorChange = async function () {
     if (this.simpleMode === true) {
       return false
@@ -12,9 +15,9 @@ export default function (CodeMirrorEditor) {
     let lastTextContent = this.localConfig.textContent
     if (lastTextContent !== this.codemirror.getValue()) {
       setTimeout(() => {
-        if (this.onPressKey === false) {
+        //if (this.onPressKey === false) {
           this.TypewriterSoundEffect.playKeysSound()
-        }
+        //}
       }, 100)
     }
     this.localConfig.textContent = this.codemirror.getValue()
@@ -76,5 +79,35 @@ export default function (CodeMirrorEditor) {
       this.setModeByFilename(filename)
     }
     reader.readAsText(file)
+  }
+  
+  let replaceAll = function (str, find, replace) {
+    if (Array.isArray(find)) {
+      for (let i = find.length; i > 0; i--) {
+        str = replaceAll(str, find[i], replace)
+      }
+      return str
+    }
+    else {
+      return str.split(find).join(replace)
+    }
+  }
+  
+  CodeMirrorEditor.methods.playSoundOnCodeDifference = function () {
+    if (this.code !== this.localConfig.textContent) {
+      let after = this.code
+      let before = this.localConfig.textContent
+      setTimeout(() => {
+        if (this.onPressKey === false) {
+          let beforeLength = replaceAll(before, [' ', '\t', '\n'], '').length
+          let afterLength = replaceAll(after, [' ', '\t', '\n'], '').length
+          //window.alert([beforeLength, afterLength].join(','))
+          if (afterLength > beforeLength) {
+            this.TypewriterSoundEffect.playKeysSound()
+          }
+        }
+      }, 100)
+    }
+
   }
 }
