@@ -132,9 +132,12 @@ export default function (Index) {
     }
 
     // 開始正式執行
-    this.localConfig.filename = null
+    
+    
     if (this.localConfig.textContent !== '') {
-      this.localConfig.textContent = ''
+      this.$refs.FloatActionButton.clear()
+//      this.localConfig.filename = null
+//      this.localConfig.textContent = ''
     }
     else {
       setTimeout(() => {

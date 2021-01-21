@@ -67,8 +67,14 @@ export default function (FloatActionButton) {
     this.showMenu = false
   }
   
+  let $body
   FloatActionButton.methods.closeMenu = function () {
     this.showMenu = false
+    
+    if (!$body) {
+      $body = $('body')
+    }
+    $body.popup('hide all')
   }
   
   FloatActionButton.methods.toggleReplacePanel = function () {
@@ -165,7 +171,9 @@ export default function (FloatActionButton) {
                $(this).popup('hide all')
               })
               
-      let $body = $('body')
+      if (!$body) {
+        $body = $('body')
+      }
       $body.click(() => {
         $body.popup('hide all')
       })
