@@ -23,6 +23,10 @@ export default function (CodeMirrorEditor) {
     
     let t = input.text[0]
     this.TypewriterSoundEffect.playKeysSound(t)
+    this.onPressKey = true
+    setTimeout(() => {
+      this.onPressKey = false
+    }, 500)
     
     if (hintExcludeText.indexOf(t) > -1) {
       inputedText = ''

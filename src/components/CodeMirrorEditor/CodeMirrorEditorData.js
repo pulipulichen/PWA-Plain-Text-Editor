@@ -18,7 +18,8 @@ export default function (CodeMirrorEditor) {
         to: {line: null, ch: null},
         scrollTop: null
       },
-      viewportHeightThreshold: 300
+      viewportHeightThreshold: 300,
+      onPressKey: false,
     }
   }
 }

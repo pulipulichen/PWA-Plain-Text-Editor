@@ -36,7 +36,6 @@ export default {
       soundKeyAnyIndex = (soundKeyAnyIndex + 1) % soundKeyAny.length
     }
 
-
     //let soundKeyAnyURL = soundKeyAny[soundKeyAnyIndex]
     //console.log(soundKeyAnyURL)
     let audioAny = audioObjects[soundKeyAnyIndex]

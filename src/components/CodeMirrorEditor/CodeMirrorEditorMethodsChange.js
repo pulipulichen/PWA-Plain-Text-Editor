@@ -9,6 +9,14 @@ export default function (CodeMirrorEditor) {
       return false
     }
     this.setValueLock = true
+    let lastTextContent = this.localConfig.textContent
+    if (lastTextContent !== this.codemirror.getValue()) {
+      setTimeout(() => {
+        if (this.onPressKey === false) {
+          this.TypewriterSoundEffect.playKeysSound()
+        }
+      }, 100)
+    }
     this.localConfig.textContent = this.codemirror.getValue()
     await this.utils.AsyncUtils.sleep(0)
     this.highlightText()
