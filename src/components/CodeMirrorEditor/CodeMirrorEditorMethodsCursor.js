@@ -10,7 +10,7 @@ export default function (CodeMirrorEditor) {
     clearTimeout(selectedTextTimer)
     selectedTextTimer = setTimeout(() => {
       this.config.selectedText = this.getSelectedText()
-    }, 1000)
+    }, 100)
   }
     
   CodeMirrorEditor.methods.jumpToLine = function (i, from = 0) {
