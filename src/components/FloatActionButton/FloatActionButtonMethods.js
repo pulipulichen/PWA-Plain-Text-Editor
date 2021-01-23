@@ -36,8 +36,9 @@ export default function (FloatActionButton) {
     }
     else if (this.isPuliWorkSelected) {
       let url = `https://www.facebook.com/pulipuli.chen`
-      window.open(url, '_blank') 
       this.utils.ClipboardUtils.copyPlainString(this.config.selectedText)
+      //console.log(url)
+      window.open(url, '_blank') 
     }
     else if (this.hasSelectedText) {
       this.searchWeb()
