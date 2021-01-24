@@ -52,21 +52,31 @@ export default function (FloatActionButton) {
     }
     
     FloatActionButton.methods.splitSpeechTextToParts = function (text) {
+      let p = text
+      p = p.replace(/ *\([^)]*\) */g, "")
+      p = p.replace(/ *\[[^)]*\] */g, "")
+      p = p.replace(/ *\{[^)]*\} */g, "")
+
+      p = p.split('（').map((p2, i) => {
+        if (i === 0) {
+          return p2
+        }
+
+        let endPos = p2.indexOf('）')
+        if (endPos === -1) {
+          return ''
+        }
+        return p2.slice(endPos + 1)
+      }).join('')
+      //p = p.replace(/ *\（[^)]*\） */g, "")
+      //p = p.replace(/ *（[^)]*） */g, "")
+      //p = p.replace(/ *「[^)]*」 */g, "")
+      text = p
+      
       let parts = splitMulti(text, ['。', ':', '：', '；', '\n', '\t'])
       parts = parts.filter(p => p.trim() !== '')
       
-      // 移除括號內的內容
-      parts = parts.map(p => {
-        //return p.replace(/[\(\)']+/g,'')
-        p = p.replace(/ *\([^)]*\) */g, "")
-        p = p.replace(/ *\[[^)]*\] */g, "")
-        p = p.replace(/ *\{[^)]*\} */g, "")
-        
-        p = p.replace(/ *（[^)]*） */g, "")
-        //p = p.replace(/ *「[^)]*」 */g, "")
-        return p
-      })
-      
+      //console.log(parts)
       return parts
     }
 }
