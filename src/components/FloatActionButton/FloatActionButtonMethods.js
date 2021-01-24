@@ -23,7 +23,10 @@ export default function (FloatActionButton) {
 //    if (this.config.viewportSize.height < this.viewportHeightThreshold) {
 //      return undefined
 //    }
-    if (this.isURLSelected) {
+    if (this.isSpeaking) {
+      this.isSpeaking = false
+    }
+    else if (this.isURLSelected) {
       let url = this.config.selectedText
       window.open(url, '_blank')
       this.utils.ClipboardUtils.copyPlainString(url)

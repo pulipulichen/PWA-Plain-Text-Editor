@@ -11,7 +11,9 @@ let FloatActionButton = {
       viewportHeightPositionThreshold: 300,
       viewportHeightMainButtonThreshold: 150,
       lastTextContent: '',
-      lastFilename: null
+      lastFilename: null,
+      isSpeaking: false,
+      speechSynthesis: window.speechSynthesis
     }
   },
   watch: {
@@ -32,6 +34,11 @@ let FloatActionButton = {
       } else {
         clearTimeout(this.showMenuTimer)
         this.showMenuTimer = null
+      }
+    },
+    isSpeaking () {
+      if (this.isSpeaking === false) {
+        this.speechSynthesis.cancel()
       }
     }
   },

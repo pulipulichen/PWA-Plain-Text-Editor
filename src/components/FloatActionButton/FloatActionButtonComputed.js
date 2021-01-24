@@ -46,7 +46,10 @@ export default function (FloatActionButton) {
 //    if (this.config.viewportSize.height < this.viewportHeightMainButtonThreshold) {
 //      list.push('angle down')
 //    }
-    if (this.isURLSelected) {
+    if (this.isSpeaking) {
+      list.push('assistive listening systems')
+    }
+    else if (this.isURLSelected) {
       list.push('linkify')
     }
     else if (this.isEmailSelected) {
@@ -83,7 +86,10 @@ export default function (FloatActionButton) {
 //    if (this.config.viewportSize.height < this.viewportHeightMainButtonThreshold) {
 //      return undefined
 //    }
-    if (this.isURLSelected) {
+    if (this.isSpeaking) {
+      return 'Stop speaking (Alt+O)'
+    }
+    else if (this.isURLSelected) {
       return 'Open link (Alt+O)'
     }
     else if (this.isEmailSelected) {

@@ -4,6 +4,7 @@ export default function (FloatActionButton) {
     let msg = new SpeechSynthesisUtterance();
     
     FloatActionButton.methods.speak = function () {
+      this.isSpeaking = true
       let text
       if (this.hasSelectedText) {
         text = this.config.selectedText
@@ -16,6 +17,10 @@ export default function (FloatActionButton) {
       let textParts = this.splitSpeechTextToParts(text)
       
       let loop = (i) => {
+        if (this.isSpeaking === false) {
+          return false
+        }
+        
         if (i < textParts.length) {
           msg.text = textParts[i]
           msg.rate = 1.2
@@ -23,15 +28,16 @@ export default function (FloatActionButton) {
             i++
             loop(i)
           }
-          console.log(msg)
-          window.speechSynthesis.cancel()
-          window.speechSynthesis.speak(msg)
+          //console.log(msg)
+          this.speechSynthesis.cancel()
+          this.speechSynthesis.speak(msg)
+        }
+        else {
+          this.isSpeaking = false
         }
       }
       
       loop(0)
-      
-        
       
       this.closeMenu()
     }
