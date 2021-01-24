@@ -1,4 +1,4 @@
-const PRECACHE = 'precache-v2021-0121-051544';
+const PRECACHE = 'precache-v2021-0121-051546';
 /*
  Copyright 2016 Google Inc. All Rights Reserved.
  Licensed under the Apache License, Version 2.0 (the "License");
@@ -81,6 +81,7 @@ const PRECACHE_URLS = [
   'dist/asset/outline-icons.woff2',
   'dist/vendors/CodeMirror.js',
   'dist/vendors/ConfigModal.js',
+  'dist/vendors/FloatActionButton.js',
   'dist/vendors/ReplacePanel.js',
   'dist/vendors/semantic-ui-niwsf.js',
   'dist/vendors~vendors/CodeMirror.js'

@@ -1,6 +1,6 @@
 /* global Node */
 //import $ from 'jquery'
-import FloatActionButton from './FloatActionButton/FloatActionButton.vue'
+//import FloatActionButton from './FloatActionButton/FloatActionButton.vue'
 
 //import FormatPanel from './FormatPanel/FormatPanel.vue'
 //import ReplacePanel from './ReplacePanel/ReplacePanel.vue'
@@ -13,7 +13,7 @@ let Index = {
     }
   },
   components: {
-    FloatActionButton,
+    FloatActionButton: () => import(/* webpackChunkName: "vendors/FloatActionButton" */ './FloatActionButton/FloatActionButton.vue'),
     ConfigModal: () => import(/* webpackChunkName: "vendors/ConfigModal" */ './ConfigModal/ConfigModal.vue'),
     //FormatPanel,
     ReplacePanel: () => import(/* webpackChunkName: "vendors/ReplacePanel" */ './ReplacePanel/ReplacePanel.vue'),

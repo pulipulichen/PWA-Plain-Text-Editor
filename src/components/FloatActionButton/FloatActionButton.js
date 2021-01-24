@@ -45,4 +45,7 @@ FloatActionButtonComputed(FloatActionButton)
 import FloatActionButtonMethods from './FloatActionButtonMethods.js'
 FloatActionButtonMethods(FloatActionButton)
 
+import FloatActionButtonMethodsSpeak from './FloatActionButtonMethodsSpeak.js'
+FloatActionButtonMethodsSpeak(FloatActionButton)
+
 export default FloatActionButton

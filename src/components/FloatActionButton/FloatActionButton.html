@@ -43,6 +43,20 @@
     </li>
     -->
 
+    <li class="tooltip"
+        v-on:click="openConfigModal">
+      <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition popup"
+         v-bind:data-content="$t('Configuration')"
+         v-bind:class="{'scale-out': !showMenu}">
+        <i class="cogs icon"></i>
+      </a>
+      <!--
+      <span class="tooltiptext" style="left: -100%;">
+        {{ $t('Configuration') }}
+      </span>
+      -->
+    </li>
+
     <!--
     <li title="Search" class="tooltip">
       <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition"
@@ -65,16 +79,15 @@
       -->
     </li>
 
-    <li class="tooltip"
-        v-on:click="openConfigModal">
-      <a class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition popup"
-         v-bind:data-content="$t('Configuration')"
+    <li v-on:click="speak" class="tooltip">
+      <a class="zoom-fab zoom-btn-sm zoom-btn-person scale-transition popup"
+         v-bind:data-content="$t('Speak')"
          v-bind:class="{'scale-out': !showMenu}">
-        <i class="cogs icon"></i>
+        <i class="assistive listening systems icon"></i>
       </a>
       <!--
-      <span class="tooltiptext" style="left: -100%;">
-        {{ $t('Configuration') }}
+      <span class="tooltiptext">
+        {{ $t('Clear') }}
       </span>
       -->
     </li>
