@@ -72,26 +72,17 @@
          v-bind:class="{'scale-out': !showMenu}">
         <i class="eraser icon"></i>
       </a>
-      <!--
-      <span class="tooltiptext">
-        {{ $t('Clear') }}
-      </span>
-      -->
     </li>
 
     <li v-on:click="speak" class="tooltip"
-        v-if="!isSpeaking">
+        v-if="!isSpeaking && !isURLSelected">
       <a class="zoom-fab zoom-btn-sm zoom-btn-person scale-transition popup"
          v-bind:data-content="$t('Speak')"
          v-bind:class="{'scale-out': !showMenu}">
         <i class="assistive listening systems icon"></i>
       </a>
-      <!--
-      <span class="tooltiptext">
-        {{ $t('Clear') }}
-      </span>
-      -->
     </li>
+    
 
     <!--
     <li title="Toggle Format Panel" class="tooltip"
@@ -133,6 +124,14 @@
       -->
     </li>
 
+    <li v-on:click="shortenURL" class="tooltip"
+        v-if="isURLSelected && !isShortenURLSelected">
+      <a class="zoom-fab zoom-btn-sm zoom-btn-person scale-transition popup"
+         v-bind:data-content="$t('Get short url')"
+         v-bind:class="{'scale-out': !showMenu}">
+        <i class="compress icon"></i>
+      </a>
+    </li>
     <!--
     <li v-bind:title="$t('Search Web')" class="tooltip"
         v-if="hasSelectedText"

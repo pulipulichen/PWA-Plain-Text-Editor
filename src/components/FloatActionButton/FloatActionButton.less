@@ -107,7 +107,9 @@
   */
   // -----------------------
 
-  .scale-transition { transition: transform 0.3s cubic-bezier(0.53, 0.01, 0.36, 1.63) !important; }
+  .scale-transition { 
+    transition: transform 0.3s cubic-bezier(0.53, 0.01, 0.36, 1.63) !important; 
+  }
 
   .scale-transition.scale-out {
     transform: scale(0);
@@ -157,5 +159,11 @@
   }
   .tooltip:hover .tooltiptext {
     opacity: 1;
+  }
+  
+  .tooltip .zoom-fab {
+    i.icon {
+      margin-left: 0.25rem;
+    }
   }
 }

@@ -110,4 +110,33 @@ export default function (CodeMirrorEditor) {
     }
 
   }
+  
+  CodeMirrorEditor.methods.replaceSelection = function (replaceStr) {
+    let doc = this.codemirror.getDoc();
+    
+    let cursor1 = doc.getCursor();
+
+    var pos1 = {
+       line: cursor1.line,
+       ch: cursor1.ch
+    }
+
+    //doc.replaceRange(str, pos);
+    //console.log(pos1)
+    
+    this.codemirror.replaceSelection(replaceStr)
+    let cursor2 = doc.getCursor();
+
+    var pos2 = {
+       line: cursor2.line,
+       ch: cursor2.ch
+    }
+
+    //doc.replaceRange(str, pos);
+    //console.log(pos2)
+    
+    doc.setSelection(pos1, pos2, {
+      scroll: true
+    })
+  }
 }

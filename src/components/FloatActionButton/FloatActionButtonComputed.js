@@ -21,8 +21,21 @@ export default function (FloatActionButton) {
     }
   }
   
+  FloatActionButton.computed.selectedTextTrim = function () {
+    let text = this.config.selectedText
+    if (typeof(text) !== 'string') {
+      return ''
+    }
+    
+    return text.trim()
+  }
+  
   FloatActionButton.computed.isURLSelected = function () {
-    return this.utils.URLUtils.isURL(this.config.selectedText)
+    return this.utils.URLUtils.isURL(this.selectedTextTrim)
+  }
+  
+  FloatActionButton.computed.isShortenURLSelected = function () {
+    return (this.isURL && this.selectedTextTrim.startsWith('https://rebrand.ly/' ))
   }
   
   FloatActionButton.computed.isEmailSelected = function () {

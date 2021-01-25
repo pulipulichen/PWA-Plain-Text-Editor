@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import RebrandlyAPI from './vendors/rebrandly/rebrandly-api.js'
 
 export default function (FloatActionButton) {
   FloatActionButton.methods.openConfigModal = function () {
@@ -155,6 +156,16 @@ export default function (FloatActionButton) {
    this.closeMenu()
    }
    */
+  
+   FloatActionButton.methods.shortenURL = async function () {
+     this.closeMenu()
+     
+     let shortenedURL = await RebrandlyAPI(this.config.selectedText)
+     
+     this.utils.ClipboardUtils.copyPlainString(shortenedURL)
+     this.$parent.$refs.CodeMirrorEditor.replaceSelection(shortenedURL)
+     
+   }
 
    FloatActionButton.methods.initPopup = function () {
      //console.log('initPopup')
