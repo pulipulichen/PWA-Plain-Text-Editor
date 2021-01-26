@@ -50,7 +50,9 @@ export default function (FloatActionButton) {
       text = this.localConfig.textContent
     }
     
-    return text.trim().startsWith('#PULI_WORK\n')
+    text = text.trim()
+    
+    return (text.startsWith('#PULI_WORK\n') || text.startsWith('#PULI_HOME\n'))
   }
   
   FloatActionButton.computed.computedMainIconClassNameList = function () {
