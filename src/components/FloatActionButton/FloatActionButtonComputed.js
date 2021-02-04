@@ -73,7 +73,7 @@ export default function (FloatActionButton) {
     else if (this.isPuliWorkSelected) {
       list.push('facebook')
     }
-    else if (this.hasSelectedText) {
+    else if (this.hasSelectedOneLineText) {
       list.push('search')
     }
     else {
@@ -113,7 +113,7 @@ export default function (FloatActionButton) {
     else if (this.isPuliWorkSelected) {
       return 'Open #PULI_WORK (Alt+O)'
     }
-    else if (this.hasSelectedText) {
+    else if (this.hasSelectedOneLineText) {
       return 'Search web (Alt+O)'
     }
     else {
@@ -136,5 +136,9 @@ export default function (FloatActionButton) {
   
   FloatActionButton.computed.hasSelectedText = function () {
     return (this.config.selectedText && this.config.selectedText !== '')
+  }
+  
+  FloatActionButton.computed.hasSelectedOneLineText = function () {
+    return (this.config.selectedText && this.config.selectedText !== '' && this.config.selectedText.indexOf('\n') === -1)
   }
 }

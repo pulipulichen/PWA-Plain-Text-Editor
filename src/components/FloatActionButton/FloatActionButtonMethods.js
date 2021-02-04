@@ -44,7 +44,7 @@ export default function (FloatActionButton) {
       //console.log(url)
       window.open(url, '_blank') 
     }
-    else if (this.hasSelectedText) {
+    else if (this.hasSelectedOneLineText) {
       this.searchWeb()
     }
     else {
