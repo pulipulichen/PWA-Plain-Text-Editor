@@ -3,7 +3,7 @@
 //import FloatActionButton from './FloatActionButton/FloatActionButton.vue'
 
 //import FormatPanel from './FormatPanel/FormatPanel.vue'
-//import ReplacePanel from './ReplacePanel/ReplacePanel.vue'
+import LoadingLayer from './LoadingLayer/LoadingLayer.vue'
 
 let Index = {
   props: ['config', 'localConfig', 'utils'],
@@ -17,7 +17,8 @@ let Index = {
     ConfigModal: () => import(/* webpackChunkName: "vendors/ConfigModal" */ './ConfigModal/ConfigModal.vue'),
     //FormatPanel,
     ReplacePanel: () => import(/* webpackChunkName: "vendors/ReplacePanel" */ './ReplacePanel/ReplacePanel.vue'),
-    CodeMirrorEditor: () => import(/* webpackChunkName: "vendors/CodeMirror" */ './CodeMirrorEditor/CodeMirrorEditor.vue')
+    CodeMirrorEditor: () => import(/* webpackChunkName: "vendors/CodeMirror" */ './CodeMirrorEditor/CodeMirrorEditor.vue'),
+    LoadingLayer,
   },
   computed: {
   },

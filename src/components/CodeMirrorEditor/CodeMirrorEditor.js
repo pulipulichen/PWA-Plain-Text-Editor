@@ -9,7 +9,8 @@ let CodeMirrorEditor = {
   data: null,
   components: {
     codemirror,
-    OpenFile
+    OpenFile,
+    OCRHandler: () => import(/* webpackChunkName: "vendors/OCRHandler" */ './OCRHandler/OCRHandler.vue'),
   },
   mounted: async function () {
 //    //console.log(this.inited)

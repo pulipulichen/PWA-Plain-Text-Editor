@@ -21,7 +21,8 @@ let config = {
     width: 0,
     height: 0,
     ratio: 1
-  }
+  },
+  loadingProgress: 1
 }
 
 import styleConfig from './styles/style.config.js'

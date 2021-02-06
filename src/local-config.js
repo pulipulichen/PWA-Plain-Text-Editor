@@ -24,7 +24,8 @@ let localConfig = {
   filename: null,
   enableTypewritterSound: true,
   mainButtonAction: 'copy & clear',
-  speechSynthesisRate: 1.1
+  speechSynthesisRate: 1.1,
+  ocrLanguage: 'eng'
 }
 
 export default localConfig

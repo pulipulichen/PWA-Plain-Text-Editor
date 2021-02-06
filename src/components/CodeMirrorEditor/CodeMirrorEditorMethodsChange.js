@@ -48,7 +48,8 @@ export default function (CodeMirrorEditor) {
     }
   }
   
-  CodeMirrorEditor.methods.onCodeMirrorDrop = function (codemirror, event) {
+  //let imageFileTypes = ['image/png', 'image/gif', 'image/jpeg']
+  CodeMirrorEditor.methods.onCodeMirrorDrop = async function (codemirror, event) {
     //console.log(event)
     //console.log('onCodeMirrorDrop')
     event.preventDefault()
@@ -68,17 +69,25 @@ export default function (CodeMirrorEditor) {
     let file = files[0]
     
     let filename = file.name
-    //console.log(file)
-    let reader = new FileReader()
+    let filetype = file.type
     
-    reader.onloadend = () => {
-      //this.imgSrc = reader.result
-      this.code = reader.result
-      this.localConfig.filename = filename
-      //console.log(filename)
-      this.setModeByFilename(filename)
+    //if (imageFileTypes.indexOf(filetype) > -1) {
+    if (filetype.startsWith('image/')) {
+      this.code = await this.$refs.OCRHandler.processOCR(file)
     }
-    reader.readAsText(file)
+    else {
+      //console.log(file)
+      let reader = new FileReader()
+
+      reader.onloadend = () => {
+        //this.imgSrc = reader.result
+        this.code = reader.result
+        this.localConfig.filename = filename
+        //console.log(filename)
+        this.setModeByFilename(filename)
+      }
+      reader.readAsText(file)
+    }
   }
   
   let replaceAll = function (str, find, replace) {

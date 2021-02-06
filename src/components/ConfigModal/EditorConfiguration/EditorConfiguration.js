@@ -20,6 +20,24 @@ let EditorConfiguration = {
           value: 'select all',
           text: 'Select All'
         },
+      ],
+      ocrLanguageList: [
+        {
+          value: 'eng',
+          text: 'English'
+        },
+        {
+          value: 'chi_tra',
+          text: 'Chinese - Traditional'
+        },
+        {
+          value: 'chi_sim',
+          text: 'Chinese - Simplified'
+        },
+        {
+          value: 'jpn',
+          text: 'Japanese'
+        },
       ]
     }
   },

@@ -119,4 +119,17 @@
     </select>
   </div>
 
+  <div class="field">
+    <label for="OCRLanguageSelect">
+      {{ $t('OCR Language') }}
+    </label>
+    <select v-model="localConfig.ocrLanguage"
+            id="OCRLanguageSelect">
+      <option v-for="option in ocrLanguageList"
+              v-bind:value="option.value">
+        {{ $t(option.text) }}
+      </option>
+    </select>
+  </div>
+  
 </div>

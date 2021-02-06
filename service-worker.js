@@ -16,7 +16,7 @@
 // Names of the two caches used in this version of the service worker.
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
-const PRECACHE = 'precache-v2021-0207-051543';
+const PRECACHE = 'precache-v2021-0207-061543';
 const RUNTIME = 'runtime';
 
 /**
@@ -83,7 +83,10 @@ const PRECACHE_URLS = [
   'dist/vendors/FloatActionButton.js',
   'dist/vendors/ReplacePanel.js',
   'dist/vendors/semantic-ui-niwsf.js',
-  'dist/vendors~vendors/CodeMirror.js'
+  'dist/vendors/OCRHandler.js',
+  'dist/vendors~vendors/CodeMirror.js',
+  'dist/vendors~vendors/OCRHandler.js',
+  'dist/vendors~vendors/FloatActionButton.js',
 ];
 
 // The install handler takes care of precaching the resources we always need.

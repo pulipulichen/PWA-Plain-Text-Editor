@@ -16,6 +16,8 @@ export default function (CodeMirrorEditor) {
   let inputedText = ''
   CodeMirrorEditor.methods.onCodeMirrorHintHandler = function (cm, input) {
     if (input.origin === 'paste') {
+//      console.log('來自貼上')
+//      console.log(input)
       return false
     }
     
