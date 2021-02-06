@@ -99,6 +99,49 @@ export default function (FloatActionButton) {
       let parts = splitMulti(text, ['。', ':', '：', '；', '\n', '\t'])
       parts = parts.filter(p => p.trim() !== '')
       
+      // ----------------------------
+      // 第二階段細分
+      let tempParts = []
+      let subSeperators = ['、', '，']
+      parts.forEach(text => {
+        
+        if (text.length < 100) {
+          return tempParts.push(text)
+        }
+        
+        let lastSeperator, lastSeperatorPos, lastSeperatorTempPos
+        let tempText = []
+        for (let i = 0, max = text.length; i < max; i++) {
+          let t = text[i]
+          tempText.push(t)
+          
+          if (tempText.length === 100) {
+            if (!lastSeperatorPos) {
+              tempParts.push(tempText.join(''))
+              tempText = []
+            }
+            else {
+              tempParts.push(tempText.slice(0, lastSeperatorTempPos - 1).join(''))
+              i = lastSeperatorPos
+              tempText = []
+            }
+          }
+          
+          if (subSeperators.indexOf(t) > -1) {
+            lastSeperator = t
+            lastSeperatorPos = i
+            lastSeperatorTempPos = tempText.length
+          }
+        }
+        
+        if (tempText.length > 0) {
+          tempParts.push(tempText.join(''))
+        }
+      })
+      
+      parts = tempParts
+      // ----------------------------
+      
       //console.log(parts)
       return parts
     }
