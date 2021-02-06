@@ -6,6 +6,7 @@ import Author from './Author/Author.vue'
 import EditorConfiguration from './EditorConfiguration/EditorConfiguration.vue'
 import Statistics from './Statistics/Statistics.vue'
 import FileManager from './FileManager/FileManager.vue'
+import SpeakConfiguration from './SpeakConfiguration/SpeakConfiguration.vue'
 
 let ConfigModal = {
   props: ['config', 'localConfig', 'utils'],
@@ -14,7 +15,8 @@ let ConfigModal = {
     'table-of-contents': TableOfContents,
     EditorConfiguration,
     Statistics,
-    FileManager
+    FileManager,
+    SpeakConfiguration
   },
   data () {    
     this.$i18n.locale = this.localConfig.locale

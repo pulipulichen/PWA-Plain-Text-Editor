@@ -1,0 +1,22 @@
+<div class="ui segment">
+  <h2 class="header" id="EditorConfiguration">
+    {{ $t('Speak Configuration') }}
+  </h2>
+
+  <div class="field">
+    <label for="SpeakRateRange">
+      {{ $t('Speak Rate Range') }}
+    </label>
+    <div class="two fields">
+      <div class="field">
+        <input type="range" min="0.5" max="2" step="0.1" v-model="localConfig.speechSynthesisRate" />
+      </div>
+      <div class="field">
+        <input type="number" v-model="localConfig.speechSynthesisRate" step="0.1" />
+      </div>
+    </div>
+    
+    
+  </div>
+  
+</div>

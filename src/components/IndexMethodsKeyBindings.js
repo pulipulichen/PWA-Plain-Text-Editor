@@ -25,6 +25,9 @@ export default function (Index) {
       'alt+o': (event, handler) => {
         this.clickFABMainButton(event)
       },
+      'alt+s': (event, handler) => {
+        this.clickFABSpeakButton(event)
+      },
       'esc': (event, handler) => {
         this.onPressEsc(event)
       }
@@ -114,6 +117,10 @@ export default function (Index) {
   
   Index.methods.clickFABMainButton = function (event) {
     this.$refs.FloatActionButton.onMainIconClick()
+  }
+  
+  Index.methods.clickFABSpeakButton = function (event) {
+    this.$refs.FloatActionButton.speak()
   }
   
   // 連續間隔期間

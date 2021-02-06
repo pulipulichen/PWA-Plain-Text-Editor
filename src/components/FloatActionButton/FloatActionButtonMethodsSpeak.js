@@ -16,6 +16,24 @@ export default function (FloatActionButton) {
       // 需要分段
       let textParts = this.splitSpeechTextToParts(text)
       
+      // -------------
+      
+      let tooLongMessage = this.$t('The message is too long.')
+      for (let i = 0, max = textParts.length; i < max; i++) {
+        let text = textParts[i]
+        if (text.length > 100) {
+          console.error(tooLongMessage, text)
+          msg.text = tooLongMessage
+          msg.rate = this.localConfig.speechSynthesisRate
+          this.speechSynthesis.cancel()
+          this.speechSynthesis.speak(msg)
+          this.isSpeaking = false
+          return false
+        }
+      }
+        
+      // ------------
+      
       let loop = (i) => {
         if (this.isSpeaking === false) {
           return false
@@ -23,11 +41,16 @@ export default function (FloatActionButton) {
         
         if (i < textParts.length) {
           msg.text = textParts[i]
-          msg.rate = 1.2
+          msg.rate = this.localConfig.speechSynthesisRate
+          //console.log(this.localConfig.speechSynthesisRate)
+//          let isEnd = false
           msg.onend = () => {
+//            isEnd = true
             i++
             loop(i)
           }
+          
+          
           //console.log(msg)
           this.speechSynthesis.cancel()
           this.speechSynthesis.speak(msg)
