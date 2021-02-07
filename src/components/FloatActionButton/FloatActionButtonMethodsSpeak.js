@@ -2,15 +2,17 @@ import $ from 'jquery'
 
 export default function (FloatActionButton) {
     let msg = new SpeechSynthesisUtterance();
-    
-    FloatActionButton.methods.speak = function () {
+
+    FloatActionButton.methods.speak = function (text) {
       this.isSpeaking = true
-      let text
-      if (this.hasSelectedText) {
-        text = this.config.selectedText
-      }
-      else {
-        text = this.localConfig.textContent
+      //let text
+      if (!text) {
+        if (this.hasSelectedText) {
+          text = this.config.selectedText
+        }
+        else {
+          text = this.localConfig.textContent
+        }
       }
       
       // 需要分段
@@ -79,7 +81,8 @@ export default function (FloatActionButton) {
       p = p.replace(/ *\([^)]*\) */g, "")
       p = p.replace(/ *\[[^)]*\] */g, "")
       p = p.replace(/ *\{[^)]*\} */g, "")
-
+      p = p.split('ɑ').join('α')
+      
       p = p.split('（').map((p2, i) => {
         if (i === 0) {
           return p2

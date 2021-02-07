@@ -13,13 +13,14 @@ let localConfig = {
     lTrim: false,
     rTrim: false
   },
-  lineWrapping: false,
+  lineWrapping: true,
   indent: {
     mode: 'tab',
     size: 2,
   },
   formatTool: 'lines-trim',
-  syntax: 'text/javascript',
+  //syntax: 'text/javascript',
+  syntax: 'text/plain',
   fontSize: 16,
   filename: null,
   enableTypewritterSound: true,

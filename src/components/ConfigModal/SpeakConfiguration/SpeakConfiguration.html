@@ -14,6 +14,19 @@
       <div class="field">
         <input type="number" v-model="localConfig.speechSynthesisRate" step="0.1" />
       </div>
+      <div class="field">
+        <button type="button"
+                class="ui fluid button"
+                v-bind:class="{positive: isAutoListening}"
+                v-on:click="listen">
+          <template v-if="!isAutoListening">
+            {{ $t('Start Auto Speak') }}
+          </template>
+          <template v-if="isAutoListening">
+            {{ $t('Stop Auto Speak') }}
+          </template>
+        </button>  
+      </div>
     </div>
     
     

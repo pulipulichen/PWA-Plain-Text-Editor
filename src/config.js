@@ -22,7 +22,8 @@ let config = {
     height: 0,
     ratio: 1
   },
-  loadingProgress: 1
+  loadingProgress: 1,
+  textToSpeech: null
 }
 
 import styleConfig from './styles/style.config.js'

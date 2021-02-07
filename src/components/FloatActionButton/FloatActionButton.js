@@ -40,7 +40,10 @@ let FloatActionButton = {
       if (this.isSpeaking === false) {
         this.speechSynthesis.cancel()
       }
-    }
+    },
+    'config.textToSpeech'() {
+      this.speak(this.config.textToSpeech)
+    },
   },
   computed: {}, // 移動到 FloatActionButtonComputed.js
   methods: {} // 移動到 FloatActionButtonMethods.js

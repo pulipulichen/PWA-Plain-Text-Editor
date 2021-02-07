@@ -182,7 +182,7 @@ for (let key in localConfig) {
 
 if (typeof(baseURL) === 'string') {
   setTimeout(() => {
-    new Vue(VueController)
+    window.vueApp = new Vue(VueController)
   }, 0)
 }
 
