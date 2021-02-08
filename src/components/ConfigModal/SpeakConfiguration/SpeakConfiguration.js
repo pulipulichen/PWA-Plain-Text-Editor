@@ -33,6 +33,7 @@ let SpeakConfiguration = {
           this.isAutoListening = false
           this.lastText = null
           window.removeEventListener('focus', this.eventFunction)
+          this.config.textToSpeech = false
           return false
         }
         
