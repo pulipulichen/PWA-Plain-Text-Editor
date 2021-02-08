@@ -70,8 +70,12 @@ let SpeakConfiguration = {
         //}, 1000)  
         } // this.eventFunction = () => {
           
-        window.addEventListener('focus', this.eventFunction)
-    } // listen: async function () {
+      window.addEventListener('focus', this.eventFunction)
+      this.eventFunction()
+    }, // listen: async function () {
+    stopSpeak () {
+      this.config.textToSpeech = false
+    }
   } // methods
 }
 

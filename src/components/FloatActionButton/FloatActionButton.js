@@ -41,8 +41,9 @@ let FloatActionButton = {
         this.speechSynthesis.cancel()
       }
     },
-    'config.textToSpeech'() {
-      this.speak(this.config.textToSpeech)
+    'config.textToSpeech': async function () {
+      await this.speak(this.config.textToSpeech)
+      this.config.textToSpeech = false
     },
   },
   computed: {}, // 移動到 FloatActionButtonComputed.js

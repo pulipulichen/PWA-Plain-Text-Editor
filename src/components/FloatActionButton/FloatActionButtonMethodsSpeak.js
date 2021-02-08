@@ -4,67 +4,77 @@ export default function (FloatActionButton) {
     let msg = new SpeechSynthesisUtterance();
 
     FloatActionButton.methods.speak = function (text) {
-      this.isSpeaking = true
-      //let text
-      if (!text) {
-        if (this.hasSelectedText) {
-          text = this.config.selectedText
-        }
-        else {
-          text = this.localConfig.textContent
-        }
+      if (text === false) {
+        this.isSpeaking = false
+        return false
       }
       
-      // 需要分段
-      let textParts = this.splitSpeechTextToParts(text)
-      
-      // -------------
-      
-      let tooLongMessage = this.$t('The message is too long.')
-      for (let i = 0, max = textParts.length; i < max; i++) {
-        let text = textParts[i]
-        if (text.length > 100) {
-          console.error(tooLongMessage, text)
-          msg.text = tooLongMessage
-          msg.rate = this.localConfig.speechSynthesisRate
-          this.speechSynthesis.cancel()
-          this.speechSynthesis.speak(msg)
-          this.isSpeaking = false
-          return false
-        }
-      }
-        
-      // ------------
-      
-      let loop = (i) => {
-        if (this.isSpeaking === false) {
-          return false
-        }
-        
-        if (i < textParts.length) {
-          msg.text = textParts[i]
-          msg.rate = this.localConfig.speechSynthesisRate
-          //console.log(this.localConfig.speechSynthesisRate)
-//          let isEnd = false
-          msg.onend = () => {
-//            isEnd = true
-            i++
-            loop(i)
+      return new Promise((resolve) => {
+
+        this.isSpeaking = true
+        //let text
+        if (!text) {
+          if (this.hasSelectedText) {
+            text = this.config.selectedText
           }
-          
-          
-          //console.log(msg)
-          this.speechSynthesis.cancel()
-          this.speechSynthesis.speak(msg)
+          else {
+            text = this.localConfig.textContent
+          }
         }
-        else {
-          this.isSpeaking = false
+
+        // 需要分段
+        let textParts = this.splitSpeechTextToParts(text)
+
+        // -------------
+
+        let tooLongMessage = this.$t('The message is too long.')
+        for (let i = 0, max = textParts.length; i < max; i++) {
+          let text = textParts[i]
+          if (text.length > 100) {
+            console.error(tooLongMessage, text)
+            msg.text = tooLongMessage
+            msg.rate = this.localConfig.speechSynthesisRate
+            this.speechSynthesis.cancel()
+            this.speechSynthesis.speak(msg)
+            this.isSpeaking = false
+            return false
+          }
         }
-      }
+
+        // ------------
+
+        let loop = (i) => {
+          if (this.isSpeaking === false) {
+            return false
+          }
+
+          if (i < textParts.length) {
+            msg.text = textParts[i]
+            msg.rate = this.localConfig.speechSynthesisRate
+            //console.log(this.localConfig.speechSynthesisRate)
+  //          let isEnd = false
+            msg.onend = () => {
+  //            isEnd = true
+              i++
+              loop(i)
+            }
+
+
+            //console.log(msg)
+            this.speechSynthesis.cancel()
+            this.speechSynthesis.speak(msg)
+          }
+          else {
+            this.isSpeaking = false
+            resolve()
+          }
+        }
+
+        loop(0)
+
+        this.closeMenu()
       
-      loop(0)
-      
-      this.closeMenu()
+      })  // return new Promise((resolve) => {
     }
     
     let splitMulti = function (str, tokens) {
