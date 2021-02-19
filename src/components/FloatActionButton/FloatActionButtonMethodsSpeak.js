@@ -4,16 +4,16 @@ export default function (FloatActionButton) {
     let msg = new SpeechSynthesisUtterance();
 
     FloatActionButton.methods.speak = function (text) {
+      //console.log(text)
       if (text === false) {
         this.isSpeaking = false
         return false
       }
-      
       return new Promise((resolve) => {
 
         this.isSpeaking = true
         //let text
-        if (!text) {
+        if (!text || typeof(text) === 'object') {
           if (this.hasSelectedText) {
             text = this.config.selectedText
           }
