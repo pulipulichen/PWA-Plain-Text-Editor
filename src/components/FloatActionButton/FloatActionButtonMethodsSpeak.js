@@ -86,6 +86,9 @@ export default function (FloatActionButton) {
       return str;
     }
     
+    let splitor1 = ['。', ':', '：', '；', '\n', '\t']
+    let splitor2 = ['，', ',', '、']
+    
     FloatActionButton.methods.splitSpeechTextToParts = function (text) {
       let p = text
       p = p.replace(/ *\([^)]*\) */g, "")
@@ -109,13 +112,13 @@ export default function (FloatActionButton) {
       //p = p.replace(/ *「[^)]*」 */g, "")
       text = p
       
-      let parts = splitMulti(text, ['。', ':', '：', '；', '\n', '\t'])
+      let parts = splitMulti(text, splitor1)
       parts = parts.filter(p => p.trim() !== '')
       
       // ----------------------------
       // 第二階段細分
       let tempParts = []
-      let subSeperators = ['、', '，']
+      let subSeperators = splitor2
       parts.forEach(text => {
         
         if (text.length < 100) {
