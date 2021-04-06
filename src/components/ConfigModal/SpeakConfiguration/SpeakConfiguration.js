@@ -15,10 +15,13 @@ let SpeakConfiguration = {
 ////  },
 //  computed: {
 //  },
-//  watch: {
-////    'localConfig.speechSynthesisRate' () {
-////      console.log(this.localConfig.speechSynthesisRate)
-////    }
+  watch: {
+    'config.textToSpeech' () {
+      if (!this.config.textToSpeech) {
+        this.lastText = null
+      }
+    }
+  },
 //  },
 //  mounted() {
 //    //this.initCheckbox()
