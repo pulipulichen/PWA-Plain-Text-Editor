@@ -95,6 +95,7 @@ export default function (FloatActionButton) {
       p = p.replace(/ *\[[^)]*\] */g, "")
       p = p.replace(/ *\{[^)]*\} */g, "")
       p = p.split('ɑ').join('α')
+      p = p.split('@').join(' at ')
       
       p = p.split('（').map((p2, i) => {
         if (i === 0) {
