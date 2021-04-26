@@ -14,7 +14,7 @@ export default function (CodeMirrorEditor) {
   }
     
   CodeMirrorEditor.methods.jumpToLine = function (i, from = 0) {
-    if (this.simpleMode === true) {
+    if (this.localConfig.editorSimpleMode === true) {
       return false
     }
 
@@ -35,7 +35,7 @@ export default function (CodeMirrorEditor) {
     //}
   }
   CodeMirrorEditor.methods.jumpToMarker = function (marker) {
-    if (this.simpleMode === true) {
+    if (this.localConfig.editorSimpleMode === true) {
       return false
     }
 
@@ -45,7 +45,7 @@ export default function (CodeMirrorEditor) {
     this.codemirror.setSelection({line: fromLine - 1, ch: fromCh}, {line: toLine - 1, ch: toCh})
   }
   CodeMirrorEditor.methods.getCursor = function (position) {
-    if (this.simpleMode === true
+    if (this.localConfig.editorSimpleMode === true
             || this.config.inited === false) {
       return false
     }
@@ -56,7 +56,7 @@ export default function (CodeMirrorEditor) {
   let cursorPositionKey = 'codemirror.cursor.position'
   //let viewportKey = 'codemirror.viewport.position'
   CodeMirrorEditor.methods.saveCursorPosition = function () {
-    if (this.simpleMode === true
+    if (this.localConfig.editorSimpleMode === true
             || this.config.inited === false
             || this.inited === false
             || this.changeLock === true) {
@@ -82,7 +82,7 @@ export default function (CodeMirrorEditor) {
   
   CodeMirrorEditor.methods.restoreCursorPosition = function () {
     //console.log('restoreCursorPosition', this.config.inited, this.cursorPositionSaved.from)
-    if (this.simpleMode === true
+    if (this.localConfig.editorSimpleMode === true
             || this.config.inited === false) {
       return false
     }
@@ -121,7 +121,7 @@ export default function (CodeMirrorEditor) {
     }
   }
   CodeMirrorEditor.methods.getSelectedText = function () {
-    if (this.simpleMode === true) {
+    if (this.localConfig.editorSimpleMode === true) {
       return false
     }
 

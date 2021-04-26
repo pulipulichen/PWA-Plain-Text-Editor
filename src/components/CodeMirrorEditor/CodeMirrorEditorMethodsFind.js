@@ -1,6 +1,6 @@
 export default function (CodeMirrorEditor) {
   CodeMirrorEditor.methods.getMarkerPos = function (marker) {
-    if (this.simpleMode === true) {
+    if (this.localConfig.editorSimpleMode === true) {
       return false
     }
 
@@ -23,7 +23,7 @@ export default function (CodeMirrorEditor) {
   }
 
   CodeMirrorEditor.methods.findNext = function (search) {
-    if (this.simpleMode === true) {
+    if (this.localConfig.editorSimpleMode === true) {
       return false
     }
 
@@ -82,7 +82,7 @@ export default function (CodeMirrorEditor) {
     return false  // 沒找到
   }
   CodeMirrorEditor.methods.findPrev = function (search) {
-    if (this.simpleMode === true) {
+    if (this.localConfig.editorSimpleMode === true) {
       return false
     }
 
@@ -180,7 +180,7 @@ export default function (CodeMirrorEditor) {
       return false
     }
     
-    if (this.simpleMode === true) {
+    if (this.localConfig.editorSimpleMode === true) {
       return false
     }
 

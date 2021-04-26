@@ -9,9 +9,9 @@ export default function (CodeMirrorEditor) {
   }
 
   CodeMirrorEditor.methods.setMode = function (mode) {
-    if (this.simpleMode === true) {
-      return false
-    }
+//    if (this.localConfig.editorSimpleMode === true) {
+//      return false
+//    }
 
     setTimeout(() => {
       this.codemirror.setOption("mode", mode)
@@ -27,6 +27,11 @@ export default function (CodeMirrorEditor) {
   }
   
   CodeMirrorEditor.methods.setOption = function (key, value) {
+    //console.log(this.localConfig.textContent)
+//    if (this.localConfig.editorSimpleMode === true) {
+//      this.inited = true
+//      return false
+//    }
 
     setTimeout(() => {
       this.codemirror.setOption(key, value)

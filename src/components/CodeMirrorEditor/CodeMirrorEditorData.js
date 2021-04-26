@@ -5,7 +5,7 @@ export default function (CodeMirrorEditor) {
     this.$i18n.locale = this.localConfig.locale
     return {
       inited: false,
-      simpleMode: false,
+      //simpleMode: true,
       //editor: null,
       //editor$el: null,
       markers: [],

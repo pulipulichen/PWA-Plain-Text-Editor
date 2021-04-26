@@ -193,4 +193,8 @@ export default function (FloatActionButton) {
         $body.popup('hide all')
       })
    }
+   
+   FloatActionButton.methods.toggleEditorMode = function () {
+     this.localConfig.editorSimpleMode = !this.localConfig.editorSimpleMode
+   }
 }

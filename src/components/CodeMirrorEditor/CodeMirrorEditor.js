@@ -32,8 +32,7 @@ let CodeMirrorEditor = {
       //console.log('onConfigInited', 1)
       
       //console.log(this.config.inited)
-      if (this.config.inited === false
-              || this.simpleMode === true) {
+      if (this.config.inited === false) {
         return false
       }
       

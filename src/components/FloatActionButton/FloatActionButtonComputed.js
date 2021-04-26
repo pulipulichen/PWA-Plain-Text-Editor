@@ -6,6 +6,12 @@ export default function (FloatActionButton) {
     if (this.positionBottom === false) {
       return false
     }
+    
+    if (this.localConfig.editorSimpleMode) {
+      return {
+        'bottom': `1rem`
+      }
+    }
 
     let style = {
       'bottom': `calc(1rem + ${this.config.panelHeight})`

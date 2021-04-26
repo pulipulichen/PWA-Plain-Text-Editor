@@ -26,7 +26,8 @@ let localConfig = {
   enableTypewritterSound: true,
   mainButtonAction: 'copy & clear',
   speechSynthesisRate: 1.1,
-  ocrLanguage: 'eng'
+  ocrLanguage: 'eng',
+  editorSimpleMode: false, // textarea
 }
 
 export default localConfig

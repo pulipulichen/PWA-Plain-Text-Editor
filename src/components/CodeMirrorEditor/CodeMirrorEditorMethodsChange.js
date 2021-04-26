@@ -4,7 +4,7 @@ export default function (CodeMirrorEditor) {
    * 這一個似乎是無效的
    */
   CodeMirrorEditor.methods.onEditorChange = async function () {
-    if (this.simpleMode === true) {
+    if (this.localConfig.editorSimpleMode === true) {
       return false
     }
 

@@ -2,22 +2,22 @@
      v-on:paste="onPaste"
      v-bind:class="computedCodeMirrorWrapperClassNameList">
   <textarea
-    v-if="simpleMode"
-    v-model="code"
+    v-if="localConfig.editorSimpleMode"
+    v-model="localConfig.textContent"
     class="editor"
     ref="MainTextarea"
     ></textarea>
   
   <codemirror 
     ref="cmEditor"
-    v-model="code" 
+    v-model="code"
     v-bind:options="computedCodeMirrorOptions"
     v-on:inputRead="onCodeMirrorHintHandler"
     v-on:cursorActivity="onCodeMirrorCursorActivity"
     v-on:viewportChange="onCodeMirrorCursorActivity"
     v-on:drop="onCodeMirrorDrop"
     v-on:keyHandled="onKeyHandled"
-    v-if="!simpleMode">
+    v-show="!localConfig.editorSimpleMode">
   </codemirror>
   
   <OpenFile
