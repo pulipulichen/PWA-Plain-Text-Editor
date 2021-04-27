@@ -120,7 +120,7 @@ export default function (Index) {
   }
   
   Index.methods.clickFABSpeakButton = function (event) {
-    this.$refs.FloatActionButton.speak()
+    this.$refs.FloatActionButton.speakOrStop()
   }
   
   // 連續間隔期間
