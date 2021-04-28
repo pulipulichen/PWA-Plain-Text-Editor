@@ -28,6 +28,9 @@ export default function (Index) {
       'alt+s': (event, handler) => {
         this.clickFABSpeakButton(event)
       },
+      'alt+e': (event, handler) => {
+        this.localConfig.editorSimpleMode = !this.localConfig.editorSimpleMode
+      },
       'esc': (event, handler) => {
         this.onPressEsc(event)
       }
