@@ -78,6 +78,15 @@ export default function (CodeMirrorEditor) {
       await this.utils.AsyncUtils.sleep(0)
       this.updateDocumentTitle()
       this.changeLock = false
+    },
+    'localConfig.editorSimpleMode': async function () {
+      await this.utils.AsyncUtils.sleep(0)
+      if (this.localConfig.editorSimpleMode === true) {
+        this.$refs.MainTextarea.focus()
+      }
+      else {
+        this.codemirror.focus()
+      }
     }
   }
 }
