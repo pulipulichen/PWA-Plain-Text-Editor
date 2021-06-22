@@ -2,6 +2,27 @@ import $ from 'jquery'
 
 export default function (FloatActionButton) {
   let msg = new SpeechSynthesisUtterance();
+  let voice
+  let lang = 'zh-TW'
+
+  FloatActionButton.methods.speakGetVoice = function () {
+    if (voice) {
+      return voice
+    }
+    
+    let voices = this.speechSynthesis.getVoices()
+    let v
+    for (let len = voices.length, i = len; i > 0; i--) {
+      v = voices[(len - i)]
+      if (v.lang === lang) {
+        voice = v
+        return v
+      }
+    }
+    
+    voice = v
+    return v
+  }
 
   FloatActionButton.methods.speak = function (text) {
     //console.log(text)
@@ -33,6 +54,7 @@ export default function (FloatActionButton) {
           console.error(tooLongMessage, text)
           msg.text = tooLongMessage
           msg.rate = this.localConfig.speechSynthesisRate
+          msg.voice = this.speakGetVoice()
           this.speechSynthesis.cancel()
           this.speechSynthesis.speak(msg)
           this.isSpeaking = false
@@ -50,6 +72,7 @@ export default function (FloatActionButton) {
         if (i < textParts.length) {
           msg.text = textParts[i]
           msg.rate = this.localConfig.speechSynthesisRate
+          msg.voice = this.speakGetVoice()
           //console.log(this.localConfig.speechSynthesisRate)
           //          let isEnd = false
           msg.onend = () => {
