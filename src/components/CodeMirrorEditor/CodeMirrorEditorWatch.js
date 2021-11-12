@@ -74,7 +74,10 @@ export default function (CodeMirrorEditor) {
       this.playSoundOnCodeDifference()
       
       this.changeLock = true
+      
+      // 防止被儲存
       this.localConfig.textContent = this.code
+
       await this.utils.AsyncUtils.sleep(0)
       this.updateDocumentTitle()
       this.changeLock = false
