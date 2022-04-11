@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0],{
 
-/***/ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ReplacePanel/CharacterCounter/CharacterCounter.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml%2FPWA-Plain-Text-Editor%2Fsrc%2Fcomponents%2FReplacePanel%2FCharacterCounter%2FCharacterCounter.vue&lang=yaml":
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@kazupon/vue-i18n-loader/lib!./src/components/ReplacePanel/CharacterCounter/CharacterCounter.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml%2FPWA-Plain-Text-Editor%2Fsrc%2Fcomponents%2FReplacePanel%2FCharacterCounter%2FCharacterCounter.vue&lang=yaml ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ReplacePanel/CharacterCounter/CharacterCounter.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fapp%2Fsrc%2Fcomponents%2FReplacePanel%2FCharacterCounter%2FCharacterCounter.vue&lang=yaml":
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@kazupon/vue-i18n-loader/lib!./src/components/ReplacePanel/CharacterCounter/CharacterCounter.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fapp%2Fsrc%2Fcomponents%2FReplacePanel%2FCharacterCounter%2FCharacterCounter.vue&lang=yaml ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -16,10 +16,10 @@ module.exports = function (Component) {
 
 /***/ }),
 
-/***/ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ReplacePanel/ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml%2FPWA-Plain-Text-Editor%2Fsrc%2Fcomponents%2FReplacePanel%2FReplacePanel.vue&lang=yaml":
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@kazupon/vue-i18n-loader/lib!./src/components/ReplacePanel/ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml%2FPWA-Plain-Text-Editor%2Fsrc%2Fcomponents%2FReplacePanel%2FReplacePanel.vue&lang=yaml ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ReplacePanel/ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fapp%2Fsrc%2Fcomponents%2FReplacePanel%2FReplacePanel.vue&lang=yaml":
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@kazupon/vue-i18n-loader/lib!./src/components/ReplacePanel/ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fapp%2Fsrc%2Fcomponents%2FReplacePanel%2FReplacePanel.vue&lang=yaml ***!
+  \***************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -61,7 +61,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, ".replace-panel[data-v-8d37a762] {\n  background-color: #e1f7f7;\n  border-top: 1px solid #10a3a3;\n  padding-bottom: 0.5rem;\n  height: 10.5rem;\n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n  z-index: 9;\n}\n.replace-panel .close-icon[data-v-8d37a762] {\n  float: right;\n  cursor: pointer;\n}\n.replace-panel .field[data-v-8d37a762] {\n  clear: none !important;\n}\n.replace-panel label[data-v-8d37a762] {\n  width: 6rem !important;\n  display: inline-block;\n  text-align: right;\n  user-select: none;\n  cursor: pointer !important;\n}\n.replace-panel .string-to-search-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 1rem) !important;\n}\n.replace-panel .string-to-search-input-container[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 2rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 1rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select.has-undo-button .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-undo-button .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem) !important;\n}\n.replace-panel select[data-v-8d37a762] {\n  width: 8rem;\n  padding-top: 0 !important;\n  padding-bottom: 0 !important;\n  white-space: nowrap !important;\n}\n.replace-panel .ui.icon.input input[data-v-8d37a762] {\n  padding-right: 4.5rem !important;\n}\n.replace-panel .ui.icon.input i.icon[data-v-8d37a762] {\n  cursor: pointer;\n}\n.replace-panel .ui.icon.input i.icon[data-v-8d37a762]:not(:first-of-type) {\n  right: 2em !important;\n}\n.replace-panel .checkbox label[data-v-8d37a762] {\n  width: auto !important;\n}\n.replace-panel .replace-mode-select[data-v-8d37a762] {\n  width: 8rem !important;\n}\n.replace-panel .replace-line-options-select[data-v-8d37a762] {\n  width: 8rem !important;\n}\n.replace-panel .replace-count-button[data-v-8d37a762] {\n  width: 9rem;\n  max-width: 9rem;\n  overflow-x: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  display: inline-block !important;\n  padding-left: 0.5rem !important;\n  padding-right: 0.5rem !important;\n}\n.inline.field[data-v-8d37a762] {\n  margin-top: 0.5rem !important;\n  margin-bottom: 0.5rem !important;\n  user-select: none;\n}\n.inline.fields[data-v-8d37a762] {\n  user-select: none;\n}\n.format-tool-container .format-tool-select[data-v-8d37a762] {\n  width: 13rem;\n  border-bottom-right-radius: 0 !important;\n  border-top-right-radius: 0 !important;\n}\n.format-tool-container .button[data-v-8d37a762] {\n  border-bottom-left-radius: 0 !important;\n  border-top-left-radius: 0 !important;\n}\n.inline-fields-wrapper[data-v-8d37a762] {\n  overflow-x: auto;\n  overflow-y: hidden;\n  max-width: 100vw;\n  max-height: 3.5rem;\n}\n.inline-fields-wrapper .inline.fields[data-v-8d37a762] {\n  min-width: 60rem;\n}\n", "",{"version":3,"sources":["/media/pudding/DATA/pudding/Code-Porjects/html/PWA-Plain-Text-Editor/src/components/ReplacePanel/ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true&","ReplacePanel.less"],"names":[],"mappings":"AAAA;EAME,yBAAA;EACA,6BAAA;EAEA,sBAAA;EAEA,eAAA;EAEA,0BAAA;EACA,SAAA;EACA,YAAA;EACA,OAAA;EACA,UAAA;ACPF;ADVA;EAoBI,YAAA;EAEA,eAAA;ACRJ;ADdA;EA0BI,sBAAA;ACTJ;ADjBA;EA8BI,sBAAA;EACA,qBAAA;EACA,iBAAA;EACA,iBAAA;EACA,0BAAA;ACVJ;ADxBA;EAyCI,iDAAA;ACdJ;AD3BA;EA8CI,uDAAA;AChBJ;AD9BA;EAmDI,uDAAA;AClBJ;ADjCA;EAsDM,wDAAA;AClBN;ADqBI;EAII,+DAAA;ACtBR;ADyBM;EACE,wEAAA;ACvBR;AD2BI;EACE,iEAAA;ACzBN;AD7CA;EA2EI,WAAA;EACA,yBAAA;EACA,4BAAA;EACA,8BAAA;AC3BJ;ADnDA;EAmFM,gCAAA;AC7BN;ADtDA;EAuFM,eAAA;AC9BN;ADzDA;EA0FM,qBAAA;AC9BN;AD5DA;EA+FI,sBAAA;AChCJ;AD/DA;EAoGI,sBAAA;AClCJ;ADlEA;EAuGI,sBAAA;AClCJ;ADrEA;EA2GI,WAAA;EACA,eAAA;EACA,kBAAA;EACA,uBAAA;EACA,mBAAA;EACA,gCAAA;EAEA,+BAAA;EACA,gCAAA;ACpCJ;ADwCA;EACE,6BAAA;EACA,gCAAA;EACA,iBAAA;ACtCF;ADyCA;EACE,iBAAA;ACvCF;AD0CA;EAEI,YAAA;EACA,wCAAA;EACA,qCAAA;ACzCJ;ADqCA;EAQI,uCAAA;EACA,oCAAA;AC1CJ;AD+CA;EAEE,gBAAA;EACA,kBAAA;EACA,gBAAA;EACA,kBAAA;AC9CF;ADyCA;EAQI,gBAAA;AC9CJ","file":"ReplacePanel.less","sourcesContent":[".replace-panel {\n  @labelWidth: 6rem;\n  @ReplaceModeSelectWidth: 8rem;\n  @ReplaceLineModeSelectWidth: 8rem;\n  @ReplaceButtonWidth: 9rem;\n  @UndoButtonWidth: 2.5rem;\n  background-color: #e1f7f7;\n  border-top: 1px solid #10a3a3;\n  //padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  \n  height: 10.5rem;\n  \n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n  z-index: 9;\n  \n  .close-icon {\n    float: right;\n    //margin-top: 1rem;\n    cursor: pointer;\n  }\n  \n  .field {\n    clear: none !important; \n  }\n  \n  label {\n    width: @labelWidth !important;\n    display: inline-block;\n    text-align: right;\n    user-select: none;\n    cursor: pointer !important;\n  }\n  \n  //@closePanelIconWidth: 1rem;\n  @closePanelIconWidth: 0rem;\n  \n  .string-to-search-input {\n    width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem) !important;\n    \n  }\n  \n  .string-to-search-input-container {\n    width: calc(100% - @labelWidth - @closePanelIconWidth - 2rem - 1px) !important;\n  }\n  \n  .string-to-replace-with-input-container {\n    \n    width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem - 1px) !important;\n    \n    .string-to-replace-with-input {\n      width: calc(100% - @labelWidth - @closePanelIconWidth - 3rem - @ReplaceButtonWidth) !important;\n    }\n    \n    &.has-replace-line-options-select {\n      //width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem - @ReplaceLineModeSelectWidth) !important;\n      \n      .string-to-replace-with-input {\n        width: calc(100% - @labelWidth - @closePanelIconWidth - 3rem - @ReplaceButtonWidth - @ReplaceLineModeSelectWidth) !important;\n      }\n      \n      &.has-undo-button .string-to-replace-with-input {\n        width: calc(100% - @labelWidth - @closePanelIconWidth - 4rem - @UndoButtonWidth - @ReplaceButtonWidth - @ReplaceLineModeSelectWidth) !important;\n      }\n    }\n    \n    &.has-undo-button .string-to-replace-with-input {\n      width: calc(100% - @labelWidth - @closePanelIconWidth - 4rem - @UndoButtonWidth - @ReplaceButtonWidth) !important;\n    }\n  } \n  \n  select {\n    width: 8rem;\n    padding-top: 0 !important;\n    padding-bottom: 0 !important;\n    white-space: nowrap !important;\n  }\n  \n  .ui.icon.input {\n    input {\n      padding-right: 4.5rem !important;\n    }\n    \n    i.icon {\n      cursor: pointer;\n    }\n    i.icon:not(:first-of-type) {\n      right: 2em !important;\n    }\n  }\n  \n  .checkbox label {\n    width: auto !important;\n    //padding-left: 0 !important;\n  }\n  \n  .replace-mode-select {\n    width: @ReplaceModeSelectWidth !important;\n  }\n  .replace-line-options-select {\n    width: @ReplaceLineModeSelectWidth !important;\n  }\n  \n  .replace-count-button {\n    width: @ReplaceButtonWidth;\n    max-width: @ReplaceButtonWidth;\n    overflow-x: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    display: inline-block !important;\n    \n    padding-left: 0.5rem !important;\n    padding-right: 0.5rem !important;\n  }\n}\n\n.inline.field {\n  margin-top: 0.5rem !important;\n  margin-bottom: 0.5rem !important;\n  user-select: none;\n}\n\n.inline.fields {\n  user-select: none;\n}\n\n.format-tool-container {\n  .format-tool-select {\n    width: 13rem;\n    border-bottom-right-radius: 0 !important;\n    border-top-right-radius: 0 !important;\n  }\n  \n  .button {\n    border-bottom-left-radius: 0 !important;\n    border-top-left-radius: 0 !important;\n  }\n}\n  \n\n.inline-fields-wrapper {\n  \n  overflow-x: auto;\n  overflow-y: hidden;\n  max-width: 100vw;\n  max-height: 3.5rem;\n  \n  .inline.fields {\n    min-width: 60rem;\n  }\n}\n\n",".replace-panel {\n  background-color: #e1f7f7;\n  border-top: 1px solid #10a3a3;\n  padding-bottom: 0.5rem;\n  height: 10.5rem;\n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n  z-index: 9;\n}\n.replace-panel .close-icon {\n  float: right;\n  cursor: pointer;\n}\n.replace-panel .field {\n  clear: none !important;\n}\n.replace-panel label {\n  width: 6rem !important;\n  display: inline-block;\n  text-align: right;\n  user-select: none;\n  cursor: pointer !important;\n}\n.replace-panel .string-to-search-input {\n  width: calc(100% - 6rem - 0rem - 1rem) !important;\n}\n.replace-panel .string-to-search-input-container {\n  width: calc(100% - 6rem - 0rem - 2rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container {\n  width: calc(100% - 6rem - 0rem - 1rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select.has-undo-button .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-undo-button .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem) !important;\n}\n.replace-panel select {\n  width: 8rem;\n  padding-top: 0 !important;\n  padding-bottom: 0 !important;\n  white-space: nowrap !important;\n}\n.replace-panel .ui.icon.input input {\n  padding-right: 4.5rem !important;\n}\n.replace-panel .ui.icon.input i.icon {\n  cursor: pointer;\n}\n.replace-panel .ui.icon.input i.icon:not(:first-of-type) {\n  right: 2em !important;\n}\n.replace-panel .checkbox label {\n  width: auto !important;\n}\n.replace-panel .replace-mode-select {\n  width: 8rem !important;\n}\n.replace-panel .replace-line-options-select {\n  width: 8rem !important;\n}\n.replace-panel .replace-count-button {\n  width: 9rem;\n  max-width: 9rem;\n  overflow-x: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  display: inline-block !important;\n  padding-left: 0.5rem !important;\n  padding-right: 0.5rem !important;\n}\n.inline.field {\n  margin-top: 0.5rem !important;\n  margin-bottom: 0.5rem !important;\n  user-select: none;\n}\n.inline.fields {\n  user-select: none;\n}\n.format-tool-container .format-tool-select {\n  width: 13rem;\n  border-bottom-right-radius: 0 !important;\n  border-top-right-radius: 0 !important;\n}\n.format-tool-container .button {\n  border-bottom-left-radius: 0 !important;\n  border-top-left-radius: 0 !important;\n}\n.inline-fields-wrapper {\n  overflow-x: auto;\n  overflow-y: hidden;\n  max-width: 100vw;\n  max-height: 3.5rem;\n}\n.inline-fields-wrapper .inline.fields {\n  min-width: 60rem;\n}\n"]}]);
+exports.push([module.i, ".replace-panel[data-v-8d37a762] {\n  background-color: #e1f7f7;\n  border-top: 1px solid #10a3a3;\n  padding-bottom: 0.5rem;\n  height: 10.5rem;\n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n  z-index: 9;\n}\n.replace-panel .close-icon[data-v-8d37a762] {\n  float: right;\n  cursor: pointer;\n}\n.replace-panel .field[data-v-8d37a762] {\n  clear: none !important;\n}\n.replace-panel label[data-v-8d37a762] {\n  width: 6rem !important;\n  display: inline-block;\n  text-align: right;\n  user-select: none;\n  cursor: pointer !important;\n}\n.replace-panel .string-to-search-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 1rem) !important;\n}\n.replace-panel .string-to-search-input-container[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 2rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 1rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select.has-undo-button .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-undo-button .string-to-replace-with-input[data-v-8d37a762] {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem) !important;\n}\n.replace-panel select[data-v-8d37a762] {\n  width: 8rem;\n  padding-top: 0 !important;\n  padding-bottom: 0 !important;\n  white-space: nowrap !important;\n}\n.replace-panel .ui.icon.input input[data-v-8d37a762] {\n  padding-right: 4.5rem !important;\n}\n.replace-panel .ui.icon.input i.icon[data-v-8d37a762] {\n  cursor: pointer;\n}\n.replace-panel .ui.icon.input i.icon[data-v-8d37a762]:not(:first-of-type) {\n  right: 2em !important;\n}\n.replace-panel .checkbox label[data-v-8d37a762] {\n  width: auto !important;\n}\n.replace-panel .replace-mode-select[data-v-8d37a762] {\n  width: 8rem !important;\n}\n.replace-panel .replace-line-options-select[data-v-8d37a762] {\n  width: 8rem !important;\n}\n.replace-panel .replace-count-button[data-v-8d37a762] {\n  width: 9rem;\n  max-width: 9rem;\n  overflow-x: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  display: inline-block !important;\n  padding-left: 0.5rem !important;\n  padding-right: 0.5rem !important;\n}\n.inline.field[data-v-8d37a762] {\n  margin-top: 0.5rem !important;\n  margin-bottom: 0.5rem !important;\n  user-select: none;\n}\n.inline.fields[data-v-8d37a762] {\n  user-select: none;\n}\n.format-tool-container .format-tool-select[data-v-8d37a762] {\n  width: 13rem;\n  border-bottom-right-radius: 0 !important;\n  border-top-right-radius: 0 !important;\n}\n.format-tool-container .button[data-v-8d37a762] {\n  border-bottom-left-radius: 0 !important;\n  border-top-left-radius: 0 !important;\n}\n.inline-fields-wrapper[data-v-8d37a762] {\n  overflow-x: auto;\n  overflow-y: hidden;\n  max-width: 100vw;\n  max-height: 3.5rem;\n}\n.inline-fields-wrapper .inline.fields[data-v-8d37a762] {\n  min-width: 60rem;\n}\n", "",{"version":3,"sources":["/app/src/components/ReplacePanel/ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true&","ReplacePanel.less"],"names":[],"mappings":"AAAA;EAME,yBAAA;EACA,6BAAA;EAEA,sBAAA;EAEA,eAAA;EAEA,0BAAA;EACA,SAAA;EACA,YAAA;EACA,OAAA;EACA,UAAA;ACPF;ADVA;EAoBI,YAAA;EAEA,eAAA;ACRJ;ADdA;EA0BI,sBAAA;ACTJ;ADjBA;EA8BI,sBAAA;EACA,qBAAA;EACA,iBAAA;EACA,iBAAA;EACA,0BAAA;ACVJ;ADxBA;EAyCI,iDAAA;ACdJ;AD3BA;EA8CI,uDAAA;AChBJ;AD9BA;EAmDI,uDAAA;AClBJ;ADjCA;EAsDM,wDAAA;AClBN;ADqBI;EAII,+DAAA;ACtBR;ADyBM;EACE,wEAAA;ACvBR;AD2BI;EACE,iEAAA;ACzBN;AD7CA;EA2EI,WAAA;EACA,yBAAA;EACA,4BAAA;EACA,8BAAA;AC3BJ;ADnDA;EAmFM,gCAAA;AC7BN;ADtDA;EAuFM,eAAA;AC9BN;ADzDA;EA0FM,qBAAA;AC9BN;AD5DA;EA+FI,sBAAA;AChCJ;AD/DA;EAoGI,sBAAA;AClCJ;ADlEA;EAuGI,sBAAA;AClCJ;ADrEA;EA2GI,WAAA;EACA,eAAA;EACA,kBAAA;EACA,uBAAA;EACA,mBAAA;EACA,gCAAA;EAEA,+BAAA;EACA,gCAAA;ACpCJ;ADwCA;EACE,6BAAA;EACA,gCAAA;EACA,iBAAA;ACtCF;ADyCA;EACE,iBAAA;ACvCF;AD0CA;EAEI,YAAA;EACA,wCAAA;EACA,qCAAA;ACzCJ;ADqCA;EAQI,uCAAA;EACA,oCAAA;AC1CJ;AD+CA;EAEE,gBAAA;EACA,kBAAA;EACA,gBAAA;EACA,kBAAA;AC9CF;ADyCA;EAQI,gBAAA;AC9CJ","file":"ReplacePanel.less","sourcesContent":[".replace-panel {\n  @labelWidth: 6rem;\n  @ReplaceModeSelectWidth: 8rem;\n  @ReplaceLineModeSelectWidth: 8rem;\n  @ReplaceButtonWidth: 9rem;\n  @UndoButtonWidth: 2.5rem;\n  background-color: #e1f7f7;\n  border-top: 1px solid #10a3a3;\n  //padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  \n  height: 10.5rem;\n  \n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n  z-index: 9;\n  \n  .close-icon {\n    float: right;\n    //margin-top: 1rem;\n    cursor: pointer;\n  }\n  \n  .field {\n    clear: none !important; \n  }\n  \n  label {\n    width: @labelWidth !important;\n    display: inline-block;\n    text-align: right;\n    user-select: none;\n    cursor: pointer !important;\n  }\n  \n  //@closePanelIconWidth: 1rem;\n  @closePanelIconWidth: 0rem;\n  \n  .string-to-search-input {\n    width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem) !important;\n    \n  }\n  \n  .string-to-search-input-container {\n    width: calc(100% - @labelWidth - @closePanelIconWidth - 2rem - 1px) !important;\n  }\n  \n  .string-to-replace-with-input-container {\n    \n    width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem - 1px) !important;\n    \n    .string-to-replace-with-input {\n      width: calc(100% - @labelWidth - @closePanelIconWidth - 3rem - @ReplaceButtonWidth) !important;\n    }\n    \n    &.has-replace-line-options-select {\n      //width: calc(100% - @labelWidth - @closePanelIconWidth - 1rem - @ReplaceLineModeSelectWidth) !important;\n      \n      .string-to-replace-with-input {\n        width: calc(100% - @labelWidth - @closePanelIconWidth - 3rem - @ReplaceButtonWidth - @ReplaceLineModeSelectWidth) !important;\n      }\n      \n      &.has-undo-button .string-to-replace-with-input {\n        width: calc(100% - @labelWidth - @closePanelIconWidth - 4rem - @UndoButtonWidth - @ReplaceButtonWidth - @ReplaceLineModeSelectWidth) !important;\n      }\n    }\n    \n    &.has-undo-button .string-to-replace-with-input {\n      width: calc(100% - @labelWidth - @closePanelIconWidth - 4rem - @UndoButtonWidth - @ReplaceButtonWidth) !important;\n    }\n  } \n  \n  select {\n    width: 8rem;\n    padding-top: 0 !important;\n    padding-bottom: 0 !important;\n    white-space: nowrap !important;\n  }\n  \n  .ui.icon.input {\n    input {\n      padding-right: 4.5rem !important;\n    }\n    \n    i.icon {\n      cursor: pointer;\n    }\n    i.icon:not(:first-of-type) {\n      right: 2em !important;\n    }\n  }\n  \n  .checkbox label {\n    width: auto !important;\n    //padding-left: 0 !important;\n  }\n  \n  .replace-mode-select {\n    width: @ReplaceModeSelectWidth !important;\n  }\n  .replace-line-options-select {\n    width: @ReplaceLineModeSelectWidth !important;\n  }\n  \n  .replace-count-button {\n    width: @ReplaceButtonWidth;\n    max-width: @ReplaceButtonWidth;\n    overflow-x: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    display: inline-block !important;\n    \n    padding-left: 0.5rem !important;\n    padding-right: 0.5rem !important;\n  }\n}\n\n.inline.field {\n  margin-top: 0.5rem !important;\n  margin-bottom: 0.5rem !important;\n  user-select: none;\n}\n\n.inline.fields {\n  user-select: none;\n}\n\n.format-tool-container {\n  .format-tool-select {\n    width: 13rem;\n    border-bottom-right-radius: 0 !important;\n    border-top-right-radius: 0 !important;\n  }\n  \n  .button {\n    border-bottom-left-radius: 0 !important;\n    border-top-left-radius: 0 !important;\n  }\n}\n  \n\n.inline-fields-wrapper {\n  \n  overflow-x: auto;\n  overflow-y: hidden;\n  max-width: 100vw;\n  max-height: 3.5rem;\n  \n  .inline.fields {\n    min-width: 60rem;\n  }\n}\n\n",".replace-panel {\n  background-color: #e1f7f7;\n  border-top: 1px solid #10a3a3;\n  padding-bottom: 0.5rem;\n  height: 10.5rem;\n  position: fixed !important;\n  bottom: 0;\n  width: 100vw;\n  left: 0;\n  z-index: 9;\n}\n.replace-panel .close-icon {\n  float: right;\n  cursor: pointer;\n}\n.replace-panel .field {\n  clear: none !important;\n}\n.replace-panel label {\n  width: 6rem !important;\n  display: inline-block;\n  text-align: right;\n  user-select: none;\n  cursor: pointer !important;\n}\n.replace-panel .string-to-search-input {\n  width: calc(100% - 6rem - 0rem - 1rem) !important;\n}\n.replace-panel .string-to-search-input-container {\n  width: calc(100% - 6rem - 0rem - 2rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container {\n  width: calc(100% - 6rem - 0rem - 1rem - 1px) !important;\n}\n.replace-panel .string-to-replace-with-input-container .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 3rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-replace-line-options-select.has-undo-button .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem - 8rem) !important;\n}\n.replace-panel .string-to-replace-with-input-container.has-undo-button .string-to-replace-with-input {\n  width: calc(100% - 6rem - 0rem - 4rem - 2.5rem - 9rem) !important;\n}\n.replace-panel select {\n  width: 8rem;\n  padding-top: 0 !important;\n  padding-bottom: 0 !important;\n  white-space: nowrap !important;\n}\n.replace-panel .ui.icon.input input {\n  padding-right: 4.5rem !important;\n}\n.replace-panel .ui.icon.input i.icon {\n  cursor: pointer;\n}\n.replace-panel .ui.icon.input i.icon:not(:first-of-type) {\n  right: 2em !important;\n}\n.replace-panel .checkbox label {\n  width: auto !important;\n}\n.replace-panel .replace-mode-select {\n  width: 8rem !important;\n}\n.replace-panel .replace-line-options-select {\n  width: 8rem !important;\n}\n.replace-panel .replace-count-button {\n  width: 9rem;\n  max-width: 9rem;\n  overflow-x: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  display: inline-block !important;\n  padding-left: 0.5rem !important;\n  padding-right: 0.5rem !important;\n}\n.inline.field {\n  margin-top: 0.5rem !important;\n  margin-bottom: 0.5rem !important;\n  user-select: none;\n}\n.inline.fields {\n  user-select: none;\n}\n.format-tool-container .format-tool-select {\n  width: 13rem;\n  border-bottom-right-radius: 0 !important;\n  border-top-right-radius: 0 !important;\n}\n.format-tool-container .button {\n  border-bottom-left-radius: 0 !important;\n  border-top-left-radius: 0 !important;\n}\n.inline-fields-wrapper {\n  overflow-x: auto;\n  overflow-y: hidden;\n  max-width: 100vw;\n  max-height: 3.5rem;\n}\n.inline-fields-wrapper .inline.fields {\n  min-width: 60rem;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -79,13 +79,13 @@ module.exports = exports;
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
+var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _vm.count
     ? _c("div", { staticClass: "ui basic button calc-button" }, [
-        _c("span", [_vm._v(_vm._s(_vm.count))])
+        _c("span", [_vm._v(_vm._s(_vm.count))]),
       ])
     : _vm._e()
 }
@@ -107,7 +107,7 @@ render._withStripped = true
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
+var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
@@ -119,21 +119,22 @@ var render = function() {
           name: "show",
           rawName: "v-show",
           value: _vm.isVisible,
-          expression: "isVisible"
-        }
+          expression: "isVisible",
+        },
       ],
-      staticClass: "replace-panel ui form"
+      staticClass: "replace-panel ui form",
     },
     [
       _c("div", { staticClass: "inline field" }, [
         _c("label", { attrs: { for: "stringToSearch" } }, [
-          _vm._v("\n      " + _vm._s(_vm.$t("Search")) + "\n    ")
+          _vm._v("\n      " + _vm._s(_vm.$t("Search")) + "\n    "),
         ]),
         _vm._v(" "),
         _c(
           "div",
           {
-            staticClass: "ui action icon input string-to-search-input-container"
+            staticClass:
+              "ui action icon input string-to-search-input-container",
           },
           [
             _c(
@@ -146,18 +147,18 @@ var render = function() {
                       name: "model",
                       rawName: "v-model",
                       value: _vm.localConfig.stringToSearch,
-                      expression: "localConfig.stringToSearch"
-                    }
+                      expression: "localConfig.stringToSearch",
+                    },
                   ],
                   ref: "SearchInput",
                   attrs: {
                     type: "text",
                     placeholder: "Search...",
-                    id: "stringToSearch"
+                    id: "stringToSearch",
                   },
                   domProps: { value: _vm.localConfig.stringToSearch },
                   on: {
-                    input: function($event) {
+                    input: function ($event) {
                       if ($event.target.composing) {
                         return
                       }
@@ -166,19 +167,19 @@ var render = function() {
                         "stringToSearch",
                         $event.target.value
                       )
-                    }
-                  }
+                    },
+                  },
                 }),
                 _vm._v(" "),
                 _c("i", {
                   staticClass: "link paragraph icon",
                   attrs: { titl: "New line" },
                   on: {
-                    click: function($event) {
+                    click: function ($event) {
                       _vm.localConfig.stringToSearch =
                         _vm.localConfig.stringToSearch + "\\n"
-                    }
-                  }
+                    },
+                  },
                 }),
                 _vm._v(" "),
                 _vm.localConfig.stringToSearch
@@ -186,12 +187,12 @@ var render = function() {
                       staticClass: "link close icon",
                       attrs: { titl: "Clear" },
                       on: {
-                        click: function($event) {
+                        click: function ($event) {
                           _vm.localConfig.stringToSearch = ""
-                        }
-                      }
+                        },
+                      },
                     })
-                  : _vm._e()
+                  : _vm._e(),
               ]
             ),
             _vm._v(" "),
@@ -201,7 +202,7 @@ var render = function() {
                 staticClass: "ui compact button",
                 class: { disabled: !_vm.isSearchEnabled },
                 attrs: { type: "button" },
-                on: { click: _vm.findPrev }
+                on: { click: _vm.findPrev },
               },
               [_c("i", { staticClass: "long arrow alternate left icon" })]
             ),
@@ -212,17 +213,17 @@ var render = function() {
                 staticClass: "ui compact button",
                 class: { disabled: !_vm.isSearchEnabled },
                 attrs: { type: "button" },
-                on: { click: _vm.findNext }
+                on: { click: _vm.findNext },
               },
               [_c("i", { staticClass: "long arrow alternate right icon" })]
-            )
+            ),
           ]
-        )
+        ),
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "inline field" }, [
         _c("label", { attrs: { for: "stringToReplaceWith" } }, [
-          _vm._v("Replace with")
+          _vm._v("Replace with"),
         ]),
         _vm._v(" "),
         _c(
@@ -230,7 +231,7 @@ var render = function() {
           {
             staticClass:
               "ui action icon input string-to-replace-with-input-container",
-            class: _vm.computedReplaceInputClassName
+            class: _vm.computedReplaceInputClassName,
           },
           [
             _c(
@@ -243,18 +244,18 @@ var render = function() {
                       name: "model",
                       rawName: "v-model",
                       value: _vm.localConfig.stringToReplaceWith,
-                      expression: "localConfig.stringToReplaceWith"
-                    }
+                      expression: "localConfig.stringToReplaceWith",
+                    },
                   ],
                   ref: "ReplaceInput",
                   attrs: {
                     type: "text",
                     placeholder: "Replace with...",
-                    id: "stringToReplaceWith"
+                    id: "stringToReplaceWith",
                   },
                   domProps: { value: _vm.localConfig.stringToReplaceWith },
                   on: {
-                    input: function($event) {
+                    input: function ($event) {
                       if ($event.target.composing) {
                         return
                       }
@@ -263,19 +264,19 @@ var render = function() {
                         "stringToReplaceWith",
                         $event.target.value
                       )
-                    }
-                  }
+                    },
+                  },
                 }),
                 _vm._v(" "),
                 _c("i", {
                   staticClass: "link paragraph icon",
                   attrs: { titl: "New line" },
                   on: {
-                    click: function($event) {
+                    click: function ($event) {
                       _vm.localConfig.stringToReplaceWith =
                         _vm.localConfig.stringToReplaceWith + "\\n"
-                    }
-                  }
+                    },
+                  },
                 }),
                 _vm._v(" "),
                 _vm.localConfig.stringToReplaceWith
@@ -283,12 +284,12 @@ var render = function() {
                       staticClass: "link close icon",
                       attrs: { titl: "Clear" },
                       on: {
-                        click: function($event) {
+                        click: function ($event) {
                           _vm.localConfig.stringToReplaceWith = ""
-                        }
-                      }
+                        },
+                      },
                     })
-                  : _vm._e()
+                  : _vm._e(),
               ]
             ),
             _vm._v(" "),
@@ -300,18 +301,18 @@ var render = function() {
                     name: "model",
                     rawName: "v-model",
                     value: _vm.localConfig.replaceMode,
-                    expression: "localConfig.replaceMode"
-                  }
+                    expression: "localConfig.replaceMode",
+                  },
                 ],
                 staticClass:
                   "ui compact selection dropdown replace-mode-select",
                 on: {
-                  change: function($event) {
+                  change: function ($event) {
                     var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function(o) {
+                      .call($event.target.options, function (o) {
                         return o.selected
                       })
-                      .map(function(o) {
+                      .map(function (o) {
                         var val = "_value" in o ? o._value : o.value
                         return val
                       })
@@ -320,23 +321,25 @@ var render = function() {
                       "replaceMode",
                       $event.target.multiple ? $$selectedVal : $$selectedVal[0]
                     )
-                  }
-                }
+                  },
+                },
               },
               [
                 _c("option", { attrs: { selected: "", value: "regex" } }, [
                   _vm._v(
                     "\n          " + _vm._s(_vm.$t("Regex")) + "\n        "
-                  )
+                  ),
                 ]),
                 _vm._v(" "),
                 _c("option", { attrs: { value: "raw" } }, [
-                  _vm._v("\n          " + _vm._s(_vm.$t("Raw")) + "\n        ")
+                  _vm._v("\n          " + _vm._s(_vm.$t("Raw")) + "\n        "),
                 ]),
                 _vm._v(" "),
                 _c("option", { attrs: { value: "line" } }, [
-                  _vm._v("\n          " + _vm._s(_vm.$t("Line")) + "\n        ")
-                ])
+                  _vm._v(
+                    "\n          " + _vm._s(_vm.$t("Line")) + "\n        "
+                  ),
+                ]),
               ]
             ),
             _vm._v(" "),
@@ -348,24 +351,24 @@ var render = function() {
                     name: "model",
                     rawName: "v-model",
                     value: _vm.localConfig.replaceLineOptions.mode,
-                    expression: "localConfig.replaceLineOptions.mode"
+                    expression: "localConfig.replaceLineOptions.mode",
                   },
                   {
                     name: "show",
                     rawName: "v-show",
                     value: _vm.showReplaceLineOptionsSelect,
-                    expression: "showReplaceLineOptionsSelect"
-                  }
+                    expression: "showReplaceLineOptionsSelect",
+                  },
                 ],
                 staticClass:
                   "ui compact selection dropdown replace-line-options-select",
                 on: {
-                  change: function($event) {
+                  change: function ($event) {
                     var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function(o) {
+                      .call($event.target.options, function (o) {
                         return o.selected
                       })
-                      .map(function(o) {
+                      .map(function (o) {
                         var val = "_value" in o ? o._value : o.value
                         return val
                       })
@@ -374,31 +377,33 @@ var render = function() {
                       "mode",
                       $event.target.multiple ? $$selectedVal : $$selectedVal[0]
                     )
-                  }
-                }
+                  },
+                },
               },
               [
                 _c("option", { attrs: { value: "prefix" } }, [
                   _vm._v(
                     "\n          " + _vm._s(_vm.$t("Prefix")) + "\n        "
-                  )
+                  ),
                 ]),
                 _vm._v(" "),
                 _c("option", { attrs: { value: "suffix" } }, [
                   _vm._v(
                     "\n          " + _vm._s(_vm.$t("Suffix")) + "\n        "
-                  )
+                  ),
                 ]),
                 _vm._v(" "),
                 _c("option", { attrs: { value: "first" } }, [
                   _vm._v(
                     "\n          " + _vm._s(_vm.$t("First")) + "\n        "
-                  )
+                  ),
                 ]),
                 _vm._v(" "),
                 _c("option", { attrs: { value: "last" } }, [
-                  _vm._v("\n          " + _vm._s(_vm.$t("Last")) + "\n        ")
-                ])
+                  _vm._v(
+                    "\n          " + _vm._s(_vm.$t("Last")) + "\n        "
+                  ),
+                ]),
               ]
             ),
             _vm._v(" "),
@@ -408,17 +413,17 @@ var render = function() {
                 staticClass: "ui button replace-count-button",
                 class: {
                   disabled: _vm.isReplaceDisabled,
-                  positive: !_vm.isReplaceDisabled
+                  positive: !_vm.isReplaceDisabled,
                 },
                 attrs: { title: _vm.computedReplaceButtonTitle },
-                on: { click: _vm.doReplace }
+                on: { click: _vm.doReplace },
               },
               [
                 _vm._v(
                   "\n        " +
                     _vm._s(_vm.computedReplaceButtonText) +
                     "\n      "
-                )
+                ),
               ]
             ),
             _vm._v(" "),
@@ -428,9 +433,9 @@ var render = function() {
                   { staticClass: "ui mini button", on: { click: _vm.undo } },
                   [_c("i", { staticClass: "undo icon" })]
                 )
-              : _vm._e()
+              : _vm._e(),
           ]
-        )
+        ),
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "inline-fields-wrapper" }, [
@@ -440,7 +445,7 @@ var render = function() {
           [
             _c("div", { staticClass: "field" }, [
               _c("label", [
-                _vm._v("\n        " + _vm._s(_vm.$t("Format")) + "\n      ")
+                _vm._v("\n        " + _vm._s(_vm.$t("Format")) + "\n      "),
               ]),
               _vm._v(" "),
               _c(
@@ -455,18 +460,18 @@ var render = function() {
                           name: "model",
                           rawName: "v-model",
                           value: _vm.localConfig.formatTool,
-                          expression: "localConfig.formatTool"
-                        }
+                          expression: "localConfig.formatTool",
+                        },
                       ],
                       staticClass:
                         "ui compact selection dropdown format-tool-select",
                       on: {
-                        change: function($event) {
+                        change: function ($event) {
                           var $$selectedVal = Array.prototype.filter
-                            .call($event.target.options, function(o) {
+                            .call($event.target.options, function (o) {
                               return o.selected
                             })
-                            .map(function(o) {
+                            .map(function (o) {
                               var val = "_value" in o ? o._value : o.value
                               return val
                             })
@@ -477,8 +482,8 @@ var render = function() {
                               ? $$selectedVal
                               : $$selectedVal[0]
                           )
-                        }
-                      }
+                        },
+                      },
                     },
                     [
                       _c("optgroup", { attrs: { label: "Trim" } }, [
@@ -487,15 +492,15 @@ var render = function() {
                           {
                             attrs: {
                               value: "lines-trim",
-                              disabled: _vm.isTrimDisabled
-                            }
+                              disabled: _vm.isTrimDisabled,
+                            },
                           },
                           [
                             _vm._v(
                               "\n              " +
                                 _vm._s(_vm.$t("Lines Trim")) +
                                 "\n            "
-                            )
+                            ),
                           ]
                         ),
                         _vm._v(" "),
@@ -504,15 +509,15 @@ var render = function() {
                           {
                             attrs: {
                               value: "lines-ltrim",
-                              disabled: _vm.isLTrimDisabled
-                            }
+                              disabled: _vm.isLTrimDisabled,
+                            },
                           },
                           [
                             _vm._v(
                               "\n              " +
                                 _vm._s(_vm.$t("Lines Left Trim")) +
                                 "\n            "
-                            )
+                            ),
                           ]
                         ),
                         _vm._v(" "),
@@ -521,15 +526,15 @@ var render = function() {
                           {
                             attrs: {
                               value: "lines-rtrim",
-                              disabled: _vm.isRTrimDisabled
-                            }
+                              disabled: _vm.isRTrimDisabled,
+                            },
                           },
                           [
                             _vm._v(
                               "\n              " +
                                 _vm._s(_vm.$t("Lines Right Trim")) +
                                 "\n            "
-                            )
+                            ),
                           ]
                         ),
                         _vm._v(" "),
@@ -539,15 +544,16 @@ var render = function() {
                             attrs: {
                               value: "remove-line-breaks",
                               disabled:
-                                _vm.localConfig.textContent.indexOf("\n") === -1
-                            }
+                                _vm.localConfig.textContent.indexOf("\n") ===
+                                -1,
+                            },
                           },
                           [
                             _vm._v(
                               "\n              " +
                                 _vm._s(_vm.$t("Remove Line Breaks")) +
                                 "\n            "
-                            )
+                            ),
                           ]
                         ),
                         _vm._v(" "),
@@ -556,15 +562,15 @@ var render = function() {
                           {
                             attrs: {
                               value: "empty-lines-remove",
-                              disabled: !_vm.hasEmptyLines
-                            }
+                              disabled: !_vm.hasEmptyLines,
+                            },
                           },
                           [
                             _vm._v(
                               "\n              " +
                                 _vm._s(_vm.$t("Remove Empty Lines")) +
                                 "\n            "
-                            )
+                            ),
                           ]
                         ),
                         _vm._v(" "),
@@ -573,17 +579,17 @@ var render = function() {
                           {
                             attrs: {
                               value: "duplicate-empty-lines-remove",
-                              disabled: !_vm.hasEmptyLines
-                            }
+                              disabled: !_vm.hasEmptyLines,
+                            },
                           },
                           [
                             _vm._v(
                               "\n              " +
                                 _vm._s(_vm.$t("Remove Duplicate Empty Lines")) +
                                 "\n            "
-                            )
+                            ),
                           ]
-                        )
+                        ),
                       ]),
                       _vm._v(" "),
                       _c("optgroup", { attrs: { label: "Compress" } }, [
@@ -592,15 +598,15 @@ var render = function() {
                           {
                             attrs: {
                               value: "code-minifiy",
-                              disabled: _vm.isMinifyDisabled
-                            }
+                              disabled: _vm.isMinifyDisabled,
+                            },
                           },
                           [
                             _vm._v(
                               "\n              " +
                                 _vm._s(_vm.$t("Minify")) +
                                 "\n            "
-                            )
+                            ),
                           ]
                         ),
                         _vm._v(" "),
@@ -609,18 +615,18 @@ var render = function() {
                           {
                             attrs: {
                               value: "code-beautify",
-                              disabled: _vm.isBeautifyDisabled
-                            }
+                              disabled: _vm.isBeautifyDisabled,
+                            },
                           },
                           [
                             _vm._v(
                               "\n              " +
                                 _vm._s(_vm.$t("Beautify")) +
                                 "\n            "
-                            )
+                            ),
                           ]
-                        )
-                      ])
+                        ),
+                      ]),
                     ]
                   ),
                   _vm._v(" "),
@@ -629,16 +635,16 @@ var render = function() {
                     {
                       staticClass: "ui button",
                       class: _vm.computedFormatActionButtonClassNameList,
-                      on: { click: _vm.doFormat }
+                      on: { click: _vm.doFormat },
                     },
                     [
                       _vm._v(
                         "\n          " + _vm._s(_vm.$t("Format")) + "\n        "
-                      )
+                      ),
                     ]
-                  )
+                  ),
                 ]
-              )
+              ),
             ]),
             _vm._v(" "),
             _vm.computedCalcButtonText !== "(NULL)"
@@ -646,7 +652,7 @@ var render = function() {
                   _c("label", { attrs: { for: "calcCopyButton" } }, [
                     _vm._v(
                       "\n        " + _vm._s(_vm.$t("Calculator")) + "\n      "
-                    )
+                    ),
                   ]),
                   _vm._v(" "),
                   _c("span", [
@@ -656,11 +662,11 @@ var render = function() {
                         staticClass: "ui button calc-button",
                         class: _vm.computedCalcButtonClassName,
                         attrs: { id: "calcCopyButton", title: "Copy" },
-                        on: { click: _vm.copyCalcResult }
+                        on: { click: _vm.copyCalcResult },
                       },
                       [_c("span", [_vm._v(_vm._s(_vm.computedCalcButtonText))])]
-                    )
-                  ])
+                    ),
+                  ]),
                 ]
               : _vm._e(),
             _vm._v(" "),
@@ -668,13 +674,13 @@ var render = function() {
               attrs: {
                 config: _vm.config,
                 localConfig: _vm.localConfig,
-                utils: _vm.utils
-              }
-            })
+                utils: _vm.utils,
+              },
+            }),
           ],
           2
-        )
-      ])
+        ),
+      ]),
     ]
   )
 }
@@ -696,6 +702,7 @@ render._withStripped = true
 
 // load the styles
 var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/less-loader/dist/cjs.js??ref--1-2!./CharacterCounter.less?vue&type=style&index=0&id=00ba6220&lang=less&scoped=true& */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/ReplacePanel/CharacterCounter/CharacterCounter.less?vue&type=style&index=0&id=00ba6220&lang=less&scoped=true&");
+if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -717,6 +724,7 @@ if(false) {}
 
 // load the styles
 var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js?sourceMap!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/less-loader/dist/cjs.js??ref--1-2!./ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true& */ "./node_modules/css-loader/dist/cjs.js?sourceMap!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/less-loader/dist/cjs.js?!./src/components/ReplacePanel/ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true&");
+if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -844,7 +852,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CharacterCounter_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CharacterCounter.js?vue&type=script&lang=js& */ "./src/components/ReplacePanel/CharacterCounter/CharacterCounter.js?vue&type=script&lang=js&?0814");
 /* empty/unused harmony star reexport *//* harmony import */ var _CharacterCounter_less_vue_type_style_index_0_id_00ba6220_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CharacterCounter.less?vue&type=style&index=0&id=00ba6220&lang=less&scoped=true& */ "./src/components/ReplacePanel/CharacterCounter/CharacterCounter.less?vue&type=style&index=0&id=00ba6220&lang=less&scoped=true&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-/* harmony import */ var _CharacterCounter_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_2FPWA_Plain_Text_Editor_2Fsrc_2Fcomponents_2FReplacePanel_2FCharacterCounter_2FCharacterCounter_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./CharacterCounter.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml%2FPWA-Plain-Text-Editor%2Fsrc%2Fcomponents%2FReplacePanel%2FCharacterCounter%2FCharacterCounter.vue&lang=yaml */ "./src/components/ReplacePanel/CharacterCounter/CharacterCounter.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml%2FPWA-Plain-Text-Editor%2Fsrc%2Fcomponents%2FReplacePanel%2FCharacterCounter%2FCharacterCounter.vue&lang=yaml");
+/* harmony import */ var _CharacterCounter_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fapp_2Fsrc_2Fcomponents_2FReplacePanel_2FCharacterCounter_2FCharacterCounter_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./CharacterCounter.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fapp%2Fsrc%2Fcomponents%2FReplacePanel%2FCharacterCounter%2FCharacterCounter.vue&lang=yaml */ "./src/components/ReplacePanel/CharacterCounter/CharacterCounter.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fapp%2Fsrc%2Fcomponents%2FReplacePanel%2FCharacterCounter%2FCharacterCounter.vue&lang=yaml");
 
 
 
@@ -866,7 +874,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* custom blocks */
 
-if (typeof _CharacterCounter_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_2FPWA_Plain_Text_Editor_2Fsrc_2Fcomponents_2FReplacePanel_2FCharacterCounter_2FCharacterCounter_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"] === 'function') Object(_CharacterCounter_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_2FPWA_Plain_Text_Editor_2Fsrc_2Fcomponents_2FReplacePanel_2FCharacterCounter_2FCharacterCounter_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"])(component)
+if (typeof _CharacterCounter_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fapp_2Fsrc_2Fcomponents_2FReplacePanel_2FCharacterCounter_2FCharacterCounter_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"] === 'function') Object(_CharacterCounter_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fapp_2Fsrc_2Fcomponents_2FReplacePanel_2FCharacterCounter_2FCharacterCounter_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"])(component)
 
 /* hot reload */
 if (false) { var api; }
@@ -875,19 +883,19 @@ component.options.__file = "src/components/ReplacePanel/CharacterCounter/Charact
 
 /***/ }),
 
-/***/ "./src/components/ReplacePanel/CharacterCounter/CharacterCounter.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml%2FPWA-Plain-Text-Editor%2Fsrc%2Fcomponents%2FReplacePanel%2FCharacterCounter%2FCharacterCounter.vue&lang=yaml":
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./src/components/ReplacePanel/CharacterCounter/CharacterCounter.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml%2FPWA-Plain-Text-Editor%2Fsrc%2Fcomponents%2FReplacePanel%2FCharacterCounter%2FCharacterCounter.vue&lang=yaml ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./src/components/ReplacePanel/CharacterCounter/CharacterCounter.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fapp%2Fsrc%2Fcomponents%2FReplacePanel%2FCharacterCounter%2FCharacterCounter.vue&lang=yaml":
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./src/components/ReplacePanel/CharacterCounter/CharacterCounter.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fapp%2Fsrc%2Fcomponents%2FReplacePanel%2FCharacterCounter%2FCharacterCounter.vue&lang=yaml ***!
+  \***************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_CharacterCounter_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_2FPWA_Plain_Text_Editor_2Fsrc_2Fcomponents_2FReplacePanel_2FCharacterCounter_2FCharacterCounter_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/@kazupon/vue-i18n-loader/lib!./CharacterCounter.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml%2FPWA-Plain-Text-Editor%2Fsrc%2Fcomponents%2FReplacePanel%2FCharacterCounter%2FCharacterCounter.vue&lang=yaml */ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ReplacePanel/CharacterCounter/CharacterCounter.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml%2FPWA-Plain-Text-Editor%2Fsrc%2Fcomponents%2FReplacePanel%2FCharacterCounter%2FCharacterCounter.vue&lang=yaml");
-/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_CharacterCounter_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_2FPWA_Plain_Text_Editor_2Fsrc_2Fcomponents_2FReplacePanel_2FCharacterCounter_2FCharacterCounter_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_CharacterCounter_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_2FPWA_Plain_Text_Editor_2Fsrc_2Fcomponents_2FReplacePanel_2FCharacterCounter_2FCharacterCounter_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_CharacterCounter_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_2FPWA_Plain_Text_Editor_2Fsrc_2Fcomponents_2FReplacePanel_2FCharacterCounter_2FCharacterCounter_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_CharacterCounter_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_2FPWA_Plain_Text_Editor_2Fsrc_2Fcomponents_2FReplacePanel_2FCharacterCounter_2FCharacterCounter_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_CharacterCounter_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_2FPWA_Plain_Text_Editor_2Fsrc_2Fcomponents_2FReplacePanel_2FCharacterCounter_2FCharacterCounter_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_CharacterCounter_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fapp_2Fsrc_2Fcomponents_2FReplacePanel_2FCharacterCounter_2FCharacterCounter_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/@kazupon/vue-i18n-loader/lib!./CharacterCounter.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fapp%2Fsrc%2Fcomponents%2FReplacePanel%2FCharacterCounter%2FCharacterCounter.vue&lang=yaml */ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ReplacePanel/CharacterCounter/CharacterCounter.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fapp%2Fsrc%2Fcomponents%2FReplacePanel%2FCharacterCounter%2FCharacterCounter.vue&lang=yaml");
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_CharacterCounter_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fapp_2Fsrc_2Fcomponents_2FReplacePanel_2FCharacterCounter_2FCharacterCounter_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_CharacterCounter_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fapp_2Fsrc_2Fcomponents_2FReplacePanel_2FCharacterCounter_2FCharacterCounter_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_CharacterCounter_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fapp_2Fsrc_2Fcomponents_2FReplacePanel_2FCharacterCounter_2FCharacterCounter_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_CharacterCounter_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fapp_2Fsrc_2Fcomponents_2FReplacePanel_2FCharacterCounter_2FCharacterCounter_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_CharacterCounter_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fapp_2Fsrc_2Fcomponents_2FReplacePanel_2FCharacterCounter_2FCharacterCounter_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -1063,7 +1071,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ReplacePanel_js_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ReplacePanel.js?vue&type=script&lang=js& */ "./src/components/ReplacePanel/ReplacePanel.js?vue&type=script&lang=js&?5a53");
 /* empty/unused harmony star reexport *//* harmony import */ var _ReplacePanel_less_vue_type_style_index_0_id_8d37a762_lang_less_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true& */ "./src/components/ReplacePanel/ReplacePanel.less?vue&type=style&index=0&id=8d37a762&lang=less&scoped=true&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-/* harmony import */ var _ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_2FPWA_Plain_Text_Editor_2Fsrc_2Fcomponents_2FReplacePanel_2FReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml%2FPWA-Plain-Text-Editor%2Fsrc%2Fcomponents%2FReplacePanel%2FReplacePanel.vue&lang=yaml */ "./src/components/ReplacePanel/ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml%2FPWA-Plain-Text-Editor%2Fsrc%2Fcomponents%2FReplacePanel%2FReplacePanel.vue&lang=yaml");
+/* harmony import */ var _ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fapp_2Fsrc_2Fcomponents_2FReplacePanel_2FReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fapp%2Fsrc%2Fcomponents%2FReplacePanel%2FReplacePanel.vue&lang=yaml */ "./src/components/ReplacePanel/ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fapp%2Fsrc%2Fcomponents%2FReplacePanel%2FReplacePanel.vue&lang=yaml");
 
 
 
@@ -1085,7 +1093,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* custom blocks */
 
-if (typeof _ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_2FPWA_Plain_Text_Editor_2Fsrc_2Fcomponents_2FReplacePanel_2FReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"] === 'function') Object(_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_2FPWA_Plain_Text_Editor_2Fsrc_2Fcomponents_2FReplacePanel_2FReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"])(component)
+if (typeof _ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fapp_2Fsrc_2Fcomponents_2FReplacePanel_2FReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"] === 'function') Object(_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fapp_2Fsrc_2Fcomponents_2FReplacePanel_2FReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_4__["default"])(component)
 
 /* hot reload */
 if (false) { var api; }
@@ -1094,19 +1102,19 @@ component.options.__file = "src/components/ReplacePanel/ReplacePanel.vue"
 
 /***/ }),
 
-/***/ "./src/components/ReplacePanel/ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml%2FPWA-Plain-Text-Editor%2Fsrc%2Fcomponents%2FReplacePanel%2FReplacePanel.vue&lang=yaml":
-/*!***********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./src/components/ReplacePanel/ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml%2FPWA-Plain-Text-Editor%2Fsrc%2Fcomponents%2FReplacePanel%2FReplacePanel.vue&lang=yaml ***!
-  \***********************************************************************************************************************************************************************************************************************************************************/
+/***/ "./src/components/ReplacePanel/ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fapp%2Fsrc%2Fcomponents%2FReplacePanel%2FReplacePanel.vue&lang=yaml":
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** ./src/components/ReplacePanel/ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fapp%2Fsrc%2Fcomponents%2FReplacePanel%2FReplacePanel.vue&lang=yaml ***!
+  \*******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_2FPWA_Plain_Text_Editor_2Fsrc_2Fcomponents_2FReplacePanel_2FReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/@kazupon/vue-i18n-loader/lib!./ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml%2FPWA-Plain-Text-Editor%2Fsrc%2Fcomponents%2FReplacePanel%2FReplacePanel.vue&lang=yaml */ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ReplacePanel/ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fmedia%2Fpudding%2FDATA%2Fpudding%2FCode-Porjects%2Fhtml%2FPWA-Plain-Text-Editor%2Fsrc%2Fcomponents%2FReplacePanel%2FReplacePanel.vue&lang=yaml");
-/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_2FPWA_Plain_Text_Editor_2Fsrc_2Fcomponents_2FReplacePanel_2FReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_2FPWA_Plain_Text_Editor_2Fsrc_2Fcomponents_2FReplacePanel_2FReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_2FPWA_Plain_Text_Editor_2Fsrc_2Fcomponents_2FReplacePanel_2FReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_2FPWA_Plain_Text_Editor_2Fsrc_2Fcomponents_2FReplacePanel_2FReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fmedia_2Fpudding_2FDATA_2Fpudding_2FCode_Porjects_2Fhtml_2FPWA_Plain_Text_Editor_2Fsrc_2Fcomponents_2FReplacePanel_2FReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fapp_2Fsrc_2Fcomponents_2FReplacePanel_2FReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/@kazupon/vue-i18n-loader/lib!./ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fapp%2Fsrc%2Fcomponents%2FReplacePanel%2FReplacePanel.vue&lang=yaml */ "./node_modules/@kazupon/vue-i18n-loader/lib/index.js!./src/components/ReplacePanel/ReplacePanel.yaml?vue&type=custom&index=0&blockType=i18n&issuerPath=%2Fapp%2Fsrc%2Fcomponents%2FReplacePanel%2FReplacePanel.vue&lang=yaml");
+/* harmony import */ var _node_modules_kazupon_vue_i18n_loader_lib_index_js_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fapp_2Fsrc_2Fcomponents_2FReplacePanel_2FReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_kazupon_vue_i18n_loader_lib_index_js_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fapp_2Fsrc_2Fcomponents_2FReplacePanel_2FReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_kazupon_vue_i18n_loader_lib_index_js_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fapp_2Fsrc_2Fcomponents_2FReplacePanel_2FReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_kazupon_vue_i18n_loader_lib_index_js_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fapp_2Fsrc_2Fcomponents_2FReplacePanel_2FReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_kazupon_vue_i18n_loader_lib_index_js_ReplacePanel_yaml_vue_type_custom_index_0_blockType_i18n_issuerPath_2Fapp_2Fsrc_2Fcomponents_2FReplacePanel_2FReplacePanel_vue_lang_yaml__WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 

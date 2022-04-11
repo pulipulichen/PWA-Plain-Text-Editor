@@ -1,9 +1,9 @@
 import $ from 'jquery'
 
 let requestHeaders = {
-  "Content-Type": "application/json",
-  "apikey": "9b9210f35e9149a8ab698d3414824f8a",
-  "workspace": "a558a5903496421999ab6005ca11f7d1"
+  //"Content-Type": "application/json",
+  "apikey": "61b35bdbe4ce45fe802c89b7684fd11f",
+  //"workspace": "a558a5903496421999ab6005ca11f7d1"
 }
 
 export default function (url) {
