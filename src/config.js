@@ -24,6 +24,7 @@ let config = {
   },
   loadingProgress: 1,
   textToSpeech: null,
+  coordsTop: 0
 }
 
 import styleConfig from './styles/style.config.js'

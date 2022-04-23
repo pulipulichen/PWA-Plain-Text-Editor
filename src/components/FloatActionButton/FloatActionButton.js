@@ -13,7 +13,8 @@ let FloatActionButton = {
       lastTextContent: '',
       lastFilename: null,
       isSpeaking: false,
-      speechSynthesis: window.speechSynthesis
+      speechSynthesis: window.speechSynthesis,
+      autoPosition: true,
     }
   },
   watch: {
@@ -26,6 +27,17 @@ let FloatActionButton = {
           this.lastTextContent = ''
           this.lastFilename = null
         }
+      }
+    },
+    'config.coordsTop' () {
+      //console.log(this.config.coordsTop)
+      let scrollbar = document.querySelector('.CodeMirror-vscrollbar')
+      //console.log(scrollbar.clientHeight)
+      if (this.config.coordsTop < 150 && this.positionBottom === false) {
+        this.positionBottom = true
+      }
+      else if (this.config.coordsTop > (scrollbar.clientHeight - 150) && this.positionBottom === true) {
+        this.positionBottom = false
       }
     },
     showMenu() {

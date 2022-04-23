@@ -1,0 +1,10 @@
+如果要做文本探勘的情感分析(sentiment analysis)，你會怎麼做呢？
+人工判斷？自己從建立模型？
+現在也許有更好的做法：使用預建置模型。
+
+https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english?text=Being+a+blogger+now+is+not+a+good+idea.
+distilbert-base-uncased-finetuned-sst-2-english是在Hugging Face上發佈的情感分析模型。
+你可以用網頁右邊的Hosted inference API輸入任意英文，請這個模型分析看看這段文字的情感是正面還是負面。
+
+
+該模型是基於DistilBERT技術，也就是BERT的精簡版本。跟BERT一樣，DistilBERT也採用transformer模型與Masked language modeling (MLM，遮住猜猜看)。

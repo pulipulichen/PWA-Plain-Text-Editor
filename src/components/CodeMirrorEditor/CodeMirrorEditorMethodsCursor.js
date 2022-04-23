@@ -9,7 +9,10 @@ export default function (CodeMirrorEditor) {
     //console.log(1, this.selectedText())
     clearTimeout(selectedTextTimer)
     selectedTextTimer = setTimeout(() => {
-      this.config.selectedText = this.getSelectedText()
+      let selectedText = this.getSelectedText()
+      if (selectedText.trim() !== '') {
+        this.config.selectedText = selectedText
+      }
     }, 100)
   }
     
@@ -74,10 +77,9 @@ export default function (CodeMirrorEditor) {
     this.cursorPositionSaved.scrollTop = this.editorScroll$el.scrollTop()
     
     //console.log(this.editor$el.scrollTop)
-    
-    let saved = JSON.stringify(this.cursorPositionSaved)
-    localStorage.setItem(cursorPositionKey, saved)
-    //console.log('saveCursorPosition')
+    let coords = this.codemirror.cursorCoords(true);
+    //console.log(coords)
+    this.config.coordsTop = coords.top
   }
   
   CodeMirrorEditor.methods.restoreCursorPosition = function () {

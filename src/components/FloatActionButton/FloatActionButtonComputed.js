@@ -40,12 +40,11 @@ export default function (FloatActionButton) {
     return this.utils.URLUtils.isURL(this.selectedTextTrim)
   }
   
-  FloatActionButton.computed.isShortenURLSelected = function () {
-    return (this.isURL && this.selectedTextTrim.startsWith('https://rebrand.ly/' ))
+  FloatActionButton.computed.isShortenURLSelected = async function () {
+    return (this.isURL && this.selectedTextTrim.startsWith('https://tinyurl.com/' ))
   }
   
   FloatActionButton.computed.isEmailSelected = function () {
-    //console.log(this.config.selectedText, this.utils.URLUtils.isEmail(this.config.selectedText))
     return this.utils.URLUtils.isEmail(this.config.selectedText)
   }
   

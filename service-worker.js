@@ -16,7 +16,7 @@
 // Names of the two caches used in this version of the service worker.
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
-const PRECACHE = 'precache-v2021-0407-191745';
+const PRECACHE = 'precache-v20220423-1023';
 const RUNTIME = 'runtime';
 
 /**
@@ -129,6 +129,8 @@ self.addEventListener('fetch', event => {
             // Put a copy of the response in the runtime cache.
             return cache.put(event.request, response.clone()).then(() => {
               return response;
+            }).catch(function(e) {
+              console.error(e)
             });
           });
         });
