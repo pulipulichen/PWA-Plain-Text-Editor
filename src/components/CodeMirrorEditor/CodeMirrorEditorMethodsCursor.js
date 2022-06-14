@@ -6,14 +6,17 @@ export default function (CodeMirrorEditor) {
     
     this.saveCursorPosition()
     
-    //console.log(1, this.selectedText())
+    // console.log(1, this.getSelectedText())
     clearTimeout(selectedTextTimer)
     selectedTextTimer = setTimeout(() => {
       let selectedText = this.getSelectedText()
+      // console.log(selectedText)
       if (selectedText.trim() !== '') {
         this.config.selectedText = selectedText
+        // console.log(this.config.selectedText)
+        // this.config.selectedText.__ob__.dep.notify()
       }
-    }, 100)
+    }, 500)
   }
     
   CodeMirrorEditor.methods.jumpToLine = function (i, from = 0) {
@@ -48,8 +51,8 @@ export default function (CodeMirrorEditor) {
     this.codemirror.setSelection({line: fromLine - 1, ch: fromCh}, {line: toLine - 1, ch: toCh})
   }
   CodeMirrorEditor.methods.getCursor = function (position) {
-    if (this.localConfig.editorSimpleMode === true
-            || this.config.inited === false) {
+    if (this.localConfig.editorSimpleMode === true || 
+        this.config.inited === false) {
       return false
     }
 

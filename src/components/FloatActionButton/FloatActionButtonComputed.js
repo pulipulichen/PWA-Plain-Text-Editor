@@ -28,22 +28,28 @@ export default function (FloatActionButton) {
   }
   
   FloatActionButton.computed.selectedTextTrim = function () {
+    // console.log({button: this.config.selectedText})
     let text = this.config.selectedText
     if (typeof(text) !== 'string') {
+      // console.log({textS: typeof(text)})
       return ''
     }
-    
+    // console.log({text})
     return text.trim()
   }
   
   FloatActionButton.computed.isURLSelected = function () {
+    // console.log({url: this.selectedTextTrim})
+    // console.log({isURLSelected: this.utils.URLUtils.isURL(this.selectedTextTrim)})
     return this.utils.URLUtils.isURL(this.selectedTextTrim)
   }
   
-  FloatActionButton.computed.isShortenURLSelected = async function () {
-    return (this.isURL && this.selectedTextTrim.startsWith('https://tinyurl.com/' ))
+  FloatActionButton.computed.isShortenURLSelected = function () {
+    // console.log({isURLSelected: this.isURLSelected, select: this.selectedTextTrim, result: (this.isURLSelected && this.selectedTextTrim.startsWith('https://tinyurl.com/')) , mode: this.localConfig.editorSimpleMode})
+    // console.log({select: this.selectedTextTrim.startsWith('https://tinyurl.com/')})
+    return (this.selectedTextTrim.startsWith('https://tinyurl.com/'))
   }
-  
+
   FloatActionButton.computed.isEmailSelected = function () {
     return this.utils.URLUtils.isEmail(this.config.selectedText)
   }

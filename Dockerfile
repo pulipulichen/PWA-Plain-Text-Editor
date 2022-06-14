@@ -15,6 +15,12 @@ RUN mkdir /app
 #Use app directory as development directory
 WORKDIR /app
 
+# RUN echo "DefaultLimitNOFILE=65535" >> /etc/systemd/system.conf
+# RUN echo "DefaultLimitNOFILE=65535" >> /etc/systemd/user.conf
+
+# https://www.codegrepper.com/code-examples/whatever/material+ui+Error%3A+ENOSPC%3A+System+limit+for+number+of+file+watchers+reached
+RUN echo "fs.inotify.max_user_watches=524288" >> /etc/sysctl.conf
+
 #Package in container.json and packate-lock.Make sure that two of json are copied
 COPY postcss.config.js ./
 

@@ -11,9 +11,11 @@ export default {
     */
     try {
       new URL(str)
+      // console.log({isURL: str})
       return true
     }
     catch (e) {
+      // console.error('Invalid URL: ' + str)
       return false
     }
   },

@@ -84,6 +84,8 @@ export default function (CodeMirrorEditor) {
   }
 
   CodeMirrorEditor.methods.onKeyHandled = function (code, name, event) {
+    // console.log({code})
+    this.onCodeMirrorCursorActivity()
     if (name === 'Enter') {
       this.TypewriterSoundEffect.playEnterSound()
     }
