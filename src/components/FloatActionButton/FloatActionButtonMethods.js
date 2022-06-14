@@ -164,7 +164,7 @@ export default function (FloatActionButton) {
      
      this.utils.ClipboardUtils.copyPlainString(shortenedURL)
      this.$parent.$refs.CodeMirrorEditor.replaceSelection(shortenedURL)
-     
+     this.$parent.$refs.CodeMirrorEditor.focus()
    }
 
    FloatActionButton.methods.initPopup = function () {

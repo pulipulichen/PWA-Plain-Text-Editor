@@ -33,10 +33,18 @@ let FloatActionButton = {
       //console.log(this.config.coordsTop)
       let scrollbar = document.querySelector('.CodeMirror-vscrollbar')
       //console.log(scrollbar.clientHeight)
+
+      let bottomHeightThreshold = 150
+      if (this.localConfig.displayPanel !== null) {
+        bottomHeightThreshold = bottomHeightThreshold + 200
+      }
+
+      // console.log({coordsTop: this.config.coordsTop, })
+
       if (this.config.coordsTop < 150 && this.positionBottom === false) {
         this.positionBottom = true
       }
-      else if (this.config.coordsTop > (scrollbar.clientHeight - 150) && this.positionBottom === true) {
+      else if (this.config.coordsTop > (window.innerHeight - bottomHeightThreshold) && this.positionBottom === true) {
         this.positionBottom = false
       }
     },
