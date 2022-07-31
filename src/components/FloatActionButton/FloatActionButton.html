@@ -11,7 +11,8 @@
      v-on:mouseover="showMenu = true"
      v-on:dblclick="showMenu = true"
      v-on:click="onMainIconClick"
-     v-bind:data-content="$t(computedMainIconText)">
+     v-bind:data-content="$t(computedMainIconText)"
+     v-if="!isPuliWorkSelected">
     <i v-bind:class="computedMainIconClassNameList"></i>
     <!--
     <span class="tooltiptext" style="left: 10%">
@@ -19,6 +20,22 @@
     </span>
     -->
   </a>
+  <a class="zoom-fab zoom-btn-large tooltip popup" id="zoomBtn"
+     v-bind:title="$t(computedMainIconText)"
+     v-on:mouseover="showMenu = true"
+     v-on:dblclick="showMenu = true"
+     href="https://www.facebook.com/pulipuli.chen"
+     target="_blank"
+     v-bind:data-content="$t(computedMainIconText)"
+     v-if="isPuliWorkSelected">
+    <i v-bind:class="computedMainIconClassNameList"></i>
+    <!--
+    <span class="tooltiptext" style="left: 10%">
+      {{ $t(computedMainIconText) }}
+    </span>
+    -->
+  </a>
+
   <ul class="zoom-menu"
       v-bind:class="{'show': showMenu}">
 
