@@ -150,6 +150,14 @@
               {{ $t('Beautify') }}
             </option>
           </optgroup>
+          <optgroup label="Format">
+            <option value="sort-lines">
+              {{ $t('Sort Lines') }}
+            </option>
+            <option value="shuffle-lines">
+              {{ $t('Shuffle Lines') }}
+            </option>
+          </optgroup>
         </select>
         <div class="ui button" 
              v-bind:class="computedFormatActionButtonClassNameList"
