@@ -37,6 +37,9 @@ export default function (ReplacePanel) {
     else if (tool === 'shuffle-lines') {
       return this.shuffleLines()
     }
+    else if (tool === 'transpose') {
+      return this.transpose()
+    }
   }
   
   ReplacePanel.methods.minifiyCode = async function () {
@@ -77,11 +80,23 @@ export default function (ReplacePanel) {
   ReplacePanel.methods.shuffleLines = function () {
     this.removeEmptyLines()
 
+    let lines 
+    let splitor = '\n'
+    
     if (this.textContentLines.length < 2) {
-      return false // 不需要排序
+      if (this.textContentLines.length === 1 && this.textContentLines[0].split('\t').length > 2) {
+        lines = this.textContentLines[0].split('\t')
+        splitor = '\t'
+      }
+      else {
+        return false // 不需要排序
+      }
+      
     }
-
-    let lines = [].concat(this.textContentLines)
+    else {
+      lines = [].concat(this.textContentLines)
+    }
+    
     
     let shuffled
     while (true) {
@@ -103,7 +118,22 @@ export default function (ReplacePanel) {
       }
     }
      
-    this.localConfig.textContent = shuffled.join('\n')
+    this.localConfig.textContent = shuffled.join(splitor)
+  }
+
+  ReplacePanel.methods.transpose = function () {
+    let output = []
+
+    this.textContentLines.forEach((line, y) => {
+      line.split('\t').forEach((value, x) => {
+        if (!output[x]) {
+          output[x] = []
+        }
+        output[x][y] = value
+      })
+    })
+
+    this.localConfig.textContent = output.map(line => line.join('\t')).join('\n')
   }
 }
     
