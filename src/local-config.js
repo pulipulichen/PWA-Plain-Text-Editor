@@ -28,6 +28,10 @@ let localConfig = {
   speechSynthesisRate: 1.1,
   ocrLanguage: 'eng',
   editorSimpleMode: false, // textarea
+
+  GroupingTool: {
+    members: 3
+  }
 }
 
 export default localConfig

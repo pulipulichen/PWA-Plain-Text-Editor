@@ -6,7 +6,8 @@ let ReplacePanel = {
   props: ['config', 'localConfig', 'utils'],
   data: null,
   components: {
-    CharacterCounter
+    CharacterCounter,
+    GroupingTool: () => import(/* webpackChunkName: "vendors/GroupingTool" */ './GroupingTool/GroupingTool.vue'),
   },
   watch: {}, // 轉移到 ReplacePanelWatch.js
   computed: {}, // 轉移到 ReplacePanelComputed.js
@@ -82,5 +83,8 @@ ReplacePanelMethodsFormat(ReplacePanel)
 
 import ReplacePanelMethodsCalc from './ReplacePanelMethodsCalc.js'
 ReplacePanelMethodsCalc(ReplacePanel)
+
+import ReplacePanelMethodsClustering from './ReplacePanelMethodsClustering.js'
+ReplacePanelMethodsClustering(ReplacePanel)
 
 export default ReplacePanel

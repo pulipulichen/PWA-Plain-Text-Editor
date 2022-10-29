@@ -17,7 +17,7 @@ let Index = {
     ConfigModal: () => import(/* webpackChunkName: "vendors/ConfigModal" */ './ConfigModal/ConfigModal.vue'),
     //FormatPanel,
     //ReplacePanel: () => import(/* webpackChunkName: "vendors/ReplacePanel" */ './ReplacePanel/ReplacePanel.vue'),
-    ReplacePanel: () => import('./ReplacePanel/ReplacePanel.vue'),
+    ReplacePanel: () => import(/* webpackChunkName: "vendors/CodeMirror" */ './ReplacePanel/ReplacePanel.vue'),
     CodeMirrorEditor: () => import(/* webpackChunkName: "vendors/CodeMirror" */ './CodeMirrorEditor/CodeMirrorEditor.vue'),
     LoadingLayer,
   },

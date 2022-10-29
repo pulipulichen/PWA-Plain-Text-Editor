@@ -136,6 +136,7 @@ export default function (ReplacePanel) {
     
     return this.localConfig.textContent.split('\n')
   }
+
   ReplacePanel.computed.textContentLinesTrim = function () {
     if (!this.isEnable) {
       return undefined
@@ -282,6 +283,7 @@ export default function (ReplacePanel) {
       return 'Replace (...)'
     }
   }
+
   ReplacePanel.computed.computedReplaceButtonTitle = function () {
     if (!this.isEnable) {
       return undefined
@@ -293,4 +295,34 @@ export default function (ReplacePanel) {
     return `Replace (${this.replaceOccurCount})`
   }
 
+  ReplacePanel.computed.usingGroupingTool = function () {
+    if (!this.isEnable) {
+      return false
+    }
+    
+    let list = [
+      'grouping-by-similarity',
+      'grouping-by-difference'
+    ]
+
+    return (list.indexOf(this.localConfig.formatTool) > -1)
+  }
+
+  ReplacePanel.computed.dataMatrix = function () {
+    if (!this.isEnable) {
+      return false
+    }
+    
+    let data = this.textContentLines.map(line => line.split('\t').map(v => {
+      if (isNaN(v)) {
+        return v
+      }
+      else {
+        return Number(v)
+      }
+    }))
+    
+    return data
+  }
+  
 }

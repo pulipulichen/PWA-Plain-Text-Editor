@@ -7,6 +7,7 @@ export default function (ReplacePanel) {
   ReplacePanel.methods.doFormat = function () {
     let tool = this.localConfig.formatTool
     //console.log(tool)
+    // console.log(this.$refs.GroupingTool.groupingByDifference)
     if (tool === 'lines-trim') {
       return this.trimTextContent()
     }
@@ -39,6 +40,12 @@ export default function (ReplacePanel) {
     }
     else if (tool === 'transpose') {
       return this.transpose()
+    }
+    else if (tool === 'grouping-by-similarity') {
+      return this.groupingBySimilarity()
+    }
+    else if (tool === 'grouping-by-difference') {
+      return this.groupingByDifference()
     }
   }
   

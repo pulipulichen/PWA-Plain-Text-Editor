@@ -150,7 +150,7 @@
               {{ $t('Beautify') }}
             </option>
           </optgroup>
-          <optgroup label="Format">
+          <optgroup :label="$t('Format')">
             <option value="sort-lines">
               {{ $t('Sort Lines') }}
             </option>
@@ -159,6 +159,14 @@
             </option>
             <option value="transpose">
               {{ $t('Transpose') }}
+            </option>
+          </optgroup>
+          <optgroup :label="$t('Clustering')">
+            <option value="grouping-by-similarity">
+              {{ $t('Grouping by Similarity') }}
+            </option>
+            <option value="grouping-by-difference">
+              {{ $t('Grouping by Difference') }}
             </option>
           </optgroup>
         </select>
@@ -186,6 +194,14 @@
       </span>
     </template>
      
+    <GroupingTool 
+      v-if="usingGroupingTool"
+      ref="GroupingTool"
+      v-bind:config="config"
+      v-bind:localConfig="localConfig"
+      v-bind:utils="utils">
+    </GroupingTool>
+
     <CharacterCounter 
       v-bind:config="config"
       v-bind:localConfig="localConfig"
