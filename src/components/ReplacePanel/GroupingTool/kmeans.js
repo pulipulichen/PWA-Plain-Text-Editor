@@ -50,7 +50,7 @@ Kmeans.prototype.iterate = function (vecArray) {
     this.cluster = new Array(this.k)
     this.clusterIndex = new Array(this.k)
     this.clusterVector = new Array(vecArray.length)
-    // console.log(this.cluster)
+    // console.logt(his.cluster)
     var tempArray = []    
     for (var a=0; a<this.vector[0].length; a++) {
         tempArray.push(0)
@@ -61,21 +61,23 @@ Kmeans.prototype.iterate = function (vecArray) {
     }
     //Group each vector to a cluster based upon the 
     //cooresponding centroid
-    // console.log(vecArray)
+    // console.log(vecArray.length)
     for (let i in this.vector) {
         var v = this.vector[i].slice(0)
         // console.log(v)
         var index = this.assignCentroid(v)
         // console.log(index)
-        if (!this.cluster[index]) {
+        if (!Array.isArray(this.cluster[index])) {
             this.cluster[index]=[]
             this.clusterIndex[index]=[]
         }
-
+        // console.log(index, this.cluster[index])
         this.cluster[index].push(v)
+        // console.log(2, index)
         this.clusterIndex[index].push(i)
+        // console.log(index)
         this.clusterVector[i] = Number(index)
-
+        // console.log(this.cluster)
         for (var a=0; a<v.length; a++){
             vecArray[index][a]+=v[a] //keep a sum for cluster
         }

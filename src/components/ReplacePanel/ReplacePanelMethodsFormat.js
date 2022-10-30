@@ -32,19 +32,25 @@ export default function (ReplacePanel) {
     else if (tool === 'duplicate-empty-lines-remove') {
       return this.removeDuplicateEmptyLines()
     }
-    else if (tool === 'sort-lines') {
+    else if (tool === 'SheetTool.sort-lines') {
       return this.sortLines()
     }
-    else if (tool === 'shuffle-lines') {
+    else if (tool === 'SheetTool.shuffle-lines') {
       return this.shuffleLines()
     }
-    else if (tool === 'transpose') {
+    else if (tool === 'SheetTool.shuffle-columns') {
+      return this.shuffleColumns()
+    }
+    else if (tool === 'SheetTool.transpose') {
       return this.transpose()
     }
-    else if (tool === 'grouping-by-similarity') {
+    else if (tool === 'SheetTool.removeColumn') {
+      return this.$refs.SheetTool.removeColumn(this.textContentLines)
+    }
+    else if (tool === 'GroupingTool.grouping-by-similarity') {
       return this.groupingBySimilarity()
     }
-    else if (tool === 'grouping-by-difference') {
+    else if (tool === 'GroupingTool.grouping-by-difference') {
       return this.groupingByDifference()
     }
   }
@@ -70,77 +76,21 @@ export default function (ReplacePanel) {
 
   ReplacePanel.methods.sortLines = function () {
     this.removeEmptyLines()
-
-    if (this.textContentLines.length < 2) {
-      return false // 不需要排序
-    }
-
-    let lines = [].concat(this.textContentLines)
-    lines.sort()
-    if (lines[0] === this.textContentLines[0]) {
-      lines.reverse()
-    }
-    
-    this.localConfig.textContent = lines.join('\n')
+    this.$refs.SheetTool.sortLines(this.textContentLines)
   }
   
   ReplacePanel.methods.shuffleLines = function () {
     this.removeEmptyLines()
+    this.$refs.SheetTool.shuffleLines(this.textContentLines)
+  }
 
-    let lines 
-    let splitor = '\n'
-    
-    if (this.textContentLines.length < 2) {
-      if (this.textContentLines.length === 1 && this.textContentLines[0].split('\t').length > 2) {
-        lines = this.textContentLines[0].split('\t')
-        splitor = '\t'
-      }
-      else {
-        return false // 不需要排序
-      }
-      
-    }
-    else {
-      lines = [].concat(this.textContentLines)
-    }
-    
-    
-    let shuffled
-    while (true) {
-      shuffled = lines
-        .map(value => ({ value, sort: Math.random() }))
-        .sort((a, b) => a.sort - b.sort)
-        .map(({ value }) => value)
-
-      let done = false
-      for (let i = 0; i < shuffled.length; i++) {
-        if (shuffled[i] !== this.textContentLines[i]) {
-          done = true
-          break
-        }
-      }
-
-      if (done) {
-        break
-      }
-    }
-     
-    this.localConfig.textContent = shuffled.join(splitor)
+  ReplacePanel.methods.shuffleColumns = function () {
+    this.removeEmptyLines()
+    this.$refs.SheetTool.shuffleColumns(this.textContentLines)
   }
 
   ReplacePanel.methods.transpose = function () {
-    let output = []
-
-    this.textContentLines.forEach((line, y) => {
-      line.split('\t').forEach((value, x) => {
-        if (!output[x]) {
-          output[x] = []
-        }
-        output[x][y] = value
-      })
-    })
-
-    this.localConfig.textContent = output.map(line => line.join('\t')).join('\n')
+    this.$refs.SheetTool.transpose(this.textContentLines)
   }
 }
     

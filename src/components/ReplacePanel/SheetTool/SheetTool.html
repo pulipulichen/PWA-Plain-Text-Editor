@@ -1,0 +1,10 @@
+<div class="SheetTool">
+  <div class="fields"
+    v-if="localConfig.formatTool === 'SheetTool.removeColumn'">
+    <label for="SheetToolColumnNumber">
+        {{ $t('Col No.') }}
+      </label>
+      <input type="number" v-model="colNo" id="SheetToolColumnNumber" />
+    
+  </div>
+</div>

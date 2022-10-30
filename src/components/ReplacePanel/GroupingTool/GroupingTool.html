@@ -1,8 +1,9 @@
 <div class="GroupingTool">
-  <div class="inline field">
-    <label for="GroupingToolMembers">
-      {{ $t('Members:') }}
-    </label>
-    <input type="number" v-model="localConfig.GroupingTool.members" />
-  </div>
+    <div class="fields">
+      <select v-model="localConfig.GroupingTool.groupType">
+        <option value="group">{{ $t('Group: ') }}</option>
+        <option value="member">{{ $t('Member: ') }}</option>
+      </select>
+      <input type="number" v-model="localConfig.GroupingTool.groupLength" />
+    </div>
 </div>

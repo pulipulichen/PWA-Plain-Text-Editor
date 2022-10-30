@@ -1,5 +1,4 @@
-<div class="replace-panel ui form"
-     v-show="isVisible">
+<div class="replace-panel ui form" v-show="isVisible">
   <div class="inline field">
     <label for="stringToSearch">
       {{ $t('Search') }}
@@ -7,28 +6,17 @@
 
     <div class="ui action icon input string-to-search-input-container">
       <div class="ui icon fluid input string-to-search-input">
-        <input type="text" 
-               placeholder="Search..."
-               ref="SearchInput"
-               id="stringToSearch"
-               v-model="localConfig.stringToSearch"
-               class="" />
-        <i class="link paragraph icon"
-           titl="New line"
-           v-on:click="localConfig.stringToSearch = localConfig.stringToSearch + '\\n'"></i>
-        <i class="link close icon"
-           titl="Clear"
-           v-if="localConfig.stringToSearch"
-           v-on:click="localConfig.stringToSearch = ''"></i>
+        <input type="text" placeholder="Search..." ref="SearchInput" id="stringToSearch"
+          v-model="localConfig.stringToSearch" class="" />
+        <i class="link paragraph icon" titl="New line"
+          v-on:click="localConfig.stringToSearch = localConfig.stringToSearch + '\\n'"></i>
+        <i class="link close icon" titl="Clear" v-if="localConfig.stringToSearch"
+          v-on:click="localConfig.stringToSearch = ''"></i>
       </div>
-      <button type="button" class="ui compact button"
-              v-bind:class="{disabled: !isSearchEnabled}"
-              v-on:click="findPrev">
+      <button type="button" class="ui compact button" v-bind:class="{disabled: !isSearchEnabled}" v-on:click="findPrev">
         <i class="long arrow alternate left icon"></i>
       </button>
-      <button type="button" class="ui compact button"
-              v-bind:class="{disabled: !isSearchEnabled}"
-              v-on:click="findNext">
+      <button type="button" class="ui compact button" v-bind:class="{disabled: !isSearchEnabled}" v-on:click="findNext">
         <i class="long arrow alternate right icon"></i>
       </button>
     </div>
@@ -40,24 +28,17 @@
   <div class="inline field">
     <label for="stringToReplaceWith">Replace with</label>
     <div class="ui action icon input string-to-replace-with-input-container"
-         v-bind:class="computedReplaceInputClassName">
+      v-bind:class="computedReplaceInputClassName">
       <div class="ui icon input string-to-replace-with-input">
-        <input type="text" 
-               placeholder="Replace with..."
-               id="stringToReplaceWith"
-               ref="ReplaceInput"
-               v-model="localConfig.stringToReplaceWith" />
-        <i class="link paragraph icon"
-           titl="New line"
-           v-on:click="localConfig.stringToReplaceWith = localConfig.stringToReplaceWith + '\\n'"></i>
-        <i class="link close icon"
-           titl="Clear"
-           v-if="localConfig.stringToReplaceWith"
-           v-on:click="localConfig.stringToReplaceWith = ''"></i>
+        <input type="text" placeholder="Replace with..." id="stringToReplaceWith" ref="ReplaceInput"
+          v-model="localConfig.stringToReplaceWith" />
+        <i class="link paragraph icon" titl="New line"
+          v-on:click="localConfig.stringToReplaceWith = localConfig.stringToReplaceWith + '\\n'"></i>
+        <i class="link close icon" titl="Clear" v-if="localConfig.stringToReplaceWith"
+          v-on:click="localConfig.stringToReplaceWith = ''"></i>
       </div>
 
-      <select class="ui compact selection dropdown replace-mode-select"
-              v-model="localConfig.replaceMode">
+      <select class="ui compact selection dropdown replace-mode-select" v-model="localConfig.replaceMode">
         <option selected="" value="regex">
           {{ $t('Regex') }}
         </option>
@@ -70,8 +51,7 @@
       </select>
 
       <select v-model="localConfig.replaceLineOptions.mode"
-              class="ui compact selection dropdown replace-line-options-select"
-              v-show="showReplaceLineOptionsSelect">
+        class="ui compact selection dropdown replace-line-options-select" v-show="showReplaceLineOptionsSelect">
         <option value="prefix">
           {{ $t('Prefix') }}
         </option>
@@ -86,16 +66,13 @@
         </option>
       </select>
 
-      <div class="ui button replace-count-button"
-           v-on:click="doReplace"
-           v-bind:class="{disabled: isReplaceDisabled, positive: !isReplaceDisabled}"
-           v-bind:title="computedReplaceButtonTitle">
+      <div class="ui button replace-count-button" v-on:click="doReplace"
+        v-bind:class="{disabled: isReplaceDisabled, positive: !isReplaceDisabled}"
+        v-bind:title="computedReplaceButtonTitle">
         {{ computedReplaceButtonText }}
       </div>
 
-      <div class="ui mini button"
-           v-on:click="undo"
-           v-if="!isUndoDisabled">
+      <div class="ui mini button" v-on:click="undo" v-if="!isUndoDisabled">
         <i class="undo icon"></i>
       </div>
       <!--
@@ -112,103 +89,102 @@
   <!-- =========================================== -->
 
   <div class="inline-fields-wrapper">
-  <div class="inline fields">
+    <div class="inline fields">
 
-    <div class="field">
-      <label>
-        {{ $t('Format') }}
-      </label>
-
-      <div class="ui action icon input format-tool-container">
-        <select v-model="localConfig.formatTool"
-                class="ui compact selection dropdown format-tool-select">
-          <optgroup label="Trim">
-            <option value="lines-trim" v-bind:disabled="isTrimDisabled">
-              {{ $t('Lines Trim') }}
-            </option>
-            <option value="lines-ltrim" v-bind:disabled="isLTrimDisabled">
-              {{ $t('Lines Left Trim') }}
-            </option>
-            <option value="lines-rtrim" v-bind:disabled="isRTrimDisabled">
-              {{ $t('Lines Right Trim') }}
-            </option>
-            <option value="remove-line-breaks" v-bind:disabled="localConfig.textContent.indexOf('\n') === -1">
-              {{ $t('Remove Line Breaks') }}
-            </option>
-            <option value="empty-lines-remove" v-bind:disabled="!hasEmptyLines">
-              {{ $t('Remove Empty Lines') }}
-            </option>
-            <option value="duplicate-empty-lines-remove" v-bind:disabled="!hasEmptyLines">
-              {{ $t('Remove Duplicate Empty Lines') }}
-            </option>
-          </optgroup>
-          <optgroup label="Compress">
-            <option value="code-minifiy" v-bind:disabled="isMinifyDisabled">
-              {{ $t('Minify') }}
-            </option>
-            <option value="code-beautify" v-bind:disabled="isBeautifyDisabled">
-              {{ $t('Beautify') }}
-            </option>
-          </optgroup>
-          <optgroup :label="$t('Format')">
-            <option value="sort-lines">
-              {{ $t('Sort Lines') }}
-            </option>
-            <option value="shuffle-lines">
-              {{ $t('Shuffle Lines') }}
-            </option>
-            <option value="transpose">
-              {{ $t('Transpose') }}
-            </option>
-          </optgroup>
-          <optgroup :label="$t('Clustering')">
-            <option value="grouping-by-similarity">
-              {{ $t('Grouping by Similarity') }}
-            </option>
-            <option value="grouping-by-difference">
-              {{ $t('Grouping by Difference') }}
-            </option>
-          </optgroup>
-        </select>
-        <div class="ui button" 
-             v-bind:class="computedFormatActionButtonClassNameList"
-             v-on:click="doFormat">
+      <div class="field">
+        <label>
           {{ $t('Format') }}
+        </label>
+
+        <div class="ui action icon input format-tool-container">
+          <select v-model="localConfig.formatTool" class="ui compact selection dropdown format-tool-select">
+            <optgroup label="Trim">
+              <option value="lines-trim" v-bind:disabled="isTrimDisabled">
+                {{ $t('Lines Trim') }}
+              </option>
+              <option value="lines-ltrim" v-bind:disabled="isLTrimDisabled">
+                {{ $t('Lines Left Trim') }}
+              </option>
+              <option value="lines-rtrim" v-bind:disabled="isRTrimDisabled">
+                {{ $t('Lines Right Trim') }}
+              </option>
+              <option value="remove-line-breaks" v-bind:disabled="localConfig.textContent.indexOf('\n') === -1">
+                {{ $t('Remove Line Breaks') }}
+              </option>
+              <option value="empty-lines-remove" v-bind:disabled="!hasEmptyLines">
+                {{ $t('Remove Empty Lines') }}
+              </option>
+              <option value="duplicate-empty-lines-remove" v-bind:disabled="!hasEmptyLines">
+                {{ $t('Remove Duplicate Empty Lines') }}
+              </option>
+            </optgroup>
+            <optgroup label="Compress">
+              <option value="code-minifiy" v-bind:disabled="isMinifyDisabled">
+                {{ $t('Minify') }}
+              </option>
+              <option value="code-beautify" v-bind:disabled="isBeautifyDisabled">
+                {{ $t('Beautify') }}
+              </option>
+            </optgroup>
+            <optgroup :label="$t('Format')">
+              <option value="SheetTool.sort-lines">
+                {{ $t('Sort Lines') }}
+              </option>
+              <option value="SheetTool.shuffle-lines">
+                {{ $t('Shuffle Lines') }}
+              </option>
+              <option value="SheetTool.shuffle-columns">
+                {{ $t('Shuffle Columns') }}
+              </option>
+              <option value="SheetTool.transpose">
+                {{ $t('Transpose') }}
+              </option>
+              <option value="SheetTool.removeColumn">
+                {{ $t('Remove Column') }}
+              </option>
+            </optgroup>
+            <optgroup :label="$t('Clustering')">
+              <option value="GroupingTool.grouping-by-similarity">
+                {{ $t('Grouping by Similarity') }}
+              </option>
+              <option value="GroupingTool.grouping-by-difference">
+                {{ $t('Grouping by Difference') }}
+              </option>
+            </optgroup>
+          </select>
+
+          <GroupingTool v-if="localConfig.formatTool.startsWith('GroupingTool')" ref="GroupingTool"
+            v-bind:config="config" v-bind:localConfig="localConfig" v-bind:utils="utils">
+          </GroupingTool>
+
+          <SheetTool v-if="localConfig.formatTool.startsWith('SheetTool')" ref="SheetTool" v-bind:config="config"
+            v-bind:localConfig="localConfig" v-bind:utils="utils">
+          </SheetTool>
+
+          <div class="fields">
+            <div class="ui button" v-bind:class="computedFormatActionButtonClassNameList" v-on:click="doFormat">
+              {{ $t('Format') }}
+            </div>
+          </div>
         </div>
+
+
       </div>
 
+      <template v-if="computedCalcButtonText !== '(NULL)'" style="white-space: nowrap">
+        <label for="calcCopyButton">
+          {{ $t('Calculator') }}
+        </label>
+        <span>
+          <div class="ui button calc-button" id="calcCopyButton" v-bind:class="computedCalcButtonClassName"
+            v-on:click="copyCalcResult" title="Copy"><span>{{ computedCalcButtonText }}</span></div>
+        </span>
+      </template>
 
-    </div>
+      <CharacterCounter v-bind:config="config" v-bind:localConfig="localConfig" v-bind:utils="utils">
+      </CharacterCounter>
 
-    <template v-if="computedCalcButtonText !== '(NULL)'"
-         style="white-space: nowrap">
-      <label for="calcCopyButton">
-        {{ $t('Calculator') }}
-      </label>
-      <span>
-        <div class="ui button calc-button"
-             id="calcCopyButton"
-             v-bind:class="computedCalcButtonClassName"
-             v-on:click="copyCalcResult"
-             title="Copy"><span>{{ computedCalcButtonText }}</span></div>
-      </span>
-    </template>
-     
-    <GroupingTool 
-      v-if="usingGroupingTool"
-      ref="GroupingTool"
-      v-bind:config="config"
-      v-bind:localConfig="localConfig"
-      v-bind:utils="utils">
-    </GroupingTool>
-
-    <CharacterCounter 
-      v-bind:config="config"
-      v-bind:localConfig="localConfig"
-      v-bind:utils="utils">
-    </CharacterCounter>
-
-    <!--
+      <!--
     <div class="inline field"
          v-if="isTrimEnabled">
       <button type="button"
@@ -234,6 +210,6 @@
       </button>
     </div>
     -->
-  </div>
     </div>
+  </div>
 </div>

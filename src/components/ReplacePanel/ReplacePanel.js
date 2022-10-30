@@ -8,6 +8,7 @@ let ReplacePanel = {
   components: {
     CharacterCounter,
     GroupingTool: () => import(/* webpackChunkName: "vendors/GroupingTool" */ './GroupingTool/GroupingTool.vue'),
+    SheetTool: () => import(/* webpackChunkName: "vendors/SheetTool" */ './SheetTool/SheetTool.vue'),
   },
   watch: {}, // 轉移到 ReplacePanelWatch.js
   computed: {}, // 轉移到 ReplacePanelComputed.js

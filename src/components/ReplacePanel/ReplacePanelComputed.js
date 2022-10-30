@@ -295,19 +295,6 @@ export default function (ReplacePanel) {
     return `Replace (${this.replaceOccurCount})`
   }
 
-  ReplacePanel.computed.usingGroupingTool = function () {
-    if (!this.isEnable) {
-      return false
-    }
-    
-    let list = [
-      'grouping-by-similarity',
-      'grouping-by-difference'
-    ]
-
-    return (list.indexOf(this.localConfig.formatTool) > -1)
-  }
-
   ReplacePanel.computed.dataMatrix = function () {
     if (!this.isEnable) {
       return false

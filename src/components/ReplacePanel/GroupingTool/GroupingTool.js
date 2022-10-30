@@ -129,6 +129,7 @@ let GroupingTool = {
     kmeans: async function (data, cluster = 3) {
       let vector = await this.toVector(data)
       return new Promise(function (resolve, reject) {
+        // console.log(cluster)
         kmeans(vector, cluster, function(err, clusterVector, clusterIndex, cluster, centroids) {
           if (err) {
             // throw new Error(err)
@@ -156,14 +157,22 @@ let GroupingTool = {
         return item
       })
     },
-    groupingByDifference: async function (vector, member = 3) {
+    groupingByDifference: async function (vector, groupType = 'member', member = 3) {
+      member = Number(member)
       let result = await this.kmeans(vector, member)
       // console.log(result)
 
       let groups = Math.ceil(vector.length / member)
-      let minMembers = Math.floor(vector.length / member)
-      let mod = vector.length % member
+      
+      if (groupType === 'group') {
+        groups = member
+        member = Number(Math.floor(vector.length / groups))
+      }
+      console.log(groups, member)
+      
       let groupIndexList = []
+      let mod = vector.length % groups
+      let minMembers = Math.floor(vector.length / groups)
 
       let counter = 0
       // console.log(groups)
@@ -176,8 +185,11 @@ let GroupingTool = {
           baseMember++
         }
 
+        // console.log(baseMember)
+        // continue
+
         while (true) {
-          let v = result.clusterIndex[(clusterI % member)]
+          let v = result.clusterIndex[(clusterI % groups)]
           
           // console.log(v, counter, vector.length) 
           if (v.length === 0) {
@@ -225,11 +237,19 @@ let GroupingTool = {
 
       return output
     },
-    groupingBySimilarity: async function (vector, member = 3) {
-      
+    groupingBySimilarity: async function (vector, groupType = 'member', member = 3) {
+      member = Number(member)
       let groups = Math.ceil(vector.length / member)
+
+      if (groupType === 'group') {
+        groups = member
+        member = Math.ceil(vector.length / groups)
+      }
+
+      // console.log(groups, member)
+
       let {clusterIndex} = await this.kmeans(vector, groups)
-      // console.log(clusterIndex)
+      // console.log(clusterIndex) 
       this.sortClusterIndexBySize(clusterIndex)
       while (true) {
         let isFinish = true
