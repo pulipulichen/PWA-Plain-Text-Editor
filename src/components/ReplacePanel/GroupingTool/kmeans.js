@@ -28,6 +28,7 @@ function getRandomCentroidsNaiveSharding(dataset, k) {
   const numSamples = dataset.length;
   // Divide dataset into k shards:
   const step = Math.floor(numSamples / k);
+  // console.log(step);
   const centroids = [];
   for (let i = 0; i < k; i++) {
     const start = step * i;
@@ -35,6 +36,7 @@ function getRandomCentroidsNaiveSharding(dataset, k) {
     if (i + 1 === k) {
       end = numSamples;
     }
+    // console.log(start, end);
     centroids.push(calcMeanCentroid(dataset, start, end));
   }
   return centroids;
@@ -168,7 +170,10 @@ function recalculateCentroids(dataSet, labels, k) {
   return newCentroidList;
 }
 
-function kmeans(dataset, k, useNaiveSharding = true) {
+function kmeans(dataset, k, useNaiveSharding = 'auto') {
+  if (useNaiveSharding === 'auto') {
+    useNaiveSharding = (dataset.length > 4)
+  }
     //   console.log(dataset)
   if (dataset.length && dataset[0].length && dataset.length > k) {
     // Initialize book keeping variables
@@ -181,6 +186,7 @@ function kmeans(dataset, k, useNaiveSharding = true) {
     } else {
       centroids = getRandomCentroids(dataset, k);
     }
+    // console.log(centroids)
 
     // Run the main k-means algorithm
     while (!shouldStop(oldCentroids, centroids, iterations)) {
@@ -190,7 +196,9 @@ function kmeans(dataset, k, useNaiveSharding = true) {
 
       // Assign labels to each datapoint based on centroids
       labels = getLabels(dataset, centroids);
+      // console.log(oldCentroids)
       centroids = recalculateCentroids(dataset, labels, k);
+      // console.log(centroids)
     }
 
     const clusters = [];

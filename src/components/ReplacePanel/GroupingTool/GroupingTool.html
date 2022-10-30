@@ -8,6 +8,9 @@
       <option value="group">{{ $t('Group: ') }}</option>
       <option value="member">{{ $t('Member: ') }}</option>
     </select>
-    <input type="number" v-model="localConfig.GroupingTool.groupLength" />
+    <input type="number" v-model="localConfig.GroupingTool.groupLength" min="0" />
+    <button type="button" class="ui icon button basic" @click="removeLastColumn">
+      <i class="undo icon"></i>
+    </button>
   </div>
 </div>

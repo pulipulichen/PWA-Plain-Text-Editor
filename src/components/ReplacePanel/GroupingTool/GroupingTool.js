@@ -15,9 +15,9 @@ let GroupingTool = {
   // computed: {
     
   // },
-  mounted: async function () {
-    this.test202210301729()
-  },
+  // mounted: async function () {
+  //   this.test202210301729()
+  // },
   methods: {
     test202210300033: async function () {
 
@@ -193,7 +193,9 @@ let GroupingTool = {
         // resovle(kmeans(vector, cluster))
       // })
       // console.log(vector) 
-      return kmeans(vector, cluster)
+      let result = kmeans(vector, cluster)
+      // console.log(result)
+      return result
     },
     addKmeans: async function (vector, cluster = 3) {
       let result = await this.kmeans(vector, cluster)
@@ -293,10 +295,10 @@ let GroupingTool = {
         member = Math.ceil(vector.length / groups)
       }
 
-      console.log(groups, member)
+      // console.log(groups, member)
 
       let {clusterIndex} = await this.kmeans(vector, groups)
-      console.log(clusterIndex) 
+      // console.log(clusterIndex) 
       this.sortClusterIndexBySize(clusterIndex)
       while (true) {
         let isFinish = true
@@ -344,6 +346,13 @@ let GroupingTool = {
       clusterIndex.sort((a, b) => {
         return b.length - a.length
       })
+    },
+    removeLastColumn () {
+      let data = this.$parent.dataMatrix
+      // console.log(data)
+      data = data.map(row => row.slice(0, row.length - 1))
+      // console.log(data)
+      this.localConfig.textContent = data.map(line => line.join('\t')).join('\n')
     }
   }
 }

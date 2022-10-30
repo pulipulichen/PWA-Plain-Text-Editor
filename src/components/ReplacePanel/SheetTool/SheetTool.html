@@ -4,6 +4,8 @@
     <label for="SheetToolColumnNumber">
         {{ $t('Col No.') }}
       </label>
-      <input type="number" v-model="colNo" id="SheetToolColumnNumber" />
+      <input type="number" v-model="colNo" 
+        min="1"
+        id="SheetToolColumnNumber" />
   </div>
 </div>
