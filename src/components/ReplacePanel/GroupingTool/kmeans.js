@@ -172,8 +172,9 @@ function recalculateCentroids(dataSet, labels, k) {
 
 function kmeans(dataset, k, useNaiveSharding = 'auto') {
   if (useNaiveSharding === 'auto') {
-    useNaiveSharding = (dataset.length > 4)
+    useNaiveSharding = (dataset.length / k > 4)
   }
+  useNaiveSharding = false
     //   console.log(dataset)
   if (dataset.length && dataset[0].length && dataset.length > k) {
     // Initialize book keeping variables

@@ -208,8 +208,13 @@ let GroupingTool = {
     },
     groupingByDifference: async function (vector, groupType = 'member', member = 3) {
       member = Number(member)
-      let result = await this.kmeans(vector, member)
-      // console.log(result)
+      let {clusterIndex} = await this.kmeans(vector, member)
+
+      // 合併與計算比例
+      clusterIndex = this.balanceClusters(clusterIndex, Math.ceil(vector.length / member), Math.floor(vector.length / member))
+
+      // console.log(clusterIndex)
+      // return false
 
       let groups = Math.ceil(vector.length / member)
       
@@ -222,6 +227,8 @@ let GroupingTool = {
       let groupIndexList = []
       let mod = vector.length % groups
       let minMembers = Math.floor(vector.length / groups)
+      // return console.log(member, Math.floor(vector.length / groups))
+      // let minMembers = member
 
       let counter = 0
       // console.log(groups)
@@ -238,9 +245,9 @@ let GroupingTool = {
         // continue
 
         while (true) {
-          let v = result.clusterIndex[(clusterI % groups)]
+          let v = clusterIndex[(clusterI % clusterIndex.length)]
           
-          // console.log(v, counter, vector.length) 
+          // console.log(groups, clusterI, v, counter, vector.length) 
           if (v.length === 0) {
             clusterI++
             continue
@@ -285,6 +292,132 @@ let GroupingTool = {
       })
 
       return output
+    },
+    balanceClusters (clusterIndex, maxMembers, minMembers) {
+      
+      // if (maxMembers === minMembers) {
+      //   minMembers--
+      // }
+      // return false
+      this.sortClusterIndexBySize(clusterIndex)
+      // console.log(JSON.stringify(clusterIndex, null, 2), maxMembers, minMembers)
+
+      while (clusterIndex[clusterIndex.length - 1].length === 0) {
+        let tempCluster = []
+        let largestCluster = clusterIndex[0]
+        while (tempCluster.length < minMembers) {
+          let randomId = Math.floor(Math.random() * largestCluster.length)
+          tempCluster.push(largestCluster[randomId])
+          largestCluster.splice(randomId, 1)
+          // console.log(tempCluster)
+        }
+        clusterIndex[0] = largestCluster
+        clusterIndex[(clusterIndex.length - 1)] = tempCluster
+
+        this.sortClusterIndexBySize(clusterIndex)
+      }
+
+      // console.log(clusterIndex)
+      let isValid = true
+      for (let i = 0; i < clusterIndex.length; i++) {
+        if (clusterIndex[i].length > maxMembers) {
+          isValid = 1
+          break
+        }
+        if (clusterIndex[i].length < minMembers) {
+          isValid = 2
+          break
+        }
+      }
+
+      
+      if (isValid === true) {
+        return clusterIndex
+      }
+      else if (isValid === 1) {
+        // 最小的，合併
+        let len = clusterIndex.length
+        let minCluster = clusterIndex[(len - 1)]
+        let baseIndex = (len - 2)
+        while (clusterIndex[baseIndex].length < maxMembers) {
+          let randomId = Math.floor(Math.random() * minCluster.length)
+          clusterIndex[baseIndex].push(minCluster[randomId])
+          minCluster.splice(randomId, 1)
+          // console.log(tempCluster)
+
+          if (minCluster.length === 0) {
+            break
+          }
+          if (clusterIndex[baseIndex].length === maxMembers && 
+              minCluster.length > 0) {
+            baseIndex--
+          }
+
+          if (baseIndex === -1) {
+            break
+          }
+        }
+        
+        // clusterIndex[(len - 2)] = clusterIndex[(len - 2)].concat(clusterIndex[(len - 1)])
+
+        // 最大的，拆一半
+        let tempCluster = [].concat(minCluster)
+        let largestCluster = clusterIndex[0]
+        while (tempCluster.length < minMembers) {
+          let randomId = Math.floor(Math.random() * largestCluster.length)
+          tempCluster.push(largestCluster[randomId])
+          largestCluster.splice(randomId, 1)
+          // console.log(tempCluster)
+        }
+        clusterIndex[0] = largestCluster
+        clusterIndex[(len - 1)] = tempCluster
+
+        // console.log(clusterIndex)
+        // return false
+        return this.balanceClusters(clusterIndex, maxMembers, minMembers)
+      }
+      else {
+        // 最小的，合併
+        let len = clusterIndex.length
+        let maxCluster = clusterIndex[0]
+        let randomId = Math.floor(Math.random() * maxCluster.length)
+        clusterIndex[(len - 1)].push(maxCluster[randomId])
+        maxCluster.splice(randomId, 1)
+        clusterIndex[0] = maxCluster
+        // let baseIndex = (len - 2)
+        // while (clusterIndex[baseIndex].length < maxMembers) {
+        //   let randomId = Math.floor(Math.random() * minCluster.length)
+        //   clusterIndex[baseIndex].push(minCluster[randomId])
+        //   minCluster.splice(randomId, 1)
+        //   // console.log(tempCluster)
+
+        //   if (minCluster.length === 0) {
+        //     break
+        //   }
+        //   if (clusterIndex[baseIndex].length === maxMembers && 
+        //       minCluster.length > 0) {
+        //     baseIndex--
+        //   }
+        // }
+        
+        // // clusterIndex[(len - 2)] = clusterIndex[(len - 2)].concat(clusterIndex[(len - 1)])
+
+        // // 最大的，拆一半
+        // let tempCluster = []
+        // let largestCluster = clusterIndex[0]
+        // while (tempCluster.length < minMembers) {
+        //   let randomId = Math.floor(Math.random() * largestCluster.length)
+        //   tempCluster.push(largestCluster[randomId])
+        //   largestCluster.splice(randomId, 1)
+        //   // console.log(tempCluster)
+        // }
+        // clusterIndex[0] = largestCluster
+        // clusterIndex[(len - 1)] = tempCluster
+
+        // // console.log(clusterIndex)
+        // return false
+        return this.balanceClusters(clusterIndex, maxMembers, minMembers)
+      }
     },
     groupingBySimilarity: async function (vector, groupType = 'member', member = 3) {
       member = Number(member)
