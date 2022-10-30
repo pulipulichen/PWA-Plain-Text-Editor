@@ -300,7 +300,7 @@ export default function (ReplacePanel) {
       return false
     }
     
-    let data = this.textContentLines.map(line => line.split('\t').map(v => {
+    let data = this.textContentLines.filter(line => line.trim() !== '').map(line => line.split('\t').map(v => {
       if (isNaN(v)) {
         return v
       }

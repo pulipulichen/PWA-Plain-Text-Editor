@@ -30,6 +30,7 @@ let localConfig = {
   editorSimpleMode: false, // textarea
 
   GroupingTool: {
+    skipColumns: 0,
     groupType: 'member',
     groupLength: 3
   }

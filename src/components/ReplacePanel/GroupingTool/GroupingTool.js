@@ -15,31 +15,65 @@ let GroupingTool = {
   // computed: {
     
   // },
-  // mounted: async function () {
-  // },
+  mounted: async function () {
+    this.test202210301729()
+  },
   methods: {
     test202210300033: async function () {
 
-      var vector = [
-        [1, 10, 2, 30],
-        ['A', 30, 20, 2],
-        ['B', 30, 30, 3],
-        ['C', 30, 31, 3],
-        ['A', 10, 10, 1],
-        ['B', 20, 1, 30],
-        ['C', 1, 25, 30]
-      ]
-      // console.log(await this.toVector(vector))
-      console.log(await this.addKmeans(vector))
-      console.log(await this.addGroupInDifference(vector))
-      console.log(await this.addGroupInSimilarity(vector))
+      // var vector = [
+      //   [1, 10, 2, 30],
+      //   ['A', 30, 20, 2],
+      //   ['B', 30, 30, 3],
+      //   ['C', 30, 31, 3],
+      //   ['A', 10, 10, 1],
+      //   ['B', 20, 1, 30],
+      //   ['C', 1, 25, 30]
+      // ]
 
+      var vector = [
+        [10, 2, 30],
+        [30, 20, 2],
+        [30, 30, 3],
+        [30, 31, 3],
+        [10, 10, 1],
+        [20, 1, 30],
+        [1, 25, 30]
+      ]
+
+
+      // console.log(await this.toVector(vector))
+      // console.log(await this.addKmeans(vector))
+      // console.log(await this.addGroupInDifference(vector))
+      // console.log(await this.addGroupInSimilarity(vector))
+      // console.log(vector)
+      console.log(await this.kmeans(vector, 3))
+    },
+    test202210301729: async function () {
+
+      var vector = [
+        [1, 2, 3, 1],
+        [5,2,3,1],
+        [1,2,4,0],
+        [5,3,4,0]
+      ]
+
+
+      // console.log(await this.toVector(vector))
+      // console.log(await this.addKmeans(vector))
+      // console.log(vector)
+      // console.log(await this.kmeans(vector, 2))
+      // console.log(await this.groupingBySimilarity(vector, 'member', 2))
+      // console.log(await this.groupingByDifference(vector, 'member', 2))
     },
     toVector: async function(data) {
+      // console.log(data)
+
+
       let rows = new Array(data.length)
       let columeLength = data[0].length
 
-      for (let c = 0; c < columeLength; c++) {
+      for (let c = this.localConfig.GroupingTool.skipColumns; c < columeLength; c++) {
         let list = []
         let isColumnNumber = true
 
@@ -67,10 +101,10 @@ let GroupingTool = {
 
           let normalized
           if (max === 1 && min === 0) {
-            normalized = list.map(value => ((value - min) / range))
+            normalized = list
           }
           else {
-            normalized = list
+            normalized = list.map(value => ((value - min) / range))
           }
 
           for (let r = 0; r < rows.length; r++) {
@@ -100,14 +134,16 @@ let GroupingTool = {
 
           let vectors = []
           let v = []
-          for (let i = 0; i < Object.keys(map).length; i++) {
+          let keys = Object.keys(map)
+          for (let i = 0; i < keys.length; i++) {
             v[i] = 0
           }
           // console.log(v)
+
           for (let d = 0; d < data.length; d++) {
             let value = data[d][c]
             value = value + ''
-            let i = map[value]
+            let i = keys.indexOf(value)
             // console.log(i)
             let v2 = [].concat(v)
             v2[i] = 1
@@ -124,29 +160,40 @@ let GroupingTool = {
         }
       }
 
+      // console.log(rows)
+
       return rows
     },
+    // kmeans: async function (data, cluster = 3) {
+    //   let vector = await this.toVector(data)
+    //   return new Promise(function (resolve, reject) {
+    //     // console.log(cluster)
+    //     kmeans(vector, cluster, function(err, clusterVector, clusterIndex, cluster, centroids) {
+    //       if (err) {
+    //         // throw new Error(err)
+    //         return reject(err)
+    //       }
+      
+    //       //do something with the result
+    //       // console.log(res)
+    //       resolve({
+    //         clusterVector,
+    //         clusterIndex,
+    //         cluster,
+    //         centroids
+    //       })
+    //     })
+    //   })
+    //   // console.log(vector) 
+    // },
     kmeans: async function (data, cluster = 3) {
       let vector = await this.toVector(data)
-      return new Promise(function (resolve, reject) {
+      // return new Promise(function (resolve, reject) {
         // console.log(cluster)
-        kmeans(vector, cluster, function(err, clusterVector, clusterIndex, cluster, centroids) {
-          if (err) {
-            // throw new Error(err)
-            return reject(err)
-          }
-      
-          //do something with the result
-          // console.log(res)
-          resolve({
-            clusterVector,
-            clusterIndex,
-            cluster,
-            centroids
-          })
-      })
-      })
+        // resovle(kmeans(vector, cluster))
+      // })
       // console.log(vector) 
+      return kmeans(vector, cluster)
     },
     addKmeans: async function (vector, cluster = 3) {
       let result = await this.kmeans(vector, cluster)
@@ -168,7 +215,7 @@ let GroupingTool = {
         groups = member
         member = Number(Math.floor(vector.length / groups))
       }
-      console.log(groups, member)
+      // console.log(groups, member)
       
       let groupIndexList = []
       let mod = vector.length % groups
@@ -246,10 +293,10 @@ let GroupingTool = {
         member = Math.ceil(vector.length / groups)
       }
 
-      // console.log(groups, member)
+      console.log(groups, member)
 
       let {clusterIndex} = await this.kmeans(vector, groups)
-      // console.log(clusterIndex) 
+      console.log(clusterIndex) 
       this.sortClusterIndexBySize(clusterIndex)
       while (true) {
         let isFinish = true
