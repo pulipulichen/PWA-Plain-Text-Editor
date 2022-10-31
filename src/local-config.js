@@ -31,6 +31,7 @@ let localConfig = {
 
   GroupingTool: {
     skipColumns: 0,
+    skipRows: 0,
     groupType: 'member',
     groupLength: 3
   }

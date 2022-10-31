@@ -208,6 +208,13 @@ let GroupingTool = {
     },
     groupingByDifference: async function (vector, groupType = 'member', member = 3) {
       member = Number(member)
+
+      let headerRows = []
+      if (this.localConfig.GroupingTool.skipRows > 0) {
+        headerRows = vector.slice(0, this.localConfig.GroupingTool.skipRows)
+        vector = vector.slice(this.localConfig.GroupingTool.skipRows)
+      }
+      
       let {clusterIndex} = await this.kmeans(vector, member)
 
       // 合併與計算比例
@@ -290,6 +297,8 @@ let GroupingTool = {
           output[index] = o
         })
       })
+
+      output = headerRows.concat(output)
 
       return output
     },
@@ -421,6 +430,13 @@ let GroupingTool = {
     },
     groupingBySimilarity: async function (vector, groupType = 'member', member = 3) {
       member = Number(member)
+
+      let headerRows = []
+      if (this.localConfig.GroupingTool.skipRows > 0) {
+        headerRows = vector.slice(0, this.localConfig.GroupingTool.skipRows)
+        vector = vector.slice(this.localConfig.GroupingTool.skipRows)
+      }
+
       let groups = Math.ceil(vector.length / member)
 
       if (groupType === 'group') {
@@ -473,6 +489,8 @@ let GroupingTool = {
         })
       })
 
+      vector = headerRows.concat(vector)
+
       return vector
     },
     sortClusterIndexBySize (clusterIndex) {
@@ -482,8 +500,14 @@ let GroupingTool = {
     },
     removeLastColumn () {
       let data = this.$parent.dataMatrix
+      let headerRows = []
+      if (this.localConfig.GroupingTool.skipRows > 0) {
+        headerRows = data.slice(0, this.localConfig.GroupingTool.skipRows)
+        data = data.slice(this.localConfig.GroupingTool.skipRows)
+      }
       // console.log(data)
       data = data.map(row => row.slice(0, row.length - 1))
+      data = headerRows.concat(data)
       // console.log(data)
       this.localConfig.textContent = data.map(line => line.join('\t')).join('\n')
     }

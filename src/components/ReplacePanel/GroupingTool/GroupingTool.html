@@ -1,9 +1,16 @@
 <div class="GroupingTool">
   <div class="fields">
+
+    <label for="GroupingToolSkipRows">
+      {{ $t('Skip Rows') }}
+    </label>
+    <input type="number" v-model="localConfig.GroupingTool.skipRows" id="GroupingToolSkipRows" />
+
     <label for="GroupingToolSkipColumns">
       {{ $t('Skip Cols') }}
     </label>
     <input type="number" v-model="localConfig.GroupingTool.skipColumns" id="GroupingToolSkipColumns" />
+
     <select v-model="localConfig.GroupingTool.groupType">
       <option value="group">{{ $t('Group: ') }}</option>
       <option value="member">{{ $t('Member: ') }}</option>
