@@ -4,6 +4,9 @@ export default function (ReplacePanel) {
     if (!this.isEnable) {
       return undefined
     }
+    if (this.localConfig.autoFormat) {
+      return undefined
+    }
     
     for (let i = 0; i < this.textContentLines.length; i++) {
       let line = this.textContentLines[i]
@@ -17,6 +20,10 @@ export default function (ReplacePanel) {
     if (!this.isEnable) {
       return undefined
     }
+
+    if (this.localConfig.autoFormat) {
+      return undefined
+    }
     
     if (this.isTrimEnabled === true) {
       return undefined
@@ -28,6 +35,9 @@ export default function (ReplacePanel) {
   
   ReplacePanel.computed.isLTrimEnabled = function () {
     if (!this.isEnable) {
+      return undefined
+    }
+    if (this.localConfig.autoFormat) {
       return undefined
     }
     
@@ -46,6 +56,9 @@ export default function (ReplacePanel) {
     if (!this.isEnable) {
       return undefined
     }
+    if (this.localConfig.autoFormat) {
+      return undefined
+    }
     
     if (this.isLTrimEnabled === true) {
       return undefined
@@ -58,6 +71,9 @@ export default function (ReplacePanel) {
   
   ReplacePanel.computed.isRTrimEnabled = function () {
     if (!this.isEnable) {
+      return undefined
+    }
+    if (this.localConfig.autoFormat) {
       return undefined
     }
     
@@ -77,6 +93,9 @@ export default function (ReplacePanel) {
     if (!this.isEnable) {
       return undefined
     }
+    if (this.localConfig.autoFormat) {
+      return undefined
+    }
     
     if (this.isRTrimEnabled === true) {
       return undefined
@@ -89,6 +108,9 @@ export default function (ReplacePanel) {
   ReplacePanel.computed.hasEmptyLines = function () {
     if (!this.textContentLines) {
       return false
+    }
+    if (this.localConfig.autoFormat) {
+      return undefined
     }
     
     for (let i = 0; i < this.textContentLines.length; i++) {

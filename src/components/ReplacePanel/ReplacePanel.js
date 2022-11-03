@@ -14,6 +14,7 @@ let ReplacePanel = {
   computed: {}, // 轉移到 ReplacePanelComputed.js
   mounted() {
     this.setPanelHeight()
+    // this.initAutoFormatEvent()
   },
   methods: {
     setPanelHeight() {

@@ -99,22 +99,22 @@
         <div class="ui action icon input format-tool-container">
           <select v-model="localConfig.formatTool" class="ui compact selection dropdown format-tool-select">
             <optgroup label="Trim">
-              <option value="lines-trim" v-bind:disabled="isTrimDisabled">
+              <option value="lines-trim">
                 {{ $t('Lines Trim') }}
               </option>
-              <option value="lines-ltrim" v-bind:disabled="isLTrimDisabled">
+              <option value="lines-ltrim">
                 {{ $t('Lines Left Trim') }}
               </option>
-              <option value="lines-rtrim" v-bind:disabled="isRTrimDisabled">
+              <option value="lines-rtrim">
                 {{ $t('Lines Right Trim') }}
               </option>
-              <option value="remove-line-breaks" v-bind:disabled="localConfig.textContent.indexOf('\n') === -1">
+              <option value="remove-line-breaks">
                 {{ $t('Remove Line Breaks') }}
               </option>
-              <option value="empty-lines-remove" v-bind:disabled="!hasEmptyLines">
+              <option value="empty-lines-remove">
                 {{ $t('Remove Empty Lines') }}
               </option>
-              <option value="duplicate-empty-lines-remove" v-bind:disabled="!hasEmptyLines">
+              <option value="duplicate-empty-lines-remove">
                 {{ $t('Remove Duplicate Empty Lines') }}
               </option>
             </optgroup>
@@ -162,7 +162,8 @@
           </SheetTool>
 
           <div class="fields">
-            <div class="ui button" v-bind:class="computedFormatActionButtonClassNameList" v-on:click="doFormat">
+            <div class="ui button" v-bind:class="computedFormatActionButtonClassNameList" 
+              v-on:click="doFormat">
               {{ $t('Format') }}
             </div>
           </div>
@@ -171,15 +172,30 @@
 
       </div>
 
-      <template v-if="computedCalcButtonText !== '(NULL)'" style="white-space: nowrap">
-        <label for="calcCopyButton">
-          {{ $t('Calculator') }}
-        </label>
-        <span>
-          <div class="ui button calc-button" id="calcCopyButton" v-bind:class="computedCalcButtonClassName"
-            v-on:click="copyCalcResult" title="Copy"><span>{{ computedCalcButtonText }}</span></div>
-        </span>
-      </template>
+      <div v-if="isAutoFormatEnable" 
+        style="white-space: nowrap" 
+        class="auto-format fields">
+        <div class="field">
+          <input type="checkbox" name="autoformat"
+            id="AutoFormat"
+            v-model="localConfig.autoFormat" />
+          <label for="AutoFormat">
+            {{ $t('Auto') }}
+          </label>
+        </div>
+      </div>
+
+      <div v-if="computedCalcButtonText !== '(NULL)'" style="white-space: nowrap" class="fields">
+        <div class="field">
+          <label for="calcCopyButton">
+            {{ $t('Calculator') }}
+          </label>
+          <span>
+            <div class="ui button calc-button" id="calcCopyButton" v-bind:class="computedCalcButtonClassName"
+              v-on:click="copyCalcResult" title="Copy"><span>{{ computedCalcButtonText }}</span></div>
+          </span>
+        </div>
+      </div>
 
       <CharacterCounter v-bind:config="config" v-bind:localConfig="localConfig" v-bind:utils="utils">
       </CharacterCounter>

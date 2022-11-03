@@ -17,6 +17,7 @@ export default function (ReplacePanel) {
       }
       this.clearHistory()
       this.isModifiedAfterBeautification = true
+      this.doAutoFormat()
     },
     'localConfig.displayPanel'() {
       this.setPanelHeight()

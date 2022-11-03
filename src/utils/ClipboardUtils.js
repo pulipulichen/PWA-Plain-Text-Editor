@@ -1,5 +1,9 @@
 export default {
   copyPlainString: function (text) {
+    if (!text) {
+      return false
+    }
+
     if (!navigator.clipboard) {
       this.fallbackCopyTextToClipboard(text);
       return;
@@ -32,5 +36,14 @@ export default {
     }
 
     document.body.removeChild(textArea);
+  },
+  getTextFromClipboard () {
+    return new Promise((resolve, reject) => {
+      navigator.clipboard.readText()
+      .then(resolve)
+      .catch(err => {
+        reject('Failed to read clipboard contents: ' + err);
+      });
+    })
   },
 }

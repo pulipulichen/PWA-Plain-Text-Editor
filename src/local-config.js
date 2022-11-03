@@ -19,6 +19,7 @@ let localConfig = {
     size: 2,
   },
   formatTool: 'lines-trim',
+  autoFormat: false,
   //syntax: 'text/javascript',
   syntax: 'text/plain',
   fontSize: 16,

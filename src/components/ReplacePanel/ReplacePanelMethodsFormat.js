@@ -92,5 +92,30 @@ export default function (ReplacePanel) {
   ReplacePanel.methods.transpose = function () {
     this.$refs.SheetTool.transpose(this.textContentLines)
   }
+
+  let doAutoFormatTimer
+  ReplacePanel.methods.doAutoFormat = function () {
+    if (this.localConfig.autoFormat === false) {
+      return false
+    }
+
+    clearTimeout(doAutoFormatTimer)
+    doAutoFormatTimer = setTimeout(() => {      
+      this.doFormat()
+      doAutoFormatTimer = setTimeout(() => {      
+        this.utils.ClipboardUtils.copyPlainString(this.localConfig.textContent.trim())
+      }, 100)
+    }, 100)
+  }
+
+  ReplacePanel.methods.initAutoFormatEvent = function () {
+    window.addEventListener('focus', async () => {
+      if (this.localConfig.autoFormat === false) {
+        return false
+      }
+
+      this.localConfig.textContent = await this.utils.ClipboardUtils.getTextFromClipboard()
+    })
+  }
 }
     

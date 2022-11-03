@@ -81,4 +81,17 @@ export default function (ReplacePanel) {
       return 'disabled'
     }
   }
+
+  let isAutoFormatEnableList = [
+    'lines-trim',
+    'lines-ltrim',
+    'lines-ltrim',
+    'lines-rtrim',
+    'remove-line-breaks',
+    'empty-lines-remove',
+    'duplicate-empty-lines-remove',      
+  ]
+  ReplacePanel.computed.isAutoFormatEnable = function () {
+    return (isAutoFormatEnableList.indexOf(this.localConfig.formatTool) > -1)
+  }
 }
