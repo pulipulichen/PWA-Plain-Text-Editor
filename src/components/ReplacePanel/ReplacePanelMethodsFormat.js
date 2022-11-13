@@ -102,10 +102,10 @@ export default function (ReplacePanel) {
     clearTimeout(doAutoFormatTimer)
     doAutoFormatTimer = setTimeout(() => {      
       this.doFormat()
-      doAutoFormatTimer = setTimeout(() => {      
-        this.utils.ClipboardUtils.copyPlainString(this.localConfig.textContent.trim())
-      }, 100)
-    }, 100)
+      // doAutoFormatTimer = setTimeout(() => {      
+      //   this.utils.ClipboardUtils.copyPlainString(this.localConfig.textContent.trim())
+      // }, 1000)
+    }, 1000)
   }
 
   ReplacePanel.methods.initAutoFormatEvent = function () {
