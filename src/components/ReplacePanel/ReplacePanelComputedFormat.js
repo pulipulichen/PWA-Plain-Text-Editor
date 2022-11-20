@@ -68,9 +68,9 @@ export default function (ReplacePanel) {
     
     let mode = editor.getMode()
     //console.log(mode)
-    if (mode !== 'javascript'
-            && mode !== 'css'
-            && mode !== 'html') {
+    if (mode !== 'javascript' && 
+          mode !== 'css' && 
+          mode !== 'html') {
       return 'disabled'
     }
     
@@ -81,6 +81,13 @@ export default function (ReplacePanel) {
       return 'disabled'
     }
   }
+
+  ReplacePanel.computed.isCodeToJSONDisabled = function () {
+    return (this.textContentTrim && 
+      ((this.textContentTrim.startsWith('{') && this.textContentTrim.endsWith('}')) || 
+      (this.textContentTrim.startsWith('[') && this.textContentTrim.endsWith(']'))))
+  }
+
 
   let isAutoFormatEnableList = [
     'lines-trim',

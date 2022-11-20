@@ -26,6 +26,12 @@ export default function (ReplacePanel) {
     else if (tool === 'code-beautify') {
       return this.beautifyCode()
     }
+    else if (tool === 'code-to-json') {
+      return this.codeToJSON()
+    }
+    else if (tool === 'json-to-lines') {
+      return this.JSONtoLines()
+    }
     else if (tool === 'empty-lines-remove') {
       return this.removeEmptyLines()
     }
@@ -55,25 +61,6 @@ export default function (ReplacePanel) {
     }
   }
   
-  ReplacePanel.methods.minifiyCode = async function () {
-    this.$parent.$refs.CodeMirrorEditor.minify()
-    //console.log(mode)
-    
-    
-    //console.error('minifiyCode')
-    //let result = await minify(this.localConfig.textContent)
-    //console.log(result)
-    //this.localConfig.textContent = result
-  }
-  
-  ReplacePanel.methods.beautifyCode = function () {
-    //console.error('beautifyCode')
-    this.$parent.$refs.CodeMirrorEditor.autoFormat()
-    //console.log()
-    this.isModifiedAfterBeautification = false
-  }
-
-
   ReplacePanel.methods.sortLines = function () {
     this.removeEmptyLines()
     this.$refs.SheetTool.sortLines(this.textContentLines)
@@ -98,6 +85,11 @@ export default function (ReplacePanel) {
     if (this.localConfig.autoFormat === false) {
       return false
     }
+
+    if (this.localConfig.formatTool.indexOf('trim') === -1 && this.localConfig.formatTool.indexOf('remove') === -1) {
+      return false
+    }
+
 
     clearTimeout(doAutoFormatTimer)
     doAutoFormatTimer = setTimeout(() => {      

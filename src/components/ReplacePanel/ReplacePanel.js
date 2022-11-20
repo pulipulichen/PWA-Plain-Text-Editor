@@ -80,6 +80,9 @@ ReplacePanelMethodsSearch(ReplacePanel)
 import ReplacePanelMethodsTrim from './ReplacePanelMethodsTrim.js'
 ReplacePanelMethodsTrim(ReplacePanel)
 
+import ReplacePanelMethodsCompress from './ReplacePanelMethodsCompress.js'
+ReplacePanelMethodsCompress(ReplacePanel)
+
 import ReplacePanelMethodsFormat from './ReplacePanelMethodsFormat.js'
 ReplacePanelMethodsFormat(ReplacePanel)
 

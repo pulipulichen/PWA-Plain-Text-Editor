@@ -125,6 +125,12 @@
               <option value="code-beautify" v-bind:disabled="isBeautifyDisabled">
                 {{ $t('Beautify') }}
               </option>
+              <option value="code-to-json" v-bind:disabled="isCodeToJSONDisabled">
+                {{ $t('Convert to JSON') }}
+              </option>
+              <option value="json-to-lines" v-bind:disabled="!isCodeToJSONDisabled">
+                {{ $t('JSON to Lines') }}
+              </option>
             </optgroup>
             <optgroup :label="$t('Format')">
               <option value="SheetTool.sort-lines">
