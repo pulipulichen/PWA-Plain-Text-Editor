@@ -58,7 +58,7 @@ export default function (ReplacePanel) {
       }
     })
     this.localConfig.textContent = JSON.stringify(parts)
-    this.localConfig.formatTool = 'json-to-lines'
+    // this.localConfig.formatTool = 'json-to-lines'
   }
 
   ReplacePanel.methods.JSONtoLines = function () {
@@ -93,7 +93,7 @@ export default function (ReplacePanel) {
 
         this.localConfig.textContent = lines.join('\n')
       }
-      this.localConfig.formatTool = 'code-to-json'
+      // this.localConfig.formatTool = 'code-to-json'
     }
     catch (e) {
       window.alert(e)
