@@ -23,16 +23,38 @@ export default function (ReplacePanel) {
   ReplacePanel.methods.codeToJSON = function () {
     let splitor = '\n'
 
-    if (this.textContentTrim.split(splitor).length < this.textContentTrim.split('\t').length) {
+    if (this.textContentTrim.split(splitor).length * 1.5 < this.textContentTrim.split('\t').length) {
       splitor = '\t'
     }
     
-    let parts = this.textContentTrim.split(splitor).map(item => {
+    let parts = []
+    
+    this.textContentTrim.split(splitor).forEach(item => {
       if (isNaN(item)) {
-        return item
+        if (Array.isArray(parts) === false) {
+          let key = item.slice(0, item.indexOf('\t')).trim()
+          let value = item.slice(item.indexOf('\t') + 1).trim()
+          if (!isNaN(value)) {
+            value = Number(value)
+          }
+          parts[key] = value
+        }
+        else if (item.split('\t').length > 1) {
+          let key = item.slice(0, item.indexOf('\t')).trim()
+          let value = item.slice(item.indexOf('\t') + 1).trim()
+          if (!isNaN(value)) {
+            value = Number(value)
+          }
+          parts = {}
+          parts[key] = value
+        }
+        else {
+          parts.push(item)
+        }
+        
       }
       else {
-        return Number(item)
+        parts.push(item)
       }
     })
     this.localConfig.textContent = JSON.stringify(parts)
