@@ -75,6 +75,19 @@ export default function (ReplacePanel) {
       }
     }).join('\n')
   }
+
+  ReplacePanel.methods.removeDuplicateLines = function () {
+    this.saveHistory()
+
+    // 清除空行
+    let lines = [].concat(this.textContentLines)
+    lines = lines.filter(l => (l.trim() !== ''))
+    lines = lines.filter((item, index) => lines.indexOf(item) === index)
+
+    console.log()
+    this.localConfig.textContent = lines.join('\n')
+
+  }
   
   /*
    formatCode () {

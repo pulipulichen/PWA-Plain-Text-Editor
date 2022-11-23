@@ -38,6 +38,9 @@ export default function (ReplacePanel) {
     else if (tool === 'duplicate-empty-lines-remove') {
       return this.removeDuplicateEmptyLines()
     }
+    else if (tool === 'duplicate-lines-remove') {
+      return this.removeDuplicateLines()
+    }
     else if (tool === 'SheetTool.sort-lines') {
       return this.sortLines()
     }
@@ -82,7 +85,7 @@ export default function (ReplacePanel) {
 
   let doAutoFormatTimer
   ReplacePanel.methods.doAutoFormat = function () {
-    if (this.localConfig.autoFormat === false) {
+    if (this.localConfig.autoFormat === false || this.isAutoFormatEnable === false) {
       return false
     }
 
