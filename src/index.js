@@ -85,6 +85,29 @@ let VueController = {
   components: {
     'index': Index
   },
+  computed: {
+    appName () {
+      let cacheKey = this.config.appName
+
+      let id = this.utils.URLUtils.getParameterID()
+      if (id) {
+        cacheKey = cacheKey + `_` + id
+      }
+      else if (window.location != window.parent.location) {
+        let url = (window.location != window.parent.location)
+                  ? document.referrer
+                  : document.location.href;
+        // console.log(url, window.location, window.parent.location, document.referrer, document.location.href)
+        if (url) {
+          cacheKey = cacheKey + '_' + url
+        }
+      }
+
+      this.config.appNameID = cacheKey
+
+      return cacheKey
+    },
+  },
   watch: {},
   mounted: async function () {
     //console.log('index.js mounted', 1)
@@ -114,7 +137,7 @@ let VueController = {
         return false
       } 
 
-      let data = localStorage.getItem(this.config.appName)
+      let data = localStorage.getItem(this.appName)
       //console.log(data)
       if (data === null || data.startsWith('{') === false || data.endsWith('}') === false) {
         return false
@@ -140,7 +163,7 @@ let VueController = {
       //console.log(data)
       data = JSON.stringify(data)
       //console.log(data)
-      localStorage.setItem(this.config.appName, data)
+      localStorage.setItem(this.appName, data)
     },
     addViewportListener () {
       let $window = $(window)

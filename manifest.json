@@ -1,6 +1,6 @@
 {
-  "name": "PWA Plain TextEditor",
-  "short_name": "PlainText Editor",
+  "name": "Plain Text Editor",
+  "short_name": "TextEditor",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#E1F7F7",

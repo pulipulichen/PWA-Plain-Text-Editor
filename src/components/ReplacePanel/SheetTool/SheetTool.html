@@ -8,4 +8,13 @@
         min="1"
         id="SheetToolColumnNumber" />
   </div>
+  <div class="fields"
+    v-if="localConfig.formatTool === 'SheetTool.sort-lines'">
+    <label for="SheetToolSortLinesLocale">
+        {{ $t('Col No.') }}
+      </label>
+      <input type="number" v-model="colNo" 
+        min="1"
+        id="SheetToolColumnNumber" />
+  </div>
 </div>

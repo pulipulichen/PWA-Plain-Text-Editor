@@ -1,5 +1,6 @@
 let config = {
-  appName: 'vue-app',
+  appName: 'PWA-Plain-Text-Editor',
+  appNameID: 'PWA-Plain-Text-Editor',
   debug: {
     ErrorHandler: {
       verbose: true
