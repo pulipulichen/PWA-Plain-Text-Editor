@@ -103,6 +103,21 @@ let SheetTool = {
         return columns.join(seperator)
       }).join('\n')
     },
+    removeListPoint (textContentLines) {
+      // let seperators = ['\t', ',', ' ']
+      // console.log(textContentLines)
+      this.localConfig.textContent = textContentLines.map(line => {
+        // console.log(line)
+        if (line.startsWith('- ')) {
+          return line.slice(2).trim()
+        }
+
+        let pointPos = line.indexOf('. ')
+        if (pointPos > 0 && pointPos < 4) {
+          return line.slice(pointPos + 2).trim()
+        }
+      }).join('\n')
+    },
     shuffleColumns (textContentLines) {
       this.transpose(textContentLines)
       this.shuffleLines(textContentLines)

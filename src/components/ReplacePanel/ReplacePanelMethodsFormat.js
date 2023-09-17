@@ -56,6 +56,9 @@ export default function (ReplacePanel) {
     else if (tool === 'SheetTool.removeColumn') {
       return this.$refs.SheetTool.removeColumn(this.textContentLines)
     }
+    else if (tool === 'SheetTool.removeListPoint') {
+      return this.$refs.SheetTool.removeListPoint(this.textContentLines)
+    }
     else if (tool === 'GroupingTool.grouping-by-similarity') {
       return this.groupingBySimilarity()
     }
