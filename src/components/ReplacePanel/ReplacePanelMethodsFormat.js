@@ -68,6 +68,15 @@ export default function (ReplacePanel) {
     else if (tool === 'TitleTool.seo-title') {
       return this.formatSEOTitle()
     }
+    else if (tool === 'TitleTool.formatVariableNameHyper') {
+      return this.formatVariableNameHyper()
+    }
+    else if (tool === 'TitleTool.formatVariableNameHyperUnderline') {
+      return this.formatVariableNameHyper('_')
+    }
+    else if (tool === 'TitleTool.formatVariableCamelCase') {
+      return this.formatVariableCamelCase()
+    }
   }
   
   ReplacePanel.methods.sortLines = function () {
