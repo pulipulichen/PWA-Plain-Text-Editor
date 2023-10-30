@@ -29,10 +29,11 @@ export default function (ReplacePanel) {
     this.localConfig.textContent = this.textContentLines.map(line => {
       line = line.split('-').join(' ')
       line = line.split('_').join(' ')
-      
+
       line = this.lowerCamelToSpaceCase(line)
       line = line.toLowerCase()
       line = line.replace(/[^\w\s]|_/g, ' ')
+      line = line.replace(/#/g, ' ')
       line = line.trim()
 
       while (line.indexOf('  ') > -1) {
@@ -64,6 +65,8 @@ export default function (ReplacePanel) {
     this.localConfig.textContent = this.textContentLines.map(line => {
       line = line.split('-').join(' ')
       line = line.split('_').join(' ')
+      line = line.replace(/[^\w\s]|_/g, ' ')
+      
       while (line.indexOf('  ') > -1) {
         line = line.split('  ').join(' ')
       }
