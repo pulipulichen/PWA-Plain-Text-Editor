@@ -86,6 +86,9 @@ ReplacePanelMethodsCompress(ReplacePanel)
 import ReplacePanelMethodsFormat from './ReplacePanelMethodsFormat.js'
 ReplacePanelMethodsFormat(ReplacePanel)
 
+import ReplacePanelMethodsTitle from './ReplacePanelMethodsTitle.js'
+ReplacePanelMethodsTitle(ReplacePanel)
+
 import ReplacePanelMethodsCalc from './ReplacePanelMethodsCalc.js'
 ReplacePanelMethodsCalc(ReplacePanel)
 

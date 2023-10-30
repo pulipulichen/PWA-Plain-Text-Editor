@@ -65,6 +65,9 @@ export default function (ReplacePanel) {
     else if (tool === 'GroupingTool.grouping-by-difference') {
       return this.groupingByDifference()
     }
+    else if (tool === 'TitleTool.seo-title') {
+      return this.formatSEOTitle()
+    }
   }
   
   ReplacePanel.methods.sortLines = function () {
