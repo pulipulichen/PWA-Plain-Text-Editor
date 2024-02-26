@@ -16,7 +16,7 @@
 // Names of the two caches used in this version of the service worker.
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
-const PRECACHE = 'precache-v20220428-2139';
+const PRECACHE = 'precache-v20240226-101655';
 const RUNTIME = 'runtime';
 
 /**
@@ -28,65 +28,83 @@ const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
-  'index.html',
-  'manifest.json',
-  'service-worker.js',
-  'dist/index.js',
-  'dist/asset/author.png',
-  'dist/asset/brand-icons.eot',
-  'dist/asset/brand-icons.svg',
-  'dist/asset/brand-icons.ttf',
-  'dist/asset/brand-icons.woff',
-  'dist/asset/brand-icons.woff2',
-  'dist/asset/flags.png',
-  'dist/asset/icons.eot',
-  'dist/asset/icons.svg',
-  'dist/asset/icons.ttf',
-  'dist/asset/icons.woff',
-  'dist/asset/icons.woff2',
-  'dist/asset/keyenter.ogg',
-  'dist/asset/office_typewriter-1.ogg',
-  'dist/asset/office_typewriter-10.ogg',
-  'dist/asset/office_typewriter-12.ogg',
-  'dist/asset/office_typewriter-13.ogg',
-  'dist/asset/office_typewriter-14.ogg',
-  'dist/asset/office_typewriter-15.ogg',
-  'dist/asset/office_typewriter-16.ogg',
-  'dist/asset/office_typewriter-17.ogg',
-  'dist/asset/office_typewriter-18.ogg',
-  'dist/asset/office_typewriter-19.ogg',
-  'dist/asset/office_typewriter-2.ogg',
-  'dist/asset/office_typewriter-20.ogg',
-  'dist/asset/office_typewriter-21.ogg',
-  'dist/asset/office_typewriter-22.ogg',
-  'dist/asset/office_typewriter-23.ogg',
-  'dist/asset/office_typewriter-24.ogg',
-  'dist/asset/office_typewriter-25.ogg',
-  'dist/asset/office_typewriter-26.ogg',
-  'dist/asset/office_typewriter-27.ogg',
-  'dist/asset/office_typewriter-29.ogg',
-  'dist/asset/office_typewriter-3.ogg',
-  'dist/asset/office_typewriter-30.ogg',
-  'dist/asset/office_typewriter-4.ogg',
-  'dist/asset/office_typewriter-5.ogg',
-  'dist/asset/office_typewriter-6.ogg',
-  'dist/asset/office_typewriter-7.ogg',
-  'dist/asset/office_typewriter-8.ogg',
-  'dist/asset/office_typewriter-9.ogg',
-  'dist/asset/outline-icons.eot',
-  'dist/asset/outline-icons.svg',
-  'dist/asset/outline-icons.ttf',
-  'dist/asset/outline-icons.woff',
-  'dist/asset/outline-icons.woff2',
-  'dist/vendors/CodeMirror.js',
-  'dist/vendors/ConfigModal.js',
-  'dist/vendors/FloatActionButton.js',
-  'dist/vendors/ReplacePanel.js',
-  'dist/vendors/semantic-ui-niwsf.js',
-  'dist/vendors/OCRHandler.js',
-  'dist/vendors~vendors/CodeMirror.js',
-  'dist/vendors~vendors/OCRHandler.js',
-  'dist/vendors~vendors/FloatActionButton.js',
+  "dist/0.js",
+  "dist/0.js.map",
+  "dist/8.js",
+  "dist/asset/author.png",
+  "dist/asset/brand-icons.eot",
+  "dist/asset/brand-icons.svg",
+  "dist/asset/brand-icons.ttf",
+  "dist/asset/brand-icons.woff",
+  "dist/asset/brand-icons.woff2",
+  "dist/asset/flags.png",
+  "dist/asset/icons.eot",
+  "dist/asset/icons.svg",
+  "dist/asset/icons.ttf",
+  "dist/asset/icons.woff",
+  "dist/asset/icons.woff2",
+  "dist/asset/keyenter.ogg",
+  "dist/asset/office_typewriter-1.ogg",
+  "dist/asset/office_typewriter-10.ogg",
+  "dist/asset/office_typewriter-12.ogg",
+  "dist/asset/office_typewriter-13.ogg",
+  "dist/asset/office_typewriter-14.ogg",
+  "dist/asset/office_typewriter-15.ogg",
+  "dist/asset/office_typewriter-16.ogg",
+  "dist/asset/office_typewriter-17.ogg",
+  "dist/asset/office_typewriter-18.ogg",
+  "dist/asset/office_typewriter-19.ogg",
+  "dist/asset/office_typewriter-2.ogg",
+  "dist/asset/office_typewriter-20.ogg",
+  "dist/asset/office_typewriter-21.ogg",
+  "dist/asset/office_typewriter-22.ogg",
+  "dist/asset/office_typewriter-23.ogg",
+  "dist/asset/office_typewriter-24.ogg",
+  "dist/asset/office_typewriter-25.ogg",
+  "dist/asset/office_typewriter-26.ogg",
+  "dist/asset/office_typewriter-27.ogg",
+  "dist/asset/office_typewriter-29.ogg",
+  "dist/asset/office_typewriter-3.ogg",
+  "dist/asset/office_typewriter-30.ogg",
+  "dist/asset/office_typewriter-4.ogg",
+  "dist/asset/office_typewriter-5.ogg",
+  "dist/asset/office_typewriter-6.ogg",
+  "dist/asset/office_typewriter-7.ogg",
+  "dist/asset/office_typewriter-8.ogg",
+  "dist/asset/office_typewriter-9.ogg",
+  "dist/asset/outline-icons.eot",
+  "dist/asset/outline-icons.svg",
+  "dist/asset/outline-icons.ttf",
+  "dist/asset/outline-icons.woff",
+  "dist/asset/outline-icons.woff2",
+  "dist/index.js",
+  "dist/index.js.map",
+  "dist/vendors/CodeMirror.js",
+  "dist/vendors/CodeMirror.js.map",
+  "dist/vendors/ConfigModal.js",
+  "dist/vendors/ConfigModal.js.map",
+  "dist/vendors/FloatActionButton.js",
+  "dist/vendors/FloatActionButton.js.map",
+  "dist/vendors/GroupingTool.js",
+  "dist/vendors/GroupingTool.js.map",
+  "dist/vendors/OCRHandler.js",
+  "dist/vendors/OCRHandler.js.map",
+  "dist/vendors/ReplacePanel.js",
+  "dist/vendors/ReplacePanel.js.map",
+  "dist/vendors/SheetTool.js",
+  "dist/vendors/SheetTool.js.map",
+  "dist/vendors/semantic-ui-niwsf.js",
+  "dist/vendors/semantic-ui-niwsf.js.map",
+  "dist/vendors~vendors/CodeMirror.js",
+  "dist/vendors~vendors/CodeMirror.js.map",
+  "dist/vendors~vendors/FloatActionButton.js",
+  "dist/vendors~vendors/FloatActionButton.js.map",
+  "dist/vendors~vendors/GroupingTool.js",
+  "dist/vendors~vendors/OCRHandler.js",
+  "dist/vendors~vendors/OCRHandler.js.map",
+  "index.html",
+  "manifest.json",
+  "service-worker.js"
 ];
 
 // The install handler takes care of precaching the resources we always need.
@@ -127,16 +145,9 @@ self.addEventListener('fetch', event => {
         return caches.open(RUNTIME).then(cache => {
           return fetch(event.request).then(response => {
             // Put a copy of the response in the runtime cache.
-            try {
-              return cache.put(event.request, response.clone()).then(() => {
-                return response;
-              }).catch(function(e) {
-                console.error(e)
-              });
-            }
-            catch (e) {
-              console.error(e)
-            }
+            return cache.put(event.request, response.clone()).then(() => {
+              return response;
+            });
           });
         });
       })

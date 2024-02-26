@@ -13,6 +13,7 @@ services:
       - ./src:/app/src
       - ./img:/app/img
       - ./webpack:/app/webpack
+      - ./service-worker.js:/app/service-worker.js
     #Mount port 1000 on the container side to port 8080 on the host side.
     #ports:
     #  - "8080:8080"
