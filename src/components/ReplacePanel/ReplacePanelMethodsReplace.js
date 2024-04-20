@@ -55,11 +55,19 @@ export default function (ReplacePanel) {
 
     //console.log(this.localConfig.textContent)
   }
+
+  let doReplaceRegexMapping = {
+    '\\n': '\n',
+    '\\t': '\t',
+  }
   ReplacePanel.methods.doReplaceRegex = function () {
     let stringToSearch = this.localConfig.stringToSearch
     let stringToReplaceWith = this.localConfig.stringToReplaceWith
-    //console.log(stringToReplaceWith)
-    stringToReplaceWith = stringToReplaceWith.split('\\n').join('\n')
+
+    Object.keys(doReplaceRegexMapping).forEach((key) => {
+      stringToReplaceWith = stringToReplaceWith.split(key).join(doReplaceRegexMapping[key])
+    })
+
     let re = new RegExp(stringToSearch, "g")
 
     this.localConfig.textContent = this.localConfig.textContent.replace(re, stringToReplaceWith);
