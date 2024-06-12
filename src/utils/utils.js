@@ -3,6 +3,7 @@ import ClipboardUtils from './ClipboardUtils.js'
 import AxiosUtils from './AxiosUtils.js'
 import FileUtils from './FileUtils.js'
 import URLUtils from './URLUtils.js'
+import SortUtils from './SortUtils.js'
 import './date-helper.js'
 
 export default {
@@ -11,4 +12,5 @@ export default {
   AxiosUtils,
   FileUtils,
   URLUtils,
+  SortUtils
 }

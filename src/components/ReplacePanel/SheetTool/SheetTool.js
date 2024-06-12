@@ -18,9 +18,10 @@ let SheetTool = {
       }
 
       let lines = [].concat(textContentLines)
-      lines.sort()
+      this.utils.SortUtils.sort(lines)
       if (lines[0] === textContentLines[0]) {
-        lines.reverse()
+        // lines.reverse()
+        this.utils.SortUtils.sort(lines, true)
       }
 
       this.localConfig.textContent = lines.join('\n')
